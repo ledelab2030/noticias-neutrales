@@ -1,8 +1,15 @@
 import { noticias } from '@/data/noticias'
 
-export default function Noticia({ params }: { params: { id: string } }) {
-  const n = noticias.find(x => x.id === params.id)
-  if (!n) return <main className="p-6">Noticia no encontrada.</main>
+export default async function Noticia(
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params
+  const n = noticias.find(x => x.id === id)
+
+  if (!n) {
+    return <main className="p-6">Noticia no encontrada.</main>
+  }
+
   return (
     <main className="max-w-3xl mx-auto p-6">
       <h1 className="text-2xl font-semibold mb-2">{n.titulo}</h1>
