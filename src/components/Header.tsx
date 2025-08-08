@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import clsx from 'clsx'
 
 const links = [
@@ -16,6 +16,15 @@ const links = [
 export default function Header() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
+
+  // Bloquea el scroll del body cuando el menú está abierto
+  useEffect(() => {
+    if (open) {
+      const prev = document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      return () => { document.body.style.overflow = prev }
+    }
+  }, [open])
 
   const NavLinks = ({ onClick }: { onClick?: () => void }) => (
     <>
@@ -55,9 +64,9 @@ export default function Header() {
         {/* Mobile button */}
         <button
           type="button"
-          aria-label="Abrir menú"
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={open}
-          aria-controls="mobile-menu"
+          aria-controls="mobile-drawer"
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
@@ -79,18 +88,45 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Overlay + Drawer móvil */}
+      {/* Overlay */}
       <div
-        id="mobile-menu"
         className={clsx(
-          'md:hidden border-t',
-          open ? 'block' : 'hidden'
+          'fixed inset-0 z-40 bg-black/40 backdrop-blur-[1px] transition-opacity md:hidden',
+          open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         )}
+        aria-hidden={!open}
+        onClick={() => setOpen(false)}
+      />
+
+      {/* Drawer */}
+      <aside
+        id="mobile-drawer"
+        className={clsx(
+          'fixed right-0 top-0 z-50 h-full w-72 bg-white border-l shadow-xl md:hidden',
+          'transform transition-transform duration-200 ease-out',
+          open ? 'translate-x-0' : 'translate-x-full'
+        )}
+        role="dialog"
+        aria-modal="true"
       >
-        <nav className="px-4 py-3 flex flex-col gap-1 bg-white">
+        <div className="px-4 py-3 flex items-center justify-between border-b">
+          <span className="font-semibold text-blue-700">Noticias Neutrales</span>
+          <button
+            aria-label="Cerrar menú"
+            className="rounded-md p-2 hover:bg-gray-100"
+            onClick={() => setOpen(false)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <nav className="px-2 py-3 flex flex-col gap-1">
           <NavLinks onClick={() => setOpen(false)} />
         </nav>
-      </div>
+      </aside>
     </header>
   )
 }
