@@ -22,9 +22,10 @@ export default function Noticias() {
                 href={`/noticias/${n.id}`}
                 className="block rounded-lg border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 hover:bg-gray-50 transition-all duration-200 p-4"
               >
-                <h2 className="text-lg font-semibold text-blue-700 hover:underline">
+                <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-400 hover:underline">
                   {n.titulo}
                 </h2>
+
                 <p className="text-sm text-gray-500">{n.fecha}</p>
                 <p className="mt-2 text-gray-700">{n.resumen}</p>
               </Link>
