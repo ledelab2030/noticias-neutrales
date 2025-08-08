@@ -1,28 +1,36 @@
-import { noticias, Noticia } from "@/data/noticias";
-
-function filtrarNoticiasPorFecha(fecha: string, noticias: Noticia[]) {
-  return noticias.filter((n) => n.fecha === fecha);
-}
+import Link from 'next/link'
+import { noticias } from '@/data/noticias'
+import { todayISO } from '@/utils/fecha'
 
 export default function Home() {
-  const hoy = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
-  const noticiasHoy = filtrarNoticiasPorFecha(hoy, noticias);
+  const hoy = todayISO()
+  const deHoy = noticias.filter(n => n.fecha === hoy)
 
   return (
-    <main className="max-w-4xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Noticias Neutrales - {hoy}</h1>
+    <main className="max-w-3xl mx-auto p-6">
+      <h1 className="text-2xl font-semibold mb-4">
+        Noticias Neutrales — {hoy}
+      </h1>
 
-      {noticiasHoy.length === 0 ? (
-        <p>No hay noticias para hoy.</p>
+      {deHoy.length === 0 ? (
+        <p>No hay noticias de hoy.</p>
       ) : (
-        noticiasHoy.map(({ id, titulo, resumen, pais }) => (
-          <article key={id} className="mb-6 border-b pb-4">
-            <h2 className="text-xl font-semibold">{titulo}</h2>
-            <p className="text-sm text-gray-600 mb-2">{pais}</p>
-            <p>{resumen}</p>
-          </article>
-        ))
+        <ul className="space-y-5">
+          {deHoy.map(n => (
+            <li key={n.id}>
+              <Link
+                href={`/noticias/${n.id}`}
+                className="block p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+              >
+                <h2 className="text-xl font-semibold text-blue-700 hover:underline">
+                  {n.titulo}
+                </h2>
+                <p className="text-sm text-gray-600">{n.resumen}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
       )}
     </main>
-  );
+  )
 }
