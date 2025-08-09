@@ -40,5 +40,28 @@ export const noticias: Noticia[] = [
     ],
     fuente: "Noticias Caracol",
     url_fuente: "https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3"
-  }
+  },
+  {
+  id: 'alerta-dentifrico-colgate-cuidado-oral-funcional-xilitol-2025-08-09',
+  titulo: 'Alertas por un dentífrico en AL y cuidado oral funcional: opciones seguras y xilitol',
+  resumen:
+    'Autoridades de la región emitieron alertas por reacciones adversas vinculadas a un dentífrico específico. Se resumen prácticas mínimas de cuidado oral desde la odontología funcional, alternativas comerciales de bajo riesgo y preparaciones caseras básicas, incluyendo el rol del xilitol.',
+  contenido: `¿Qué pasó? El 9 de agosto de 2025, se reportó una alerta sanitaria regional relacionada con el dentífrico “Colgate Total Clean Mint”, con notificaciones de reacciones adversas en países de América Latina. Las autoridades recomendaron suspender su uso y revisar etiquetas.
+
+¿Por qué importa? El caso reabrió el debate sobre ingredientes potencialmente irritantes y llevó a buscar opciones más seguras. Desde una perspectiva de odontología funcional, el enfoque es preservar el equilibrio del microbioma oral y potenciar la saliva como defensa natural.
+
+Cuidado mínimo (cómo): 
+• Cepillado 2 veces al día (noche imprescindible) con dentífrico de bajo riesgo (p. ej., hidroxiapatita o fluoruros bien tolerados en personas sensibles). 
+• Limpieza interdental gentil (irrigador o cepillos interproximales); usar hilo solo para restos puntuales, con suavidad y, de preferencia, tras el cepillado. 
+• Xilitol tras comidas (chicle o pastillas sin azúcar) para reducir placa, neutralizar ácidos y estimular saliva. 
+• Hábitos: espaciar ingestas para permitir remineralización salival; limitar bebidas azucaradas/ácidas; controles periódicos con el odontólogo.
+
+Referencias: La Dra. Ellie Phillips (odontóloga y divulgadora) cuestiona el flossing rutinario como pilar en encías inflamadas y enfatiza el papel del xilitol y la saliva para disminuir placa. Ver su video “The TRUTH About Flossing Teeth (What You Aren't Being Told)”.
+
+Fuentes:
+• El País (México): “La alerta sanitaria por el uso del dentífrico Colgate Total Clean Mint se extiende por América Latina” — https://elpais.com/mexico/2025-08-09/la-alerta-sanitaria-por-el-uso-del-dentifrico-colgate-total-clean-mint-se-extiende-por-america-latina.html
+• Dra. Ellie Phillips (YouTube): “The TRUTH About Flossing Teeth (What You Aren't Being Told)” — https://www.youtube.com/watch?v=813BMgPSRYk`,
+  fecha: '2025-08-09'
+}
+
 ]
