@@ -1,37 +1,57 @@
 import Link from 'next/link'
 import { noticias } from '@/data/noticias'
-import { todayISO } from '@/utils/fecha'
+import { notFound } from 'next/navigation'
 
-export default function Home() {
-  const hoy = todayISO()
-  const deHoy = noticias.filter(n => n.fecha === hoy)
+// (Next 15) params es Promise: hacemos la página async y hacemos await.
+export default async function Noticia(
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params
+  const n = noticias.find(x => x.id === id)
+  if (!n) return notFound()
 
   return (
     <main className="max-w-3xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-4">
-        Noticias Neutrales — {hoy}
-      </h1>
+      {/* Breadcrumb */}
+      <nav className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+        <Link href="/" className="hover:underline hover:text-blue-700 dark:hover:text-blue-300">
+          Inicio
+        </Link>
+        <span className="mx-2">/</span>
+        <Link href="/noticias" className="hover:underline hover:text-blue-700 dark:hover:text-blue-300">
+          Más noticias
+        </Link>
+      </nav>
 
-      {deHoy.length === 0 ? (
-        <p>No hay noticias de hoy.</p>
-      ) : (
-        <ul className="space-y-5">
-          {deHoy.map(n => (
-            <li key={n.id}>
-              <Link
-                href={`/noticias/${n.id}`}
-                className="block rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 p-4"
-              >
-                <h2 className="text-xl font-semibold text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 hover:underline">
-                  {n.titulo}
-                </h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{n.fecha}</p>
-                <p className="mt-2 text-gray-700 dark:text-gray-200">{n.resumen}</p>
-              </Link>
-            </li>
+      {/* Encabezado */}
+      <header className="mb-3">
+        <h1 className="text-3xl font-bold leading-tight text-gray-900 dark:text-gray-100">
+          {n.titulo}
+        </h1>
+        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{n.fecha}</p>
+      </header>
+
+      {/* Tarjeta de contenido */}
+      <article className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6">
+        {/* Si más adelante usas Markdown/MDX, la clase `prose` mejora tipografía automáticamente */}
+        <div className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-headings:scroll-mt-24">
+          {n.contenido.split('\n\n').map((parrafo, i) => (
+            <p key={i} className="text-gray-800 dark:text-gray-200">
+              {parrafo}
+            </p>
           ))}
-        </ul>
-      )}
+        </div>
+      </article>
+
+      {/* Footer de artículo */}
+      <div className="mt-8 flex items-center justify-between text-sm">
+        <Link href="/noticias" className="text-blue-700 dark:text-blue-400 hover:underline">
+          ← Volver a Más noticias
+        </Link>
+        <Link href="/" className="text-blue-700 dark:text-blue-400 hover:underline">
+          Ir al inicio →
+        </Link>
+      </div>
     </main>
   )
 }
