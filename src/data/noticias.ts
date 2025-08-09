@@ -2,7 +2,7 @@ export type Noticia = {
   id: string
   titulo: string
   resumen: string
-  contenido: string
+  contenido: string[]
   fecha: string // ISO YYYY-MM-DD
   fuente?: string
   url_fuente?: string
