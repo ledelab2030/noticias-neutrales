@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import { noticias } from "@/data/noticias";
 
-export default function NoticiaPage({
+export default async function NoticiaPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const n = noticias.find((x) => x.id === params.id);
+  const { id } = await params; // ✅ Destructuramos después de resolver el Promise
+  const n = noticias.find((x) => x.id === id);
 
   if (!n) {
     notFound();
