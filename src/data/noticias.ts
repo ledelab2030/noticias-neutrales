@@ -4,7 +4,7 @@ export interface Noticia {
   titulo: string;
   fuente: string;
   url_fuente?: string;
-  cuerpo: string[];
+  contenido: string[];
   etiquetas: string[];
   pais?: string; // ← agregado
 }
