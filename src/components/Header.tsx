@@ -41,7 +41,16 @@ export default function Header() {
   )
 
   return (
-    <header className="bg-white dark:bg-gray-900 border-b shadow-sm">
+    <header
+      className={clsx(
+        // Sticky header
+        'sticky top-0 z-50',
+        // Fondo translúcido con blur (si el navegador lo soporta)
+        'bg-white/80 dark:bg-gray-900/80 backdrop-blur supports-[backdrop-filter]:backdrop-blur',
+        // Borde y sombra sutil
+        'border-b border-gray-200 dark:border-gray-800 shadow-sm'
+      )}
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         <Link href="/" className="text-lg sm:text-xl font-bold text-blue-700 dark:text-blue-300">
           Noticias Neutrales
@@ -90,7 +99,7 @@ export default function Header() {
           open ? 'block' : 'hidden'
         )}
       >
-        <nav className="px-4 py-3 flex flex-col gap-1 bg-white dark:bg-gray-900">
+        <nav className="px-4 py-3 flex flex-col gap-1 bg-white/90 dark:bg-gray-900/90">
           <NavLinks onClick={() => setOpen(false)} />
         </nav>
       </div>
