@@ -1,7 +1,7 @@
 export interface Noticia {
   id: string;
   fecha: string;
-  titular: string;
+  titulo: string;
   fuente: string;
   url_fuente?: string;
   cuerpo: string[];
