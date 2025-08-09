@@ -43,8 +43,9 @@ Subtítulo — La visión de Alfonso Gómez Méndez: El ex Fiscal y ex Ministro 
 
 ¿Qué sigue? Ambos juristas coincidieron en que la apelación ante el Tribunal de Bogotá deberá revisar, entre otros puntos, la pena impuesta y la admisibilidad y fuerza probatoria de las interceptaciones, decisiones que podrían confirmar, modificar o revocar aspectos del fallo de primera instancia.
 
-Fuente: Entrevista “Condena contra Álvaro Uribe: dos miradas de los más destacados juristas de Colombia”, publicada en el canal de YouTube de Noticias Caracol. Disponible en: https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3`,
+Fuente: Entrevista “Condena contra Álvaro Uribe: dos miradas de los más destacados juristas de Colombia”, publicada en el canal de YouTube de Noticias Caracol. <a href="https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3" target="_blank" rel="noopener noreferrer">Ver entrevista completa en YouTube</a>.`,
   fecha: '2025-08-08'
 }
+
 
 ]
