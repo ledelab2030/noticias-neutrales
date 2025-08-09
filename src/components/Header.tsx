@@ -17,7 +17,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
-  // Bloquea el scroll del body cuando el menú está abierto
+  // Bloquear scroll cuando el drawer está abierto
   useEffect(() => {
     if (open) {
       const prev = document.body.style.overflow
@@ -38,8 +38,8 @@ export default function Header() {
             className={clsx(
               'px-3 py-2 rounded-md text-sm font-medium transition-colors',
               active
-                ? 'text-blue-800 bg-blue-50'
-                : 'text-gray-700 hover:text-blue-700 hover:bg-gray-50'
+                ? 'text-blue-800 bg-blue-50 dark:text-blue-300 dark:bg-blue-950/30'
+                : 'text-gray-700 hover:text-blue-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-blue-300 dark:hover:bg-gray-800'
             )}
           >
             {l.label}
@@ -50,9 +50,12 @@ export default function Header() {
   )
 
   return (
-    <header className="bg-white border-b shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 shadow-sm">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link href="/" className="text-lg sm:text-xl font-bold text-blue-700">
+        <Link
+          href="/"
+          className="text-lg sm:text-xl font-bold text-blue-700 dark:text-blue-300 hover:opacity-90"
+        >
           Noticias Neutrales
         </Link>
 
@@ -68,18 +71,19 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-drawer"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          {/* Icono hamburguesa / cerrar */}
+          {/* Icono hamburguesa */}
           <svg
-            className={clsx('h-6 w-6', open ? 'hidden' : 'block')}
+            className={clsx('h-6 w-6 text-gray-800 dark:text-gray-200', open ? 'hidden' : 'block')}
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke="currentColor" strokeWidth="2"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
+          {/* Icono cerrar */}
           <svg
-            className={clsx('h-6 w-6', open ? 'block' : 'hidden')}
+            className={clsx('h-6 w-6 text-gray-800 dark:text-gray-200', open ? 'block' : 'hidden')}
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke="currentColor" strokeWidth="2"
           >
@@ -88,7 +92,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Overlay + Drawer móvil */}
       {/* Overlay */}
       <div
         className={clsx(
@@ -103,21 +106,21 @@ export default function Header() {
       <aside
         id="mobile-drawer"
         className={clsx(
-          'fixed right-0 top-0 z-50 h-full w-72 bg-white border-l shadow-xl md:hidden',
+          'fixed right-0 top-0 z-50 h-full w-72 bg-white dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 shadow-xl md:hidden',
           'transform transition-transform duration-200 ease-out',
           open ? 'translate-x-0' : 'translate-x-full'
         )}
         role="dialog"
         aria-modal="true"
       >
-        <div className="px-4 py-3 flex items-center justify-between border-b">
-          <span className="font-semibold text-blue-700">Noticias Neutrales</span>
+        <div className="px-4 py-3 flex items-center justify-between border-b border-gray-200 dark:border-gray-800">
+          <span className="font-semibold text-blue-700 dark:text-blue-300">Noticias Neutrales</span>
           <button
             aria-label="Cerrar menú"
-            className="rounded-md p-2 hover:bg-gray-100"
+            className="rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
             onClick={() => setOpen(false)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800 dark:text-gray-200" fill="none"
                  viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
             </svg>
