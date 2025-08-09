@@ -16,7 +16,18 @@ export default async function NoticiaPage({
   // Aseguramos que el contenido sea siempre un array de párrafos
   const parrafos: string[] = Array.isArray(n.contenido)
     ? n.contenido
-    : [n.contenido];
+    : (() => {
+        const byParagraphs = n.contenido
+          .split(/\r?\n\r?\n+/)
+          .map((s) => s.trim())
+          .filter(Boolean);
+        if (byParagraphs.length > 1) return byParagraphs;
+        const byLines = n.contenido
+          .split(/\r?\n+/)
+          .map((s) => s.trim())
+          .filter(Boolean);
+        return byLines.length ? byLines : [n.contenido];
+      })();
 
   return (
     <article className="container mx-auto px-4 py-8">
