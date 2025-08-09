@@ -1,14 +1,10 @@
-export interface Noticia {
-  id: string;
-  fecha: string;
-  titulo: string;
-  fuente: string;
-  url_fuente?: string;
-  contenido: string[];
-  etiquetas: string[];
-  pais?: string; // ← agregado
+export type Noticia = {
+  id: string
+  titulo: string
+  resumen: string
+  contenido: string
+  fecha: string // ISO YYYY-MM-DD
 }
-
 
 export const noticias: Noticia[] = [
   {
