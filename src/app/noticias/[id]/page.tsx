@@ -33,25 +33,4 @@ export default async function Noticia(
 
       {/* Tarjeta de contenido */}
       <article className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6">
-        {/* Si más adelante usas Markdown/MDX, la clase `prose` mejora tipografía automáticamente */}
-        <div className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-headings:scroll-mt-24">
-          {n.contenido.split('\n\n').map((parrafo, i) => (
-            <p key={i} className="text-gray-800 dark:text-gray-200">
-              {parrafo}
-            </p>
-          ))}
-        </div>
-      </article>
-
-      {/* Footer de artículo */}
-      <div className="mt-8 flex items-center justify-between text-sm">
-        <Link href="/noticias" className="text-blue-700 dark:text-blue-400 hover:underline">
-          ← Volver a Más noticias
-        </Link>
-        <Link href="/" className="text-blue-700 dark:text-blue-400 hover:underline">
-          Ir al inicio →
-        </Link>
-      </div>
-    </main>
-  )
-}
+        {/* Si más adelante usas Markdown/MDX, la clase `prose` mejora tipografía auto*
