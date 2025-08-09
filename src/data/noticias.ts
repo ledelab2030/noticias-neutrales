@@ -35,7 +35,7 @@ Fuentes:
 - Rodrigo Uprimny, columna en El Espectador (03/08/2025).
 - Rodrigo Uprimny, versión en Dejusticia (05/08/2025).
 - Cobertura de prensa sobre sentencia y apelación (agosto de 2025).`,
-  fecha: '2025-08-09'
+  fecha: '2025-08-08'
 }
 
 ]
