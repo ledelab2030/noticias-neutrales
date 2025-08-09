@@ -22,20 +22,30 @@ export const noticias: Noticia[] = [
     fecha: '2025-08-07'
   },
   {
-  id: 'uprimny-no-es-delito-menor-uribe-2025-08-09',
+  id: 'uprimny-no-es-delito-menor-uribe-2025-08-08',
   titulo: '“No es un delito menor”: Rodrigo Uprimny sobre el caso Álvaro Uribe',
-  resumen: 'El jurista Rodrigo Uprimny afirmó que el soborno a testigos y el fraude procesal son delitos graves por su impacto en la justicia. Indicó que puede discutirse la detención inmediata o la duración de la pena, pero no calificarlos como menores ni afirmar que carecen de sustento probatorio.',
-  contenido: `¿Qué dijo? Rodrigo Uprimny, investigador de Dejusticia, explicó que el soborno a testigos y el fraude procesal no son delitos menores porque buscan torcer la administración de justicia para perjudicar a un rival político o encubrir acusaciones graves. Destacó que el caso ha sido revisado por varias instancias y que el debate debe centrarse en estándares probatorios y respeto a las decisiones judiciales.
+  resumen: 'En entrevista con Noticias Caracol, Rodrigo Uprimny sostuvo que el soborno a testigos y el fraude procesal no son conductas menores por su impacto en la administración de justicia. Explicó que pueden debatirse la detención inmediata o el cálculo de la pena, pero no trivializar la gravedad de los cargos ni desconocer el recorrido judicial del expediente.',
+  contenido: `¿Qué dijo? Rodrigo Uprimny afirmó que, de comprobarse, el soborno de testigos y el fraude procesal “no son delitos menores” porque buscan torcer la administración de justicia y afectar a un rival político. Subrayó que en Colombia se tiende a minimizar el falso testimonio, cuando en realidad es una conducta grave que fomenta la impunidad. 
 
-¿Cuándo y dónde? En análisis publicados entre el 3 y 5 de agosto de 2025, Uprimny contextualizó la condena de primera instancia dictada en Bogotá contra Álvaro Uribe. Señaló que la defensa puede apelar, pero la discusión debe diferenciar entre la ejecución inmediata o la cuantía de la pena y la gravedad de las conductas mismas.
+¿Cuándo y dónde? Las declaraciones fueron dadas en una entrevista emitida por el canal de YouTube de Noticias Caracol, dentro de un especial con dos juristas sobre el caso Uribe, grabado y difundido en agosto de 2025. 
 
-¿Por qué importa? Manipular testigos o inducir a error a la justicia afecta la igualdad ante la ley y la confianza pública en las instituciones. Uprimny subrayó que la comparación con beneficios penales otorgados en procesos de paz no aplica, pues aquí se trata de justicia penal ordinaria y de hechos ajenos a la justicia transicional.
+¿Cómo sustenta su posición? Uprimny indicó que el caso ha pasado por múltiples instancias y autoridades —Corte Suprema, jueces de circuito y Tribunal de Bogotá— que negaron la preclusión y habilitaron la acusación, por lo que considera infundada la tesis de una persecución política coordinada. Recordó, además, la intervención de la Corte Constitucional en temas de procedimiento.  
 
-Fuentes:
-- Rodrigo Uprimny, columna en El Espectador (03/08/2025).
-- Rodrigo Uprimny, versión en Dejusticia (05/08/2025).
-- Cobertura de prensa sobre sentencia y apelación (agosto de 2025).`,
+¿Qué pruebas resalta? Sobre las interceptaciones telefónicas obtenidas por error, explicó que han sido consideradas válidas por jueces por el criterio de “hallazgo ocasional” y por tratarse, según esos fallos, de un delito en curso que no está cubierto por el privilegio abogado–cliente; aclaró que su admisibilidad puede volver a discutirse en la apelación.  
+
+¿Por qué importa? Para Uprimny, manipular testigos o inducir a error a la justicia compromete la igualdad ante la ley y la confianza pública en las instituciones. Dijo que el debate legítimo está en la ejecución inmediata de la pena o en su cuantía, pero no en considerar “menores” las conductas atribuidas. 
+
+Contexto sobre tiempos y recorrido: El jurista señaló que parte de la duración del proceso obedeció a intentos previos de preclusión que fueron negados por jueces y por una sala del Tribunal, tras lo cual se presentó la acusación y se adelantó el juicio de primera instancia.  
+
+Diferencia con justicia transicional: Uprimny explicó que los beneficios penales en procesos de paz responden a un objetivo distinto (terminar el conflicto y aportar verdad), mientras que el caso Uribe se tramita en la justicia ordinaria y, por tanto, se le aplican penas del régimen común. 
+
+Subtítulo — La visión de Alfonso Gómez Méndez: El ex Fiscal y ex Ministro de Justicia destacó que la decisión de la jueza tiene tres componentes —condena, pena y efectividad inmediata— y que, aunque discutible la ejecución inmediata, su adopción cabe dentro del margen de apreciación judicial; agregó que las pruebas podían conducir tanto a condena como a absolución por duda razonable, y que esa valoración corresponde ahora al Tribunal en la apelación.   
+
+¿Qué sigue? Ambos juristas coincidieron en que la apelación ante el Tribunal de Bogotá deberá revisar, entre otros puntos, la pena impuesta y la admisibilidad y fuerza probatoria de las interceptaciones, decisiones que podrían confirmar, modificar o revocar aspectos del fallo de primera instancia.  
+
+Fuente principal: Entrevista “Condena contra Álvaro Uribe: dos miradas de los más destacados juristas de Colombia” publicada en el canal de YouTube de Noticias Caracol (transcripción aportada por el usuario). `,
   fecha: '2025-08-08'
 }
+
 
 ]
