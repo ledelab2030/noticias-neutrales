@@ -33,4 +33,5 @@ export default async function Noticia(
 
       {/* Tarjeta de contenido */}
       <article className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6">
-        {/* Si más adelante usas Markdown/MDX, la clase `prose` mejora tipografía auto*
+        {/* Si más adelante usas Markdown/MDX, la clase `prose` mejora tipografía automáticamente */
+
