@@ -1,38 +1,37 @@
+// src/app/noticias/page.tsx
 import Link from 'next/link'
 import { noticias } from '@/data/noticias'
-import { todayISO } from '@/utils/fecha'
+import { esHoy } from '@/utils/fecha'
 
 export default function Noticias() {
-  const hoy = todayISO()
-  const anteriores = noticias
-    .filter(n => n.fecha !== hoy)
-    .sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+  const noticiasAnteriores = noticias
+    .filter((n) => !esHoy(n.fecha))
+    .sort((a, b) => b.fecha.localeCompare(a.fecha))
 
   return (
-    <main className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold leading-tight text-gray-900 dark:text-gray-100 mb-4">
-        Más noticias
-      </h1>
-
-      {anteriores.length === 0 ? (
-        <p className="text-gray-600 dark:text-gray-300">No hay más noticias por ahora.</p>
+    <main className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-6">Noticias anteriores</h1>
+      {noticiasAnteriores.length === 0 ? (
+        <p>No hay noticias anteriores.</p>
       ) : (
-        <ul className="space-y-6">
-          {anteriores.map(n => (
-            <li key={n.id}>
-              <Link
-                href={`/noticias/${n.id}`}
-                className="block rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 p-5"
-              >
-                <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 hover:underline">
-                  {n.titulo}
+        <div className="space-y-8">
+          {noticiasAnteriores.map((n) => (
+            <article key={n.id} className="border-b pb-4">
+              <header>
+                <h2 className="text-2xl font-semibold text-blue-700 dark:text-blue-400">
+                  <Link href={`/noticias/${n.id}`}>{n.titulo}</Link>
                 </h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{n.fecha}</p>
-                <p className="mt-2 text-gray-700 dark:text-gray-200 leading-relaxed">{n.resumen}</p>
-              </Link>
-            </li>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{n.fecha}</p>
+              </header>
+              <p className="mt-2">{n.resumen}</p>
+              <div className="mt-4 prose dark:prose-invert max-w-none prose-a:underline prose-a:decoration-2 prose-a:decoration-blue-500 dark:prose-a:decoration-blue-400">
+                <Link href={`/noticias/${n.id}`} className="text-blue-700 dark:text-blue-400">
+                  Leer más
+                </Link>
+              </div>
+            </article>
           ))}
-        </ul>
+        </div>
       )}
     </main>
   )
