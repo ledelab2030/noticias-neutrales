@@ -45,6 +45,27 @@ Subtítulo — La visión de Alfonso Gómez Méndez: El ex Fiscal y ex Ministro 
 
 Fuente: Entrevista “Condena contra Álvaro Uribe: dos miradas de los más destacados juristas de Colombia”, publicada en el canal de YouTube de Noticias Caracol. <a href="https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3" target="_blank" rel="noopener noreferrer">Ver entrevista completa en YouTube</a>.`,
   fecha: '2025-08-08'
+},
+{
+  "id": "armenia-azerbaiyan-paz-eeuu-2025-08-08",
+  "titulo": "Armenia y Azerbaiyán firman acuerdo de paz histórico con mediación e intereses estratégicos de EE. UU.",
+  "resumen": "El 8 de agosto de 2025, Armenia y Azerbaiyán firmaron en la Casa Blanca un tratado de paz tras décadas de conflicto por Nagorno-Karabaj. El acuerdo, mediado por Estados Unidos, incluye un corredor estratégico bajo administración estadounidense y reduce la influencia de Rusia en la región.",
+  "contenido": "El 8 de agosto de 2025, en la Casa Blanca (Washington D.C., Estados Unidos), Armenia y Azerbaiyán firmaron un tratado de paz que busca poner fin a casi cuatro décadas de conflicto por Nagorno-Karabaj. El primer ministro armenio, Nikol Pashinyan, declaró que se “abre un capítulo de paz”, mientras que el presidente azerbaiyano, Ilham Aliyev, destacó que estaban “escribiendo una gran nueva historia” (Euronews).\n\nLa firma fue mediada por el presidente de EE. UU., Donald Trump, quien calificó el pacto como “histórico”. Según el comunicado oficial, ambas partes se comprometen a cesar enfrentamientos, reabrir comercio y relaciones diplomáticas, y respetar la soberanía e integridad territorial mutua (Euronews).\n\nEl acuerdo incluye un elemento estratégico: la creación del “Trump Route for International Peace and Prosperity” (TRIPP), un corredor de tránsito que conectará Azerbaiyán con su enclave de Najicheván a través de territorio armenio. Este corredor estará bajo administración estadounidense y otorgará a EE. UU. derechos exclusivos para desarrollar infraestructuras como ferrocarriles, gasoductos, oleoductos, redes de fibra óptica y posiblemente líneas eléctricas (Financial Times, Wikipedia).\n\nEl pacto representa un cambio significativo en la geopolítica del Cáucaso Sur, reduciendo la influencia de Rusia —que medió el alto el fuego de 2020— y posicionando a EE. UU. como un actor central en la región (Washington Post). La Unión Europea ha respaldado el acuerdo, subrayando que aún requiere ratificación formal para consolidarse (Consejo de la UE).\n\nEl conflicto comenzó a finales de la década de 1980 y derivó en una guerra abierta en 1991-1994, seguida de un frágil alto el fuego. En 2020, un acuerdo mediado por Rusia puso fin a una nueva escalada, y en 2023 las fuerzas armenias en Nagorno-Karabaj se rindieron, disolviendo de facto la autoproclamada República de Artsaj. Desde entonces, la región ha estado bajo control total de Azerbaiyán.",
+  "fecha": "2025-08-08"
+},
+{
+  id: "colombia-invamer-ago-2025",
+  fecha: "2025-08-09", // AAAA-MM-DD
+  pais: "Colombia",
+  titular: "Invamer reporta 37% de imagen favorable y 54% desfavorable para el presidente Gustavo Petro",
+  fuente: "Invamer (PDF) vía Cambio Colombia",
+  url_fuente: "https://raw.githubusercontent.com/ledelab2030/noticias-neutrales/main/public/encuestas/2025-08/invamer-colombia-opina-18.pdf",
+  cuerpo: [
+    "La firma Invamer divulgó su medición nacional de opinión pública (Colombia Opina #18), solicitada por Noticias Caracol y Blu Radio y publicada por Cambio Colombia. Según el informe, el 37% de los consultados mantiene una percepción favorable del presidente Gustavo Petro y el 54% expresa una percepción desfavorable.",
+    "El trabajo de campo se realizó entre el 30 de julio y el 5 de agosto de 2025 en 84 municipios de todas las regiones, mediante 1.840 entrevistas presenciales en hogares. El estudio empleó muestreo probabilístico multietápico, reporta un margen de error de 2,95% (95% de confianza) y declara cumplimiento de la norma ISO 20252:2019 y la Ley 2494 de 2025.",
+    "Entre los resultados, predomina la percepción de ‘mal camino’ sobre la situación del país; como principales problemas se mencionan orden público, desempleo/economía y corrupción. En temas de seguridad, la mayoría se inclina por insistir en diálogos para alcanzar acuerdos y rechaza sacrificar justicia. Las instituciones con mejor imagen son las Fuerzas Militares y la Iglesia Católica, mientras que el Congreso, los partidos y el ELN registran los niveles más bajos."
+  ],
+  etiquetas: ["encuestas", "opinion-publica", "invamer", "colombia", "presidencia"],
 }
 
 
