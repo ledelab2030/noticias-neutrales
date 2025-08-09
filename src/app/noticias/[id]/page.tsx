@@ -7,7 +7,7 @@ export default async function Noticia(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params
-  const n = noticias.find((x) => x.id === id)
+  const n = noticias.find(x => x.id === id)
   if (!n) return notFound()
 
   return (
@@ -33,27 +33,18 @@ export default async function Noticia(
 
       {/* Tarjeta de contenido */}
       <article className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm p-6">
-        {/* Si más adelante usas Markdown/MDX, la clase `prose` mejora tipografía automáticamente */}
-        <div className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-headings:scroll-mt-24">
+        <div className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-a:underline prose-a:text-blue-700 dark:prose-a:text-blue-400">
           {n.contenido
-            .split(/\n{2,}/) // separa por líneas en blanco
+            .split(/\n{2,}/)
             .map((parrafo, i) => (
-              <p key={i} className="mb-4 text-gray-800 dark:text-gray-200">
-                {parrafo}
-              </p>
+              <p
+                key={i}
+                className="mb-4 text-gray-800 dark:text-gray-200"
+                dangerouslySetInnerHTML={{ __html: parrafo }}
+              />
             ))}
         </div>
       </article>
-
-      {/* Footer de artículo */}
-      <div className="mt-8 flex items-center justify-between text-sm">
-        <Link href="/noticias" className="text-blue-700 dark:text-blue-400 hover:underline">
-          ← Volver a Más noticias
-        </Link>
-        <Link href="/" className="text-blue-700 dark:text-blue-400 hover:underline">
-          Ir al inicio →
-        </Link>
-      </div>
     </main>
   )
 }
