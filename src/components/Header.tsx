@@ -1,15 +1,17 @@
-'use client'
+// src/components/Header.tsx
+"use client"
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
-import clsx from 'clsx'
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useState } from "react"
+import clsx from "clsx"
+import AutoBrand from "@/components/AutoBrand"
 
 const links = [
-  { href: '/', label: 'Inicio' },
-  { href: '/javier', label: 'Javier' },
-  { href: '/sobre-nosotros', label: 'Sobre nosotros' },
-  { href: '/contacto', label: 'Contacto' },
+  { href: "/", label: "Inicio" },
+  { href: "/javier", label: "Javier" },
+  { href: "/sobre-nosotros", label: "Sobre nosotros" },
+  { href: "/contacto", label: "Contacto" },
 ]
 
 export default function Header() {
@@ -26,10 +28,10 @@ export default function Header() {
             href={l.href}
             onClick={onClick}
             className={clsx(
-              'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+              "px-3 py-2 rounded-md text-sm font-medium transition-colors",
               active
-                ? 'text-blue-800 bg-blue-50 dark:text-blue-300 dark:bg-gray-800'
-                : 'text-gray-700 hover:text-blue-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-blue-300 dark:hover:bg-gray-700'
+                ? "text-blue-800 bg-blue-50 dark:text-blue-300 dark:bg-gray-800"
+                : "text-gray-700 hover:text-blue-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-blue-300 dark:hover:bg-gray-700"
             )}
           >
             {l.label}
@@ -42,25 +44,23 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        // Sticky header
-        'sticky top-0 z-50',
-        // Fondo translúcido con blur (si el navegador lo soporta)
-        'bg-white/80 dark:bg-gray-900/80 backdrop-blur supports-[backdrop-filter]:backdrop-blur',
-        // Borde y sombra sutil
-        'border-b border-gray-200 dark:border-gray-800 shadow-sm'
+        "sticky top-0 z-50",
+        "bg-white/80 dark:bg-gray-900/80 backdrop-blur supports-[backdrop-filter]:backdrop-blur",
+        "border-b border-gray-200 dark:border-gray-800 shadow-sm"
       )}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link href="/" className="text-lg sm:text-xl font-bold text-blue-700 dark:text-blue-300">
-          Noticias Neutrales
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+        {/* Marca dinámica: LedeLab + sufijo por ruta (Estilo de Vida en /estilo-de-vida, etc.) */}
+        <Link href="/" className="shrink-0" aria-label="Ir al inicio">
+          <AutoBrand size="md" />
         </Link>
 
-        {/* Desktop nav */}
+        {/* Navegación desktop */}
         <nav className="hidden md:flex gap-2">
           <NavLinks />
         </nav>
 
-        {/* Mobile button */}
+        {/* Botón móvil */}
         <button
           type="button"
           aria-label="Abrir menú"
@@ -69,33 +69,46 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          {/* Icono hamburguesa */}
+          {/* Iconos */}
           <svg
-            className={clsx('h-6 w-6', open ? 'hidden' : 'block')}
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" strokeWidth="2"
+            className={clsx("h-6 w-6", open ? "hidden" : "block")}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"
-              className="stroke-gray-800 dark:stroke-gray-200" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+              className="stroke-gray-900 dark:stroke-gray-200"
+            />
           </svg>
-          {/* Icono cerrar */}
           <svg
-            className={clsx('h-6 w-6', open ? 'block' : 'hidden')}
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" strokeWidth="2"
+            className={clsx("h-6 w-6", open ? "block" : "hidden")}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"
-              className="stroke-gray-800 dark:stroke-gray-200" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+              className="stroke-gray-900 dark:stroke-gray-200"
+            />
           </svg>
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Menú móvil */}
       <div
         id="mobile-menu"
         className={clsx(
-          'md:hidden border-t dark:border-gray-700',
-          open ? 'block' : 'hidden'
+          "md:hidden border-t dark:border-gray-700",
+          open ? "block" : "hidden"
         )}
       >
         <nav className="px-4 py-3 flex flex-col gap-1 bg-white/90 dark:bg-gray-900/90">

@@ -1,15 +1,24 @@
-import './globals.css'
-import Header from '@/components/Header'
+// src/app/layout.tsx
+import "./globals.css"
+import Header from "@/components/Header"
+import { Montserrat } from "next/font/google"
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  viewportFit: 'cover',
+  viewportFit: "cover",
 }
+
+// Montserrat global como variable CSS (no fuerza a usarla en todo el sitio)
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-montserrat",
+})
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={montserrat.variable}>
       <body className="flex flex-col min-h-screen bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100">
         <Header />
         {/* Mantén el relleno interno; no hace falta padding-top extra porque usamos 'sticky' */}
@@ -20,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-5xl mx-auto px-6 py-4 text-sm text-gray-600 dark:text-gray-400 flex flex-col sm:flex-row sm:justify-between gap-2">
             <span>© {new Date().getFullYear()} Noticias Neutrales. Todos los derechos reservados.</span>
             <span>
-              Un proyecto de{' '}
+              Un proyecto de{" "}
               <a
                 href="https://ledelab.group"
                 target="_blank"
