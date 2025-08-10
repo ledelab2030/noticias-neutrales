@@ -1,8 +1,18 @@
-// /app/estilo-de-vida/ClientGrid.tsx
+// /src/app/estilo-de-vida/ClientGrid.tsx
 "use client"
 
 import Link from "next/link"
 import { useMemo, useState } from "react"
+
+type Fuente = { nombre?: string; url?: string }
+export type EstiloItem = {
+  id: string
+  titulo: string
+  fecha: string
+  resumen: string
+  temas?: string[]
+  fuente?: Fuente
+}
 
 function classNames(...c: (string | false | null | undefined)[]) {
   return c.filter(Boolean).join(" ")
@@ -14,21 +24,36 @@ function formatISODate(iso: string) {
   } catch { return iso }
 }
 
-export default function ClientGrid({ items, temas }: { items: any[]; temas: string[] }) {
+export default function ClientGrid({ items, temas }: { items: EstiloItem[]; temas: string[] }) {
   const [active, setActive] = useState<string | null>(null)
-  const filtered = useMemo(() => (!active ? items : items.filter((n) => n.temas?.includes(active))), [items, active])
+  const filtered = useMemo(
+    () => (!active ? items : items.filter((n) => n.temas?.includes(active))),
+    [items, active]
+  )
 
   return (
     <section>
       <div className="mb-6 flex flex-wrap items-center gap-2">
-        <button onClick={() => setActive(null)} className={classNames("rounded-full border px-3 py-1 text-sm",
-            !active ? "bg-[color:#0072CE] text-white border-[color:#0072CE]" : "border-slate-300 hover:border-slate-400")}>
+        <button
+          onClick={() => setActive(null)}
+          className={classNames(
+            "rounded-full border px-3 py-1 text-sm",
+            !active ? "bg-[color:#0072CE] text-white border-[color:#0072CE]" : "border-slate-300 hover:border-slate-400"
+          )}
+        >
           Todos
         </button>
         {temas.map((t) => (
-          <button key={t} onClick={() => setActive((curr) => (curr === t ? null : t))}
-            className={classNames("rounded-full border px-3 py-1 text-sm",
-              active === t ? "bg-[color:#0072CE] text-white border-[color:#0072CE]" : "border-slate-300 text-slate-700 hover:border-slate-400")}>
+          <button
+            key={t}
+            onClick={() => setActive((curr) => (curr === t ? null : t))}
+            className={classNames(
+              "rounded-full border px-3 py-1 text-sm",
+              active === t
+                ? "bg-[color:#0072CE] text-white border-[color:#0072CE]"
+                : "border-slate-300 text-slate-700 hover:border-slate-400"
+            )}
+          >
             {t}
           </button>
         ))}
@@ -41,7 +66,7 @@ export default function ClientGrid({ items, temas }: { items: any[]; temas: stri
   )
 }
 
-function Card({ item }: { item: any }) {
+function Card({ item }: { item: EstiloItem }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 shadow-sm transition hover:shadow-md">
       <div className="relative">
@@ -60,7 +85,7 @@ function Card({ item }: { item: any }) {
         </h3>
         <p className="mt-2 line-clamp-3 text-slate-700">{item.resumen}</p>
         <div className="mt-3 flex flex-wrap gap-2">
-          {item.temas?.map((t: string) => (
+          {item.temas?.map((t) => (
             <span key={t} className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-700">
               {t}
             </span>
