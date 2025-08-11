@@ -1,35 +1,35 @@
-// src/app/layout.tsx
+// /src/app/layout.tsx
 import "./globals.css"
 import Header from "@/components/Header"
-import { Montserrat } from "next/font/google"
+import type { Metadata, Viewport } from "next"
 
-export const viewport = {
+export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
 }
 
-// Montserrat global como variable CSS (no fuerza a usarla en todo el sitio)
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-montserrat",
-})
+// Plantilla global: cualquier `title` de una página se renderiza como "%s / LedeLab"
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  title: {
+    default: "LedeLab",
+    template: "%s / LedeLab",
+  },
+  description: "Noticias Neutrales por LedeLab.",
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={montserrat.variable}>
+    <html lang="es">
       <body className="flex flex-col min-h-screen bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100">
         <Header />
-        {/* Mantén el relleno interno; no hace falta padding-top extra porque usamos 'sticky' */}
-        <main className="flex-1 max-w-5xl mx-auto px-6 py-6">
-          {children}
-        </main>
+        <main className="flex-1 max-w-5xl mx-auto px-6 py-6">{children}</main>
         <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-inner mt-8">
           <div className="max-w-5xl mx-auto px-6 py-4 text-sm text-gray-600 dark:text-gray-400 flex flex-col sm:flex-row sm:justify-between gap-2">
             <span>© {new Date().getFullYear()} Noticias Neutrales. Todos los derechos reservados.</span>
             <span>
-              Un proyecto de{" "}
+              Un proyecto de {" "}
               <a
                 href="https://ledelab.group"
                 target="_blank"

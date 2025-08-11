@@ -1,95 +1,49 @@
 # Noticias Neutrales
 
-Proyecto web basado en [Next.js](https://nextjs.org) que sigue las reglas editoriales de neutralidad, precisión y verificación de fuentes. Este proyecto hace parte del ecosistema **LedeLab Group OÜ**.
+Este es un proyecto [Next.js](https://nextjs.org) inicializado con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## 🚀 Iniciar en desarrollo
+---
 
-Desde la raíz del proyecto:
+## 📌 Nota sobre esta versión (Backup)
+Este backup corresponde a la versión estable previa al despliegue en **Vercel**, con integración de:
+- **Next.js 15.4.6** y **Tailwind CSS v4.1.11** configurado y funcionando.
+- Soporte de tema claro/oscuro.
+- Implementación de **branding dinámico** con `LogoWithSuffix` y `AutoBrand`.
+- Páginas estáticas y dinámicas para:
+  - `/`
+  - `/estilo-de-vida` y `/estilo-de-vida/[id]`
+  - `/noticias` y `/noticias/[id]`
+- Integración de **lista de países prioritarios** para la selección de noticias:contentReference[oaicite:0]{index=0}.
+- Ajustes de diseño en `globals.css`, `layout.tsx` y `Header.tsx` para tipografía selectiva (Montserrat) y estructura general.
+- Limpieza de configuración duplicada de Tailwind y PostCSS.
+- Correcciones de tipado y eliminación de advertencias críticas para `next build`.
+
+Este backup se guarda como **versión base de producción inicial** para futuras iteraciones.
+
+---
+
+## 🚀 Comenzar
+
+Ejecuta el servidor de desarrollo:
 
 ```bash
-npm install
 npm run dev
-```
+# o
+yarn dev
+# o
+pnpm dev
+# o
+bun dev
+Abre http://localhost:3000 en tu navegador para ver el resultado.
 
-Abrir en el navegador: [http://localhost:3000](http://localhost:3000)
+📚 Más información
+Documentación de Next.js
 
-El contenido se gestiona en la carpeta `/src/data/` y las páginas en `/src/app/`.
+Tutorial interactivo de Next.js
 
----
+Repositorio oficial de Next.js en GitHub
 
-## 📜 Reglas editoriales
+☁️ Despliegue en Vercel
+La forma más fácil de desplegar este proyecto es usar la Plataforma Vercel, creadores de Next.js.
 
-* Cada noticia debe tener **mínimo 2 párrafos** (idealmente entre 2 y 5).
-* Debe responder claramente: **Qué, Quién, Cuándo, Dónde, Por qué, Cómo**.
-* **Fuentes**:
-
-  * Solo enlaces a medios oficiales y verificados (gobiernos, organismos internacionales, medios confiables).
-  * Si no hay fuente sólida, se redacta con hechos confirmados públicamente, sin enlace.
-* **Estilo**:
-
-  * Neutral, sin opinión ni especulación.
-  * Basado en hechos ocurridos o en curso.
-  * Sin titulares sensacionalistas.
-  * Evitar medios no confiables como Semana.com, RCN, Caracol, Fox, etc.
-* **Formato**:
-
-  * Igual al de `src/data/noticias.ts`.
-  * Orden cronológico descendente.
-
----
-
-## 🌎 Lista de países prioritarios
-
-Estos países se priorizan para la selección diaria de noticias:
-
-**Principales:**
-
-* Colombia
-* Estados Unidos
-* Canadá
-* Estonia
-* Ecuador
-* Guatemala
-* Argentina
-* Perú
-* Panamá
-* Costa Rica
-
-**Adicionales:**
-
-* China
-* Alemania
-* Corea del Sur
-* Líbano
-* España
-* Portugal
-* Sudáfrica
-
----
-
-## 🛠 Tecnologías y configuración
-
-* **Next.js 15** con App Router.
-* **Tailwind CSS v4** con PostCSS.
-* **Google Fonts (Montserrat)** para elementos de marca.
-* Estructura modular de componentes (`/src/components`).
-* Dataset por sección en `/src/data`.
-
-**PostCSS config:**
-
-```js
-// postcss.config.mjs
-export default {
-  plugins: {
-    "@tailwindcss/postcss": {},
-  },
-}
-```
-
----
-
-## 📦 Despliegue
-
-La forma más sencilla de desplegar este proyecto es en [Vercel](https://vercel.com/new?utm_source=create-next-app).
-
-Más información: [Next.js Deployment Docs](https://nextjs.org/docs/app/building-your-application/deploying).
+Consulta la documentación de despliegue para más detalles.
