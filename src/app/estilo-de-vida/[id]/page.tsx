@@ -1,5 +1,6 @@
 // src/app/estilo-de-vida/[id]/page.tsx
-import { notFound, type Metadata } from "next/navigation"
+import { notFound } from "next/navigation"
+import type { Metadata } from "next"
 import { estiloDeVida } from "@/data/estilo-de-vida"
 
 function f(iso: string) {
@@ -10,13 +11,19 @@ function f(iso: string) {
   }
 }
 
-export function generateMetadata({ params }: { params: { id: string } }): Metadata {
-  const nota = estiloDeVida.find((n) => n.id === params.id)
+export async function generateMetadata(
+  { params }: { params: Promise<{ id: string }> }
+): Promise<Metadata> {
+  const { id } = await params
+  const nota = estiloDeVida.find((n) => n.id === id)
   return { title: nota ? nota.titulo : "Detalle" }
 }
 
-export default function NotaPage({ params }: { params: { id: string } }) {
-  const nota = estiloDeVida.find((n) => n.id === params.id)
+export default async function NotaPage(
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params
+  const nota = estiloDeVida.find((n) => n.id === id)
   if (!nota) return notFound()
 
   return (
