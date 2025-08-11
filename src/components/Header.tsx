@@ -47,8 +47,8 @@ export default function Header() {
             Inicio
           </Link>
 
-          {/* Red: el texto es un Link a /red y también tiene dropdown */}
-          <div className="relative group">
+          {/* Red: Link a /red + dropdown accesible */}
+          <div className="relative group focus-within:visible">
             <div className="flex items-center">
               <Link
                 href="/red"
@@ -60,7 +60,7 @@ export default function Header() {
               >
                 Red
               </Link>
-              {/* chevron visual; no bloquea el Link */}
+              {/* chevron visual */}
               <button
                 aria-label="Abrir submenú de Red"
                 className={clsx(
@@ -69,6 +69,7 @@ export default function Header() {
                   "group-hover:text-blue-700 dark:group-hover:text-blue-300"
                 )}
                 tabIndex={-1}
+                type="button"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -79,7 +80,7 @@ export default function Header() {
             {/* Dropdown (hover/focus) */}
             <div
               className={clsx(
-                "invisible opacity-0 group-hover:visible group-hover:opacity-100",
+                "invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100",
                 "transition-opacity duration-150",
                 "absolute left-0 mt-2 min-w-[180px] rounded-lg border border-gray-200 dark:border-gray-800",
                 "bg-white dark:bg-gray-900 shadow-lg"
@@ -135,7 +136,6 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          {/* Iconos */}
           {!open ? (
             <svg className="h-6 w-6 text-gray-900 dark:text-gray-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
