@@ -7,39 +7,22 @@ import { useState } from "react"
 import clsx from "clsx"
 import AutoBrand from "@/components/AutoBrand"
 
-const links = [
-  { href: "/", label: "Inicio" },
-  { href: "/javier", label: "Javier" },
-  { href: "/sobre-nosotros", label: "Sobre nosotros" },
-  { href: "/contacto", label: "Contacto" },
-]
-
 export default function Header() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)           // menú móvil
+  const [openRed, setOpenRed] = useState(false)     // submenú móvil de Red
   const pathname = usePathname()
 
-  const NavLinks = ({ onClick }: { onClick?: () => void }) => (
-    <>
-      {links.map((l) => {
-        const active = pathname === l.href
-        return (
-          <Link
-            key={l.href}
-            href={l.href}
-            onClick={onClick}
-            className={clsx(
-              "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-              active
-                ? "text-blue-800 bg-blue-50 dark:text-blue-300 dark:bg-gray-800"
-                : "text-gray-700 hover:text-blue-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-blue-300 dark:hover:bg-gray-700"
-            )}
-          >
-            {l.label}
-          </Link>
-        )
-      })}
-    </>
-  )
+  const isActive = (href: string) =>
+    href === "/"
+      ? pathname === "/"
+      : pathname === href || pathname.startsWith(href + "/")
+
+  const baseItem =
+    "px-3 py-2 rounded-md text-sm font-medium transition-colors"
+  const activeItem =
+    "text-blue-800 bg-blue-50 dark:text-blue-300 dark:bg-gray-800"
+  const idleItem =
+    "text-gray-700 hover:text-blue-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-blue-300 dark:hover:bg-gray-700"
 
   return (
     <header
@@ -50,12 +33,100 @@ export default function Header() {
       )}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+        {/* Marca dinámica */}
         <Link href="/" className="shrink-0" aria-label="Ir al inicio">
           <AutoBrand />
         </Link>
-        <nav className="hidden md:flex gap-2">
-          <NavLinks />
+
+        {/* Navegación desktop */}
+        <nav className="hidden md:flex items-center gap-1">
+          <Link
+            href="/"
+            className={clsx(baseItem, isActive("/") ? activeItem : idleItem)}
+          >
+            Inicio
+          </Link>
+
+          {/* Red: el texto es un Link a /red y también tiene dropdown */}
+          <div className="relative group">
+            <div className="flex items-center">
+              <Link
+                href="/red"
+                className={clsx(
+                  baseItem,
+                  isActive("/red") ? activeItem : idleItem,
+                  "pr-2"
+                )}
+              >
+                Red
+              </Link>
+              {/* chevron visual; no bloquea el Link */}
+              <button
+                aria-label="Abrir submenú de Red"
+                className={clsx(
+                  "ml-0.5 rounded-md p-1",
+                  isActive("/red") ? "text-blue-800 dark:text-blue-300" : "text-gray-500 dark:text-gray-300",
+                  "group-hover:text-blue-700 dark:group-hover:text-blue-300"
+                )}
+                tabIndex={-1}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Dropdown (hover/focus) */}
+            <div
+              className={clsx(
+                "invisible opacity-0 group-hover:visible group-hover:opacity-100",
+                "transition-opacity duration-150",
+                "absolute left-0 mt-2 min-w-[180px] rounded-lg border border-gray-200 dark:border-gray-800",
+                "bg-white dark:bg-gray-900 shadow-lg"
+              )}
+            >
+              <div className="py-2">
+                <Link
+                  href="/red"
+                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Vista general
+                </Link>
+                <Link
+                  href="/red/filiales"
+                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Filiales
+                </Link>
+                <Link
+                  href="/red/aliados"
+                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Aliados
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <Link
+            href="/sobre-nosotros"
+            className={clsx(
+              baseItem,
+              isActive("/sobre-nosotros") ? activeItem : idleItem
+            )}
+          >
+            Sobre nosotros
+          </Link>
+
+          <Link
+            href="/contacto"
+            className={clsx(baseItem, isActive("/contacto") ? activeItem : idleItem)}
+          >
+            Contacto
+          </Link>
         </nav>
+
+        {/* Botón móvil */}
         <button
           type="button"
           aria-label="Abrir menú"
@@ -64,31 +135,94 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <svg
-            className={clsx("h-6 w-6", open ? "hidden" : "block")}
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" strokeWidth="2"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"
-              className="stroke-gray-900 dark:stroke-gray-200" />
-          </svg>
-          <svg
-            className={clsx("h-6 w-6", open ? "block" : "hidden")}
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" strokeWidth="2"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"
-              className="stroke-gray-900 dark:stroke-gray-200" />
-          </svg>
+          {/* Iconos */}
+          {!open ? (
+            <svg className="h-6 w-6 text-gray-900 dark:text-gray-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          ) : (
+            <svg className="h-6 w-6 text-gray-900 dark:text-gray-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          )}
         </button>
       </div>
 
+      {/* Menú móvil */}
       <div
         id="mobile-menu"
         className={clsx("md:hidden border-t dark:border-gray-700", open ? "block" : "hidden")}
       >
         <nav className="px-4 py-3 flex flex-col gap-1 bg-white/90 dark:bg-gray-900/90">
-          <NavLinks onClick={() => setOpen(false)} />
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+            className={clsx(baseItem, isActive("/") ? activeItem : idleItem)}
+          >
+            Inicio
+          </Link>
+
+          {/* Red en móvil: link + toggle para subitems */}
+          <div className="flex flex-col">
+            <div className="flex items-center">
+              <Link
+                href="/red"
+                onClick={() => setOpen(false)}
+                className={clsx(
+                  baseItem,
+                  "flex-1",
+                  isActive("/red") ? activeItem : idleItem
+                )}
+              >
+                Red
+              </Link>
+              <button
+                aria-label="Abrir submenú Red"
+                aria-expanded={openRed}
+                onClick={() => setOpenRed((v) => !v)}
+                className="ml-2 rounded-md p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            {openRed && (
+              <div className="ml-3 mt-1 flex flex-col">
+                <Link
+                  href="/red/filiales"
+                  onClick={() => setOpen(false)}
+                  className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Filiales
+                </Link>
+                <Link
+                  href="/red/aliados"
+                  onClick={() => setOpen(false)}
+                  className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Aliados
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link
+            href="/sobre-nosotros"
+            onClick={() => setOpen(false)}
+            className={clsx(baseItem, isActive("/sobre-nosotros") ? activeItem : idleItem)}
+          >
+            Sobre nosotros
+          </Link>
+
+          <Link
+            href="/contacto"
+            onClick={() => setOpen(false)}
+            className={clsx(baseItem, isActive("/contacto") ? activeItem : idleItem)}
+          >
+            Contacto
+          </Link>
         </nav>
       </div>
     </header>

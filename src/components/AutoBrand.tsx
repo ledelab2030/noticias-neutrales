@@ -4,18 +4,21 @@
 import { usePathname } from "next/navigation"
 import LogoWithSuffix from "./LogoWithSuffix"
 
-// Etiqueta corta para el header; el H1 completo va en la página
 const MAP: Record<string, string> = {
-  "/estilo-de-vida": "vida",
-  "/health": "health",
-  "/negocios": "negocios",
-  "/education": "education",
-  "/lifelong": "learning",
+  "/estilo-de-vida": "Estilo de Vida",
+  "/health": "Health",
+  "/negocios": "Emprendimiento / Negocios",
+  "/education": "Sustainability Education",
+  "/lifelong": "Life‑Long Learning",
+  // Micrositios de filiales:
+  "/imasde": "I+DE SAS",
+  "/protemad": "Grupo Protemad",
 }
 
-export default function AutoBrand() {
+export default function AutoBrand({ size = "md" as const }) {
   const pathname = usePathname()
   const entry = Object.keys(MAP).find((p) => pathname.startsWith(p))
-  const suffix = entry ? MAP[entry] : "news"
-  return <LogoWithSuffix suffix={suffix} />
+  const suffix = entry ? MAP[entry] : "News"
+
+  return <LogoWithSuffix suffix={suffix} size={size} />
 }
