@@ -22,7 +22,7 @@ export const filiales: Filial[] = [
     id: 'protemad',
     nombre: 'Grupo Protemad',
     pais: 'Colombia',
-    url: 'https://grupoprotemad.com',
+    url: 'https://www.grupoprotemad.com',
     descripcion:
       'Protección, tratamiento y mejora de la madera.',
     etiquetas: ['Madera', 'Tratamientos', 'Construcción'],
