@@ -13,7 +13,7 @@ export const filiales: Filial[] = [
     id: 'imasde',
     nombre: 'I+DE SAS',
     pais: 'Colombia',
-    url: '/imasde',
+    url: 'https://imasde.co',
     descripcion:
       'Aditivos y recubrimientos sostenibles. Investigación y desarrollo.',
     etiquetas: ['I+D', 'Materiales', 'Sostenibilidad'],
@@ -22,7 +22,7 @@ export const filiales: Filial[] = [
     id: 'protemad',
     nombre: 'Grupo Protemad',
     pais: 'Colombia',
-    url: '/protemad',
+    url: 'https://grupoprotemad.com',
     descripcion:
       'Protección, tratamiento y mejora de la madera.',
     etiquetas: ['Madera', 'Tratamientos', 'Construcción'],
