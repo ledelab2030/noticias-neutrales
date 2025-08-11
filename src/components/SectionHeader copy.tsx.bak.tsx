@@ -4,12 +4,10 @@
 import clsx from "clsx"
 import { ReactNode } from "react"
 
-export type SectionHeaderProps = {
-  /** Texto pequeño sobre el título (kicker). Puedes usar overline o eyebrow. */
+type SectionHeaderProps = {
   overline?: string
-  eyebrow?: string
   title: string
-  /** Descripción bajo el título. También se acepta `subtitle` por compatibilidad. */
+  /** Nuevo: soporta ambas variantes para compatibilidad */
   description?: string
   subtitle?: string
   actions?: ReactNode
@@ -19,7 +17,6 @@ export type SectionHeaderProps = {
 
 export default function SectionHeader({
   overline,
-  eyebrow,
   title,
   description,
   subtitle,
@@ -28,15 +25,12 @@ export default function SectionHeader({
   className,
 }: SectionHeaderProps) {
   const desc = description ?? subtitle
-  const kicker = overline ?? eyebrow
 
   return (
-    <header
-      className={clsx("mb-6", variant === "compact" ? "pt-1" : "pt-2", className)}
-    >
-      {kicker && (
+    <header className={clsx("mb-6", variant === "compact" ? "pt-1" : "pt-2", className)}>
+      {overline && (
         <p className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
-          {kicker}
+          {overline}
         </p>
       )}
 
