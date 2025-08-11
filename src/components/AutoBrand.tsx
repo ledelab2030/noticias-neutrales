@@ -18,7 +18,7 @@ const MAP: Record<string, string> = {
 export default function AutoBrand({ size = "md" as const }) {
   const pathname = usePathname()
   const entry = Object.keys(MAP).find((p) => pathname.startsWith(p))
-  const suffix = entry ? MAP[entry] : "News"
+  const suffix = entry ? MAP[entry] : "General"
 
   return <LogoWithSuffix suffix={suffix} size={size} />
 }

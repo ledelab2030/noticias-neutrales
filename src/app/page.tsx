@@ -1,4 +1,3 @@
-// src/app/page.tsx
 import { noticias } from "@/data/noticias"
 import Link from "next/link"
 import SectionHeader from "@/components/SectionHeader"
@@ -15,7 +14,6 @@ function fmt(iso: string) {
   }
 }
 
-// Ayuda: normaliza fuente para admitir string u objeto { nombre, url }
 function getFuenteNombre(fuente: unknown): string | null {
   if (!fuente) return null
   if (typeof fuente === "string") return fuente
@@ -30,10 +28,17 @@ export default function HomePage() {
   const items = [...noticias].sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
   const [hero, ...rest] = items
 
+  // Países destacados (puedes moverlo a data si quieres centralizar)
+  const paisesDestacados = [
+    'Colombia', 'Estados Unidos', 'Canadá', 'Estonia', 'Ecuador', 'Guatemala',
+    'Argentina', 'Perú', 'Panamá', 'Costa Rica',
+    'China', 'Alemania', 'Corea del Sur', 'Líbano', 'España', 'Portugal', 'Sudáfrica'
+  ]
+
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">
       <SectionHeader
-        title="Noticias"
+        title="Actualidad"
         description="Cobertura neutral y verificada de los hechos más relevantes a nivel nacional e internacional."
       />
 
@@ -61,7 +66,7 @@ export default function HomePage() {
         </article>
       )}
 
-      {/* Lista */}
+      {/* Lista principal */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {rest.map((n) => {
           const fuenteNombre = getFuenteNombre(n.fuente)
@@ -87,6 +92,44 @@ export default function HomePage() {
           )
         })}
       </div>
+
+      {/* Lo más reciente */}
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold mb-4">Lo más reciente</h2>
+        <ul className="space-y-2">
+          {items.slice(0, 7).map((n) => (
+            <li key={n.id} className="flex items-center justify-between">
+              <div>
+                <Link
+                  href={`/noticias/${n.id}`}
+                  className="text-sm font-medium hover:underline"
+                >
+                  {n.titulo}
+                </Link>
+                <div className="text-xs text-muted-foreground">
+                  {n.pais} · {fmt(n.fecha)}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Países destacados */}
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold mb-4">Países destacados</h2>
+        <div className="flex flex-wrap gap-2">
+          {paisesDestacados.map((pais) => (
+            <Link
+              key={pais}
+              href={`/pais/${encodeURIComponent(pais)}`}
+              className="px-3 py-1 text-xs rounded-full border hover:bg-gray-50 dark:hover:bg-gray-800"
+            >
+              {pais}
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   )
 }
