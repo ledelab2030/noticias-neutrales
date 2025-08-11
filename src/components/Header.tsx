@@ -50,17 +50,12 @@ export default function Header() {
       )}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        {/* Marca dinámica: LedeLab + sufijo por ruta (Estilo de Vida en /estilo-de-vida, etc.) */}
         <Link href="/" className="shrink-0" aria-label="Ir al inicio">
-          <AutoBrand size="md" />
+          <AutoBrand />
         </Link>
-
-        {/* Navegación desktop */}
         <nav className="hidden md:flex gap-2">
           <NavLinks />
         </nav>
-
-        {/* Botón móvil */}
         <button
           type="button"
           aria-label="Abrir menú"
@@ -69,47 +64,28 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          {/* Iconos */}
           <svg
             className={clsx("h-6 w-6", open ? "hidden" : "block")}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" strokeWidth="2"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-              className="stroke-gray-900 dark:stroke-gray-200"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"
+              className="stroke-gray-900 dark:stroke-gray-200" />
           </svg>
           <svg
             className={clsx("h-6 w-6", open ? "block" : "hidden")}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" strokeWidth="2"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-              className="stroke-gray-900 dark:stroke-gray-200"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"
+              className="stroke-gray-900 dark:stroke-gray-200" />
           </svg>
         </button>
       </div>
 
-      {/* Menú móvil */}
       <div
         id="mobile-menu"
-        className={clsx(
-          "md:hidden border-t dark:border-gray-700",
-          open ? "block" : "hidden"
-        )}
+        className={clsx("md:hidden border-t dark:border-gray-700", open ? "block" : "hidden")}
       >
         <nav className="px-4 py-3 flex flex-col gap-1 bg-white/90 dark:bg-gray-900/90">
           <NavLinks onClick={() => setOpen(false)} />

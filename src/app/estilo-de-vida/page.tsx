@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { estiloDeVida } from "@/data/estilo-de-vida"
 import type { Metadata } from "next"
+import SectionHeader from "@/components/SectionHeader"
 
 export const metadata: Metadata = {
   title: "Estilo de vida",
@@ -22,12 +23,17 @@ export default function EstiloDeVidaPage() {
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">
-      <header className="mb-6">
-        <h1 className="text-3xl font-semibold tracking-tight dark:text-white">Estilo de vida</h1>
-        <p className="mt-2 text-gray-600 dark:text-gray-300">
-          Hábitos saludables, sostenibilidad y bienestar práctico. Contenido verificado, sin sensacionalismo.
-        </p>
-      </header>
+      <SectionHeader
+        title="Estilo de vida"
+        subtitle="Hábitos saludables, sostenibilidad y bienestar práctico. Contenido verificado, sin sensacionalismo."
+        // Si quieres sub‑secciones, descomenta y ajusta:
+        // tabs={[
+        //   { label: "Todo", href: "/estilo-de-vida", isActive: true },
+        //   { label: "Nutrición", href: "/estilo-de-vida?cat=nutricion" },
+        //   { label: "Bienestar", href: "/estilo-de-vida?cat=bienestar" },
+        //   { label: "Sueño", href: "/estilo-de-vida?cat=sueno" },
+        // ]}
+      />
 
       {hero && (
         <article className="mb-8 rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">

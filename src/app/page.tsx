@@ -1,58 +1,92 @@
 // src/app/page.tsx
-import { noticias } from '@/data/noticias'
+import { noticias } from "@/data/noticias"
+import Link from "next/link"
+import SectionHeader from "@/components/SectionHeader"
 
-export default function Home() {
-  // más recientes primero
-  const todas = [...noticias].sort((a, b) => b.fecha.localeCompare(a.fecha))
-
-  return (
-    <main className="max-w-4xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">
-        Noticias Neutrales — {new Date().toISOString().slice(0, 10)}
-      </h1>
-
-      {todas.length === 0 ? (
-        <p className="text-gray-600 dark:text-gray-300">No hay noticias por ahora.</p>
-      ) : (
-        <div className="space-y-10">
-          {todas.map((n) => (
-            <article key={n.id} className="border-b pb-6">
-              <header className="mb-3">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
-                  {n.titulo}
-                </h2>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{n.fecha}</p>
-              </header>
-
-              <div className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-a:underline prose-a:text-blue-700 dark:prose-a:text-blue-400 space-y-4">
-                {n.contenido.map((p, i) => (
-                  <p key={i} dangerouslySetInnerHTML={{ __html: resaltarLinksLegibles(p) }} />
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      )}
-    </main>
-  )
+function fmt(iso: string) {
+  try {
+    return new Date(iso).toLocaleDateString("es-CO", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    })
+  } catch {
+    return iso
+  }
 }
 
-// ——— Utils ———
-// 1) Si el párrafo ya trae <a ...>, lo dejamos tal cual.
-// 2) Si hay URLs “crudas”, las convertimos a <a> con un texto legible:
-//    - YouTube → "YouTube"
-//    - Enlaces que terminen en .pdf → "documento (PDF)"
-//    - Otros → "ver enlace"
-function resaltarLinksLegibles(texto: string): string {
-  if (/<a\s/i.test(texto)) return texto
+// Ayuda: normaliza fuente para admitir string u objeto { nombre, url }
+function getFuenteNombre(fuente: unknown): string | null {
+  if (!fuente) return null
+  if (typeof fuente === "string") return fuente
+  if (typeof fuente === "object" && fuente !== null && "nombre" in fuente) {
+    const val = (fuente as { nombre?: unknown }).nombre
+    return typeof val === "string" ? val : null
+  }
+  return null
+}
 
-  const urlRegex = /(https?:\/\/[^\s)]+)/g
-  return texto.replace(urlRegex, (url) => {
-    const u = url.toLowerCase()
-    let label = 'ver enlace'
-    if (u.includes('youtube.com') || u.includes('youtu.be')) label = 'YouTube'
-    else if (u.endsWith('.pdf')) label = 'documento (PDF)'
+export default function HomePage() {
+  const items = [...noticias].sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+  const [hero, ...rest] = items
 
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`
-  })
+  return (
+    <main className="mx-auto max-w-5xl px-4 py-8">
+      <SectionHeader
+        title="Noticias"
+        description="Cobertura neutral y verificada de los hechos más relevantes a nivel nacional e internacional."
+      />
+
+      {/* Destacado */}
+      {hero && (
+        <article className="mb-8 rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+            <span className="inline-flex items-center rounded-full border px-2 py-0.5 dark:border-gray-700">
+              Destacado
+            </span>
+            <time>{fmt(hero.fecha)}</time>
+            {getFuenteNombre(hero.fuente) && (
+              <span className="truncate">{getFuenteNombre(hero.fuente)}</span>
+            )}
+          </div>
+          <h2 className="mt-2 text-2xl font-semibold leading-snug text-gray-900 dark:text-white">
+            <Link
+              href={`/noticias/${hero.id}`}
+              className="hover:text-blue-700 dark:hover:text-blue-300"
+            >
+              {hero.titulo}
+            </Link>
+          </h2>
+          <p className="mt-2 text-gray-700 dark:text-gray-300">{hero.resumen}</p>
+        </article>
+      )}
+
+      {/* Lista */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {rest.map((n) => {
+          const fuenteNombre = getFuenteNombre(n.fuente)
+          return (
+            <article
+              key={n.id}
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900"
+            >
+              <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                <time>{fmt(n.fecha)}</time>
+                {fuenteNombre && <span className="truncate">{fuenteNombre}</span>}
+              </div>
+              <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">
+                <Link
+                  href={`/noticias/${n.id}`}
+                  className="hover:text-blue-700 dark:hover:text-blue-300"
+                >
+                  {n.titulo}
+                </Link>
+              </h3>
+              <p className="mt-2 text-gray-700 dark:text-gray-300">{n.resumen}</p>
+            </article>
+          )
+        })}
+      </div>
+    </main>
+  )
 }
