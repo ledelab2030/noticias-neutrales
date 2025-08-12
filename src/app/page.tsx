@@ -6,20 +6,18 @@ import { esHoy } from "@/utils/fecha"
 
 function fmt(iso: string) {
   try {
-    const [y, m, d] = iso.split('-').map(Number)
-    // Congelamos la fecha en UTC para que no se desplace por la zona horaria
+    const [y, m, d] = iso.split("-").map(Number)
     const date = new Date(Date.UTC(y, (m ?? 1) - 1, d ?? 1))
-    return date.toLocaleDateString('es-CO', {
-      year: 'numeric',
-      month: 'short',
-      day: '2-digit',
-      timeZone: 'UTC', // <- clave
+    return date.toLocaleDateString("es-CO", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+      timeZone: "UTC",
     })
   } catch {
     return iso
   }
 }
-
 
 function getFuenteNombre(fuente: unknown): string | null {
   if (!fuente) return null
@@ -32,12 +30,18 @@ function getFuenteNombre(fuente: unknown): string | null {
 }
 
 export default function HomePage() {
-  // Filtrar solo noticias del día actual
-  const items = [...noticias]
-    .filter((n) => esHoy(n.fecha))
-    .sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+  // Todas ordenadas desc por fecha
+  const itemsAll = [...noticias].sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
 
-  const [hero, ...rest] = items
+  // HOY: para el destacado y el grid
+  const hoy = itemsAll.filter((n) => esHoy(n.fecha))
+  const [hero, ...rest] = hoy
+  const idsDeHoy = new Set(hoy.map((n) => n.id))
+
+  // LO MÁS RECIENTE: notas no-hoy y que no salieron arriba
+  const recientes = itemsAll
+    .filter((n) => !esHoy(n.fecha) && !idsDeHoy.has(n.id))
+    .slice(0, 8) // ajusta el tamaño del bloque
 
   // Países destacados (puedes moverlo a data si quieres centralizar)
   const paisesDestacados = [
@@ -91,7 +95,7 @@ export default function HomePage() {
         </article>
       )}
 
-      {/* Lista principal */}
+      {/* Lista principal (hoy) */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {rest.map((n) => {
           const fuenteNombre = getFuenteNombre(n.fuente)
@@ -118,11 +122,11 @@ export default function HomePage() {
         })}
       </div>
 
-      {/* Lo más reciente */}
+      {/* Lo más reciente (no-hoy, sin repetir) */}
       <section className="mt-12">
         <h2 className="text-xl font-semibold mb-4">Lo más reciente</h2>
         <ul className="space-y-2">
-          {items.slice(0, 7).map((n) => (
+          {recientes.map((n) => (
             <li key={n.id} className="flex items-center justify-between">
               <div>
                 <Link
@@ -132,12 +136,17 @@ export default function HomePage() {
                   {n.titulo}
                 </Link>
                 <div className="text-xs text-muted-foreground">
-                  {n.pais} · {fmt(n.fecha)}
+                  {n.pais ?? "·"} · {fmt(n.fecha)}
                 </div>
               </div>
             </li>
           ))}
         </ul>
+        <div className="mt-4">
+          <Link href="/noticias" className="text-sm underline underline-offset-4">
+            Más noticias e información
+          </Link>
+        </div>
       </section>
 
       {/* Países destacados */}
