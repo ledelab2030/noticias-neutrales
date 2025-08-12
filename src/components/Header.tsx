@@ -82,7 +82,7 @@ export default function Header() {
               className={clsx(
                 "invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100",
                 "transition-opacity duration-150",
-                "absolute left-0 mt-2 min-w-[180px] rounded-lg border border-gray-200 dark:border-gray-800",
+                "absolute left-0 mt-2 min-w-[200px] rounded-lg border border-gray-200 dark:border-gray-800",
                 "bg-white dark:bg-gray-900 shadow-lg"
               )}
             >
@@ -104,6 +104,24 @@ export default function Header() {
                   className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
                 >
                   Aliados
+                </Link>
+                <Link
+                  href="/red/proyectos"
+                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Proyectos
+                </Link>
+                <Link
+                  href="/red/mentores"
+                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Mentores
+                </Link>
+                <Link
+                  href="/red/startups"
+                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+                >
+                  Startups
                 </Link>
               </div>
             </div>
@@ -190,19 +208,20 @@ export default function Header() {
 
             {openRed && (
               <div className="ml-3 mt-1 flex flex-col">
-                <Link
-                  href="/red/filiales"
-                  onClick={() => setOpen(false)}
-                  className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
-                >
+                <Link href="/red/filiales" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800">
                   Filiales
                 </Link>
-                <Link
-                  href="/red/aliados"
-                  onClick={() => setOpen(false)}
-                  className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
-                >
+                <Link href="/red/aliados" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800">
                   Aliados
+                </Link>
+                <Link href="/red/proyectos" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800">
+                  Proyectos
+                </Link>
+                <Link href="/red/mentores" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800">
+                  Mentores
+                </Link>
+                <Link href="/red/startups" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800">
+                  Startups
                 </Link>
               </div>
             )}

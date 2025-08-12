@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     template: "%s / LedeLab",
   },
   description: "Noticias Neutrales por LedeLab.",
+  icons: {
+    icon: "/ledelab/favicon.png", // favicon personalizado
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -29,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-5xl mx-auto px-6 py-4 text-sm text-gray-600 dark:text-gray-400 flex flex-col sm:flex-row sm:justify-between gap-2">
             <span>© {new Date().getFullYear()} Noticias Neutrales. Todos los derechos reservados.</span>
             <span>
-              Un proyecto de {" "}
+              Un proyecto de{" "}
               <a
                 href="https://ledelab.group"
                 target="_blank"
