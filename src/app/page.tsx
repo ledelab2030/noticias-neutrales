@@ -1,18 +1,25 @@
+// src/app/page.tsx
 import { noticias } from "@/data/noticias"
 import Link from "next/link"
 import SectionHeader from "@/components/SectionHeader"
+import { esHoy } from "@/utils/fecha"
 
 function fmt(iso: string) {
   try {
-    return new Date(iso).toLocaleDateString("es-CO", {
-      year: "numeric",
-      month: "short",
-      day: "2-digit",
+    const [y, m, d] = iso.split('-').map(Number)
+    // Congelamos la fecha en UTC para que no se desplace por la zona horaria
+    const date = new Date(Date.UTC(y, (m ?? 1) - 1, d ?? 1))
+    return date.toLocaleDateString('es-CO', {
+      year: 'numeric',
+      month: 'short',
+      day: '2-digit',
+      timeZone: 'UTC', // <- clave
     })
   } catch {
     return iso
   }
 }
+
 
 function getFuenteNombre(fuente: unknown): string | null {
   if (!fuente) return null
@@ -25,14 +32,32 @@ function getFuenteNombre(fuente: unknown): string | null {
 }
 
 export default function HomePage() {
-  const items = [...noticias].sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+  // Filtrar solo noticias del día actual
+  const items = [...noticias]
+    .filter((n) => esHoy(n.fecha))
+    .sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+
   const [hero, ...rest] = items
 
   // Países destacados (puedes moverlo a data si quieres centralizar)
   const paisesDestacados = [
-    'Colombia', 'Estados Unidos', 'Canadá', 'Estonia', 'Ecuador', 'Guatemala',
-    'Argentina', 'Perú', 'Panamá', 'Costa Rica',
-    'China', 'Alemania', 'Corea del Sur', 'Líbano', 'España', 'Portugal', 'Sudáfrica'
+    "Colombia",
+    "Estados Unidos",
+    "Canadá",
+    "Estonia",
+    "Ecuador",
+    "Guatemala",
+    "Argentina",
+    "Perú",
+    "Panamá",
+    "Costa Rica",
+    "China",
+    "Alemania",
+    "Corea del Sur",
+    "Líbano",
+    "España",
+    "Portugal",
+    "Sudáfrica",
   ]
 
   return (

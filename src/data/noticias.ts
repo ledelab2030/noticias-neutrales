@@ -1,18 +1,89 @@
-// src/data/noticias.ts
-
 export type Noticia = {
   id: string
+  fecha: string
+  pais?: string
   titulo: string
   resumen: string
   contenido: string[]
-  fecha: string // YYYY-MM-DD
-  pais?: string
   etiquetas?: string[]
   fuente?: string
   url_fuente?: string
 }
 
 export const noticias: Noticia[] = [
+  {
+    id: "gaza-bombardeos-israel-2025-08-12",
+    fecha: "2025-08-12",
+    pais: "Palestina",
+    titulo:
+      "Israel intensifica bombardeos sobre Gaza; decenas de muertos en 24 horas",
+    resumen:
+      "Las Fuerzas de Defensa de Israel intensificaron ataques aéreos y de artillería sobre Gaza, causando decenas de muertes en un día, en el marco de la ofensiva en curso.",
+    contenido: [
+      "¿Qué pasó? El 12 de agosto de 2025, Israel incrementó los bombardeos aéreos y de artillería en múltiples zonas de la Franja de Gaza, dejando decenas de víctimas mortales y numerosos heridos, según reportes oficiales y fuentes médicas locales.",
+      "¿Quién y dónde? Las operaciones fueron ejecutadas por las Fuerzas de Defensa de Israel, con objetivos en zonas densamente pobladas, afectando infraestructura civil y residencial. El Ministerio de Salud de Gaza, administrado por Hamas, confirmó la magnitud de las bajas.",
+      "¿Por qué importa? El recrudecimiento de la ofensiva se produce en medio de negociaciones estancadas y crecientes denuncias de organismos internacionales sobre el impacto humanitario y posibles violaciones al derecho internacional.",
+      "¿Cómo sigue? Israel afirmó que continuará las operaciones hasta neutralizar a Hamas y otros grupos armados, mientras organismos humanitarios solicitan un alto el fuego inmediato."
+    ],
+    etiquetas: ["Gaza", "Israel", "conflicto", "bombardeos"],
+    fuente: "The Guardian",
+    url_fuente:
+      "https://www.theguardian.com/world/2025/aug/12/israel-intensifies-bombing-of-gaza-dozens-killed-in-24-hours"
+  },
+  {
+    id: "colombia-dialogo-catar-clan-golfo-2025-08-12",
+    fecha: "2025-08-12",
+    pais: "Colombia",
+    titulo: "Catar sería sede de diálogo Gobierno Petro - Clan del Golfo",
+    resumen:
+      "Fuentes oficiales y diplomáticas indican que Catar podría acoger las conversaciones exploratorias entre el Gobierno colombiano y el Clan del Golfo para un eventual sometimiento colectivo.",
+    contenido: [
+      "¿Qué pasó? El 12 de agosto de 2025, medios nacionales informaron que Catar es el país escogido para albergar las primeras reuniones entre delegados del Gobierno de Gustavo Petro y representantes del Clan del Golfo.",
+      "¿Quién y dónde? La iniciativa es liderada por la Oficina del Alto Comisionado para la Paz y cuenta con acompañamiento internacional. Las reuniones se realizarían en Doha, capital catarí.",
+      "¿Por qué importa? El Clan del Golfo es considerado la principal estructura criminal del país, con operaciones en varias regiones. El proceso busca su desmantelamiento y una reducción significativa de la violencia armada.",
+      "¿Cómo sigue? El Gobierno prevé formalizar la agenda y los protocolos de negociación en las próximas semanas, condicionados al cese de hostilidades por parte del grupo armado."
+    ],
+    etiquetas: ["Colombia", "paz", "Clan del Golfo", "Catar"],
+    fuente: "El Espectador",
+    url_fuente:
+      "https://www.elespectador.com/colombia-20/paz-y-memoria/catar-seria-el-pais-donde-gobierno-petro-adelantaria-el-dialogo-con-clan-del-golfo/"
+  },
+  {
+    id: "colombia-leyva-retractacion-petro-2025-08-12",
+    fecha: "2025-08-12",
+    pais: "Colombia",
+    titulo: "Leyva se retracta en diligencia judicial de acusaciones contra Petro",
+    resumen:
+      "El excanciller Álvaro Leyva se retractó formalmente de declaraciones previas en las que había hecho señalamientos contra el presidente Gustavo Petro.",
+    contenido: [
+      "¿Qué pasó? En una diligencia judicial celebrada el 12 de agosto de 2025, Álvaro Leyva reconoció que sus declaraciones públicas previas contra el presidente Gustavo Petro carecían de sustento y procedió a retractarse.",
+      "¿Quién y dónde? La diligencia se realizó ante autoridad judicial competente en Colombia, como parte de un proceso legal por injuria y calumnia.",
+      "¿Por qué importa? La retractación cierra un episodio que había generado tensiones políticas y mediáticas, y podría sentar precedente sobre la responsabilidad de figuras públicas en sus pronunciamientos.",
+      "¿Cómo sigue? No se descarta que la retractación facilite acercamientos políticos y disminuya confrontaciones en torno a este caso."
+    ],
+    etiquetas: ["Colombia", "Álvaro Leyva", "Gustavo Petro", "política"],
+    fuente: "La Nueva Prensa",
+    url_fuente:
+      "https://www.lanuevaprensa.com.co/component/k2/leyva-se-retracto-en-diligencia-judicial-de-sus-acusaciones-publicas-contra-el-presidente-petro"
+  },
+  {
+    id: "colombia-partido-unitario-consulta-2025-08-12",
+    fecha: "2025-08-12",
+    pais: "Colombia",
+    titulo: "Columna: la tarea del momento, partido unitario y consulta popular",
+    resumen:
+      "Análisis de la coyuntura política en torno a la propuesta de un partido unitario y la consulta popular impulsada por el Gobierno.",
+    contenido: [
+      "¿Qué pasó? El 12 de agosto de 2025, una columna de opinión en La Nueva Prensa analizó la propuesta de conformar un partido unitario que respalde las reformas sociales promovidas por el presidente Gustavo Petro y la consulta popular prevista.",
+      "¿Quién y dónde? El texto fue publicado en La Nueva Prensa, medio digital colombiano, y dirigido al debate político nacional.",
+      "¿Por qué importa? La iniciativa de un partido unitario busca consolidar fuerzas políticas en torno a un programa común, mientras la consulta popular se perfila como un instrumento clave para legitimar reformas estructurales.",
+      "¿Cómo sigue? El artículo plantea que el éxito de ambas estrategias dependerá de la articulación de liderazgos y la capacidad de movilización ciudadana."
+    ],
+    etiquetas: ["Colombia", "partido unitario", "consulta popular", "política"],
+    fuente: "La Nueva Prensa",
+    url_fuente:
+      "https://www.lanuevaprensa.com.co/component/k2/la-tarea-del-momento-el-parto-unitario-y-la-consulta-popular"
+  },
   {
     id: "tenis-sinner-cincinnati-2025-08-12",
     fecha: "2025-08-12",
@@ -27,69 +98,9 @@ export const noticias: Noticia[] = [
       "¿Contexto y por qué importa? El resultado extiende la racha de Sinner a 23 victorias consecutivas en pistas rápidas y a 46 seguidas frente a rivales fuera del Top 20 en esa superficie, según datos del circuito. El italiano es el vigente campeón y busca su primera defensa exitosa de un Masters 1000.",
       "¿Qué sigue? El próximo rival de Sinner será el francés Adrian Mannarino, quien derrotó a Tommy Paul (5-7, 6-3, 6-4) y accedió desde la fase previa."
     ],
-    etiquetas: [
-      "tenis",
-      "ATP Masters 1000",
-      "Cincinnati",
-      "Jannik Sinner",
-      "Gabriel Diallo"
-    ],
+    etiquetas: ["tenis", "ATP Masters 1000", "Cincinnati", "Jannik Sinner", "Gabriel Diallo"],
     fuente: "ATP Tour",
     url_fuente:
       "https://www.atptour.com/es/news/cincinnati-2025-lunes-sinner-diallo"
-  },
-
-  {
-    id: "colombia-invamer-ago-2025",
-    fecha: "2025-08-09",
-    pais: "Colombia",
-    titulo:
-      "Invamer reporta 37% de imagen favorable y 54% desfavorable para el presidente Gustavo Petro",
-    resumen:
-      "Encuesta nacional Invamer revela que la imagen favorable del presidente Gustavo Petro se ubica en 37% y la desfavorable en 54%. El estudio, realizado entre el 30 de julio y el 6 de agosto de 2025, incluyó entrevistas presenciales y telefónicas, y señala principales preocupaciones en orden público, economía y corrupción.",
-    contenido: [
-      "La firma Invamer divulgó su medición nacional de opinión donde el 37% de los encuestados manifiesta una imagen favorable del presidente Gustavo Petro y el 54% expresa una percepción desfavorable.",
-      "El trabajo de campo se realizó entre el 30 de julio y el 6 de agosto de 2025, combinando entrevistas telefónicas y presenciales en hogares. El estudio empleó muestreo probabilístico multietápico, reporta un margen de error de 2,95% (95% de confianza) y refiere cumplimiento de la norma ISO 20252:2019 y la Ley 2494 de 2025.",
-      "Entre los resultados, predomina la percepción de ‘mal camino’ del país y las principales instituciones consultadas como Congreso, los partidos y el ELN registran los niveles más bajos."
-    ],
-    fuente: "Invamer (PDF) vía Cambio Colombia",
-    url_fuente:
-      "https://raw.githubusercontent.com/ledelab2030/noticias-neutrales/main/public/encuestas/2025-08/invamer-colombia-opina-18.pdf"
-  },
-
-  {
-    id: "colombia-analisis-uprimny-2025-08-08",
-    fecha: "2025-08-08",
-    pais: "Colombia",
-    titulo:
-      "Análisis de Rodrigo Uprimny sobre la consulta popular propuesta por el Gobierno Petro",
-    resumen:
-      "El jurista explica alcances y limitaciones de la propuesta de consulta popular, destacando retos jurídicos y políticos.",
-    contenido: [
-      "En entrevis… (resto del contenido existente sin cambios)"
-    ],
-    fuente: "Dejusticia / entrevistas con medios",
-    url_fuente: "https://www.dejusticia.org/"
-  },
-
-  {
-    id: "alerta-dentifrico-colgate-latam-2025-08-09",
-    titulo:
-      "Autoridades emiten alerta por dentífrico ‘Colgate Total Clean Mint’; recomendaciones y alternativas de bajo riesgo",
-    resumen:
-      "El 9 de agosto de 2025 se reportó una alerta sanitaria regional relacionada con el dentífrico “Colgate Total Clean Mint”, con notificaciones de reacciones adversas en países de América Latina. Las autoridades recomendaron suspender su uso y revisar etiquetas.",
-    contenido: [
-      "El 9 de agosto de 2025 se reportó una alerta sanitaria regional relacionada con el dentífrico “Colgate Total Clean Mint”, con notificaciones de reacciones adversas en países de América Latina. Las autoridades recomendaron suspender su uso y revisar etiquetas.",
-      "El caso reabrió el debate sobre ingredientes potencialmente irritantes y llevó a buscar opciones más seguras. Desde una perspectiva de odontología funcional, se prioriza minimizar agentes abrasivos y espumantes, mantener el microbioma oral y potenciar la saliva como defensa natural.",
-      "Cuidado mínimo funcional: cepillado dos veces al día (noche y mañana), uso de seda dental o alternativas según tolerancia, enjuagues neutros, evitar bebidas muy azucaradas o ácidas; y acudir a controles periódicos con el odontólogo.",
-      "Opciones de bajo riesgo y caseras: comerciales como pastas sin SLS ni triclosán, preparaciones simples con bicarbonato de sodio y xilitol en bajas concentraciones, y prácticas como oil pulling con aceite de coco (sin sustituir el cepillado).",
-      "La Dra. Ellie Phillips (odontóloga y divulgadora en YouTube) recomienda priorizar pH neutro, xilitol y evitar agentes agresivos; ver “The TRUTH About Flossing Teeth (What You Aren’t Being Told)”."
-    ],
-    fecha: "2025-08-09",
-    pais: "México",
-    etiquetas: ["salud", "odontología funcional", "xilitol", "alerta sanitaria"],
-    fuente: "El País (México)",
-    url_fuente:
-      "https://elpais.com/mexico/2025-08-09/la-alerta-sanitaria-en-mexico-colgate-total-clean-mint-se-extiende-por-america-latina.html"
   }
 ]
