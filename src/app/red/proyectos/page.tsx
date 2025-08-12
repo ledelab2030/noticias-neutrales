@@ -21,53 +21,47 @@ export default function ProyectosPage() {
       />
 
       {!items.length ? (
-        <p className="text-sm text-muted-foreground">Aún no hay proyectos publicados.</p>
+        <p className="text-sm text-muted-foreground">
+          Aún no hay proyectos publicados.
+        </p>
       ) : (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((p) => (
             <li
-              key={p.id}
-              className="group rounded-2xl border bg-white/50 p-5 shadow-sm transition hover:shadow-md dark:bg-neutral-900/50"
+              key={p.slug ?? p.id ?? p.titulo}
+              className="rounded-2xl border bg-white p-5 shadow-sm"
             >
-              <div className="flex flex-col gap-1">
-                <h3 className="text-lg font-medium leading-snug">{p.nombre}</h3>
-                <p className="text-xs text-muted-foreground">
-                  {p.pais} · {p.fecha}
-                </p>
-              </div>
-
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {p.descripcion}
-              </p>
-
-              {p.colaboradores?.length ? (
-                <div className="mt-3">
-                  <p className="text-xs font-semibold text-muted-foreground">Colaboradores:</p>
-                  <ul className="mt-1 flex flex-wrap gap-1">
-                    {p.colaboradores.map((c) => (
-                      <li
-                        key={c}
-                        className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300"
-                      >
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-
-              {p.url && (
-                <div className="mt-4">
+              <div className="mb-3 flex items-start justify-between gap-3">
+                <h3 className="text-base font-semibold leading-tight">
+                  {p.titulo}
+                </h3>
+                {p.url ? (
                   <Link
                     href={p.url}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm underline underline-offset-4 hover:opacity-90"
+                    className="shrink-0 rounded-full border px-2 py-1 text-xs hover:bg-neutral-50"
                   >
-                    Más información
+                    Sitio
                   </Link>
-                </div>
-              )}
+                ) : null}
+              </div>
+
+              {p.descripcion ? (
+                <p className="mb-3 text-sm text-neutral-600">{p.descripcion}</p>
+              ) : null}
+
+              {Array.isArray(p.colaboradores) && p.colaboradores.length > 0 ? (
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {p.colaboradores.map((c: string) => (
+                    <li
+                      key={c}
+                      className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-700"
+                    >
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </li>
           ))}
         </ul>
