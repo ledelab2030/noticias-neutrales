@@ -1,5 +1,3 @@
-// src/data/noticias.ts
-
 export type Fuente = string | { nombre: string; url?: string }
 
 // Campos opcionales para no romper el build cuando falte info
@@ -21,9 +19,8 @@ export type Noticia = {
 // 👇 Mantén aquí tu export const noticias: Noticia[] = [ ... ] tal como lo tienes.
 // (No es necesario tocar las entradas existentes)
 
-
 export const noticias: Noticia[] = [
-  {
+{
     id: "colombia-invamer-ago-2025",
     fecha: "2025-08-09",
     pais: "Colombia",
@@ -37,7 +34,8 @@ export const noticias: Noticia[] = [
     fuente: "Invamer (PDF) vía Cambio Colombia",
     url_fuente: "https://raw.githubusercontent.com/ledelab2030/noticias-neutrales/main/public/encuestas/2025-08/invamer-colombia-opina-18.pdf"
   },
-  {
+
+{
     id: "colombia-analisis-uprimny-2025-08-08",
     fecha: "2025-08-08",
     pais: "Colombia",
@@ -51,91 +49,53 @@ export const noticias: Noticia[] = [
     fuente: "Noticias Caracol",
     url_fuente: "https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3"
   },
+  
+  {
+   id: "ledelab-lanza-nuevo-portal-2025-08-15",
+    fecha: "2025-08-12",
+    pais: "Estonia",
+    titulo: "LedeLab Group OÜ completa el lanzamiento de su nuevo portal corporativo con feed de noticias de actualidad",
+    resumen: "Encuesta nacional Invamer revela que la imagen favorable del presidente se mantiene estable, con principales preocupaciones en orden público, economía y corrupción.",
+    contenido: [
+      "Pçarrafo 1",
+      "Pçarrafo 2",
+      "Pçarrafo 3",
+    ],
+    fuente: "Sitio LedeLab Group OU",
+    url_fuente: "https://www.ledelab.co"
+  },
 {
-  id: 'alerta-dentifrico-colgate-cuidado-oral-funcional-xilitol-2025-08-09',
-  titulo: 'Alertas por dentífrico en AL y cuidado oral funcional: opciones seguras y xilitol',
-  resumen:
-    'Autoridades de la región reportaron reacciones adversas vinculadas a un dentífrico específico. Se resumen prácticas mínimas de cuidado oral funcional, alternativas comerciales de bajo riesgo y preparaciones caseras, incluyendo el rol del xilitol y la postura de la Dra. Ellie Phillips.',
-  contenido: [
-    'El 9 de agosto de 2025 se reportó una alerta sanitaria regional relacionada con el dentífrico “Colgate Total Clean Mint”, con notificaciones de reacciones adversas en países de América Latina. Las autoridades recomendaron suspender su uso y revisar etiquetas.',
-    'El caso reabrió el debate sobre ingredientes potencialmente irritantes y motivó a buscar opciones más seguras. Desde la odontología funcional, el foco es preservar el equilibrio del microbioma oral y potenciar la saliva como defensa natural.',
-    'Cuidado mínimo funcional: cepillado dos veces al día (noche imprescindible) con dentífrico de bajo riesgo; limpieza interdental gentil con irrigador o cepillos interproximales, reservando el hilo para restos puntuales y usándolo suavemente tras el cepillado; uso de xilitol tras las comidas para reducir placa, neutralizar ácidos y estimular saliva; espaciar ingestas para favorecer la remineralización salival; limitar bebidas azucaradas o ácidas; y acudir a controles periódicos con el odontólogo.',
-    'Opciones de bajo riesgo y caseras: comerciales como pastas con hidroxiapatita, enjuagues suaves con xilitol o CPC sin alcohol, hilos dentales sin PFAS y cepillos interdentales; caseras como enjuague de xilitol (disolver xilitol en agua con unas gotas de menta o eucalipto) y, como complemento, oil pulling con aceite de coco (sin sustituir el cepillado).',
-    'La Dra. Ellie Phillips (odontóloga y divulgadora en YouTube) cuestiona el flossing rutinario como pilar en encías inflamadas y enfatiza el papel del xilitol y la saliva para disminuir la placa. Recomienda el video “The TRUTH About Flossing Teeth (What You Aren’t Being Told)”.'
-  ],
-  fecha: '2025-08-09',
-  pais: 'México',
-  etiquetas: ['salud', 'odontología funcional', 'xilitol', 'alerta sanitaria'],
-  fuente: 'El País (México)',
-  url_fuente: 'https://elpais.com/mexico/2025-08-09/la-alerta-sanitaria-por-el-uso-del-dentifrico-colgate-total-clean-mint-se-extiende-por-america-latina.html'
-},
-
-{
-  id: 'sinner-salvo-set-point-en-el-segundo-set-para-llevarse-el-duelo-ante-el-canadiense-diallo-2025-08-12',
+  id: 'washington-dc-datos-y-residentes-contradicen-a-trump-2025-08-12',
   fecha: '2025-08-12',
-  titulo: 'Sinner salvó set point en el segundo set para llevarse el duelo ante el Canadiense Diallo.',
-  etiquetas: ['Tenis'],
-  fuente: 'ATP Tour',
-  url_fuente: 'https://www.atptour.com/es/news/cincinnati-2025-lunes-sinner-diallo',
-  consecutivo_unico: '20250812-01',
-},
-
-{
-  id: 'jannik-sinner-completo-61-semanas-consecutivas-en-el-primer-lugar-del-ranking-atp-2025-08-11',
-  fecha: '2025-08-11',
-  titulo: 'Jannik Sinner completó 61 semanas consecutivas en el primer lugar del ranking ATP',
-  etiquetas: ['Tenis'],
-  fuente: 'ATP Tour',
-  url_fuente: 'https://www.atptour.com/en/rankings/former-no-1s?SortField=SingleConsecutiveWeeksNumberOne&SortAscending=False',
-  consecutivo_unico: '20250811-01',
-},
-
-{
-  id: 'no-negociar-con-trump-ni-petro',
-  fecha: '2025-08-11',
-  titulo: 'No negociar con Petro, ya casi se va. Y si pone Presidente?',
-  etiquetas: ['Elecciones Colombia 2026'],
-  fuente: 'El Espectador',
-  url_fuente: 'https://www.elespectador.com/opinion/columnistas/alvaro-forero-tascon/no-negociar-con-trump-ni-petro/',
-  consecutivo_unico: '20250811-02',
-},
-
-{
-  id: 'sondeo-54-de-alemanes-apoya-reconocer-un-estado-palestino-2025-08-10',
-  fecha: '2025-08-10',
-  titulo: 'Sondeo: 54% de alemanes apoya reconocer un Estado palestino',
-  etiquetas: ['Palestina'],
-  fuente: 'DW',
-  url_fuente: 'https://www.dw.com/es/sondeo-la-mayor%C3%ADa-de-alemanes-apoya-reconocer-un-estado-palestino/a-73589877',
-  consecutivo_unico: '20250810-01',
-},
-
-{
-  id: 'titular-en-contra-de-resultados-fuera-de-contexto-en-el-cuerpo-se-habla-de-que-realmente-bajo-con-respecto-a-mismo-mes-de-2024-2025-08-08',
-  fecha: '2025-08-08',
-  titulo: 'Infñación anualizada sigue bajando en Colombia',
-  etiquetas: ['Inflación'],
-  fuente: 'El Espectador',
-  url_fuente: 'https://www.elespectador.com/economia/macroeconomia/inflacion-volvio-a-subir-en-colombia-esto-es-lo-que-hay-detras-noticias-colombia/',
-  consecutivo_unico: '20250808-02',
-},
-
-{
-  id: 'favorabilidad-de-petro-45-nacional-barranquilla-es-la-ciudad-donde-mas-tiene-apoyo-50-2025-05-03',
-  fecha: '2025-05-03',
-  titulo: 'Favorabilidad de Petro: 45 % nacional. Barranquilla es la ciudad donde más tiene apoyo: 50%',
-  etiquetas: ['Elecciones Colombia 2026'],
-  fuente: 'Cifras y Conceptos',
-  url_fuente: 'https://www.cifrasyconceptos.com/wp-content/uploads/2025/05/Polimetrica-Mayo-2025-V2.pdf',
-  consecutivo_unico: '20250503-01',
-},
-
-{
-  id: 'el-presidente-convicto-de-estados-unidos',
-  fecha: '2025-01-10',
-  titulo: 'El Presidente convicto de Estados Unidos',
-  etiquetas: ['Estados Unidos'],
+  titulo: 'Datos y residentes de Washington contradicen a Trump sobre “crisis de violencia”',
+  pais: 'Estados Unidos',
+  resumen:
+    'La Casa Blanca asumió control temporal del MPD y reforzó el despliegue federal en Washington D. C. bajo el Home Rule Act. Datos oficiales reportados por la prensa muestran caídas del delito violento en 2024 y en lo corrido de 2025.',
+  contenido: [
+    '¿Qué pasó? Entre el 11 y el 12 de agosto de 2025, la Casa Blanca declaró una emergencia de criminalidad en Washington D. C., invocó disposiciones del Home Rule Act y ordenó a la Alcaldía poner a disposición el Metropolitan Police Department (MPD) para fines federales, con apoyo adicional de la Guardia Nacional.',
+    '¿Dónde y cuándo? La medida rige en el Distrito de Columbia y se comunicó públicamente el 12 de agosto de 2025, con presencia reforzada de personal de seguridad en zonas como el National Mall y distintos vecindarios.',
+    '¿Quién tomó la decisión? La decisión fue anunciada por el Ejecutivo de Estados Unidos. La coordinación operativa incluyó a agencias federales y a la Guardia Nacional, además del MPD.',
+    '¿Por qué? El Gobierno federal argumentó que persisten problemas de seguridad que requieren intervención excepcional para proteger instalaciones federales, personal y visitantes.',
+    'Marco legal. El Home Rule Act prevé que, en condiciones especiales, el Presidente pueda solicitar los servicios del MPD para fines federales por un periodo limitado, sujeto a controles temporales que requieren intervención del Congreso para extensiones más allá del plazo inicial.',
+    'Datos delictivos. Según cifras oficiales difundidas por medios confiables, 2024 cerró con una disminución relevante del delito violento respecto a 2023, y en lo corrido de 2025 se observan caídas adicionales en varias categorías, aunque subsisten retos como el robo de vehículos.',
+    'Percepción local. Testimonios de residentes consultados por la prensa describen una vida cotidiana sin sensación generalizada de amenaza, y cuestionan la necesidad de un despliegue militar en la ciudad.',
+    'Reacción de autoridades locales. La alcaldesa de Washington D. C., Muriel Bowser, calificó la medida como inusual y expresó preocupación por su alcance, reavivando el debate sobre la autonomía del Distrito y el estatus de Estado.',
+    'Operación en campo. En los primeros días se reportaron patrullajes combinados y detenciones en distintos puntos, dentro de un esquema de vigilancia extendida anunciado por las autoridades.',
+    'Clave del debate. El contraste entre la narrativa de “crisis” y las series oficiales de criminalidad es el eje de la discusión pública: mientras las cifras agregadas muestran descensos, el Gobierno federal enfatiza categorías específicas de delito para justificar la intervención.',
+    'Lo siguiente. La continuidad del control federal más allá del periodo inicial depende de decisiones del Congreso, conforme a los mecanismos de control previstos en la legislación aplicable.',
+    'Nota editorial del proyecto: la presente noticia se limita a hechos verificados, series de datos oficiales y declaraciones públicas de autoridades y residentes, sin incluir valoración política ni especulaciones.'
+  ],
+  etiquetas: [
+    'seguridad',
+    'política pública',
+    'Home Rule Act',
+    'Guardia Nacional',
+    'Muriel Bowser',
+    'Donald Trump',
+    'Washington D. C.'
+  ],
   fuente: 'El País',
-  url_fuente: 'https://elpais.com/opinion/2025-01-11/el-presidente-convicto-de-estados-unidos.html',
-  consecutivo_unico: '20250110-01',
-}]
+  url_fuente: 'https://elpais.com/us/2025-08-12/los-datos-y-los-residentes-de-washington-contradicen-a-trump-nunca-me-he-sentido-amenazada.html'
+}
+
+];
