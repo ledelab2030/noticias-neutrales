@@ -1,6 +1,6 @@
 export type Fuente = string | { nombre: string; url?: string }
 
-// Campos opcionales para no romper el build cuando falte info
+// Campos requeridos
 export type Noticia = {
   id: string
   fecha: string
@@ -50,20 +50,21 @@ export const noticias: Noticia[] = [
     url_fuente: "https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3"
   },
   
-  {
-   id: "ledelab-lanza-nuevo-portal-2025-08-15",
-    fecha: "2025-08-12",
-    pais: "Estonia",
-    titulo: "LedeLab Group OÜ completa el lanzamiento de su nuevo portal corporativo con feed de noticias de actualidad",
-    resumen: "Encuesta nacional Invamer revela que la imagen favorable del presidente se mantiene estable, con principales preocupaciones en orden público, economía y corrupción.",
-    contenido: [
-      "Pçarrafo 1",
-      "Pçarrafo 2",
-      "Pçarrafo 3",
-    ],
-    fuente: "Sitio LedeLab Group OU",
-    url_fuente: "https://www.ledelab.co"
-  },
+ {
+  id: 'lanzamiento-portal-noticias-neutrales-ledelab-group-ou-2025-08-13',
+  fecha: '2025-08-13',
+  titulo: 'LedeLab Group OU lanza portal de noticias neutrales',
+  pais: 'Internacional',
+  resumen: 'LedeLab Group OU presentó oficialmente su nuevo portal de Noticias Neutrales, una plataforma digital para difundir información verificada y libre de sesgos, con prioridad en la cobertura de países seleccionados.',
+  contenido: [
+    'LedeLab Group OU presentó oficialmente su nuevo portal de Noticias Neutrales, una plataforma digital diseñada para ofrecer información verificada y libre de sesgos. El proyecto busca recopilar y presentar hechos relevantes de actualidad, priorizando fuentes oficiales y medios reconocidos por su credibilidad.',
+    'El portal organiza las noticias en orden cronológico y aplica un formato uniforme que responde a las preguntas clave de toda cobertura: qué, quién, cuándo, dónde, por qué y cómo. En su selección diaria, se dará prioridad a países como Colombia, Estados Unidos, Canadá, Estonia, Ecuador, Guatemala, Argentina, Perú, Panamá y Costa Rica, así como a otros de interés estratégico como China, Alemania, Corea del Sur, Líbano, España, Portugal y Sudáfrica.',
+    'La iniciativa forma parte de la estrategia de LedeLab Group OU de promover el acceso a información precisa y estructurada, evitando titulares sensacionalistas y preservando la neutralidad editorial. El portal ya se encuentra disponible y se actualizará diariamente con noticias de alcance nacional e internacional.'
+  ],
+  etiquetas: ['Medios', 'Tecnología', 'Lanzamiento'],
+  consecutivo_unico: '20250813-01'
+},
+
 {
   id: 'washington-dc-datos-y-residentes-contradicen-a-trump-2025-08-12',
   fecha: '2025-08-12',
