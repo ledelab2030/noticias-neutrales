@@ -1,17 +1,26 @@
 // src/data/noticias.ts
 
+export type Fuente = string | { nombre: string; url?: string }
+
+// Campos opcionales para no romper el build cuando falte info
 export type Noticia = {
   id: string
+  fecha: string
   titulo: string
-  resumen: string
-  contenido: string[]
-  fecha: string // YYYY-MM-DD
+
+  // opcionales
   pais?: string
+  resumen?: string
+  contenido?: string[]         // <– ahora opcional
   etiquetas?: string[]
-  fuente?: string
+  fuente?: Fuente
   url_fuente?: string
   consecutivo_unico?: string
 }
+
+// 👇 Mantén aquí tu export const noticias: Noticia[] = [ ... ] tal como lo tienes.
+// (No es necesario tocar las entradas existentes)
+
 
 export const noticias: Noticia[] = [
   {
@@ -75,16 +84,16 @@ export const noticias: Noticia[] = [
   id: 'jannik-sinner-completo-61-semanas-consecutivas-en-el-primer-lugar-del-ranking-atp-2025-08-11',
   fecha: '2025-08-11',
   titulo: 'Jannik Sinner completó 61 semanas consecutivas en el primer lugar del ranking ATP',
-  etiquetas: ['nan'],
+  etiquetas: ['Tenis'],
   fuente: 'ATP Tour',
   url_fuente: 'https://www.atptour.com/en/rankings/former-no-1s?SortField=SingleConsecutiveWeeksNumberOne&SortAscending=False',
   consecutivo_unico: '20250811-01',
 },
 
 {
-  id: 'nan-2025-08-11',
+  id: 'no-negociar-con-trump-ni-petro',
   fecha: '2025-08-11',
-  titulo: 'nan',
+  titulo: 'No negociar con Petro, ya casi se va. Y si pone Presidente?',
   etiquetas: ['Elecciones Colombia 2026'],
   fuente: 'El Espectador',
   url_fuente: 'https://www.elespectador.com/opinion/columnistas/alvaro-forero-tascon/no-negociar-con-trump-ni-petro/',
@@ -95,7 +104,7 @@ export const noticias: Noticia[] = [
   id: 'sondeo-54-de-alemanes-apoya-reconocer-un-estado-palestino-2025-08-10',
   fecha: '2025-08-10',
   titulo: 'Sondeo: 54% de alemanes apoya reconocer un Estado palestino',
-  etiquetas: ['nan'],
+  etiquetas: ['Palestina'],
   fuente: 'DW',
   url_fuente: 'https://www.dw.com/es/sondeo-la-mayor%C3%ADa-de-alemanes-apoya-reconocer-un-estado-palestino/a-73589877',
   consecutivo_unico: '20250810-01',
@@ -104,8 +113,8 @@ export const noticias: Noticia[] = [
 {
   id: 'titular-en-contra-de-resultados-fuera-de-contexto-en-el-cuerpo-se-habla-de-que-realmente-bajo-con-respecto-a-mismo-mes-de-2024-2025-08-08',
   fecha: '2025-08-08',
-  titulo: 'Titular en contra de resultados, fuera de contexto, En el cuerpo se habla de que realmente bajó con respecto a mismo mes de 2024.',
-  etiquetas: ['nan'],
+  titulo: 'Infñación anualizada sigue bajando en Colombia',
+  etiquetas: ['Inflación'],
   fuente: 'El Espectador',
   url_fuente: 'https://www.elespectador.com/economia/macroeconomia/inflacion-volvio-a-subir-en-colombia-esto-es-lo-que-hay-detras-noticias-colombia/',
   consecutivo_unico: '20250808-02',
@@ -122,10 +131,10 @@ export const noticias: Noticia[] = [
 },
 
 {
-  id: 'nan-2025-01-10',
+  id: 'el-presidente-convicto-de-estados-unidos',
   fecha: '2025-01-10',
-  titulo: 'nan',
-  etiquetas: ['nan'],
+  titulo: 'El Presidente convicto de Estados Unidos',
+  etiquetas: ['Estados Unidos'],
   fuente: 'El País',
   url_fuente: 'https://elpais.com/opinion/2025-01-11/el-presidente-convicto-de-estados-unidos.html',
   consecutivo_unico: '20250110-01',

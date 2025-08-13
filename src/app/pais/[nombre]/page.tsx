@@ -55,16 +55,26 @@ function countEtiquetas(items: typeof noticias) {
   return [...freq.entries()].sort((a, b) => b[1] - a[1])
 }
 
-// --- helpers para metadata sin usar `any`
+// Normaliza fuente (string | { nombre, url? }) a texto
+function fuenteNombre(f: unknown): string {
+  if (!f) return ""
+  if (typeof f === "string") return f
+  if (typeof f === "object" && f !== null && "nombre" in (f as Record<string, unknown>)) {
+    const n = (f as { nombre?: unknown }).nombre
+    return typeof n === "string" ? n : ""
+  }
+  return ""
+}
+
+// Permite params como objeto o Promise sin usar `any`
 function isPromise<T>(val: unknown): val is Promise<T> {
   return typeof val === "object" && val !== null && "then" in (val as Record<string, unknown>)
 }
 
 export async function generateMetadata(args: unknown): Promise<Metadata> {
-  type ParamsObj = { nombre: string }
-  const maybe = args as { params?: ParamsObj | Promise<ParamsObj> } | undefined
-  const raw = maybe?.params
-  const params: ParamsObj | undefined = raw ? (isPromise<ParamsObj>(raw) ? await raw : raw) : undefined
+  type Params = { nombre: string }
+  const raw = (args as { params?: Params | Promise<Params> } | undefined)?.params
+  const params: Params | undefined = raw ? (isPromise<Params>(raw) ? await raw : raw) : undefined
   const nombreDecod = decodeURIComponent(params?.nombre ?? "")
   return {
     title: `${nombreDecod} | Actualidad por país`,
@@ -72,7 +82,6 @@ export async function generateMetadata(args: unknown): Promise<Metadata> {
   }
 }
 
-// --- Página (tu contrato: params y searchParams como Promise)
 export default async function PaisPage({
   params,
   searchParams,
@@ -119,15 +128,11 @@ export default async function PaisPage({
         </p>
       </header>
 
-      {/* Temas relacionados */}
       {temas.length > 0 && (
         <section className="mb-8">
           <h2 className="text-lg font-semibold mb-3">Temas relacionados</h2>
           <div className="flex flex-wrap gap-2">
-            <Link
-              href={`/pais/${encodeURIComponent(nombreDecod)}`}
-              className="px-3 py-1 text-xs rounded-full border hover:bg-gray-50 dark:hover:bg-gray-800"
-            >
+            <Link href={`/pais/${encodeURIComponent(nombreDecod)}`} className="px-3 py-1 text-xs rounded-full border hover:bg-gray-50 dark:hover:bg-gray-800">
               Todos
             </Link>
             {temas.map(([t, c]) => (
@@ -143,12 +148,16 @@ export default async function PaisPage({
         </section>
       )}
 
-      {/* Destacado de hoy */}
       {hero && (
         <article className="mb-8 rounded-xl border p-5 shadow-sm">
           <div className="flex items-center gap-3 text-sm text-gray-500">
-            <span className="inline-flex items-center rounded-full border px-2 py-0.5">Destacado de hoy</span>
+            <span className="inline-flex items-center rounded-full border px-2 py-0.5">
+              Destacado de hoy
+            </span>
             <time>{fmt(hero.fecha)}</time>
+            {fuenteNombre(hero.fuente) && (
+              <span className="truncate">{fuenteNombre(hero.fuente)}</span>
+            )}
           </div>
           <h2 className="mt-2 text-2xl font-semibold leading-snug">
             <Link href={`/noticias/${hero.id}`} className="hover:text-blue-700">
@@ -159,7 +168,6 @@ export default async function PaisPage({
         </article>
       )}
 
-      {/* Hoy (resto) */}
       {restHoy.length > 0 && (
         <section className="mb-10">
           <h3 className="mb-3 text-lg font-semibold">Hoy</h3>
@@ -168,6 +176,9 @@ export default async function PaisPage({
               <article key={n.id} className="rounded-xl border p-5 shadow-sm">
                 <div className="flex items-center justify-between text-xs text-gray-500">
                   <time>{fmt(n.fecha)}</time>
+                  {fuenteNombre(n.fuente) && (
+                    <span className="truncate">{fuenteNombre(n.fuente)}</span>
+                  )}
                 </div>
                 <h4 className="mt-2 text-lg font-semibold">
                   <Link href={`/noticias/${n.id}`} className="hover:text-blue-700">
@@ -181,7 +192,6 @@ export default async function PaisPage({
         </section>
       )}
 
-      {/* Todas (paginadas) */}
       <section>
         <div className="mb-3 flex items-center gap-2">
           <h3 className="text-lg font-semibold">Todas</h3>
@@ -198,7 +208,9 @@ export default async function PaisPage({
               <li key={n.id} className="rounded-xl border p-5 shadow-sm">
                 <div className="flex items-center justify-between text-xs text-gray-500">
                   <time>{fmt(n.fecha)}</time>
-                  <span className="truncate">{n.fuente ?? ""}</span>
+                  {fuenteNombre(n.fuente) && (
+                    <span className="truncate">{fuenteNombre(n.fuente)}</span>
+                  )}
                 </div>
                 <h4 className="mt-2 font-semibold">
                   <Link href={`/noticias/${n.id}`} className="hover:text-blue-700">
