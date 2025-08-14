@@ -277,7 +277,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Este proceso refleja perfectamente la misión del programa: personas de cualquier parte del mundo pueden acceder al ecosistema legal y digital de Estonia para emprender sin necesidad de presencia física en el país.',
     'Desde su lanzamiento en diciembre de 2014 hasta finales de 2023, el programa e-Residency de Estonia ha evolucionado de una idea audaz a una infraestructura digital consolidada, con más de 100 000 participantes de todo el mundo y decenas de miles de empresas creadas. Tu caso personal —la visita en el Global Entrepreneurship Congress, la decisión de tramitar la e-residency, y la fundación de LEDELAB GROUP OÜ— ilustra cómo este modelo permite que emprendedores globales materialicen sus iniciativas de manera digital. Tu empresa no solo es un testimonio de la visión del programa, sino también un embajador activo de ese ecosistema digital estonio.',
   ],
-  etiquetas: ['tecnología', 'economía', 'medios'],
+  etiquetas: ['tecnología', 'economía', 'medios','estonia'],
   fuente: {
     nombre: 'Portal oficial e-Residency Estonia',
     url: 'https://www.e-resident.gov.ee'
@@ -316,7 +316,25 @@ const noticiasRaw: NoticiaRaw[] = [
   fuente: { nombre: 'Caracol Radio', url: 'https://caracol.com.co' },
   url_fuente: 'https://caracol.com.co',
   consecutivo_unico: '20250814-02'
+},
+{
+  id: 'cincinnati-2025-sinner-vence-a-auger-aliassime-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'Sinner avanza en Cincinnati tras vencer a Auger-Aliassime',
+  pais: 'Estados Unidos',
+  resumen: 'El italiano Jannik Sinner derrotó al canadiense Félix Auger-Aliassime en el torneo de Cincinnati 2025, asegurando su paso a la siguiente ronda del Masters 1000.',
+  contenido: [
+    'En el Masters 1000 de Cincinnati 2025, Jannik Sinner superó a Félix Auger-Aliassime en sets corridos, consolidando su posición como uno de los principales candidatos al título.',
+    'El encuentro, disputado en pista dura, mostró a un Sinner sólido desde el fondo de la cancha y efectivo en los momentos clave, mientras que Auger-Aliassime no logró mantener el ritmo en los intercambios más largos.',
+    'Con esta victoria, Sinner avanza a semifinales, donde se enfrentará al ganador del duelo entre el francés Terence Atmane (136) y el danés Holger Rune (9), quienes nunca se han enfrentado en el circuito ATP.',
+    'Fuente citada: https://www.atptour.com/es/news/cincinnati-2025-sinner-felix-cf'
+  ],
+  etiquetas: ['resultados', 'estados unidos', 'tenis','deportes'],
+  fuente: { nombre: 'ATP Tour', url: 'https://www.atptour.com' },
+  url_fuente: 'https://www.atptour.com/es/news/cincinnati-2025-sinner-felix-cf',
+  consecutivo_unico: '20250814-01'
 }
+
 
 
 
