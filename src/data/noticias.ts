@@ -300,7 +300,24 @@ const noticiasRaw: NoticiaRaw[] = [
   fuente: { nombre: 'Deutsche Welle', url: 'https://www.youtube.com/watch?v=5SDkz8mQxOY' },
   url_fuente: 'https://www.youtube.com/watch?v=5SDkz8mQxOY',
   consecutivo_unico: '20250814-01'
+},
+{
+  id: 'gloria-gaitan-carta-padre-miguel-uribe-turbay-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'Gloria Gaitán envía carta abierta al padre de Miguel Uribe Turbay por rechazo a presencia de Petro',
+  pais: 'Colombia',
+  resumen: 'Gloria Gaitán, hija de Jorge Eliécer Gaitán, envió una carta abierta a Miguel Uribe Londoño tras su decisión y la de su familia de rechazar la presencia del presidente Gustavo Petro en las exequias de su hijo, Miguel Uribe Turbay.',
+  contenido: [
+    'En la carta, Gaitán recordó la amistad de décadas con Uribe Londoño y expresó su sorpresa y tristeza por la decisión de no permitir la asistencia del presidente Petro a las ceremonias en la Catedral Primada de Colombia.',
+    'Según Gaitán, el gesto envía un mensaje que excluye a una parte de la ciudadanía y contradice valores de reconciliación, especialmente en un momento que debía unir en el dolor y la reflexión.',
+    'Reafirmó su compromiso con la "Restauración Moral y Democrática" y manifestó que, aunque mantiene el afecto por la historia de amistad, no podía callar ante lo que considera un acto de exclusión.'
+  ],
+  etiquetas: ['colombia', 'política', 'gustavo petro', 'editorial'],
+  fuente: { nombre: 'Caracol Radio', url: 'https://caracol.com.co' },
+  url_fuente: 'https://caracol.com.co',
+  consecutivo_unico: '20250814-02'
 }
+
 
 
 ]
