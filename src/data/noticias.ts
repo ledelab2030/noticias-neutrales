@@ -119,7 +119,7 @@ export const noticias: Noticia[] = [
   etiquetas: ['economía', 'consumo', 'indicadores', 'Colombia'],
   fuente: 'El Espectador',
   url_fuente: 'https://www.elespectador.com/economia/confianza-del-consumidor-en-colombia-sube-a-su-nivel-mas-alto-en-13-meses/',
-  consecutivo_unico: '20250813-01'
+  consecutivo_unico: '20250813-02'
 },
 {
     id: 'ozempic-porciones-restaurantes-2025-08-07',
@@ -172,11 +172,11 @@ export const noticias: Noticia[] = [
   etiquetas: ['Unión Patriótica', 'Centro Democrático', 'Álvaro Uribe', 'Revictimización', 'CIDH', 'Colombia'],
   fuente: 'Infobae',
   url_fuente: 'https://www.infobae.com/colombia/2025/08/13/alvaro-uribe-es-blanco-de-criticas-por-discurso-contra-la-up-expuesto-en-homenaje-a-miguel-uribe-merece-el-rechazo/',
-  consecutivo_unico: '20250813-01'
+  consecutivo_unico: '20250813-03'
 },
 {
   id: 'aceites-de-semillas-analisis-nutricional-y-salud-endocrinorosero-2025-08-14',
-  fecha: '2025-08-14',
+  fecha: '2025-08-13',
   titulo: 'Análisis sobre aceites de semillas y su impacto en la salud',
   pais: 'Colombia',
   resumen:
@@ -221,7 +221,7 @@ export const noticias: Noticia[] = [
   etiquetas: ['nutrición', 'aceites vegetales', 'salud cardiovascular', 'dieta', 'Colombia'],
   fuente: 'Endocrino Rosero',
   url_fuente: 'https://www.endocrinorosero.com/post/aceites-de-semillas-son-tan-buenos-como-nos-los-venden?s=09',
-  consecutivo_unico: '20250814-01'
+  consecutivo_unico: '20250813-04'
 },
 
 {
@@ -242,8 +242,33 @@ export const noticias: Noticia[] = [
   fuente: 'El Espectador',
   url_fuente:
     'https://www.elespectador.com/economia/ecopetrol-produce-mas-pero-gana-menos-resultados-del-primer-semestre-de-2025-noticias-hoy/'
+},
+{
+  id: 'tomate-y-solanaceas-recomendaciones-seguras-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'Tomate y solanáceas: recomendaciones prácticas para un consumo seguro',
+  pais: 'Internacional',
+  resumen:
+    'Guía basada en evidencia sobre el consumo de tomate y otras solanáceas, con recomendaciones para la población general y personas con condiciones inflamatorias como psoriasis o artritis.',
+  contenido: [
+    'Las solanáceas —grupo de plantas que incluye tomate, papa, berenjena y pimentón— contienen compuestos naturales llamados glicoalcaloides (como la solanina y la tomatina) que, en concentraciones elevadas, pueden ser tóxicos o provocar reacciones en personas sensibles. En la población general, el consumo moderado de tomate maduro es seguro y forma parte de una dieta equilibrada. Sin embargo, en ciertos contextos de salud, como psoriasis, artritis u otras condiciones inflamatorias, algunos pacientes reportan mejoría al reducir o eliminar temporalmente estos alimentos.',
+    'Recomendaciones:',
+    '1. Población general: el tomate rojo maduro puede consumirse a diario sin riesgos conocidos, ya que su contenido de tomatina es muy bajo (0,3–6 mg/kg).',
+    '2. Evitar tomate verde no maduro: puede contener hasta 500 mg/kg de tomatina; su ingesta frecuente no es aconsejable, especialmente en personas sensibles.',
+    '3. Papa: consumir papas bien almacenadas, no verdes, sin brotes y preferiblemente peladas; descartar si tienen sabor amargo.',
+    '4. Personas con psoriasis o enfermedades autoinmunes: considerar una dieta de eliminación de 3–4 semanas sin solanáceas, seguida de reintroducción gradual, para evaluar cambios en síntomas.',
+    '5. Supervisión profesional: cualquier restricción prolongada debe ser guiada por médico o nutricionista para evitar deficiencias nutricionales.',
+    'Nota: Este contenido se basa en revisiones y datos de seguridad alimentaria, así como en estudios y reportes sobre solanáceas y salud. No reemplaza la consulta médica.',
+    'Fuentes citadas:',
+    '1) Health Canada. *Glycoalkaloids in foods*. Government of Canada. Disponible en: https://www.canada.ca/en/health-canada/services/food-nutrition/reports-publications/food-safety/glycoalkaloids-foods.html',
+    '2) Friedman M. *Tomatine and tomatidine content in tomatoes and tomato products*. Journal of Agricultural and Food Chemistry, 2009. DOI: 10.1021/jf900312x',
+    '3) National Psoriasis Foundation. *Dietary behaviors and psoriasis: patient-reported outcomes*. J Am Acad Dermatol, 2017;76(3): 618-621. DOI: 10.1016/j.jaad.2016.10.019',
+    '4) EFSA Panel on Contaminants in the Food Chain (CONTAM). *Scientific opinion on glycoalkaloids in food and feed*. EFSA Journal, 2020;18(8):6222. Disponible en: https://efsa.onlinelibrary.wiley.com/doi/epdf/10.2903/j.efsa.2020.6222'
+  ],
+  etiquetas: ['salud', 'alimentación', 'investigación', 'psoriasis', 'seguridad alimentaria'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250814-01'
 }
-
 
 
 ];
