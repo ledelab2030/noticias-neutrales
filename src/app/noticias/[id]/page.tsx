@@ -2,6 +2,7 @@
 import { noticias } from "@/data/noticias"
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import { slugify } from "@/utils/slugify"
 
 interface Props {
   params: Promise<{ id: string }>
@@ -84,26 +85,27 @@ export default async function Noticia({ params }: Props) {
         </p>
       ) : null}
 
-      {/* etiquetas */}
+      {/* etiquetas con enlace a rutas limpias */}
       {!!n.etiquetas?.length && (
         <div className="mt-8 flex flex-wrap gap-2">
           {n.etiquetas.map((tag) => (
-            <span
+            <Link
               key={tag}
-              className="rounded-full border px-3 py-1 text-xs text-muted-foreground"
+              href={`/tag/${encodeURIComponent(slugify(tag))}`}
+              className="rounded-full border px-3 py-1 text-xs text-muted-foreground hover:bg-gray-50 dark:hover:bg-gray-800"
             >
               {tag}
-            </span>
+            </Link>
           ))}
         </div>
       )}
     </main>
   )
 }
-
 function resaltarLinks(texto: string) {
+  // Enlaza URLs http(s) que NO estén ya dentro de href="..."
   return texto.replace(
-    /(https?:\/\/[^\s]+)/g,
-    '<a href="$1" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">$1</a>'
+    /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
+    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
   )
 }

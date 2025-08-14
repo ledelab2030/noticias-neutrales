@@ -1,7 +1,23 @@
-export type Fuente = string | { nombre: string; url?: string }
+// src/data/noticias.ts
+// ----------------------------------------------------
+// Esquema con normalización automática de etiquetas (TAGS).
+// - En cada noticia puedes escribir etiquetas libres (e.g., "Medios", "Tecnología").
+// - Al exportar, se normalizan al catálogo canónico definido en src/data/tags.ts.
+// - El resto de la app importa { noticias } como siempre.
+// ----------------------------------------------------
 
-// Campos requeridos
-export type Noticia = {
+import { sanitizeTags, type Tag } from "@/data/tags"
+
+// Si usas un tipo de fuente estructurada en las vistas, mantenlo aquí:
+export type Fuente =
+  | string
+  | {
+      nombre: string
+      url?: string
+    }
+
+// Tipo para ESCRIBIR noticias (etiquetas libres: string[])
+export type NoticiaRaw = {
   id: string
   fecha: string
   titulo: string
@@ -9,47 +25,24 @@ export type Noticia = {
   // opcionales
   pais?: string
   resumen?: string
-  contenido?: string[]         // <– ahora opcional
-  etiquetas?: string[]
+  contenido?: string[]
+  etiquetas?: string[]             // ← libre (puedes poner "Medios", "Tecnología", etc.)
   fuente?: Fuente
   url_fuente?: string
   consecutivo_unico?: string
 }
 
-// 👇 Mantén aquí tu export const noticias: Noticia[] = [ ... ] tal como lo tienes.
-// (No es necesario tocar las entradas existentes)
+// Tipo que CONSUME la app (etiquetas ya canónicas: Tag[])
+export type Noticia = Omit<NoticiaRaw, "etiquetas"> & {
+  etiquetas?: Tag[]                // ← estricto y consistente con tu catálogo
+}
 
-export const noticias: Noticia[] = [
-{
-    id: "colombia-analisis-uprimny-2025-08-08",
-    fecha: "2025-08-08",
-    pais: "Colombia",
-    titulo: "Análisis de Rodrigo Uprimny sobre la consulta popular propuesta por el Gobierno Petro",
-    resumen: "El jurista explica alcances y limitaciones de la propuesta de consulta popular, destacando retos jurídicos y políticos.",
-    contenido: [
-      "En entrevista con Noticias Caracol, el jurista Rodrigo Uprimny analizó la propuesta del Gobierno Petro para convocar una consulta popular el 7 de agosto de 2025. Señaló que este mecanismo permitiría a la ciudadanía pronunciarse sobre reformas clave en salud, educación y pensiones.",
-      "Uprimny advirtió que, aunque la consulta es legal, sus efectos dependerán de que las preguntas sean claras y específicas. También subrayó que, en caso de ser aprobada por mayoría, tendría carácter vinculante siempre que participe al menos un tercio del censo electoral.",
-      "Puedes ver la entrevista completa en el canal de YouTube de Noticias Caracol: https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3"
-    ],
-    fuente: "Noticias Caracol",
-    url_fuente: "https://www.youtube.com/live/JhqTQ838c_k?si=e6oQ9rRVeFkmJlk3"
-  },
-  
- {
-  id: 'lanzamiento-portal-noticias-neutrales-ledelab-group-ou-2025-08-13',
-  fecha: '2025-08-13',
-  titulo: 'LedeLab Group OU lanza portal de noticias neutrales',
-  pais: 'Internacional',
-  resumen: 'LedeLab Group OÜ presentó oficialmente su nuevo portal de Noticias Neutrales, una plataforma digital para difundir información verificada y libre de sesgos, con prioridad en la cobertura de países seleccionados.',
-  contenido: [
-    'LedeLab Group OÜ presentó oficialmente su nuevo portal de Noticias Neutrales, una plataforma digital diseñada para ofrecer información verificada y libre de sesgos. El proyecto busca recopilar y presentar hechos relevantes de actualidad, priorizando fuentes oficiales y medios reconocidos por su credibilidad.',
-    'El portal organiza las noticias en orden cronológico y aplica un formato uniforme que responde a las preguntas clave de toda cobertura: qué, quién, cuándo, dónde, por qué y cómo. En su selección diaria, se dará prioridad a países como Colombia, Estados Unidos, Canadá, Estonia, Ecuador, Guatemala, Argentina, Perú, Panamá y Costa Rica, así como a otros de interés estratégico como China, Alemania, Corea del Sur, Líbano, España, Portugal y Sudáfrica.',
-    'La iniciativa forma parte de la estrategia de LedeLab Group OU de promover el acceso a información precisa y estructurada, evitando titulares sensacionalistas y preservando la neutralidad editorial. El portal ya se encuentra disponible y se actualizará diariamente con noticias de alcance nacional e internacional.'
-  ],
-  etiquetas: ['Medios', 'Tecnología', 'Lanzamiento'],
-  consecutivo_unico: '20250813-01'
-},
-
+// ----------------------------------------------------
+// Pega aquí TUS NOTICIAS con etiquetas libres.
+// Si lo prefieres, puedes dejarlas vacías por ahora; compila igual.
+// ----------------------------------------------------
+const noticiasRaw: NoticiaRaw[] = [
+  // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
 {
   id: 'washington-dc-datos-y-residentes-contradicen-a-trump-2025-08-12',
   fecha: '2025-08-12',
@@ -73,12 +66,8 @@ export const noticias: Noticia[] = [
   ],
   etiquetas: [
     'seguridad',
-    'política pública',
-    'Home Rule Act',
-    'Guardia Nacional',
-    'Muriel Bowser',
-    'Donald Trump',
-    'Washington D. C.'
+    'política',
+    'Donald Trump'
   ],
   fuente: 'El País',
   url_fuente: 'https://elpais.com/us/2025-08-12/los-datos-y-los-residentes-de-washington-contradicen-a-trump-nunca-me-he-sentido-amenazada.html'
@@ -98,7 +87,7 @@ export const noticias: Noticia[] = [
     'El resultado del 45 % de favorabilidad marca un repunte frente a mediciones previas y coincide con la estrategia del presidente Petro de impulsar una consulta popular sobre reformas sociales y derechos laborales. Aunque la ficha técnica de Polimétrica no desagrega la favorabilidad por ciudad, encuestas de otras firmas, como Invamer, han mostrado variaciones significativas entre las principales capitales.',
     'El informe completo de la encuesta puede consultarse en el sitio oficial de Cifras & Conceptos: https://www.cifrasyconceptos.com/wp-content/uploads/2025/05/Polimetrica-Mayo-2025-V2.pdf'
   ],
-  etiquetas: ['Política', 'Encuestas', 'Gustavo Petro', 'Colombia', 'Opinión Pública'],
+  etiquetas: ['Política', 'Encuestas', 'Petro', 'Colombia'],
   fuente: 'Cifras & Conceptos',
   url_fuente: 'https://www.cifrasyconceptos.com/wp-content/uploads/2025/05/Polimetrica-Mayo-2025-V2.pdf',
   consecutivo_unico: '2025-05-03-colombia-encuesta-polimetrica'
@@ -116,7 +105,7 @@ export const noticias: Noticia[] = [
     'Aunque la disposición a comprar vivienda continúa en terreno negativo, mejoró levemente en comparación con meses anteriores. La evaluación para la compra de bienes muebles y electrodomésticos también mostró avances en la mayoría de ciudades, con excepción de Medellín.',
     'El ICC se compone de la percepción sobre las condiciones económicas actuales y las expectativas a futuro, siendo un indicador clave para medir el ánimo del consumidor y proyectar tendencias en el gasto de los hogares.'
   ],
-  etiquetas: ['economía', 'consumo', 'indicadores', 'Colombia'],
+  etiquetas: ['economía', 'consumo', 'Colombia'],
   fuente: 'El Espectador',
   url_fuente: 'https://www.elespectador.com/economia/confianza-del-consumidor-en-colombia-sube-a-su-nivel-mas-alto-en-13-meses/',
   consecutivo_unico: '20250813-02'
@@ -218,7 +207,7 @@ export const noticias: Noticia[] = [
     'Entre las recomendaciones prácticas se incluye: priorizar aceites prensados en frío o mínimamente refinados; usarlos en cantidades moderadas; y combinarlos con fuentes ricas en omega-3 como pescado graso, linaza o chía para equilibrar la relación de ácidos grasos.',
     'La conclusión general es que los aceites de semillas no son “malos” por sí mismos, pero su uso debe contextualizarse dentro de una alimentación variada, con atención al balance de grasas y a la calidad del producto.'
   ],
-  etiquetas: ['nutrición', 'aceites vegetales', 'salud cardiovascular', 'dieta', 'Colombia'],
+  etiquetas: ['nutrición', 'aceites vegetales', 'salud', 'dieta', 'Colombia'],
   fuente: 'Endocrino Rosero',
   url_fuente: 'https://www.endocrinorosero.com/post/aceites-de-semillas-son-tan-buenos-como-nos-los-venden?s=09',
   consecutivo_unico: '20250813-04'
@@ -238,7 +227,7 @@ export const noticias: Noticia[] = [
     'En el mismo periodo, las exportaciones representaron cerca del 60 % de las ventas, con los principales destinos en Estados Unidos, China y países de Europa, a pesar de un entorno global volátil en los precios de la energía.',
     'La petrolera estatal reiteró que continuará su estrategia de diversificación energética y fortalecimiento de la producción, buscando equilibrio entre rentabilidad y sostenibilidad.'
   ],
-  etiquetas: ['Ecopetrol', 'Petróleo', 'Resultados financieros', 'Economía de Colombia'],
+  etiquetas: ['Ecopetrol', 'Petróleo', 'Resultados', 'Economía'],
   fuente: 'El Espectador',
   url_fuente:
     'https://www.elespectador.com/economia/ecopetrol-produce-mas-pero-gana-menos-resultados-del-primer-semestre-de-2025-noticias-hoy/'
@@ -259,16 +248,51 @@ export const noticias: Noticia[] = [
     '4. Personas con psoriasis o enfermedades autoinmunes: considerar una dieta de eliminación de 3–4 semanas sin solanáceas, seguida de reintroducción gradual, para evaluar cambios en síntomas.',
     '5. Supervisión profesional: cualquier restricción prolongada debe ser guiada por médico o nutricionista para evitar deficiencias nutricionales.',
     'Nota: Este contenido se basa en revisiones y datos de seguridad alimentaria, así como en estudios y reportes sobre solanáceas y salud. No reemplaza la consulta médica.',
-    'Fuentes citadas:',
-    '1) Health Canada. *Glycoalkaloids in foods*. Government of Canada. Disponible en: https://www.canada.ca/en/health-canada/services/food-nutrition/reports-publications/food-safety/glycoalkaloids-foods.html',
-    '2) Friedman M. *Tomatine and tomatidine content in tomatoes and tomato products*. Journal of Agricultural and Food Chemistry, 2009. DOI: 10.1021/jf900312x',
-    '3) National Psoriasis Foundation. *Dietary behaviors and psoriasis: patient-reported outcomes*. J Am Acad Dermatol, 2017;76(3): 618-621. DOI: 10.1016/j.jaad.2016.10.019',
-    '4) EFSA Panel on Contaminants in the Food Chain (CONTAM). *Scientific opinion on glycoalkaloids in food and feed*. EFSA Journal, 2020;18(8):6222. Disponible en: https://efsa.onlinelibrary.wiley.com/doi/epdf/10.2903/j.efsa.2020.6222'
+"Fuentes citadas:",
+"1) Health Canada. *Glycoalkaloids in foods*. Government of Canada. Disponible en: https://www.canada.ca/en/health-canada/services/food-nutrition/reports-publications/food-safety/glycoalkaloids-foods.html",
+"2) Friedman M. *Tomatine and tomatidine content in tomatoes and tomato products*. Journal of Agricultural and Food Chemistry, 2009. https://doi.org/10.1021/jf900312x",
+"3) National Psoriasis Foundation. *Dietary behaviors and psoriasis: patient-reported outcomes*. J Am Acad Dermatol, 2017;76(3):618–621. https://doi.org/10.1016/j.jaad.2016.10.019",
+"4) EFSA Panel on Contaminants in the Food Chain (CONTAM). *Scientific opinion on glycoalkaloids in food and feed*. EFSA Journal, 2020;18(8):6222. https://efsa.onlinelibrary.wiley.com/doi/epdf/10.2903/j.efsa.2020.6222"
   ],
   etiquetas: ['salud', 'alimentación', 'investigación', 'psoriasis', 'seguridad alimentaria'],
   fuente: 'LedeLab',
   consecutivo_unico: '20250814-01'
+},
+{
+  id: 'estonia-e-residency-creacion-evolucion-y-ledelab-group-ou-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'Programa de residencia virtual "e-Residency" de Estonia: creación, evolución y su impacto en LEDELAB GROUP OÜ',
+  pais: 'Estonia',
+  resumen:
+    'Desde su lanzamiento en 2014, el programa e-Residency de Estonia ha evolucionado como un modelo pionero de identidad digital para emprendedores globales. LEDELAB GROUP OÜ, propietaria de este portal, fue fundada tras la obtención de e-residency por su creador, inspirada por una visita al stand del gobierno estonio en el Global Entrepreneurship Congress 2018 en Estambul.',
+  contenido: [
+    'El programa e-Residency de Estonia fue lanzado el 1 de diciembre de 2014, con la misión de otorgar una identidad digital y un estatus legal a personas no residentes, permitiéndoles utilizar los servicios de gobierno electrónico del país y acceder a su entorno empresarial transparente y modernizado. Esta iniciativa pionera posibilitó fundar empresas, firmar documentos electrónicamente, acceder a banca, gestionar impuestos y más, sin necesidad de residencia física en Estonia (e-resident.gov.ee).',
+    'Las raíces del proyecto se remontan a iniciativas de digitalización anteriores en el país, pero fue impulsado finalmente por Taavi Kotka, Ruth Annus y Siim Sikkut a través de un concurso de ideas del Estonian Development Fund en 2014. El objetivo estratégico apuntaba, simbólicamente, a alcanzar “10 millones de e-residents para 2025” (en.wikipedia.org).',
+    'El británico Edward Lucas fue el primer e-resident, y Hamid Tahsildoost, de Estados Unidos, fue el primero en completar el proceso estándar para obtener el estatus (en.wikipedia.org). En sus primeros cinco años, el programa atrajo alrededor de 63 000 e-residents de 167 países, y se fundaron más de 10 000 empresas (investinestonia.com).',
+    'Avanzando hasta finales de 2023, el alcance del programa creció exponencialmente: ya contaba con más de 100 000 e-residents de 181 países, quienes habían creado más de 27 000 empresas en Estonia (en.wikipedia.org).',
+    'Más allá de su funcionalidad técnica, e-Residency ha cimentado el estatus de Estonia como un centro internacional de emprendimiento digital. El sistema apoya a emprendedores remotos, freelancers, startups y nómadas digitales en todo el mundo, permitiendo operar empresas desde cualquier lugar con pocos clics (e-resident.gov.ee).',
+    'Para Estonia, los beneficios incluyen: crecimiento económico, difusión de su tecnología, ingresos por tasas de servicio, creación de empleos y fortalecimiento de su reputación global mediante lo que se ha descrito como “soft power digital” (e-resident.gov.ee).',
+    'Aun así, el modelo ha enfrentado desafíos relacionados con la seguridad y la privacidad. Por ejemplo, en 2017 se detectó una vulnerabilidad importante en los certificados digitales emitidos entre octubre de 2014 y noviembre de 2017, lo que llevó al gobierno a suspender temporalmente dichos certificados hasta que se reemplazaron (en.wikipedia.org).',
+    'Tu empresa LEDELAB GROUP OÜ fue registrada en Estonia el 25 de junio de 2018, con un capital social de 2 500 €, bajo el nombre y los datos de registro oficiales (ariregister.rik.ee). Además, descubriste el programa de e-Residency durante una visita al booth del gobierno de Estonia en el Global Entrepreneurship Congress de Estambul en 2018, lo cual fue la chispa que te motivó a solicitar la e-residency y finalmente fundar tu empresa. Es importante destacar que, según el portal oficial de e-Residency, LEDELAB GROUP OÜ figura en la lista de compañías registradas bajo el programa (en.wikipedia.org).',
+    'Este proceso refleja perfectamente la misión del programa: personas de cualquier parte del mundo pueden acceder al ecosistema legal y digital de Estonia para emprender sin necesidad de presencia física en el país.',
+    'Desde su lanzamiento en diciembre de 2014 hasta finales de 2023, el programa e-Residency de Estonia ha evolucionado de una idea audaz a una infraestructura digital consolidada, con más de 100 000 participantes de todo el mundo y decenas de miles de empresas creadas. Tu caso personal —la visita en el Global Entrepreneurship Congress, la decisión de tramitar la e-residency, y la fundación de LEDELAB GROUP OÜ— ilustra cómo este modelo permite que emprendedores globales materialicen sus iniciativas de manera digital. Tu empresa no solo es un testimonio de la visión del programa, sino también un embajador activo de ese ecosistema digital estonio.',
+  ],
+  etiquetas: ['tecnología', 'economía', 'medios'],
+  fuente: {
+    nombre: 'Portal oficial e-Residency Estonia',
+    url: 'https://www.e-resident.gov.ee'
+  },
+  url_fuente: 'https://company.e-resident.gov.ee/company/ledelab-group-ou/',
 }
 
+]
 
-];
+// ----------------------------------------------------
+// Export FINAL (normalizado):
+// - Convierte mayúsculas/minúsculas/acentos → forma canónica de TAGS
+// - Descarta etiquetas fuera del catálogo
+// ----------------------------------------------------
+export const noticias: Noticia[] = noticiasRaw.map((n) => ({
+  ...n,
+  etiquetas: sanitizeTags(n.etiquetas),
+}))
