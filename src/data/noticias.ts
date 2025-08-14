@@ -283,7 +283,25 @@ const noticiasRaw: NoticiaRaw[] = [
     url: 'https://www.e-resident.gov.ee'
   },
   url_fuente: 'https://company.e-resident.gov.ee/company/ledelab-group-ou/',
+},
+{
+  id: 'recoleccion-basura-bogota-problema-sin-resolver-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'La recolección de basura, un problema sin resolver en Bogotá',
+  pais: 'Colombia',
+  resumen: 'El sistema de recogida de basuras de Bogotá enfrenta problemas de coordinación, recolección y separación de residuos. La unidad de la alcaldía de Bogotá no quiso responder preguntas de Deutsche Welle.',
+  contenido: [
+    'Luis trabaja en el último sitio donde pueden reciclarse las basuras orgánicas producidas en Bogotá, separando los desechos de origen orgánico de los demás. “Más conciencia, más conciencia porque realmente la naturaleza es la que sufre y nosotros también… nos cortamos también en las manos”, señaló.',
+    'El sistema de recogida de basuras de la capital enfrenta problemas en la coordinación y separación de residuos. “Mientras la basura no esté al frente de mi casa, yo no tengo problemas”, comentó un ciudadano, destacando la falta de conciencia más allá de los espacios privados. Aunque Bogotá aspira a ser un destino turístico, la basura en las calles es uno de los principales reclamos ciudadanos.',
+    'El plan de desarrollo distrital “Bogotá Camina Segura” contrasta con la afirmación de que “Bogotá ni siquiera puede caminar en medio de tanta basura”. La unidad distrital encargada no quiso responder a las preguntas de Deutsche Welle. En paralelo, surgen iniciativas privadas como un servicio de recolección de residuos orgánicos en baldes que luego son convertidos en compost.',
+    'Este programa, que atiende a 2.700 hogares en 10 localidades, transforma unas 150 toneladas de residuos orgánicos en 80 a 90 toneladas de abono entregado a asociaciones campesinas y hogares participantes. Luis afirma que gracias a estos procesos “nace de todo… hasta las aves también vuelven acá”.'
+  ],
+  etiquetas: ['colombia', 'medio ambiente'],
+  fuente: { nombre: 'Deutsche Welle', url: 'https://www.youtube.com/watch?v=5SDkz8mQxOY' },
+  url_fuente: 'https://www.youtube.com/watch?v=5SDkz8mQxOY',
+  consecutivo_unico: '20250814-01'
 }
+
 
 ]
 

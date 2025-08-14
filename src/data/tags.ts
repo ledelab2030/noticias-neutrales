@@ -11,6 +11,7 @@
 export const TAGS = [
   'aceites vegetales',
   'alimentación',
+  'Bogotá',
   'colombia',
   'consumo',
   'dieta',
@@ -24,6 +25,7 @@ export const TAGS = [
   'gustavo petro',
   'investigación',
   'medios',
+  'medio ambiente',
   'nutrición',
   'ozempic',
   'petróleo',
