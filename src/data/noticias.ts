@@ -310,7 +310,8 @@ const noticiasRaw: NoticiaRaw[] = [
   contenido: [
     'En la carta, Gaitán recordó la amistad de décadas con Uribe Londoño y expresó su sorpresa y tristeza por la decisión de no permitir la asistencia del presidente Petro a las ceremonias en la Catedral Primada de Colombia.',
     'Según Gaitán, el gesto envía un mensaje que excluye a una parte de la ciudadanía y contradice valores de reconciliación, especialmente en un momento que debía unir en el dolor y la reflexión.',
-    'Reafirmó su compromiso con la "Restauración Moral y Democrática" y manifestó que, aunque mantiene el afecto por la historia de amistad, no podía callar ante lo que considera un acto de exclusión.'
+    'Reafirmó su compromiso con la "Restauración Moral y Democrática" y manifestó que, aunque mantiene el afecto por la historia de amistad, no podía callar ante lo que considera un acto de exclusión.',
+    'Se puede consultar el texto completo de la carta en el siguiente enlace: <a href="https://www.ledelab.co/noticias/2025.08.14-Carta-Gloria-Gaitan-a-papa-Miguel-Uribe.png" target="_blank">(Ver carta)</a>'
   ],
   etiquetas: ['colombia', 'política', 'gustavo petro', 'editorial'],
   fuente: { nombre: 'Caracol Radio', url: 'https://caracol.com.co' },
