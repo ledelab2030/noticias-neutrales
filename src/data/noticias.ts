@@ -173,7 +173,77 @@ export const noticias: Noticia[] = [
   fuente: 'Infobae',
   url_fuente: 'https://www.infobae.com/colombia/2025/08/13/alvaro-uribe-es-blanco-de-criticas-por-discurso-contra-la-up-expuesto-en-homenaje-a-miguel-uribe-merece-el-rechazo/',
   consecutivo_unico: '20250813-01'
+},
+{
+  id: 'aceites-de-semillas-analisis-nutricional-y-salud-endocrinorosero-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'Análisis sobre aceites de semillas y su impacto en la salud',
+  pais: 'Colombia',
+  resumen:
+    'Un artículo de Endocrino Rosero examina la calidad nutricional de aceites de semillas comunes, comparando su perfil con otros aceites y grasas, y analiza sus posibles efectos en la salud cardiovascular y metabólica.',
+  contenido: [
+    'El especialista colombiano Endocrino Rosero publicó un análisis sobre los aceites de semillas más consumidos —como soya, maíz, girasol y canola— evaluando su composición de ácidos grasos y su relación con la salud humana.',
+    'El texto compara el contenido de ácidos grasos poliinsaturados, monoinsaturados y saturados, así como la proporción omega-6/omega-3, señalando que un exceso relativo de omega-6 podría favorecer procesos inflamatorios en ciertos contextos.',
+    'A continuación se presenta una tabla resumen con valores aproximados de la composición de ácidos grasos por cada 100 g de aceite, según datos promedio reportados en literatura científica:',
+    `
+<section>
+  <style>
+    .tabla-aceites{width:100%;border-collapse:collapse;font-size:.95rem}
+    .tabla-aceites th,.tabla-aceites td{border:1px solid rgba(255,255,255,0.15);padding:.5rem .6rem;text-align:center}
+    .tabla-aceites th{font-weight:600}
+    .tabla-aceites caption{caption-side:bottom;font-size:.85rem;opacity:.8;padding-top:.5rem}
+  </style>
+  <table class="tabla-aceites">
+    <thead>
+      <tr>
+        <th style="text-align:left">Aceite</th>
+        <th>Grasas saturadas (%)</th>
+        <th>Monoinsaturadas (%)</th>
+        <th>Poliinsaturadas (%)</th>
+        <th>Relación Ω‑6/Ω‑3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="text-align:left">Soya</td><td>15</td><td>23</td><td>58</td><td>~7:1</td></tr>
+      <tr><td style="text-align:left">Maíz</td><td>13</td><td>28</td><td>55</td><td>~45:1</td></tr>
+      <tr><td style="text-align:left">Girasol</td><td>10</td><td>20</td><td>66</td><td>~200:1</td></tr>
+      <tr><td style="text-align:left">Canola</td><td>7</td><td>63</td><td>28</td><td>~2:1</td></tr>
+      <tr><td style="text-align:left">Oliva (ref.)</td><td>14</td><td>73</td><td>11</td><td>~13:1</td></tr>
+    </tbody>
+    <caption>Valores aproximados. Pueden variar según origen, variedad y método de extracción.</caption>
+  </table>
+</section>
+    `,
+    'También se revisan estudios clínicos y epidemiológicos que muestran beneficios y riesgos potenciales del consumo regular de estos aceites, dependiendo de la dieta general y el estilo de vida. El autor enfatiza la importancia de la calidad del procesamiento y el origen del aceite.',
+    'Entre las recomendaciones prácticas se incluye: priorizar aceites prensados en frío o mínimamente refinados; usarlos en cantidades moderadas; y combinarlos con fuentes ricas en omega-3 como pescado graso, linaza o chía para equilibrar la relación de ácidos grasos.',
+    'La conclusión general es que los aceites de semillas no son “malos” por sí mismos, pero su uso debe contextualizarse dentro de una alimentación variada, con atención al balance de grasas y a la calidad del producto.'
+  ],
+  etiquetas: ['nutrición', 'aceites vegetales', 'salud cardiovascular', 'dieta', 'Colombia'],
+  fuente: 'Endocrino Rosero',
+  url_fuente: 'https://www.endocrinorosero.com/post/aceites-de-semillas-son-tan-buenos-como-nos-los-venden?s=09',
+  consecutivo_unico: '20250814-01'
+},
+
+{
+  id: 'ecopetrol-resultados-primer-semestre-2025-2025-08-13',
+  fecha: '2025-08-13',
+  titulo: 'Ecopetrol incrementa producción pero reduce utilidades en el primer semestre de 2025',
+  pais: 'Colombia',
+  resumen:
+    'La petrolera estatal Ecopetrol reportó un aumento en su producción durante el primer semestre de 2025, pero una caída en sus ganancias, atribuida a menores precios internacionales del crudo y mayores costos operativos.',
+  contenido: [
+    'Ecopetrol informó que su producción promedio en el primer semestre de 2025 fue de 743.000 barriles de petróleo equivalente por día, un incremento del 4,1 % frente al mismo periodo de 2024.',
+    'Pese al aumento en producción, la utilidad neta cayó un 12 % en comparación con el primer semestre del año anterior, alcanzando los 12,5 billones de pesos. La compañía explicó que esta disminución se debió principalmente a la caída de los precios internacionales del crudo y al incremento de costos asociados a transporte y operación.',
+    'El presidente de Ecopetrol, Ricardo Roa, señaló que la empresa ha mantenido su compromiso con las inversiones en transición energética, destinando parte de sus ingresos a proyectos de energías renovables, hidrógeno verde y reducción de emisiones.',
+    'En el mismo periodo, las exportaciones representaron cerca del 60 % de las ventas, con los principales destinos en Estados Unidos, China y países de Europa, a pesar de un entorno global volátil en los precios de la energía.',
+    'La petrolera estatal reiteró que continuará su estrategia de diversificación energética y fortalecimiento de la producción, buscando equilibrio entre rentabilidad y sostenibilidad.'
+  ],
+  etiquetas: ['Ecopetrol', 'Petróleo', 'Resultados financieros', 'Economía de Colombia'],
+  fuente: 'El Espectador',
+  url_fuente:
+    'https://www.elespectador.com/economia/ecopetrol-produce-mas-pero-gana-menos-resultados-del-primer-semestre-de-2025-noticias-hoy/'
 }
+
 
 
 ];
