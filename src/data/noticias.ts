@@ -334,7 +334,199 @@ const noticiasRaw: NoticiaRaw[] = [
   fuente: { nombre: 'ATP Tour', url: 'https://www.atptour.com' },
   url_fuente: 'https://www.atptour.com/es/news/cincinnati-2025-sinner-felix-cf',
   consecutivo_unico: '20250814-01'
+},
+{
+  id: 'indice-glucemico-arroz-vs-azucar-2025-08-15',
+  fecha: '2025-08-15',
+  titulo: 'Comparación del índice glucémico entre arroz y azúcar según Dr. Bayter',
+  pais: 'Colombia',
+  resumen: 'El Dr. Bayter afirmó en un video que una porción de arroz tiene un índice glucémico equivalente al de 10 cucharaditas de azúcar, lo que generó debate en redes sociales sobre el impacto de estos alimentos en la glucemia.',
+  contenido: [
+    'En una publicación reciente, el médico colombiano Dr. Bayter afirmó que “una porción de arroz equivale al mismo índice glucémico que 10 cucharaditas de azúcar”.',
+    'Según la base de datos de la Universidad de Sídney, el índice glucémico promedio del arroz blanco cocido se sitúa entre 70 y 89, dependiendo de la variedad y el método de cocción, mientras que el del arroz integral está entre 50 y 66. El azúcar de mesa (sacarosa) presenta un IG aproximado de 63.',
+    'Especialistas señalan que, aunque el arroz blanco y el azúcar pueden generar aumentos rápidos en la glucemia, su perfil nutricional es distinto: el arroz aporta algo de proteína y minerales, mientras que el azúcar refinado ofrece principalmente calorías vacías.',
+    'Usuarios en redes sociales destacaron que la comparación debe considerar el contexto de la dieta y las necesidades individuales, así como que no todas las recomendaciones alimentarias son adecuadas para todas las personas.',
+    'Nota: el índice glucémico mide la velocidad con la que un alimento eleva la glucosa en sangre en comparación con un estándar, pero no refleja la cantidad total de carbohidratos ingeridos ni el valor nutricional global del alimento.'
+  ],
+  etiquetas: ['salud', 'nutrición', 'alimentación', 'dieta'],
+  fuente: { nombre: 'University of Sydney – Glycemic Index', url: 'https://glycemicindex.com/' },
+  consecutivo_unico: '20250815-01'
+},
+{
+  id: 'cesar-caballero-logros-y-retos-gobierno-petro-2025-08-15',
+  fecha: '2025-08-15',
+  titulo: 'César Caballero destaca avances y desafíos en el gobierno de Gustavo Petro',
+  pais: 'Colombia',
+  resumen: 'En entrevista, César Caballero resaltó logros del actual gobierno como la creación de más de 2,2 millones de empleos, reducción de la pobreza y desigualdad, y crecimiento sostenido del sector agropecuario; también advirtió sobre problemas en la reforma a la salud y la necesidad de mayor gobernabilidad.',
+  contenido: [
+    'En el programa *Conversaciones Pendientes*, el estadígrafo y director de Cifras y Conceptos, César Caballero, evaluó el uso de datos y encuestas como dispositivos de poder en Colombia, y analizó la gestión del presidente Gustavo Petro. Caballero subrayó que entre agosto de 2022 y la fecha se han creado más de 2,2 millones de empleos, lo que ha contribuido a reducir la pobreza monetaria y la desigualdad, con el índice de Gini en descenso por primera vez en décadas.',
+    'Destacó que el PIB agropecuario ha crecido por encima del PIB total por dos años consecutivos, rompiendo una tendencia de más de tres décadas, y que este comportamiento puede fortalecer la base electoral del progresismo en el sector rural. Resaltó además la decisión de cerrar el subsidio a la gasolina y avanzar en la eliminación del de ACPM, así como la aprobación de reformas clave como la tributaria, la pensional y la ratificación del Acuerdo de Escazú cuando el Ejecutivo promovió acuerdos amplios.',
+    'Caballero consideró que estos logros deberían ser más comunicados por el gobierno, pero advirtió que persisten problemas graves en la reforma a la salud por falta de negociación y deficiencias en la ejecución, lo que podría llevar al colapso del sistema. Señaló también que el presidente ha roto puentes con sectores políticos y que existe falta de control sobre la Casa de Nariño, ministerios y entidades.',
+    'El analista sostuvo que, aunque hay resistencia de parte de algunos sectores empresariales y políticos, también ha habido disposición de otros para alcanzar acuerdos, mencionando ejemplos de cooperación en proyectos de infraestructura y abastecimiento de agua. Reiteró que el éxito legislativo del Ejecutivo depende de mantener consensos y evitar la polarización interna.',
+    'En su balance, Caballero expresó optimismo sobre los cambios sociales en marcha y consideró que Colombia necesitaba un gobierno con las características del actual, aunque cuestionó la renuncia del presidente a ciertas tareas de gobernar. Invitó a centrar esfuerzos en consolidar los avances económicos y sociales alcanzados en estos dos años y medio de mandato.'
+  ],
+  etiquetas: ['colombia', 'gustavo petro', 'política', 'resultados', 'encuestas','conversaciones pendientes'],
+  fuente: { nombre: 'Conversaciones Pendientes', url: 'https://www.youtube.com/watch?v=7b3kV-v5YR8' },
+  url_fuente: 'https://www.youtube.com/watch?v=7b3kV-v5YR8',
+  consecutivo_unico: '20250815-01'
+},
+{
+  id: 'ivan-cepeda-conversaciones-pendientes-juicio-uribe-2025-07-27',
+  fecha: '2025-07-27',
+  titulo: 'Iván Cepeda analiza el papel de la justicia y las víctimas ante fallo en juicio a Álvaro Uribe',
+  pais: 'Colombia',
+  resumen: 'En entrevista con Juan David Correa, Iván Cepeda reflexiona sobre el contexto histórico, político y judicial que rodea el juicio al expresidente Álvaro Uribe, previo a la lectura del sentido del fallo, abordando el papel de la justicia, las víctimas y las estructuras de poder en Colombia.',
+  contenido: [
+    'En el programa "Conversaciones Pendientes", Iván Cepeda habló sobre el juicio que enfrenta el expresidente Álvaro Uribe por fraude procesal, cuyo sentido del fallo será leído el 28 de julio en los Juzgados de Paloquemao, Bogotá. Cepeda repasó las raíces históricas del caso, vinculadas al auge del narcotráfico, el paramilitarismo y su relación con estructuras políticas desde la década de 1980 en Antioquia.',
+    'El senador destacó el papel de la justicia como factor democrático y de contención frente a proyectos políticos, así como la importancia del movimiento de víctimas en visibilizar la verdad. Recordó hechos como la masacre de Jesús María Valle, la aparición del Bloque Metro y las investigaciones sobre la Hacienda Guacharacas, resaltando que estos sucesos marcaron un patrón de violencia y control territorial.',
+    'Cepeda explicó que parte de los líderes paramilitares fueron extraditados a Estados Unidos para impedir que declararan sobre sus vínculos con actores políticos. Entre ellos mencionó a Salvatore Mancuso, cuya trayectoria y relaciones en Córdoba fueron documentadas en investigaciones previas. El congresista advirtió que esta práctica dificultó el acceso a la verdad judicial en Colombia.',
+    'El entrevistado describió la existencia de una estructura para la compra o fabricación de testigos, con dos etapas principales: una entre 2012 y 2018 y otra a partir de la intervención del abogado Diego Cadena y sus colaboradores. Según Cepeda, la Corte Suprema de Justicia documentó la persistencia de estas prácticas y su repetición con diferentes actores para el mismo fin.',
+    'Sobre el papel de los medios, Cepeda resaltó la labor de periodistas como Daniel Coronell, cuyo trabajo investigativo ha contribuido a esclarecer episodios clave y difundirlos ante la opinión pública, incluso enfrentando ataques en redes sociales y presiones mediáticas.',
+    'En relación con las víctimas, subrayó que el reconocimiento legal de quienes sufrieron violencia estatal o paramilitar solo se dio a partir de la Ley de Víctimas de 2011. Antes de eso, las organizaciones que representaban a estas personas enfrentaban altos niveles de persecución y visibilidad limitada.',
+    'Cepeda insistió en que su propósito no es la venganza, sino propiciar un acuerdo nacional que permita reconocer responsabilidades y llegar a la verdad de lo ocurrido. Defendió que la base de una democracia sólida es el esclarecimiento histórico y la justicia restaurativa, que incluya a todos los sectores afectados.',
+    'Finalmente, expresó que la audiencia y el fallo que se avecinan representan una oportunidad para que el país reflexione sobre las estructuras de poder que han marcado su historia reciente y para avanzar hacia un modelo de justicia que priorice a las víctimas y la reparación social.'
+  ],
+  etiquetas: ['colombia', 'política', 'investigación', 'medios', 'conversaciones pendientes'],
+  fuente: { nombre: 'YouTube - Conversaciones Pendientes', url: 'https://www.youtube.com/watch?v=-MpoeVZzaO8' },
+  url_fuente: 'https://www.youtube.com/watch?v=-MpoeVZzaO8',
+  consecutivo_unico: '20250727-01'
+},
+{
+  id: 'aida-avella-entrevista-conversaciones-pendientes-2025-08-15',
+  fecha: '2025-08-15',
+  titulo: 'Aida Avella repasa su trayectoria política y el papel de la mujer en la izquierda colombiana',
+  pais: 'Colombia',
+  resumen: 'En una conversación con Juan David Correa, la senadora Aida Avella narró su experiencia como mujer en la política de izquierda, su paso por la Universidad Nacional en los años 70, la persecución a líderes sociales y el impacto de eventos como el fraude electoral de 1970.',
+  contenido: [
+    'En el programa "Conversaciones pendientes", conducido por Juan David Correa, la senadora Aida Avella repasó su trayectoria como líder política y sindical, así como las dificultades de ser mujer en la izquierda colombiana. Recordó su paso por la Universidad Nacional en los años 70, destacando la vida cultural y académica, y el ambiente de debate político que caracterizó a la institución en esa época.',
+    'Avella describió la represión estatal contra dirigentes y militantes de izquierda, señalando que la persecución afectaba tanto a jóvenes como a personas mayores. Relató experiencias de semiclandestinidad, vigilancia y hostigamiento, y recordó que durante décadas el país estuvo bajo estados de sitio casi permanentes, lo que limitaba la participación política.',
+    'También abordó el impacto del 19 de abril de 1970, cuando el presunto fraude electoral que favoreció a Misael Pastrana sobre Gustavo Rojas Pinilla generó descontento y un sentimiento de impotencia en amplios sectores sociales. Avella relacionó este hecho con la radicalización de algunos movimientos y la posterior formación de la Unión Patriótica, resaltando la importancia de la organización sindical y social en medio de la represión.'
+  ],
+  etiquetas: ['colombia', 'política', 'unión patriótica','conversaciones pendientes'],
+  fuente: { nombre: 'YouTube - Conversaciones pendientes', url: 'https://www.youtube.com/watch?v=gAElF8Fo1to' },
+  url_fuente: 'https://www.youtube.com/watch?v=gAElF8Fo1to',
+  consecutivo_unico: '20250815-01'
+},
+{
+  id: 'israel-plan-asentamientos-entierra-estado-palestino-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'Ministro israelí aprueba plan de asentamientos que busca frenar la creación de un Estado palestino',
+  pais: 'Internacional',
+  resumen: 'El ministro de Finanzas de Israel, Bezalel Smotrich, aprobó un plan para construir miles de viviendas en asentamientos de Cisjordania con el objetivo declarado de impedir la formación de un Estado palestino.',
+  contenido: [
+    'El ministro de Finanzas de Israel, Bezalel Smotrich, aprobó un plan para la construcción de miles de viviendas en asentamientos israelíes en Cisjordania ocupada. Según declaró, la medida busca “enterrar la idea de un Estado palestino”.',
+    'El proyecto contempla la expansión de varios asentamientos y la creación de nuevas infraestructuras, lo que, de acuerdo con organizaciones internacionales, contraviene el derecho internacional y complica las perspectivas de una solución de dos Estados.',
+    'Autoridades palestinas y grupos de derechos humanos han condenado la decisión, calificándola como un paso más hacia la anexión de facto de territorios ocupados. La comunidad internacional ha expresado preocupación por el impacto de esta política en la estabilidad regional.'
+  ],
+  etiquetas: ['política', 'seguridad'],
+  fuente: { nombre: 'France 24', url: 'https://www.france24.com/es/medio-oriente/20250814-ministro-israel%C3%AD-aprueba-plan-de-asentamientos-para-enterrar-la-idea-de-un-estado-palestino' },
+  url_fuente: 'https://www.france24.com/es/medio-oriente/20250814-ministro-israel%C3%AD-aprueba-plan-de-asentamientos-para-enterrar-la-idea-de-un-estado-palestino',
+  consecutivo_unico: '20250814-01'
+},
+{
+  id: 'kalinskaya-solicita-cambios-horarios-wta-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'Kalinskaya pide cambios en los horarios de juego de la WTA',
+  pais: 'Internacional',
+  resumen: 'La tenista rusa Anna Kalinskaya expresó su preocupación por los horarios tardíos en torneos de la WTA, tras jugar hasta pasada la medianoche y tener que competir nuevamente a la mañana siguiente contra Iga Swiatek. El partido fue finalmente reprogramado para el viernes.',
+  contenido: [
+    'La jugadora rusa Anna Kalinskaya manifestó su inconformidad con los horarios establecidos en algunos torneos de la WTA, argumentando que estos pueden afectar el rendimiento y la salud de las tenistas. La deportista señaló que competir hasta altas horas de la noche y volver a jugar a primera hora del día siguiente no ofrece condiciones justas para la recuperación física.',
+    'Kalinskaya venía de disputar un exigente partido contra la rusa Ekaterina Alexandrova, que finalizó alrededor de las 00:20 h (hora local) con marcador de 3-6, 7-6 (5) y 6-1 a su favor. El encuentro, correspondiente a los octavos de final del WTA 1000 de Cincinnati, se prolongó por más de dos horas y media.',
+    'Tras atender compromisos de prensa, recuperación física y traslado, la jugadora indicó que pudo irse a dormir cerca de las 02:00 h. Pese a ello, la organización programó su siguiente partido, correspondiente a los cuartos de final, para las 10:00 a.m. del día siguiente contra la polaca Iga Swiatek, tercera cabeza de serie del torneo.',
+    'Finalmente, la programación fue modificada y el partido se reprogramó para el viernes, otorgando a ambas jugadoras un margen adicional de descanso. Kalinskaya insistió en que casos como este evidencian la necesidad de revisar los criterios de programación para proteger la salud y el rendimiento de las tenistas.',
+    'El debate sobre los horarios en el circuito femenino se ha reavivado con este caso, sumándose a otras voces que han pedido a la WTA mayor flexibilidad y criterios más claros para programar los partidos, especialmente en torneos de alta exigencia y con condiciones climáticas variables.',
+    'Fuentes citadas:',
+    'https://www.puntodebreak.com/2025/08/14/kalinskaya-quiere-wta-torneo-tenistas-jueguen-estos-horarios-injustos',
+    'https://as.com/tenis/masters_1000/linette-echa-a-pegula-y-kalinskaya-sigue-sonando-en-cincinnati-n/'
+  ],
+  etiquetas: ['deporte', 'tenis'],
+  fuente: { nombre: 'Punto de Break', url: 'https://www.puntodebreak.com' },
+  url_fuente: 'https://www.puntodebreak.com/2025/08/14/kalinskaya-quiere-wta-torneo-tenistas-jueguen-estos-horarios-injustos',
+  consecutivo_unico: '20250814-01'
+},
+{
+  id: 'juan-david-correa-la-cancion-del-destripador-2025-08-07',
+  fecha: '2025-08-07',
+  titulo: 'Juan David Correa lee “La canción del Destripador” en Jueves de Cambio',
+  pais: 'Colombia',
+  resumen: 'En su espacio “Jueves de Cambio”, el ministro de Cultura, Juan David Correa, leyó el texto titulado “La canción del Destripador” durante la conmemoración del 7 de agosto, abordando la idea de la falsa equivalencia política en Colombia y defendiendo un proyecto de sociedad incluyente.',
+  contenido: [
+    'El 7 de agosto de 2025, en el programa “Jueves de Cambio”, el ministro de Cultura, Juan David Correa, presentó el texto titulado “La canción del Destripador”. En él, cuestionó la idea de que Colombia esté dividida en dos mitades equivalentes, señalando que esta visión ignora las profundas desigualdades históricas y las luchas sociales vigentes.',
+    'Correa argumentó que equiparar el uribismo y el petrismo omite reconocer que en el actual momento político se desarrolla un proyecto de sociedad más incluyente. Destacó la diversidad de sectores que apoyan al gobierno, desde comunidades indígenas y afrodescendientes hasta sindicatos, intelectuales y organizaciones sociales.',
+    'El ministro subrayó la importancia de un nuevo modelo de desarrollo que priorice la vida, la soberanía alimentaria, la educación y la salud universales, y que enfrente el impacto ambiental del capital fósil. También recordó que las luchas actuales tienen antecedentes históricos y que no son comparables con épocas de violencia sistemática ejercida por el Estado y actores armados.',
+    'En su intervención, hizo un recorrido histórico desde la independencia en 1819 hasta la Constitución de 1991, enfatizando que la desigualdad y la exclusión han persistido a lo largo de dos siglos. Llamó a rechazar la “canción del Destripador”, que simboliza discursos de odio y miedo, y a reconocer los avances, aunque sean insuficientes.',
+    'Correa concluyó invitando a quienes se sienten distantes del proceso de cambio a reflexionar y participar en el diálogo nacional, resaltando que no hay dos mitades equivalentes y que es posible construir un país más justo e incluyente.'
+  ],
+  etiquetas: ['colombia', 'política', 'gustavo petro', 'editorial', 'medios','conversaciones pendientes'],
+  fuente: { nombre: 'YouTube - Ministerio de Cultura de Colombia', url: 'https://www.youtube.com/watch?v=JVWLXGnG0j0' },
+  url_fuente: 'https://www.youtube.com/watch?v=JVWLXGnG0j0',
+  consecutivo_unico: '20250807-01'
+},
+{
+  id: 'sinner-septimo-jugador-mas-semanas-consecutivas-numero-1-2025-07-21',
+  fecha: '2025-07-21',
+  titulo: 'Sinner alcanza séptimo puesto histórico por semanas consecutivas como número uno del tenis masculino',
+  pais: 'Internacional',
+  resumen: 'Jannik Sinner se convirtió en el séptimo jugador con más semanas consecutivas en el número uno del ranking ATP, consolidando su liderazgo en el circuito masculino.',
+  contenido: [
+    'El tenista italiano Jannik Sinner acumula 59 semanas consecutivas como número 1 del ranking ATP desde que debutó en esa posición el 10 de junio de 2024 :contentReference[oaicite:1]{index=1}.',
+    'Con este registro, Sinner supera a figuras como John McEnroe (58 semanas) y se sitúa detrás de Lleyton Hewitt (75 semanas), Jimmy Connors, Roger Federer y otros en la clasificación histórica de permanencia como líder :contentReference[oaicite:2]{index=2}.',
+    'Respecto a jugadores aún en actividad, Sinner lidera ampliamente: Carlos Alcaraz, su principal perseguidor actual, ha acumulado solo 36 semanas totales como número 1, sin encabezar el ranking de forma consecutiva :contentReference[oaicite:3]{index=3}.',
+    'Además, Sinner integra un selecto grupo de solo cinco jugadores que durante su primera etapa en lo más alto han permanecido al menos un año completo (52 semanas o más): Roger Federer, Jimmy Connors, Lleyton Hewitt, Novak Djokovic y el propio Sinner :contentReference[oaicite:4]{index=4}.',
+    'Fuentes citadas:',
+    'https://www.puntodebreak.com/2025/07/21/sinner-septimo-jugador-historia-mas-semanas-consecutivas-numero-1'
+  ],
+  etiquetas: ['deportes', 'tenis', 'sinner'],
+  fuente: { nombre: 'Punto de Break', url: 'https://www.puntodebreak.com' },
+  url_fuente: 'https://www.puntodebreak.com/2025/07/21/sinner-septimo-jugador-historia-mas-semanas-consecutivas-numero-1',
+  consecutivo_unico: '20250721-01'
+},
+{
+  id: 'bayern-munich-respaldo-luis-diaz-supercopa-alemania-2025-08-15',
+  fecha: '2025-08-15',
+  titulo: 'Bayern Múnich respalda a Luis Díaz antes de la Supercopa de Alemania',
+  pais: 'Alemania',
+  resumen: 'El Bayern Múnich expresó su respaldo al colombiano Luis Díaz en la previa de la Supercopa de Alemania, destacando su talento y compromiso de cara al encuentro clave contra el Bayer Leverkusen.',
+  contenido: [
+    'En la antesala de la Supercopa de Alemania, el Bayern Múnich manifestó públicamente su apoyo al extremo colombiano Luis Díaz, quien se prepara para un duelo decisivo que marca el inicio oficial de la temporada.',
+    'El cuerpo técnico y la directiva del club bávaro resaltaron el aporte del jugador durante la pretemporada, subrayando su capacidad para adaptarse rápidamente al esquema de juego y su potencial para marcar la diferencia en encuentros de alta exigencia.',
+    'El rival en la Supercopa será el Bayer Leverkusen, vigente campeón de la Copa de Alemania, en un choque que reunirá a los dos equipos más destacados de la última campaña y que servirá como termómetro para medir el estado de forma de ambas plantillas.',
+    'Luis Díaz, quien llegó al Bayern en el reciente mercado de fichajes, ha generado expectativas por su capacidad de desborde y su versatilidad en ataque, cualidades que podrían ser determinantes frente a un rival de alto nivel competitivo.',
+    'La Supercopa de Alemania se disputará este fin de semana en Múnich, y se espera una amplia asistencia de aficionados. El encuentro no solo otorgará un título, sino que también será una oportunidad para que Díaz consolide su lugar como pieza clave en el equipo.'
+  ],
+  etiquetas: ['fútbol', 'alemania', 'colombia'],
+  fuente: { nombre: 'ESPN', url: 'https://www.espn.com.co/futbol/alemania/nota/_/id/15540421/respaldo-bayern-munich-luis-diaz-antes-supercopa-alemania' },
+  url_fuente: 'https://www.espn.com.co/futbol/alemania/nota/_/id/15540421/respaldo-bayern-munich-luis-diaz-antes-supercopa-alemania',
+  consecutivo_unico: '20250815-01'
+},
+{
+  id: 'mexico-retiro-colgate-total-clean-mint-por-riesgo-sanitario-2025-08-06',
+  fecha: '2025-08-06',
+  titulo: 'México ordena retiro de Colgate Total Clean Mint por posible riesgo sanitario',
+  pais: 'México',
+  resumen: 'La Cofepris ordenó retirar del mercado la pasta dental Colgate Total Clean Mint tras reportes de irritación bucal y otras reacciones adversas. Aunque no se ha confirmado la causa, en otros países se ha vinculado al fluoruro de estaño.',
+  contenido: [
+    'La Comisión Federal para la Protección contra Riesgos Sanitarios (Cofepris) emitió un aviso de riesgo sanitario ordenando el retiro del mercado de la pasta dental Colgate Total Clean Mint. La medida se tomó tras múltiples reportes de efectos adversos como irritación bucal, inflamación de encías, sensibilidad dental, úlceras, aftas y reacciones alérgicas.',
+    'El aviso fue emitido en los primeros días de agosto de 2025 y aplica a todo el territorio mexicano. La Cofepris solicitó a distribuidores y puntos de venta suspender su comercialización y recomendó a los consumidores cambiar el producto por otra fórmula sin riesgo. También pidió reportar cualquier efecto adverso.',
+    'Si bien la autoridad mexicana no ha identificado públicamente el componente responsable, en países como Brasil, Argentina, Chile y Colombia, el fluoruro de estaño ha sido señalado como posible causa de los problemas reportados. Este compuesto se utiliza para prevenir caries, gingivitis y sensibilidad dental, pero puede provocar efectos secundarios en personas sensibles.',
+    'Fuentes citadas:',
+    '1) El País. *México ordena retirar el dentífrico Colgate Total Clean Mint por un aviso de riesgo sanitario*. https://elpais.com/mexico/2025-08-06/mexico-ordena-retirar-el-dentifrico-colgate-total-clear-mint-por-un-aviso-de-riesgo-sanitario.html',
+    '2) Infobae. *Este es el efecto del fluoruro de estaño y razón del retiro de la pasta Colgate Total Clean Mint*. https://www.infobae.com/mexico/2025/08/08/este-es-el-efecto-del-fluoruro-de-estano-y-razon-del-retiro-de-la-pasta-colgate-total-clean-mint/'
+  ],
+  etiquetas: ['salud', 'consumo', 'seguridad alimentaria'],
+  fuente: 'Cofepris',
+  url_fuente: 'https://elpais.com/mexico/2025-08-06/mexico-ordena-retirar-el-dentifrico-colgate-total-clear-mint-por-un-aviso-de-riesgo-sanitario.html',
+  consecutivo_unico: '20250806-01'
 }
+
+
+
+
+
+
+
+
+
 
 
 

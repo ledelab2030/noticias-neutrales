@@ -10,6 +10,7 @@
 
 export const TAGS = [
   'aceites vegetales',
+  'alemania',
   'alimentación',
   'Bogotá',
   'colombia',
@@ -40,6 +41,10 @@ export const TAGS = [
   'seguridad alimentaria',
   'tecnología',
   'unión patriótica',
+  'conversaciones pendientes',
+  'buenas noticias',
+  'estilo de vida',
+  'sinner',
 ] as const
 
 export type Tag = typeof TAGS[number]
