@@ -1,72 +1,71 @@
 // src/app/red/page.tsx
-import type { Metadata } from "next"
 import Link from "next/link"
-import SectionHeader from "@/components/SectionHeader"
+import type { ComponentType, SVGProps } from "react"
+import { Building2, Users, Share2 } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Red",
-  description: "Relaciones de LedeLab con filiales, aliados y colaboraciones clave.",
+type IconProps = SVGProps<SVGSVGElement>
+
+type Card = {
+  title: string
+  href: string
+  description: string
+  Icon: ComponentType<IconProps>
 }
 
-export default function RedPage() {
+const CARDS: Card[] = [
+  {
+    title: "Filiales",
+    href: "/filiales",
+    description:
+      "Empresas del grupo con operación directa en soluciones de materiales, construcción y sostenibilidad.",
+    Icon: Building2,
+  },
+  {
+    title: "Red",
+    href: "/red",
+    description:
+      "Personas y organizaciones que colaboran con LedeLab en proyectos y conocimiento aplicado.",
+    Icon: Users,
+  },
+  {
+    title: "Aliados",
+    href: "/aliados",
+    description:
+      "Instituciones y empresas con convenios y proyectos conjuntos.",
+    Icon: Share2,
+  },
+]
+
+export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-      <SectionHeader
-        title="Red"
-        description="Nuestra red se compone de filiales operativas, aliados estratégicos y colaboraciones que impulsan proyectos de innovación y sostenibilidad."
-      />
+    <main className="mx-auto max-w-6xl px-4 py-10">
+      <header className="mb-8">
+        <h1 className="text-3xl font-semibold tracking-tight">Nuestra red</h1>
+        <p className="mt-2 text-sm text-gray-600">
+          Conoce a las organizaciones y personas que hacen parte del ecosistema
+          LedeLab.
+        </p>
+      </header>
 
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <Link
-          href="/red/filiales"
-          className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition dark:border-gray-800 dark:bg-gray-900"
-        >
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Filiales</h2>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Empresas del grupo con operación directa en soluciones de materiales, construcción y más.
-          </p>
-        </Link>
-
-        <Link
-          href="/red/aliados"
-          className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition dark:border-gray-800 dark:bg-gray-900"
-        >
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Aliados</h2>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Organizaciones y profesionales con convenios activos en I+D, transferencia, cámaras y sostenibilidad.
-          </p>
-        </Link>
-
-        <Link
-          href="/red/proyectos"
-          className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition dark:border-gray-800 dark:bg-gray-900"
-        >
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Proyectos</h2>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Iniciativas y pilotos con nombre propio (aceleración, mentoría, impacto social, smart cities).
-          </p>
-        </Link>
-
-        <Link
-          href="/red/mentores"
-          className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition dark:border-gray-800 dark:bg-gray-900"
-        >
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Mentores</h2>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Consejo y red de expertos que aportan en I+D, sostenibilidad, negocios y educación.
-          </p>
-        </Link>
-
-        <Link
-          href="/red/startups"
-          className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition dark:border-gray-800 dark:bg-gray-900"
-        >
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Startups</h2>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">
-            Emprendimientos incubados, acelerados o co-creados con LedeLab en distintas etapas.
-          </p>
-        </Link>
-      </div>
+      <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {CARDS.map(({ title, href, description, Icon }) => (
+          <Link
+            key={href}
+            href={href}
+            className="rounded-2xl border border-gray-200 p-5 shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            <div className="flex items-start gap-4">
+              <span className="rounded-xl border border-gray-200 p-2">
+                <Icon aria-hidden="true" className="h-6 w-6" />
+              </span>
+              <div>
+                <h2 className="text-lg font-medium">{title}</h2>
+                <p className="mt-1 text-sm text-gray-600">{description}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </section>
     </main>
   )
 }

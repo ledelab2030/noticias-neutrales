@@ -2,46 +2,42 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import LogoWithSuffix from "./LogoWithSuffix"
 
-type Entry = readonly [prefix: string, label: string]
+// Usamos Entry para tipar el mapa y evitar el warning de var no usada.
+export type Entry = readonly [prefix: string, label: string]
 
-// Más específico ➜ más genérico (el orden importa)
-const MAP: Entry[] = [
-  // Red (subsecciones)
-  ["/red/proyectos", "Proyectos"],
-  ["/red/aliados", "Aliados"],
-  ["/red/filiales", "Filiales"],
-  ["/red/mentores", "Mentores"],
-  ["/red/startups", "Startups"],
-  ["/red", "Red"],
-
-  // Contenido
+const MAP: readonly Entry[] = [
+  ["/buenas-noticias", "Buenas Noticias!"],
   ["/estilo-de-vida", "Estilo de Vida"],
-  ["/health", "Health"],
-  ["/negocios", "Emprendimiento / Negocios"],
-  ["/education", "Sustainability Education"],
-  ["/lifelong", "Life-Long Learning"],
-
-  // Institucional / micrositios
-  ["/sobre-nosotros", "Sobre nosotros"],
-  ["/contacto", "Contacto"],
-  ["/imasde", "I+DE SAS"],
-  ["/protemad", "Grupo Protemad"],
-
-  // Actualidad / noticias (incluye /noticias/[slug])
+  ["/podcasts", "Podcasts"],
   ["/actualidad", "Actualidad"],
   ["/noticias", "Actualidad"],
-
-  // Home
+  ["/aliados", "Aliados"],
+  ["/filiales", "Filiales"],
+  ["/mentores", "Mentores"],
+  ["/proyectos", "Proyectos"],
+  ["/startups", "Startups"],
+  ["/red", "Nuestra Red"],
+  ["/sobre-nosotros", "Sobre Noticias Neutrales"],
+  ["/ledelab", "LedeLab"],
+  ["/javier", "jAvIer"],
+  ["/imasde", "I+DE SAS"],
+  ["/protemad", "Grupo Protemad"],
+  ["/contacto", "Contacto"],
   ["/", "Actualidad"],
-] as const
+]
 
-export default function AutoBrand({ size = "md" as const }) {
-  const raw = usePathname() || "/"
-  // quita slash final para normalizar
-  const pathname = raw.replace(/\/+$/, "") || "/"
-  const match = MAP.find(([p]) => pathname.startsWith(p))
-  const suffix = match ? match[1] : "Actualidad"
-  return <LogoWithSuffix suffix={suffix} size={size} />
+function pickLabel(pathname: string): string {
+  // Priorizamos el match más largo (rutas más específicas primero)
+  const ordered = [...MAP].sort(
+    (a, b) => b[0].length - a[0].length
+  )
+  const hit = ordered.find(([prefix]) => pathname.startsWith(prefix))
+  return hit ? hit[1] : "Actualidad"
+}
+
+export default function AutoBrand() {
+  const pathname = usePathname() ?? "/"
+  const label = pickLabel(pathname)
+  return <span>{label}</span>
 }
