@@ -1,6 +1,7 @@
-// src/app/estilo-de-vida/page.tsx
+// src/app/buenas-noticias/page.tsx
 import Link from "next/link"
 
+// Tipos mínimos para lo que usamos en el listado
 type Noticia = {
   id: string
   fecha: string // YYYY-MM-DD
@@ -9,41 +10,46 @@ type Noticia = {
   etiquetas?: string[]
 }
 
+// El módulo puede exportar de varias formas; lo tipamos de forma segura
 type NoticiasLike = {
   default?: Noticia[]
   NOTICIAS?: Noticia[]
   noticias?: Noticia[]
 }
 
+// Import flexible del dataset
 import * as noticiasModule from "@/data/noticias"
 
+// Carga robusta del arreglo de noticias sin usar `any`
 function cargarNoticias(): Noticia[] {
   const m = noticiasModule as unknown as NoticiasLike
   const arr = m.default ?? m.NOTICIAS ?? m.noticias ?? []
   return Array.isArray(arr) ? arr : []
 }
 
-function esEstiloDeVida(n: Noticia): boolean {
+// Normaliza y filtra por la sección "Buenas Noticias!"
+function esBuenasNoticias(n: Noticia): boolean {
   const etiquetas = n.etiquetas ?? []
   return etiquetas.some((e) =>
-    e.toLowerCase().replace(/\s+/g, "-") === "estilo-de-vida"
+    e.toLowerCase().replace(/\s+/g, "") === "buenasnoticias!"
   )
 }
 
 function ordenarPorFechaDesc(a: Noticia, b: Noticia): number {
+  // Orden descendente por fecha (YYYY-MM-DD es lex-friendly)
   return a.fecha > b.fecha ? -1 : a.fecha < b.fecha ? 1 : 0
 }
 
 export default function Page() {
   const todas = cargarNoticias()
-  const lista = todas.filter(esEstiloDeVida).sort(ordenarPorFechaDesc)
+  const lista = todas.filter(esBuenasNoticias).sort(ordenarPorFechaDesc)
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
       <header className="mb-6">
-        <h1 className="text-3xl font-semibold tracking-tight">Estilo de Vida</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">¡Buenas Noticias!</h1>
         <p className="mt-2 text-sm text-gray-600">
-          Salud, alimentación, descanso, aprendizaje y relaciones, con enfoque neutral.
+          Historias verificadas de reconciliación, oportunidades y progreso.
         </p>
       </header>
 

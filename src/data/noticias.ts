@@ -43,6 +43,67 @@ export type Noticia = Omit<NoticiaRaw, "etiquetas"> & {
 // ----------------------------------------------------
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
+  {
+  id: 'precios-electricidad-america-latina-comparacion-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Precios de la electricidad en América Latina: comparación regional y calidad del servicio',
+  pais: 'Internacional',
+  resumen: 'Un análisis de los precios minoristas de electricidad en América Latina muestra que Guatemala, Honduras, Uruguay y Puerto Rico figuran entre los más altos, mientras que Paraguay, Cuba y Venezuela aparecen con tarifas muy bajas, aunque con serias limitaciones de calidad en el suministro.',
+  contenido: [
+    'Datos de GlobalPetrolPrices (GPP) para diciembre de 2024 confirman que Colombia se ubica alrededor de 0,21 USD/kWh, en un rango medio-alto dentro de América Latina.',
+    'Guatemala y Honduras muestran precios elevados, asociados a una fuerte dependencia de combustibles fósiles importados.',
+    'Puerto Rico registra entre 22 y 25 centavos de dólar por kWh según la EIA, lo que lo sitúa entre los más caros por su dependencia del petróleo y derivados.',
+    'Paraguay y Ecuador figuran entre los más bajos debido a la alta participación hidroeléctrica; sin embargo, Ecuador enfrentó racionamientos por sequías en 2023–2024.',
+    'Cuba y Venezuela presentan valores nominales muy bajos (0,006 USD/kWh y 0 USD/kWh en GPP), pero ambos países sufren frecuentes apagones y racionamientos.',
+    'En Cuba, el gobierno modificó tarifas residenciales en 2024, aunque se mantienen subsidios que limitan la sostenibilidad financiera del sistema.',
+    'En Venezuela, reportes de prensa documentaron apagones nacionales durante 2024, reflejo del deterioro de la infraestructura eléctrica.',
+    'Los precios extremadamente bajos suelen provenir de subsidios estatales y tipos de cambio administrados, lo que genera distorsiones en la comparación internacional.',
+    'Expertos subrayan que un kWh barato en la tarifa puede resultar costoso en la práctica si obliga a los usuarios a invertir en plantas eléctricas o baterías por la falta de continuidad.',
+    'En contraste, Colombia combina generación hidroeléctrica, térmica y renovable, y su costo final incluye cargos de red, impuestos y subsidios cruzados.',
+    'La dependencia de la hidrología hace que la región sea vulnerable a sequías, lo que afecta tanto precios como disponibilidad del servicio.',
+    'Ante estos datos, la pregunta irónica “¿será que tenemos que pedir asistencia a Venezuela y Cuba?” pone de relieve que, aunque sus tarifas sean mínimas, la precariedad del servicio eléctrico muestra que no son modelos replicables para garantizar acceso confiable y sostenible.'
+  ],
+  etiquetas: ['economía', 'consumo','energia'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250816-01'
+},
+
+  {
+  id: 'sofia-petro-mensaje-familia-miguel-uribe-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Sofía Petro envía mensaje a la familia de Miguel Uribe tras su fallecimiento',
+  pais: 'Colombia',
+  resumen: 'Sofía Petro, hija del presidente Gustavo Petro, expresó un mensaje de solidaridad a la familia de Miguel Uribe, tras el fallecimiento del senador. El gesto fue compartido en redes sociales y ha sido resaltado por diferentes medios.',
+  contenido: [
+    'Sofía Petro, hija del presidente de la República, envió un mensaje público de condolencia a la familia del senador Miguel Uribe, quien falleció recientemente. El pronunciamiento se dio a través de sus redes sociales.',
+    'En su mensaje, la joven manifestó solidaridad con los familiares del congresista en medio del duelo. El hecho fue recogido por medios nacionales, que resaltaron la importancia del gesto en un contexto político marcado por tensiones y diferencias.',
+    'El fallecimiento de Miguel Uribe ha generado múltiples reacciones en la esfera pública y política del país, incluyendo expresiones de apoyo y mensajes de condolencia provenientes de diversos sectores.'
+  ],
+  etiquetas: ['colombia', 'política', 'gustavo petro', 'medios'],
+  fuente: { nombre: 'Semana', url: 'https://www.semana.com/confidenciales/articulo/el-mensaje-de-sofia-petro-hija-del-presidente-a-la-familia-de-miguel-uribe-tubay/202553/' },
+  url_fuente: 'https://www.semana.com/confidenciales/articulo/el-mensaje-de-sofia-petro-hija-del-presidente-a-la-familia-de-miguel-uribe-tubay/202553/',
+  consecutivo_unico: '20250816-01'
+},
+{
+  id: 'china-turbina-eolica-mas-grande-2025-08-14',
+  fecha: '2025-08-14',
+  titulo: 'China presenta la turbina eólica más grande del mundo',
+  pais: 'China',
+  resumen: 'China instaló la turbina eólica marina más grande del mundo, con palas de 140 metros y una capacidad de 22 megavatios, capaz de generar electricidad suficiente para 40.000 hogares en un día con una sola rotación.',
+  contenido: [
+    'El 14 de agosto de 2025, China anunció la entrada en operación de la turbina eólica marina más grande del mundo, desarrollada por la empresa estatal CSSC Haizhuang. La estructura se encuentra en la provincia de Fujian, al sureste del país.',
+    'La turbina tiene palas de 140 metros y un rotor de 310 metros de diámetro. Su capacidad es de 22 megavatios y, según cálculos de la compañía, una sola vuelta de las palas puede suministrar electricidad a 40.000 hogares durante un día.',
+    'El proyecto busca fortalecer la capacidad de China en energías renovables. Actualmente, el país es el mayor fabricante e instalador de turbinas eólicas del mundo, con más del 60 % de la capacidad global de producción.',
+    'Las autoridades chinas afirman que estas innovaciones ayudan a reducir la dependencia del carbón y contribuyen a los compromisos de neutralidad de carbono para 2060.',
+    'Fuentes citadas:',
+    '1) El Confidencial – "China instala la turbina eólica más grande del mundo: puede alterar el clima local". https://www.elconfidencial.com/tecnologia/2025-08-14/china-turbina-mas-grande-influye-clima-1qrt_4191522/'
+  ],
+  etiquetas: ['tecnología', 'consumo','energía'],
+  fuente: { nombre: 'El Confidencial', url: 'https://www.elconfidencial.com' },
+  url_fuente: 'https://www.elconfidencial.com/tecnologia/2025-08-14/china-turbina-mas-grande-influye-clima-1qrt_4191522/',
+  consecutivo_unico: '20250814-01'
+},
+
 {
   id: 'washington-dc-datos-y-residentes-contradicen-a-trump-2025-08-12',
   fecha: '2025-08-12',
@@ -105,7 +166,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Aunque la disposición a comprar vivienda continúa en terreno negativo, mejoró levemente en comparación con meses anteriores. La evaluación para la compra de bienes muebles y electrodomésticos también mostró avances en la mayoría de ciudades, con excepción de Medellín.',
     'El ICC se compone de la percepción sobre las condiciones económicas actuales y las expectativas a futuro, siendo un indicador clave para medir el ánimo del consumidor y proyectar tendencias en el gasto de los hogares.'
   ],
-  etiquetas: ['economía', 'consumo', 'Colombia'],
+  etiquetas: ['economía', 'consumo', 'Colombia','buenas noticias'],
   fuente: 'El Espectador',
   url_fuente: 'https://www.elespectador.com/economia/confianza-del-consumidor-en-colombia-sube-a-su-nivel-mas-alto-en-13-meses/',
   consecutivo_unico: '20250813-02'
@@ -517,7 +578,44 @@ const noticiasRaw: NoticiaRaw[] = [
   fuente: 'Cofepris',
   url_fuente: 'https://elpais.com/mexico/2025-08-06/mexico-ordena-retirar-el-dentifrico-colgate-total-clear-mint-por-un-aviso-de-riesgo-sanitario.html',
   consecutivo_unico: '20250806-01'
+},
+{
+  id: 'fructosa-procesada-inflamacion-2025-08-08',
+  fecha: '2025-08-08',
+  titulo: 'Fructosa procesada: el azúcar que alimenta la inflamación',
+  resumen: 'La fructosa libre en azúcares refinados y jarabes industriales se asocia a inflamación crónica, mientras que la fructosa natural de frutas enteras es beneficiosa.',
+  contenido: [
+    'La fructosa libre presente en azúcares refinados y jarabes como el de maíz alto en fructosa se ha vinculado con respuestas inflamatorias.',
+    'Priorizar frutas enteras, agua y alimentos mínimamente procesados ayuda a reducir esa carga.'
+  ],
+  etiquetas: ['estilo de vida', 'salud', 'nutrición', 'alimentación'],
+  fuente: { nombre: 'Food & Wine', url: 'https://www.foodandwine.com/does-fructose-cause-inflammation-11785966' }
+},
+{
+  id: 'dieta-mediterranea-inflamacion-2025-08-04',
+  fecha: '2025-08-04',
+  titulo: 'Dieta mediterránea: un aliado efectivo contra la inflamación',
+  resumen: 'Patrón rico en frutas, vegetales, aceite de oliva y pescado con omega-3 que ayuda a reducir la inflamación crónica y protege frente a múltiples enfermedades.',
+  contenido: [
+    'Aceite de oliva virgen extra, legumbres, frutos rojos y pescados grasos son ejes de este patrón alimentario.',
+    'Estudios lo asocian con marcadores inflamatorios más bajos y beneficios en la prevención de enfermedades metabólicas y cardiovasculares.'
+  ],
+  etiquetas: ['estilo de vida', 'salud', 'nutrición', 'dieta'],
+  fuente: { nombre: 'The Washington Post', url: 'https://www.washingtonpost.com/wellness/2025/08/04/mediterranean-diet-benefits-inflammation/' }
+},
+{
+  id: 'inflamacion-silenciosa-2025-07-26',
+  fecha: '2025-07-26',
+  titulo: 'Inflamación silenciosa: más allá de un término de moda',
+  resumen: 'La inflamación crónica impacta energía, sueño y piel; un enfoque integral combina nutrición, descanso y movimiento suave.',
+  contenido: [
+    'La inflamación silenciosa puede influir en energía, calidad del sueño y salud de la piel.',
+    'Programas integrales combinan evaluación clínica, nutrición antiinflamatoria, manejo del estrés y actividad física moderada para abordar causas de base.'
+  ],
+  etiquetas: ['estilo de vida', 'salud', 'nutrición', 'estrés'],
+  fuente: { nombre: 'Condé Nast Traveler', url: 'https://www.cntraveler.com/story/inflammation-is-the-latest-wellness-buzzword' }
 }
+
 
 
 
