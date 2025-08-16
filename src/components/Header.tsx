@@ -6,9 +6,10 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import clsx from "clsx"
 import AutoBrand from "@/components/AutoBrand"
+import LogoWithSuffix from "@/components/LogoWithSuffix"
 
 export default function Header() {
-  const [open, setOpen] = useState(false)              // menú móvil
+  const [open, setOpen] = useState(false)
   const [openSections, setOpenSections] = useState(false)
   const [openNosotros, setOpenNosotros] = useState(false)
   const pathname = usePathname()
@@ -35,9 +36,11 @@ export default function Header() {
       )}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        {/* Marca dinámica */}
-        <Link href="/" className="shrink-0" aria-label="Ir al inicio">
-          <AutoBrand />
+        {/* Marca: logo + (opcional) texto dinámico */}
+        <Link href="/" className="shrink-0 flex items-center gap-3" aria-label="Ir al inicio">
+          <LogoWithSuffix suffix="Noticias Neutrales" size="md" />
+          {/* Si quieres mantener el texto de sección al lado, quita el comentario: */}
+          {/* <span className="hidden sm:inline text-sm text-gray-600 dark:text-gray-300"><AutoBrand /></span> */}
         </Link>
 
         {/* Navegación desktop */}
@@ -122,18 +125,10 @@ export default function Header() {
               )}
             >
               <div className="py-2">
-                <Link href="/sobre-nosotros" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
-                  Sobre Noticias Neutrales
-                </Link>
-                <Link href="/red" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
-                  Nuestra Red
-                </Link>
-                <Link href="/ledelab" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
-                  LedeLab
-                </Link>
-                <Link href="/javier" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
-                  jAvIer
-                </Link>
+                <Link href="/sobre-nosotros" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Sobre Noticias Neutrales</Link>
+                <Link href="/red" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Nuestra Red</Link>
+                <Link href="/ledelab" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">LedeLab</Link>
+                <Link href="/javier" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">jAvIer</Link>
               </div>
             </div>
           </div>

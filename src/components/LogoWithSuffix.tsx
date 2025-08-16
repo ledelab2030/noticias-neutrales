@@ -1,13 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 // src/components/LogoWithSuffix.tsx
 "use client"
 
-type Size = "sm" | "md" | "lg"
+import clsx from "clsx"
 
-type Props = {
-  suffix: string
-  size?: Size
-}
+type Size = "sm" | "md" | "lg"
 
 const SIZES: Record<Size, { logoH: number; fontSize: number; gap: string; y: number }> = {
   sm: { logoH: 24, fontSize: 14, gap: "gap-2", y: 2 },
@@ -15,42 +11,36 @@ const SIZES: Record<Size, { logoH: number; fontSize: number; gap: string; y: num
   lg: { logoH: 34, fontSize: 18, gap: "gap-3", y: 2 },
 }
 
-export default function LogoWithSuffix({ suffix, size = "md" }: Props) {
+export default function LogoWithSuffix({
+  suffix,
+  size = "md",
+}: {
+  suffix?: string
+  size?: Size
+}) {
   const s = SIZES[size]
 
   return (
-    <div className={`flex items-center ${s.gap} shrink-0`} aria-label={`LedeLab ${suffix}`}>
-      {/* Logo */}
-      <div className="flex-shrink-0">
-        <img
-          src="/ledelab/Color logo - no background.svg"
-          alt="LedeLab"
-          style={{ height: `${s.logoH}px`, width: "auto" }}
-          className="block dark:hidden select-none"
-          draggable={false}
-        />
-        <img
-          src="/ledelab/White logo - no background.svg"
-          alt="LedeLab"
-          style={{ height: `${s.logoH}px`, width: "auto" }}
-          className="hidden dark:block select-none"
-          draggable={false}
-        />
-      </div>
-
-      {/* Separador delgado, altura igual al logo */}
-      <div
-        style={{ width: "1px", height: `${s.logoH}px`, backgroundColor: "currentColor", opacity: 0.4 }}
-        className="text-gray-400 dark:text-gray-500"
+    <span className={clsx("inline-flex items-center font-semibold tracking-tight", s.gap)}>
+      <img
+        src="/ledelab/ledelab-logo-color.svg"
+        alt="LedeLab"
+        style={{ height: `${s.logoH}px`, width: "auto" }}
+        className="block dark:hidden select-none"
+        draggable={false}
       />
-
-      {/* Sufijo: minúsculas, más sutil, bajado un poco */}
-      <span
-        className="font-montserrat text-gray-600 dark:text-gray-300"
-        style={{ fontSize: `${s.fontSize}px`, lineHeight: 1, textTransform: "lowercase", transform: `translateY(${s.y}px)` }}
-      >
-        {suffix}
-      </span>
-    </div>
+      <img
+        src="/ledelab/ledelab-logo-white.svg"
+        alt="LedeLab"
+        style={{ height: `${s.logoH}px`, width: "auto" }}
+        className="hidden dark:block select-none"
+        draggable={false}
+      />
+      {suffix && (
+        <span style={{ fontSize: `${s.fontSize}px`, transform: `translateY(${s.y}px)` }}>
+          {suffix}
+        </span>
+      )}
+    </span>
   )
 }
