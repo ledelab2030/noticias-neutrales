@@ -37,13 +37,10 @@ export default function Header() {
       )}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        {/* Marca: logo + sufijo dinámico */}
-        <Link href="/" className="shrink-0 flex items-center gap-2" aria-label="Ir al inicio">
+        {/* Marca: logo + texto dinámico */}
+        <Link href="/" className="shrink-0 flex items-center gap-3" aria-label="Ir al inicio">
           <LogoWithSuffix size="md" />
-          {/* Separador fino vertical (oculto en xs para ahorrar espacio) */}
-          <span aria-hidden className="hidden sm:inline h-[22px] w-px bg-slate-300 dark:bg-slate-700" />
-          {/* Sufijo dinámico alineado a la línea base del logo */}
-          <span className="hidden sm:inline text-sm text-gray-600 dark:text-gray-300 leading-none relative top-[2px]">
+          <span className="hidden sm:inline text-sm text-gray-600 dark:text-gray-300">
             <AutoBrand />
           </span>
         </Link>
@@ -88,10 +85,18 @@ export default function Header() {
               )}
             >
               <div className="py-2">
-                <Link href="/actualidad" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Actualidad</Link>
-                <Link href="/buenas-noticias" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Buenas Noticias!</Link>
-                <Link href="/estilo-de-vida" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Estilo de Vida</Link>
-                <Link href="/podcasts" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Podcasts</Link>
+                <Link href="/actualidad" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Actualidad
+                </Link>
+                <Link href="/buenas-noticias" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Buenas Noticias!
+                </Link>
+                <Link href="/estilo-de-vida" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Estilo de Vida
+                </Link>
+                <Link href="/podcasts" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Podcasts
+                </Link>
               </div>
             </div>
           </div>
@@ -130,10 +135,18 @@ export default function Header() {
               )}
             >
               <div className="py-2">
-                <Link href="/sobre-nosotros" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Sobre Noticias Neutrales</Link>
-                <Link href="/red" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Nuestra Red</Link>
-                <Link href="/ledelab" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">LedeLab</Link>
-                <Link href="/javier" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">jAvIer</Link>
+                <Link href="/sobre-nosotros" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Sobre Noticias Neutrales
+                </Link>
+                <Link href="/red" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Nuestra Red
+                </Link>
+                <Link href="/ledelab" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  LedeLab
+                </Link>
+                <Link href="/javier" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  jAvIer
+                </Link>
               </div>
             </div>
           </div>
@@ -183,10 +196,18 @@ export default function Header() {
             </button>
             {openSections && (
               <div className="ml-3 mt-1 flex flex-col">
-                <Link href="/actualidad" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Actualidad</Link>
-                <Link href="/buenas-noticias" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Buenas Noticias!</Link>
-                <Link href="/estilo-de-vida" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Estilo de Vida</Link>
-                <Link href="/podcasts" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Podcasts</Link>
+                <Link href="/actualidad" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Actualidad
+                </Link>
+                <Link href="/buenas-noticias" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Buenas Noticias!
+                </Link>
+                <Link href="/estilo-de-vida" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Estilo de Vida
+                </Link>
+                <Link href="/podcasts" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Podcasts
+                </Link>
               </div>
             )}
           </div>
@@ -203,10 +224,18 @@ export default function Header() {
             </button>
             {openNosotros && (
               <div className="ml-3 mt-1 flex flex-col">
-                <Link href="/sobre-nosotros" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Sobre Noticias Neutrales</Link>
-                <Link href="/red" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Nuestra Red</Link>
-                <Link href="/ledelab" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">LedeLab</Link>
-                <Link href="/javier" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">jAvIer</Link>
+                <Link href="/sobre-nosotros" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Sobre Noticias Neutrales
+                </Link>
+                <Link href="/red" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  Nuestra Red
+                </Link>
+                <Link href="/ledelab" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  LedeLab
+                </Link>
+                <Link href="/javier" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                  jAvIer
+                </Link>
               </div>
             )}
           </div>
