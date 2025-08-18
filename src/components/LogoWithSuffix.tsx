@@ -2,6 +2,7 @@
 "use client"
 
 import clsx from "clsx"
+import Image from "next/image"
 
 type Size = "sm" | "md" | "lg"
 type Tone = "auto" | "onLight" | "onDark"
@@ -23,37 +24,39 @@ export default function LogoWithSuffix({
 }) {
   const s = SIZES[size]
 
-  const colorClasses = clsx(
-    "select-none",
-    tone === "auto" ? "block dark:hidden" : "block"
-  )
-  const whiteClasses = clsx(
-    "select-none",
-    tone === "auto" ? "hidden dark:block" : "block"
-  )
+  const colorClasses = clsx("select-none", tone === "auto" ? "block dark:hidden" : "block")
+  const whiteClasses = clsx("select-none", tone === "auto" ? "hidden dark:block" : "block")
+
+  // Ancho estimado 4:1 respecto a la altura (ajústalo si tu SVG tiene otra proporción)
+  const width = s.logoH * 4
+  const height = s.logoH
 
   return (
     <span className={clsx("inline-flex items-center font-semibold tracking-tight", s.gap)}>
-      {/* Logo a color (uso en fondos claros) */}
+      {/* Logo a color (fondos claros) */}
       {(tone === "auto" || tone === "onLight") && (
-        <img
-          src="/ledelab/ledelab-logo-color.svg"
-          alt="LedeLab"
-          style={{ height: `${s.logoH}px`, width: "auto" }}
-          className={colorClasses}
-          draggable={false}
-        />
+        <span className={colorClasses}>
+          <Image
+            src="/ledelab/ledelab-logo-color.svg"
+            alt="LedeLab"
+            width={width}
+            height={height}
+            priority
+          />
+        </span>
       )}
 
-      {/* Logo blanco (uso en fondos oscuros) */}
+      {/* Logo blanco (fondos oscuros) */}
       {(tone === "auto" || tone === "onDark") && (
-        <img
-          src="/ledelab/ledelab-logo-white.svg"
-          alt="LedeLab"
-          style={{ height: `${s.logoH}px`, width: "auto" }}
-          className={whiteClasses}
-          draggable={false}
-        />
+        <span className={whiteClasses}>
+          <Image
+            src="/ledelab/ledelab-logo-white.svg"
+            alt="LedeLab"
+            width={width}
+            height={height}
+            priority
+          />
+        </span>
       )}
 
       {suffix && (

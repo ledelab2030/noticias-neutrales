@@ -2,6 +2,7 @@
 import "./globals.css"
 import Header from "@/components/Header"
 import type { Metadata, Viewport } from "next"
+import Script from "next/script"
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -9,22 +10,41 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 }
 
-// Plantilla global: cualquier `title` de una página se renderiza como "%s / LedeLab"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.ledelab.co"
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "LedeLab",
-    template: "%s / LedeLab",
+    default: "Noticias Neutrales",
+    template: "%s | Noticias Neutrales",
   },
-  description: "Noticias Neutrales por LedeLab.",
-  icons: {
-    icon: "/ledelab/favicon.png", // favicon personalizado
+  description:
+    "Portal de noticias neutrales de LedeLab Group OÜ, con información clara, sin sensacionalismo.",
+  openGraph: {
+    type: "website",
+    locale: "es_CO",
+    url: SITE_URL,
+    siteName: "Noticias Neutrales",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 628,
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@ledelabgroup",
+    creator: "@ledelabgroup",
+  },
+  icons: { icon: "/ledelab/favicon.png" },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID
   return (
     <html lang="es">
+      <head />
       <body className="flex flex-col min-h-screen bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100">
         <Header />
         <main className="flex-1 max-w-5xl mx-auto px-6 py-6">{children}</main>
@@ -44,6 +64,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </span>
           </div>
         </footer>
+
+        {GA_ID && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+            <Script id="ga" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   )
