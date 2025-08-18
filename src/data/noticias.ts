@@ -47,6 +47,51 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
+  {
+  id: 'avances-gobierno-petro-contraste-titular-2025-08-18',
+  fecha: '2025-08-18',
+  titulo: 'Avances del gobierno contrastan con titulares negativos',
+  pais: 'Colombia',
+  resumen: 'Mientras algunos titulares califican la semana como “fatal” para el gobierno, se registraron avances significativos en reforma agraria, salud preventiva y defensa institucional en tratados internacionales.',
+  contenido: [
+    'Durante la semana del 12 al 18 de agosto de 2025, algunos medios calificaron como “fatal” el balance del gobierno de Gustavo Petro. Sin embargo, en paralelo se produjeron avances de fondo en distintos frentes de política pública.',
+    'En Tolima, el gobierno entregó 1.165 hectáreas de tierra a 84 familias campesinas de los municipios de Piedras, Suárez y Rovira. Las asociaciones beneficiadas, entre ellas ANUC y FENSUAGRO, destinarán los predios a cultivos de arroz, plátano, café, aguacate y caña panelera, fortaleciendo la reforma agraria y el desarrollo rural.',
+    'En materia de salud pública, el presidente destacó una caída histórica en la mortalidad infantil y materna. Según la Presidencia de la República, esta reducción se atribuye a la expansión de programas de salud preventiva, acceso a agua potable, nutrición y atención médica básica. Petro calificó este resultado como un “éxito total del sistema de salud preventivo”.',
+    'En el ámbito internacional, el Ministerio de Comercio firmó una nota interpretativa del Tratado de Libre Comercio con Estados Unidos, precisando que el Estado colombiano puede regular en temas de salud, medio ambiente e interés general sin que ello implique vulneración de sus compromisos internacionales. Además, se estableció que el CIADI no puede operar como una instancia de apelación automática, reforzando la soberanía del país.',
+    'Estos hechos evidencian que, a pesar de las dificultades y los retos políticos, la semana estuvo marcada también por resultados positivos en políticas sociales, económicas e institucionales.'
+  ],
+  etiquetas: ['colombia','gustavo petro','política','economía','salud','reforma agraria'],
+  fuente: 'LedeLab',
+  url_fuente: 'https://elpais.com/america-colombia/2025-08-18/una-semana-fatal-aturde-al-gobierno-de-gustavo-petro.html',
+  consecutivo_unico: '20250818-01'
+},
+
+  {
+  id: 'bolivia-elecciones-fragmentacion-izquierda-2025-08-17',
+  fecha: '2025-08-17',
+  titulo: 'Fragmentación de la izquierda en Bolivia y avance de la derecha en elecciones presidenciales',
+  pais: 'Bolivia',
+  resumen: 'Las elecciones presidenciales en Bolivia dejaron en evidencia la profunda división del MAS y del bloque progresista, con un voto nulo del 19 % promovido por Evo Morales que debilitó a la izquierda y abrió paso a candidatos de centro y derecha en la segunda vuelta.',
+  contenido: [
+    'El 17 de agosto de 2025 se realizaron las elecciones presidenciales en Bolivia. Los resultados reflejaron un giro hacia la derecha y una fuerte fragmentación del bloque progresista, que gobernó el país por casi dos décadas.',
+    'El Movimiento al Socialismo (MAS), encabezado por el presidente Luis Arce, sufrió una derrota histórica. Su candidato Eduardo del Castillo apenas alcanzó alrededor del 3 % de los votos, lo que evidenció la pérdida de apoyo del oficialismo.',
+    'El expresidente Evo Morales, inhabilitado por decisión del Tribunal Constitucional, llamó a sus seguidores a votar nulo en señal de protesta. Esa convocatoria elevó el voto nulo y blanco a cerca del 19 %, con un peso determinante en el resultado.',
+    'Por su parte, Andrónico Rodríguez, que se presentó como candidato independiente del MAS y buscó capitalizar el descontento dentro de la izquierda, obtuvo alrededor del 8 % de los sufragios.',
+    'En conjunto, el MAS, Rodríguez y el voto nulo alcanzaron aproximadamente un 30 % del electorado. Sin embargo, la falta de unidad y la ausencia de un candidato único redujeron la competitividad de la izquierda frente a la derecha.',
+    'Los dos aspirantes que pasaron a la segunda vuelta fueron Rodrigo Paz, de centroderecha, con alrededor del 32 %, y Jorge Quiroga, de derecha, con cerca del 27 %. De esta forma, la izquierda quedó fuera de la contienda decisiva.',
+    'La decisión de Morales de promover el voto nulo se sustentó en la denuncia de que ningún candidato representaba el “proceso de cambio” iniciado en 2006. Señaló que el gobierno de Arce se había apartado de los principios históricos del MAS y que su exclusión de la carrera electoral era una maniobra política.',
+    'Analistas señalan que la experiencia boliviana ilustra el riesgo de la fragmentación: mientras la izquierda dispersó fuerzas y votos, la derecha logró consolidarse y pasar unida a la segunda vuelta.',
+    'Fuentes citadas:',
+    '1) El País. *Bolivia gira a la derecha*. https://elpais.com/america/opinion/2025-08-18/bolivia-gira-a-la-derecha.html',
+    '2) Reuters. *Bolivia heads to runoff after right turn in presidential vote*. https://www.reuters.com/world/americas/bolivia-heads-runoff-after-right-turn-presidential-vote-2025-08-18/',
+    '3) The Guardian. *Two decades of leftwing dominance end in Bolivia as rightwingers head to election runoff*. https://www.theguardian.com/world/2025/aug/18/bolivia-presidential-election-preliminary-results'
+  ],
+  etiquetas: ['bolivia','política','elecciones','izquierda','resultados'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/mundo/america/la-izquierda-fragmentada-y-un-giro-a-la-derecha-claves-de-las-elecciones-en-bolivia/' },
+  url_fuente: 'https://www.elespectador.com/mundo/america/la-izquierda-fragmentada-y-un-giro-a-la-derecha-claves-de-las-elecciones-en-bolivia/',
+  consecutivo_unico: '20250817-01'
+},
+
 {
   id: 'diana-marcela-morales-gestion-mincomercio-balance-2025-08-17',
   fecha: '2025-08-17',

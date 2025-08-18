@@ -2,7 +2,8 @@
 import "./globals.css"
 import Header from "@/components/Header"
 import type { Metadata, Viewport } from "next"
-import Script from "next/script"
+import Analytics from "@/components/Analytics"
+import { Suspense } from "react" // 👈 añadido
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -11,6 +12,7 @@ export const viewport: Viewport = {
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.ledelab.co"
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -25,11 +27,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Noticias Neutrales",
     images: [
-      {
-        url: "/preview.png",
-        width: 1200,
-        height: 628,
-      },
+      { url: "/preview.png", width: 1200, height: 628, alt: "Noticias Neutrales" },
     ],
   },
   twitter: {
@@ -41,13 +39,13 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID
   return (
     <html lang="es">
       <head />
       <body className="flex flex-col min-h-screen bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100">
         <Header />
         <main className="flex-1 max-w-5xl mx-auto px-6 py-6">{children}</main>
+
         <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-inner mt-8">
           <div className="max-w-5xl mx-auto px-6 py-4 text-sm text-gray-600 dark:text-gray-400 flex flex-col sm:flex-row sm:justify-between gap-2">
             <span>© {new Date().getFullYear()} Noticias Neutrales. Todos los derechos reservados.</span>
@@ -65,19 +63,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </footer>
 
-        {GA_ID && (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-            <Script id="ga" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}');
-              `}
-            </Script>
-          </>
-        )}
+        {/* GA4: usa useSearchParams → requiere Suspense */}
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   )
