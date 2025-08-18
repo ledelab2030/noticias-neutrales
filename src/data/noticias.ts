@@ -1,14 +1,7 @@
 // src/data/noticias.ts
-// ----------------------------------------------------
-// Esquema con normalización automática de etiquetas (TAGS).
-// - En cada noticia puedes escribir etiquetas libres (e.g., "Medios", "Tecnología").
-// - Al exportar, se normalizan al catálogo canónico definido en src/data/tags.ts.
-// - El resto de la app importa { noticias } como siempre.
-// ----------------------------------------------------
+import { TAGS } from "@/data/tags"
 
-import { sanitizeTags, type Tag } from "@/data/tags"
-
-// Si usas un tipo de fuente estructurada en las vistas, mantenlo aquí:
+// Tipos base (codnnv1) + extensión para imagen OG/Twitter
 export type Fuente =
   | string
   | {
@@ -16,7 +9,6 @@ export type Fuente =
       url?: string
     }
 
-// Tipo para ESCRIBIR noticias (etiquetas libres: string[])
 export type NoticiaRaw = {
   id: string
   fecha: string
@@ -26,23 +18,235 @@ export type NoticiaRaw = {
   pais?: string
   resumen?: string
   contenido?: string[]
-  etiquetas?: string[]             // ← libre (puedes poner "Medios", "Tecnología", etc.)
+  etiquetas?: string[]
   fuente?: Fuente
   url_fuente?: string
   consecutivo_unico?: string
+
+  // opcional: portada para previews (ruta absoluta o relativa a /public)
+  imagen?: string
 }
 
-// Tipo que CONSUME la app (etiquetas ya canónicas: Tag[])
-export type Noticia = Omit<NoticiaRaw, "etiquetas"> & {
-  etiquetas?: Tag[]                // ← estricto y consistente con tu catálogo
-}
+export type Noticia = NoticiaRaw
 
-// ----------------------------------------------------
-// Pega aquí TUS NOTICIAS con etiquetas libres.
-// Si lo prefieres, puedes dejarlas vacías por ahora; compila igual.
-// ----------------------------------------------------
+// Normalizador de etiquetas (case-insensitive, dedup, solo catálogo de tags.ts)
+function sanitizeTags(tags: string[] = []): string[] {
+  const canon = new Map<string, string>(TAGS.map((t) => [t.toLowerCase(), t]))
+  const out: string[] = []
+  const seen = new Set<string>()
+  for (const raw of tags) {
+    const key = (raw ?? "").trim().toLowerCase()
+    if (!key) continue
+    const hit = canon.get(key)
+    if (hit && !seen.has(hit)) {
+      seen.add(hit)
+      out.push(hit)
+    }
+  }
+  return out
+}
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
+{
+  id: 'diana-marcela-morales-gestion-mincomercio-balance-2025-08-17',
+  fecha: '2025-08-17',
+  titulo: 'Diana Marcela Morales expone balance y hoja de ruta en Comercio, Industria y Turismo',
+  pais: 'Colombia',
+  resumen: 'La ministra de Comercio, Industria y Turismo, Diana Marcela Morales, presentó un balance de su gestión en el marco del gobierno de Gustavo Petro, destacando avances en implementación del programa de gobierno y señalando los retos que persisten en materia de productividad y relaciones comerciales.',
+  contenido: [
+    'Diana Marcela Morales, ministra de Comercio, Industria y Turismo de Colombia, expuso en entrevista un balance de su gestión, señalando que se ha logrado implementar la visión del programa de gobierno en varios frentes económicos y productivos.',
+    'La funcionaria destacó que se han fortalecido políticas para apoyar a las micro, pequeñas y medianas empresas, así como programas de innovación y desarrollo industrial orientados a incrementar la competitividad del país.',
+    'En materia internacional, Morales subrayó la importancia de las relaciones con Estados Unidos y otros socios estratégicos, indicando que el gobierno trabaja en diversificar mercados y consolidar acuerdos que beneficien a distintos sectores productivos.',
+    'El balance también incluyó retos pendientes como mejorar la productividad, reducir las brechas de competitividad regional y enfrentar el contexto global de desaceleración económica. La ministra afirmó que la hoja de ruta seguirá centrada en impulsar sectores clave y promover el turismo sostenible.',
+    'Según Morales, el compromiso es avanzar en políticas públicas que permitan consolidar el crecimiento económico con equidad, en línea con los objetivos trazados por el presidente Gustavo Petro.'
+  ],
+  etiquetas: ['colombia','economía','política','gustavo petro','estados unidos'],
+  fuente: { nombre: 'Semana', url: 'https://www.semana.com/politica/articulo/diana-marcela-morales-ministra-de-comercio-industria-y-turismo-se-ha-logrado-implementar-la-vision-del-programa-de-gobierno/202512/' },
+  url_fuente: 'https://www.semana.com/politica/articulo/diana-marcela-morales-ministra-de-comercio-industria-y-turismo-se-ha-logrado-implementar-la-vision-del-programa-de-gobierno/202512/',
+  consecutivo_unico: '20250817-02',
+
+  // NUEVO:
+  imagen: '/noticias/og/diana-marcela-morales.jpg' // súbela a /public/noticias/og/
+},
+
+{
+  id: 'opinion-rodrigo-uprimny-terna-corte-constitucional-2025-08-17',
+  fecha: '2025-08-17',
+  titulo: 'Rodrigo Uprimny cuestiona la terna de la Corte Suprema para la Corte Constitucional',
+  pais: 'Colombia',
+  resumen: 'En su columna en El Espectador, el jurista Rodrigo Uprimny analiza la terna enviada por la Corte Suprema de Justicia para la elección de un nuevo magistrado de la Corte Constitucional, advirtiendo riesgos de que se configure como una "terna de uno".',
+  contenido: [
+    'Rodrigo Uprimny es un jurista colombiano, profesor universitario y columnista habitual en El Espectador. Su trayectoria académica y profesional ha estado ligada al derecho constitucional, el acceso a la justicia y los derechos humanos.',
+    'En la columna titulada "Una problemática terna de uno", publicada el 17 de agosto de 2025, Uprimny examina la terna enviada por la Corte Suprema de Justicia para la elección de un magistrado de la Corte Constitucional.',
+    'El autor plantea que, aunque formalmente se cumpla el requisito de presentar tres nombres, en la práctica dos de los integrantes carecen de opciones reales, lo que convierte el proceso en una "terna de uno". Esta situación, advierte, limita la pluralidad y reduce la legitimidad del mecanismo.',
+    'Uprimny subraya que la Corte Constitucional desempeña un papel central en la democracia colombiana, al garantizar la supremacía de la Constitución y proteger los derechos fundamentales. Por eso considera preocupante que la selección de magistrados se convierta en un trámite sin verdadero debate ni alternativas.',
+    'El jurista concluye que el respeto al espíritu del mecanismo de ternas es fundamental para preservar la independencia de la Corte y su credibilidad institucional en el país.',
+    'Fuente original: https://www.elespectador.com/opinion/columnistas/rodrigo-uprimny/una-problematica-terna-de-uno/'
+  ],
+  etiquetas: ['colombia','política','editorial','corte suprema','corte constitucional'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/opinion/columnistas/rodrigo-uprimny/una-problematica-terna-de-uno/' },
+  consecutivo_unico: '20250817-02'
+},
+
+  {
+  id: 'colombia-china-memorando-ruta-de-la-seda-2025-08-15',
+  fecha: '2025-08-15',
+  titulo: 'Colombia y China firman memorando de entendimiento sobre la Ruta de la Seda',
+  pais: 'Colombia',
+  resumen: 'Colombia y China suscribieron un memorando de entendimiento que formaliza la incorporación del país sudamericano a la Iniciativa de la Franja y la Ruta, con el objetivo de fortalecer la cooperación en infraestructura, comercio e inversión.',
+  contenido: [
+    'El Gobierno de Colombia y la República Popular China firmaron un memorando de entendimiento para formalizar la adhesión de Colombia a la Iniciativa de la Franja y la Ruta, conocida como la Ruta de la Seda. El acto se llevó a cabo en presencia de representantes de ambos gobiernos y marca un nuevo capítulo en las relaciones bilaterales.',
+    'El acuerdo contempla el impulso a proyectos conjuntos en áreas como infraestructura, conectividad, comercio, inversión, ciencia, tecnología y educación. Según el Ministerio de Relaciones Exteriores, se busca fomentar el desarrollo sostenible y ampliar las oportunidades de intercambio económico y cultural.',
+    'La Iniciativa de la Franja y la Ruta, lanzada por China en 2013, agrupa a más de 150 países y organizaciones internacionales con el objetivo de mejorar la cooperación global mediante redes de transporte, comercio e inversión. Colombia se convierte así en uno de los últimos países de América Latina en unirse formalmente a esta estrategia.',
+    'Fuentes citadas:',
+    '1) Ministerio de Relaciones Exteriores de Colombia – Comunicado oficial.',
+    '2) Gobierno de la República Popular China – Iniciativa de la Franja y la Ruta.'
+  ],
+  etiquetas: ['colombia', 'china', 'política', 'economía'],
+  fuente: { nombre: 'Blu Radio', url: 'https://www.bluradio.com/nacion/ruta-de-la-seda-ya-es-una-realidad-colombia-y-china-firmaron-memorando-de-entendimiento-rg10?s=09' },
+  url_fuente: 'https://www.bluradio.com/nacion/ruta-de-la-seda-ya-es-una-realidad-colombia-y-china-firmaron-memorando-de-entendimiento-rg10?s=09',
+  consecutivo_unico: '20250815-01'
+},
+
+  {
+  id: 'china-biotech-expansion-opinion-2025-08-17',
+  fecha: '2025-08-17',
+  titulo: 'China busca expandir su influencia en biotecnología',
+  pais: 'China',
+  resumen: 'Un análisis del New York Times advierte que China está destinando importantes recursos para consolidarse como potencia en biotecnología, lo que podría redefinir el liderazgo global en esta industria.',
+  contenido: [
+    'El artículo de opinión del New York Times señala que China ha intensificado sus inversiones en biotecnología, buscando no solo fortalecer su industria interna, sino también proyectar poder e influencia en el ámbito internacional.',
+    'Según el análisis, esta estrategia incluye el desarrollo de capacidades avanzadas en investigación genética, farmacéutica y agrícola, lo cual representa un reto directo a la posición dominante de Estados Unidos en el sector.',
+    'El texto también alerta sobre la necesidad de establecer reglas claras de transparencia, cooperación internacional y salvaguardas éticas para evitar riesgos asociados con la manipulación genética y el uso indebido de tecnologías emergentes.'
+  ],
+  etiquetas: ['tecnología', 'investigación', 'china'],
+  fuente: { nombre: 'The New York Times', url: 'https://www.nytimes.com/2025/08/17/opinion/china-biotech.html' },
+  url_fuente: 'https://www.nytimes.com/2025/08/17/opinion/china-biotech.html',
+  consecutivo_unico: '20250817-01'
+},
+
+{
+  id: 'air-canada-suspende-vuelos-huelga-auxiliares-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Air Canada suspende vuelos por huelga de auxiliares de vuelo',
+  pais: 'Canadá',
+  resumen: 'Air Canada suspendió temporalmente sus operaciones internacionales y nacionales tras iniciarse una huelga de auxiliares de vuelo, que afecta miles de pasajeros en Canadá y otros destinos.',
+  contenido: [
+    'Air Canada anunció este sábado 16 de agosto la suspensión de gran parte de sus vuelos debido a una huelga de auxiliares de vuelo que comenzó a nivel nacional. La medida afecta tanto rutas internas como internacionales y ha generado cancelaciones y retrasos en aeropuertos clave como Toronto y Montreal.',
+    'El sindicato de auxiliares de vuelo, que representa a más de 9.000 trabajadores, declaró el paro tras no lograr un acuerdo en las negociaciones contractuales relacionadas con salarios, condiciones laborales y seguridad en los vuelos. “Nuestros miembros se han visto obligados a tomar esta medida tras meses de conversaciones sin resultados”, señaló el sindicato en un comunicado.',
+    'La aerolínea pidió comprensión a los pasajeros y recomendó verificar el estado de sus vuelos antes de dirigirse a los aeropuertos. También anunció que ofrecerá reembolsos y reprogramaciones sin costo adicional para los afectados. El gobierno canadiense manifestó su preocupación y pidió a las partes retomar el diálogo para restablecer el servicio aéreo lo antes posible.'
+  ],
+  etiquetas: ['canadá', 'economía', 'política'],
+  fuente: { nombre: 'CNN Español', url: 'https://cnnespanol.cnn.com/2025/08/16/mundo/air-canada-suspende-vuelos-huelga-auxiliares-trax?s=09' },
+  url_fuente: 'https://cnnespanol.cnn.com/2025/08/16/mundo/air-canada-suspende-vuelos-huelga-auxiliares-trax?s=09',
+  consecutivo_unico: '20250816-01'
+},
+{
+  id: 'consulta-pacto-historico-intencion-voto-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Consulta del Pacto Histórico: Quintero y otros precandidatos lideran intención de voto',
+  pais: 'Colombia',
+  resumen: 'Una encuesta de Invamer para Caracol Televisión, Blu Radio y El Espectador muestra a Daniel Quintero en primer lugar de intención de voto entre los precandidatos del Pacto Histórico, seguido por Alexander López y otros aspirantes.',
+  contenido: [
+    'Según la más reciente encuesta de Invamer, divulgada el 16 de agosto, Daniel Quintero, exalcalde de Medellín, encabeza la intención de voto en la consulta del Pacto Histórico con el 25%. Le siguen Alexander López con 13%, Clara López con 9%, Álex Flórez con 7% y otros precandidatos con porcentajes menores.',
+    'La medición se realizó para Caracol Televisión, Blu Radio y El Espectador, con el propósito de evaluar las preferencias de los ciudadanos frente a la consulta interna que definirá el candidato presidencial de la coalición. El estudio abarcó distintos grupos etarios y regiones del país.',
+    'En la misma encuesta se exploraron escenarios de consulta, mostrando que Quintero obtiene ventaja significativa frente a sus competidores, aunque aún persiste un alto nivel de indecisión. Un 34% de los encuestados manifestó no haber definido su voto.',
+    'La consulta del Pacto Histórico busca escoger un candidato único de la coalición para las elecciones presidenciales de 2026, en un proceso que incluye debates y mecanismos de participación interna.',
+    'Fuentes citadas: Invamer, El Universal.'
+  ],
+  etiquetas: ['colombia', 'política', 'elecciones', 'pacto historico'],
+  fuente: { nombre: 'El Universal', url: 'https://www.eluniversal.com.co/colombia/2025/08/16/consulta-del-pacto-historico-los-precandidatos-que-lideran-la-intencion-de-voto/' },
+  url_fuente: 'https://www.eluniversal.com.co/colombia/2025/08/16/consulta-del-pacto-historico-los-precandidatos-que-lideran-la-intencion-de-voto/',
+  consecutivo_unico: '20250816-03'
+},
+{
+  id: 'productividad-y-bienestar-conversacion-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Productividad OCDE: datos recientes y alcance del indicador',
+  pais: 'Internacional',
+  resumen: 'Síntesis de los puntos principales sobre productividad laboral (PIB por hora trabajada) reportados por la OCDE y las preguntas frecuentes sobre su interpretación.',
+  contenido: [
+    'La OCDE reporta que, en promedio, la productividad laboral creció 0,6% en 2023, mientras que en la zona euro se observó una caída de -0,9%. El indicador utilizado por la OCDE es el PIB por hora trabajada, no el PIB per cápita.',
+    'Entre las dudas habituales están si hay datos estimados de 2024 y cómo se relaciona el indicador con el bienestar. La aclaración clave es que el PIB por hora trabajada mide eficiencia económica, pero no incorpora directamente equidad, sostenibilidad u otros componentes de bienestar.',
+    'Este resumen proviene de un intercambio tipo preguntas-respuestas; para mantener consistencia con el formato de noticias, se presenta en párrafos y no como diálogo estructurado.'
+  ],
+  etiquetas: ['economía','productividad','bienestar'],
+  fuente: { nombre: 'OCDE' },
+  consecutivo_unico: '20250816-02'
+},
+
+  {
+  id: 'gobernacion-uribe-antioquia-paramilitares-jep-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Gobernación de Álvaro Uribe en Antioquia y vínculos con paramilitares fueron mencionados en la JEP',
+  pais: 'Colombia',
+  resumen: 'La JEP recibió testimonios que mencionan a funcionarios de la gobernación de Álvaro Uribe en Antioquia durante las masacres de La Granja (1996) y El Aro (1997), señalando la creación de un grupo de seguridad privada que habría sido fachada de paramilitares. El expresidente niega cualquier relación.',
+  contenido: [
+    'El Espectador reveló que en la Jurisdicción Especial para la Paz (JEP) se conocieron testimonios de dos financiadores de las masacres paramilitares de La Granja (1996) y El Aro (1997), ocurridas en el municipio antioqueño de Ituango.',
+    'Según los relatos, dos altos funcionarios de la gobernación de Álvaro Uribe Vélez en Antioquia habrían impulsado la conformación de un grupo de seguridad privada, el cual terminó siendo utilizado como fachada por estructuras paramilitares.',
+    'El expresidente Uribe ha rechazado los señalamientos y sostiene que no existió ningún vínculo entre su administración departamental y organizaciones criminales.',
+    'Estos testimonios forman parte del proceso de esclarecimiento que adelanta la JEP en torno a la relación entre agentes estatales, sectores privados y grupos armados durante los años noventa en Antioquia.'
+  ],
+  etiquetas: ['colombia', 'investigación', 'política', 'seguridad'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/judicial/gobernacion-de-alvaro-uribe-en-antioquia-y-paramilitares-fueron-senalados-en-la-jep-noticia-792001/' },
+  url_fuente: 'https://www.elespectador.com/judicial/gobernacion-de-alvaro-uribe-en-antioquia-y-paramilitares-fueron-senalados-en-la-jep-noticia-792001/',
+  consecutivo_unico: '20250816-01'
+},
+  {
+  id: 'sinner-atmane-semifinal-cincinnati-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Sinner vence a Atmane y avanza a la final del Masters 1000 de Cincinnati',
+  pais: 'Estados Unidos',
+  resumen: 'Jannik Sinner derrotó a Térence Atmane en semifinales del Masters 1000 de Cincinnati. El francés alcanzó por primera vez esta ronda en un torneo de esta categoría y obtuvo más de 300 mil dólares en premios.',
+  contenido: [
+    'El sábado 16 de agosto de 2025, Jannik Sinner se impuso en la semifinal del Masters 1000 de Cincinnati al francés Térence Atmane con un marcador de 7-6(4), 6-2. El número uno del mundo defendió con éxito su título en el torneo y aseguró su paso a la final.',
+    'Atmane, ubicado en el puesto 136 del ranking ATP y proveniente de la fase clasificatoria, fue una de las sorpresas de la semana. Su actuación lo convirtió en uno de los jugadores con ranking más bajo en alcanzar una semifinal de Masters 1000.',
+    'El encuentro se disputó en Cincinnati, Estados Unidos, como parte del calendario ATP que antecede al US Open. El triunfo permitió a Sinner celebrar su cumpleaños número 24 con una victoria especial y alcanzar su octava final de Masters 1000.',
+    'Para Atmane, este resultado representó un salto significativo en su carrera. Sumó 413 puntos ATP, con lo que se proyecta hasta el puesto 69 del ranking mundial. Además, alcanzó por primera vez la ronda de semifinales en un torneo de esta categoría.',
+    'En el aspecto económico, el francés recibió 332.160 dólares en premios por su participación en Cincinnati. La cifra resulta histórica para él, ya que supera lo que había acumulado en toda la temporada y marca un hito en la carrera de un jugador que compite sin patrocinadores de ropa ni calzado.'
+  ],
+  etiquetas: ['resultados', 'tenis', 'estados unidos'],
+  fuente: { nombre: 'ATP Tour', url: 'https://www.atptour.com/en/news/sinner-atmane-cincinnati-2025-sf' },
+  url_fuente: 'https://www.atptour.com/en/news/sinner-atmane-cincinnati-2025-sf',
+  consecutivo_unico: '20250816-01'
+},
+
+  {
+  id: 'diferencias-diabetes-tipo1-tipo2-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Cinco diferencias clave entre la diabetes tipo 1 y tipo 2',
+  pais: 'Internacional',
+  resumen: 'Explicación sencilla y didáctica sobre las principales diferencias entre la diabetes tipo 1 y la tipo 2, enfocada en causas, edad de inicio, producción de insulina, tratamiento y frecuencia.',
+  contenido: [
+    'La diabetes es una enfermedad que afecta la forma en que el cuerpo maneja la glucosa en la sangre. Existen distintos tipos, siendo la tipo 1 y la tipo 2 las más comunes. Aunque comparten síntomas similares, tienen orígenes y tratamientos distintos.',
+    'En la diabetes tipo 1, el sistema de defensas destruye las células del páncreas encargadas de producir insulina. En la tipo 2, en cambio, el problema suele estar en la resistencia del cuerpo a la insulina y en factores como el sobrepeso, el sedentarismo y la edad.',
+    'La edad de inicio también marca una diferencia importante: la diabetes tipo 1 suele diagnosticarse en la infancia o adolescencia, mientras que la tipo 2 aparece con mayor frecuencia en adultos, aunque hoy en día también afecta a jóvenes con exceso de peso.',
+    'Otra diferencia central está en la producción de insulina. En la tipo 1, el páncreas deja de producirla casi por completo, lo que obliga a usar insulina desde el inicio. En la tipo 2, el cuerpo todavía fabrica insulina, pero no la usa de forma eficiente, y con el tiempo puede disminuir la producción.',
+    'Finalmente, la frecuencia es distinta: la diabetes tipo 1 representa alrededor del 5 a 10 % de los casos, mientras que la tipo 2 es mucho más común, llegando al 90 a 95 %. Por eso, mantener hábitos de vida saludables es una de las mejores formas de prevenir y controlar esta última.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'estilo de vida'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250816-01'
+},
+  {
+  id: 'canciller-aleman-sugiere-cumbre-trump-putin-zelenski-europa-2025-08-16',
+  fecha: '2025-08-16',
+  titulo: 'Canciller alemán sugiere que una cumbre entre Trump, Putin y Zelenski se realice en Europa',
+  pais: 'Alemania',
+  resumen: 'El canciller alemán instó a que un eventual encuentro entre Donald Trump, Vladímir Putin y Volodímir Zelenski tenga lugar en territorio europeo, subrayando la importancia de la unidad del continente frente al conflicto en Ucrania.',
+  contenido: [
+    'El canciller alemán Annalena Baerbock señaló este sábado que, de concretarse una cumbre entre el presidente estadounidense Donald Trump, el mandatario ruso Vladímir Putin y el presidente ucraniano Volodímir Zelenski, esta debería celebrarse en Europa.',
+    'La jefa de la diplomacia alemana argumentó que la Unión Europea debe desempeñar un papel central en cualquier iniciativa orientada a la paz en Ucrania. "Europa no puede ser un espectador en un conflicto que ocurre en su propio continente", declaró.',
+    'Baerbock recalcó que Alemania y sus socios europeos están dispuestos a apoyar un proceso de diálogo, pero insistió en que cualquier negociación debe basarse en el respeto a la soberanía e integridad territorial de Ucrania.',
+    'El planteamiento surge en medio de discusiones internacionales sobre posibles escenarios de mediación en el conflicto, con Estados Unidos y actores europeos evaluando opciones para reducir las tensiones militares y diplomáticas.',
+    'Fuentes citadas: https://www.dw.com/es/canciller-alem%C3%A1n-sugiere-que-cumbre-trump-putin-zelenski-sea-en-europa/a-73668088'
+  ],
+  etiquetas: ['política', 'internacional', 'estados unidos', 'donald trump','rusia','putin'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com' },
+  url_fuente: 'https://www.dw.com/es/canciller-alem%C3%A1n-sugiere-que-cumbre-trump-putin-zelenski-sea-en-europa/a-73668088',
+  consecutivo_unico: '20250816-01'
+},
+
   {
   id: 'precios-electricidad-america-latina-comparacion-2025-08-16',
   fecha: '2025-08-16',
@@ -98,7 +302,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Fuentes citadas:',
     '1) El Confidencial – "China instala la turbina eólica más grande del mundo: puede alterar el clima local". https://www.elconfidencial.com/tecnologia/2025-08-14/china-turbina-mas-grande-influye-clima-1qrt_4191522/'
   ],
-  etiquetas: ['tecnología', 'consumo','energía'],
+  etiquetas: ['tecnología', 'consumo','energía','china'],
   fuente: { nombre: 'El Confidencial', url: 'https://www.elconfidencial.com' },
   url_fuente: 'https://www.elconfidencial.com/tecnologia/2025-08-14/china-turbina-mas-grande-influye-clima-1qrt_4191522/',
   consecutivo_unico: '20250814-01'
@@ -288,7 +492,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En el mismo periodo, las exportaciones representaron cerca del 60 % de las ventas, con los principales destinos en Estados Unidos, China y países de Europa, a pesar de un entorno global volátil en los precios de la energía.',
     'La petrolera estatal reiteró que continuará su estrategia de diversificación energética y fortalecimiento de la producción, buscando equilibrio entre rentabilidad y sostenibilidad.'
   ],
-  etiquetas: ['Ecopetrol', 'Petróleo', 'Resultados', 'Economía'],
+  etiquetas: ['Ecopetrol', 'Petróleo', 'Resultados', 'Economía','china','estados unidos','europa'],
   fuente: 'El Espectador',
   url_fuente:
     'https://www.elespectador.com/economia/ecopetrol-produce-mas-pero-gana-menos-resultados-del-primer-semestre-de-2025-noticias-hoy/'
@@ -577,66 +781,13 @@ const noticiasRaw: NoticiaRaw[] = [
   etiquetas: ['salud', 'consumo', 'seguridad alimentaria'],
   fuente: 'Cofepris',
   url_fuente: 'https://elpais.com/mexico/2025-08-06/mexico-ordena-retirar-el-dentifrico-colgate-total-clear-mint-por-un-aviso-de-riesgo-sanitario.html',
-  consecutivo_unico: '20250806-01'
+  consecutivo_unico: '20250806-01',
+
 },
-{
-  id: 'fructosa-procesada-inflamacion-2025-08-08',
-  fecha: '2025-08-08',
-  titulo: 'Fructosa procesada: el azúcar que alimenta la inflamación',
-  resumen: 'La fructosa libre en azúcares refinados y jarabes industriales se asocia a inflamación crónica, mientras que la fructosa natural de frutas enteras es beneficiosa.',
-  contenido: [
-    'La fructosa libre presente en azúcares refinados y jarabes como el de maíz alto en fructosa se ha vinculado con respuestas inflamatorias.',
-    'Priorizar frutas enteras, agua y alimentos mínimamente procesados ayuda a reducir esa carga.'
-  ],
-  etiquetas: ['estilo de vida', 'salud', 'nutrición', 'alimentación'],
-  fuente: { nombre: 'Food & Wine', url: 'https://www.foodandwine.com/does-fructose-cause-inflammation-11785966' }
-},
-{
-  id: 'dieta-mediterranea-inflamacion-2025-08-04',
-  fecha: '2025-08-04',
-  titulo: 'Dieta mediterránea: un aliado efectivo contra la inflamación',
-  resumen: 'Patrón rico en frutas, vegetales, aceite de oliva y pescado con omega-3 que ayuda a reducir la inflamación crónica y protege frente a múltiples enfermedades.',
-  contenido: [
-    'Aceite de oliva virgen extra, legumbres, frutos rojos y pescados grasos son ejes de este patrón alimentario.',
-    'Estudios lo asocian con marcadores inflamatorios más bajos y beneficios en la prevención de enfermedades metabólicas y cardiovasculares.'
-  ],
-  etiquetas: ['estilo de vida', 'salud', 'nutrición', 'dieta'],
-  fuente: { nombre: 'The Washington Post', url: 'https://www.washingtonpost.com/wellness/2025/08/04/mediterranean-diet-benefits-inflammation/' }
-},
-{
-  id: 'inflamacion-silenciosa-2025-07-26',
-  fecha: '2025-07-26',
-  titulo: 'Inflamación silenciosa: más allá de un término de moda',
-  resumen: 'La inflamación crónica impacta energía, sueño y piel; un enfoque integral combina nutrición, descanso y movimiento suave.',
-  contenido: [
-    'La inflamación silenciosa puede influir en energía, calidad del sueño y salud de la piel.',
-    'Programas integrales combinan evaluación clínica, nutrición antiinflamatoria, manejo del estrés y actividad física moderada para abordar causas de base.'
-  ],
-  etiquetas: ['estilo de vida', 'salud', 'nutrición', 'estrés'],
-  fuente: { nombre: 'Condé Nast Traveler', url: 'https://www.cntraveler.com/story/inflammation-is-the-latest-wellness-buzzword' }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ]
 
-// ----------------------------------------------------
-// Export FINAL (normalizado):
-// - Convierte mayúsculas/minúsculas/acentos → forma canónica de TAGS
-// - Descarta etiquetas fuera del catálogo
-// ----------------------------------------------------
+// Export normalizado (garantiza arreglo de etiquetas siempre válido)
 export const noticias: Noticia[] = noticiasRaw.map((n) => ({
   ...n,
-  etiquetas: sanitizeTags(n.etiquetas),
+  etiquetas: sanitizeTags(n.etiquetas ?? []),
 }))

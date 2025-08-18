@@ -27,4 +27,13 @@ export const filiales: Filial[] = [
       'Protección, tratamiento y mejora de la madera.',
     etiquetas: ['Madera', 'Tratamientos', 'Construcción'],
   },
+  {
+    id: 'petrocaribe-ingenieria',
+    nombre: 'Petrocaribe Ingeniería',
+    pais: 'Colombia',
+    url: 'https://www.ledelab.co/petrocaribe-ingenieria',
+    descripcion:
+      'Aditivos químicos para la industria petrolera. Ofrece soluciones en fluidos de control de pozos, estimulación, inyección de agua y recobro mejorado (EOR).',
+    etiquetas: ['Energía', 'Estimulación de Pozos', 'Petróleo y Gas','Químicos'],
+  },
 ]

@@ -3,6 +3,7 @@ import { noticias } from "@/data/noticias"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { slugify } from "@/utils/slugify"
+import type { Metadata } from "next"
 
 interface Props {
   params: Promise<{ id: string }>
@@ -19,6 +20,49 @@ function fuenteNombre(f: unknown) {
   return ""
 }
 
+// ✅ Metadatos dinámicos para previews (Open Graph / Twitter)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params
+  const n = noticias.find((x) => x.id === id)
+  if (!n) return {}
+
+  const base = "https://www.ledelab.co"
+  const url = `${base}/noticias/${id}`
+
+  // Usa `n.imagen` si existe; si es ruta relativa, conviértela en absoluta.
+  // Fallback: /og-default.jpg (ya lo subiste en 1200x628, sirve perfecto).
+  const ogImageRelOrAbs = n.imagen ?? "/og-default.jpg"
+  const ogImage = ogImageRelOrAbs.startsWith("http")
+    ? ogImageRelOrAbs
+    : `${base}${ogImageRelOrAbs}`
+
+  return {
+    title: n.titulo,
+    description: n.resumen || (n.contenido ? n.contenido[0] : ""),
+    openGraph: {
+      title: n.titulo,
+      description: n.resumen || "",
+      url,
+      siteName: "LedeLab Noticias",
+      type: "article",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630, // Los scrapers aceptan 1200x628–630; estamos bien.
+          alt: n.titulo,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: n.titulo,
+      description: n.resumen || "",
+      images: [ogImage],
+    },
+  }
+}
+
 export default async function Noticia({ params }: Props) {
   const { id } = await params
   const n = noticias.find((x) => x.id === id)
@@ -26,7 +70,7 @@ export default async function Noticia({ params }: Props) {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
-      {/* migas en minúsculas */}
+      {/* migas */}
       <div className="mb-6 text-sm text-muted-foreground">
         <Link href="/" className="underline-offset-4 hover:underline">
           inicio
@@ -68,7 +112,6 @@ export default async function Noticia({ params }: Props) {
         )}
       </div>
 
-      {/* cuerpo: muestra contenido si existe; si no, cae al resumen */}
       {n.contenido?.length ? (
         <div className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100">
           {n.contenido.map((p, i) => (
@@ -85,7 +128,6 @@ export default async function Noticia({ params }: Props) {
         </p>
       ) : null}
 
-      {/* etiquetas con enlace a rutas limpias */}
       {!!n.etiquetas?.length && (
         <div className="mt-8 flex flex-wrap gap-2">
           {n.etiquetas.map((tag) => (
@@ -102,8 +144,8 @@ export default async function Noticia({ params }: Props) {
     </main>
   )
 }
+
 function resaltarLinks(texto: string) {
-  // Enlaza URLs http(s) que NO estén ya dentro de href="..."
   return texto.replace(
     /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
     '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'

@@ -3,219 +3,166 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import clsx from "clsx"
 import AutoBrand from "@/components/AutoBrand"
 import LogoWithSuffix from "@/components/LogoWithSuffix"
+import dynamic from "next/dynamic"
+
+// Reloj sin SSR (evita hydration mismatch)
+const ClockLocal = dynamic(() => import("@/components/ClockLocal"), { ssr: false })
+
+// Azul Estonia para subrayado activo
+const ESTONIA_BLUE = "#0072CE"
+
+/** Barra secundaria de pestañas persistentes */
+function SubmenuBar({
+  items,
+  pathname,
+}: {
+  items: { href: string; label: string }[]
+  pathname: string
+}) {
+  return (
+    <div className="w-full border-b border-slate-200 bg-white">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <nav className="flex gap-5 overflow-x-auto py-2">
+          {items.map(({ href, label }) => {
+            const active = pathname === href || pathname.startsWith(href + "/")
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={clsx(
+                  "whitespace-nowrap pb-1 text-sm font-medium transition-colors",
+                  active
+                    ? "text-slate-900"
+                    : "text-slate-700 hover:text-slate-900"
+                )}
+                style={active ? { borderBottom: `3px solid ${ESTONIA_BLUE}` } : {}}
+              >
+                {label}
+              </Link>
+            )
+          })}
+        </nav>
+      </div>
+    </div>
+  )
+}
 
 export default function Header() {
-  const [open, setOpen] = useState(false)
-  const [openSections, setOpenSections] = useState(false)
-  const [openNosotros, setOpenNosotros] = useState(false)
   const pathname = usePathname()
+  const [mobileOpen, setMobileOpen] = useState(false)
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/")
+  // Tabs de secciones (Actualidad → /noticias)
+  const SECCIONES = useMemo(
+    () => [
+      { href: "/noticias", label: "Actualidad" },
+      { href: "/buenas-noticias", label: "Buenas Noticias!" },
+      { href: "/estilo-de-vida", label: "Estilo de Vida" },
+      { href: "/podcasts", label: "Podcasts" },
+    ],
+    []
+  )
+  const NOSOTROS = useMemo(
+    () => [
+      { href: "/sobre-nosotros", label: "Sobre Noticias Neutrales" },
+      { href: "/red", label: "Nuestra Red" },
+      { href: "/ledelab", label: "LedeLab" },
+      { href: "/javier", label: "jAvIer" },
+    ],
+    []
+  )
 
-  const isSeccionesActive = ["/noticias", "/actualidad", "/buenas-noticias", "/estilo-de-vida", "/podcasts"]
-    .some((p) => pathname.startsWith(p))
+  // Reglas de aparición del submenú (incluye /noticias)
+  const inSecciones = /^\/(noticias|actualidad|buenas-noticias|estilo-de-vida|podcasts)(\/|$)/.test(pathname)
+  const inNosotros  = /^\/(sobre-nosotros|red|ledelab|javier)(\/|$)/.test(pathname)
 
-  const isNosotrosActive = ["/sobre-nosotros", "/nosotros", "/red", "/ledelab", "/javier"]
-    .some((p) => pathname.startsWith(p))
-
-  const baseItem = "px-3 py-2 rounded-md text-sm font-medium transition-colors"
-  const activeItem = "text-blue-800 bg-blue-50 dark:text-blue-300 dark:bg-gray-800"
-  const idleItem =
-    "text-gray-700 hover:text-blue-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-blue-300 dark:hover:bg-gray-700"
+  // Estilo de item nav para fondo SIEMPRE blanco
+  const navItem =
+    "px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
 
   return (
-    <header
-      className={clsx(
-        "sticky top-0 z-50",
-        "bg-white/80 dark:bg-gray-900/80 backdrop-blur supports-[backdrop-filter]:backdrop-blur",
-        "border-b border-gray-200 dark:border-gray-800 shadow-sm"
-      )}
-    >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        {/* Marca: logo + sufijo dinámico */}
-        <Link href="/" className="shrink-0 flex items-center gap-2" aria-label="Ir al inicio">
-          <LogoWithSuffix size="md" />
-          {/* Separador fino vertical (oculto en xs para ahorrar espacio) */}
-          <span aria-hidden className="hidden sm:inline h-[22px] w-px bg-slate-300 dark:bg-slate-700" />
-          {/* Sufijo dinámico alineado a la línea base del logo */}
-          <span className="hidden sm:inline text-sm text-gray-600 dark:text-gray-300 leading-none relative top-[2px]">
-            <AutoBrand />
-          </span>
-        </Link>
+    <>
+      {/* Masthead: SIEMPRE fondo blanco */}
+      <header className="sticky top-0 z-50 shadow-sm">
+        <div className="w-full bg-white">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+            {/* Marca: logo a color + sufijo contextual */}
+            <Link href="/" className="shrink-0 flex items-center gap-2" aria-label="Ir al inicio">
+              <LogoWithSuffix size="md" tone="onLight" />
+              <span aria-hidden className="hidden sm:inline h-[22px] w-px bg-slate-200" />
+              <span className="hidden sm:inline text-[13px] text-slate-600 leading-none relative top-[2px]">
+                <AutoBrand />
+              </span>
+            </Link>
 
-        {/* Navegación desktop */}
-        <nav className="hidden md:flex items-center gap-1">
-          <Link href="/" className={clsx(baseItem, isActive("/") ? activeItem : idleItem)}>
-            Inicio
-          </Link>
+            {/* Nav desktop + reloj */}
+            <div className="hidden md:flex items-center gap-3">
+              <nav className="flex items-center">
+                <Link className={navItem} href="/">Inicio</Link>
+                <Link className={navItem} href="/noticias" title="Ver secciones">Secciones</Link>
+                <Link className={navItem} href="/sobre-nosotros" title="Ver información institucional">Nosotros</Link>
+                <Link className={navItem} href="/contacto">Contacto</Link>
+              </nav>
 
-          {/* Secciones */}
-          <div className="relative group focus-within:visible">
-            <div className="flex items-center">
-              <Link
-                href="/actualidad"
-                className={clsx(baseItem, isSeccionesActive ? activeItem : idleItem, "pr-2")}
-              >
+              {/* separador sutil */}
+              <span aria-hidden className="h-5 w-px bg-slate-200 mx-1" />
+
+              {/* Reloj local */}
+              <ClockLocal className="text-slate-600" showSeconds={false} dateStyle="medium" />
+            </div>
+
+            {/* Botón móvil */}
+            <button
+              type="button"
+              aria-label="Abrir menú"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setMobileOpen((v) => !v)}
+              className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+            >
+              {!mobileOpen ? (
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              ) : (
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
+            </button>
+          </div>
+
+          {/* Menú móvil */}
+          <div id="mobile-menu" className={clsx("md:hidden border-t border-slate-200", mobileOpen ? "block" : "hidden")}>
+            <nav className="px-4 py-3 flex flex-col gap-1 bg-white">
+              <Link href="/" onClick={() => setMobileOpen(false)} className="px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100">
+                Inicio
+              </Link>
+              <Link href="/noticias" onClick={() => setMobileOpen(false)} className="px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100">
                 Secciones
               </Link>
-              <button
-                aria-label="Abrir Secciones"
-                className={clsx(
-                  "ml-0.5 rounded-md p-1",
-                  isSeccionesActive ? "text-blue-800 dark:text-blue-300" : "text-gray-500 dark:text-gray-300",
-                  "group-hover:text-blue-700 dark:group-hover:text-blue-300"
-                )}
-                tabIndex={-1}
-                type="button"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
-
-            <div
-              className={clsx(
-                "invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100",
-                "transition-opacity duration-150",
-                "absolute left-0 mt-2 min-w-[220px] rounded-lg border border-gray-200 dark:border-gray-800",
-                "bg-white dark:bg-gray-900 shadow-lg"
-              )}
-            >
-              <div className="py-2">
-                <Link href="/actualidad" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Actualidad</Link>
-                <Link href="/buenas-noticias" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Buenas Noticias!</Link>
-                <Link href="/estilo-de-vida" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Estilo de Vida</Link>
-                <Link href="/podcasts" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Podcasts</Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Nosotros */}
-          <div className="relative group focus-within:visible">
-            <div className="flex items-center">
-              <Link
-                href="/sobre-nosotros"
-                className={clsx(baseItem, isNosotrosActive ? activeItem : idleItem, "pr-2")}
-              >
+              <Link href="/sobre-nosotros" onClick={() => setMobileOpen(false)} className="px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100">
                 Nosotros
               </Link>
-              <button
-                aria-label="Abrir Nosotros"
-                className={clsx(
-                  "ml-0.5 rounded-md p-1",
-                  isNosotrosActive ? "text-blue-800 dark:text-blue-300" : "text-gray-500 dark:text-gray-300",
-                  "group-hover:text-blue-700 dark:group-hover:text-blue-300"
-                )}
-                tabIndex={-1}
-                type="button"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
+              <Link href="/contacto" onClick={() => setMobileOpen(false)} className="px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100">
+                Contacto
+              </Link>
 
-            <div
-              className={clsx(
-                "invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100",
-                "transition-opacity duration-150",
-                "absolute left-0 mt-2 min-w-[240px] rounded-lg border border-gray-200 dark:border-gray-800",
-                "bg-white dark:bg-gray-900 shadow-lg"
-              )}
-            >
-              <div className="py-2">
-                <Link href="/sobre-nosotros" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Sobre Noticias Neutrales</Link>
-                <Link href="/red" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Nuestra Red</Link>
-                <Link href="/ledelab" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">LedeLab</Link>
-                <Link href="/javier" className="block px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">jAvIer</Link>
+              {/* reloj en móvil */}
+              <div className="mt-2 pt-2 border-t border-slate-200">
+                <ClockLocal className="text-slate-600" showSeconds={false} dateStyle="medium" />
               </div>
-            </div>
+            </nav>
           </div>
+        </div>
 
-          <Link href="/contacto" className={clsx(baseItem, isActive("/contacto") ? activeItem : idleItem)}>
-            Contacto
-          </Link>
-        </nav>
-
-        {/* Botón móvil */}
-        <button
-          type="button"
-          aria-label="Abrir menú"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          {!open ? (
-            <svg className="h-6 w-6 text-gray-900 dark:text-gray-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          ) : (
-            <svg className="h-6 w-6 text-gray-900 dark:text-gray-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* Menú móvil */}
-      <div id="mobile-menu" className={clsx("md:hidden border-t dark:border-gray-700", open ? "block" : "hidden")}>
-        <nav className="px-4 py-3 flex flex-col gap-1 bg-white/90 dark:bg-gray-900/90">
-          <Link href="/" onClick={() => setOpen(false)} className={clsx(baseItem, isActive("/") ? activeItem : idleItem)}>
-            Inicio
-          </Link>
-
-          {/* Secciones (móvil) */}
-          <div className="flex flex-col">
-            <button
-              aria-label="Abrir Secciones"
-              aria-expanded={openSections}
-              onClick={() => setOpenSections((v) => !v)}
-              className={clsx(baseItem, isSeccionesActive ? activeItem : idleItem, "text-left")}
-            >
-              Secciones
-            </button>
-            {openSections && (
-              <div className="ml-3 mt-1 flex flex-col">
-                <Link href="/actualidad" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Actualidad</Link>
-                <Link href="/buenas-noticias" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Buenas Noticias!</Link>
-                <Link href="/estilo-de-vida" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Estilo de Vida</Link>
-                <Link href="/podcasts" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Podcasts</Link>
-              </div>
-            )}
-          </div>
-
-          {/* Nosotros (móvil) */}
-          <div className="flex flex-col">
-            <button
-              aria-label="Abrir Nosotros"
-              aria-expanded={openNosotros}
-              onClick={() => setOpenNosotros((v) => !v)}
-              className={clsx(baseItem, isNosotrosActive ? activeItem : idleItem, "text-left")}
-            >
-              Nosotros
-            </button>
-            {openNosotros && (
-              <div className="ml-3 mt-1 flex flex-col">
-                <Link href="/sobre-nosotros" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Sobre Noticias Neutrales</Link>
-                <Link href="/red" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">Nuestra Red</Link>
-                <Link href="/ledelab" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">LedeLab</Link>
-                <Link href="/javier" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-800">jAvIer</Link>
-              </div>
-            )}
-          </div>
-
-          <Link href="/contacto" onClick={() => setOpen(false)} className={clsx(baseItem, isActive("/contacto") ? activeItem : idleItem)}>
-            Contacto
-          </Link>
-        </nav>
-      </div>
-    </header>
+        {/* Submenús persistentes bajo el masthead */}
+        {inSecciones && <SubmenuBar items={SECCIONES} pathname={pathname} />}
+        {inNosotros && <SubmenuBar items={NOSOTROS} pathname={pathname} />}
+      </header>
+    </>
   )
 }
