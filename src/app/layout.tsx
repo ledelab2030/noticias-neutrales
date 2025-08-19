@@ -3,6 +3,7 @@ import "./globals.css"
 import Header from "@/components/Header"
 import type { Metadata, Viewport } from "next"
 import Analytics from "@/components/Analytics"
+import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react" // 👈 añadido
 
 export const viewport: Viewport = {

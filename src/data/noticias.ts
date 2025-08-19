@@ -47,6 +47,65 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
+{
+  id: 'opinion-barranquilla-obras-sin-memoria-2025-08-19',
+  fecha: '2025-08-19',
+  titulo: 'Barranquilla: obras urbanas cuestionadas por falta de memoria y sentido cultural',
+  pais: 'Colombia',
+  resumen: 'En una columna publicada en Las2Orillas se critica que las obras emblemáticas de Barranquilla, como la “Ventana al Mundo” y la “Aleta del Tiburón”, no se integran con la memoria histórica ni con la identidad cultural de la ciudad.',
+  contenido: [
+    'La columna publicada en *Las2Orillas* reflexiona sobre el desarrollo urbano de Barranquilla y el impacto de las obras que han transformado la ciudad en los últimos años.',
+    'El autor sostiene que, aunque se han llenado calles y espacios con monumentos y estructuras llamativas, muchas de ellas no guardan relación con la memoria histórica ni con la identidad cultural de la ciudad.',
+    'Como ejemplo se menciona la “Ventana al Mundo”, inaugurada en 2018 como un gran ícono visual en la entrada de la ciudad. Pese a su imponencia y colorido, la obra ha sido cuestionada por carecer de referencias claras a la tradición barranquillera y a su patrimonio cultural.',
+    'Otro caso citado es la “Aleta del Tiburón”, escultura monumental vinculada al equipo de fútbol Junior de Barranquilla. Aunque ha generado identidad en torno a la afición deportiva, la crítica señala que su ubicación y magnitud responden más a una apuesta mediática que a un plan de urbanismo integrado con la historia local.',
+    'La columna también advierte que la acumulación de obras de este tipo —estructuras de gran escala, pensadas como hitos aislados— produce una sensación de fragmentación urbana. Según el autor, en lugar de fortalecer la identidad de Barranquilla, refuerzan la idea de un “decorado” sin raíces.',
+    'Finalmente, se invita a reflexionar sobre la necesidad de que las intervenciones públicas y privadas en el espacio urbano no se limiten a lo estético o lo funcional, sino que integren memoria, historia y cultura como ejes centrales de planificación y diseño.',
+    'Fuente original: (https://www.las2orillas.co/__trashed-328/)'
+  ],
+  etiquetas: ['colombia','editorial','medios','política'],
+  fuente: { nombre: 'Las2Orillas', url: 'https://www.las2orillas.co/__trashed-328/' },
+  consecutivo_unico: '20250819-01'
+},
+
+  {
+  id: 'paro-arrocero-medidas-gobierno-2025-08-19',
+  fecha: '2025-08-19',
+  titulo: 'Gobierno anuncia medidas tras el paro arrocero en Colombia',
+  pais: 'Colombia',
+  resumen: 'La ministra de Agricultura, Martha Carvajalino, explicó las acciones adoptadas por el Gobierno para enfrentar la crisis derivada del paro arrocero y garantizar la estabilidad del mercado.',
+  contenido: [
+    'El Ministerio de Agricultura anunció un paquete de medidas tras el paro arrocero realizado por productores en distintas regiones de Colombia. Según la ministra Martha Carvajalino, la protesta reflejó las dificultades que enfrenta el sector por los altos costos de producción y la presión de las importaciones.',
+    'Entre las acciones implementadas se encuentra la compra pública de excedentes, el uso de la Bolsa Mercantil para estabilizar precios y apoyos directos para reducir los costos de insumos agrícolas.',
+    'La ministra destacó que el objetivo es equilibrar los intereses de productores y consumidores. Con la intervención en el mercado, el Gobierno busca evitar incrementos abruptos en el precio final del arroz en el país.',
+    'Carvajalino también subrayó que se regularán las importaciones para proteger la producción nacional, garantizando que el arroz colombiano mantenga competitividad frente al producto extranjero.',
+    'Fuentes citadas:',
+    '1) El Espectador. *Medidas tras paro arrocero e intervención en el mercado*. https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/'
+  ],
+  etiquetas: ['colombia','economía','seguridad alimentaria','consumo'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/' },
+  url_fuente: 'https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/',
+  consecutivo_unico: '20250819-01'
+},
+
+  {
+  id: 'empleados-olimpica-tercerizacion-mintrabajo-2025-08-19',
+  fecha: '2025-08-19',
+  titulo: 'Ministerio de Trabajo afirma que 90% de empleados de Olímpica están tercerizados',
+  pais: 'Colombia',
+  resumen: 'El Ministerio de Trabajo informó que cerca del 90% de los empleados vinculados a la cadena de supermercados Olímpica trabajan mediante tercerización, situación que será objeto de investigación y medidas de inspección laboral.',
+  contenido: [
+    'El Ministerio de Trabajo de Colombia aseguró que alrededor del 90% de los empleados de la cadena de supermercados Olímpica se encuentran vinculados bajo esquemas de tercerización. La entidad advirtió que esta práctica podría desconocer derechos laborales y afectar las condiciones de los trabajadores.',
+    'Según el pronunciamiento oficial, se desplegarán equipos de inspección para verificar la legalidad de las contrataciones y determinar si existe incumplimiento de la normatividad vigente. El Ministerio recordó que la tercerización laboral no puede usarse para evadir responsabilidades legales de los empleadores.',
+    'Olímpica es una de las principales cadenas de supermercados del país, con operaciones en varias ciudades y presencia significativa en la Costa Caribe. El Gobierno indicó que, de encontrarse irregularidades, se aplicarán sanciones y se exigirá la formalización de los empleados afectados.',
+    'Fuentes citadas:',
+    'Ministerio de Trabajo de Colombia: https://www.mintrabajo.gov.co/',
+    'La República: https://www.larepublica.co/empresas/ministerio-de-trabajo-aseguro-que-90-de-empleados-de-olimpica-son-tercerizados-4205112'
+  ],
+  etiquetas: ['colombia','economía','trabajo','empleo'],
+  fuente: { nombre: 'La República', url: 'https://www.larepublica.co/empresas/ministerio-de-trabajo-aseguro-que-90-de-empleados-de-olimpica-son-tercerizados-4205112' },
+  consecutivo_unico: '20250819-01'
+},
+
   {
   id: 'clima-puntos-inflexion-economist-2025-08-13',
   fecha: '2025-08-13',
