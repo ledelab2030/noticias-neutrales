@@ -29,30 +29,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const base = "https://www.ledelab.co"
   const url = `${base}/noticias/${id}`
 
-  // Usa `n.imagen` si existe; si es ruta relativa, conviértela en absoluta.
-  // Fallback: /og-default.jpg (ya lo subiste en 1200x628, sirve perfecto).
-  const ogImageRelOrAbs = n.imagen ?? "/og-default.jpg"
+  // Usa n.imagen si existe; si es relativa, vuélvela absoluta. Fallback a /og-default.jpg
+  const ogImageRelOrAbs = (n as any).imagen ?? "/og-default.jpg"
   const ogImage = ogImageRelOrAbs.startsWith("http")
     ? ogImageRelOrAbs
     : `${base}${ogImageRelOrAbs}`
 
   return {
     title: n.titulo,
-    description: n.resumen || (n.contenido ? n.contenido[0] : ""),
+    description: n.resumen || (Array.isArray((n as any).contenido) ? (n as any).contenido[0] : ""),
     openGraph: {
       title: n.titulo,
       description: n.resumen || "",
       url,
       siteName: "LedeLab Noticias",
       type: "article",
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630, // Los scrapers aceptan 1200x628–630; estamos bien.
-          alt: n.titulo,
-        },
-      ],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: n.titulo }],
     },
     twitter: {
       card: "summary_large_image",
@@ -67,6 +59,10 @@ export default async function Noticia({ params }: Props) {
   const { id } = await params
   const n = noticias.find((x) => x.id === id)
   if (!n) notFound()
+
+  // Campos opcionales (codconver)
+  const dialogo: { autor: string; texto: string }[] | undefined = (n as any).dialogo
+  const participantes: string[] | undefined = (n as any).participantes
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
@@ -112,14 +108,32 @@ export default async function Noticia({ params }: Props) {
         )}
       </div>
 
-      {n.contenido?.length ? (
+      {/* Participantes (codconver) */}
+      {!!participantes?.length && (
+        <div className="mt-4 text-sm text-gray-600 dark:text-gray-300">
+          <span className="font-medium">Participantes: </span>
+          <span>{participantes.join(" · ")}</span>
+        </div>
+      )}
+
+      {/* Contenido / Diálogo (compacto) / Resumen */}
+      {Array.isArray((n as any).contenido) && (n as any).contenido.length ? (
         <div className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100">
-          {n.contenido.map((p, i) => (
+          {(n as any).contenido.map((p: string, i: number) => (
             <p
               key={i}
               className="whitespace-pre-line"
               dangerouslySetInnerHTML={{ __html: resaltarLinks(p) }}
             />
+          ))}
+        </div>
+      ) : Array.isArray(dialogo) && dialogo.length ? (
+        <div className="mt-6 space-y-4 text-[17px] leading-7 text-zinc-900 dark:text-zinc-100">
+          {dialogo.map((d, i) => (
+            <p key={i} className="whitespace-pre-line">
+              <span className="font-semibold mr-2">{d.autor}:</span>
+              {d.texto}
+            </p>
           ))}
         </div>
       ) : n.resumen ? (
@@ -128,8 +142,13 @@ export default async function Noticia({ params }: Props) {
         </p>
       ) : null}
 
+      {/* Separador visual antes de etiquetas */}
+      {(n.etiquetas && n.etiquetas.length > 0) && (
+        <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
+      )}
+
       {!!n.etiquetas?.length && (
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2">
           {n.etiquetas.map((tag) => (
             <Link
               key={tag}
@@ -147,6 +166,7 @@ export default async function Noticia({ params }: Props) {
 
 function resaltarLinks(texto: string) {
   return texto.replace(
+    // Detecta URLs que no estén ya dentro de href=""
     /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
     '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
   )

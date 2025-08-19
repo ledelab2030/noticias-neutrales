@@ -16,6 +16,7 @@ export const TAGS = [
   'Bogotá',
   'Bolivia',
   'buenas noticias',
+  'cambio climático',
   'china',
   'colombia',
   'consumo',

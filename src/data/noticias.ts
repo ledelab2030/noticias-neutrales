@@ -47,6 +47,51 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
+  {
+  id: 'clima-puntos-inflexion-economist-2025-08-13',
+  fecha: '2025-08-13',
+  titulo: 'El clima se acerca a puntos de inflexión irreversibles, advierte The Economist',
+  pais: 'Internacional',
+  resumen: 'Un informe de The Economist alerta que el sistema climático global está próximo a superar límites críticos que podrían generar cambios irreversibles, como el colapso de capas de hielo, la selva amazónica y la circulación oceánica.',
+  contenido: [
+    'El artículo publicado el 13 de agosto de 2025 por The Economist advierte que la Tierra se acerca a puntos de inflexión climáticos irreversibles. Entre los más críticos se encuentran el colapso de las capas de hielo en Groenlandia y la Antártida Occidental, la interrupción de la circulación oceánica Atlántica (AMOC) y el colapso de la selva amazónica.',
+    'Según los científicos citados, existen al menos 25 componentes clave del sistema climático global en riesgo de sufrir cambios abruptos e irreversibles. Algunos podrían activarse incluso con aumentos de temperatura relativamente bajos, en torno a 0,8 °C por encima de los niveles preindustriales.',
+    'El informe subraya que, aunque algunos procesos parecen lentos, como el deshielo de Groenlandia, pueden desencadenar cambios súbitos e impredecibles. Esto implica riesgos en cascada para la estabilidad climática, los ecosistemas y las sociedades humanas.',
+    'Fuentes citadas:',
+    '1) The Economist. *Earth’s climate is approaching irreversible tipping points*. https://www.economist.com/interactive/science-and-technology/2025/08/13/earths-climate-is-approaching-irreversible-tipping-points',
+    '2) Eco-Business. *Tipping points: Window to avoid irreversible climate impacts is rapidly closing*. https://www.eco-business.com/news/tipping-points-window-to-avoid-irreversible-climate-impacts-is-rapidly-closing/'
+  ],
+  etiquetas: ['salud','medio ambiente','cambio climático','internacional'],
+  fuente: { nombre: 'The Economist', url: 'https://www.economist.com/interactive/science-and-technology/2025/08/13/earths-climate-is-approaching-irreversible-tipping-points' },
+  url_fuente: 'https://www.economist.com/interactive/science-and-technology/2025/08/13/earths-climate-is-approaching-irreversible-tipping-points',
+  consecutivo_unico: '20250813-01'
+},
+
+  {
+  id: 'paro-arrocero-intervencion-mercado-entrevista-martha-carvajalino-2025-08-19',
+  fecha: '2025-08-19',
+  titulo: 'Entrevista con la ministra Martha Carvajalino sobre medidas tras el paro arrocero',
+  pais: 'Colombia',
+  resumen: 'La ministra de Agricultura, Martha Carvajalino, explicó en entrevista con El Espectador las medidas adoptadas por el Gobierno tras el paro arrocero y la intervención en el mercado, incluyendo apoyo a los productores, control de precios y mecanismos de comercialización.',
+  participantes: [
+    'El Espectador (EE)',
+    'Martha Carvajalino (MC), ministra de Agricultura de Colombia'
+  ],
+  dialogo: [
+    { autor: 'EE', texto: '¿Cuáles fueron las principales causas del reciente paro arrocero?' },
+    { autor: 'MC', texto: 'Los productores manifestaron inconformidad por los bajos precios del grano, los altos costos de producción y la entrada de arroz importado que afecta la rentabilidad local.' },
+    { autor: 'EE', texto: '¿Qué medidas ha tomado el Gobierno tras el paro?' },
+    { autor: 'MC', texto: 'Implementamos un esquema de compras públicas, la estabilización de precios a través de la Bolsa Mercantil y apoyos directos para aliviar los costos de insumos.' },
+    { autor: 'EE', texto: '¿Cómo se garantiza que los consumidores no se vean afectados por estas medidas?' },
+    { autor: 'MC', texto: 'El objetivo es equilibrar los intereses de productores y consumidores. Con la intervención en el mercado buscamos evitar incrementos abruptos en el precio final del arroz.' },
+    { autor: 'EE', texto: '¿Qué papel juegan los importadores en este contexto?' },
+    { autor: 'MC', texto: 'Estamos regulando las importaciones para que no desplacen la producción nacional. La prioridad es proteger a los agricultores colombianos manteniendo la competitividad.' }
+  ],
+  etiquetas: ['colombia','economía','seguridad alimentaria','consumo'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/' },
+  consecutivo_unico: '20250819-01'
+},
+
 {
   id: 'sexualidad-y-afecto-en-pareja-2025-08-18',
   fecha: '2025-08-18',
