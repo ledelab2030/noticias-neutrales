@@ -67,31 +67,6 @@ const noticiasRaw: NoticiaRaw[] = [
   consecutivo_unico: '20250813-01'
 },
 
-  {
-  id: 'paro-arrocero-intervencion-mercado-entrevista-martha-carvajalino-2025-08-19',
-  fecha: '2025-08-19',
-  titulo: 'Entrevista con la ministra Martha Carvajalino sobre medidas tras el paro arrocero',
-  pais: 'Colombia',
-  resumen: 'La ministra de Agricultura, Martha Carvajalino, explicó en entrevista con El Espectador las medidas adoptadas por el Gobierno tras el paro arrocero y la intervención en el mercado, incluyendo apoyo a los productores, control de precios y mecanismos de comercialización.',
-  participantes: [
-    'El Espectador (EE)',
-    'Martha Carvajalino (MC), ministra de Agricultura de Colombia'
-  ],
-  dialogo: [
-    { autor: 'EE', texto: '¿Cuáles fueron las principales causas del reciente paro arrocero?' },
-    { autor: 'MC', texto: 'Los productores manifestaron inconformidad por los bajos precios del grano, los altos costos de producción y la entrada de arroz importado que afecta la rentabilidad local.' },
-    { autor: 'EE', texto: '¿Qué medidas ha tomado el Gobierno tras el paro?' },
-    { autor: 'MC', texto: 'Implementamos un esquema de compras públicas, la estabilización de precios a través de la Bolsa Mercantil y apoyos directos para aliviar los costos de insumos.' },
-    { autor: 'EE', texto: '¿Cómo se garantiza que los consumidores no se vean afectados por estas medidas?' },
-    { autor: 'MC', texto: 'El objetivo es equilibrar los intereses de productores y consumidores. Con la intervención en el mercado buscamos evitar incrementos abruptos en el precio final del arroz.' },
-    { autor: 'EE', texto: '¿Qué papel juegan los importadores en este contexto?' },
-    { autor: 'MC', texto: 'Estamos regulando las importaciones para que no desplacen la producción nacional. La prioridad es proteger a los agricultores colombianos manteniendo la competitividad.' }
-  ],
-  etiquetas: ['colombia','economía','seguridad alimentaria','consumo'],
-  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/' },
-  consecutivo_unico: '20250819-01'
-},
-
 {
   id: 'sexualidad-y-afecto-en-pareja-2025-08-18',
   fecha: '2025-08-18',

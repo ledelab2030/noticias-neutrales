@@ -9,11 +9,31 @@ interface Props {
   params: Promise<{ id: string }>
 }
 
+// —— Tipos locales (alineados con src/data/noticias.ts) ——
+type DialogoItem = { autor: string; texto: string }
 type FuenteObj = { nombre?: string; url?: string }
+type Fuente = string | FuenteObj | undefined
+
+type Noticia = {
+  id: string
+  fecha: string
+  titulo: string
+  pais?: string
+  resumen?: string
+  contenido?: string[]
+  participantes?: string[]
+  dialogo?: DialogoItem[]
+  etiquetas?: string[]
+  fuente?: Fuente
+  url_fuente?: string
+  consecutivo_unico?: string
+  imagen?: string
+}
+
 function isFuenteObj(val: unknown): val is FuenteObj {
   return typeof val === "object" && val !== null && "nombre" in (val as Record<string, unknown>)
 }
-function fuenteNombre(f: unknown) {
+function fuenteNombre(f: Fuente) {
   if (!f) return ""
   if (typeof f === "string") return f
   if (isFuenteObj(f) && typeof f.nombre === "string") return f.nombre
@@ -23,21 +43,21 @@ function fuenteNombre(f: unknown) {
 // ✅ Metadatos dinámicos para previews (Open Graph / Twitter)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
-  const n = noticias.find((x) => x.id === id)
+  const n = noticias.find((x) => x.id === id) as Noticia | undefined
   if (!n) return {}
 
   const base = "https://www.ledelab.co"
   const url = `${base}/noticias/${id}`
 
   // Usa n.imagen si existe; si es relativa, vuélvela absoluta. Fallback a /og-default.jpg
-  const ogImageRelOrAbs = (n as any).imagen ?? "/og-default.jpg"
+  const ogImageRelOrAbs = n.imagen ?? "/og-default.jpg"
   const ogImage = ogImageRelOrAbs.startsWith("http")
     ? ogImageRelOrAbs
     : `${base}${ogImageRelOrAbs}`
 
   return {
     title: n.titulo,
-    description: n.resumen || (Array.isArray((n as any).contenido) ? (n as any).contenido[0] : ""),
+    description: n.resumen || (Array.isArray(n.contenido) ? n.contenido[0] : ""),
     openGraph: {
       title: n.titulo,
       description: n.resumen || "",
@@ -57,12 +77,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Noticia({ params }: Props) {
   const { id } = await params
-  const n = noticias.find((x) => x.id === id)
+  const n = noticias.find((x) => x.id === id) as Noticia | undefined
   if (!n) notFound()
 
-  // Campos opcionales (codconver)
-  const dialogo: { autor: string; texto: string }[] | undefined = (n as any).dialogo
-  const participantes: string[] | undefined = (n as any).participantes
+  const dialogo: DialogoItem[] | undefined = n.dialogo
+  const participantes: string[] | undefined = n.participantes
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
@@ -117,9 +136,9 @@ export default async function Noticia({ params }: Props) {
       )}
 
       {/* Contenido / Diálogo (compacto) / Resumen */}
-      {Array.isArray((n as any).contenido) && (n as any).contenido.length ? (
+      {Array.isArray(n.contenido) && n.contenido.length > 0 ? (
         <div className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100">
-          {(n as any).contenido.map((p: string, i: number) => (
+          {n.contenido.map((p, i) => (
             <p
               key={i}
               className="whitespace-pre-line"
@@ -127,7 +146,7 @@ export default async function Noticia({ params }: Props) {
             />
           ))}
         </div>
-      ) : Array.isArray(dialogo) && dialogo.length ? (
+      ) : Array.isArray(dialogo) && dialogo.length > 0 ? (
         <div className="mt-6 space-y-4 text-[17px] leading-7 text-zinc-900 dark:text-zinc-100">
           {dialogo.map((d, i) => (
             <p key={i} className="whitespace-pre-line">
@@ -143,7 +162,7 @@ export default async function Noticia({ params }: Props) {
       ) : null}
 
       {/* Separador visual antes de etiquetas */}
-      {(n.etiquetas && n.etiquetas.length > 0) && (
+      {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && (
         <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
       )}
 
