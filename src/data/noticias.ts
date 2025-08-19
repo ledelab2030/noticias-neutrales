@@ -47,25 +47,46 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
-  {
-  id: 'avances-gobierno-petro-contraste-titular-2025-08-18',
+{
+  id: 'sexualidad-y-afecto-en-pareja-2025-08-18',
   fecha: '2025-08-18',
-  titulo: 'Avances del gobierno contrastan con titulares negativos',
-  pais: 'Colombia',
-  resumen: 'Mientras algunos titulares califican la semana como “fatal” para el gobierno, se registraron avances significativos en reforma agraria, salud preventiva y defensa institucional en tratados internacionales.',
+  titulo: 'Más allá del sexo: la afectividad como dimensión esencial de la sexualidad',
+  pais: 'Internacional',
+  resumen: 'El artículo explica cómo la sexualidad incluye múltiples manifestaciones afectivas más allá del sexo, como abrazar, acurrucarse, mirar o susurrar, con soporte científico sobre sus beneficios en el bienestar y las relaciones de pareja.',
   contenido: [
-    'Durante la semana del 12 al 18 de agosto de 2025, algunos medios calificaron como “fatal” el balance del gobierno de Gustavo Petro. Sin embargo, en paralelo se produjeron avances de fondo en distintos frentes de política pública.',
-    'En Tolima, el gobierno entregó 1.165 hectáreas de tierra a 84 familias campesinas de los municipios de Piedras, Suárez y Rovira. Las asociaciones beneficiadas, entre ellas ANUC y FENSUAGRO, destinarán los predios a cultivos de arroz, plátano, café, aguacate y caña panelera, fortaleciendo la reforma agraria y el desarrollo rural.',
-    'En materia de salud pública, el presidente destacó una caída histórica en la mortalidad infantil y materna. Según la Presidencia de la República, esta reducción se atribuye a la expansión de programas de salud preventiva, acceso a agua potable, nutrición y atención médica básica. Petro calificó este resultado como un “éxito total del sistema de salud preventivo”.',
-    'En el ámbito internacional, el Ministerio de Comercio firmó una nota interpretativa del Tratado de Libre Comercio con Estados Unidos, precisando que el Estado colombiano puede regular en temas de salud, medio ambiente e interés general sin que ello implique vulneración de sus compromisos internacionales. Además, se estableció que el CIADI no puede operar como una instancia de apelación automática, reforzando la soberanía del país.',
-    'Estos hechos evidencian que, a pesar de las dificultades y los retos políticos, la semana estuvo marcada también por resultados positivos en políticas sociales, económicas e institucionales.'
+    'La sexualidad abarca una amplia gama de expresiones humanas, y no se agota en la actividad sexual genital. La intimidad física no sexual, como abrazarse, acurrucarse, tocar, besar suavemente, acariciar, sostener la mirada o susurrar, también forma parte vital de esta dimensión.',
+    'Investigaciones en psicología señalan que el contacto físico no sexual –como masajes, caricias, abrazos, tomarse de las manos– está relacionado con mayores niveles de satisfacción en la relación y con mejor resolución de conflictos, según estudios del Instituto Kinsey y otras fuentes ([fuente](https://blogs.iu.edu/kinseyinstitute/2020/05/28/the-power-of-touch-physical-affection-is-important-in-relationships-but-some-people-need-more-than-others)).',
+    'La proximidad sin contacto físico, como sostener una mirada, también puede generar sensaciones de intimidad emocional comparables al contacto directo ([fuente](https://en.wikipedia.org/wiki/Physical_intimacy)).',
+    'El afecto físico no sexual favorece la liberación de oxitocina—la llamada hormona del vínculo—y reduce cortisol, generando una sensación de cercanía emocional, seguridad y relajación ([fuente](https://www.psychologytoday.com/us/blog/mental-health-nerd/202408/how-non-sexual-physical-affection-enhances-sexual-connection)).',
+    'La afectividad no sexual también está asociada con beneficios fisiológicos: abrazos, caricias o candorosas muestras de afecto contribuyen a la reducción del estrés y mejoran el bienestar general, según revisiones recientes basadas en múltiples estudios ([fuente](https://www.dailytelegraph.com.au/lifestyle/physical-touch-can-reduce-pain-and-depression-research-confirms)).',
+    'El "toque consolador", como un abrazo o tomar de la mano a alguien en angustia, provoca una liberación de oxitocina, dopamina y serotonina, al tiempo que disminuye el cortisol; estos efectos tienden a ser mayores si la persona que consuela es emocionalmente cercana ([fuente](https://en.wikipedia.org/wiki/Consoling_touch)).',
+    'La Teoría del Intercambio de Afecto (AET) explica que comunicar afecto es una conducta biológicamente adaptativa, que fortalece los vínculos, favorece la salud mental y contribuye al bienestar relacional ([fuente](https://en.wikipedia.org/wiki/Affection_exchange_theory)).',
+    'Si dudas si estás siendo afectivo o recibiendo suficiente afecto, ten en cuenta que los gestos cotidianos –un abrazo espontáneo, una mirada cercana, un susurro al oído o tomarse de la mano– son expresiones esenciales de intimidad que fortalecen la relación, disminuyen el estrés y promueven el bienestar emocional. Reconocer un posible vacío afectivo es un primer paso valioso, y abrir un diálogo sobre tus necesidades puede marcar la diferencia.',
+    'La sexualidad, entendida de manera plena, va más allá del sexo. El deseo de acurrucarse, abrazar, mirar, tocar o susurrar son expresiones profundas de afecto fundamentales para las relaciones. La evidencia científica respalda su impacto positivo: fomentan la intimidad, disminuyen el estrés, aumentan el bienestar y promueven comportamientos saludables. Si sientes que falta afecto en tu relación, recuerda que son esos gestos sencillos los que pueden fortalecer el vínculo. Atrévete a expresarte, comunícate con tu pareja y valora las formas no verbales de conexión emocional.',
+    '🔗 Lee también: [Expresiones afectivas más allá del contacto físico: palabras, tiempo compartido y gestos cotidianos](#)'
   ],
-  etiquetas: ['colombia','gustavo petro','política','economía','salud','reforma agraria'],
+  etiquetas: ['salud','relaciones','sexualidad','afecto'],
   fuente: 'LedeLab',
-  url_fuente: 'https://elpais.com/america-colombia/2025-08-18/una-semana-fatal-aturde-al-gobierno-de-gustavo-petro.html',
   consecutivo_unico: '20250818-01'
 },
 
+{
+  id: 'trump-ucrania-crimea-otan-2025-08-18',
+  fecha: '2025-08-18',
+  titulo: 'Trump descarta recuperación de Crimea y entrada de Ucrania en la OTAN',
+  pais: 'Estados Unidos',
+  resumen: 'El expresidente Donald Trump afirmó que Ucrania no recuperará Crimea ni ingresará en la OTAN, declaraciones que reafirman su postura sobre el conflicto con Rusia.',
+  contenido: [
+    'El expresidente de Estados Unidos, Donald Trump, declaró que Ucrania no podrá recuperar la península de Crimea ni acceder a la OTAN. Las declaraciones fueron realizadas el 18 de agosto de 2025 en el marco de su campaña política y difundidas por medios internacionales.',
+    'Trump señaló que la anexión de Crimea por parte de Rusia en 2014 es un hecho consolidado, lo que hace inviable cualquier intento ucraniano de revertirla. También sostuvo que la entrada de Ucrania en la OTAN no ocurrirá, argumentando que ello implicaría riesgos mayores para la seguridad internacional.',
+    'Las afirmaciones del exmandatario se producen en un contexto en el que el conflicto en Ucrania sigue marcando la agenda internacional y donde las relaciones entre Washington, Kiev y Moscú son observadas con atención por aliados europeos y organismos multilaterales.',
+    'Estas declaraciones contrastan con la posición oficial de la administración estadounidense actual, que ha reiterado su respaldo a la integridad territorial de Ucrania y su derecho a decidir sobre sus alianzas internacionales.',
+    'Fuente citada: https://elpais.com/internacional/2025-08-18/trump-ni-recuperar-crimea-ni-entrada-en-la-otan-para-ucrania.html'
+  ],
+  etiquetas: ['estados unidos','donald trump','política','resultados'],
+  fuente: { nombre: 'El País', url: 'https://elpais.com/internacional/2025-08-18/trump-ni-recuperar-crimea-ni-entrada-en-la-otan-para-ucrania.html' },
+  consecutivo_unico: '20250818-01'
+},
   {
   id: 'bolivia-elecciones-fragmentacion-izquierda-2025-08-17',
   fecha: '2025-08-17',
@@ -113,7 +134,6 @@ const noticiasRaw: NoticiaRaw[] = [
   // NUEVO:
   imagen: '/noticias/og/diana-marcela-morales.jpg' // súbela a /public/noticias/og/
 },
-
 {
   id: 'opinion-rodrigo-uprimny-terna-corte-constitucional-2025-08-17',
   fecha: '2025-08-17',
