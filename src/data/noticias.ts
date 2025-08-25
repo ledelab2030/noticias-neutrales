@@ -48,6 +48,40 @@ function sanitizeTags(tags: string[] = []): string[] {
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
 {
+  id: 'judicial-penaliza-tortura-claudia-duque-2025-08-25',
+  fecha: '2025-08-25',
+  titulo: 'Condenan a exdirector de inteligencia del DAS por tortura psicológica a periodista',
+  pais: 'Colombia',
+  resumen: 'El juzgado Décimo Penal Especializado de Bogotá condenó a Giancarlo Auque de Silvestri por tortura agravada contra la periodista Claudia Julieta Duque, investigadora del crimen de Jaime Garzón.',
+  contenido: [
+    'El 25 de agosto de 2025, el juzgado Décimo Penal Especializado de Bogotá declaró culpable a Giancarlo Auque de Silvestri, exdirector de inteligencia del extinto Departamento Administrativo de Seguridad (DAS), por el delito de tortura agravada en contra de la periodista investigadora Claudia Julieta Duque ([El Espectador](https://www.elespectador.com/judicial/condenan-a-exfuncionario-del-das-por-tortura-a-periodista-que-investigo-caso-de-jaime-garzon/)).',
+    'La sentencia impone una pena de 12 años y medio de prisión, junto con una multa de 1.200 salarios mínimos legales. Además, las autoridades solicitaron una circular roja de Interpol para su localización, dado que no se tiene información sobre su paradero desde 2016, cuando fue dejado en libertad.',
+    'Según el fallo, Auque de Silvestri participó en un plan coordinado para ejercer tortura psicológica contra Duque durante sus investigaciones sobre el asesinato de Jaime Garzón, mediante intimidación a su familia, en particular a su hija.',
+    'La jueza Martha Cecilia Artunduaga Guaraca advirtió que estos actos también constituyen violencia de género, ejercida por ser mujer y por su labor periodística e investigativa, lo cual fue empleado como estrategia para silenciarla.'
+  ],
+  etiquetas: ['Colombia','justicia','periodismo','derechos-humanos'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/judicial/condenan-a-exfuncionario-del-das-por-tortura-a-periodista-que-investigo-caso-de-jaime-garzon/' },
+  consecutivo_unico: '20250825-01'
+}
+,
+  {
+  id: 'estilo-vida-riqueza-tranquilidad-2025-08-25',
+  fecha: '2025-08-25',
+  titulo: 'La verdadera riqueza: la tranquilidad de ceder el paso',
+  pais: 'Colombia',
+  resumen: 'En un mundo acelerado, ceder el paso a peatones o vehículos revela más que cortesía: es un signo de tranquilidad y de verdadera abundancia emocional.',
+  contenido: [
+    'En las ciudades modernas, el tráfico se convierte en un espejo de la forma en que vivimos. Mientras algunos corren contra el reloj, otros encuentran en pequeños gestos una oportunidad para demostrar respeto y serenidad. Ceder el paso a un peatón o a otro vehículo es uno de esos actos sencillos que revelan más de lo que parece.',
+    'No es raro ver a personas con gran éxito económico, conduciendo con prisa, sin detenerse siquiera unos segundos para permitir el paso. Paradójicamente, aunque poseen abundancia material, parecen carecer de lo más valioso: la calma. Tener dinero no siempre significa tener tiempo, y menos aún la disposición para regalar medio minuto en beneficio de otro.',
+    'Ceder el paso no retrasa la vida, al contrario, la dignifica. Ese gesto muestra riqueza emocional, equilibrio y un entendimiento profundo de que la vida no se mide por segundos ganados, sino por la calidad de nuestras interacciones diarias. La tranquilidad, en ese sentido, es un signo de prosperidad que no se puede comprar.',
+    'Al final, la verdadera abundancia no se refleja en el tamaño del vehículo ni en la velocidad con la que se llega a destino, sino en la capacidad de vivir con paciencia, respeto y humanidad. Porque detenerse unos instantes puede ser la diferencia entre el caos y la armonía, entre la prisa y la paz.'
+  ],
+  etiquetas: ['estilo de vida','tranquilidad','convivencia'],
+  fuente: { nombre: 'Redacción Noticias Neutrales' },
+  consecutivo_unico: '20250825-01'
+},
+
+{
   id: 'opinion-barranquilla-obras-sin-memoria-2025-08-19',
   fecha: '2025-08-19',
   titulo: 'Barranquilla: obras urbanas cuestionadas por falta de memoria y sentido cultural',

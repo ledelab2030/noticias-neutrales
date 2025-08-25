@@ -64,6 +64,8 @@ export const TAGS = [
   'transición energética',
   'tecnología',
   'tenis',
+  'tranquilidad',
+  'convivencia',
   'unión patriótica',
 ] as const
 
