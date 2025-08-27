@@ -17,11 +17,13 @@ export const TAGS = [
   'Bolivia',
   'buenas noticias',
   'cambio climático',
+  'centro democratico',
   'china',
   'colombia',
   'consumo',
   'conversaciones pendientes',
   'corte suprema',
+  'convivencia',
   'corte constitucional',
   'derecha',
   'centro',
@@ -41,6 +43,7 @@ export const TAGS = [
   'guardia nacional',
   'gustavo petro',
   'investigación',
+  'Iván Cepeda',
   'izquierda',
   'medios',
   'medio ambiente',
@@ -65,8 +68,8 @@ export const TAGS = [
   'tecnología',
   'tenis',
   'tranquilidad',
-  'convivencia',
   'unión patriótica',
+  'uribe',
 ] as const
 
 export type Tag = typeof TAGS[number]

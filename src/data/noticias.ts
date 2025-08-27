@@ -47,6 +47,24 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
+  {
+  id: 'ivan-cepeda-campana-presidencial-2025-08-27',
+  fecha: '2025-08-27',
+  titulo: 'El Congresista Iván Cepeda Castro se perfila como figura clave en la campaña presidencial en Colombia',
+  pais: 'Colombia',
+  resumen: '“Yo creo que no se pueden atribuir los problemas de la violencia a la búsqueda de la paz, no comparto esa visión. Esa visión nos quiere retrotraer a épocas donde los gobiernos no tenían política de paz”, explicó Cepeda.',
+  contenido: [
+    'El senador Iván Cepeda, miembro del Polo Democrático Alternativo y figura destacada de la izquierda colombiana, se proyecta como un actor relevante en el inicio de la campaña presidencial de 2026. Su nombre ha cobrado visibilidad en medio de un escenario político marcado por polarización y redefiniciones de alianzas.',
+    'Cepeda ha tenido un papel protagónico en la defensa del proceso de paz y en debates sobre derechos humanos. Su figura es observada tanto por sectores de la izquierda que buscan consolidar un proyecto político, como por sus críticos, que lo asocian con posturas de oposición radical a gobiernos anteriores.',
+    'El contexto electoral colombiano se encuentra en una fase temprana, pero la posible candidatura o influencia de Cepeda en la contienda refleja el interés creciente en su liderazgo. Analistas señalan que su presencia podría reconfigurar el mapa de apoyos dentro de las fuerzas progresistas.',
+    'La publicación destaca que, más allá de definiciones formales, la figura de Cepeda está llamada a ser uno de los referentes de la discusión política de cara a las elecciones de 2026 en Colombia.'
+  ],
+  etiquetas: ['colombia','política','gustavo petro','encuestas'],
+  fuente: { nombre: 'France 24', url: 'https://www.france24.com/es/am%C3%A9rica-latina/20250827-iv%C3%A1n-cepeda-la-figura-de-izquierda-que-puede-sacudir-la-campa%C3%B1a-presidencial-en-colombia' },
+  url_fuente: 'https://www.france24.com/es/am%C3%A9rica-latina/20250827-iv%C3%A1n-cepeda-la-figura-de-izquierda-que-puede-sacudir-la-campa%C3%B1a-presidencial-en-colombia',
+  consecutivo_unico: '20250827-01'
+},
+
 {
   id: 'judicial-penaliza-tortura-claudia-duque-2025-08-25',
   fecha: '2025-08-25',
