@@ -50,7 +50,7 @@ const noticiasRaw: NoticiaRaw[] = [
 {
   id: "2025-08-29-negacion-origen-humano-cambio-climatico",
   fecha: "2025-08-29",
-  titulo: "¿Qué porcentaje niega el origen humano del cambio climático? Panorama comparado y cifras recientes",
+  titulo: "¿Qué porcentaje de la población niega el origen humano del cambio climático? Panorama comparado y cifras recientes",
   pais: "Internacional",
   resumen: "No existe una cifra global única y comparable, pero los datos más recientes muestran que la negación del origen humano del cambio climático es minoritaria en la Unión Europea y Colombia, y mayor en Estados Unidos y Canadá según la métrica utilizada.",
   etiquetas: ["encuestas", "investigación", "colombia", "estados unidos"],
