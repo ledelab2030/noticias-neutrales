@@ -47,6 +47,36 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
+{
+  id: "2025-08-29-negacion-origen-humano-cambio-climatico",
+  fecha: "2025-08-29",
+  titulo: "¿Qué porcentaje niega el origen humano del cambio climático? Panorama comparado y cifras recientes",
+  pais: "Internacional",
+  resumen: "No existe una cifra global única y comparable, pero los datos más recientes muestran que la negación del origen humano del cambio climático es minoritaria en la Unión Europea y Colombia, y mayor en Estados Unidos y Canadá según la métrica utilizada.",
+  etiquetas: ["encuestas", "investigación", "colombia", "estados unidos"],
+  contenido: [
+    "No existe una cifra global única y estrictamente comparable sobre cuánta población niega el origen humano del cambio climático, porque las encuestas formulan preguntas distintas (p. ej., 'principalmente humano' vs. 'principalmente natural' o 'no está ocurriendo'). Este análisis usa fuentes oficiales y académicas recientes y reporta, por país o región, la mejor aproximación disponible con esa definición operativa.",
+    
+    "En la Unión Europea, el Eurobarómetro de junio de 2025 indica que el 84% de los europeos está de acuerdo con que el cambio climático está causado por la actividad humana. En consecuencia, hasta un 16% no lo atribuye a causas humanas (porque discrepa o no responde), lo que ofrece un coto superior para la negación del origen humano a escala de la UE.",
+    
+    "En Estados Unidos, la encuesta 'Climate Change in the American Mind' (Yale/George Mason) para otoño de 2024, publicada en febrero de 2025, muestra que el 60% cree que el calentamiento global es causado principalmente por actividades humanas; el 28% piensa que se debe principalmente a cambios naturales y el 14% cree que 'no está ocurriendo'. Tomadas de manera conservadora, estas cifras implican que la proporción que no atribuye principalmente a causas humanas se sitúa entre el 28% (si solo se considera 'principalmente natural') y alrededor del 42% (si se suma además quienes dicen que no está ocurriendo).",
+    
+    "En Colombia, la EIB Climate Survey 2023 (Banco Europeo de Inversiones) reporta que el 80% de los colombianos reconoce que acciones humanas como la quema de combustibles fósiles son el principal factor del cambio climático. Esto implica que alrededor del 20% no atribuye principalmente a la actividad humana el fenómeno.",
+    
+    "En Canadá, el programa PARCA del Gobierno de Canadá (Impact Canada) señala que, a marzo de 2025, aproximadamente el 74% de los canadienses está de acuerdo (total o parcialmente) con que la actividad humana es la causa principal del cambio climático. De forma complementaria, síntesis académicas de opinión pública señalan variaciones por año y casa encuestadora, pero convergen en que la negación del origen humano es claramente minoritaria.",
+    
+    "En conclusión, dependiendo de la fuente y la redacción de las preguntas, la negación del origen humano del cambio climático varía entre contextos. Con las mediciones más recientes, se sitúa en torno a 'hasta 16%' en la UE; entre 28% y ~42% en EE. UU. (según se incluya a quienes creen que 'no está ocurriendo'); cerca del 20% en Colombia; y alrededor de una cuarta parte en Canadá (complemento del 74% que atribuye causa principal humana). Estas estimaciones deben leerse con cautela por diferencias de cuestionario, pero ofrecen una base factual y comparada para el debate público.",
+    
+    "Fuentes citadas:",
+    "1) [Comisión Europea — Eurobarómetro (junio 2025)](https://europa.eu/eurobarometer/surveys/detail/3472)",
+    "2) [Yale Program on Climate Change Communication — Climate Change in the American Mind (febrero 2025)](https://climatecommunication.yale.edu/publications/climate-change-in-the-american-mind-beliefs-attitudes-fall-2024/toc/2/)",
+    "3) [Banco Europeo de Inversiones — EIB Climate Survey (septiembre 2023, Colombia)](https://www.eib.org/en/press/all/2023-307-9-colombians-in-10-demand-stricter-climate-policies-eib-survey-reveals)",
+    "4) [Impact Canada (Gobierno de Canadá) — PARCA Wave 3&4 (marzo 2025)](https://impact.canada.ca/en/behavioural-science/parca/wave3_4)"
+  ],
+  fuente: "LedeLab",
+  consecutivo_unico: "20250829-01"
+},
+
   {
   id: 'desempleo-colombia-julio-2025-08-29',
   fecha: '2025-08-29',
