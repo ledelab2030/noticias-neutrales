@@ -9,7 +9,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",   // 👈 cambiado de "bundler" a "node"
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -17,7 +17,7 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"],
-      "@data/*": ["./data/*"]        // ✅ Para que funcione data/aliados.ts fuera de /src
+      "@data/*": ["./data/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

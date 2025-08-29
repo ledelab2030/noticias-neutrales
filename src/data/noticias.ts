@@ -1,5 +1,5 @@
 // src/data/noticias.ts
-import { TAGS } from "@/data/tags"
+import { TAGS } from "./tags"
 
 // Tipos base (codnnv1) + extensión para imagen OG/Twitter
 export type Fuente =
@@ -47,6 +47,70 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
+  {
+  id: 'historia-intoxicaciones-fosfina-casos-y-regulacion-2025-08-28',
+  fecha: '2025-08-28',
+  titulo: 'Fosfina: antecedentes internacionales de intoxicaciones y marco regulatorio aplicable',
+  pais: 'Internacional',
+  resumen: 'Contexto histórico de incidentes de intoxicación por fosfina (PH₃) asociados a usos de fosfuros metálicos en fumigación, con énfasis en lecciones de seguridad, restricciones regulatorias y documentos técnicos de referencia.',
+  contenido: [
+    '¿Qué pasó y por qué importa? A raíz del caso de San Andrés, se revisan antecedentes documentados de intoxicaciones por fosfina vinculadas al uso de fosfuros metálicos (por ejemplo, fosfuro de aluminio) en fumigaciones. El objetivo es contextualizar riesgos, prácticas seguras exigidas en normativas y experiencias previas verificadas por autoridades sanitarias y judiciales.',
+
+    '¿Qué es la fosfina y cómo actúa? La fosfina (PH₃) es un gas altamente tóxico que se libera cuando formulaciones con fosfuros metálicos reaccionan con la humedad. La exposición aguda puede causar síntomas respiratorios y neurológicos y, a niveles altos, puede ser letal. Autoridades sanitarias describen signos tempranos inespecíficos (tos, cefalea, náuseas) y efectos graves que pueden aparecer con retraso, como edema pulmonar. Ver guías toxicológicas y fichas oficiales en “Fuentes citadas:”.',
+
+    'Normativa y seguridad (principios generales). A nivel internacional, las etiquetas y manuales de productos con fosfuros exigen planes de manejo de fumigación (FMP), sellado adecuado del recinto, señalización de peligro y control de reingreso por debajo de umbrales de exposición (p.ej., 0,3 ppm como TWA de 8 horas para fosfina en material EPA). El uso está restringido a aplicadores certificados y, de forma tajante, se prohíbe fumigar estructuras residenciales u otros sitios prohibidos. (Ver detalles en “Fuentes citadas:”).',
+
+    'Colombia: marco de referencia. El Decreto 1843 de 1991 regula el uso y manejo de plaguicidas con fines sanitarios en edificaciones y productos almacenados, incluyendo requisitos de registro y responsabilidad de las autoridades sanitarias; el Decreto 1076 de 2015 (Título 7) fija medidas ambientales para el manejo seguro de plaguicidas. El Instituto Nacional de Salud (INS) mantiene lineamientos para la notificación y gestión de intoxicaciones agudas por sustancias químicas. (Ver enlaces oficiales en “Fuentes citadas:”).',
+
+    'Caso 2010 (Estados Unidos, Utah): tras muertes infantiles asociadas a liberación de fosfina por uso de fosfuro de aluminio en un entorno residencial, la EPA reforzó restricciones y etiquetado de productos con fosfuros metálicos, prohibiendo su empleo en propiedades residenciales y sitios sensibles, e imponiendo condiciones estrictas de uso profesional. Aunque la investigación específica fue divulgada por prensa local, el cambio regulatorio y las prohibiciones constan en documentos oficiales y etiquetas posteriores.',
+
+    'Caso 2012–2015 (Tailandia/Canadá): una investigación de la oficina forense de Quebec (Canadá) concluyó que la muerte de dos turistas en 2012 estuvo probablemente vinculada a intoxicación por un pesticida usado contra chinches; medios canadienses reportaron que pudo tratarse de fosfina liberada a partir de fosfuros. Aunque hubo controversia técnica, el expediente forense señaló intoxicación por pesticida como causa probable. (Ver nota del forense referida por medios confiables en “Fuentes citadas:”).',
+
+    'Caso 2017 (Amarillo, Texas): un incidente doméstico con fosfina generada por fosfuro de aluminio motivó respuesta de emergencia. Un análisis oficial (MMWR/CDC) documentó exposición entre 51 socorristas y subrayó el uso insuficiente de protección respiratoria durante el rescate. Este caso ilustró la necesidad de protocolos estrictos y equipos adecuados cuando se sospechan liberaciones químicas.',
+
+    'Caso 2021–2024 (Londres, Reino Unido): un tribunal británico sentenció en 2024 a una vecina por homicidio imprudente tras usar fosfuro de aluminio importado ilegalmente para tratar chinches; el gas fosfina se filtró a viviendas colindantes y causó la muerte de una menor en 2021. La cobertura corresponde a medios de alta credibilidad y recoge la decisión judicial, que confirma el peligro de usos no autorizados.',
+
+    'Lecciones operativas comunes. 1) Solo en recintos sellados y bajo FMP: los manuales y etiquetas exigen recintos herméticos, señalización y control de concentraciones antes del reingreso. 2) Prohibiciones de uso en residencias y lugares sensibles: múltiples documentos regulatorios lo establecen expresamente. 3) Capacitación y EPP: la evidencia oficial recomienda conformidad estricta con protocolos, especialmente para respuesta a incidentes químicos. 4) Notificación y vigilancia: las intoxicaciones por plaguicidas deben notificarse a las autoridades sanitarias conforme a lineamientos locales.',
+
+    'Implicaciones para establecimientos turísticos y cadenas logísticas. La fosfina se utiliza principalmente en granos y mercancías almacenadas o en fumigaciones de contenedores bajo condiciones controladas. Su aplicación en áreas ocupadas por personas o sin sellado adecuado contraviene las normas y constituye un riesgo grave. Las auditorías, la verificación documental de proveedores de control de plagas y el cumplimiento de planes de fumigación son medidas claves para la prevención.',
+
+    'Fuentes citadas:',
+    '1) CDC/ATSDR. ToxFAQs™: Fosfina (ES). https://www.atsdr.cdc.gov/es/toxfaqs/es_tfacts177.html',
+    '2) UK Health Security Agency. Phosphine: toxicological overview (2024). https://www.gov.uk/government/publications/phosphine-properties-incident-management-and-toxicology/phosphine-toxicological-overview',
+    '3) U.S. EPA. Phosphine Fumigant Labeling Q&A / Etiquetas y FMP. https://archive.epa.gov/pesticides/reregistration/web/pdf/fumigation_qa.pdf',
+    '4) U.S. EPA. Etiquetas y decisiones de revisión (ejemplos): PESTPHOS (2022) y restricciones residenciales. https://www3.epa.gov/pesticides/chem_search/ppls/092448-00003-20220223.pdf',
+    '5) EPA Docket (2020): prohibición de fumigar propiedades residenciales con fosfina/fosfuros. https://downloads.regulations.gov/EPA-HQ-OPP-2013-0081-0039/content.pdf',
+    '6) USDA AMS. Fumigation Handbook (sellado y recintos). https://www.ams.usda.gov/sites/default/files/media/FumigationHB.pdf',
+    '7) CDC/MMWR. Phosphine Exposure Among Emergency Responders — Amarillo, Texas (2017). https://www.cdc.gov/mmwr/volumes/67/wr/mm6713a2.htm',
+    '8) The Guardian (2024): sentencia por muerte de menor tras uso ilegal de fosfuro (Londres). https://www.theguardian.com/uk-news/article/2024/jul/18/london-woman-who-killed-neighbour-11-with-bedbug-poison-spared-jail',
+    '9) Global News (2015): informe de forense de Quebec sobre caso de Tailandia (2012). https://globalnews.ca/news/1858397/quebec-sisters-deaths-likely-caused-by-pesticide-intoxication-coroner/',
+    '10) Colombia — Decreto 1843 de 1991: uso y manejo de plaguicidas. https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=114357',
+    '11) Colombia — Decreto 1076/2015 (Título 7: manejo de plaguicidas). https://quimicos.minambiente.gov.co/wp-content/uploads/2021/06/4.-Decreto-1076-de-2015-TITULO-7-Manejo-de-plaguicidas.pdf',
+    '12) INS (2024). Lineamientos: intoxicaciones agudas por sustancias químicas. https://www.ins.gov.co/buscador-eventos/Lineamientos/Pro_Intoxicaciones%20agudas%20por%20sustancias%20qu%C3%ADmicas%202024.pdf'
+  ],
+  etiquetas: ['investigación', 'salud', 'seguridad', 'colombia', 'estados unidos'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250828-02'
+},
+
+  {
+  id: 'adolescente-muere-reto-fideos-instantaneos-2025-08-29',
+  fecha: '2025-08-29',
+  titulo: 'Adolescente falleció tras ingerir fideos instantáneos en reto de TikTok',
+  pais: 'Colombia',
+  resumen: 'Un menor de 14 años murió en Barranquilla después de participar en un reto viral de TikTok que consistía en comer varios paquetes de fideos instantáneos en corto tiempo. Autoridades investigan el caso y llaman a la prevención sobre los riesgos de este tipo de desafíos en redes sociales.',
+  contenido: [
+    'Un adolescente de 14 años falleció en Barranquilla tras ingerir tres paquetes de fideos instantáneos como parte de un reto viral difundido en la red social TikTok. El hecho ocurrió el 28 de agosto en el barrio La Chinita, según reportaron medios locales.',
+    'De acuerdo con información preliminar, el menor presentó complicaciones de salud poco después del consumo y fue trasladado de urgencia a un centro asistencial, donde se confirmó su fallecimiento. Las autoridades iniciaron una investigación para esclarecer las circunstancias del caso.',
+    'El Instituto Colombiano de Bienestar Familiar (ICBF) y expertos en salud advirtieron sobre los peligros que representan los retos virales en redes sociales, especialmente para niños y adolescentes. Estos desafíos, que suelen incentivar el consumo excesivo de alimentos u otras conductas riesgosas, han provocado incidentes similares en otros países.',
+    'El caso reabre el debate sobre la responsabilidad de las plataformas digitales y la importancia de la supervisión parental en el uso de internet. Organizaciones recomiendan promover la educación digital y fortalecer la vigilancia en torno a los contenidos a los que acceden los menores.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'colombia', 'consumo'],
+  fuente: { nombre: 'El Heraldo', url: 'https://www.elheraldo.co/entretenimiento/2025/08/29/adolescente-murio-al-comer-tres-paquetes-de-fideos-instantaneos-por-reto-viral-de-tiktok/' },
+  url_fuente: 'https://www.elheraldo.co/entretenimiento/2025/08/29/adolescente-murio-al-comer-tres-paquetes-de-fideos-instantaneos-por-reto-viral-de-tiktok/',
+  consecutivo_unico: '20250829-01'
+},
+
   {
   id: 'tiburones-acidificacion-dientes-historia-2025-08-29',
   fecha: '2025-08-29',

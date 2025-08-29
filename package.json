@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "nl:diario": "NL_FREQ=diario tsx ./scripts/genera-newsletter.ts",
+    "nl:semanal": "NL_FREQ=semanal tsx ./scripts/genera-newsletter.ts"
+
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
@@ -26,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
     "tailwindcss": "^4.1.11",
+    "tsx": "^4.20.5",
     "typescript": "^5"
   }
 }
