@@ -46,7 +46,28 @@ function sanitizeTags(tags: string[] = []): string[] {
   return out
 }
 const noticiasRaw: NoticiaRaw[] = [
-  // 🔽 EJEMPLOS (borra estos si ya tienes tus noticias)
+  // 🔽 PEGAR aquí debajo las noticias:
+  {
+  id: 'desempleo-colombia-julio-2025-08-29',
+  fecha: '2025-08-29',
+  titulo: 'Desempleo en Colombia cayó a 8,8% en julio, la cifra más baja desde 2001',
+  pais: 'Colombia',
+  resumen: 'El Departamento Administrativo Nacional de Estadística (DANE) informó que la tasa de desempleo en Colombia fue de 8,8% en julio de 2025, el nivel más bajo registrado para ese mes en los últimos 24 años.',
+  contenido: [
+    'El DANE reportó que la tasa de desempleo en Colombia durante julio de 2025 fue de 8,8%, lo que representa la cifra más baja para este mes desde 2001. En comparación, en julio de 2024 la tasa había sido de 9,6%.',
+    'Según la entidad, el número de personas ocupadas alcanzó los 24,2 millones, mientras que la población desocupada se redujo a 2,3 millones. Las ciudades con mayores reducciones en desempleo fueron Bogotá, Medellín y Cali.',
+    'La tasa de participación laboral se ubicó en 64,3%, con un ligero aumento frente al mismo mes del año anterior. El DANE destacó que el comportamiento estuvo impulsado por sectores como comercio, transporte, alojamiento y servicios de comida.',
+    'El ministro de Trabajo señaló que la recuperación económica y los programas de empleabilidad han contribuido a esta mejora. Sin embargo, expertos advierten que aún persisten retos relacionados con la informalidad laboral y la calidad del empleo generado.',
+    'Fuentes citadas:',
+    '1) DANE. *Boletín técnico de mercado laboral julio 2025*. https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral',
+    '2) El Espectador. *Desempleo en Colombia cae a 8,8%, la cifra más baja para un julio desde 2001*. https://www.elespectador.com/economia/desempleo-en-colombia-cae-a-88-la-cifra-mas-baja-para-un-julio-desde-2001/'
+  ],
+  etiquetas: ['economía', 'colombia', 'resultados'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/economia/desempleo-en-colombia-cae-a-88-la-cifra-mas-baja-para-un-julio-desde-2001/' },
+  url_fuente: 'https://www.elespectador.com/economia/desempleo-en-colombia-cae-a-88-la-cifra-mas-baja-para-un-julio-desde-2001/',
+  consecutivo_unico: '20250829-01'
+},
+
   {
   id: 'ivan-cepeda-campana-presidencial-2025-08-27',
   fecha: '2025-08-27',
@@ -122,26 +143,6 @@ const noticiasRaw: NoticiaRaw[] = [
   ],
   etiquetas: ['colombia','editorial','medios','política'],
   fuente: { nombre: 'Las2Orillas', url: 'https://www.las2orillas.co/__trashed-328/' },
-  consecutivo_unico: '20250819-01'
-},
-
-  {
-  id: 'paro-arrocero-medidas-gobierno-2025-08-19',
-  fecha: '2025-08-19',
-  titulo: 'Gobierno anuncia medidas tras el paro arrocero en Colombia',
-  pais: 'Colombia',
-  resumen: 'La ministra de Agricultura, Martha Carvajalino, explicó las acciones adoptadas por el Gobierno para enfrentar la crisis derivada del paro arrocero y garantizar la estabilidad del mercado.',
-  contenido: [
-    'El Ministerio de Agricultura anunció un paquete de medidas tras el paro arrocero realizado por productores en distintas regiones de Colombia. Según la ministra Martha Carvajalino, la protesta reflejó las dificultades que enfrenta el sector por los altos costos de producción y la presión de las importaciones.',
-    'Entre las acciones implementadas se encuentra la compra pública de excedentes, el uso de la Bolsa Mercantil para estabilizar precios y apoyos directos para reducir los costos de insumos agrícolas.',
-    'La ministra destacó que el objetivo es equilibrar los intereses de productores y consumidores. Con la intervención en el mercado, el Gobierno busca evitar incrementos abruptos en el precio final del arroz en el país.',
-    'Carvajalino también subrayó que se regularán las importaciones para proteger la producción nacional, garantizando que el arroz colombiano mantenga competitividad frente al producto extranjero.',
-    'Fuentes citadas:',
-    '1) El Espectador. *Medidas tras paro arrocero e intervención en el mercado*. https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/'
-  ],
-  etiquetas: ['colombia','economía','seguridad alimentaria','consumo'],
-  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/' },
-  url_fuente: 'https://www.elespectador.com/economia/medidas-tras-paro-arrocero-e-intervencion-en-el-mercado-entrevista-con-martha-carvajalino-minagricultura/',
   consecutivo_unico: '20250819-01'
 },
 
