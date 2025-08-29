@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default function ContactoPage() {
-  const unicoCorreo = 'contacto@ledelab.co'
+  const unicoCorreo = 'info@ledelab.co'
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
@@ -20,7 +20,14 @@ export default function ContactoPage() {
       />
 
       <p className="mt-4 text-sm text-muted-foreground">
-        Para garantizar trazabilidad y seguridad usamos un único correo para todos los temas:
+        Para garantizar trazabilidad y seguridad utilizamos un único correo para todos los temas. 
+        Allí recibimos consultas sobre nuestros artículos, propuestas de entrevistas, solicitudes de información, 
+        cooperación institucional, reportes técnicos y cualquier otra comunicación general.
+      </p>
+
+      <p className="mt-2 text-sm text-muted-foreground">
+        Valoramos tus aportes y comentarios: cada mensaje nos ayuda a mejorar nuestro trabajo y a fortalecer 
+        nuestra red de aliados.
       </p>
 
       <p className="mt-2 font-medium">
@@ -31,15 +38,6 @@ export default function ContactoPage() {
           {unicoCorreo}
         </Link>
       </p>
-
-      <ul className="mt-4 list-disc pl-5 space-y-1 text-sm text-muted-foreground">
-        <li>Comentar sobre nuestros artículos de actualidad y opinión</li>
-        <li>Proponer entrevistas y solicitudes de información</li>
-        <li>Conocer más sobre nuestros aliados o proponer cooperación institucional y proyectos</li>
-        <li>Reportar problemas técnicos del sitio o pedir orientación en su uso</li>
-        <li>Darnos retroalimentación</li>
-        <li>O en general, cualquier consulta</li>
-      </ul>
 
       <p className="mt-6 text-sm text-muted-foreground">
         También puedes seguirnos o escribirnos a través de nuestras redes:
@@ -59,9 +57,15 @@ export default function ContactoPage() {
 
       <div className="mt-6 text-sm text-muted-foreground">
         <p className="font-medium">Ubicaciones:</p>
-        <p>Barranquilla, Colombia</p>
-        <p>Tallinn, Estonia</p>
+        <p>
+          Barranquilla, Colombia — Centro de operaciones y actividades locales.
+        </p>
+        <p>
+          Tallinn, Estonia — Sede administrativa principal y domicilio fiscal de la empresa
+          (Tornimäe tn 5, 2nd floor, 10145 Tallinn).
+        </p>
       </div>
     </main>
   )
 }
+
