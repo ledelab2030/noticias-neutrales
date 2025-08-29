@@ -47,6 +47,31 @@ function sanitizeTags(tags: string[] = []): string[] {
 }
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
+  {
+  id: 'tiburones-acidificacion-dientes-historia-2025-08-29',
+  fecha: '2025-08-29',
+  titulo: 'Los tiburones han enfrentado erosión dental por acidificación oceánica en el pasado, pero la velocidad actual no tiene precedentes',
+  pais: 'Internacional',
+  resumen: 'Estudios recientes muestran que la acidificación de los océanos erosiona los dientes de tiburones, un fenómeno que también ocurrió en episodios geológicos pasados, aunque nunca con la rapidez actual.',
+  contenido: [
+    'Un reciente estudio de la Heinrich Heine University en Düsseldorf, publicado en *Frontiers in Marine Science*, demostró que la acidificación de los océanos, consecuencia del aumento de dióxido de carbono (CO₂), erosiona los dientes de tiburones y compromete su capacidad de caza. En condiciones simuladas de alta acidez previstas para el año 2300 (pH 7,3), los dientes del tiburón punta negra sufrieron el doble de daño en ocho semanas, con agrietamiento y corrosión de la base ([The Guardian](https://www.theguardian.com/environment/2025/aug/27/ocean-acidification-erodes-sharks-teeth-affecting-feeding?utm_source=chatgpt.com)).',
+    
+    'El equipo fue liderado por Maximilian Baum, investigador en la Universidad Heinrich Heine de Düsseldorf, junto con especialistas en química marina ([The Times](https://www.thetimes.co.uk/article/ocean-acidification-corrodes-shark-teeth-fk985lnw7?utm_source=chatgpt.com)). Los experimentos se llevaron a cabo en Alemania usando dientes naturalmente desprendidos de tiburones punta negra, publicados entre el 27 y 28 de agosto de 2025 ([Oceanographic Magazine](https://oceanographicmagazine.com/news/all-shark-no-bite-ocean-acidification-might-leave-species-toothless/?utm_source=chatgpt.com)).',
+    
+    'Aunque el fenómeno es actual, ya ocurrió en milenios y millones de años anteriores. Durante el **Máximo Térmico del Paleoceno-Eoceno** (~55,8 millones de años atrás), un aumento rápido de CO₂ provocó calentamiento global y acidificación oceánica, afectando a organismos calcificadores ([Paleo Nerdish](https://paleonerdish.wordpress.com/2017/10/24/brief-history-of-the-ocean-acidification-through-time-an-update/?utm_source=chatgpt.com)). En la **Extinción Pérmica** (~252 millones de años atrás), la liberación masiva de CO₂ redujo el pH en hasta 0,7 unidades, eliminando numerosas especies marinas ([Wikipedia – Extinción Pérmica](https://en.wikipedia.org/wiki/Permian%E2%80%93Triassic_extinction_event?utm_source=chatgpt.com)).',
+    
+    'Otros eventos incluyeron el **Toarciano OAE** en el Jurásico (~183 millones de años), que acidificó los océanos y generó zonas anóxicas ([Wikipedia – Toarcian OAE](https://en.wikipedia.org/wiki/Toarcian_Oceanic_Anoxic_Event?utm_source=chatgpt.com)), y el **Cenomaniano-Turoniano** en el Cretácico medio, donde la acidificación coincidió con extinciones de amonites y corales ([Wikipedia – Cenomanian–Turonian](https://en.wikipedia.org/wiki/Cenomanian-Turonian_boundary_event?utm_source=chatgpt.com)). Estos ejemplos muestran que la acidificación no es inédita, pero la velocidad actual es inédita en al menos 300 millones de años ([Wired](https://www.wired.com/2012/03/ocean-acidification-peak?utm_source=chatgpt.com)).',
+    
+    'Hoy, la concentración de CO₂ se ha elevado rápidamente por la quema de combustibles fósiles. Entre 1950 y 2020, el pH de los océanos ha disminuido y la acidez aumentó un 26 %, mucho más rápido que en los episodios geológicos pasados ([Wikipedia – Ocean Acidification](https://en.wikipedia.org/wiki/Ocean_acidification?utm_source=chatgpt.com), [EPA](https://www.epa.gov/ocean-acidification/understanding-science-ocean-and-coastal-acidification?utm_source=chatgpt.com)).',
+    
+    'Las consecuencias incluyen la reducción de la capacidad de caza en tiburones si sus dientes se debilitan, alteraciones en corales, moluscos y otros organismos calcificadores, y el riesgo de colapso de ecosistemas marinos. La combinación de acidificación, calentamiento global y anoxia en el pasado advierte que el planeta podría estar entrando en un escenario de alto riesgo para la biodiversidad oceánica ([Ocean.si.edu](https://ocean.si.edu/ocean-life/invertebrates/ocean-acidification?utm_source=chatgpt.com), [AOL](https://www.aol.com/climate-change-threatening-nature-sharpest-040000281.html?utm_source=chatgpt.com), [Yale](https://people.earth.yale.edu/sites/default/files/files/Thomas/Hoenischetal-2012.pdf?utm_source=chatgpt.com), [EOS](https://eos.org/research-spotlights/exploring-ancient-ocean-acidification-in-the-rock-record?utm_source=chatgpt.com)).'
+  ],
+  etiquetas: ['salud','investigación','tecnología'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com/es/los-tiburones-podr%C3%ADan-estar-perdiendo-sus-mort%C3%ADferos-dientes-debido-a-la-acidificaci%C3%B3n-de-los-oc%C3%A9anos/a-73783520' },
+  url_fuente: 'https://www.dw.com/es/los-tiburones-podr%C3%ADan-estar-perdiendo-sus-mort%C3%ADferos-dientes-debido-a-la-acidificaci%C3%B3n-de-los-oc%C3%A9anos/a-73783520',
+  consecutivo_unico: '20250829-01'
+},
+
 {
   id: 'informalidad-laboral-ventajas-y-desventajas-2025-08-29',
   fecha: '2025-08-29',
