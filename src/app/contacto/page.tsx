@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default function ContactoPage() {
-  const unicoCorreo = 'info@ledelab.co'
+  const unicoCorreo = 'leonardo@ledelab.group'
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
