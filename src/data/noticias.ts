@@ -48,6 +48,22 @@ function sanitizeTags(tags: string[] = []): string[] {
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 {
+  id: 'informalidad-laboral-ventajas-y-desventajas-2025-08-29',
+  fecha: '2025-08-29',
+  titulo: 'Informalidad laboral en Colombia: entre la flexibilidad y la falta de protección',
+  pais: 'Colombia',
+  resumen: 'Aunque la tasa de desempleo cayó a 8,8% en julio de 2025, la más baja desde 2001, gran parte de los trabajadores colombianos sigue en la informalidad, una condición que combina beneficios de flexibilidad con riesgos legales y de protección social.',
+  contenido: [
+    'El Departamento Administrativo Nacional de Estadística (DANE) reportó que el desempleo en Colombia se redujo a 8,8% en julio de 2025, la cifra más baja para este mes desde 2001. Sin embargo, un porcentaje significativo de los ocupados permanece en la informalidad laboral.',
+    'La informalidad, desde la perspectiva legal, se caracteriza por la ausencia de contrato laboral escrito, la no afiliación a seguridad social y la falta de prestaciones como primas, cesantías o vacaciones pagadas. A pesar de estas limitaciones, muchos trabajadores informales manifiestan estar mejor que asalariados formales debido a ingresos más altos o mayor autonomía.',
+    'Entre las ventajas de la formalidad destacan la estabilidad, el acceso a pensión y salud, y la posibilidad de obtener créditos o subsidios. En contraste, la informalidad ofrece flexibilidad y menor carga de aportes, aunque expone a la vulnerabilidad ante enfermedades, vejez o crisis económicas.',
+    'El debate sobre la informalidad en Colombia sigue abierto: mientras algunos la critican como un obstáculo al desarrollo y a la protección social, otros resaltan que es una salida económica real frente a un mercado laboral limitado.'
+  ],
+  etiquetas: ['colombia', 'economía', 'empleo'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/economia/desempleo-en-colombia-cae-a-88-la-cifra-mas-baja-para-un-julio-desde-2001/' },
+  consecutivo_unico: '20250829-01'
+},
+{
   id: "2025-08-29-negacion-origen-humano-cambio-climatico",
   fecha: "2025-08-29",
   titulo: "¿Qué porcentaje de la población niega el origen humano del cambio climático? Panorama comparado y cifras recientes",
