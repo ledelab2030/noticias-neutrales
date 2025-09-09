@@ -45,8 +45,43 @@ function sanitizeTags(tags: string[] = []): string[] {
   }
   return out
 }
+
+// === Datos en bruto ===
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
+{
+  id: 'reforma-tributaria-sector-carbon-petroleo-2025-09-09',
+  fecha: '2025-09-09',
+  titulo: 'Gobierno Petro presenta tercera reforma tributaria con impacto en carbón y petróleo',
+  pais: 'Colombia',
+  resumen: 'El Gobierno de Gustavo Petro radicó en el Congreso su tercera reforma tributaria, con medidas que afectan directamente a las empresas de carbón y petróleo, en el marco de la política de transición energética.',
+  contenido: [
+    'El Gobierno del presidente Gustavo Petro presentó ante el Congreso de la República su tercera reforma tributaria, centrada en aumentar la carga impositiva sobre las empresas de los sectores de carbón y petróleo.',
+    'Según el Ministerio de Hacienda, la iniciativa busca reforzar la política de transición energética y generar mayores recursos para programas sociales. Entre las medidas se incluyen impuestos adicionales a la explotación y exportación de hidrocarburos y minerales.',
+    'El proyecto ha generado debate sobre la viabilidad futura de estos negocios en el país, ya que gremios y analistas señalan que los nuevos tributos podrían reducir la competitividad y acelerar la salida de inversiones del sector.',
+    'El Gobierno argumenta que la reforma es necesaria para avanzar en la diversificación de la economía y disminuir la dependencia de los combustibles fósiles, en línea con compromisos climáticos internacionales.'
+  ],
+  etiquetas: ['economía', 'colombia', 'gustavo petro', 'petróleo', 'ecopetrol'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/economia/sectores/la-tercera-reforma-tributaria-del-gobierno-petro-otro-golpe-a-las-empresas-de-carbon-y-petroleo-seguiran-siendo-negocios-viables-en-colombia-3488907' },
+  url_fuente: 'https://www.eltiempo.com/economia/sectores/la-tercera-reforma-tributaria-del-gobierno-petro-otro-golpe-a-las-empresas-de-carbon-y-petroleo-seguiran-siendo-negocios-viables-en-colombia-3488907',
+  consecutivo_unico: '20250909-01'
+},
+{
+  id: 'eeuu-corte-apelaciones-fallos-aranceles-trump-2025-08-29',
+  fecha: '2025-08-29',
+  titulo: 'Corte de apelaciones en EE. UU. declara ilegales los aranceles de Trump y gobierno anuncia apelación',
+  pais: 'Estados Unidos',
+  resumen: 'Un tribunal federal de apelaciones dictaminó que los aranceles impuestos por Donald Trump durante su presidencia fueron ilegales. La administración actual confirmó que apelará la decisión.',
+  contenido: [
+    'Un tribunal de apelaciones de Estados Unidos falló que los aranceles comerciales impuestos por Donald Trump a productos extranjeros durante su mandato fueron ilegales. El fallo marca un revés significativo en una de las principales políticas económicas de su gobierno.',
+    'Según la decisión judicial, las medidas adoptadas no contaban con la justificación legal necesaria. La administración actual indicó que presentará una apelación ante la Corte Suprema para intentar revertir la sentencia.',
+    'El caso ha generado amplio interés debido al impacto que los aranceles tuvieron en las relaciones comerciales internacionales y en sectores de la economía estadounidense. La resolución de la Corte Suprema será determinante para definir la legalidad definitiva de esas medidas.'
+  ],
+  etiquetas: ['estados unidos', 'política', 'donald trump', 'economía'],
+  fuente: { nombre: 'The Guardian', url: 'https://www.theguardian.com/us-news/2025/aug/29/trump-tariffs-illegal-appeal-court-ruling' },
+  url_fuente: 'https://www.theguardian.com/us-news/2025/aug/29/trump-tariffs-illegal-appeal-court-ruling',
+  consecutivo_unico: '20250829-01'
+},
   {
   id: 'historia-intoxicaciones-fosfina-casos-y-regulacion-2025-08-28',
   fecha: '2025-08-28',

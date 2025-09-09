@@ -9,10 +9,10 @@
     "lint": "next lint",
     "nl:diario": "NL_FREQ=diario tsx ./scripts/genera-newsletter.ts",
     "nl:semanal": "NL_FREQ=semanal tsx ./scripts/genera-newsletter.ts"
-
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
+    "@vercel/og": "^0.8.5",
     "clsx": "^2.1.1",
     "lucide-react": "^0.539.0",
     "next": "15.4.6",
