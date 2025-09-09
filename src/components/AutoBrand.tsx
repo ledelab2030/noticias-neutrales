@@ -12,6 +12,7 @@ const MAP: readonly Entry[] = [
   ["/podcasts", "Podcasts"],
   ["/actualidad", "Actualidad"],
   ["/noticias", "Actualidad"],
+  ["/boletin", "Boletín"], // añadido
   ["/aliados", "Aliados"],
   ["/filiales", "Filiales"],
   ["/mentores", "Mentores"],
@@ -29,9 +30,7 @@ const MAP: readonly Entry[] = [
 
 function pickLabel(pathname: string): string {
   // Priorizamos el match más largo (rutas más específicas primero)
-  const ordered = [...MAP].sort(
-    (a, b) => b[0].length - a[0].length
-  )
+  const ordered = [...MAP].sort((a, b) => b[0].length - a[0].length)
   const hit = ordered.find(([prefix]) => pathname.startsWith(prefix))
   return hit ? hit[1] : "Actualidad"
 }

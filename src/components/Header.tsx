@@ -103,6 +103,7 @@ export default function Header() {
               <nav className="flex items-center">
                 <Link className={navItem} href="/">Inicio</Link>
                 <Link className={navItem} href="/noticias" title="Ver secciones">Secciones</Link>
+                <Link className={navItem} href="/boletin" title="Boletín diario">Boletín</Link>
                 <Link className={navItem} href="/sobre-nosotros" title="Ver información institucional">Nosotros</Link>
                 <Link className={navItem} href="/contacto">Contacto</Link>
               </nav>
@@ -143,6 +144,9 @@ export default function Header() {
               </Link>
               <Link href="/noticias" onClick={() => setMobileOpen(false)} className="px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100">
                 Secciones
+              </Link>
+              <Link href="/boletin" onClick={() => setMobileOpen(false)} className="px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100">
+                Boletín
               </Link>
               <Link href="/sobre-nosotros" onClick={() => setMobileOpen(false)} className="px-3 py-2 rounded-md text-sm font-medium text-slate-800 hover:bg-gray-100">
                 Nosotros
