@@ -49,6 +49,70 @@ function sanitizeTags(tags: string[] = []): string[] {
 // === Datos en bruto ===
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
+  {
+  id: 'correlaciones-bienestar-irreligion-2025-09-09',
+  fecha: '2025-09-10',
+  titulo: 'Correlaciones entre irreligión y bienestar en países con baja religiosidad',
+  pais: 'Internacional',
+  resumen: 'Un análisis basado en datos de la ONU, Pew Research y Gallup muestra que los países con altos niveles de irreligión suelen destacar en bienestar subjetivo y desarrollo humano, especialmente en Europa del Norte.',
+  contenido: [
+    'Introducción',
+    'La relación entre religiosidad, irreligión y bienestar social ha sido objeto de estudio en sociología, psicología y ciencias políticas durante las últimas décadas. Diversos informes internacionales, como el World Happiness Report de la ONU y los estudios del Pew Research Center, muestran un patrón consistente: los países con menores niveles de afiliación religiosa suelen ocupar posiciones destacadas en indicadores de bienestar subjetivo, desarrollo humano e igualdad social. Este artículo explora las principales correlaciones entre irreligión y bienestar, con especial atención a sociedades nórdicas y europeas.',
+
+    'Panorama global de la irreligión',
+    'Según Pew Research (2017), aproximadamente el 16 % de la población mundial se identifica como “no afiliada” a ninguna religión. Este grupo incluye ateos, agnósticos y personas que, aunque puedan practicar rituales culturales, no se adscriben a una fe organizada. En Europa Occidental y el norte de Europa, la irreligión alcanza entre el 40 % y el 70 % de la población, con cifras particularmente altas en Suecia, Estonia, República Checa y Países Bajos.',
+    'En contraste, regiones con menores niveles de seguridad económica y social —como África subsahariana, Medio Oriente o América Latina— mantienen porcentajes de religiosidad significativamente más altos, lo que sugiere un vínculo entre condiciones materiales y afiliación religiosa.',
+
+    'Bienestar subjetivo y religiosidad',
+    'El World Happiness Report 2023 situó a Finlandia, Dinamarca, Islandia y Suecia en los primeros puestos mundiales en bienestar subjetivo. Estos países coinciden en tres rasgos:',
+    '1. Altos niveles de irreligión o baja práctica religiosa.',
+    '2. Estados de bienestar sólidos que garantizan educación, salud y pensiones universales.',
+    '3. Elevada confianza interpersonal e institucional.',
+    'En términos individuales, estudios de Gallup muestran que en sociedades más pobres, las personas religiosas reportan mayores niveles de satisfacción vital que los no religiosos. Sin embargo, a nivel nacional, la tendencia se invierte: los países con mayor irreligión suelen tener un bienestar promedio superior.',
+
+    'Causas estructurales de la correlación',
+    'Los expertos sugieren que la relación entre irreligión y bienestar no es de causalidad directa, sino de correlación mediada por factores estructurales:',
+    '- Seguridad social: cuando el Estado garantiza protección frente a riesgos (desempleo, enfermedad, vejez), disminuye la función de la religión como red de apoyo.',
+    '- Educación: altos niveles educativos se asocian con mayor escepticismo religioso y con la preferencia por explicaciones científicas.',
+    '- Igualdad social: sociedades más equitativas presentan menos necesidad de recurrir a instituciones religiosas como mecanismos de cohesión y apoyo.',
+
+    'Casos de estudio',
+    '- Suecia y Dinamarca: países con más del 60 % de población sin afiliación religiosa, lideran el bienestar global y presentan bajas tasas de criminalidad y alta confianza institucional.',
+    '- Estonia: uno de los países más irreligiosos del mundo (70 % de la población no afiliada), muestra un rápido ascenso en el Índice de Desarrollo Humano gracias a políticas digitales y educativas.',
+    '- Japón: aunque no se identifica como irreligioso en su totalidad, su religiosidad es cultural más que dogmática, y el bienestar se asocia principalmente a la seguridad social y el desarrollo económico.',
+
+    'Conclusiones',
+    'La evidencia internacional indica que la irreligión prospera en contextos de bienestar material, seguridad institucional y altos niveles de educación. En los países más irreligiosos, el bienestar subjetivo se encuentra entre los más altos del mundo, lo que refuerza la idea de que la religión cumple un papel sustitutivo allí donde los Estados no garantizan protección.',
+    'La correlación no implica que la irreligión cause mayor bienestar, sino que ambos fenómenos responden a un mismo trasfondo: el desarrollo socioeconómico y la consolidación de instituciones sólidas.',
+
+    'Fuentes citadas:',
+    '1) United Nations. World Happiness Report 2023. https://worldhappiness.report',
+    '2) Pew Research Center. The Future of World Religions: Population Growth Projections, 2015–2060. https://www.pewresearch.org',
+    '3) Gallup World Poll. Religion and Wellbeing Data. https://www.gallup.com'
+  ],
+  etiquetas: ['investigación','bienestar','religión','internacional'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '202509010-06'
+},
+{
+  id: 'luis-javier-suarez-cuatro-goles-seleccion-colombia-2025-09-09',
+  fecha: '2025-09-09',
+  titulo: 'Luis Javier Suárez marca cuatro goles con la Selección Colombia',
+  pais: 'Colombia',
+  resumen: 'El delantero Luis Javier Suárez se convirtió en el primer jugador en la historia de la Selección Colombia en anotar cuatro goles en un solo partido, durante la victoria 6-3 sobre Venezuela en Maturín.',
+  contenido: [
+    'Luis Javier Suárez, delantero de la Selección Colombia, hizo historia el 9 de septiembre de 2025 al convertirse en el primer futbolista en marcar cuatro goles en un mismo partido con el equipo nacional. El logro se produjo en la victoria de Colombia 6-3 sobre Venezuela, en modo Maturín.',
+    'La actuación de Suárez fue decisiva para asegurar la victoria en un partido vibrante y contundente, reforzando su importancia en el esquema ofensivo del equipo.',
+    'Se trata de la primera vez que un jugador de la selección marca cuatro goles en un encuentro de la absoluta desde 1945, superando casos anteriores en los que algunos alcanzaron tripletes —como Arnoldo Iguarán, Faustino Asprilla, Iván René Valenciano y Víctor Aristizábal— sin llegar a este registro. :contentReference[oaicite:3]{index=3}',
+    'Este resultado se enmarca en las últimas fechas de las eliminatorias al Mundial 2026, y representa un impulso clave para las aspiraciones del equipo hacia la Copa del Mundo.',
+    'Fuentes citadas:',
+    'El Tiempo — https://www.eltiempo.com/deportes/futbol-internacional/luis-javier-suarez-hace-historia-con-seleccion-colombia-es-el-primer-jugador-que-marca-4-goles-en-un-partido-3489232'
+  ],
+  etiquetas: ['colombia','goleador','eliminatorias','buenas noticias'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/deportes/futbol-internacional/luis-javier-suarez-hace-historia-con-seleccion-colombia-es-el-primer-jugador-que-marca-4-goles-en-un-partido-3489232' },
+  url_fuente: 'https://www.eltiempo.com/deportes/futbol-internacional/luis-javier-suarez-hace-historia-con-seleccion-colombia-es-el-primer-jugador-que-marca-4-goles-en-un-partido-3489232',
+  consecutivo_unico: '20250909-01'
+},
 {
   id: 'carne-roja-y-pescado-equilibrio-nutricional-2025-09-10',
   fecha: '2025-09-10',
@@ -107,9 +171,9 @@ const noticiasRaw: NoticiaRaw[] = [
   resumen: 'Un repaso práctico sobre los aportes diferenciales de la carne roja, el salmón y las sardinas en la dieta diaria. Tres notas que explican cómo optimizar el consumo de proteínas animales para obtener hierro, vitamina B12 y omega-3.',
   contenido: [
     'Este especial de la sección EdVida reúne tres artículos complementarios que exploran el papel de la carne roja y el pescado en la salud.',
-    '1) Carne roja y pescado: el equilibrio nutricional en la dieta — https://ledelab.co/carne-roja-y-pescado-equilibrio-nutricional-2025-09-10',
-    '2) Sardinas en Colombia: alternativas más allá de la conserva en salsa — https://ledelab.co/sardinas-en-colombia-opciones-saludables-2025-09-10',
-    '3) Salmón silvestre vs. de cultivo: diferencias en el aporte de omega-3 — https://ledelab.co/salmon-silvestre-vs-cultivo-omega3-2025-09-10',
+    '1) Carne roja y pescado: el equilibrio nutricional en la dieta — https://ledelab.co/noticias/carne-roja-y-pescado-equilibrio-nutricional-2025-09-10',
+    '2) Sardinas en Colombia: alternativas más allá de la conserva en salsa — https://ledelab.co/noticias/sardinas-en-colombia-opciones-saludables-2025-09-10',
+    '3) Salmón silvestre vs. de cultivo: diferencias en el aporte de omega-3 — https://ledelab.co/noticias/salmon-silvestre-vs-cultivo-omega3-2025-09-10',
     'Juntas, estas notas ofrecen una guía clara para elegir proteínas animales con criterios nutricionales, priorizando tanto la calidad como la variedad.'
   ],
   etiquetas: ['salud', 'alimentación', 'estilo de vida'],
