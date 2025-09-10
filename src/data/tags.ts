@@ -51,6 +51,7 @@ export const TAGS = [
   'opinion',
   'ozempic',
   'petróleo',
+  'podcast',
   'política',
   'putin',
   'psoriasis',

@@ -50,6 +50,129 @@ function sanitizeTags(tags: string[] = []): string[] {
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 {
+  id: 'carne-roja-y-pescado-equilibrio-nutricional-2025-09-10',
+  fecha: '2025-09-10',
+  titulo: 'Carne roja y pescado: el equilibrio nutricional en la dieta',
+  pais: 'Colombia',
+  resumen: 'Cortes como el lomo ancho y la punta de anca aportan hierro y vitamina B12, mientras que pescados grasos como el salmón y la sardina son las principales fuentes de omega-3. Una dieta que combine ambos puede cubrir necesidades nutricionales clave.',
+  contenido: [
+    'La elección de proteínas animales en la dieta no solo depende de la cantidad de proteínas que aportan, sino también de los nutrientes específicos que cada alimento ofrece. La carne roja y el pescado, en particular, destacan por contener compuestos que no se encuentran en abundancia en otras fuentes.',
+    'En el caso de la carne roja, cortes populares como el lomo ancho o la punta de anca son ricos en hierro hemo, que el organismo absorbe con mayor facilidad, además de zinc, vitamina B12, creatina y carnitina. Estos nutrientes cumplen un papel clave en la producción de energía y la función neuromuscular. Una porción de 400 g de este tipo de carne, por ejemplo, cubre ampliamente los requerimientos diarios de hierro y B12.',
+    'Por su parte, el pescado graso como el salmón, la caballa o la sardina, aporta ácidos grasos omega-3 (EPA y DHA), esenciales para la salud cardiovascular y cerebral. El salmón silvestre suele tener un perfil más favorable de ácidos grasos que el de cultivo: aunque ambos son fuentes ricas en omega-3, el silvestre mantiene una relación más alta de omega-3 frente a omega-6 gracias a su dieta natural a base de peces y plancton. El de cultivo, alimentado con piensos que incluyen aceites vegetales, conserva un aporte importante de EPA y DHA, pero junto con un nivel mayor de omega-6, lo que hace menos óptimo su balance.',
+    'En Colombia, la mayor parte del salmón disponible proviene de Chile, principalmente de la Región de Los Lagos y Aysén. Aunque sigue siendo una fuente válida de omega-3, quienes buscan maximizar este nutriente pueden optar por variedades silvestres importadas o por pescados pequeños como la sardina, que suele encontrarse en conservas, aunque también puede conseguirse congelada o fresca en algunos mercados especializados.',
+    'El pollo, aunque popular, cumple un papel distinto: es una fuente de proteína magra de buena calidad, pero no ofrece un nutriente exclusivo como la carne roja con su hierro hemo o el pescado con sus omega-3. Por eso, muchas recomendaciones nutricionales priorizan el consumo de pescado graso y carne roja en cantidades moderadas, con el pollo como complemento.',
+    'En definitiva, una dieta que combine de manera equilibrada carne roja, pescado y otras fuentes proteicas puede cubrir de forma amplia las necesidades de micronutrientes esenciales. Priorizar pescados ricos en omega-3 y cortes de carne con buen aporte de hierro y zinc contribuye a un patrón alimentario variado y con beneficios comprobados para la salud.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'estilo de vida'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250910-01'
+},
+{
+  id: 'sardinas-en-colombia-opciones-saludables-2025-09-10',
+  fecha: '2025-09-10',
+  titulo: 'Sardinas en Colombia: alternativas más allá de la conserva en salsa',
+  pais: 'Colombia',
+  resumen: 'Aunque la sardina suele encontrarse en conserva con salsa de tomate, existen opciones frescas o congeladas en el mercado colombiano que permiten aprovechar su alto contenido de omega-3.',
+  contenido: [
+    'La sardina es uno de los pescados más ricos en ácidos grasos omega-3 y, a diferencia del salmón, suele comercializarse como silvestre. Sin embargo, en Colombia la presentación más común en supermercados son las conservas en salsa de tomate o en aceite vegetal.',
+    'Para quienes buscan alternativas más naturales, existen proveedores que ofrecen sardinas frescas o congeladas, empacadas al vacío, disponibles en tiendas especializadas de nutrición y en algunos distribuidores de mariscos. También pueden encontrarse de manera ocasional en las secciones de pescadería de supermercados con oferta de productos importados.',
+    'Otra opción es acudir a mercados digitales y aplicaciones de domicilios, donde la disponibilidad varía según la ciudad. En Bogotá y Medellín, por ejemplo, algunos distribuidores ofrecen sardinas frescas al por mayor o congeladas listas para preparar en casa.',
+    'Estas alternativas permiten acceder a una fuente económica y altamente nutritiva de omega-3, con la ventaja de evitar salsas o aceites añadidos. Consumidas a la plancha, al horno o en guisos caseros, las sardinas representan una opción práctica y saludable para complementar la dieta.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'estilo de vida'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250910-02'
+},
+{
+  id: 'salmon-silvestre-vs-cultivo-omega3-2025-09-10',
+  fecha: '2025-09-10',
+  titulo: 'Salmón silvestre vs. de cultivo: diferencias en el aporte de omega-3',
+  pais: 'Colombia',
+  resumen: 'Ambos tipos de salmón son fuentes importantes de ácidos grasos omega-3, pero el perfil nutricional del silvestre es más favorable que el del cultivado debido a su dieta natural.',
+  contenido: [
+    'El salmón es una de las principales fuentes de ácidos grasos omega-3 en la dieta. Sin embargo, el contenido de estos nutrientes varía según se trate de ejemplares silvestres o de cultivo.',
+    'El salmón silvestre se alimenta de peces pequeños, kril y plancton, lo que le permite acumular más EPA y DHA en su carne y mantener una proporción muy baja de omega-6. En promedio, 100 g de salmón silvestre aportan entre 500 y 800 mg de EPA+DHA, con una relación omega-6 : omega-3 cercana a 1:10.',
+    'El salmón de cultivo recibe piensos que incluyen aceites vegetales como soya o canola, ricos en omega-6. Esto aumenta el contenido graso total y mantiene un buen aporte de omega-3 (1.200 a 1.500 mg por cada 100 g), pero con una relación omega-6 : omega-3 menos favorable, a menudo de 1:1 o 2:1.',
+    'Ambos son fuentes valiosas de omega-3, pero quienes buscan un perfil graso más equilibrado pueden priorizar el salmón silvestre o alternar con otras especies ricas en EPA y DHA, como sardinas y caballa.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'estilo de vida'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250910-03'
+},
+{
+  id: 'especial-carne-y-pescado-en-la-dieta-2025-09-10',
+  fecha: '2025-09-10',
+  titulo: 'Especial EdVida: carne roja y pescado en el equilibrio nutricional',
+  pais: 'Colombia',
+  resumen: 'Un repaso práctico sobre los aportes diferenciales de la carne roja, el salmón y las sardinas en la dieta diaria. Tres notas que explican cómo optimizar el consumo de proteínas animales para obtener hierro, vitamina B12 y omega-3.',
+  contenido: [
+    'Este especial de la sección EdVida reúne tres artículos complementarios que exploran el papel de la carne roja y el pescado en la salud.',
+    '1) Carne roja y pescado: el equilibrio nutricional en la dieta — https://ledelab.co/carne-roja-y-pescado-equilibrio-nutricional-2025-09-10',
+    '2) Sardinas en Colombia: alternativas más allá de la conserva en salsa — https://ledelab.co/sardinas-en-colombia-opciones-saludables-2025-09-10',
+    '3) Salmón silvestre vs. de cultivo: diferencias en el aporte de omega-3 — https://ledelab.co/salmon-silvestre-vs-cultivo-omega3-2025-09-10',
+    'Juntas, estas notas ofrecen una guía clara para elegir proteínas animales con criterios nutricionales, priorizando tanto la calidad como la variedad.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'estilo de vida'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250910-04'
+},
+{
+  id: 'colombia-macroeconomia-duque-vs-petro-2025-09-10',
+  fecha: '2025-09-10',
+  titulo: 'Evolución de los indicadores macroeconómicos en Colombia: comparativo entre los gobiernos de Duque y Petro',
+  pais: 'Colombia',
+  resumen: 'Durante el cuatrienio de Iván Duque (2018–2022) y el trienio inicial de Gustavo Petro (2022–2025), los indicadores macroeconómicos de Colombia mostraron variaciones significativas en crecimiento, inflación, desempleo y pobreza.',
+  contenido: [
+    'Entre 2018 y 2022, la economía colombiana experimentó un crecimiento acumulado cercano al 6–7%, afectado por la contracción del -6,8% en 2020 debido a la pandemia. Sin embargo, la inflación acumulada en el mismo periodo alcanzó alrededor del 13%, lo que resultó en un crecimiento real negativo de aproximadamente -6% a -7%.',
+    'Durante los primeros tres años del gobierno de Gustavo Petro (2022–2025), el PIB mostró crecimientos más moderados: 1,7% en 2024 y 2,7% en el primer trimestre de 2025. La inflación anual se ubicó en 5,1% en agosto de 2025. Al comparar estos valores, el crecimiento real acumulado fue apenas negativo (-0,7%), menos desfavorable que en el periodo anterior.',
+    'El desempleo en el periodo de Duque alcanzó picos históricos durante la pandemia, rozando el 20% en 2020 y cerrando su mandato aún en niveles de dos dígitos. En contraste, bajo Petro la tasa de desempleo descendió de manera más consistente, llegando a 8,6% en junio de 2025, la cifra más baja para ese mes desde 2018, según el DANE.',
+    'En cuanto a la pobreza, durante el gobierno de Duque la pobreza monetaria aumentó de 34,7% en 2018 a un máximo de 39,3% en 2021. En cambio, bajo Petro se registró una reducción: en 2023 la pobreza fue de 34,6% y en 2024 bajó a 31,8%, el nivel más bajo en más de una década. Esta mejora implicó que 1,2 millones de personas salieran de la pobreza monetaria y 420 mil de la pobreza extrema, de acuerdo con cifras del DNP y el DANE.',
+    'La pobreza multidimensional también presentó avances en la actual administración: en 2024 se ubicó en 11,5%, 0,6 puntos porcentuales menos que en 2023, reflejando mejoras en acceso a servicios y condiciones de vida. Estos resultados contrastan con el periodo anterior, en el cual no se observaron reducciones sostenidas.',
+    'En síntesis, mientras que el gobierno de Duque enfrentó un deterioro en indicadores reales por el impacto de la pandemia y la inflación, el gobierno de Petro ha logrado una reducción más clara en pobreza y desempleo, aunque con un crecimiento económico más moderado.'
+  ],
+  etiquetas: ['colombia','economía','gustavo petro','resultados'],
+  fuente: { nombre: 'Noticias Neutrales' },
+  consecutivo_unico: '20250910-01'
+},
+{
+  id: 'salud-cerebral-amen-bartlett-2025-09-09',
+  fecha: '2025-09-09',
+  titulo: 'Salud cerebral y TDAH: hallazgos y recomendaciones en conversación con Daniel Amen',
+  pais: 'Internacional',
+  resumen: 'En una conversación del pódcast “The Diary of a CEO”, el médico Daniel Amen presentó y explicó resultados de exploraciones cerebrales realizadas al presentador Steven Bartlett, describiendo patrones compatibles con TDAH y proponiendo hábitos para optimizar la función cerebral.',
+  contenido: [
+    'El médico Daniel Amen expuso los resultados de pruebas aplicadas a Steven Bartlett, entre ellas un test de atención (Conners CPT) y una imagenología funcional de perfusión. Según su análisis, la combinación de antecedentes, desempeño en pruebas y patrones observados es compatible con TDAH en un subtipo que describe como “sobreenfocado”, sin que la imagen por sí sola constituya un diagnóstico independiente.',
+    'Amen señaló áreas con menor actividad relativa —incluida la corteza prefrontal izquierda— que relacionó con dificultades de inhibición y organización, y mencionó la posibilidad de impacto acumulado por traumatismos leves de infancia y adolescencia (por ejemplo, choques de cabeza jugando fútbol). Indicó que factores ambientales como moho o metales pesados también podrían contribuir y sugirió confirmarlos con pruebas específicas.',
+    'Sobre hábitos que perjudican la salud cerebral, destacó el consumo elevado de azúcares libres y bebidas azucaradas, el déficit de sueño, el uso de alcohol y cannabis, y el tiempo excesivo en pantallas. Afirmó que, a medida que aumenta el peso corporal, disminuyen el tamaño y la función cerebral, y advirtió que la exposición constante a recompensas digitales puede “desgastar” los centros de placer y motivación.',
+    'Entre las intervenciones de estilo de vida, recomendó ejercicio regular y alimentación que favorezca el flujo sanguíneo cerebral (mencionó especias y vegetales como remolacha), además de un consumo adecuado de ácidos grasos omega-3. Para ciertos casos, citó el uso de extracto de ginkgo y, bajo indicación médica, oxigenoterapia hiperbárica, con el objetivo de mejorar perfusión y energía cerebral.',
+    'Respecto al sueño, explicó el papel del sistema glinfático, que facilita la “limpieza” de subproductos metabólicos durante la noche. Señaló que trastornos como la apnea del sueño se asocian con patrones de actividad cerebral reducida en zonas parietales y con mayor riesgo de deterioro cognitivo si no se tratan adecuadamente.',
+    'En salud mental, propuso abordar primero las causas (“por qué”) antes que el síntoma (“qué”), considerando hormonas, infecciones, deficiencias nutricionales (como vitamina D) y eventos vitales. Para el manejo de pensamientos negativos, describió un ejercicio de registro y cuestionamiento sistemático de “pensamientos automáticos” con el fin de reducir su impacto conductual.',
+    'Sobre el TDAH en adultos, sugirió una ruta escalonada: optimización del estilo de vida, apoyo psicoeducativo y, si procede, tratamiento farmacológico individualizado, enfatizando que los fármacos no deben ser la primera ni la única medida. Señaló variabilidad interindividual: algunas personas los usan puntualmente para tareas que requieren concentración prolongada, mientras otras priorizan intervenciones no farmacológicas.',
+    'En el ámbito de adicciones y hábitos culturales, desaconsejó el consumo de alcohol por su asociación con menor perfusión y alteraciones de la sustancia blanca, incluso con ingestas moderadas. También vinculó la soledad y el aislamiento con peores resultados cerebrales, por lo que recomendó fortalecer la conexión social como parte del plan de salud.',
+    'Por último, subrayó que “no se está condenado al cerebro que se tiene”: la función puede mejorar con intervenciones sostenidas y medición de marcadores como el sueño y la variabilidad de la frecuencia cardíaca. Reiteró que el objetivo es “optimizar el cerebro” para impactar positivamente el ánimo, la conducta y el desempeño global, más que etiquetar a las personas con diagnósticos.',
+    'Fuentes citadas:\n1) The Diary of a CEO (YouTube): https://www.youtube.com/watch?v=ycTZ_t-aiuU'
+  ],
+  etiquetas: ['salud', 'alimentación', 'nutrición', 'tecnología', 'investigación','estilo de vida'],
+  fuente: { nombre: 'The Diary of a CEO (YouTube)', url: 'https://www.youtube.com/watch?v=ycTZ_t-aiuU' },
+  consecutivo_unico: '20250909-01'
+},
+{
+  id: 'sistema-nacional-contra-la-macrocorrupcion-cepeda-2025-09-06',
+  fecha: '2025-09-06',
+  titulo: 'Iván Cepeda presenta en Cali propuesta de Sistema Nacional contra la Macrocorrupción',
+  pais: 'Colombia',
+  resumen: 'El 6 de septiembre de 2025, en Cali, Iván Cepeda presentó una propuesta de “Sistema Nacional contra la Macrocorrupción” con cinco pilares: prevención y transparencia, investigación especializada, juzgamiento con reparación, presencia territorial y movilización ciudadana.',
+  contenido: [
+    '¿Qué ocurrió? El precandidato Iván Cepeda expuso en Cali la propuesta de crear un “Sistema Nacional contra la Macrocorrupción”. ¿Cuándo y dónde? 6 de septiembre de 2025, Santiago de Cali. ¿Quién? Iván Cepeda y organizaciones sociales presentes en el evento. ¿Cómo y por qué? Mediante una arquitectura institucional coordinada para prevenir, investigar y sancionar redes de corrupción de gran escala.',
+    'La propuesta se estructura en cinco pilares: (1) transparencia, prevención e información —con fortalecimiento de la UIAF, autonomía técnica y presupuestal para la Secretaría de Transparencia y operación plena del Portal Anticorrupción de Colombia (PACO); (2) investigación y juzgamiento con enfoque de macrocriminalidad —incluida una unidad especializada en la Fiscalía y una instancia de juzgamiento para casos sistémicos; (3) reparación integral —creación de un Fondo de Reparación para víctimas de la corrupción y destino sectorial de bienes recuperados; (4) presencia prioritaria en territorios con mayores riesgos; y (5) movilización y veeduría ciudadana.',
+    'Según lo expuesto, el objetivo es pasar de respuestas fragmentadas a una coordinación “de principio a fin”, con trazabilidad del gasto, alertas tempranas y recuperación de activos para resarcir daños en los sectores afectados.'
+  ],
+  etiquetas: ['política', 'colombia'],
+  fuente: { nombre: 'YouTube — “PRIMERA PROPUESTA: EL SISTEMA NACIONAL CONTRA LA MACROCORRUPCIÓN”', url: 'https://www.youtube.com/watch?v=XB9gCY0BJvY' },
+  url_fuente: 'https://www.youtube.com/watch?v=XB9gCY0BJvY',
+  consecutivo_unico: '20250906-01'
+},
+{
   id: 'reforma-tributaria-sector-carbon-petroleo-2025-09-09',
   fecha: '2025-09-09',
   titulo: 'Gobierno Petro presenta tercera reforma tributaria con impacto en carbón y petróleo',
@@ -1002,7 +1125,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'El analista sostuvo que, aunque hay resistencia de parte de algunos sectores empresariales y políticos, también ha habido disposición de otros para alcanzar acuerdos, mencionando ejemplos de cooperación en proyectos de infraestructura y abastecimiento de agua. Reiteró que el éxito legislativo del Ejecutivo depende de mantener consensos y evitar la polarización interna.',
     'En su balance, Caballero expresó optimismo sobre los cambios sociales en marcha y consideró que Colombia necesitaba un gobierno con las características del actual, aunque cuestionó la renuncia del presidente a ciertas tareas de gobernar. Invitó a centrar esfuerzos en consolidar los avances económicos y sociales alcanzados en estos dos años y medio de mandato.'
   ],
-  etiquetas: ['colombia', 'gustavo petro', 'política', 'resultados', 'encuestas','conversaciones pendientes'],
+  etiquetas: ['colombia', 'gustavo petro', 'política', 'resultados', 'encuestas','conversaciones pendientes','podcast'],
   fuente: { nombre: 'Conversaciones Pendientes', url: 'https://www.youtube.com/watch?v=7b3kV-v5YR8' },
   url_fuente: 'https://www.youtube.com/watch?v=7b3kV-v5YR8',
   consecutivo_unico: '20250815-01'
@@ -1023,7 +1146,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Cepeda insistió en que su propósito no es la venganza, sino propiciar un acuerdo nacional que permita reconocer responsabilidades y llegar a la verdad de lo ocurrido. Defendió que la base de una democracia sólida es el esclarecimiento histórico y la justicia restaurativa, que incluya a todos los sectores afectados.',
     'Finalmente, expresó que la audiencia y el fallo que se avecinan representan una oportunidad para que el país reflexione sobre las estructuras de poder que han marcado su historia reciente y para avanzar hacia un modelo de justicia que priorice a las víctimas y la reparación social.'
   ],
-  etiquetas: ['colombia', 'política', 'investigación', 'medios', 'conversaciones pendientes'],
+  etiquetas: ['colombia', 'política', 'investigación', 'medios', 'conversaciones pendientes','podcast'],
   fuente: { nombre: 'YouTube - Conversaciones Pendientes', url: 'https://www.youtube.com/watch?v=-MpoeVZzaO8' },
   url_fuente: 'https://www.youtube.com/watch?v=-MpoeVZzaO8',
   consecutivo_unico: '20250727-01'
@@ -1039,7 +1162,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Avella describió la represión estatal contra dirigentes y militantes de izquierda, señalando que la persecución afectaba tanto a jóvenes como a personas mayores. Relató experiencias de semiclandestinidad, vigilancia y hostigamiento, y recordó que durante décadas el país estuvo bajo estados de sitio casi permanentes, lo que limitaba la participación política.',
     'También abordó el impacto del 19 de abril de 1970, cuando el presunto fraude electoral que favoreció a Misael Pastrana sobre Gustavo Rojas Pinilla generó descontento y un sentimiento de impotencia en amplios sectores sociales. Avella relacionó este hecho con la radicalización de algunos movimientos y la posterior formación de la Unión Patriótica, resaltando la importancia de la organización sindical y social en medio de la represión.'
   ],
-  etiquetas: ['colombia', 'política', 'unión patriótica','conversaciones pendientes'],
+  etiquetas: ['colombia', 'política', 'unión patriótica','conversaciones pendientes','podcast'],
   fuente: { nombre: 'YouTube - Conversaciones pendientes', url: 'https://www.youtube.com/watch?v=gAElF8Fo1to' },
   url_fuente: 'https://www.youtube.com/watch?v=gAElF8Fo1to',
   consecutivo_unico: '20250815-01'
@@ -1094,7 +1217,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En su intervención, hizo un recorrido histórico desde la independencia en 1819 hasta la Constitución de 1991, enfatizando que la desigualdad y la exclusión han persistido a lo largo de dos siglos. Llamó a rechazar la “canción del Destripador”, que simboliza discursos de odio y miedo, y a reconocer los avances, aunque sean insuficientes.',
     'Correa concluyó invitando a quienes se sienten distantes del proceso de cambio a reflexionar y participar en el diálogo nacional, resaltando que no hay dos mitades equivalentes y que es posible construir un país más justo e incluyente.'
   ],
-  etiquetas: ['colombia', 'política', 'gustavo petro', 'editorial', 'medios','conversaciones pendientes'],
+  etiquetas: ['colombia', 'política', 'gustavo petro', 'editorial', 'medios','conversaciones pendientes','podcast'],
   fuente: { nombre: 'YouTube - Ministerio de Cultura de Colombia', url: 'https://www.youtube.com/watch?v=JVWLXGnG0j0' },
   url_fuente: 'https://www.youtube.com/watch?v=JVWLXGnG0j0',
   consecutivo_unico: '20250807-01'
