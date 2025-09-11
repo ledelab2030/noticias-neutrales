@@ -49,6 +49,61 @@ function sanitizeTags(tags: string[] = []): string[] {
 // === Datos en bruto ===
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
+{
+  id: 'vulnerabilidad-salarial-colombia-dane-2025-09-09',
+  fecha: '2025-09-09',
+  titulo: 'DANE establece umbral de vulnerabilidad salarial en Colombia',
+  pais: 'Colombia',
+  resumen: 'El DANE señaló que un salario inferior a 1,47 millones de pesos mensuales coloca a una persona en situación de vulnerabilidad económica.',
+  contenido: [
+    'El Departamento Administrativo Nacional de Estadística (DANE) identificó que quienes perciben menos de aproximadamente $1.470.000 mensuales se encuentran en estado de vulnerabilidad económica.',
+    'Este umbral refleja el límite entre pobreza y vulnerabilidad, indicando una franja crítica en la capacidad de satisfacer necesidades básicas.',
+    'El dato proviene de un análisis reciente del DANE divulgado por El Tiempo el 9 de septiembre de 2025.'
+  ],
+  etiquetas: ['economía', 'finanzas personales', 'Colombia'],
+  fuente: {
+    nombre: 'El Tiempo',
+    url: 'https://www.eltiempo.com/economia/finanzas-personales/si-su-salario-es-inferior-a-este-monto-se-encuentra-en-un-estado-de-vulnerabilidad-en-colombia-de-acuerdo-con-los-datos-del-dane-3488976'
+  },
+  url_fuente: 'https://www.eltiempo.com/economia/finanzas-personales/si-su-salario-es-inferior-a-este-monto-se-encuentra-en-un-estado-de-vulnerabilidad-en-colombia-de-acuerdo-con-los-datos-del-dane-3488976',
+  consecutivo_unico: '20250909-01'
+},
+{
+  id: 'explosion-camion-gas-ciudad-mexico-2025-09-10',
+  fecha: '2025-09-10',
+  titulo: 'Explosión de camión de gas deja más de 50 heridos en Ciudad de México',
+  pais: 'Internacional',
+  resumen: 'Un camión de gas explotó en un puente vehicular en Ciudad de México, provocando una grave emergencia con más de 50 personas heridas y fuertes afectaciones a la movilidad.',
+  contenido: [
+    'El 10 de septiembre de 2025 se registró una explosión de un camión de gas en un puente vehicular de la Ciudad de México. El incidente generó una emergencia de gran magnitud, con la intervención de cuerpos de rescate y atención médica inmediata en la zona.',
+    'De acuerdo con reportes oficiales, más de 50 personas resultaron heridas, algunas de ellas de gravedad. Las autoridades informaron que el fuego alcanzó varios vehículos que circulaban por el lugar y que fue necesaria la evacuación de transeúntes y automovilistas.',
+    'El tránsito en la zona quedó bloqueado mientras se realizaban labores de control del incendio y traslado de heridos a hospitales cercanos. Equipos de bomberos, protección civil y servicios de salud trabajan de manera coordinada para atender la emergencia.',
+    'Hasta el momento no se han reportado víctimas mortales. Las autoridades locales investigan las causas del accidente y evalúan los daños estructurales en el puente afectado.'
+  ],
+  etiquetas: ['seguridad', 'internacional'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/mundo/mexico/video-grave-emergencia-en-ciudad-de-mexico-por-explosion-de-camion-de-gas-en-importante-puente-vehicular-hay-mas-de-50-personas-heridas-3489572' },
+  url_fuente: 'https://www.eltiempo.com/mundo/mexico/video-grave-emergencia-en-ciudad-de-mexico-por-explosion-de-camion-de-gas-en-importante-puente-vehicular-hay-mas-de-50-personas-heridas-3489572',
+  consecutivo_unico: '20250910-01'
+},
+{
+  id: 'debate-carolina-corcho-paloma-valencia-2025-09-11',
+  fecha: '2025-09-11',
+  titulo: 'Carolina Corcho y Paloma Valencia exponen visiones sobre seguridad y paz en la Universidad Militar',
+  pais: 'Colombia',
+  resumen: 'En la Universidad Militar Nueva Granada se realizó un encuentro académico con las precandidatas Carolina Corcho y Paloma Valencia, centrado en seguridad multidimensional, narcotráfico, paz y políticas sociales. Corcho intervino primero; Valencia se incorporó más tarde y ambas respondieron preguntas del auditorio.',
+  contenido: [
+    'El 10 de septiembre de 2025, la Universidad Militar Nueva Granada (Bogotá) convocó un debate académico sobre “seguridad multidimensional, visión estratégica e impacto en Colombia 2026”. La sesión inició con la exposición de Carolina Corcho; posteriormente se integró Paloma Valencia ante un auditorio compuesto por estudiantes y docentes y con miles de personas conectadas en línea.',
+    'Corcho planteó la seguridad humana y multidimensional como marco orientador, con énfasis en proteger la vida de comunidades y fuerza pública, y en abordar causas estructurales como pobreza, desigualdad y acceso a salud y educación. Propuso reencauzar la sustitución de cultivos ilícitos en municipios críticos (incluidos Catatumbo y Cañón del Micay), mantener presencia integral del Estado y fortalecer inteligencia y contrainteligencia con desarrollo tecnológico propio. Sobre “paz total”, defendió replantearla con condiciones: diálogo sin ceses al fuego que faciliten el delito y líneas rojas frente a secuestro, reclutamiento de menores y actos terroristas.',
+    'Valencia centró su intervención en la necesidad de resultados para la democracia y en la recuperación económica y de la seguridad. Señaló preocupaciones sobre déficit fiscal y sobre el funcionamiento del sistema de salud, y propuso robustecer la fuerza pública (incluida la incorporación de reservistas), aumentar capacidad de inteligencia financiera, perseguir cabecillas mediante imputación por línea de mando, controlar precursores químicos e incautaciones, y usar herramientas de trazabilidad económica (p. ej., blockchain) contra el lavado de activos.',
+    'En materia social y educativa, Corcho enfatizó inversión pública sostenida, acceso gratuito a educación superior y reforma de la salud con enfoque preventivo y territorial. Valencia defendió ampliar opciones para familias mediante bonos escolares y promover una agenda de crecimiento que atraiga industrias de alta tecnología y refuerce la seguridad energética.',
+    'En relaciones exteriores, Corcho subrayó la cooperación con países vecinos y principios de soberanía y no injerencia para enfrentar fenómenos transnacionales (narcotráfico, minería ilegal y lavado). Valencia reiteró su rechazo a regímenes no democráticos en la región, planteó respaldo a Israel con atención a la situación humanitaria en Gaza y expresó reparos a la influencia de Rusia en América Latina.',
+    'Durante la ronda de preguntas, se confrontaron posturas sobre financiamiento de reformas sociales, el rol de la fuerza pública y los instrumentos jurídicos para sometimiento a la justicia de estructuras criminales. En sus cierres, Corcho insistió en medir la seguridad en vidas preservadas y mantener la presencia estatal sin vulneración de derechos humanos; Valencia llamó a una coalición de “demócratas” para garantizar seguridad como base del desarrollo e impulsar a Colombia como potencia energética y tecnológica.'
+  ],
+  etiquetas: ['colombia','política','seguridad','carolina corcho','paloma valencia'],
+  fuente: { nombre: 'Universidad Militar Nueva Granada (transmisión del evento en YouTube)', url: 'https://www.youtube.com/watch?v=RtVhIGTH0Fc' },
+  url_fuente: 'https://www.youtube.com/watch?v=RtVhIGTH0Fc',
+  consecutivo_unico: '20250911-01'
+},
   {
   id: 'correlaciones-bienestar-irreligion-2025-09-09',
   fecha: '2025-09-10',

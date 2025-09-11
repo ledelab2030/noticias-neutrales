@@ -1,49 +1,130 @@
-# Noticias Neutrales
+Noticias Neutrales
 
-Este es un proyecto [Next.js](https://nextjs.org) inicializado con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Portal de noticias desarrollado con Next.js 15.4.6 y Tailwind CSS 4.1.11, desplegado en Vercel.
+El objetivo es ofrecer información neutral, verificada y organizada para audiencias de Latinoamérica y otros países prioritarios.
 
----
+------------------------------------------------------------
+🚀 Inicio rápido
 
-## 📌 Nota sobre esta versión (Backup)
-Este backup corresponde a la versión estable previa al despliegue en **Vercel**, con integración de:
-- **Next.js 15.4.6** y **Tailwind CSS v4.1.11** configurado y funcionando.
-- Soporte de tema claro/oscuro.
-- Implementación de **branding dinámico** con `LogoWithSuffix` y `AutoBrand`.
-- Páginas estáticas y dinámicas para:
-  - `/`
-  - `/estilo-de-vida` y `/estilo-de-vida/[id]`
-  - `/noticias` y `/noticias/[id]`
-- Integración de **lista de países prioritarios** para la selección de noticias:contentReference[oaicite:0]{index=0}.
-- Ajustes de diseño en `globals.css`, `layout.tsx` y `Header.tsx` para tipografía selectiva (Montserrat) y estructura general.
-- Limpieza de configuración duplicada de Tailwind y PostCSS.
-- Correcciones de tipado y eliminación de advertencias críticas para `next build`.
+Ejecutar servidor de desarrollo:
+  npm run dev
+  # o yarn dev / pnpm dev / bun dev
 
-Este backup se guarda como **versión base de producción inicial** para futuras iteraciones.
+Abrir http://localhost:3000
 
----
+Build de producción:
+  npm run build
+  npm start
 
-## 🚀 Comenzar
+------------------------------------------------------------
+📂 Estructura clave del proyecto
 
-Ejecuta el servidor de desarrollo:
+src/
+ ├─ app/
+ │   ├─ boletin/             # /boletin y /boletin/[id]
+ │   ├─ noticias/            # /noticias y /noticias/[id]
+ │   ├─ estilo-de-vida/      # /estilo-de-vida y dinámicas
+ │   ├─ conversaciones/      # entrevistas y diálogos
+ │   └─ api/                 # endpoints (si se usan)
+ ├─ data/
+ │   ├─ noticias.ts          # noticias (codnnv1)
+ │   ├─ conversaciones.ts    # entrevistas (codconver)
+ │   ├─ tags.ts              # catálogo de etiquetas
+ │   └─ ...
+ ├─ public/
+ │   ├─ newsletters/         # boletines generados
+ │   └─ og-default.jpg       # imagen por defecto OG/Twitter
+ └─ scripts/
+     └─ genera-newsletter.ts
 
-```bash
-npm run dev
-# o
-yarn dev
-# o
-pnpm dev
-# o
-bun dev
-Abre http://localhost:3000 en tu navegador para ver el resultado.
+------------------------------------------------------------
+📰 Datos y codificación de contenido
 
-📚 Más información
-Documentación de Next.js
+Noticias (src/data/noticias.ts):
+- Seguir instructivo codnnv1.
+- Tipo base NoticiaRaw con campos: id, fecha, titulo, pais, resumen, contenido[], etiquetas[], fuente, url_fuente, consecutivo_unico, imagen.
+- Export nombrado:
+  export const noticias: NoticiaRaw[] = [ ... ]
+  export default noticias
+- Etiquetas deben provenir del catálogo TAGS (src/data/tags.ts).
 
-Tutorial interactivo de Next.js
+Conversaciones/entrevistas (src/data/conversaciones.ts):
+- Seguir instructivo codconver.
+- Tipo base ConversacionRaw con: id, fecha, titulo, participantes[], dialogo[], etiquetas[], fuente.
 
-Repositorio oficial de Next.js en GitHub
+------------------------------------------------------------
+✍️ Manual editorial
 
+Estilo de redacción:
+1. Neutralidad: sin adjetivos valorativos ni especulación.
+2. Claridad: párrafos de 2–5 líneas.
+3. Fuentes verificables: siempre incluir fuente y url_fuente.
+4. Citas: entre comillas y con atribución.
+5. Enfoque: hechos ya ocurridos, no pronósticos ni rumores.
+
+Etiquetas:
+- Se normalizan automáticamente (sanitizeTags).
+- Usar solo valores en src/data/tags.ts.
+
+Países prioritarios:
+- Principales: Colombia, Estados Unidos, Canadá, Estonia, Ecuador, Guatemala, Argentina, Perú, Panamá, Costa Rica.
+- Adicionales: China, Alemania, Corea del Sur, Líbano, España, Portugal, Sudáfrica.
+
+------------------------------------------------------------
+📰 Generación de boletines
+
+El script scripts/genera-newsletter.ts genera boletines en public/newsletters/.
+
+Diario (fecha actual):
+  npm run nl:diario
+
+Semanal (últimos 7 días hasta hoy):
+  npm run nl:semanal
+
+Boletines de una fecha específica:
+  # diario en fecha concreta
+  npm run nl:diario -- --fecha=2025-09-09
+
+  # semanal con rango exacto
+  npm run nl:semanal -- --desde=2025-08-23 --hasta=2025-08-29
+
+  # semanal indicando solo fecha de cierre
+  npm run nl:semanal -- --hasta=2025-08-29
+
+------------------------------------------------------------
+🔑 Buenas prácticas para responsables
+
+1. Agregar noticias siguiendo codnnv1.
+2. Agregar entrevistas siguiendo codconver.
+3. Etiquetas: usar solo las de tags.ts.
+4. Boletines: ejecutar scripts diario y semanalmente, revisar en /boletin y /boletin/[id].
+5. SEO/OG: todas las páginas usan /og-default.jpg como imagen por defecto.
+6. Despliegue: Vercel build automático al hacer git push en rama main.
+
+------------------------------------------------------------
 ☁️ Despliegue en Vercel
-La forma más fácil de desplegar este proyecto es usar la Plataforma Vercel, creadores de Next.js.
 
-Consulta la documentación de despliegue para más detalles.
+- Deploy automático al hacer git push main.
+- Archivos estáticos (public/newsletters/*) se sirven directamente en la web.
+- Verifica logs en Vercel si el build falla (npm run build local primero).
+
+------------------------------------------------------------
+📌 Resumen de comandos útiles
+
+# desarrollo local
+npm run dev
+
+# build de producción
+npm run build
+
+# boletín diario (hoy)
+npm run nl:diario
+
+# boletín semanal (últimos 7 días)
+npm run nl:semanal
+
+# boletín diario de fecha específica
+npm run nl:diario -- --fecha=YYYY-MM-DD
+
+# boletín semanal rango exacto
+npm run nl:semanal -- --desde=YYYY-MM-DD --hasta=YYYY-MM-DD
