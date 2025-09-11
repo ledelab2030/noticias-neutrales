@@ -49,6 +49,32 @@ function sanitizeTags(tags: string[] = []): string[] {
 // === Datos en bruto ===
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
+  
+{
+  id: "pirry-planeta-no-necesita-que-lo-salven-2025-09-11",
+  fecha: "2025-09-11",
+  titulo: "Pirry: El planeta no necesita que lo salven; la cuestión es si vamos a salvarnos nosotros",
+  pais: "Colombia",
+  resumen: "En el podcast Aprendamos Juntos 2030 (BBVA), Pirry plantea que la Tierra seguirá existiendo más allá de la especie humana. La verdadera pregunta es si nosotros lograremos sobrevivir como especie, al depender del equilibrio ecológico.",
+  contenido: [
+    "En una intervención del episodio de Aprendamos Juntos 2030 (BBVA), Guillermo Prieto “Pirry” respondió a una pregunta sobre los océanos y planteó un cambio de perspectiva: no se trata de salvar al planeta, sino de reconocer que dependemos de él para sobrevivir.",
+    "Pirry señaló: “Siento que si el océano nos dice algo no es ‘ayúdame’, ‘sálvame’. No. Es… ‘yo puedo existir sin ti, tú no puedes existir sin mí’. El océano produce el 50 % del oxígeno que respiramos… El océano está en un estado crítico, pero el océano se recuperará”.",
+    "Añadió: “El planeta no necesita que lo salven. El planeta está aquí hace millones y millones de años… Podemos lanzarnos todas nuestras armas atómicas y, con cuatro bacterias que sobrevivan, esto se vuelve a poner otra vez verde y azul. No es si vamos a salvar el planeta, es si nos vamos a salvar nosotros”.",
+    "La charla también dejó reflexiones sobre la escala del tiempo: al descender el Salto Ángel en Venezuela, Pirry contrastó formaciones de dos mil millones de años con la presencia humana estimada en apenas 200.000 años, lo que lo llevó a enfatizar que somos apenas un instante frente a la historia geológica.",
+    "Otros apartes abordaron la relación entre humanidad y naturaleza: la observación de gorilas de montaña en Virunga y la deforestación vecina, la cirugía de emergencia a un elefante herido por caza furtiva en África y el contacto cercano con ballenas en Tonga, experiencias que reforzaron su idea de que la ley natural es el equilibrio, no la moralidad.",
+    "Pirry concluyó recordando el caso de la moratoria internacional de caza de ballenas en los años ochenta y la recuperación de esas poblaciones como prueba de que, cuando la humanidad acuerda prioridades y actúa con decisión, la vida responde."
+  ],
+  etiquetas: [
+    "medio ambiente",
+    "cambio climático",
+    "biodiversidad",
+    "conciencia ecológica",
+    "podcast",
+    "aprendamos juntos 2030"
+  ],
+  fuente: { nombre: "BBVA Aprendamos Juntos 2030 (YouTube)", url: "https://www.youtube.com/watch?v=s_GG3W5hfK0" },
+  consecutivo_unico: "20250911-01"
+},
 {
   id: 'ivan-cepeda-tercer-discurso-revolucion-etica-2025-09-10',
   fecha: '2025-09-11',
