@@ -202,8 +202,7 @@ export default function Page() {
           <div>
             <h3 className="text-lg font-semibold">¿Colaboremos?</h3>
             <p className="text-sm text-neutral-600 dark:text-neutral-300">
-              Si tu organización busca acelerar proyectos de sostenibilidad o
-              transformación digital, conversemos.
+              Si deseas orientación para incrementar tu independencia profesional, mejorar tu estilo de vida y salud, conversemos.
             </p>
           </div>
           <div className="flex gap-3">
@@ -214,7 +213,7 @@ export default function Page() {
               Escribir a Leonardo
             </Link>
             <Link
-              href="/contacto"
+              href="https://calendly.com/ledelab"
               className="rounded-2xl bg-black px-4 py-2 text-sm text-white hover:opacity-90 dark:bg-white dark:text-black"
             >
               Agenda un espacio ↗
