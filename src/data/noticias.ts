@@ -50,6 +50,23 @@ function sanitizeTags(tags: string[] = []): string[] {
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 {
+  id: 'ivan-cepeda-tercer-discurso-revolucion-etica-2025-09-10',
+  fecha: '2025-09-10',
+  titulo: 'Iván Cepeda plantea una revolución ética desde la defensa de los derechos humanos',
+  pais: 'Colombia',
+  resumen: 'En su tercer discurso como precandidato presidencial del Pacto Histórico, el senador Iván Cepeda expuso en la Universidad Nacional la necesidad de una “revolución ética” basada en la verdad de las víctimas y la defensa de la dignidad humana.',
+  contenido: [
+    'El senador Iván Cepeda, precandidato del Pacto Histórico, presentó su tercer discurso titulado “¿Qué significa una revolución ética desde la defensa de la humanidad?” durante un acto en la Universidad Nacional de Colombia en el Día Nacional de los Derechos Humanos. En su intervención, destacó el papel transformador de las luchas sociales y de las víctimas de crímenes de lesa humanidad en la construcción de una cultura de derechos en el país.',
+    'Cepeda recordó figuras como Jesús María Valle y Héctor Abad Gómez, defensores asesinados, y señaló que en Colombia los derechos humanos han sido fruto de movilizaciones persistentes más que de concesiones estatales. Subrayó que las mujeres, en particular las madres buscadoras de desaparecidos, han sido esenciales en la visibilización de crímenes como la desaparición forzada y los falsos positivos.',
+    'El precandidato advirtió sobre el riesgo de una “parálisis moral” producto de la violencia prolongada, que normaliza las atrocidades y erosiona la conciencia ética. Frente a ello, afirmó que el poder de la verdad de las víctimas es fundamental para reactivar la empatía social, desenmascarar a los responsables de graves crímenes y abrir camino hacia la reconciliación y la paz.',
+    'Finalmente, en un pronunciamiento internacional, Cepeda condenó lo que calificó como genocidio contra el pueblo palestino en Gaza, en el marco de su reflexión sobre la defensa de los derechos humanos en Colombia y en el mundo.',
+    'Fuente citada: Video completo del discurso en YouTube https://www.youtube.com/watch?v=vfvMnExauPA'
+  ],
+  etiquetas: ['colombia', 'política', 'unión patriótica','ivan cepeda'],
+  fuente: { nombre: 'YouTube', url: 'https://www.youtube.com/watch?v=vfvMnExauPA' },
+  consecutivo_unico: '20250910-03'
+},
+{
   id: 'vulnerabilidad-salarial-colombia-dane-2025-09-09',
   fecha: '2025-09-09',
   titulo: 'DANE establece umbral de vulnerabilidad salarial en Colombia',
@@ -72,7 +89,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: 'explosion-camion-gas-ciudad-mexico-2025-09-10',
   fecha: '2025-09-10',
   titulo: 'Explosión de camión de gas deja más de 50 heridos en Ciudad de México',
-  pais: 'Internacional',
+  pais: 'México',
   resumen: 'Un camión de gas explotó en un puente vehicular en Ciudad de México, provocando una grave emergencia con más de 50 personas heridas y fuertes afectaciones a la movilidad.',
   contenido: [
     'El 10 de septiembre de 2025 se registró una explosión de un camión de gas en un puente vehicular de la Ciudad de México. El incidente generó una emergencia de gran magnitud, con la intervención de cuerpos de rescate y atención médica inmediata en la zona.',
@@ -80,7 +97,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'El tránsito en la zona quedó bloqueado mientras se realizaban labores de control del incendio y traslado de heridos a hospitales cercanos. Equipos de bomberos, protección civil y servicios de salud trabajan de manera coordinada para atender la emergencia.',
     'Hasta el momento no se han reportado víctimas mortales. Las autoridades locales investigan las causas del accidente y evalúan los daños estructurales en el puente afectado.'
   ],
-  etiquetas: ['seguridad', 'internacional'],
+  etiquetas: ['seguridad', 'Mexico'],
   fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/mundo/mexico/video-grave-emergencia-en-ciudad-de-mexico-por-explosion-de-camion-de-gas-en-importante-puente-vehicular-hay-mas-de-50-personas-heridas-3489572' },
   url_fuente: 'https://www.eltiempo.com/mundo/mexico/video-grave-emergencia-en-ciudad-de-mexico-por-explosion-de-camion-de-gas-en-importante-puente-vehicular-hay-mas-de-50-personas-heridas-3489572',
   consecutivo_unico: '20250910-01'

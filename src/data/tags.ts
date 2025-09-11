@@ -48,6 +48,7 @@ export const TAGS = [
   'izquierda',
   'medios',
   'medio ambiente',
+  'mexico',
   'nutrición',
   'opinion',
   'ozempic',
