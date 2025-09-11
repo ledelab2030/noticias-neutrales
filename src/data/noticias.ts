@@ -51,7 +51,7 @@ const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 {
   id: 'ivan-cepeda-tercer-discurso-revolucion-etica-2025-09-10',
-  fecha: '2025-09-10',
+  fecha: '2025-09-11',
   titulo: 'Iván Cepeda plantea una revolución ética desde la defensa de los derechos humanos',
   pais: 'Colombia',
   resumen: 'En su tercer discurso como precandidato presidencial del Pacto Histórico, el senador Iván Cepeda expuso en la Universidad Nacional la necesidad de una “revolución ética” basada en la verdad de las víctimas y la defensa de la dignidad humana.',
@@ -68,7 +68,7 @@ const noticiasRaw: NoticiaRaw[] = [
 },
 {
   id: 'vulnerabilidad-salarial-colombia-dane-2025-09-09',
-  fecha: '2025-09-09',
+  fecha: '2025-09-11',
   titulo: 'DANE establece umbral de vulnerabilidad salarial en Colombia',
   pais: 'Colombia',
   resumen: 'El DANE señaló que un salario inferior a 1,47 millones de pesos mensuales coloca a una persona en situación de vulnerabilidad económica.',
@@ -87,7 +87,7 @@ const noticiasRaw: NoticiaRaw[] = [
 },
 {
   id: 'explosion-camion-gas-ciudad-mexico-2025-09-10',
-  fecha: '2025-09-10',
+  fecha: '2025-09-11',
   titulo: 'Explosión de camión de gas deja más de 50 heridos en Ciudad de México',
   pais: 'México',
   resumen: 'Un camión de gas explotó en un puente vehicular en Ciudad de México, provocando una grave emergencia con más de 50 personas heridas y fuertes afectaciones a la movilidad.',

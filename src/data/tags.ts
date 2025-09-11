@@ -44,7 +44,7 @@ export const TAGS = [
   'guardia nacional',
   'gustavo petro',
   'investigación',
-  'Iván Cepeda',
+  'Ivan Cepeda',
   'izquierda',
   'medios',
   'medio ambiente',
