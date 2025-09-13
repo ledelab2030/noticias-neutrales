@@ -49,7 +49,50 @@ function sanitizeTags(tags: string[] = []): string[] {
 // === Datos en bruto ===
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
-  
+
+{
+  id: 'rtvc-cambio-de-nombre-inravision-2025-09-12',
+  fecha: '2025-09-12',
+  titulo: 'RTVC anuncia cambio de nombre y recuperación de la marca Inravisión',
+  pais: 'Colombia',
+  resumen: 'El gerente de RTVC, Hollman Morris, confirmó que el sistema de medios públicos adoptará el nombre Inravisión, como parte de un proceso de transformación institucional y de fortalecimiento de su identidad histórica.',
+  contenido: [
+    'El gerente de RTVC, Hollman Morris, anunció este 12 de septiembre que el sistema de medios públicos cambiará su nombre y pasará a denominarse Inravisión, recuperando así la marca que tuvo hasta comienzos de la década de 2000.',
+    'Según Morris, la decisión busca fortalecer la identidad cultural y la memoria colectiva en torno a la televisión pública, además de resaltar la misión de servicio al país que caracteriza a los medios estatales.',
+    'El cambio se enmarca en un proceso de reorganización institucional que incluye ajustes en la programación y la modernización de plataformas digitales, con el objetivo de ampliar el alcance de los contenidos públicos.',
+    'El anuncio fue realizado a través de RTVC Noticias y en redes sociales oficiales, sin que hasta el momento se haya especificado la fecha exacta en la que se formalizará el cambio de nombre.'
+  ],
+  etiquetas: ['colombia','medios'],
+  fuente: { nombre: 'RTVC Noticias', url: 'https://www.rtvcnoticias.com/actualidad/rtvc/hollman-morris-anuncia-cambio-de-nombre-de-rtvc-inravision?fbclid=IwVERTSAMxg3xleHRuA2FlbQIxMAABHnIZfR-vIZnGm2NDSTV-AclSUh2sGYUehOoLHuJ9i2H80CAHGKaId7xS-XMc_aem_PYw26oeeMA-LyEElZ8GSZQ' },
+  url_fuente: 'https://www.rtvcnoticias.com/actualidad/rtvc/hollman-morris-anuncia-cambio-de-nombre-de-rtvc-inravision?fbclid=IwVERTSAMxg3xleHRuA2FlbQIxMAABHnIZfR-vIZnGm2NDSTV-AclSUh2sGYUehOoLHuJ9i2H80CAHGKaId7xS-XMc_aem_PYw26oeeMA-LyEElZ8GSZQ',
+  consecutivo_unico: '20250912-01'
+},
+{
+  id: "dw-imperio-espanol-auge-colapso-2025-09-11",
+  fecha: "2025-09-11",
+  titulo: "Cómo nació el Imperio español y qué lo llevó al colapso: el repaso histórico de DW Español",
+  pais: "España",
+  resumen: "Un documental de DW Español recorre el origen, expansión y declive del Imperio español: de los viajes de Colón a las reformas borbónicas, con debates éticos sobre la conquista, tensiones económicas y un legado cultural que aún marca al mundo hispano.",
+  contenido: [
+    "DW Español presenta un panorama de largo aliento sobre el Imperio español, desde 1492 hasta el final de su expansión colonial. La pieza organiza los hitos en torno a dos tensiones constantes: la búsqueda de riqueza y poder, y la voluntad de dotar a esa expansión de reglas morales y estructuras estables. El resultado es un retrato con luces y sombras que evita simplificaciones.",
+    "El punto de partida es la empresa de Cristóbal Colón. El documental recuerda que una comisión de expertos había desaconsejado su plan por razones de cálculo y logística, pero que los Reyes Católicos lo respaldaron al prometer nuevas rutas comerciales hacia Asia. El primer viaje culminó en Las Bahamas y abrió un proceso de exploración y asentamiento con objetivos heterogéneos: lucro, evangelización y control político.",
+    "Muy pronto aparecieron fricciones. Informes sobre abusos y esclavización en La Española llevaron a la Corona a investigar la actuación de Colón y a retirarle privilegios. La narrativa subraya una dualidad que acompañará a todo el imperio: mientras se buscaban metales y rentas, también se intentaba fijar límites legales al trato de las poblaciones indígenas.",
+    "En 1511, la denuncia de frailes dominicos sobre malos tratos desembocó en el primer gran paquete normativo: las Leyes de Burgos (1512). Sobre el papel, reconocían a los indígenas como personas libres y dueñas de sus bienes, prohibían trabajos extenuantes y regulaban la encomienda; a la vez, mantenían la idea de conquista “justa” si se rechazaba el orden evangelizador. La contradicción entre principios y práctica marcó ese primer siglo.",
+    "La pieza explica que las victorias militares dependieron menos del número de soldados europeos y más de las alianzas locales. El caso de Hernán Cortés ilustra el patrón: con pocos cientos de españoles y decenas de miles de aliados indígenas —entre ellos tlascaltecas— tomó Tenochtitlán en 1521. El apoyo de intérpretes y mediadores, como Malinalli (la Malinche), fue decisivo para entender la política regional.",
+    "El relato también expone episodios de extrema violencia. Cita la campaña de Nuño de Guzmán en Nueva Galicia, con cacerías de esclavos y castigos ejemplarizantes que terminaron en procesos y destitución. El mensaje es claro: hubo abusos graves, a veces castigados, otras tolerados, en un contexto bélico donde las masacres eran frecuentes.",
+    "En el sur, Francisco Pizarro aprovechó la guerra civil inca entre Atahualpa y Huáscar para abrirse paso. La captura y ejecución de Atahualpa, pese al rescate de oro y plata, simboliza la mezcla de negociación, sorpresa militar y fracturas internas que favorecieron la conquista de Cuzco en 1533. La expansión continuó con nuevas audiencias y virreinatos.",
+    "La Corona intentó dotar de marco ético y jurídico a ese proceso. La Controversia de Valladolid (1550–1551) enfrentó las posturas de Bartolomé de las Casas y Juan Ginés de Sepúlveda sobre la legitimidad de la guerra y los derechos de los indígenas. Antes, las Leyes Nuevas (1542) habían abolido formalmente la esclavitud indígena y ordenado liberaciones masivas, con resistencias económicas en minas y haciendas.",
+    "El documental explora, además, una vía de integración que suele pasar inadvertida: educación, lenguas y mestizaje. Se fundaron universidades y hospitales; se redactaron gramáticas de náhuatl y quechua para evangelizar y administrar; y, desde muy temprano, la Corona promovió matrimonios mixtos. Con el tiempo, sin embargo, surgieron jerarquías de “castas” y certificados de limpieza de sangre que rigidizaron la movilidad social.",
+    "En el plano económico, la extracción de plata y el ‘quinto real’ financiaron obras, ciudades y salarios en América, y sostuvieron el poder militar de la Monarquía en Europa. Pero la abundancia de metal también presionó los precios en la Península, favoreció importaciones frente a la manufactura local y coincidió con guerras costosas contra potencias como Francia, Inglaterra y el Imperio otomano. Hubo bancarrotas soberanas incluso en el apogeo de Felipe II.",
+    "Durante el siglo XVIII, con los Borbones, se intentó recentralizar y modernizar: se crearon nuevos virreinatos (como Nueva Granada y Río de la Plata), se reformó la administración y se potenciaron iniciativas científicas y sanitarias. La Expedición Filantrópica de la Vacuna (1803–1810) llevó la inoculación contra la viruela a América y Filipinas, un esfuerzo logístico inusual para la época que redujo la mortalidad y buscó proteger la economía colonial.",
+    "Aun así, la erosión geopolítica se aceleró. La ocupación napoleónica dejó a España sin capacidad de sostener su red trasatlántica; siguieron las guerras de independencia y, más tarde, la derrota de 1898 frente a Estados Unidos, con la pérdida de Cuba, Puerto Rico y Filipinas. Fue el punto de inflexión que consolidó el final del imperio de ultramar.",
+    "El cierre del documental vuelve sobre el legado. Más allá del balance institucional y económico, destaca la pervivencia de un espacio cultural compartido por centenares de millones de hispanohablantes y un tejido de referencias literarias, jurídicas y urbanas que conectan ambas orillas del Atlántico. Un resultado complejo: avances y atrocidades, integración y conflicto, cuya huella sigue presente en la política y la sociedad iberoamericana.",
+    "En síntesis, DW propone leer la historia del Imperio español como un laboratorio de ambiciones materiales y búsquedas normativas que rara vez coincidieron. La expansión generó riqueza y estructuras; también dejó heridas y jerarquías. El declive respondió a desajustes fiscales, presiones bélicas y cambios del equilibrio mundial. Entender esa trayectoria, sugiere la pieza, ayuda a explicar tanto la fragmentación posterior como la vigencia de un patrimonio cultural común."
+  ],
+  etiquetas: ["geopolítica", "historia", "españa", "américa latina", "documental", "dw"],
+  fuente: { nombre: "DW Español (YouTube)", url: "https://www.youtube.com/watch?v=ovWPiPHJtlM" },
+  consecutivo_unico: "20250911-03"
+},
 {
   id: "pirry-planeta-no-necesita-que-lo-salven-2025-09-11",
   fecha: "2025-09-11",

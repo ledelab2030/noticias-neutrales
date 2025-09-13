@@ -202,7 +202,7 @@ export default function Page() {
           <div>
             <h3 className="text-lg font-semibold">¿Colaboremos?</h3>
             <p className="text-sm text-neutral-600 dark:text-neutral-300">
-              Si deseas orientación para incrementar tu independencia profesional, mejorar tu estilo de vida y salud, conversemos.
+              Si deseas orientación para incrementar tu independencia profesional y/o hacer cambios en tu estilo de vida, conversemos.
             </p>
           </div>
           <div className="flex gap-3">
