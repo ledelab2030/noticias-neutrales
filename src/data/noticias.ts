@@ -69,14 +69,9 @@ const noticiasRaw: NoticiaRaw[] = [
     'Esta sección se integrará progresivamente a nuestra categoría de Estilo de Vida, proponiendo caminar no solo como necesidad, sino como posibilidad transformadora: saludable, económica, ecológica y profundamente humana.',
     
     'El proyecto se desarrollará inicialmente en Barranquilla, pero aspira a extenderse a otras ciudades de Colombia y América Latina. Se aceptarán colaboraciones de caminantes que deseen documentar su entorno, así como propuestas desde arquitectura, urbanismo, salud pública y cultura ciudadana.',
-
-    'Fuentes citadas:',
-    'https://ledelab.co'
   ],
   etiquetas: ['colombia', 'estilo de vida', 'movilidad', 'urbanismo'],
   fuente: 'Noticias Neutrales',
-  url_fuente: 'https://ledelab.co/proyectos/el-caminante',
-  consecutivo_unico: '20250913-01'
 },
 {
   id: 'estonia-exportaciones-importaciones-julio-2025-09-11',
