@@ -51,21 +51,7 @@ const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 
 
-{
-  id: "cccs-barranquilla-invitacion-evento-2025-09-13",
-  fecha: "2025-09-13",
-  titulo: "Invitación a jornada del Consejo Colombiano de Construcción Sostenible en Barranquilla",
-  pais: "Colombia",
-  resumen: "El Consejo Colombiano de Construcción Sostenible (CCCS) prepara una jornada académica en Barranquilla. La invitación se conoció por redes profesionales y contactos sectoriales; se prevé que el evento se realice en octubre, pendiente de confirmación oficial de recinto y agenda.",
-  contenido: [
-    "¿Qué y quién? El Consejo Colombiano de Construcción Sostenible (CCCS) organiza una jornada de formación y networking orientada a prácticas de construcción sostenible. La convocatoria está dirigida a profesionales y empresas del ecosistema del entorno construido.",
-    "¿Dónde y cuándo? La sede será Barranquilla. La fecha tentativa es en octubre y el lugar exacto está por confirmarse por parte del CCCS. La programación incluiría charlas técnicas y espacios de relacionamiento.",
-    "¿Cómo y por qué? La actividad busca fortalecer capacidades regionales en diseño y construcción sostenible, difusión de estándares y articulación con actores locales. La invitación circuló en el sector a través de contactos profesionales y clústeres económicos.",
-    "Nota de contexto: El editor de esta nota es miembro del Comité de Educación del CCCS y fue informado de la convocatoria por el arquitecto Guillermo de la Hoz Donado. El vínculo con el Consejo se consolidó mediante el clúster “Espacios Habitables” de la Cámara de Comercio de Barranquilla."
-  ],
-  etiquetas: ["colombia", "tecnología"],
-  fuente: { nombre: "Consejo Colombiano de Construcción Sostenible (CCCS)", url: "https://www.cccs.org.co/" }
-},
+
 {
   id: 'estonia-exportaciones-importaciones-julio-2025-09-11',
   fecha: '2025-09-11',
