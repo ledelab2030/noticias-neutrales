@@ -51,7 +51,33 @@ const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 
 
+{
+  id: 'el-caminante-presentacion-proyecto-2025-09-13',
+  fecha: '2025-09-13',
+  titulo: 'El Caminante: una nueva sección para redescubrir el espacio urbano desde los pies',
+  pais: 'colombia',
+  resumen: 'El proyecto El Caminante busca visibilizar los retos cotidianos que enfrentan los peatones en ciudades como Barranquilla, y promover una reflexión sobre movilidad, salud y convivencia urbana.',
+  contenido: [
+    'El Caminante es una nueva sección editorial impulsada por Noticias Neutrales para explorar, documentar y reflexionar sobre la experiencia de caminar en entornos urbanos. Su origen nace de recorridos reales por las calles de Barranquilla, donde se evidencian obstáculos, contradicciones e incluso peligros que enfrenta quien decide desplazarse a pie.',
+    
+    'Esta iniciativa busca responder preguntas como: ¿Cómo se transforma la ciudad cuando la recorremos a pie? ¿Qué tipo de aceras, sombras o señalización hacen que caminar sea una opción segura y digna? ¿Qué decisiones individuales y colectivas están detrás del abandono del espacio peatonal en favor del vehículo particular?', 
 
+    'Uno de los casos que inspira esta sección es la transformación de una cuadra barranquillera tras obras de renovación vial. El nuevo piso, aunque visualmente uniforme, resulta riesgoso al volverse resbaladizo con la lluvia. La intervención, pensada tal vez desde la estética o la accesibilidad vehicular, generó nuevas dificultades para los caminantes. Situaciones como estas se repiten con frecuencia en zonas residenciales y comerciales de muchas ciudades colombianas.',
+
+    'Más allá de las quejas, El Caminante se propone como una herramienta para el análisis constructivo y pedagógico. A través de notas breves, registros audiovisuales y entrevistas espontáneas, se buscará crear un archivo vivo del espacio urbano desde la perspectiva del peatón. También se abordarán temas culturales, como la relación entre vestimenta formal y resistencia a caminar, o la dependencia del automóvil incluso para trayectos cortos.',
+
+    'Esta sección se integrará progresivamente a nuestra categoría de Estilo de Vida, proponiendo caminar no solo como necesidad, sino como posibilidad transformadora: saludable, económica, ecológica y profundamente humana.',
+    
+    'El proyecto se desarrollará inicialmente en Barranquilla, pero aspira a extenderse a otras ciudades de Colombia y América Latina. Se aceptarán colaboraciones de caminantes que deseen documentar su entorno, así como propuestas desde arquitectura, urbanismo, salud pública y cultura ciudadana.',
+
+    'Fuentes citadas:',
+    'https://ledelab.co'
+  ],
+  etiquetas: ['colombia', 'estilo de vida', 'movilidad', 'urbanismo'],
+  fuente: 'Noticias Neutrales',
+  url_fuente: 'https://ledelab.co/proyectos/el-caminante',
+  consecutivo_unico: '20250913-01'
+},
 {
   id: 'estonia-exportaciones-importaciones-julio-2025-09-11',
   fecha: '2025-09-11',

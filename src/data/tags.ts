@@ -38,6 +38,7 @@ export const TAGS = [
   'economía',
   'ecopetrol',
   'editorial',
+  'el caminante',
   'elecciones',
   'encuestas',
   'energía',
