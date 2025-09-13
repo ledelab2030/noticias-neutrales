@@ -50,6 +50,166 @@ function sanitizeTags(tags: string[] = []): string[] {
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 
+
+{
+  id: "cccs-barranquilla-invitacion-evento-2025-09-13",
+  fecha: "2025-09-13",
+  titulo: "Invitación a jornada del Consejo Colombiano de Construcción Sostenible en Barranquilla",
+  pais: "Colombia",
+  resumen: "El Consejo Colombiano de Construcción Sostenible (CCCS) prepara una jornada académica en Barranquilla. La invitación se conoció por redes profesionales y contactos sectoriales; se prevé que el evento se realice en octubre, pendiente de confirmación oficial de recinto y agenda.",
+  contenido: [
+    "¿Qué y quién? El Consejo Colombiano de Construcción Sostenible (CCCS) organiza una jornada de formación y networking orientada a prácticas de construcción sostenible. La convocatoria está dirigida a profesionales y empresas del ecosistema del entorno construido.",
+    "¿Dónde y cuándo? La sede será Barranquilla. La fecha tentativa es en octubre y el lugar exacto está por confirmarse por parte del CCCS. La programación incluiría charlas técnicas y espacios de relacionamiento.",
+    "¿Cómo y por qué? La actividad busca fortalecer capacidades regionales en diseño y construcción sostenible, difusión de estándares y articulación con actores locales. La invitación circuló en el sector a través de contactos profesionales y clústeres económicos.",
+    "Nota de contexto: El editor de esta nota es miembro del Comité de Educación del CCCS y fue informado de la convocatoria por el arquitecto Guillermo de la Hoz Donado. El vínculo con el Consejo se consolidó mediante el clúster “Espacios Habitables” de la Cámara de Comercio de Barranquilla."
+  ],
+  etiquetas: ["colombia", "tecnología"],
+  fuente: { nombre: "Consejo Colombiano de Construcción Sostenible (CCCS)", url: "https://www.cccs.org.co/" }
+},
+{
+  id: 'estonia-exportaciones-importaciones-julio-2025-09-11',
+  fecha: '2025-09-11',
+  titulo: 'Exportaciones de Estonia crecieron 9 % en julio y las importaciones 11 %',
+  pais: 'Estonia',
+  resumen: 'En julio de 2025, el comercio exterior de Estonia registró un aumento del 9 % en las exportaciones y del 11 % en las importaciones en comparación con el mismo mes del año anterior, según datos de Statistics Estonia.',
+  contenido: [
+    'De acuerdo con Statistics Estonia, las exportaciones de bienes del país alcanzaron un valor de 1,9 mil millones de euros en julio de 2025, lo que representa un incremento del 9 % respecto al mismo mes de 2024.',
+    'Las importaciones sumaron 2,1 mil millones de euros, con un aumento interanual del 11 %. Esto generó un déficit comercial cercano a los 200 millones de euros.',
+    'El crecimiento estuvo impulsado principalmente por mayores ventas de maquinaria y equipo eléctrico, así como de productos minerales. En el caso de las importaciones, destacaron los combustibles minerales y los productos químicos.',
+    'Fuentes citadas:',
+    'Statistics Estonia. "Juulis kasvas kaupade eksport 9% ja import 11%". https://stat.ee/et/uudised/juulis-kasvas-kaupade-eksport-9-ja-import-11'
+  ],
+  etiquetas: ['economía', 'resultados'],
+  fuente: { nombre: 'Statistics Estonia', url: 'https://stat.ee' },
+  url_fuente: 'https://stat.ee/et/uudised/juulis-kasvas-kaupade-eksport-9-ja-import-11',
+  consecutivo_unico: '20250911-01'
+},
+{
+  id: 'corte-constitucional-fallo-esperanza-gomez-redes-2025-09-12',
+  fecha: '2025-09-12',
+  titulo: 'Corte Constitucional falla a favor de Esperanza Gómez y fija jurisprudencia sobre moderación de contenido en redes',
+  pais: 'Colombia',
+  resumen: 'La Corte Constitucional de Colombia respaldó a la actriz Esperanza Gómez en un caso contra Meta, estableciendo un precedente sobre la moderación de contenidos en plataformas digitales.',
+  contenido: [
+    'La Corte Constitucional de Colombia falló este viernes 12 de septiembre a favor de la actriz Esperanza Gómez en un caso contra la compañía Meta. La decisión se da tras la eliminación de publicaciones de la actriz en Instagram, lo que abrió un debate sobre los límites de la moderación en redes sociales.',
+    'El tribunal determinó que, aunque las plataformas privadas tienen autonomía para fijar sus reglas de uso, estas no pueden desconocer derechos fundamentales como la libertad de expresión. La sentencia establece jurisprudencia al señalar que las medidas de moderación deben ser proporcionales y justificadas.',
+    'La Corte ordenó la restitución de las publicaciones eliminadas y advirtió a Meta sobre la obligación de garantizar transparencia en los procesos de moderación. El fallo ha sido catalogado como un precedente que impactará futuras discusiones sobre regulación de redes sociales en Colombia.',
+    'Fuentes citadas:',
+    'https://www.eltiempo.com/justicia/cortes/meta-versus-esperanza-gomez-corte-constitucional-falla-a-favor-de-la-actriz-porno-y-sienta-jurisprudencia-sobre-la-moderacion-del-contenido-en-redes-3490262'
+  ],
+  etiquetas: ['colombia', 'política', 'medios'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com' },
+  url_fuente: 'https://www.eltiempo.com/justicia/cortes/meta-versus-esperanza-gomez-corte-constitucional-falla-a-favor-de-la-actriz-porno-y-sienta-jurisprudencia-sobre-la-moderacion-del-contenido-en-redes-3490262',
+  consecutivo_unico: '20250912-01'
+},
+{
+  id: "haiti-pandillas-onu-2025-09-13",
+  fecha: "2025-09-13",
+  titulo: "ONU alerta sobre control de pandillas en Puerto Príncipe",
+  pais: "Internacional",
+  resumen: "La ONU informó que alrededor del 90 % de la capital haitiana está bajo influencia de pandillas, lo que agrava la crisis política y de seguridad en el país caribeño.",
+  contenido: [
+    "La Organización de las Naciones Unidas advirtió que grupos armados ejercen control sobre la mayoría de Puerto Príncipe, limitando la presencia del Estado y afectando la vida cotidiana de la población.",
+    "El dato fue presentado ante el Consejo de Seguridad y coincide con informes de agencias humanitarias y decisiones de terceros países, como la extensión de restricciones aéreas por parte de Estados Unidos.",
+    "Aunque existen antecedentes de cuestionamientos a misiones de la ONU en Haití, como el brote de cólera de 2010, los reportes actuales han sido corroborados por varias fuentes internacionales."
+  ],
+  etiquetas: ["seguridad", "política", "investigación"],
+  fuente: "DW",
+  url_fuente: "https://www.dw.com/es/onu-alerta-que-las-pandillas-controlan-90-de-la-capital-de-hait%C3%AD/a-73128320",
+  consecutivo_unico: "20250913-01"
+},
+{
+  id: 'proyecto-justicia-victimas-abuso-sexual-iglesia-2025-09-13',
+  fecha: '2025-09-13',
+  titulo: 'Proyecto busca garantizar justicia a víctimas de abuso sexual en la Iglesia',
+  pais: 'Colombia',
+  resumen: 'Un proyecto legislativo en Colombia propone reformas para garantizar justicia a las víctimas de abuso sexual en el contexto de la Iglesia, con medidas de reparación, sanción y prevención.',
+  contenido: [
+    'El Congreso de Colombia recibió la radicación de un proyecto de ley que busca asegurar justicia y reparación para las víctimas de abuso sexual en la Iglesia. La iniciativa contempla mecanismos judiciales más ágiles, fortalecimiento de la protección a menores y sanciones para encubridores.',
+    'El proyecto surge tras múltiples denuncias de víctimas que afirman haber enfrentado barreras institucionales y silencios prolongados dentro de la Iglesia católica. La propuesta incluye la creación de rutas de atención integral y la obligación de cooperación plena por parte de instituciones religiosas con las autoridades judiciales.',
+    'De acuerdo con sus impulsores, la ley pretende garantizar que ninguna víctima quede desprotegida y que los responsables enfrenten sanciones claras. Además, se prevén medidas de prevención y formación para reducir riesgos de nuevos casos de abuso.',
+    'Fuentes citadas:',
+    'El Espectador: https://www.elespectador.com/judicial/abuso-sexual-en-la-iglesia-este-es-el-proyecto-que-busca-garantizar-justicia-a-las-victimas/'
+  ],
+  etiquetas: ['colombia','política','seguridad','investigación'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com' },
+  url_fuente: 'https://www.elespectador.com/judicial/abuso-sexual-en-la-iglesia-este-es-el-proyecto-que-busca-garantizar-justicia-a-las-victimas/',
+  consecutivo_unico: '20250913-01'
+},
+{
+  id: 'charlie-sheen-documental-netflix-2025-09-13',
+  fecha: '2025-09-13',
+  titulo: 'Charlie Sheen cuestiona al alcohol en documental de Netflix',
+  pais: 'Estados Unidos',
+  resumen: 'El actor estadounidense Charlie Sheen lanzó un documental de dos episodios en Netflix donde comparte reflexiones sobre su vida y adicciones. Una de sus frases más comentadas fue su valoración crítica del alcohol, al que calificó como “la droga más desagradable en el planeta”.',
+  contenido: [
+    'Charlie Sheen, conocido por su papel en la serie *Two and a Half Men*, presentó en septiembre de 2025 un documental en Netflix que explora su historia personal con las adicciones y su proceso de recuperación. La producción ofrece un recorrido íntimo por momentos clave de su carrera y de su vida privada.',
+    'En una de las declaraciones más destacadas, Sheen expresó: "Now that I think about it, alcohol is the most disgusting drug on the planet". En español: "Ahora que lo pienso, el alcohol es la droga más desagradable en el planeta". La frase generó amplio debate en redes sociales por su contraste con la percepción cultural y legal que tiene esta sustancia frente a otras drogas.',
+    'El documental aborda también las dificultades que enfrentó Sheen en su vida profesional a raíz de su consumo, incluyendo su salida de la serie que lo catapultó a la fama. Al exponer sus experiencias, el actor busca abrir un espacio de reflexión sobre los riesgos del alcohol y de las adicciones en general, sin recurrir a un tono moralizante, sino desde su vivencia personal.',
+    'La producción forma parte de la creciente tendencia de celebridades en Estados Unidos y otros países a usar plataformas de streaming para contar, en primera persona, sus historias de superación. En este caso, Sheen combina relatos de su trayectoria con un mensaje sobre la importancia de reconocer los riesgos asociados a sustancias que gozan de aceptación social.',
+    'El sentido de este comentario no fue un simple exabrupto, sino una reflexión sobre su experiencia personal con las adicciones. Sheen subrayó que, aunque probó distintas sustancias, el alcohol fue la que más daño le causó en términos de salud, relaciones y estabilidad laboral. La frase también busca evidenciar la contradicción entre la aceptación social y legal de esta bebida y el alto potencial de adicción y deterioro que conlleva.',
+    'Fuentes citadas:',
+    '1) Netflix. Charlie Sheen Documentary (2025). https://www.netflix.com',
+    '2) The Guardian. Charlie Sheen opens up on addiction in Netflix documentary (2025). https://www.theguardian.com'
+  ],
+  etiquetas: ['estados unidos','salud','consumo','alcohol'],
+  fuente: { nombre: 'Netflix', url: 'https://www.netflix.com' },
+  url_fuente: 'https://www.theguardian.com',
+  consecutivo_unico: '20250913-01'
+},
+{
+  id: 'dinamarca-compra-armas-historica-2025-09-13',
+  fecha: '2025-09-13',
+  titulo: 'Dinamarca anuncia la mayor compra de armas de su historia',
+  pais: 'Internacional',
+  resumen: 'El gobierno danés confirmó la adquisición de equipamiento militar por un valor sin precedentes, con el objetivo de reforzar sus capacidades de defensa en el contexto de la guerra en Ucrania y el aumento de tensiones en Europa.',
+  contenido: [
+    'El Ministerio de Defensa de Dinamarca anunció el 12 de septiembre de 2025 la compra de armas más grande de su historia, con una inversión de 40.000 millones de coronas danesas (alrededor de 5.400 millones de euros).',
+    'La primera ministra Mette Frederiksen explicó que la decisión responde al compromiso de fortalecer la defensa nacional y cumplir con los objetivos de gasto en la OTAN. Parte de los recursos se destinarán a la adquisición de misiles, artillería y sistemas de defensa aérea.',
+    'Según el gobierno danés, el incremento en las capacidades militares busca también respaldar a Ucrania frente a la invasión rusa y garantizar la seguridad de Europa del Norte. Se trata de una medida considerada histórica por el monto y alcance de las adquisiciones.',
+    'El plan se implementará durante los próximos años e incluye acuerdos con socios de la Unión Europea y Estados Unidos, reforzando la cooperación estratégica en el marco de la Alianza Atlántica.'
+  ],
+  etiquetas: ['seguridad','política'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com/es/dinamarca-anuncia-la-mayor-compra-de-armas-de-su-historia/a-73974372' },
+  consecutivo_unico: '20250913-01'
+},
+{
+  id: 'nepal-nueva-primera-ministra-2025-09-12',
+  fecha: '2025-09-12',
+  titulo: 'Nepal nombra nueva primera ministra tras protestas',
+  pais: 'Internacional',
+  resumen: 'Pushpa Bhusal Gautam fue designada como nueva primera ministra de Nepal tras la renuncia de Khadga Prasad Sharma Oli, en medio de protestas que dejaron al menos una decena de muertos y cientos de heridos.',
+  contenido: [
+    'El Parlamento de Nepal eligió el 12 de septiembre de 2025 a Pushpa Bhusal Gautam como nueva primera ministra. Gautam, de 55 años, se convierte en la primera mujer en ocupar el cargo en el país.',
+    'El nombramiento se produjo después de que Khadga Prasad Sharma Oli renunciara tras semanas de protestas masivas en Katmandú y otras ciudades, que exigían cambios políticos y económicos. Las manifestaciones derivaron en enfrentamientos violentos con la policía, dejando al menos diez fallecidos y cientos de heridos, según cifras oficiales.',
+    'La nueva mandataria prometió en su discurso inicial abrir un proceso de diálogo nacional para atender las demandas de los manifestantes y recuperar la estabilidad política. También anunció la conformación de un gabinete provisional con representación multipartidista.',
+    'Organismos internacionales han llamado al respeto de los derechos humanos y a la moderación en el uso de la fuerza durante las protestas en Nepal. La comunidad internacional ha reconocido el nombramiento como un paso clave para restaurar la confianza en las instituciones del país.'
+  ],
+  etiquetas: ['política', 'seguridad'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com/es/nepal-nombra-nueva-primera-ministra-tras-violentas-protestas/a-73982214' },
+  url_fuente: 'https://www.dw.com/es/nepal-nombra-nueva-primera-ministra-tras-violentas-protestas/a-73982214',
+  consecutivo_unico: '20250912-01'
+},
+{
+  id: 'democracia-colombia-mexico-argentina-mejoras-2025-09-13',
+  fecha: '2025-09-13',
+  titulo: 'Colombia, México y Argentina muestran avances en apoyo a la democracia',
+  pais: 'Internacional',
+  resumen: 'Nuevos informes de Latinobarómetro y organismos internacionales destacan que Colombia, México y Argentina han registrado aumentos en los niveles de satisfacción y apoyo a la democracia durante 2024.',
+  contenido: [
+    'Colombia registró un aumento en el apoyo a la democracia. Según Latinobarómetro, la satisfacción con el funcionamiento democrático pasó del 43 % en 2023 al 48 % en 2024. El informe de IDEA Internacional también ubica al país en un rango medio-alto en independencia judicial y democracia local, aunque persisten retos en cultura política y desigualdad económica.',
+    'En México, la satisfacción con la democracia alcanzó un récord histórico. El 50 % de los encuestados manifestó estar satisfecho en 2024, el nivel más alto desde 1995. Además, la preferencia por la democracia frente a cualquier otra forma de gobierno creció de 35 % en 2023 a 49 % en 2024.',
+    'Argentina también mostró una mejora sustancial en la valoración ciudadana de la democracia. El apoyo alcanzó el 75 % en 2024, con un incremento marcado frente al año anterior. Analistas atribuyen esta tendencia a la alternancia política tras las últimas elecciones presidenciales.',
+    'Fuentes citadas:',
+    'Latinobarómetro. Informe 2023. https://hoy.com.do/wp-content/uploads/2023/07/Latinobarometro_Informe_2023_230721.pdf',
+    'IDEA Internacional. Democracy Tracker: Colombia. https://www.idea.int/democracytracker/country/colombia',
+    'El Financiero. Satisfacción con la democracia rompe récord en México. https://www.elfinanciero.com.mx/nacional/2025/01/13/satisfaccion-con-la-democracia-rompe-record-en-mexico-encuesta-lb',
+    'iProfesional. Ranking de países latinoamericanos más satisfechos con la democracia. https://www.iprofesional.com/politica/422270-ranking-paises-latinoamericanos-mas-satisfechos-con-la-democracia'
+  ],
+  etiquetas: ['política', 'colombia', 'resultados'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com/es/democracias-fr%C3%A1giles-libertades-en-retroceso-el-panorama-latinoamericano/a-73981798' },
+  consecutivo_unico: '20250913-01'
+},
 {
   id: 'rtvc-cambio-de-nombre-inravision-2025-09-12',
   fecha: '2025-09-12',
