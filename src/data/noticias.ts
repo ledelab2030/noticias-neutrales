@@ -52,6 +52,27 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 {
+  id: 'al-nassr-y-su-base-en-riyadh-2025-09-14',
+  fecha: '2025-09-14',
+  titulo: 'Al Nassr y Riyadh: la base de uno de los grandes clubes saudíes',
+  pais: 'Arabia Saudita',
+  resumen: 'Al Nassr Football Club, fundado en 1955, tiene su sede en Riyadh, capital de Arabia Saudita, donde disputa sus partidos en el estadio Al-Awwal Park. La ciudad ofrece al club un entorno estratégico por su relevancia política, económica y demográfica.',
+  contenido: [
+    'Al Nassr Football Club es un club profesional de fútbol de Arabia Saudita, que compite en la Saudi Pro League, la máxima categoría del fútbol saudí.',
+    'El club fue fundado el 24 de octubre de 1955 por los hermanos Al-Ja‘ba. Tiene una gran tradición en Arabia Saudita, con numerosos títulos nacionales y también éxitos internacionales y regionales.',
+    'La sede del club, sus entrenamientos y los partidos como local se realizan en la ciudad de Riyadh, capital de Arabia Saudita. El estadio principal que utilizan actualmente es el Al-Awwal Park, ubicado en Riyadh.',
+    'Riyadh es la capital y la ciudad más grande de Arabia Saudita, ubicada en la región central del país sobre la meseta de Najd. Tiene una población de más de 7 millones de personas y se encuentra a unos 600 metros sobre el nivel del mar.',
+    'La capital ofrece al club una base estratégica: acceso a una gran masa de aficionados, medios de comunicación, patrocinadores e infraestructura deportiva de primer nivel.',
+    'Fuentes citadas:',
+    '1) Wikipedia – *Al-Nassr FC*: https://en.wikipedia.org/wiki/Al-Nassr_FC',
+    '2) Wikipedia – *Riyadh*: https://en.wikipedia.org/wiki/Riyadh'
+  ],
+  etiquetas: ['deportes','fútbol','arabia saudita','riyadh','al nassr'],
+  fuente: 'Wikipedia',
+  url_fuente: 'https://en.wikipedia.org/wiki/Al-Nassr_FC',
+  consecutivo_unico: '20250914-01'
+},
+{
   id: 'carnaval-de-barranquilla-unesco-patrimonio-2025-09-14',
   fecha: '2025-09-14',
   titulo: 'Carnaval de Barranquilla: patrimonio cultural inmaterial de la humanidad (UNESCO)',
@@ -77,22 +98,6 @@ const noticiasRaw: NoticiaRaw[] = [
     'Barranquilla se ubica en la región norte de Colombia, a orillas del río Magdalena y cercana al mar Caribe. Con más de 1,2 millones de habitantes en su área metropolitana, es considerada la cuarta ciudad más poblada del país.',
     'La ciudad es reconocida por su importancia como puerto fluvial y marítimo, facilitando el comercio internacional. También es un centro industrial, logístico y cultural de gran relevancia en la región.',
     'Entre sus expresiones culturales más destacadas se encuentra el [Carnaval de Barranquilla](https://ledelab.co/noticias/carnaval-de-barranquilla-unesco-patrimonio-2025-09-14), declarado Patrimonio Oral e Inmaterial de la Humanidad por la UNESCO en 2003.',
-    'Su localización estratégica, infraestructura portuaria y riqueza cultural convierten a Barranquilla en un punto clave para el desarrollo económico y social de Colombia.'
-  ],
-  etiquetas: ['colombia','ciudades','barranquilla','atlántico'],
-  fuente: 'LedeLab',
-  consecutivo_unico: 'ciudad-0001'
-},
-{
-  id: 'barranquilla-at-co',
-  fecha: '2025-09-14',
-  titulo: 'Perfil de la ciudad de Barranquilla, Atlántico, Colombia',
-  pais: 'Colombia',
-  resumen: 'Barranquilla, capital del departamento del Atlántico, es una de las principales ciudades de Colombia y un centro estratégico en la región Caribe. Se destaca por su puerto sobre el río Magdalena y por ser un eje cultural y económico del país.',
-  contenido: [
-    'Barranquilla se ubica en la región norte de Colombia, a orillas del río Magdalena y cercana al mar Caribe. Con más de 1,2 millones de habitantes en su área metropolitana, es considerada la cuarta ciudad más poblada del país.',
-    'La ciudad es reconocida por su importancia como puerto fluvial y marítimo, facilitando el comercio internacional. También es un centro industrial, logístico y cultural de gran relevancia en la región.',
-    'Entre sus expresiones culturales más destacadas se encuentra el Carnaval de Barranquilla, declarado Patrimonio Oral e Inmaterial de la Humanidad por la UNESCO en 2003.',
     'Su localización estratégica, infraestructura portuaria y riqueza cultural convierten a Barranquilla en un punto clave para el desarrollo económico y social de Colombia.'
   ],
   etiquetas: ['colombia','ciudades','barranquilla','atlántico'],
