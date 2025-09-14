@@ -50,7 +50,88 @@ function sanitizeTags(tags: string[] = []): string[] {
 const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 
-
+// 1) Nota ajustada para la ciudad (id fijo por ciudad)
+{
+  id: 'carnaval-de-barranquilla-unesco-patrimonio-2025-09-14',
+  fecha: '2025-09-14',
+  titulo: 'Carnaval de Barranquilla: patrimonio cultural inmaterial de la humanidad (UNESCO)',
+  pais: 'Colombia',
+  resumen: 'La UNESCO reconoce al Carnaval de Barranquilla como elemento del Patrimonio Cultural Inmaterial de la Humanidad: proclamado en 2003 e inscrito en la Lista Representativa en 2008, por su repertorio de danzas, músicas y expresiones que reflejan el cruce de tradiciones europeas, africanas e indígenas.',
+  contenido: [
+    '¿Qué es? El Carnaval de Barranquilla es una celebración anual que, en los cuatro días previos a la Cuaresma, reúne danzas, músicas e instrumentos tradicionales de la región Caribe de Colombia. ¿Quién lo reconoce? La UNESCO. ¿Cuándo? Proclamado en 2003 e inscrito en 2008. ¿Dónde? Barranquilla, costa Caribe de Colombia. ¿Por qué? Por su valor representativo de tradiciones vivas y diversidad cultural. ¿Cómo? A través de prácticas festivas, desfiles, comparsas y expresiones artísticas que se transmiten de generación en generación.',
+    'La UNESCO destaca la convergencia histórica de influencias europeas, africanas e indígenas en las danzas (como el congo y el paloteo), géneros musicales (cumbia, puya y porro) e instrumentos (tambora, alegre, maracas y claves). También resalta su profusa cultura material —carrozas, máscaras y vestuarios— y advierte que la creciente comercialización puede amenazar expresiones tradicionales, por lo que la salvaguardia comunitaria resulta clave.',
+    'El Carnaval de Barranquilla es un referente de prácticas sociales y artes escénicas dentro de los dominios de la Convención 2003 de la UNESCO, y contribuye a objetivos de desarrollo sostenible al impulsar actividades culturales y oportunidades económicas locales, en equilibrio con la preservación de sus tradiciones.'
+  ],
+  etiquetas: ['colombia', 'carnaval de barranquilla', 'unesco', 'patrimonio cultural inmaterial'],
+  fuente: { nombre: 'UNESCO', url: 'https://ich.unesco.org/en/RL/carnival-of-barranquilla-00051' },
+  url_fuente: 'https://ich.unesco.org/en/RL/carnival-of-barranquilla-00051',
+  consecutivo_unico: '20250914-01'
+},
+{
+  id: 'barranquilla-at-co',
+  fecha: '2025-09-14',
+  titulo: 'Perfil de la ciudad de Barranquilla, Atlántico, Colombia',
+  pais: 'Colombia',
+  resumen: 'Barranquilla, capital del departamento del Atlántico, es una de las principales ciudades de Colombia y un centro estratégico en la región Caribe. Se destaca por su puerto sobre el río Magdalena y por ser un eje cultural y económico del país.',
+  contenido: [
+    'Barranquilla se ubica en la región norte de Colombia, a orillas del río Magdalena y cercana al mar Caribe. Con más de 1,2 millones de habitantes en su área metropolitana, es considerada la cuarta ciudad más poblada del país.',
+    'La ciudad es reconocida por su importancia como puerto fluvial y marítimo, facilitando el comercio internacional. También es un centro industrial, logístico y cultural de gran relevancia en la región.',
+    'Entre sus expresiones culturales más destacadas se encuentra el [Carnaval de Barranquilla](https://ledelab.co/noticias/carnaval-de-barranquilla-unesco-patrimonio-2025-09-14), declarado Patrimonio Oral e Inmaterial de la Humanidad por la UNESCO en 2003.',
+    'Su localización estratégica, infraestructura portuaria y riqueza cultural convierten a Barranquilla en un punto clave para el desarrollo económico y social de Colombia.'
+  ],
+  etiquetas: ['colombia','ciudades','barranquilla','atlántico'],
+  fuente: 'LedeLab',
+  consecutivo_unico: 'ciudad-0001'
+},
+{
+  id: 'barranquilla-at-co',
+  fecha: '2025-09-14',
+  titulo: 'Perfil de la ciudad de Barranquilla, Atlántico, Colombia',
+  pais: 'Colombia',
+  resumen: 'Barranquilla, capital del departamento del Atlántico, es una de las principales ciudades de Colombia y un centro estratégico en la región Caribe. Se destaca por su puerto sobre el río Magdalena y por ser un eje cultural y económico del país.',
+  contenido: [
+    'Barranquilla se ubica en la región norte de Colombia, a orillas del río Magdalena y cercana al mar Caribe. Con más de 1,2 millones de habitantes en su área metropolitana, es considerada la cuarta ciudad más poblada del país.',
+    'La ciudad es reconocida por su importancia como puerto fluvial y marítimo, facilitando el comercio internacional. También es un centro industrial, logístico y cultural de gran relevancia en la región.',
+    'Entre sus expresiones culturales más destacadas se encuentra el Carnaval de Barranquilla, declarado Patrimonio Oral e Inmaterial de la Humanidad por la UNESCO en 2003.',
+    'Su localización estratégica, infraestructura portuaria y riqueza cultural convierten a Barranquilla en un punto clave para el desarrollo económico y social de Colombia.'
+  ],
+  etiquetas: ['colombia','ciudades','barranquilla','atlántico'],
+  fuente: 'LedeLab',
+  consecutivo_unico: 'ciudad-0001'
+},
+{
+  id: 'piloto-southwest-arrestado-sospecha-dui-2025-08-15',
+  fecha: '2025-08-15',
+  titulo: 'Piloto de Southwest retirado de cabina para prueba de sobriedad en enero',
+  pais: 'Estados Unidos',
+  resumen: 'Un piloto de Southwest Airlines fue arrestado el 15 de enero de 2025 antes de un vuelo desde Savannah, Georgia, tras sospechas de conducir bajo los efectos del alcohol. Video de cámara corporal muestra la prueba de sobriedad. El artículo fue publicado el 19 de agosto de 2025.',
+  contenido: [
+    'El 15 de enero de 2025, el piloto David Paul Allsop fue arrestado en el Aeropuerto Savannah/Hilton Head en Georgia antes de un vuelo con destino a Chicago, luego de que autoridades lo retiraran de la cabina por sospechas de intoxicación y realizar una prueba de sobriedad.',
+    'El incidente fue dado a conocer formalmente cuando se reveló un video de cámara corporal (“body-cam”) el 15 de enero de 2025, fecha en que se publicó la noticia en diversos medios como People y ABC.',
+    'Según los reportes, el piloto presentó ojos enrojecidos, fuerte olor a alcohol, y se negó inicialmente a hacer la prueba de alcoholemia. También alegó que el olor provenía de parches de nicotina.',
+    'Southwest Airlines confirmó que fue apartado de sus funciones mientras se adelanta la investigación.'
+  ],
+  etiquetas: ['estados unidos','aviacion','southwest airlines','seguridad','DUI'],
+  fuente: { nombre: 'People / ABC7 Chicago / NBC News', url: 'https://www.nbcnews.com/news/us-news/video-shows-southwest-pilot-pulled-plane-taking-sobriety-test-dui-arre-rcna225270' },
+  url_fuente: 'https://www.nbcnews.com/news/us-news/video-shows-southwest-pilot-pulled-plane-taking-sobriety-test-dui-arre-rcna225270',
+  consecutivo_unico: '20250819-01'
+},
+{
+  id: 'nuevos-lectores-monteria-cordoba-oportunidades-2025-09-14',
+  fecha: '2025-09-14',
+  titulo: 'Montería, Córdoba: nuevos lectores y oportunidades para conocer la región',
+  pais: 'Colombia',
+  resumen: 'La capital de Córdoba aparece por primera vez en Google Analytics como ciudad de origen de lectores de Noticias Neutrales, lo que abre la puerta a destacar su cultura, economía y oportunidades de visita.',
+  contenido: [
+    'Montería, capital del departamento de Córdoba, se ha sumado recientemente a las ciudades desde donde llegan nuevos lectores a Noticias Neutrales, según los registros de Google Analytics. Este hecho representa un paso más en la misión del portal de dar visibilidad a distintas regiones del mundo y fomentar la fidelización de audiencias locales.',
+    'Ubicada a orillas del río Sinú, Montería es reconocida como una de las ciudades intermedias más importantes del Caribe colombiano. Su economía está ligada a la ganadería, la agricultura y un creciente sector de servicios, al tiempo que su biodiversidad y entorno natural la convierten en un destino atractivo tanto para residentes como para visitantes.',
+    'El reconocimiento a Montería no solo obedece a su papel económico y cultural, sino también a la hospitalidad que ofrece a quienes llegan a la ciudad. Un ejemplo es el Hotel Sites Montería ([ver sitio web](https://www.sites.com.co/)), que ha consolidado una propuesta moderna y de calidad para los viajeros. La cadena también cuenta con sede en Barranquilla, ubicada en el mismo barrio donde reside el fundador de Noticias Neutrales, lo que refuerza el vínculo personal y regional de este espacio informativo.',
+    'La aparición de Montería en la comunidad digital de Noticias Neutrales abre la oportunidad de estrechar lazos con lectores cordobeses, destacar historias locales y promover una visión equilibrada y sin polarización de la realidad. Al mismo tiempo, permite invitar a quienes aún no conocen la ciudad a descubrir su riqueza natural, su cultura caribeña y sus crecientes oportunidades de desarrollo.'
+  ],
+  etiquetas: ['audiencia','nuevos usuarios','montería','córdoba','regiones','turismo','economía local'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250914-02'
+},
 {
   id: 'el-caminante-presentacion-proyecto-2025-09-13',
   fecha: '2025-09-13',
@@ -69,6 +150,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Esta sección se integrará progresivamente a nuestra categoría de Estilo de Vida, proponiendo caminar no solo como necesidad, sino como posibilidad transformadora: saludable, económica, ecológica y profundamente humana.',
     
     'El proyecto se desarrollará inicialmente en Barranquilla, pero aspira a extenderse a otras ciudades de Colombia y América Latina. Se aceptarán colaboraciones de caminantes que deseen documentar su entorno, así como propuestas desde arquitectura, urbanismo, salud pública y cultura ciudadana.',
+
   ],
   etiquetas: ['colombia', 'estilo de vida', 'movilidad', 'urbanismo'],
   fuente: 'Noticias Neutrales',
