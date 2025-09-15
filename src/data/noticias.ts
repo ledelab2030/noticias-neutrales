@@ -52,25 +52,43 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 {
+  id: 'gustavo-bolivar-entrevista-conversaciones-pendientes-2025-09-14',
+  fecha: '2025-09-14',
+  titulo: 'Gustavo Bolívar aborda orígenes, economía popular y desafíos políticos en entrevista',
+  pais: 'Colombia',
+  resumen: 'En “Conversaciones Pendientes”, Gustavo Bolívar repasa su trayectoria personal y profesional, explica su enfoque sobre la economía popular y el cooperativismo, y describe retos para combatir la corrupción y organizar políticas sociales desde el territorio.',
+  contenido: [
+    '¿Qué pasó? En una entrevista del canal de Juan David Correa, Gustavo Bolívar expuso los hitos de su vida —de vendedor ambulante y guionista a funcionario público— y explicó por qué el “amor” y la fe han orientado su servicio. ¿Quién? Bolívar, escritor y actor político; ¿Cuándo y dónde? Publicado en YouTube (Colombia) en 2025; ¿Cómo y por qué? A través de un diálogo de largo aliento, planteó que su motivación es el trabajo por la gente y la reducción de desigualdades mediante políticas sostenidas.',
+    'Sobre economía popular, Bolívar defendió el impulso al cooperativismo y al microcrédito como vías para reemplazar el “gota a gota” y formalizar ingresos en sectores de alta informalidad. Afirmó que, durante su gestión, se diseñaron mecanismos de garantía para ampliar crédito productivo y que asociaciones de padres podrían operar parte del Plan de Alimentación Escolar, condicionadas a capacitación y controles, con el fin de reducir intermediación y sobrecostos.',
+    'En materia de seguridad y economías ilícitas, describió la necesidad de controles estrictos en aduanas y direcciones estratégicas, subrayando que la integridad de los cargos públicos es condición para frenar contrabando y narcotráfico. También señaló tensiones dentro de fuerzas políticas y reiteró que su postura pasa por “resistir” prácticas clientelistas y fortalecer el diálogo con sectores productivos sobre la base de reglas claras.',
+    'Para educación y cultura, propuso una visión de largo plazo: formar generaciones bilingües con competencias técnicas desde la escuela como estrategia estructural para movilidad social y reducción de la violencia. Cerró con un llamado a continuar reformas sociales y a mantener un debate público sin agravios, con metas verificables y participación de comunidades y empresarios.'
+  ],
+  etiquetas: ['colombia','política','economía','medios'],
+  fuente: { nombre: 'YouTube – Conversaciones Pendientes (Juan David Correa)', url: 'https://www.youtube.com/watch?v=_yBwBk0v_t0' },
+  consecutivo_unico: '20250914-04'
+},
+{
   id: 'al-nassr-y-su-base-en-riyadh-2025-09-14',
   fecha: '2025-09-14',
-  titulo: 'Al Nassr y Riyadh: la base de uno de los grandes clubes saudíes',
+  titulo: 'Al Nassr, Riyadh y CR7: la combinación que redefine al club saudí',
   pais: 'Arabia Saudita',
-  resumen: 'Al Nassr Football Club, fundado en 1955, tiene su sede en Riyadh, capital de Arabia Saudita, donde disputa sus partidos en el estadio Al-Awwal Park. La ciudad ofrece al club un entorno estratégico por su relevancia política, económica y demográfica.',
+  resumen: 'Al Nassr Football Club, con sede en Riyadh, cuenta desde 2023 con Cristiano Ronaldo entre sus figuras principales; la presencia del astro portugués ha reforzado su visibilidad internacional y su capacidad competitiva.',
   contenido: [
     'Al Nassr Football Club es un club profesional de fútbol de Arabia Saudita, que compite en la Saudi Pro League, la máxima categoría del fútbol saudí.',
     'El club fue fundado el 24 de octubre de 1955 por los hermanos Al-Ja‘ba. Tiene una gran tradición en Arabia Saudita, con numerosos títulos nacionales y también éxitos internacionales y regionales.',
     'La sede del club, sus entrenamientos y los partidos como local se realizan en la ciudad de Riyadh, capital de Arabia Saudita. El estadio principal que utilizan actualmente es el Al-Awwal Park, ubicado en Riyadh.',
+    'Desde finales de 2022, **Cristiano Ronaldo** forma parte de Al Nassr, aportando experiencia de élite, goles y reconocimiento global al club. :contentReference[oaicite:0]{index=0}',
     'Riyadh es la capital y la ciudad más grande de Arabia Saudita, ubicada en la región central del país sobre la meseta de Najd. Tiene una población de más de 7 millones de personas y se encuentra a unos 600 metros sobre el nivel del mar.',
     'La capital ofrece al club una base estratégica: acceso a una gran masa de aficionados, medios de comunicación, patrocinadores e infraestructura deportiva de primer nivel.',
     'Fuentes citadas:',
     '1) Wikipedia – *Al-Nassr FC*: https://en.wikipedia.org/wiki/Al-Nassr_FC',
-    '2) Wikipedia – *Riyadh*: https://en.wikipedia.org/wiki/Riyadh'
+    '2) Wikipedia – *Cristiano Ronaldo*: https://en.wikipedia.org/wiki/Cristiano_Ronaldo',
+    '3) Artículos de prensa deportiva que confirman su llegada y desempeño en Al Nassr.'
   ],
-  etiquetas: ['deportes','fútbol','arabia saudita','riyadh','al nassr'],
-  fuente: 'Wikipedia',
+  etiquetas: ['deportes','fútbol','arabia saudita','riyadh','al nassr','CR7','Cristiano Ronaldo'],
+  fuente: 'Wikipedia y medios deportivos verificados',
   url_fuente: 'https://en.wikipedia.org/wiki/Al-Nassr_FC',
-  consecutivo_unico: '20250914-01'
+  consecutivo_unico: '20250914-02'
 },
 {
   id: 'carnaval-de-barranquilla-unesco-patrimonio-2025-09-14',
@@ -135,7 +153,7 @@ const noticiasRaw: NoticiaRaw[] = [
   ],
   etiquetas: ['audiencia','nuevos usuarios','montería','córdoba','regiones','turismo','economía local'],
   fuente: 'LedeLab',
-  consecutivo_unico: '20250914-02'
+  consecutivo_unico: '20250914-03'
 },
 {
   id: 'el-caminante-presentacion-proyecto-2025-09-13',
