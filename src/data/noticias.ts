@@ -52,6 +52,90 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 {
+  id: 'habitos-y-funcion-tiroides-2025-09-15',
+  fecha: '2025-09-15',
+  titulo: 'Doctor Carlos Jaramillo explica cómo los hábitos dañan la tiroides y generan consecuencias metabólicas',
+  pais: 'Colombia',
+  resumen: 'En un video educativo, el médico funcional colombiano Carlos Jaramillo subraya que los malos hábitos afectan la función tiroidea y que, como consecuencia, aparecen síntomas en el metabolismo. No se trata de “estar de malas”, sino de identificar y modificar factores que dañan la glándula.',
+  contenido: [
+    'En un video reciente publicado en YouTube, el Doctor Carlos Jaramillo —médico funcional colombiano— aborda la importancia de la tiroides como reguladora del metabolismo y aclara un punto central: no es que la glándula falle por azar, sino que los hábitos y condiciones de vida inadecuadas deterioran su función. A partir de allí surgen síntomas como fatiga persistente, aumento de peso, alteraciones digestivas, cambios en el ánimo, caída del cabello y sensación de frío excesivo.',
+    
+    'Jaramillo señala que la tiroides actúa como un “termostato” del cuerpo. Cuando está equilibrada, mantiene energía, claridad mental, temperatura y recambio celular en buen nivel. Pero si se ve afectada por deficiencias nutricionales, estrés o toxinas, todo el metabolismo se enlentece y aparecen manifestaciones clínicas que muchas veces no se detectan en exámenes básicos como la TSH. Por eso insiste en ampliar la evaluación hacia T3, T4, anticuerpos y nutrientes clave.',
+    
+    'El médico explica que distintos factores de estilo de vida pueden alterar la glándula. Entre los más relevantes menciona:',
+    '- **Déficit de nutrientes**: carencias de yodo, selenio, zinc, hierro, magnesio, vitamina D, vitamina A y proteínas con tirosina impiden la producción normal de hormonas tiroideas.', 
+    '- **Estrés crónico**: el exceso de cortisol bloquea la conversión de T4 (inactiva) en T3 (activa), altera los receptores celulares y puede falsear resultados de laboratorio.', 
+    '- **Intestino inflamado o permeable**: la microbiota participa en la activación de T3; enfermedades como disbiosis o celiaquía reducen esta capacidad.', 
+    '- **Autoinmunidad**: la tiroiditis de Hashimoto se asocia a deficiencia de vitamina D, gluten, infecciones virales y toxicidad crónica.', 
+    '- **Exposición a tóxicos**: plásticos con BPA, pesticidas, metales pesados y cosméticos con químicos alteran receptores y enzimas vinculados a la tiroides.', 
+    '- **Errores de estilo de vida**: dietas hipocalóricas prolongadas, exceso de ejercicio sin recuperación, sueño deficiente y abuso de ultraprocesados generan disfunción sostenida.',
+    
+    'Para cada uno de estos factores, Jaramillo ofrece recomendaciones prácticas: mejorar la calidad de la dieta con proteínas, vegetales y grasas saludables; asegurar micronutrientes como selenio y vitamina D; practicar respiración consciente y pausas de descanso para controlar el estrés; cuidar la salud intestinal con fibra y alimentos fermentados; y reducir la exposición a plásticos y utensilios antiadherentes. Subraya que, con cambios progresivos en los hábitos, es posible reactivar la tiroides y prevenir complicaciones.',
+    
+    'En conclusión, el mensaje central del video es que la salud de la tiroides está en gran medida en nuestras manos: los hábitos cotidianos determinan si la glándula funciona de manera óptima o si, por el contrario, se ve forzada a trabajar en condiciones adversas que terminan desencadenando síntomas de hipotiroidismo funcional.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'nutrición', 'colombia', 'carlos jaramillo'],
+  fuente: { nombre: 'Canal de YouTube del Dr. Carlos Jaramillo', url: 'https://www.youtube.com/watch?v=TGiJFvIzUWA' }
+},
+{
+  id: 'ilan-volkov-discurso-bbc-proms-2025-09-15',
+  fecha: '2025-09-15',
+  titulo: 'El director israelí Ilan Volkov denuncia la guerra en Gaza durante concierto en Londres',
+  pais: 'Internacional',
+  resumen: 'El director de orquesta israelí Ilan Volkov interrumpió su presentación en el Royal Albert Hall de Londres para condenar públicamente la ofensiva militar de Israel en Gaza, afirmando que no podía seguir en silencio ante la muerte y el desplazamiento de miles de palestinos.',
+  contenido: [
+    'Durante su participación en los BBC Proms en el Royal Albert Hall de Londres, el director de orquesta israelí Ilan Volkov sorprendió al público con un discurso en el que condenó la guerra en Gaza. El músico expresó que en su corazón llevaba “un gran dolor” y que, aunque Israel era su hogar, no podía permanecer callado ante la situación.',
+    'Volkov denunció la muerte de miles de palestinos, el desplazamiento repetido de familias y el colapso de hospitales y escuelas en la franja de Gaza. “Inocentes palestinos están siendo asesinados en miles, desplazados una y otra vez, sin hospitales ni escuelas, sin saber cuándo llegará la próxima comida”, afirmó ante los asistentes.',
+    'La BBC interrumpió la transmisión televisiva del evento antes de que iniciara el discurso, argumentando que no había sido informado con antelación. Sin embargo, el mensaje se difundió ampliamente en redes sociales, generando reacciones internacionales.',
+    'Posteriormente, en entrevista, Volkov anunció que no volverá a presentarse en Israel como acto de protesta. “No podemos dejar que esto continúe; cada momento que pasa pone en riesgo la seguridad de millones de personas”, señaló el director, quien fue ovacionado por parte del público presente.',
+    'Fuentes citadas:',
+    'Middle East Eye – https://x.com/MiddleEastEye/status/1835000000000000000'
+  ],
+  etiquetas: ['internacional', 'israel', 'palestina', 'gaza', 'ilan volkov', 'bbc proms'],
+  fuente: { nombre: 'Middle East Eye', url: 'https://x.com/MiddleEastEye' },
+  consecutivo_unico: '20250914-01'
+},
+{
+  id: 'ingelheim-am-rhein-alemania-2025-09-15',
+  fecha: '2025-09-15',
+  titulo: 'Ingelheim am Rhein, Alemania: la "ciudad de Carlomagno"',
+  pais: 'Alemania',
+  resumen: 'Tenemos un nuevo visitante desde Ingelheim am Rhein, una ciudad alemana ubicada a orillas del río Rin, reconocida por su patrimonio histórico vinculado a Carlomagno y por ser sede de importantes actividades vitivinícolas y farmacéuticas.',
+  contenido: [
+    'Ingelheim am Rhein se encuentra en el estado federado de Renania-Palatinado, al suroeste de Alemania. Su localización a orillas del río Rin la ha convertido en un punto estratégico desde la Edad Media.',
+    'La ciudad es conocida como la “ciudad de Carlomagno”, ya que allí se conserva parte del antiguo palacio imperial que data del siglo VIII. Este patrimonio atrae visitantes interesados en la historia europea.',
+    'Además, Ingelheim am Rhein destaca por su tradición vitivinícola, siendo parte de la región del Rheinhessen, una de las áreas productoras de vino más importantes del país.',
+    'En el ámbito económico, la ciudad alberga la sede global de la farmacéutica Boehringer Ingelheim, una de las empresas más influyentes en investigación y desarrollo de medicamentos a nivel mundial.'
+  ],
+  etiquetas: ['alemania','ciudades','perfil','ingelheim am rhein'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250915-01'
+},
+{
+  id: 'carta-clara-lopez-pacto-social-vivo-2025-09-15',
+  fecha: '2025-09-15',
+  titulo: 'Clara López propone al presidente Petro la creación del primer Pacto Social Vivo',
+  pais: 'Colombia',
+  resumen: 'La senadora Clara López Obregón envió una carta abierta al presidente Gustavo Petro proponiendo la construcción de un “Pacto Social Vivo” como base de una nueva Constitución, con amplia participación ciudadana apoyada en inteligencia artificial.',
+  contenido: [
+    'El 14 de septiembre de 2025, la senadora Clara López Obregón dirigió una carta abierta al presidente Gustavo Petro en la que plantea la creación del primer “Pacto Social Vivo del planeta”. La propuesta surge tras el anuncio del mandatario de activar el proceso constituyente y busca que la ciudadanía diseñe directamente el nuevo pacto social de Colombia.',
+    
+    'López propone que el país se convierta en la “Primera Nación de la Democracia Directa”, donde jóvenes, mujeres, comunidades indígenas, afrocolombianas, campesinos, empresarios, migrantes, académicos y artistas co-creen un nuevo modelo de Estado. La idea es que cada ciudadano tenga un papel activo en el diseño de la nueva arquitectura institucional, ecológica, económica y espiritual de Colombia.',
+    
+    'Un aspecto central de la propuesta es la creación de una Plataforma Nacional de Inteligencia Artificial Regenerativa, concebida como una infraestructura tecnológica, humana y viva que conecte a millones de colombianos. A través de ella, se podrían recoger, traducir y visibilizar las propuestas para la nueva Constitución, con mecanismos de trazabilidad pública, deliberación inclusiva y recompensas simbólicas y educativas.',
+    
+    'El anexo de la carta detalla la creación de un Sistema Nacional de Participación Ciudadana con IA (SNP-CIA). Este sistema integraría redes sociales, plataformas de streaming, portales nacionales y conectividad satelital para garantizar la inclusión de comunidades rurales y jóvenes. También prevé el uso de la IA para sintetizar propuestas, traducirlas a lenguas indígenas, detectar patrones y responder preguntas en tiempo real.',
+    
+    'La senadora subraya que este proceso permitiría a Colombia co-crear y votar el primer pacto social vivo del mundo, abierto a todos los ciudadanos a partir de los 15 años. En sus palabras, “Colombia ya está lista” para liderar un modelo democrático más avanzado del siglo XXI.',
+    
+    'La importancia del uso de la inteligencia artificial en este proceso radica en su capacidad de ampliar la participación ciudadana más allá de las limitaciones tradicionales. Según la propuesta, la IA no reemplazaría la acción humana, sino que serviría como herramienta para organizar, traducir y democratizar el acceso a la deliberación, garantizando inclusión, transparencia y equidad en la construcción de la nueva Constitución.'
+  ],
+  etiquetas: ['colombia','politica','gustavo petro','clara lopez obregon','constitucion','inteligencia artificial'],
+  fuente: { nombre: 'Clara López Obregón', url: 'https://x.com/ClaraLopezObre/status/1967546233183936622' },
+  url_fuente: 'https://x.com/ClaraLopezObre/status/1967546233183936622',
+  consecutivo_unico: '20250915-01'
+},
+{
   id: 'gustavo-bolivar-entrevista-conversaciones-pendientes-2025-09-14',
   fecha: '2025-09-14',
   titulo: 'Gustavo Bolívar aborda orígenes, economía popular y desafíos políticos en entrevista',
@@ -63,7 +147,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En materia de seguridad y economías ilícitas, describió la necesidad de controles estrictos en aduanas y direcciones estratégicas, subrayando que la integridad de los cargos públicos es condición para frenar contrabando y narcotráfico. También señaló tensiones dentro de fuerzas políticas y reiteró que su postura pasa por “resistir” prácticas clientelistas y fortalecer el diálogo con sectores productivos sobre la base de reglas claras.',
     'Para educación y cultura, propuso una visión de largo plazo: formar generaciones bilingües con competencias técnicas desde la escuela como estrategia estructural para movilidad social y reducción de la violencia. Cerró con un llamado a continuar reformas sociales y a mantener un debate público sin agravios, con metas verificables y participación de comunidades y empresarios.'
   ],
-  etiquetas: ['colombia','política','economía','medios'],
+  etiquetas: ['colombia','política','economía','medios','conversaciones pendientes','podcast'],
   fuente: { nombre: 'YouTube – Conversaciones Pendientes (Juan David Correa)', url: 'https://www.youtube.com/watch?v=_yBwBk0v_t0' },
   consecutivo_unico: '20250914-04'
 },
