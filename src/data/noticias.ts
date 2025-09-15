@@ -59,23 +59,20 @@ const noticiasRaw: NoticiaRaw[] = [
   resumen: 'En un video educativo, el médico funcional colombiano Carlos Jaramillo subraya que los malos hábitos afectan la función tiroidea y que, como consecuencia, aparecen síntomas en el metabolismo. No se trata de “estar de malas”, sino de identificar y modificar factores que dañan la glándula.',
   contenido: [
     'En un video reciente publicado en YouTube, el Doctor Carlos Jaramillo —médico funcional colombiano— aborda la importancia de la tiroides como reguladora del metabolismo y aclara un punto central: no es que la glándula falle por azar, sino que los hábitos y condiciones de vida inadecuadas deterioran su función. A partir de allí surgen síntomas como fatiga persistente, aumento de peso, alteraciones digestivas, cambios en el ánimo, caída del cabello y sensación de frío excesivo.',
-    
     'Jaramillo señala que la tiroides actúa como un “termostato” del cuerpo. Cuando está equilibrada, mantiene energía, claridad mental, temperatura y recambio celular en buen nivel. Pero si se ve afectada por deficiencias nutricionales, estrés o toxinas, todo el metabolismo se enlentece y aparecen manifestaciones clínicas que muchas veces no se detectan en exámenes básicos como la TSH. Por eso insiste en ampliar la evaluación hacia T3, T4, anticuerpos y nutrientes clave.',
-    
     'El médico explica que distintos factores de estilo de vida pueden alterar la glándula. Entre los más relevantes menciona:',
-    '- **Déficit de nutrientes**: carencias de yodo, selenio, zinc, hierro, magnesio, vitamina D, vitamina A y proteínas con tirosina impiden la producción normal de hormonas tiroideas.', 
-    '- **Estrés crónico**: el exceso de cortisol bloquea la conversión de T4 (inactiva) en T3 (activa), altera los receptores celulares y puede falsear resultados de laboratorio.', 
-    '- **Intestino inflamado o permeable**: la microbiota participa en la activación de T3; enfermedades como disbiosis o celiaquía reducen esta capacidad.', 
-    '- **Autoinmunidad**: la tiroiditis de Hashimoto se asocia a deficiencia de vitamina D, gluten, infecciones virales y toxicidad crónica.', 
-    '- **Exposición a tóxicos**: plásticos con BPA, pesticidas, metales pesados y cosméticos con químicos alteran receptores y enzimas vinculados a la tiroides.', 
-    '- **Errores de estilo de vida**: dietas hipocalóricas prolongadas, exceso de ejercicio sin recuperación, sueño deficiente y abuso de ultraprocesados generan disfunción sostenida.',
-    
+    '- Déficit de nutrientes: carencias de yodo, selenio, zinc, hierro, magnesio, vitamina D, vitamina A y proteínas con tirosina impiden la producción normal de hormonas tiroideas.',
+    '- Estrés crónico: el exceso de cortisol bloquea la conversión de T4 (inactiva) en T3 (activa), altera los receptores celulares y puede falsear resultados de laboratorio.',
+    '- Intestino inflamado o permeable: la microbiota participa en la activación de T3; enfermedades como disbiosis o celiaquía reducen esta capacidad.',
+    '- Autoinmunidad: la tiroiditis de Hashimoto se asocia a deficiencia de vitamina D, gluten, infecciones virales y toxicidad crónica.',
+    '- Exposición a tóxicos: plásticos con BPA, pesticidas, metales pesados y cosméticos con químicos alteran receptores y enzimas vinculados a la tiroides.',
+    '- Errores de estilo de vida: dietas hipocalóricas prolongadas, exceso de ejercicio sin recuperación, sueño deficiente y abuso de ultraprocesados generan disfunción sostenida.',
     'Para cada uno de estos factores, Jaramillo ofrece recomendaciones prácticas: mejorar la calidad de la dieta con proteínas, vegetales y grasas saludables; asegurar micronutrientes como selenio y vitamina D; practicar respiración consciente y pausas de descanso para controlar el estrés; cuidar la salud intestinal con fibra y alimentos fermentados; y reducir la exposición a plásticos y utensilios antiadherentes. Subraya que, con cambios progresivos en los hábitos, es posible reactivar la tiroides y prevenir complicaciones.',
-    
     'En conclusión, el mensaje central del video es que la salud de la tiroides está en gran medida en nuestras manos: los hábitos cotidianos determinan si la glándula funciona de manera óptima o si, por el contrario, se ve forzada a trabajar en condiciones adversas que terminan desencadenando síntomas de hipotiroidismo funcional.'
   ],
-  etiquetas: ['salud', 'alimentación', 'nutrición', 'colombia', 'carlos jaramillo'],
-  fuente: { nombre: 'Canal de YouTube del Dr. Carlos Jaramillo', url: 'https://www.youtube.com/watch?v=TGiJFvIzUWA' }
+  etiquetas: ['salud', 'alimentación', 'nutrición', 'colombia', 'carlos jaramillo','estlo de vida'],
+  fuente: 'Canal de YouTube del Dr. Carlos Jaramillo',
+  url_fuente: 'https://www.youtube.com/watch?v=TGiJFvIzUWA'
 },
 {
   id: 'ilan-volkov-discurso-bbc-proms-2025-09-15',
