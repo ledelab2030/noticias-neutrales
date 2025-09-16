@@ -52,6 +52,90 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 {
+  id: 'descertificacion-colombia-eeuu-reacciones-2025-09-16',
+  fecha: '2025-09-16',
+  titulo: 'Reacciones a la descertificación de Colombia por parte de Estados Unidos',
+  pais: 'Colombia',
+  resumen: 'La decisión de Estados Unidos de descertificar a Colombia en materia de lucha antidrogas provocó la reacción del senador Iván Cepeda y múltiples comentarios en redes sociales, donde se cuestionó la estrategia internacional y se plantearon críticas desde distintas perspectivas.',
+  contenido: [
+    'El senador Iván Cepeda Castro afirmó este 16 de septiembre que la descertificación de Colombia por parte de Estados Unidos confirma “el fracaso de la guerra global contra las drogas impuesta por Estados Unidos”. Señaló que se trata de una decisión política que refleja una doble moral, dado que mientras crece el consumo en países desarrollados, Colombia continúa pagando altos costos sociales y económicos.',
+    'Cepeda agregó que miles de vidas se han perdido, se han dilapidado recursos públicos y se ha profundizado la degradación institucional como consecuencia de una estrategia que, en su opinión, fue diseñada e impuesta desde el exterior. Llamó a que Estados Unidos asuma su responsabilidad en esta guerra fallida, cuyas consecuencias más graves han recaído sobre países productores como Colombia.',
+    'La publicación del senador en redes sociales generó cientos de reacciones (194, al momento de esta publicación). Entre los comentarios, @ferdiadiaz2000 aludió al papel del lobby político en Estados Unidos. Por su parte, @Diotima81474120 afirmó que no se trata solo de doble moral, sino de un negocio que produce “mucho dinero y poder”.',
+    'Otros usuarios respaldaron directamente la postura de Cepeda. @Alfonso19742009 señaló “Bien dicho Cepeda, así se habla”, mientras que @aarangob11 destacó que su postura refuerza la soberanía del país bajo el gobierno actual. En el mismo sentido, @JimmyPsicol calificó su análisis de “argumentos veraces”.',
+    'Algunos comentarios se enfocaron en factores internacionales. @luisamhenao consideró que el apoyo de Colombia a Gaza pudo influir en la decisión, mientras que @maritza_serrano señaló que Estados Unidos no ha reducido su consumo interno y calificó la descertificación como una decisión política contra el presidente Gustavo Petro. @ClaO969 añadió que puede ser una oportunidad para desligarse de la dependencia con EE. UU.',
+    'Hubo también señalamientos sobre vínculos financieros. @Antocortes2014 cuestionó la presencia de bases militares estadounidenses en Colombia, mientras que @Leonard80338296 preguntó por el dinero del narcotráfico que se lava en bancos extranjeros y el oro ilegal que entra a Estados Unidos. @diesco7 indicó que, siendo parte del problema, EE. UU. no tiene autoridad moral para sancionar y que debería intervenir un tribunal internacional.',
+    'Algunos usuarios relacionaron la medida con actores internos. @AlbaCorts5 escribió que Colombia solo será certificada cuando se enfrenten estructuras vinculadas al narcotráfico en el país. En la misma línea, @edosp38 cuestionó la presencia de bases extranjeras, y @LuisaPoncas compartió cifras sobre el mercado global de la cocaína, estimado en entre 100 y 400 mil millones de dólares anuales, del cual Colombia recibe una fracción menor.',
+    'Otros plantearon alternativas y oportunidades. @noroornforitems sugirió aprovechar la coyuntura para fortalecer la industria militar y de defensa nacional mediante acuerdos internacionales. Finalmente, @LordBacano contrastó la lucha antidrogas de Estados Unidos con la de Colombia, destacando la magnitud de las incautaciones en territorio colombiano.',
+    'Las diversas reacciones reflejan un amplio debate público en torno a la descertificación, en el que se cruzan críticas a la política internacional antidrogas, cuestionamientos al papel de Estados Unidos y llamados a replantear la estrategia nacional.'
+  ],
+  etiquetas: ['colombia','estados unidos','politica','narcotrafico','ivan cepeda'],
+  fuente: { nombre: 'Iván Cepeda Castro', url: 'https://twitter.com/IvanCepedaCast' },
+  url_fuente: 'https://x.com/IvanCepedaCast/status/1967795029415510441',
+  consecutivo_unico: '20250916-02'
+},
+{
+id: 'acuerdo-comercial-eeuu-ue-2025-09-16',
+fecha: '2025-09-16',
+titulo: 'El nuevo marco comercial entre Estados Unidos y la Unión Europea: energía, defensa y escenarios',
+pais: 'Internacional',
+resumen: 'Estados Unidos y la Unión Europea anunciaron en julio-agosto de 2025 un marco de acuerdo comercial que fija aranceles recíprocos, amplía compromisos energéticos con proveedores estadounidenses y señala intenciones de cooperación en defensa. Aunque algunos lo interpretan como una presión política, fuentes europeas subrayan que no existen obligaciones legales de compra masiva de armas o energía, sino compromisos políticos y decisiones soberanas país por país.',
+contenido: [
+'El 27 y 28 de julio de 2025, Estados Unidos y la Unión Europea presentaron un marco de acuerdo que establece un arancel general del 15% a las exportaciones europeas hacia EE.UU. y mantiene tarifas más altas en sectores sensibles como acero y aluminio. La Comisión Europea lo describió como una medida para estabilizar las relaciones y evitar una escalada arancelaria, mientras que la Casa Blanca lo calificó de un acuerdo “recíproco, justo y equilibrado”.',
+
+'Uno de los puntos más controvertidos es la energía. Según datos de Eurostat y la Agencia Internacional de Energía, en 2024 Estados Unidos suministró el 45% del gas natural licuado (GNL) importado por la UE, y en el primer trimestre de 2025 la cuota subió a 50,7%. La declaración conjunta menciona la intención europea de elevar las compras de energía estadounidense hasta 750.000 millones de dólares para 2028, pero especialistas como CEPS y Bruegel advierten que esa cifra es poco realista y dependerá de precios, infraestructura y objetivos climáticos.',
+
+'En materia de defensa, el acuerdo no fija obligaciones de compra concretas. La OTAN había acordado previamente en su cumbre de La Haya de junio de 2025 que los aliados destinaran hasta un 5% del PIB a defensa hacia 2035. Países como Alemania, Italia y Países Bajos ya habían confirmado compras de aviones F-35, mientras Francia y España optaron por reforzar sus programas europeos como Rafale y Eurofighter. Polonia, por su parte, ha acelerado desde 2022 adquisiciones de Abrams, HIMARS y Patriot con fuerte participación estadounidense. Estas decisiones responden a políticas nacionales y compromisos OTAN, no al marco comercial.',
+
+'El análisis por país muestra un panorama diverso: Alemania combina compras de F-35 con contratos energéticos de GNL; Francia mantiene autonomía industrial en defensa y contratos energéticos diversificados; Italia expande su programa F-35 y terminales de regasificación; Países Bajos aumentan su flota F-35 dentro de OTAN; España refuerza Eurofighter y es hub de regasificación; Polonia se rearma con fuerte presencia estadounidense en su arsenal. Ninguno de estos movimientos está directamente obligado por el acuerdo UE-EE.UU.',
+
+'Organismos europeos como el Servicio Europeo de Acción Exterior (EEAS) y la Dirección General de Comercio (DG Trade) subrayan que el marco de julio-agosto de 2025 es político y requiere implementación conforme a los procedimientos internos de la UE y de los Estados miembros. Think tanks como el Consejo de Relaciones Exteriores (CFR), SIPRI y Bruegel señalan que más que una cesión de soberanía, se trata de un reacomodo estratégico para ganar previsibilidad en comercio, reforzar la seguridad energética y aumentar el gasto en defensa bajo parámetros de la OTAN.',
+
+'Entre los escenarios posibles están: 1) una implementación parcial y flexible de los compromisos energéticos y comerciales; 2) litigios o tensiones si EE.UU. impone más aranceles unilaterales; y 3) una profundización selectiva en áreas digitales, cadenas críticas y control de inversiones. En todos los casos, las compras de armas y energía seguirán siendo negociadas caso por caso y sujetas a decisiones nacionales.',
+
+'En conclusión, aunque el marco comercial ha sido interpretado como una negociación bajo presión, la evidencia oficial europea indica que no existen obligaciones jurídicas para compras masivas de armas o energía en EE.UU. Lo que sí existe es un contexto de mayor dependencia energética y un compromiso de elevar el gasto militar en Europa, donde cada país define su propio mix entre proveedores estadounidenses, europeos y otros aliados.'
+],
+etiquetas: ['economía','estados unidos','unión europea','energía','defensa','otan'],
+fuente: 'Noticias Neutrales'
+},
+{
+  id: 'moconomy-gmbh-produccion-documentales-2025-09-16',
+  fecha: '2025-09-16',
+  titulo: 'Moconomy GmbH: productora alemana de documentales con proyección internacional',
+  pais: 'Alemania',
+  resumen: 'Moconomy GmbH es una compañía alemana especializada en la producción y distribución de documentales y películas, con presencia en varias ciudades europeas. Sus contenidos se publican bajo licencia en plataformas digitales y canales propios, como parte de una estrategia que combina acceso global y distribución regulada.',
+  contenido: [
+    'Moconomy GmbH tiene su base en Alemania y desarrolla contenidos audiovisuales centrados en documentales y películas de corte social, económico y cultural. La empresa opera a través de un modelo de producción descentralizado, con equipos y colaboradores en distintas ciudades de Europa.',
+    'Los documentales de Moconomy se distribuyen principalmente mediante su canal en YouTube y otras plataformas digitales, donde alcanzan audiencias internacionales. Este enfoque combina la gratuidad para el público con un esquema de licencias que garantiza la propiedad intelectual de los creadores.',
+    'La compañía ha consolidado una reputación como proveedor de contenidos de alta calidad en temas relacionados con economía, negocios, tecnología y sociedad. Sus producciones buscan acercar historias complejas a una audiencia global, utilizando un lenguaje audiovisual accesible.',
+    'Aunque su actividad se concentra en Europa, la empresa no cuenta aún con presencia directa en Latinoamérica, lo que abre posibilidades de colaboración futura con medios, portales de información y proyectos culturales en la región.'
+  ],
+  etiquetas: ['medios','documentales','alemania','moconomy gmbh'],
+  fuente: { nombre: 'Moconomy GmbH', url: 'https://www.moconomy.tv/' },
+  url_fuente: 'https://www.moconomy.tv/',
+  consecutivo_unico: '20250916-01'
+},
+{
+  id: 'suiza-millonarios-desigualdad-2025-09-16',
+  fecha: '2025-09-16',
+  titulo: 'Suiza: alta densidad de millonarios y desigualdad de ingresos moderada',
+  pais: 'Suiza',
+  resumen: 'Informes recientes confirman que Suiza es el país con mayor densidad de millonarios por adulto, aunque el índice de Gini de ingresos se mantiene en niveles moderados y la pobreza afecta a una minoría de la población.',
+  contenido: [
+    'El informe Global Wealth Report 2025 de UBS confirma que Suiza figura —junto con Luxemburgo— como el país con mayor densidad de millonarios en dólares entre los 56 mercados analizados. El documento señala explícitamente que la mayor proporción de millonarios por adulto está “una vez más” en Suiza y Luxemburgo. En 2024, Suiza volvió a quedar ligeramente por delante de Luxemburgo en esa métrica. Ahora bien, “un millonario por cada cinco habitantes” no es lo que muestran las fuentes serias. UBS y medios financieros que resumen el informe hablan de “más de uno de cada siete adultos” como umbral de referencia para Suiza (es decir, algo superior al 14% de los adultos, no 20% de la población total). Es una proporción muy elevada, pero menor que “uno de cada cinco habitantes” y, además, la comparación correcta es por adultos (no por toda la población).',
+    'En materia de ingreso disponible equivalente, la Oficina Federal de Estadística (FSO) reporta que el índice de Gini de Suiza fue 31,5 en 2023 (sin renta imputada de la vivienda). Este nivel sitúa a Suiza en la banda de desigualdad moderada dentro de la OCDE. Además, la misma estadística oficial muestra que el 10% de los residentes tenía en 2023 un ingreso disponible equivalente inferior a 26.086 francos suizos al año, lo que ayuda a dimensionar la base de ingresos bajos en el país pese a los altos promedios.',
+    'Según la FSO, la tasa de pobreza por ingresos fue del 8,1% en 2023 (renta 2022), equivalente a unas 708.000 personas. La pobreza afecta con mayor frecuencia a hogares monoparentales, personas sin empleo y con menor cualificación. En paralelo, Suiza mantiene niveles de ingreso mediano elevados en comparación europea: la FSO estima para 2023 una mediana de ingreso disponible equivalente de 28.247 francos suizos (metodología armonizada), dato que robustece el diagnóstico de nivel de vida alto para la mayoría, aunque persisten bolsillos de vulnerabilidad. Medios públicos suizos sintetizan estas tendencias: país muy rico, pobreza estable en torno al 8%, y fuertes diferencias entre grupos sociodemográficos.',
+    'Varios pilares de política pública y estructura económica ayudan a explicar el fenómeno: el sistema de pensiones de tres pilares (AVS/AHV estatal, previsión profesional obligatoria y ahorro privado). Los dos primeros son obligatorios y buscan asegurar primero la subsistencia y luego mantener el nivel de vida en la vejez. Este andamiaje estabiliza ingresos a lo largo del ciclo vital y reduce desigualdades en la vejez. Además, la formación profesional dual y fuerte vinculación educación-empleo facilitan transiciones rápidas al empleo cualificado y salarios relativamente altos desde edades tempranas. A ello se suma una economía abierta, especializada y diversificada (finanzas, farmacéutica, maquinaria de precisión, bienes de lujo), con altas remuneraciones y productividad, que elevan el ingreso disponible medio y sostienen una base fiscal capaz de financiar redes de protección social.',
+    'La alta densidad de millonarios convive con desigualdad de ingresos contenida para estándares internacionales. Esto sugiere que, aunque la riqueza patrimonial esté muy concentrada, la distribución del ingreso anual disponible —que es lo que define el estilo de vida cotidiano— se mantiene relativamente cohesiva tras impuestos y transferencias. El contraste entre concentración de riqueza y Gini de ingresos moderado es una pauta que también reconoce la literatura internacional: la desigualdad de riqueza suele ser bastante mayor que la de ingresos.',
+    'En conclusión, la frase “un millonario por cada cinco habitantes” no se ajusta a las cifras más recientes y fiables: la referencia correcta es “más de uno de cada siete adultos” con patrimonio igual o superior a un millón de dólares; aun así, Suiza sigue siendo el líder mundial en densidad de millonarios. En términos de ingresos, Suiza presenta desigualdad moderada (Gini 31,5 en 2023), tasas de pobreza bajas a escala internacional (8,1%) y medianas de ingreso elevadas, consistentes con un estilo de vida digno para la mayoría, aunque persisten grupos vulnerables. Entre los factores estructurales destacan el sistema de pensiones obligatorio de tres pilares, la formación profesional dual y un tejido productivo de alta productividad y salarios, que en conjunto contienen la desigualdad de ingresos y elevan el piso de bienestar.',
+    'Fuentes citadas:',
+    'UBS – Global Wealth Report 2025: https://www.ubs.com/global/en/family-office-uhnw/reports/global-wealth-report.html',
+    'Oficina Federal de Estadística de Suiza (FSO) – Estadísticas de ingresos y pobreza: https://www.bfs.admin.ch/bfs/en/home/statistics/economic-social-situation-population/income-consumption-wealth/income-equivalence-equivalent.html'
+  ],
+  etiquetas: ['economía','suiza','desigualdad','millonarios'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250916-01'
+},
+{
   id: 'haier-compra-ge-appliances-2016',
   fecha: '2025-09-16',
   titulo: 'Cómo Haier compró la división de electrodomésticos de General Electric',
@@ -67,7 +151,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'El desafío posterior fue convertir a GE Appliances en una marca verdaderamente global —tradicionalmente enfocada en Estados Unidos—, fortalecer la relación directa con usuarios y competir en el ecosistema del hogar conectado frente a actores tecnológicos como Apple, Google y Amazon, manteniendo al tiempo el enfoque en calidad y cercanía al mercado.'
   ],
   etiquetas: ['economía', 'tecnología', 'estados unidos','China'],
-  fuente: { nombre: 'YouTube' },
+  fuente: { nombre: 'Moconomy TV (Moconomy GMBH)' },
   url_fuente: 'https://www.youtube.com/watch?v=xL1DCv4iSSw'
 },
 {
