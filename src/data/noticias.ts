@@ -55,7 +55,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: 'haier-compra-ge-appliances-2016',
   fecha: '2025-09-16',
   titulo: 'Cómo Haier compró la división de electrodomésticos de General Electric',
-  pais: 'Estados Unidos / China',
+  pais: 'China',
   resumen: 'El documental relata cómo Haier pasó de ser una fábrica china al borde del colapso en los años 80 a adquirir en 2016, por 5.600 millones de dólares, el histórico negocio de electrodomésticos de General Electric, apoyándose en una transformación cultural hacia la calidad, microempresas internas y el Internet de las Cosas.',
   contenido: [
     'En 2016, Haier adquirió por 5.600 millones de dólares la unidad de electrodomésticos de General Electric (GE Appliances), una marca con más de un siglo en los hogares estadounidenses. La operación llegó después del intento fallido de venta a Electrolux en 2014 por objeciones de competencia, en un momento en que GE priorizaba negocios como el financiero y el aeroespacial.',
@@ -66,7 +66,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Tras el cierre, GE Appliances conservó autonomía y comenzó a adoptar microempresas internas. La unidad de lavandería, por ejemplo, pasó de pérdidas a ganancias en un año. En paralelo, Haier impulsó la apuesta por IoT en electrodomésticos conectados y la innovación abierta a través de FirstBuild, donde surgió el Kitchen Hub, galardonado como producto innovador en el CES 2018.',
     'El desafío posterior fue convertir a GE Appliances en una marca verdaderamente global —tradicionalmente enfocada en Estados Unidos—, fortalecer la relación directa con usuarios y competir en el ecosistema del hogar conectado frente a actores tecnológicos como Apple, Google y Amazon, manteniendo al tiempo el enfoque en calidad y cercanía al mercado.'
   ],
-  etiquetas: ['economía', 'tecnología', 'estados unidos'],
+  etiquetas: ['economía', 'tecnología', 'estados unidos','China'],
   fuente: { nombre: 'YouTube' },
   url_fuente: 'https://www.youtube.com/watch?v=xL1DCv4iSSw'
 },
