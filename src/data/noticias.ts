@@ -52,6 +52,61 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 {
+  id: 'haier-compra-ge-appliances-2016',
+  fecha: '2025-09-16',
+  titulo: 'Cómo Haier compró la división de electrodomésticos de General Electric',
+  pais: 'Estados Unidos / China',
+  resumen: 'El documental relata cómo Haier pasó de ser una fábrica china al borde del colapso en los años 80 a adquirir en 2016, por 5.600 millones de dólares, el histórico negocio de electrodomésticos de General Electric, apoyándose en una transformación cultural hacia la calidad, microempresas internas y el Internet de las Cosas.',
+  contenido: [
+    'En 2016, Haier adquirió por 5.600 millones de dólares la unidad de electrodomésticos de General Electric (GE Appliances), una marca con más de un siglo en los hogares estadounidenses. La operación llegó después del intento fallido de venta a Electrolux en 2014 por objeciones de competencia, en un momento en que GE priorizaba negocios como el financiero y el aeroespacial.',
+    'La transformación de Haier se remonta a los años 80 bajo el liderazgo de Zhang Ruimin, quien vinculó remuneración con desempeño y estableció una cultura de calidad. Un hecho simbólico fue la destrucción de 76 refrigeradores defectuosos, con el mensaje de tolerancia cero a las fallas. A partir de 2005, la compañía dividió a más de 60.000 empleados en más de 1.000 microempresas (modelo Rendanheyi), con autonomía y responsabilidad directa frente al cliente.',
+    'Esta movida audaz de Zhang Ruimin al crear microempresas internas buscaba combatir la burocracia y conectar a cada trabajador directamente con el mercado. Bajo el modelo Rendanheyi, todos los empleados debían actuar como emprendedores, lo que permitió acelerar la innovación y dar lugar a proyectos como plataformas de pedidos electrónicos o nuevas líneas de electrodomésticos.',
+    'Zhang Ruimin señaló que el modelo Rendanheyi sería aceptado porque se basa en respetar al individuo: colocar a la persona en primer lugar y ofrecerle la oportunidad de emprender libera su potencial y favorece una innovación sostenible dentro de la organización.',
+    'GE Appliances, heredera de innovaciones como el refrigerador “Monitor Top” de 1927, había perdido prioridad estratégica dentro del conglomerado desde los años 80. Para Haier, la compra ofrecía una marca con arraigo y una red de distribución consolidada en Estados Unidos, mercado en el que, pese a ingresar en 1999, mantenía una baja participación.',
+    'Tras el cierre, GE Appliances conservó autonomía y comenzó a adoptar microempresas internas. La unidad de lavandería, por ejemplo, pasó de pérdidas a ganancias en un año. En paralelo, Haier impulsó la apuesta por IoT en electrodomésticos conectados y la innovación abierta a través de FirstBuild, donde surgió el Kitchen Hub, galardonado como producto innovador en el CES 2018.',
+    'El desafío posterior fue convertir a GE Appliances en una marca verdaderamente global —tradicionalmente enfocada en Estados Unidos—, fortalecer la relación directa con usuarios y competir en el ecosistema del hogar conectado frente a actores tecnológicos como Apple, Google y Amazon, manteniendo al tiempo el enfoque en calidad y cercanía al mercado.'
+  ],
+  etiquetas: ['economía', 'tecnología', 'estados unidos'],
+  fuente: { nombre: 'YouTube' },
+  url_fuente: 'https://www.youtube.com/watch?v=xL1DCv4iSSw'
+},
+{
+  id: 'tribunal-suspende-nombramiento-juan-carlos-florian-ministra-igualdad-2025-09-15',
+  fecha: '2025-09-16',
+  titulo: 'Tribunal suspende nombramiento de Juan Carlos Florián como ministra de Igualdad',
+  pais: 'Colombia',
+  resumen: 'El Tribunal Administrativo de Cundinamarca suspendió de manera provisional el nombramiento de Juan Carlos Florián como ministra de Igualdad y Equidad, en medio de cuestionamientos legales y del debate sobre su identidad de género fluido.',
+  contenido: [
+    'El Tribunal Administrativo de Cundinamarca ordenó la suspensión provisional del nombramiento de Juan Carlos Florián como ministra de Igualdad y Equidad. La medida responde a una demanda que alega posibles inhabilidades en su designación como jefe de cartera.',
+    'Florián, representante a la Cámara por el departamento del Meta, fue nombrado recientemente al frente del Ministerio de Igualdad. Su designación generó debate público y acciones judiciales por presunto incumplimiento de la Ley de Cuotas que regula la participación de mujeres en altos cargos del Ejecutivo.',
+    'En su defensa, Florián se identificó como persona de género fluido y pidió ser tratado en femenino, solicitando que se le llame ministra. Argumentó que no se le puede clasificar dentro del esquema binario hombre-mujer para efectos de la cuota de género, lo que forma parte central de su estrategia jurídica ante el tribunal.',
+    'Como parte de las pruebas, el funcionario presentó mensajes personales en los que se refiere a sí mismo en femenino y manifestó que su identidad no se ajusta a las categorías tradicionales. El caso abre un debate sobre la manera en que las normas de paridad de género se aplican frente a identidades trans y no binarias en la administración pública.',
+    'La suspensión es una medida cautelar que no implica destitución definitiva, pero que congela los efectos de su nombramiento hasta que el tribunal decida de fondo sobre la legalidad del proceso.',
+    'Fuente citada:',
+    'https://elpais.com/america-colombia/2025-09-15/un-tribunal-suspende-el-nombramiento-de-juan-carlos-florian-en-el-ministerio-de-la-igualdad.html'
+  ],
+  etiquetas: ['colombia','ministerio de la igualdad','juan carlos florián','justicia','género'],
+  fuente: { nombre: 'El País', url: 'https://elpais.com/america-colombia/2025-09-15/un-tribunal-suspende-el-nombramiento-de-juan-carlos-florian-en-el-ministerio-de-la-igualdad.html' },
+  url_fuente: 'https://elpais.com/america-colombia/2025-09-15/un-tribunal-suspende-el-nombramiento-de-juan-carlos-florian-en-el-ministerio-de-la-igualdad.html'
+},
+{
+  id: 'alocucion-petro-nueva-eps-2025-09-15',
+  fecha: '2025-09-16',
+  titulo: 'Alocución del presidente Gustavo Petro sobre la Nueva EPS',
+  pais: 'Colombia',
+  resumen: 'El presidente Gustavo Petro presentó una alocución sobre la crisis de la Nueva EPS, revelando hallazgos de la Contraloría y reafirmando que el Gobierno no destinará recursos extraordinarios para salvar a la entidad.',
+  contenido: [
+    'El presidente de la República, Gustavo Petro Urrego, dirigió un mensaje a la nación el 12 de septiembre de 2025 en el que abordó la situación de la Nueva EPS, tras los hallazgos de la Contraloría General sobre facturas no reportadas y deudas ocultas por cerca de 5 billones de pesos.',
+    'Según Petro, la entidad presentó balances diferentes al Ministerio de Salud y a la Superintendencia Nacional de Salud, lo que impidió acciones oportunas de intervención. Los estados financieros maquillados ocultaban la magnitud de las obligaciones pendientes, mientras los costos se dispararon en 2023.',
+    'El mandatario explicó que el Gobierno ha implementado el giro directo a hospitales y clínicas en las EPS intervenidas, evitando la intermediación que facilitó desvíos y retrasos en los pagos. También destacó que los recursos de aseguramiento han crecido de manera sostenida en 2023 y 2024, sin que esto haya evitado prácticas irregulares.',
+    'Petro reiteró que el sistema de intermediación de recursos no funciona y debe ser reemplazado por un modelo en el que las IPS reciban directamente el dinero para la atención de pacientes. Además, subrayó que la política pública de salud ya está mostrando mejoras en indicadores de mortalidad infantil y materna.',
+    'Finalmente, el presidente fue enfático en que su Gobierno no entregará más recursos a la Nueva EPS ni a otras entidades en crisis, más allá de lo que la ley ordena por concepto de la Unidad de Pago por Capitación (UPC) y rubros similares. Según sus palabras, destinar recursos extraordinarios para “salvar” a estas entidades no soluciona el problema estructural y pondría en riesgo el balance fiscal de la nación.'
+  ],
+  etiquetas: ['colombia','salud','gustavo petro','nueva eps'],
+  fuente: 'Presidencia de la República',
+  url_fuente: 'https://www.youtube.com/watch?v=2ru8no7kKCA'
+},
+{
   id: 'habitos-y-funcion-tiroides-2025-09-15',
   fecha: '2025-09-15',
   titulo: 'Doctor Carlos Jaramillo explica cómo los hábitos dañan la tiroides y generan consecuencias metabólicas',
