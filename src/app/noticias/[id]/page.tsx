@@ -97,6 +97,13 @@ export default async function Noticia({ params }: Props) {
       <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
         {n.titulo}
       </h1>
+      {n.imagen && (
+  <img
+    src={n.imagen}
+    alt={n.titulo}
+    className="mt-6 mb-6 w-full max-h-[480px] object-cover rounded-xl shadow-sm"
+  />
+)}
 
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400">
         <span>{n.fecha}</span>

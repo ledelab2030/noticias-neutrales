@@ -57,6 +57,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Un estudiante disfrazado de cebra enseña a respetar al peatón en el Colegio Alemán',
   pais: 'colombia',
   resumen: 'Un alumno del Colegio Alemán de Barranquilla participa como “cebra” en una iniciativa educativa para fomentar el respeto por los cruces peatonales y promover la autonomía infantil en la movilidad urbana.',
+  imagen: '/noticias/cebra-colegio-aleman.jpg',
   contenido: [
     'La mañana del 17 de septiembre, un padre de familia que dejaba a su hijo en el Colegio Alemán de Barranquilla presenció una escena inusual: un estudiante vestido de cebra, acompañado por otro con señal de “PARE”, organizaba el cruce peatonal frente a la institución. Esta intervención forma parte de una iniciativa escolar que busca enseñar a los estudiantes y a la comunidad a respetar las cebras y promover la movilidad segura.',
     
@@ -73,8 +74,9 @@ const noticiasRaw: NoticiaRaw[] = [
     'Algunos dirán que es impensable que esto se dé en Colombia, pero en el peor de los casos se trata de diseñar un plan para que los niños muy pequeños hoy sean la generación que crezca con nuevas costumbres. Dentro de unos 20 años o más podríamos ver los frutos en la cultura ciudadana y en otros aspectos del estilo de vida, con beneficios reales para ellos y para toda la sociedad. Quizá entonces, en lugar de soñar con tener carro, valoren más la felicidad de poder andar a pie en cualquier sitio y a cualquier hora, sin temor.',
 
     'Fuentes citadas:',
-    'https://www.adac.de/verkehr/jugend-fahrradschule/pruefungsfahrt/',
-    'https://www.bzga.de/infomaterialien/verkehrserziehung/'
+      '   https://www.fahrschule-123.de/en/categories-of-driving-licence/motorcycles/',
+      '   https://www.kindergesundheit-info.de/themen/sicher-aufwachsen/sicherheit-im-alltag/verkehrssicherheit/'
+
   ],
   etiquetas: ['colombia', 'movilidad', 'educación', 'el caminante', 'peatones', 'alemania','buenas noticias'],
   fuente: 'Noticias Neutrales',
