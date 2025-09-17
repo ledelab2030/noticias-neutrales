@@ -52,6 +52,153 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 {
+  id: 'educacion-vial-colegio-aleman-barranquilla-2025-09-17',
+  fecha: '2025-09-17',
+  titulo: 'Un estudiante disfrazado de cebra enseña a respetar al peatón en el Colegio Alemán',
+  pais: 'colombia',
+  resumen: 'Un alumno del Colegio Alemán de Barranquilla participa como “cebra” en una iniciativa educativa para fomentar el respeto por los cruces peatonales y promover la autonomía infantil en la movilidad urbana.',
+  contenido: [
+    'La mañana del 17 de septiembre, un padre de familia que dejaba a su hijo en el Colegio Alemán de Barranquilla presenció una escena inusual: un estudiante vestido de cebra, acompañado por otro con señal de “PARE”, organizaba el cruce peatonal frente a la institución. Esta intervención forma parte de una iniciativa escolar que busca enseñar a los estudiantes y a la comunidad a respetar las cebras y promover la movilidad segura.',
+    
+    'El proyecto pedagógico incluye señalización horizontal en diversos puntos del campus para que los niños se acostumbren desde pequeños a caminar con autonomía y usar correctamente los cruces. También promueve que los propios padres y docentes den ejemplo utilizando las cebras para desplazarse, en lugar de cruzar por cualquier parte.',
+
+    'A pesar de los esfuerzos, persisten debilidades en la implementación. Algunas demarcaciones están deterioradas y varios conductores —incluidos algunos padres— no respetan los cruces, se detienen encima de ellos o no ceden el paso, lo que pone en riesgo a los peatones. La labor del estudiante disfrazado de cebra recuerda a programas exitosos en ciudades como La Paz (Bolivia) y Quito (Ecuador), donde estas figuras han humanizado el tránsito y fomentado una cultura de respeto.',
+
+    'La experiencia del Colegio Alemán se inspira en el modelo educativo de Alemania, país donde los niños reciben formación vial desde la infancia. A partir de los 6 años se les enseña a ir caminando al colegio de forma independiente, con rutas seguras identificadas por las familias y reforzadas por programas escolares. Es común que se organicen “entrenamientos peatonales” con agentes de policía para que los menores reconozcan señales, aprendan a cruzar calles y entiendan su rol como peatones activos en la ciudad.',
+
+    'Además, a partir de los 9 o 10 años, muchos niños alemanes se preparan para obtener una “Fahrradführerschein” o licencia de conducción de bicicleta. Este certificado se emite tras exámenes teóricos y prácticos que imparten las escuelas en colaboración con la policía local. Los menores aprenden sobre normas de tránsito, prioridades viales, manejo defensivo y comportamiento seguro en el espacio público.',
+
+    'Replicar estas prácticas en ciudades como Barranquilla requeriría más que acciones puntuales en instituciones educativas. Sería necesario un compromiso público sostenido para mejorar la infraestructura peatonal (andén continuo, cebras visibles, pasos seguros), formar a agentes de tránsito con enfoque pedagógico, implementar campañas de educación ciudadana y, sobre todo, transformar la mentalidad colectiva sobre el rol del peatón en el ecosistema urbano.',
+
+    'Algunos dirán que es impensable que esto se dé en Colombia, pero en el peor de los casos se trata de diseñar un plan para que los niños muy pequeños hoy sean la generación que crezca con nuevas costumbres. Dentro de unos 20 años o más podríamos ver los frutos en la cultura ciudadana y en otros aspectos del estilo de vida, con beneficios reales para ellos y para toda la sociedad. Quizá entonces, en lugar de soñar con tener carro, valoren más la felicidad de poder andar a pie en cualquier sitio y a cualquier hora, sin temor.',
+
+    'Fuentes citadas:',
+    'https://www.adac.de/verkehr/jugend-fahrradschule/pruefungsfahrt/',
+    'https://www.bzga.de/infomaterialien/verkehrserziehung/'
+  ],
+  etiquetas: ['colombia', 'movilidad', 'educación', 'el caminante', 'peatones', 'alemania'],
+  fuente: 'Noticias Neutrales',
+  url_fuente: '/el-caminante',
+  consecutivo_unico: '20250917-01'
+},
+{
+  id: 'sentencia-exjefes-farc-secuestros-colombia-2025-09-16',
+  fecha: '2025-09-17',
+  titulo: 'Exjefes de las FARC reciben sentencia máxima por miles de secuestros en Colombia',
+  pais: 'Colombia',
+  resumen: 'La Jurisdicción Especial para la Paz (JEP) emitió la sentencia más alta contemplada en su marco de justicia contra antiguos comandantes de las FARC por crímenes de secuestro cometidos entre 1990 y 2016.',
+  contenido: [
+    'La Jurisdicción Especial para la Paz (JEP) dictó este 16 de septiembre la sentencia máxima contra ocho exintegrantes del antiguo Secretariado de las FARC por miles de secuestros cometidos durante más de dos décadas en Colombia. La decisión marca un precedente histórico en el sistema de justicia transicional establecido tras el acuerdo de paz de 2016.',
+    'Los magistrados concluyeron que los exjefes guerrilleros son responsables de la política de secuestros ejecutada por la organización entre 1990 y 2016. Durante ese tiempo, miles de personas fueron privadas de la libertad con fines extorsivos, de control territorial y de presión política.',
+    'La sanción impuesta contempla una restricción efectiva de la libertad de entre 5 y 8 años en condiciones especiales, bajo un régimen restaurativo que incluye proyectos para reparar a las víctimas. Esta medida corresponde al marco establecido por la JEP, que prioriza la verdad, la reparación y la no repetición.',
+    'Entre los condenados se encuentran Rodrigo Londoño (Timochenko) y otros antiguos miembros del Secretariado. Todos ellos reconocieron su responsabilidad en audiencias previas, lo que permitió reducir la sanción en comparación con penas ordinarias de cárcel.',
+    'La sentencia busca dignificar a las víctimas y consolidar el proceso de justicia transicional en Colombia. Según la JEP, este es el primer gran fallo en el caso de secuestros, y se espera que sirva como base para decisiones futuras en otros macrocasos relacionados con crímenes cometidos durante el conflicto armado.',
+    'Fuentes citadas:',
+    'Jurisdicción Especial para la Paz (JEP). *Sentencia sobre el Caso 01: Toma de rehenes y otras privaciones graves de la libertad por parte de las FARC-EP*. https://www.jep.gov.co',
+    'Deutsche Welle (DW). *Exjefes de las FARC reciben sentencia máxima por miles de secuestros en Colombia*. https://www.dw.com/es/exjefes-de-las-farc-reciben-sentencia-m%C3%A1xima-por-miles-de-secuestros-en-colombia/a-74020979'
+  ],
+  etiquetas: ['colombia','farc','jep','justicia'],
+  fuente: { nombre: 'Deutsche Welle (DW)', url: 'https://www.dw.com/es/exjefes-de-las-farc-reciben-sentencia-m%C3%A1xima-por-miles-de-secuestros-en-colombia/a-74020979' },
+  url_fuente: 'https://www.dw.com/es/exjefes-de-las-farc-reciben-sentencia-m%C3%A1xima-por-miles-de-secuestros-en-colombia/a-74020979',
+  consecutivo_unico: '20250916-01'
+},
+{
+  id: 'leyendas-colombianas-en-familia-2025-09-16',
+  fecha: '2025-09-17',
+  titulo: 'Compartir leyendas en familia: tradición, miedo y diversión',
+  pais: 'Colombia',
+  resumen: 'Las leyendas transmitidas de generación en generación hacen parte de la cultura popular y despiertan en los niños tanto curiosidad como miedo o diversión, según la historia y la edad.',
+  contenido: [
+    'Las leyendas forman parte del patrimonio cultural que se transmite de abuelos a padres e hijos. Son relatos que viajan de generación en generación, cargados de misterio y tradición oral, que fortalecen la identidad y los lazos familiares.',
+    'Cuando los niños son pequeños, su imaginación hace que vivan intensamente estas historias. Algunas pueden causar miedo, al punto de que después de cumplir con una tarea escolar sobre leyendas, pidan dormir acompañados porque creen escuchar a la Llorona o ver al cura sin cabeza.',
+    'No todas las reacciones son de temor. Algunos niños descubren el lado curioso o gracioso de relatos como el del hombre caimán, que despierta más risas que susto y se convierte en un recuerdo divertido dentro de la familia.',
+    'Compartir leyendas con los hijos no solo entretiene: también enseña, advierte y transmite valores. Aunque a veces provoquen desvelos, estas historias cumplen su papel cultural y mantienen viva la memoria colectiva de los pueblos.'
+  ],
+  etiquetas: ['colombia','cultura','leyendas','familia','educación'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250916-01'
+},
+{
+  id: 'real-madrid-victoria-marsella-champions-2025-09-16',
+  fecha: '2025-09-17',
+  titulo: 'Real Madrid inicia con triunfo ante el Olympique de Marsella en la Champions League',
+  pais: 'España',
+  resumen: 'El Real Madrid venció al Olympique de Marsella en el Santiago Bernabéu en su debut en la fase de grupos de la Liga de Campeones 2025/26, con goles que aseguraron un inicio positivo en la competición europea.',
+  contenido: [
+    'El Real Madrid se impuso al Olympique de Marsella en el estadio Santiago Bernabéu el 16 de septiembre de 2025, en el inicio de la fase de grupos de la Liga de Campeones de la UEFA. Con este resultado, el conjunto español comenzó la temporada europea con paso firme.',
+    'Durante la primera parte, el equipo dirigido por Carlo Ancelotti controló el ritmo del encuentro y logró abrir el marcador con una jugada colectiva que culminó en gol. El Marsella intentó reaccionar, pero la defensa madridista se mantuvo sólida.',
+    'En la segunda mitad, el Real Madrid amplió la ventaja con otro tanto que sentenció el partido. Los cambios tácticos de Ancelotti permitieron asegurar el dominio y mantener la posesión frente a un rival que no consiguió inquietar al guardameta blanco.',
+    'Con este triunfo, el Real Madrid suma sus primeros tres puntos en la fase de grupos y se coloca en buena posición para encarar el resto de la competición. El club destacó el apoyo de la afición, que llenó el estadio en una noche de Champions.',
+    'Fuente citada: Real Madrid. *Crónica: Real Madrid – Olympique de Marsella*. https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025'
+  ],
+  etiquetas: ['fútbol','champions league','real madrid','olympique de marsella'],
+  fuente: { nombre: 'Real Madrid', url: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025' },
+  url_fuente: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025',
+  consecutivo_unico: '20250916-01'
+},
+{
+  id: 'tallinn-teatro-ruso-restricciones-2025-09-16',
+  fecha: '2025-09-17',
+  titulo: 'Debate en Tallin sobre restricciones a obras y directores rusos',
+  pais: 'Estonia',
+  resumen: 'El cambio de nombre del Teatro Ruso de Tallin a Teatro del Centro reabre el debate sobre si deben restringirse obras y directores rusos en la capital estonia.',
+  contenido: [
+    'El Teatro Ruso de Tallin anunció recientemente que dejará de utilizar esa denominación para llamarse ahora Teatro del Centro. La decisión busca desligarse de una identidad que algunos perciben asociada al gobierno de Moscú, en un contexto marcado por la invasión rusa a Ucrania.',
+    'El debate en Estonia gira en torno a si deben restringirse o no las obras y directores rusos en espacios culturales. Algunos sectores consideran que limitar la presencia cultural rusa sería una respuesta simbólica frente a la agresión militar, mientras otros alertan sobre el riesgo de caer en censura y excluir un patrimonio artístico universal.',
+    'Críticos de la medida recuerdan que autores como Antón Chéjov, Lev Tolstói o Serguéi Prokófiev forman parte del acervo cultural mundial y no deben confundirse con la política actual del Kremlin. Proponen mantener las obras rusas en la programación, pero acompañarlas de foros o notas explicativas que contextualicen la situación política.',
+    'La opción intermedia que gana apoyo en algunos teatros europeos es diferenciar entre cultura y propaganda. Se plantea aceptar las producciones rusas con valor artístico universal, pero restringir aquellas financiadas o promovidas directamente por el Estado ruso, con el fin de evitar que los escenarios culturales se conviertan en plataformas de legitimación política.',
+    'En el ámbito educativo, las restricciones también han estado presentes. Leonardo De la Hoz Borrego, durante sus sesiones presenciales de maestría en Tecnología Educativa en la Universidad de Tartu en agosto de 2023, conoció de primera mano cómo en las escuelas de Estonia se estaban limitando las clases en ruso, como parte de las medidas para contrarrestar la influencia del Kremlin tras el inicio de la guerra en Ucrania en 2022.',
+    'El tiempo pasará y sabremos que tan convenientes habrán sido este tipo de medidas.'
+  ],
+  etiquetas: ['estonia','cultura','teatro','rusia','educación'],
+  fuente: { nombre: 'ERR News', url: 'https://news.err.ee/1609802388/gallery-russian-dropped-as-tallinn-theater-renamed-downtown-theater' },
+  consecutivo_unico: '20250916-01'
+},
+{
+  id: 'jannik-sinner-us-open-2025-balance-temporada',
+  fecha: '2025-09-17',
+  titulo: 'Jannik Sinner: un 2025 de gloria, tropiezos y récords en el tenis mundial',
+  pais: 'Internacional',
+  resumen: 'El italiano cerró su participación en el US Open 2025 con la pérdida del número uno, tras 65 semanas consecutivas en la cima, pero consolidando una temporada histórica con títulos de Grand Slam, récords y acuerdos comerciales.',
+  contenido: [
+    'El US Open 2025 marcó un punto de inflexión en la temporada de Jannik Sinner. El italiano, que llegaba como número uno del mundo y vigente campeón, se encontró con un Carlos Alcaraz inspirado en la final de Nueva York. La derrota por 6-2, 3-6, 6-1, 6-4 no solo le costó el título, también el trono del ranking ATP que había ocupado durante 65 semanas consecutivas. Con ello se cerró un ciclo histórico: fue el primer italiano en alcanzar la cima y lo hizo con una regularidad que pocos jugadores han conseguido en su primer reinado.',
+    'El recorrido de Sinner en 2025 no se mide solo por esa caída. Abrió la temporada defendiendo con éxito el título en el Australian Open, protagonizó la final más larga de la historia de Roland Garros ante Alcaraz y se convirtió en el primer hombre de su país en conquistar Wimbledon. Tres grandes logros en un mismo año que lo consolidan como uno de los jugadores más consistentes y carismáticos del circuito.',
+    'La temporada también estuvo marcada por un capítulo complejo fuera de la cancha. En febrero aceptó una suspensión de tres meses tras detectarse en su organismo restos de clostebol, una sustancia prohibida. Las investigaciones concluyeron que fue una exposición involuntaria y que no le otorgó ventaja competitiva. Ese periodo de inactividad, que iba del 9 de febrero al 4 de mayo, le sirvió para resetear la mente. Al regresar, lejos de hundirse, alcanzó finales en Roma y París y levantó el trofeo en la hierba londinense, demostrando que la pausa no detuvo su ascenso.',
+    'En lo económico, Sinner se consolidó como una de las grandes estrellas del deporte. En 2025 superó los 11 millones de dólares en premios y multiplicó esa cifra con patrocinios de marcas globales como Nike, Head, Rolex, Gucci, Lavazza y De Cecco. Su imagen trasciende las canchas: combina tenis de élite con colaboraciones en moda y estilo de vida, lo que lo convierte en uno de los deportistas más influyentes de su generación.',
+    'Comparado con leyendas como Federer, Nadal o Djokovic, el primer reinado de Sinner en el número uno todavía es corto, pero sus 65 semanas seguidas en lo más alto lo ubican ya entre los grandes. Aunque perdió el trono en Nueva York, liberarse de la presión de defenderlo puede ser la clave para seguir creciendo. Con apenas 24 años, su historia en el tenis está lejos de terminar, y 2025 quedará como el año en que, pese a las dificultades, demostró que está hecho para durar.',
+    'En la rueda de prensa tras la final del US Open, Sinner reconoció: “Tengo que ser menos predecible”. Y la reflexión invita a imaginar: ¿qué pasaría si realmente lograra añadir esa imprevisibilidad a su juego? Con 20 títulos ATP y 65 semanas como número uno en su primer intento, el futuro promete mucho más.'
+  ],
+  etiquetas: ['tenis','atp','jannik sinner','us open','carlos alcaraz','deportes'],
+  fuente: { nombre: 'ATP Tour', url: 'https://www.atptour.com/en/news/sinner-alcaraz-us-open-2025-final-for-world-no-1' },
+  consecutivo_unico: '20250916-01'
+},
+{
+  id: 'decision-petroleo-perspectiva-integral-2025-09-16',
+  fecha: '2025-09-16',
+  titulo: 'Decisión de vender operaciones de fracking en EE. UU.: razones más allá de lo económico',
+  pais: 'Colombia',
+  resumen: 'La orden presidencial para que Ecopetrol venda su operación de fracking en la cuenca Pérmica de EE. UU. no obedece solo a razones fiscales, sino también ambientales, sanitarias, humanitarias, sociales y de sostenibilidad, en un contexto nacional con indicadores económicos favorables.',
+  contenido: [
+    'La decisión del gobierno de vender operaciones de fracking en EE. UU. ha sido presentada en algunos titulares como una pérdida fiscal, reducida al monto económico que deja de percibir la Nación. Sin embargo, la medida se fundamenta en criterios mucho más amplios que trascienden el aspecto financiero.',
+    'En primer lugar, se consideran los impactos ambientales asociados a la explotación y el consumo de combustibles fósiles. Colombia, como otros países, enfrenta la presión de mitigar el cambio climático y cumplir compromisos internacionales que apuntan a reducir las emisiones de gases de efecto invernadero.',
+    'En segundo lugar, el gobierno argumenta la necesidad de atender factores de salud pública. La contaminación del aire derivada del uso de combustibles fósiles está relacionada con enfermedades respiratorias y cardiovasculares, lo que genera costos humanos y económicos que superan la ganancia inmediata por regalías e impuestos.',
+    'La medida también responde a razones humanitarias y sociales: disminuir la dependencia del petróleo es parte de un enfoque de sostenibilidad que busca proteger a comunidades vulnerables, preservar territorios y garantizar una transición energética justa.',
+    'Finalmente, el presidente plantea que la decisión debe leerse como un paso hacia la sostenibilidad de la especie humana en el largo plazo. Reducir la dependencia de los hidrocarburos no solo protege el ambiente, sino que fortalece la capacidad del país para diversificar su economía y garantizar el bienestar de las próximas generaciones.',
+    'Este ha sido el primer gobierno que, mientras defiende todo lo que favorece a la salud humana, ha logrado mantener un balance en materia económica. Con algunas dificultades, las cifras muestran crecimiento económico sostenido, reducción del desempleo, recuperación del turismo, aumento de las exportaciones de café y mejoras en otros indicadores. Estos resultados desmienten las narrativas de sectores opositores y de quienes expresaban temores sobre la política del presidente en relación con el petróleo.',
+    'Fuentes citadas:',
+    '1) DANE. *Indicadores de mercado laboral* (desempleo y ocupación). https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral',
+    '2) Banco de la República. *Informe de política monetaria* (crecimiento económico). https://www.banrep.gov.co/es/informe-politica-monetaria',
+    '3) Ministerio de Comercio, Industria y Turismo. *Informe de turismo receptivo*. https://www.mincit.gov.co',
+    '4) Federación Nacional de Cafeteros. *Informe de exportaciones*. https://federaciondecafeteros.org',
+    '5) Ministerio de Ambiente y Desarrollo Sostenible. *Estrategia de transición energética*. https://www.minambiente.gov.co',
+    '6) Organización Mundial de la Salud (OMS). *Contaminación del aire y salud*. https://www.who.int/es/health-topics/air-pollution',
+    '7) Naciones Unidas. *Agenda 2030 para el Desarrollo Sostenible*. https://sdgs.un.org/es/2030agenda'
+  ],
+  etiquetas: ['colombia','petróleo','economía','salud','sostenibilidad','medio ambiente'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250916-01'
+},
+{
   id: 'descertificacion-colombia-eeuu-reacciones-2025-09-16',
   fecha: '2025-09-16',
   titulo: 'Reacciones a la descertificación de Colombia por parte de Estados Unidos',
@@ -395,7 +542,7 @@ fuente: 'Noticias Neutrales'
     'El proyecto se desarrollará inicialmente en Barranquilla, pero aspira a extenderse a otras ciudades de Colombia y América Latina. Se aceptarán colaboraciones de caminantes que deseen documentar su entorno, así como propuestas desde arquitectura, urbanismo, salud pública y cultura ciudadana.',
 
   ],
-  etiquetas: ['colombia', 'estilo de vida', 'movilidad', 'urbanismo'],
+  etiquetas: ['colombia', 'estilo de vida', 'movilidad', 'urbanismo','el caminante'],
   fuente: 'Noticias Neutrales',
 },
 {
