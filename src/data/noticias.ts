@@ -76,7 +76,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'https://www.adac.de/verkehr/jugend-fahrradschule/pruefungsfahrt/',
     'https://www.bzga.de/infomaterialien/verkehrserziehung/'
   ],
-  etiquetas: ['colombia', 'movilidad', 'educación', 'el caminante', 'peatones', 'alemania'],
+  etiquetas: ['colombia', 'movilidad', 'educación', 'el caminante', 'peatones', 'alemania','buenas noticias'],
   fuente: 'Noticias Neutrales',
   url_fuente: '/el-caminante',
   consecutivo_unico: '20250917-01'

@@ -59,6 +59,7 @@ export default function Header() {
   const SECCIONES = useMemo(
     () => [
       { href: "/noticias", label: "Actualidad" },
+      { href: "/el-caminante", label: "El Caminante" },
       { href: "/buenas-noticias", label: "Buenas Noticias!" },
       { href: "/estilo-de-vida", label: "Estilo de Vida" },
       { href: "/podcasts", label: "Podcasts" },
