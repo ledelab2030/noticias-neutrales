@@ -24,6 +24,7 @@ export type NoticiaRaw = {
   consecutivo_unico?: string
   video?: string   // URL de YouTube/Vimeo/etc. para embed
   credito_video?: string // Texto del crédito (ej: "YouTube / Canal oficial de ATP")
+  credito_imagen?: string
 
 
   // opcional: portada para previews (ruta absoluta o relativa a /public)
@@ -54,6 +55,27 @@ const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
+
+{
+  id: 'crecimiento-economia-colombia-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Economía colombiana creció 4,3% anual en julio, según el DANE',
+  pais: 'Colombia',
+  resumen: 'El DANE reportó un crecimiento anual de 4,3% en el Indicador de Seguimiento a la Economía (ISE) para julio de 2025, resultado que el presidente Gustavo Petro destacó como señal de reactivación plena.',
+  contenido: [
+    'El Departamento Administrativo Nacional de Estadística (DANE) informó que el Indicador de Seguimiento a la Economía (ISE) creció 4,33% anual en julio de 2025, frente al mismo mes de 2024. La cifra corresponde a la serie original del índice, mientras que la serie ajustada por efecto estacional y calendario registró un crecimiento de 4,14%.',
+    'Entre los sectores que impulsaron el crecimiento se destacan las actividades de comercio, transporte y alojamiento, con un aumento de 6,7%; la administración pública, defensa, educación y salud, con 7,0%; y la industria manufacturera y construcción, con 4,3%.',
+    'El presidente Gustavo Petro resaltó en sus redes sociales que la economía muestra un repunte en la industria, la agricultura y los servicios públicos. Señaló además que el comercio “está a reventar en ventas” y subrayó la importancia de acelerar la transición energética y la exportación de la agroindustria.',
+    'Petro afirmó que oficialmente la economía nacional “está plenamente reactivada” y sostuvo que una eventual reducción de la tasa de interés por parte del Banco de la República permitiría impulsar con mayor fuerza la construcción de edificaciones.',
+    'El boletín técnico del DANE también muestra que, en lo corrido del año hasta julio, el ISE creció 2,7% en comparación con el mismo periodo de 2024, lo que refleja una recuperación sostenida frente al año anterior.'
+  ],
+  etiquetas: ['colombia', 'economía', 'gustavo petro', 'resultados'],
+  fuente: { nombre: 'DANE', url: 'https://www.dane.gov.co/index.php/estadisticas-por-tema/cuentas-nacionales/indicador-de-seguimiento-a-la-economia-ise' },
+  url_fuente: 'https://www.dane.gov.co/files/investigaciones/boletines/ise/bol-ISE-jul2025.pdf',
+  imagen: '/noticias/crecimiento-economia-colombia-2025-09-18.jpg',
+  credito_imagen: 'DANE',
+  consecutivo_unico: '20250918-01'
+},
 {
   id: 'precandidatos-pacto-historico-10am-caracol-radio-2025-09-17',
   fecha: '2025-09-17',

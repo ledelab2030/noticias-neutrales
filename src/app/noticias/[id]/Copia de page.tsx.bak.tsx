@@ -2,7 +2,6 @@
 import { noticias } from "@/data/noticias"
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import Image from "next/image"
 import { slugify } from "@/utils/slugify"
 import type { Metadata } from "next"
 
@@ -10,6 +9,7 @@ interface Props {
   params: Promise<{ id: string }>
 }
 
+// —— Tipos locales (alineados con src/data/noticias.ts) ——
 type DialogoItem = { autor: string; texto: string }
 type FuenteObj = { nombre?: string; url?: string }
 type Fuente = string | FuenteObj | undefined
@@ -28,7 +28,6 @@ type Noticia = {
   url_fuente?: string
   consecutivo_unico?: string
   imagen?: string
-  credito_imagen?: string
   video?: string
   credito_video?: string
 }
@@ -43,7 +42,7 @@ function fuenteNombre(f: Fuente) {
   return ""
 }
 
-// ✅ Metadatos dinámicos (Open Graph / Twitter)
+// ✅ Metadatos dinámicos para previews (Open Graph / Twitter)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
   const n = noticias.find((x) => x.id === id) as Noticia | undefined
@@ -52,6 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const base = "https://www.ledelab.co"
   const url = `${base}/noticias/${id}`
 
+  // Usa n.imagen si existe; si es relativa, vuélvela absoluta. Fallback a /og-default.jpg
   const ogImageRelOrAbs = n.imagen ?? "/og-default.jpg"
   const ogImage = ogImageRelOrAbs.startsWith("http")
     ? ogImageRelOrAbs
@@ -102,22 +102,30 @@ export default async function Noticia({ params }: Props) {
 
       {/* Imagen con crédito */}
       {n.imagen && (
-        <figure className="mt-6 mb-6">
-          <Image
+        <div className="mt-6 mb-6">
+          <img
             src={n.imagen}
             alt={n.titulo}
-            width={1600}
-            height={900}
-            priority
-            sizes="(max-width: 768px) 100vw, 768px"
-            className="w-full h-auto rounded-xl shadow-sm object-contain"
+            className="w-full max-h-[480px] object-cover rounded-xl shadow-sm"
           />
-          {n.credito_imagen && (
-            <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-              Crédito de imagen: {n.credito_imagen}
-            </figcaption>
+          {n.fuente && (
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              Crédito de imagen:{" "}
+              {typeof n.fuente === "string" ? (
+                n.fuente
+              ) : (
+                <a
+                  href={n.fuente.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:opacity-80"
+                >
+                  {n.fuente.nombre}
+                </a>
+              )}
+            </p>
           )}
-        </figure>
+        </div>
       )}
 
       {/* Video embebido con crédito */}
@@ -178,7 +186,7 @@ export default async function Noticia({ params }: Props) {
         </div>
       )}
 
-      {/* Contenido / Diálogo / Resumen */}
+      {/* Contenido / Diálogo (compacto) / Resumen */}
       {Array.isArray(n.contenido) && n.contenido.length > 0 ? (
         <div className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100">
           {n.contenido.map((p, i) => (
@@ -204,21 +212,23 @@ export default async function Noticia({ params }: Props) {
         </p>
       ) : null}
 
+      {/* Separador visual antes de etiquetas */}
       {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && (
-        <>
-          <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
-          <div className="flex flex-wrap gap-2">
-            {n.etiquetas.map((tag) => (
-              <Link
-                key={tag}
-                href={`/tag/${encodeURIComponent(slugify(tag))}`}
-                className="rounded-full border px-3 py-1 text-xs text-muted-foreground hover:bg-gray-50 dark:hover:bg-gray-800"
-              >
-                {tag}
-              </Link>
-            ))}
-          </div>
-        </>
+        <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
+      )}
+
+      {!!n.etiquetas?.length && (
+        <div className="flex flex-wrap gap-2">
+          {n.etiquetas.map((tag) => (
+            <Link
+              key={tag}
+              href={`/tag/${encodeURIComponent(slugify(tag))}`}
+              className="rounded-full border px-3 py-1 text-xs text-muted-foreground hover:bg-gray-50 dark:hover:bg-gray-800"
+            >
+              {tag}
+            </Link>
+          ))}
+        </div>
       )}
     </main>
   )
@@ -226,6 +236,7 @@ export default async function Noticia({ params }: Props) {
 
 function resaltarLinks(texto: string) {
   return texto.replace(
+    // Detecta URLs que no estén ya dentro de href=""
     /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
     '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
   )
