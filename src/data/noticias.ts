@@ -22,6 +22,9 @@ export type NoticiaRaw = {
   fuente?: Fuente
   url_fuente?: string
   consecutivo_unico?: string
+  video?: string   // URL de YouTube/Vimeo/etc. para embed
+  credito_video?: string // Texto del crédito (ej: "YouTube / Canal oficial de ATP")
+
 
   // opcional: portada para previews (ruta absoluta o relativa a /public)
   imagen?: string
@@ -51,6 +54,26 @@ const noticiasRaw: NoticiaRaw[] = [
   // 🔽 PEGAR aquí debajo las noticias:
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
+{
+  id: 'precandidatos-pacto-historico-10am-caracol-radio-2025-09-17',
+  fecha: '2025-09-17',
+  titulo: 'Precandidatos del Pacto Histórico a la Presidencia dialogan en Caracol Radio',
+  pais: 'Colombia',
+  resumen: 'Caracol Radio presentó un espacio de diálogo con los precandidatos presidenciales del Pacto Histórico, moderado por la periodista Vanessa De la Torre en el programa 10AM.',
+  contenido: [
+    'En la mañana de este miércoles 17 de septiembre de 2025, Caracol Radio transmitió un especial en su programa "10AM" con la participación de los precandidatos a la Presidencia por el Pacto Histórico: María José Pizarro, Gustavo Bolívar, Susana Muhamad, Daniel Quintero y Carolina Corcho. El espacio fue moderado por la periodista Vanessa De la Torre.',
+    'Durante el encuentro, los aspirantes expusieron sus principales propuestas y respondieron preguntas sobre asuntos de coyuntura nacional. El senador Iván Cepeda Castro no participó, ya que se excusó por un compromiso adquirido con anterioridad a la fecha prevista para el debate.',
+    'El especial fue transmitido en vivo por Caracol Radio y quedó disponible en su canal oficial de YouTube, permitiendo a la audiencia acceder de manera abierta al diálogo entre los precandidatos del movimiento político.',
+    'La sección de comentarios en la transmisión de YouTube reflejó opiniones diversas: varios usuarios resaltaron la elocuencia y serenidad de Carolina Corcho, mientras que otros se mostraron identificados con la trayectoria de Daniel Quintero, considerándolo un candidato fuerte. También hubo quienes destacaron la presencia de María José Pizarro y Gustavo Bolívar, así como la capacidad de Susana Muhamad para presentar ideas claras.',
+    'Algunos participantes del chat criticaron el rol de los periodistas, señalando interrupciones o falta de neutralidad, mientras otros reclamaron la ausencia de Iván Cepeda como una oportunidad perdida en el panel. En conjunto, los comentarios reflejaron tanto respaldos entusiastas como cuestionamientos a los precandidatos y al formato del espacio.'
+  ],
+  etiquetas: ['colombia', 'política', 'pacto histórico', 'caracol radio'],
+  fuente: { nombre: 'Caracol Radio', url: 'https://caracol.com.co/' },
+  url_fuente: 'https://www.youtube.com/watch?v=1rGk2qNMEuk',
+  video: 'https://www.youtube.com/embed/1rGk2qNMEuk',
+  credito_video: 'YouTube / Caracol Radio',
+  consecutivo_unico: '20250917-01'
+},
 {
   id: 'educacion-vial-colegio-aleman-barranquilla-2025-09-17',
   fecha: '2025-09-17',
@@ -162,6 +185,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Jannik Sinner: un 2025 de gloria, tropiezos y récords en el tenis mundial',
   pais: 'Internacional',
   resumen: 'El italiano cerró su participación en el US Open 2025 con la pérdida del número uno, tras 65 semanas consecutivas en la cima, pero consolidando una temporada histórica con títulos de Grand Slam, récords y acuerdos comerciales.',
+  imagen: '/noticias/20250917-jannik-sinner-atp-perfil.jpg',
   contenido: [
     'El US Open 2025 marcó un punto de inflexión en la temporada de Jannik Sinner. El italiano, que llegaba como número uno del mundo y vigente campeón, se encontró con un Carlos Alcaraz inspirado en la final de Nueva York. La derrota por 6-2, 3-6, 6-1, 6-4 no solo le costó el título, también el trono del ranking ATP que había ocupado durante 65 semanas consecutivas. Con ello se cerró un ciclo histórico: fue el primer italiano en alcanzar la cima y lo hizo con una regularidad que pocos jugadores han conseguido en su primer reinado.',
     'El recorrido de Sinner en 2025 no se mide solo por esa caída. Abrió la temporada defendiendo con éxito el título en el Australian Open, protagonizó la final más larga de la historia de Roland Garros ante Alcaraz y se convirtió en el primer hombre de su país en conquistar Wimbledon. Tres grandes logros en un mismo año que lo consolidan como uno de los jugadores más consistentes y carismáticos del circuito.',
@@ -772,7 +796,7 @@ fuente: 'Noticias Neutrales'
     'Finalmente, en un pronunciamiento internacional, Cepeda condenó lo que calificó como genocidio contra el pueblo palestino en Gaza, en el marco de su reflexión sobre la defensa de los derechos humanos en Colombia y en el mundo.',
     'Fuente citada: Video completo del discurso en YouTube https://www.youtube.com/watch?v=vfvMnExauPA'
   ],
-  etiquetas: ['colombia', 'política', 'unión patriótica','ivan cepeda'],
+  etiquetas: ['colombia', 'política', 'unión patriótica','ivan cepeda','pacto histórico'],
   fuente: { nombre: 'YouTube', url: 'https://www.youtube.com/watch?v=vfvMnExauPA' },
   consecutivo_unico: '20250910-03'
 },
@@ -1495,7 +1519,7 @@ fuente: 'Noticias Neutrales'
     'La consulta del Pacto Histórico busca escoger un candidato único de la coalición para las elecciones presidenciales de 2026, en un proceso que incluye debates y mecanismos de participación interna.',
     'Fuentes citadas: Invamer, El Universal.'
   ],
-  etiquetas: ['colombia', 'política', 'elecciones', 'pacto historico'],
+  etiquetas: ['colombia', 'política', 'elecciones', 'pacto histórico'],
   fuente: { nombre: 'El Universal', url: 'https://www.eluniversal.com.co/colombia/2025/08/16/consulta-del-pacto-historico-los-precandidatos-que-lideran-la-intencion-de-voto/' },
   url_fuente: 'https://www.eluniversal.com.co/colombia/2025/08/16/consulta-del-pacto-historico-los-precandidatos-que-lideran-la-intencion-de-voto/',
   consecutivo_unico: '20250816-03'

@@ -28,6 +28,8 @@ type Noticia = {
   url_fuente?: string
   consecutivo_unico?: string
   imagen?: string
+  video?: string
+  credito_video?: string
 }
 
 function isFuenteObj(val: unknown): val is FuenteObj {
@@ -97,13 +99,55 @@ export default async function Noticia({ params }: Props) {
       <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
         {n.titulo}
       </h1>
+
+      {/* Imagen con crédito */}
       {n.imagen && (
-  <img
-    src={n.imagen}
-    alt={n.titulo}
-    className="mt-6 mb-6 w-full max-h-[480px] object-cover rounded-xl shadow-sm"
-  />
-)}
+        <div className="mt-6 mb-6">
+          <img
+            src={n.imagen}
+            alt={n.titulo}
+            className="w-full max-h-[480px] object-cover rounded-xl shadow-sm"
+          />
+          {n.fuente && (
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              Crédito de imagen:{" "}
+              {typeof n.fuente === "string" ? (
+                n.fuente
+              ) : (
+                <a
+                  href={n.fuente.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:opacity-80"
+                >
+                  {n.fuente.nombre}
+                </a>
+              )}
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* Video embebido con crédito */}
+      {n.video && (
+        <div className="mt-6 mb-6">
+          <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-sm">
+            <iframe
+              src={n.video}
+              title={n.titulo}
+              className="absolute top-0 left-0 w-full h-full rounded-xl"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          {n.credito_video && (
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              Crédito de video: {n.credito_video}
+            </p>
+          )}
+        </div>
+      )}
 
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400">
         <span>{n.fecha}</span>
