@@ -57,6 +57,127 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'declaraciones-ministro-finanzas-israel-gaza-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Declaraciones atribuidas al ministro de Finanzas de Israel sobre la Franja de Gaza',
+  pais: 'Internacional',
+  resumen: 'El ministro de Finanzas de Israel, Bezalel Smotrich, calificó la Franja de Gaza como una “bonanza inmobiliaria” y señaló que se adelantan conversaciones con Estados Unidos para definir el futuro del territorio palestino.',
+  contenido: [
+    'Durante una conferencia inmobiliaria en Tel Aviv, el ministro de Finanzas de Israel, Bezalel Smotrich, aseguró que la Franja de Gaza representa una “bonanza inmobiliaria” que “se paga sola”.',
+    'Smotrich afirmó que ya se desarrollan negociaciones con Estados Unidos para repartir el territorio palestino. “Se compartirá con Estados Unidos. Una vez esté destruida, veremos cómo la repartimos. Hemos invertido mucho dinero en esta guerra. Necesitamos ver cómo distribuiremos el terreno en porcentajes (...) La demolición, la primera fase de la renovación de la ciudad, ya está lista, ahora solo debemos reconstruir”, dijo el ministro.',
+    'Las declaraciones coinciden con expresiones del expresidente estadounidense Donald Trump, quien previamente habló de planes para convertir la Franja de Gaza en una “riviera” bajo control de Estados Unidos.',
+    'La información fue difundida por el medio colombiano Última Hora Caracol a través de su cuenta oficial en la red social X.'
+  ],
+  etiquetas: ['internacional','israel','gaza','estados unidos'],
+  fuente: { nombre: 'Última Hora Caracol', url: 'https://x.com/UltimaHoraCR/status/1968360598397161795' },
+  consecutivo_unico: '20250918-01'
+},
+{
+  id: 'comparacion-modelos-economicos-petro-milei-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Comparación de modelos económicos: Petro en Colombia y Milei en Argentina',
+  pais: 'Internacional',
+  resumen: 'El economista Alfredo Serrano Manc comparó la evolución económica de Colombia y Argentina en 2025, destacando diferencias entre el modelo de Gustavo Petro y el de Javier Milei a partir del tipo de cambio y el riesgo país.',
+  contenido: [
+    'Alfredo Serrano Manc, director del Centro Estratégico Latinoamericano de Geopolítica (CELAG), publicó un análisis en el que contrasta los resultados de la política económica en Colombia, bajo la presidencia de Gustavo Petro, y en Argentina, bajo la administración de Javier Milei.',
+    'Según el economista, se trata de dos enfoques distintos: uno que incorpora a la ciudadanía y busca estabilidad macroeconómica con bienestar microeconómico, frente a otro que genera desequilibrios macroeconómicos y malestar en los hogares. Para sustentar su afirmación, compartió datos del tipo de cambio y del riesgo país en ambos países durante 2025.',
+    'En el caso de Colombia, el peso se apreció respecto al dólar y el riesgo país mostró una tendencia a la baja, de acuerdo con cifras de BanRep y el EMBI de JP Morgan. En contraste, en Argentina el peso sufrió una marcada depreciación y el riesgo país aumentó con fuerza, según datos del Banco Central de la República Argentina (BCRA) y JP Morgan.',
+    'Serrano concluyó que los indicadores reflejan un mejor desempeño de Colombia frente a Argentina en lo corrido de 2025, y remarcó su frase: "Dato mata relato", en referencia a la evidencia empírica frente a los discursos políticos.',
+    'Fuentes citadas:',
+    '1) Banco Central de la República Argentina (BCRA). https://www.bcra.gob.ar/',
+    '2) Banco de la República de Colombia (BanRep). https://www.banrep.gov.co/',
+    '3) JP Morgan. EMBI Global Index. https://www.jpmorgan.com/'
+  ],
+  etiquetas: ['economía','colombia','argentina','gustavo petro','javier milei','celag'],
+  fuente: { nombre: 'Alfredo Serrano Manc', url: 'https://x.com/alfreserramanci' },
+  consecutivo_unico: '20250918-01'
+},
+{
+  id: 'alemania-presupuesto-general-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Alemania aprueba presupuestos generales con inversiones récord',
+  pais: 'Alemania',
+  resumen: 'El Parlamento alemán aprobó los presupuestos generales para 2025, que incluyen un volumen histórico de inversiones públicas y un aumento significativo en áreas estratégicas.',
+  contenido: [
+    'El Bundestag dio luz verde este jueves al presupuesto general de Alemania para 2025, que contempla un volumen total de 490.000 millones de euros. El plan financiero destaca por asignar una cifra récord de 110.000 millones de euros destinados a inversiones públicas.',
+    'El gobierno alemán ha justificado estas medidas como necesarias para impulsar la modernización del país, con especial énfasis en infraestructura, digitalización, transición energética y defensa. Según el ministro de Finanzas, el presupuesto busca asegurar el crecimiento económico sostenible y fortalecer la resiliencia del Estado frente a crisis futuras.',
+    'Entre los sectores priorizados se encuentran la transición hacia energías renovables, la movilidad sostenible y la innovación tecnológica, con el objetivo de cumplir compromisos ambientales y mantener la competitividad industrial. También se contempla un refuerzo en el gasto social y la seguridad nacional.',
+    'La aprobación se da en un contexto de debate político sobre la disciplina fiscal y la necesidad de mantener el “freno a la deuda” inscrito en la Constitución alemana. No obstante, el gobierno defendió que las inversiones extraordinarias son indispensables para responder a los desafíos globales y garantizar el bienestar de la población.'
+  ],
+  etiquetas: ['economía','alemania','presupuesto','inversión pública'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com/es/alemania-aprueba-presupuestos-generales-con-inversiones-r%C3%A9cord/a-74046711' },
+  url_fuente: 'https://www.dw.com/es/alemania-aprueba-presupuestos-generales-con-inversiones-r%C3%A9cord/a-74046711',
+  consecutivo_unico: '20250918-01'
+},
+{
+  id: 'ataques-lanchas-caribe-ejecuciones-extrajudiciales-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Ataques a lanchas con drogas en el Caribe son ejecuciones extrajudiciales',
+  pais: 'Internacional',
+  resumen: 'La ONU denunció que los ataques contra lanchas usadas para transportar drogas en el Caribe constituyen ejecuciones extrajudiciales, vulnerando el derecho internacional.',
+  contenido: [
+    'La Oficina de la Alta Comisionada de las Naciones Unidas para los Derechos Humanos afirmó que los ataques registrados contra embarcaciones sospechosas de transportar drogas en el Caribe son ejecuciones extrajudiciales. El informe señala que estas acciones contravienen los estándares internacionales y ponen en riesgo la vida de personas que no han tenido un juicio justo.',
+    'De acuerdo con la ONU, los operativos se han realizado principalmente en aguas internacionales del Caribe, donde fuerzas navales de distintos países han abierto fuego contra lanchas rápidas presuntamente dedicadas al narcotráfico. La organización advierte que el uso de la fuerza letal en estos casos no cumple con las obligaciones de proporcionalidad ni con el debido proceso.',
+    'La Alta Comisionada enfatizó que, aunque los Estados tienen la responsabilidad de combatir el narcotráfico, deben hacerlo en cumplimiento del derecho internacional y respetando los derechos humanos. El informe pide a los gobiernos involucrados que detengan estas prácticas y aseguren mecanismos de rendición de cuentas.',
+    'La ONU también instó a establecer protocolos claros que prioricen la detención y el sometimiento a la justicia de los sospechosos, en lugar de recurrir a medidas que resulten en ejecuciones extrajudiciales. Según el organismo, la lucha contra el crimen organizado no puede justificar la vulneración de principios básicos de derechos humanos.'
+  ],
+  etiquetas: ['seguridad','onu','ejecuciones extrajudiciales','caribe'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com/es/ataques-a-lanchas-con-drogas-en-el-caribe-son-ejecuciones-extrajudiciales/a-74020988' },
+  url_fuente: 'https://www.dw.com/es/ataques-a-lanchas-con-drogas-en-el-caribe-son-ejecuciones-extrajudiciales/a-74020988',
+  consecutivo_unico: '20250918-03'
+},
+{
+  id: 'colombia-primera-sentencia-exmilitares-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Colombia emite primera sentencia contra exmilitares por falsos positivos',
+  pais: 'Colombia',
+  resumen: 'Un tribunal en Bogotá condenó a seis exmilitares por su responsabilidad en ejecuciones extrajudiciales, conocidas como falsos positivos, ocurridas entre 2006 y 2008.',
+  contenido: [
+    'Un tribunal de Bogotá dictó la primera sentencia contra seis exmilitares involucrados en ejecuciones extrajudiciales, conocidas en Colombia como falsos positivos. Los hechos juzgados ocurrieron entre 2006 y 2008, en medio del conflicto armado interno.',
+    'Según la investigación, las víctimas fueron presentadas falsamente como guerrilleros abatidos en combate, con el fin de mostrar resultados operativos y obtener beneficios dentro de la estructura militar. La Justicia determinó que los acusados actuaron de manera sistemática y coordinada.',
+    'La condena se emitió tras varios años de indagaciones y hace parte de los procesos adelantados por la Jurisdicción Especial para la Paz (JEP) y la justicia ordinaria, que han recibido miles de testimonios y pruebas sobre la magnitud de estos crímenes.',
+    'El caso marca un precedente en el reconocimiento judicial de la responsabilidad de altos mandos y subalternos en estas prácticas. Se espera que futuras sentencias contribuyan a esclarecer más de 6.400 muertes reportadas como falsos positivos en Colombia durante los años de mayor intensidad del conflicto armado.'
+  ],
+  etiquetas: ['colombia','seguridad','investigación','falsos positivos'],
+  fuente: { nombre: 'DW', url: 'https://www.dw.com/es/colombia-emite-primera-sentencia-contra-exmilitares/a-74051270' },
+  url_fuente: 'https://www.dw.com/es/colombia-emite-primera-sentencia-contra-exmilitares/a-74051270',
+  consecutivo_unico: '20250918-03'
+},
+{
+  id: 'critica-hanwen-zhang-encuestas-cifras-colombia-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Hanwen Zhang cuestiona encuestas y cifras políticas en Colombia',
+  pais: 'Colombia',
+  resumen: 'La investigadora Hanwen Zhang señaló que encuestas y estudios con errores metodológicos o sesgos están afectando la discusión política en Colombia, citando tres casos recientes.',
+  contenido: [
+    'La investigadora Hanwen Zhang advirtió que encuestas y cifras malintencionadas están causando un impacto negativo en la discusión política en Colombia. Según explicó, durante el último año se han registrado varios ejemplos que han generado controversia y desinformación.',
+    'El primero de ellos es el documento del Banco de la República que alertaba sobre la posible "pérdida de 450 mil empleos" en caso de aprobarse la reforma laboral. Zhang cuestionó la validez de este cálculo y su uso en el debate público.',
+    'En segundo lugar, mencionó la encuesta del partido Mira, también relacionada con la reforma laboral, que presentó problemas en la recolección de datos, una baja tasa de respuestas efectivas y presunta manipulación de resultados.',
+    'Finalmente, señaló el estudio de Fenalco, en el que se afirma que el impuesto a la comida saludable estaría afectando de manera grave a los tenderos. Para Zhang, este tipo de informes carecen del rigor suficiente para ser usados como referencia.',
+    'Zhang advirtió que los políticos citan estos estudios sin investigar la calidad de los mismos, lo que contribuye a la propagación de información poco confiable en el debate público.'
+  ],
+  etiquetas: ['colombia','politica','encuestas','medios'],
+  fuente: { nombre: 'Hanwen Zhang', url: 'https://x.com/hanwenzhang1982/status/1837137729083461657' },
+  consecutivo_unico: '20250918-07'
+},
+{
+  id: 'acuerdos-clan-del-golfo-gobierno-petro-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Gobierno y Clan del Golfo logran primeros acuerdos en negociación en Catar',
+  pais: 'Colombia',
+  resumen: 'En Doha, Catar, se alcanzaron los primeros acuerdos entre el gobierno del presidente Gustavo Petro y el Clan del Golfo. Los compromisos incluyen el fin del reclutamiento de menores y la sustitución de economías ilícitas en los territorios bajo influencia de ese grupo.',
+  contenido: [
+    'En la capital de Catar, el gobierno de Colombia y el Clan del Golfo lograron avances en el marco de los diálogos de paz que se desarrollan desde septiembre. El encuentro concluyó con la firma de dos acuerdos iniciales, centrados en el cese del reclutamiento de menores y en la sustitución de economías ilegales.',
+    'Según lo anunciado, el Clan del Golfo se comprometió a suspender de manera inmediata la vinculación de menores de edad a sus estructuras armadas. Este punto ha sido uno de los principales reclamos de organismos internacionales y defensores de derechos humanos en el país.',
+    'El segundo acuerdo plantea avanzar en la sustitución de economías ilícitas, con especial énfasis en la producción y tráfico de drogas, buscando abrir paso a proyectos productivos legales en las zonas bajo influencia de este grupo armado. El gobierno, por su parte, acompañará con programas sociales y de inversión.',
+    'Las negociaciones en Doha continuarán en las próximas semanas. El gobierno de Gustavo Petro destacó que estos compromisos representan un primer paso para reducir la violencia en regiones afectadas, mientras que se mantiene el proceso de verificación y el acompañamiento internacional en el marco de la política de paz total.'
+  ],
+  etiquetas: ['colombia','seguridad','gustavo petro','clan del golfo','paz'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/colombia-20/paz-y-memoria/clan-del-golfo-y-petro-estos-son-los-primeros-acuerdos-tras-ronda-de-negociacion-en-catar-reclutamiento-y-sustitucion/' },
+  url_fuente: 'https://www.elespectador.com/colombia-20/paz-y-memoria/clan-del-golfo-y-petro-estos-son-los-primeros-acuerdos-tras-ronda-de-negociacion-en-catar-reclutamiento-y-sustitucion/',
+  consecutivo_unico: '20250918-01'
+},
+{
   id: 'crecimiento-economia-colombia-2025-09-18',
   fecha: '2025-09-18',
   titulo: 'Economía colombiana creció 4,3% anual en julio, según el DANE',
@@ -75,6 +196,25 @@ const noticiasRaw: NoticiaRaw[] = [
   imagen: '/noticias/crecimiento-economia-colombia-2025-09-18.jpg',
   credito_imagen: 'DANE',
   consecutivo_unico: '20250918-01'
+},
+{
+  id: 'jimmy-kimmel-suspension-comentarios-charlie-kirk-2025-09-18',
+  fecha: '2025-09-18',
+  titulo: 'Suspensión de Jimmy Kimmel tras comentarios de Charlie Kirk en EE. UU.',
+  pais: 'Estados Unidos',
+  resumen: 'El presentador Jimmy Kimmel suspendió temporalmente su programa tras la polémica generada por comentarios de Charlie Kirk durante su monólogo, en medio de un clima político marcado por las elecciones y la influencia de Donald Trump.',
+  contenido: [
+    'El comediante y presentador de televisión Jimmy Kimmel suspendió su programa nocturno después de un monólogo que incluyó referencias a Charlie Kirk, figura política conservadora cercana al expresidente Donald Trump. El hecho ocurrió el 18 de septiembre de 2025 y generó un amplio debate en los medios de comunicación de Estados Unidos.',
+    'La cadena responsable de la transmisión señaló que la suspensión busca “dar espacio a la evaluación editorial”, sin precisar si se trata de una cancelación definitiva o de una pausa temporal. El episodio se difundió en un momento en que las tensiones políticas en el país aumentan por la campaña electoral presidencial de 2026.',
+    'En su monólogo, Kimmel afirmó: “Hemos tocado nuevos mínimos este fin de semana con la banda MAGA, desesperada por caracterizar a este chico que asesinó a Charlie Kirk como cualquier cosa menos uno de ellos, haciendo todo lo posible por sacar provecho político de ello.”',
+    'Al mostrar un video de Donald Trump reaccionando a la muerte de Kirk, Kimmel comentó: “Esto no es la forma en que un adulto llora el asesinato de alguien a quien llama amigo. Es la manera en que un niño de cuatro años llora la muerte de un pez dorado.” Estas frases fueron ampliamente replicadas en redes sociales y medios.',
+    'El expresidente Donald Trump también fue aludido indirectamente en el monólogo, lo que incrementó la repercusión del caso entre sectores republicanos y demócratas. Hasta el momento, Kimmel no se ha pronunciado directamente sobre la suspensión, mientras que el canal revisa los próximos pasos en torno a su continuidad en pantalla.',
+    'El episodio refleja cómo la interacción entre entretenimiento y política en Estados Unidos sigue teniendo impacto directo en la opinión pública, especialmente cuando involucra a figuras mediáticas y dirigentes políticos vinculados a la contienda electoral.'
+  ],
+  etiquetas: ['estados unidos', 'medios', 'donald trump', 'politica'],
+  fuente: { nombre: 'The Guardian', url: 'https://www.theguardian.com/us-news/live/2025/sep/18/jimmy-kimmel-charlie-kirk-comments-show-cancelled-suspended-monologue-trump-us-politics-live' },
+  url_fuente: 'https://www.theguardian.com/us-news/live/2025/sep/18/jimmy-kimmel-charlie-kirk-comments-show-cancelled-suspended-monologue-trump-us-politics-live',
+  consecutivo_unico: '20250918-03'
 },
 {
   id: 'precandidatos-pacto-historico-10am-caracol-radio-2025-09-17',
@@ -141,8 +281,8 @@ const noticiasRaw: NoticiaRaw[] = [
     'Entre los condenados se encuentran Rodrigo Londoño (Timochenko) y otros antiguos miembros del Secretariado. Todos ellos reconocieron su responsabilidad en audiencias previas, lo que permitió reducir la sanción en comparación con penas ordinarias de cárcel.',
     'La sentencia busca dignificar a las víctimas y consolidar el proceso de justicia transicional en Colombia. Según la JEP, este es el primer gran fallo en el caso de secuestros, y se espera que sirva como base para decisiones futuras en otros macrocasos relacionados con crímenes cometidos durante el conflicto armado.',
     'Fuentes citadas:',
-    'Jurisdicción Especial para la Paz (JEP). *Sentencia sobre el Caso 01: Toma de rehenes y otras privaciones graves de la libertad por parte de las FARC-EP*. https://www.jep.gov.co',
-    'Deutsche Welle (DW). *Exjefes de las FARC reciben sentencia máxima por miles de secuestros en Colombia*. https://www.dw.com/es/exjefes-de-las-farc-reciben-sentencia-m%C3%A1xima-por-miles-de-secuestros-en-colombia/a-74020979'
+    'Jurisdicción Especial para la Paz (JEP). Sentencia sobre el Caso 01: Toma de rehenes y otras privaciones graves de la libertad por parte de las FARC-EP. https://www.jep.gov.co',
+    'Deutsche Welle (DW). Exjefes de las FARC reciben sentencia máxima por miles de secuestros en Colombia. https://www.dw.com/es/exjefes-de-las-farc-reciben-sentencia-m%C3%A1xima-por-miles-de-secuestros-en-colombia/a-74020979'
   ],
   etiquetas: ['colombia','farc','jep','justicia'],
   fuente: { nombre: 'Deutsche Welle (DW)', url: 'https://www.dw.com/es/exjefes-de-las-farc-reciben-sentencia-m%C3%A1xima-por-miles-de-secuestros-en-colombia/a-74020979' },
