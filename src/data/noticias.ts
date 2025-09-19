@@ -57,6 +57,26 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'columna-frente-amplio-o-frente-nacional-2025-09-17',
+  fecha: '2025-09-19',
+  titulo: 'Columna sobre Frente Amplio o Frente Nacional en el panorama político colombiano',
+  pais: 'Colombia',
+  resumen: 'En su columna del 17 de septiembre de 2025 para la revista Cambio, se analiza la coyuntura de las elecciones presidenciales de 2026 en Colombia, comparando los intentos de unidad de la izquierda con las alianzas de partidos tradicionales que evocan un posible Frente Nacional.',
+  contenido: [
+    'La columna titulada "Frente Amplio o Frente Nacional" fue presentada el 17 de septiembre de 2025 a través de la revista Cambio. En ella se reflexiona sobre la campaña presidencial de 2026 en Colombia, marcada por personalismos y falta de proyectos colectivos, en la que las redes sociales y la confrontación pública han tomado un papel central.',
+    'Se destaca que, mientras la izquierda busca consolidar su unidad dentro del Pacto Histórico con partidos como la Unión Patriótica, el Partido Comunista, Colombia Humana, Progresistas y el Polo Democrático Alternativo, en la derecha se gestan reuniones entre líderes de partidos tradicionales como César Gaviria (Liberal), Germán Vargas Lleras (Cambio Radical), Efraín Cepeda (Conservador), Dilian Francisca Toro (Partido de la U), Juan Manuel Galán (Nuevo Liberalismo) y Álvaro Uribe (Centro Democrático). Estas alianzas evocan el recuerdo del Frente Nacional que gobernó al país durante varias décadas del siglo XX.',
+    'El texto repasa el origen histórico del Frente Nacional tras el golpe de Gustavo Rojas Pinilla en 1953, y cómo dicho pacto entre Alberto Lleras Camargo y Laureano Gómez derivó en una exclusión política prolongada que cerró espacios a sectores populares, juveniles y de izquierda, desembocando en la aparición de guerrillas en los años sesenta.',
+    'Asimismo, se hace un paralelo entre ese esquema de reparto del poder y las dinámicas políticas posteriores, incluyendo la influencia del narcotráfico, el neoliberalismo de los años noventa y el papel de Álvaro Uribe y Juan Manuel Santos en procesos que reconfiguraron el panorama nacional. Según la columna, algunos dirigentes buscan reeditar un "Frente Nacional 2.0" que limite la participación política de sectores alternativos.',
+    'La reflexión final señala que, ante los intentos de revivir acuerdos excluyentes, el reto para la izquierda y otros sectores es construir un Frente Amplio con reglas claras y pactos transparentes, que continúe la pacificación del país a través de la inversión territorial y una inclusión más amplia de la diversidad social y política de Colombia.'
+  ],
+  etiquetas: ['colombia','politica','frente nacional','elecciones 2026'],
+  fuente: { nombre: 'Revista Cambio', url: 'https://www.youtube.com/watch?v=zFxf-gjxdWM' },
+  url_fuente: 'https://www.youtube.com/watch?v=zFxf-gjxdWM',
+  video: 'https://www.youtube.com/embed/zFxf-gjxdWM',
+  credito_video: 'Revista Cambio / YouTube',
+  consecutivo_unico: '20250918-03'
+},
+{
   id: 'declaraciones-ministro-finanzas-israel-gaza-2025-09-18',
   fecha: '2025-09-18',
   titulo: 'Declaraciones atribuidas al ministro de Finanzas de Israel sobre la Franja de Gaza',
