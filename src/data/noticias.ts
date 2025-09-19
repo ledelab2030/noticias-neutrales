@@ -59,19 +59,21 @@ const noticiasRaw: NoticiaRaw[] = [
 {
   id: 'real-madrid-olympique-marsella-2025-09-16',
   fecha: '2025-09-16',
-  titulo: 'Real Madrid vence al Olympique de Marsella en Champions League',
+  titulo: 'Real Madrid vence 2-1 al Olympique de Marsella en su debut en la Champions League',
   pais: 'Internacional',
-  resumen: 'El Real Madrid se impuso al Olympique de Marsella en el Santiago Bernabéu en su debut de la fase de grupos de la Champions League 2025/26.',
+  resumen: 'El Real Madrid, dirigido por Xabi Alonso, se impuso 2-1 al Olympique de Marsella en el Santiago Bernabéu en el inicio de la fase de grupos de la Champions League 2025/26.',
   contenido: [
-    'El Real Madrid inició con victoria su participación en la fase de grupos de la Liga de Campeones al superar al Olympique de Marsella en el estadio Santiago Bernabéu el martes 16 de septiembre de 2025.',
-    'El conjunto dirigido por Carlo Ancelotti mostró solidez desde el inicio y se adelantó en el marcador con un tanto en el primer tiempo. Durante la segunda mitad, el equipo blanco amplió la ventaja con jugadas colectivas que dominaron el ritmo del partido.',
-    'El Olympique de Marsella intentó reaccionar, pero la defensa madridista se mantuvo firme, asegurando los tres puntos en casa y un comienzo positivo en la competición europea.',
-    'Con este resultado, el Real Madrid suma sus primeros puntos en el Grupo C, situándose en buena posición para avanzar a la siguiente fase del torneo continental.',
-    'Fuente citada: Real Madrid C.F. — Crónica oficial del partido.'
+    'El Real Madrid inició con triunfo su participación en la fase de grupos de la Liga de Campeones al vencer 2-1 al Olympique de Marsella el martes 16 de septiembre de 2025 en el estadio Santiago Bernabéu.',
+    'El encuentro estuvo marcado por el protagonismo de Kylian Mbappé, quien anotó los dos goles del conjunto blanco desde el punto de penalti. El delantero francés se consolidó como la figura del partido al liderar la ofensiva madridista.',
+    'El Olympique de Marsella abrió el marcador en la primera mitad, pero el Real Madrid reaccionó con determinación para darle la vuelta al resultado. A pesar de la expulsión de Dani Carvajal en el minuto 71, el equipo supo mantener la ventaja hasta el final.',
+    'El equipo dirigido por Xabi Alonso suma así sus primeros tres puntos en el Grupo C de la Champions League, dando un paso importante en sus aspiraciones de avanzar a la siguiente fase.',
+    'Fuentes citadas: Real Madrid C.F. — Crónica oficial del partido; Reuters — Reporte del encuentro.'
   ],
-  etiquetas: ['fútbol', 'champions league', 'real madrid', 'olympique de marsella'],
+  etiquetas: ['fútbol', 'champions league', 'real madrid', 'olympique de marsella', 'xabi alonso', 'kylian mbappé'],
   fuente: { nombre: 'Real Madrid C.F.', url: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025' },
   url_fuente: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025',
+  imagen: '/noticias/real-madrid-olympique-marsella-2025-09-16.jpg',
+  credito_imagen: 'Fotógrafo: Antonio Villalba, David S. Bustamante y María Jiménez / Real Madrid C.F.',
   consecutivo_unico: '20250916-01'
 },
 {
@@ -341,24 +343,6 @@ const noticiasRaw: NoticiaRaw[] = [
   ],
   etiquetas: ['colombia','cultura','leyendas','familia','educación'],
   fuente: 'LedeLab',
-  consecutivo_unico: '20250916-01'
-},
-{
-  id: 'real-madrid-victoria-marsella-champions-2025-09-16',
-  fecha: '2025-09-17',
-  titulo: 'Real Madrid inicia con triunfo ante el Olympique de Marsella en la Champions League',
-  pais: 'España',
-  resumen: 'El Real Madrid venció al Olympique de Marsella en el Santiago Bernabéu en su debut en la fase de grupos de la Liga de Campeones 2025/26, con goles que aseguraron un inicio positivo en la competición europea.',
-  contenido: [
-    'El Real Madrid se impuso al Olympique de Marsella en el estadio Santiago Bernabéu el 16 de septiembre de 2025, en el inicio de la fase de grupos de la Liga de Campeones de la UEFA. Con este resultado, el conjunto español comenzó la temporada europea con paso firme.',
-    'Durante la primera parte, el equipo dirigido por Carlo Ancelotti controló el ritmo del encuentro y logró abrir el marcador con una jugada colectiva que culminó en gol. El Marsella intentó reaccionar, pero la defensa madridista se mantuvo sólida.',
-    'En la segunda mitad, el Real Madrid amplió la ventaja con otro tanto que sentenció el partido. Los cambios tácticos de Ancelotti permitieron asegurar el dominio y mantener la posesión frente a un rival que no consiguió inquietar al guardameta blanco.',
-    'Con este triunfo, el Real Madrid suma sus primeros tres puntos en la fase de grupos y se coloca en buena posición para encarar el resto de la competición. El club destacó el apoyo de la afición, que llenó el estadio en una noche de Champions.',
-    'Fuente citada: Real Madrid. *Crónica: Real Madrid – Olympique de Marsella*. https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025'
-  ],
-  etiquetas: ['fútbol','champions league','real madrid','olympique de marsella'],
-  fuente: { nombre: 'Real Madrid', url: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025' },
-  url_fuente: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025',
   consecutivo_unico: '20250916-01'
 },
 {
