@@ -89,7 +89,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Asimismo, se hace un paralelo entre ese esquema de reparto del poder y las dinámicas políticas posteriores, incluyendo la influencia del narcotráfico, el neoliberalismo de los años noventa y el papel de Álvaro Uribe y Juan Manuel Santos en procesos que reconfiguraron el panorama nacional. Según la columna, algunos dirigentes buscan reeditar un "Frente Nacional 2.0" que limite la participación política de sectores alternativos.',
     'La reflexión final señala que, ante los intentos de revivir acuerdos excluyentes, el reto para la izquierda y otros sectores es construir un Frente Amplio con reglas claras y pactos transparentes, que continúe la pacificación del país a través de la inversión territorial y una inclusión más amplia de la diversidad social y política de Colombia.'
   ],
-  etiquetas: ['colombia','politica','frente nacional','elecciones 2026'],
+  etiquetas: ['colombia','politica','frente nacional','elecciones 2026','podcast','conversaciones pendientes'],
   fuente: { nombre: 'Revista Cambio', url: 'https://www.youtube.com/watch?v=zFxf-gjxdWM' },
   url_fuente: 'https://www.youtube.com/watch?v=zFxf-gjxdWM',
   video: 'https://www.youtube.com/embed/zFxf-gjxdWM',

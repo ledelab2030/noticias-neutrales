@@ -42,7 +42,7 @@ export const TAGS = [
   'editorial',
   'educación',
   'el caminante',
-  'elecciones',
+  'elecciones 2026',
   'encuestas',
   'energía',
   'españa',
