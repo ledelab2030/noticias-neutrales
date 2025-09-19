@@ -57,6 +57,24 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'real-madrid-olympique-marsella-2025-09-16',
+  fecha: '2025-09-16',
+  titulo: 'Real Madrid vence al Olympique de Marsella en Champions League',
+  pais: 'Internacional',
+  resumen: 'El Real Madrid se impuso al Olympique de Marsella en el Santiago Bernabéu en su debut de la fase de grupos de la Champions League 2025/26.',
+  contenido: [
+    'El Real Madrid inició con victoria su participación en la fase de grupos de la Liga de Campeones al superar al Olympique de Marsella en el estadio Santiago Bernabéu el martes 16 de septiembre de 2025.',
+    'El conjunto dirigido por Carlo Ancelotti mostró solidez desde el inicio y se adelantó en el marcador con un tanto en el primer tiempo. Durante la segunda mitad, el equipo blanco amplió la ventaja con jugadas colectivas que dominaron el ritmo del partido.',
+    'El Olympique de Marsella intentó reaccionar, pero la defensa madridista se mantuvo firme, asegurando los tres puntos en casa y un comienzo positivo en la competición europea.',
+    'Con este resultado, el Real Madrid suma sus primeros puntos en el Grupo C, situándose en buena posición para avanzar a la siguiente fase del torneo continental.',
+    'Fuente citada: Real Madrid C.F. — Crónica oficial del partido.'
+  ],
+  etiquetas: ['fútbol', 'champions league', 'real madrid', 'olympique de marsella'],
+  fuente: { nombre: 'Real Madrid C.F.', url: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025' },
+  url_fuente: 'https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/cronicas/real-madrid-olympique-de-marsella-16-09-2025',
+  consecutivo_unico: '20250916-01'
+},
+{
   id: 'columna-frente-amplio-o-frente-nacional-2025-09-17',
   fecha: '2025-09-19',
   titulo: 'Columna sobre Frente Amplio o Frente Nacional en el panorama político colombiano',
