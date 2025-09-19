@@ -66,7 +66,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'El Real Madrid inició con triunfo su participación en la fase de grupos de la Liga de Campeones al vencer 2-1 al Olympique de Marsella el martes 16 de septiembre de 2025 en el estadio Santiago Bernabéu.',
     'El encuentro estuvo marcado por el protagonismo de Kylian Mbappé, quien anotó los dos goles del conjunto blanco desde el punto de penalti. El delantero francés se consolidó como la figura del partido al liderar la ofensiva madridista.',
     'El Olympique de Marsella abrió el marcador en la primera mitad, pero el Real Madrid reaccionó con determinación para darle la vuelta al resultado. A pesar de la expulsión de Dani Carvajal en el minuto 71, el equipo supo mantener la ventaja hasta el final.',
-    'El equipo dirigido por Xabi Alonso suma así sus primeros tres puntos en el Grupo C de la Champions League, dando un paso importante en sus aspiraciones de avanzar a la siguiente fase.',
+    'El equipo dirigido por Xabi Alonso suma así sus primeros tres puntos en la Champions League, dando un paso importante en su interés de avanzar a la siguiente fase.',
     'Fuentes citadas: Real Madrid C.F. — Crónica oficial del partido; Reuters — Reporte del encuentro.'
   ],
   etiquetas: ['fútbol', 'champions league', 'real madrid', 'olympique de marsella', 'xabi alonso', 'kylian mbappé'],
