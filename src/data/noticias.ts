@@ -57,6 +57,62 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'referendo-constituyente-ecuador-noboa-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Noboa convoca referendo para Constituyente en Ecuador',
+  pais: 'Ecuador',
+  resumen: 'El presidente Daniel Noboa anunció la convocatoria a un referendo para instalar una Asamblea Constituyente, sin contar con el aval de la Asamblea Nacional ni de la Corte Constitucional, lo que ha generado debate sobre la legalidad de la medida.',
+  contenido: [
+    'El presidente de Ecuador, Daniel Noboa, anunció este 19 de septiembre la convocatoria a un referendo popular para instalar una Asamblea Constituyente. La decisión fue tomada sin que mediara un pronunciamiento previo de la Asamblea Nacional ni de la Corte Constitucional, instancias previstas en la Constitución de 2008.',
+    'Noboa justificó la medida afirmando que “es el pueblo quien debe decidir si quiere una nueva Constitución”, argumentando que las instituciones existentes han obstaculizado sus reformas. Según el mandatario, la consulta sería un mecanismo directo de legitimidad para avanzar en cambios políticos y estructurales.',
+    'El anuncio ha generado controversia en el ámbito político y jurídico. Diversos actores han señalado que el procedimiento contraviene el orden constitucional vigente, ya que la Carta Magna establece que la convocatoria a una Constituyente requiere aprobación de al menos dos tercios de la Asamblea Nacional o un dictamen favorable de la Corte Constitucional.',
+    'La iniciativa ocurre en un contexto de tensiones entre el Ejecutivo y otros poderes del Estado. Mientras el gobierno sostiene que la convocatoria responde a un mandato ciudadano, sectores de la oposición y juristas advierten que el paso podría abrir una crisis institucional en el país.'
+  ],
+  etiquetas: ['ecuador', 'politica', 'daniel noboa', 'constituyente'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/mundo/america/noboa-se-salta-los-poderes-en-ecuador-y-convoca-referendo-para-una-constituyente/' },
+  url_fuente: 'https://www.elespectador.com/mundo/america/noboa-se-salta-los-poderes-en-ecuador-y-convoca-referendo-para-una-constituyente/',
+  consecutivo_unico: '20250919-03'
+},
+{
+  id: 'idolatria-judaismo-catolicismo-papa-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Idolatría en el judaísmo y el catolicismo: un análisis comparativo con el papel del Papa',
+  pais: 'Internacional',
+  resumen: 'La prohibición de la idolatría está presente tanto en la Torá como en el catecismo católico, aunque difieren en sus consecuencias. El debate se reaviva con la devoción hacia el Papa y las acusaciones de “papolatría”.',
+  contenido: [
+    'La idolatría, entendida como adorar a otros dioses o imágenes, es un concepto central en el judaísmo y el cristianismo. En la Torá, los mandamientos prohíben expresamente la adoración de ídolos: “No tendrás dioses ajenos delante de mí” (Éxodo 20:3). En la antigüedad bíblica, esta práctica se castigaba incluso con la pena de muerte, según Deuteronomio 17:2–5, dentro del pueblo de Israel.',
+    
+    'La tradición judía posterior mantuvo la prohibición de la idolatría como uno de los Siete Mandamientos de Noé, aplicables a toda la humanidad. Sin embargo, en la práctica actual, ninguna autoridad judía aplica sanciones civiles por idolatría. Se considera un tema teológico y ético, no legal. Interpretaciones contemporáneas radicales han usado este marco para hacer declaraciones polémicas, pero no representan una política oficial.',
+    
+    'En el catolicismo, el Catecismo enseña que la idolatría es “divinizar lo que no es Dios” (CIC 2113). Se considera un pecado grave que separa al creyente de Dios, pero no conlleva sanciones civiles ni castigos físicos. El Concilio Vaticano II reafirmó la libertad religiosa y descartó cualquier imposición de la fe por la fuerza.',
+    
+    'Un tema de debate contemporáneo es el papel del Papa. Oficialmente, la Iglesia enseña que solo a Dios corresponde la adoración (latría). Al Papa se le debe respeto y obediencia como sucesor de Pedro, pero no culto divino. Sin embargo, prácticas populares como besar el anillo o aclamaciones multitudinarias han llevado a algunos críticos a hablar de “papolatría”, es decir, una devoción excesiva que puede confundirse con idolatría.',
+    
+    'Desde el interior de la Iglesia se insiste en que el Papa es “servidor de los siervos de Dios” y que su autoridad se entiende siempre en referencia a Cristo. El mismo Francisco ha advertido que la figura papal no debe ser idolatrada, sino acompañada en oración y servicio al Evangelio.'
+  ],
+  etiquetas: ['religión', 'judaísmo', 'catolicismo', 'papa', 'idolatría'],
+  fuente: { nombre: 'Catecismo de la Iglesia Católica y Torá' },
+  consecutivo_unico: '20250919-03'
+},
+{
+  id: 'israel-idolatria-declaraciones-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Declaraciones atribuidas al rabino Yosef Mizrachi sobre idolatría generan controversia',
+  pais: 'Internacional',
+  resumen: 'Se atribuyen al rabino Yosef Mizrachi declaraciones donde supuestamente afirma que cristianos, budistas y otros “idolátricos” merecen la pena de muerte, pero no se ha encontrado prueba fiable de una cita exacta en fuentes reconocidas.',
+  contenido: [
+    'El rabino israelí Yosef Mizrachi ha sido objeto de publicaciones virales que le atribuyen declaraciones muy fuertes: que los cristianos, budistas y otros considerados idolátricos “no tienen derecho a vivir” y “merecen todos la pena de muerte”.',
+    'Una de las fuentes que circulan es una página llamada EmaanLibrary, que tiene un post titulado “Rabbi Yusef Mizrachi – Idol Worshippers do not have a Right to Live”. Esa publicación sugiere que personas que adoran imágenes u objetos son vistos como idolátricos por Mizrachi.',
+    'También hay reels y videos en redes sociales que muestran fragmentos atribuidos a Mizrachi hablando del “idolatría” de cristianos, budistas u otros grupos religiosos, acusándolos de adorar imágenes. Pero esos contenidos no siempre muestran fechas, contexto completo ni fuente textual original verificable.',
+    'Hasta ahora no se ha encontrado, en fuentes periodísticas reconocidas o documentos halájicos oficiales, una declaración con los datos exactos que el tuit menciona (los 6.500 millones, todos los idolátricos, pena de muerte explícita para todos ellos, cristianos, budistas, etc.) de modo claro, confirmado, en contexto que permita asegurar que así lo dijo.',
+    'Este tipo de atribuciones sin verificación plena pueden exacerbar tensiones religiosas, generar desinformación o promover estereotipos. Es particularmente sensible cuando se mezclan discurso religioso fuerte con acusaciones de violencia contra grupos por motivos creencias.',
+    'Dado el potencial daño e implicaciones, sería responsable que medios o personas que compartan esas afirmaciones aporten las fuentes originales: video completo o transcripción literal, fecha, traducción fiable si aplica, y validación de que no hay edición o manipulación del fragmento.'
+  ],
+  etiquetas: ['religión', 'israel', 'discurso religioso', 'controversia'],
+  fuente: { nombre: 'EmaanLibrary y redes sociales', url: 'https://www.emaanlibrary.com/rabbi-yusef-mizrachi-idol-worshippers-do-not-have-a-right-to-live/' },
+  consecutivo_unico: '20250919-02'
+},
+{
   id: 'real-madrid-olympique-marsella-2025-09-16',
   fecha: '2025-09-16',
   titulo: 'Real Madrid vence 2-1 al Olympique de Marsella en su debut en la Champions League',
@@ -81,7 +137,7 @@ const noticiasRaw: NoticiaRaw[] = [
   fecha: '2025-09-19',
   titulo: 'Columna sobre Frente Amplio o Frente Nacional en el panorama político colombiano',
   pais: 'Colombia',
-  resumen: 'En su columna del 17 de septiembre de 2025 para la revista Cambio, se analiza la coyuntura de las elecciones presidenciales de 2026 en Colombia, comparando los intentos de unidad de la izquierda con las alianzas de partidos tradicionales que evocan un posible Frente Nacional.',
+  resumen: 'En su columna del 17 de septiembre de 2025 para la revista Cambio, Juan David Correa analiza la coyuntura de las elecciones presidenciales de 2026 en Colombia, comparando los intentos de unidad de la izquierda con las alianzas de partidos tradicionales que evocan un posible Frente Nacional.',
   contenido: [
     'La columna titulada "Frente Amplio o Frente Nacional" fue presentada el 17 de septiembre de 2025 a través de la revista Cambio. En ella se reflexiona sobre la campaña presidencial de 2026 en Colombia, marcada por personalismos y falta de proyectos colectivos, en la que las redes sociales y la confrontación pública han tomado un papel central.',
     'Se destaca que, mientras la izquierda busca consolidar su unidad dentro del Pacto Histórico con partidos como la Unión Patriótica, el Partido Comunista, Colombia Humana, Progresistas y el Polo Democrático Alternativo, en la derecha se gestan reuniones entre líderes de partidos tradicionales como César Gaviria (Liberal), Germán Vargas Lleras (Cambio Radical), Efraín Cepeda (Conservador), Dilian Francisca Toro (Partido de la U), Juan Manuel Galán (Nuevo Liberalismo) y Álvaro Uribe (Centro Democrático). Estas alianzas evocan el recuerdo del Frente Nacional que gobernó al país durante varias décadas del siglo XX.',
@@ -90,10 +146,10 @@ const noticiasRaw: NoticiaRaw[] = [
     'La reflexión final señala que, ante los intentos de revivir acuerdos excluyentes, el reto para la izquierda y otros sectores es construir un Frente Amplio con reglas claras y pactos transparentes, que continúe la pacificación del país a través de la inversión territorial y una inclusión más amplia de la diversidad social y política de Colombia.'
   ],
   etiquetas: ['colombia','politica','frente nacional','elecciones 2026','podcast','conversaciones pendientes'],
-  fuente: { nombre: 'Revista Cambio', url: 'https://www.youtube.com/watch?v=zFxf-gjxdWM' },
+  fuente: { nombre: 'Canal Juan David Correa', url: 'https://www.youtube.com/watch?v=zFxf-gjxdWM' },
   url_fuente: 'https://www.youtube.com/watch?v=zFxf-gjxdWM',
   video: 'https://www.youtube.com/embed/zFxf-gjxdWM',
-  credito_video: 'Revista Cambio / YouTube',
+  credito_video: 'Canal Juan David Correa / YouTube',
   consecutivo_unico: '20250918-03'
 },
 {
