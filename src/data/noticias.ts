@@ -57,6 +57,84 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'juez-bloquea-plan-trump-deportacion-menores-guatemaltecos-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Juez bloquea plan de Trump para deportar menores guatemaltecos',
+  pais: 'Estados Unidos',
+  resumen: 'Un juez federal en Washington suspendió las deportaciones de cientos de niños guatemaltecos que habían sido trasladados a Texas para su repatriación, al considerar que muchos de ellos aún tienen solicitudes de asilo pendientes.',
+  contenido: [
+    'El juez del distrito Timothy Kelly, en Washington, emitió este jueves una orden que mantiene el bloqueo a la deportación de menores guatemaltecos que llegaron acompañados de adultos a Estados Unidos. Algunos habían sido llevados a un aeropuerto de Texas a finales de agosto, pero la repatriación se detuvo antes del despegue.',
+    'De acuerdo con la resolución judicial, los casos permanecerán abiertos mientras existan solicitudes de asilo en curso. Desde agosto, iglesias y centros comunitarios en el sur de Texas han recibido a cientos de menores, la mayoría de origen guatemalteco, actualmente bajo custodia de la Oficina de Reasentamiento de Refugiados.',
+    'El operativo incluyó traslados nocturnos de niños hacia aeropuertos, con vuelos programados de repatriación. La medida judicial frenó uno de estos vuelos en el último momento. Organizaciones como el Young Center for Immigrant Children’s Rights advirtieron que los menores tienen derecho a debido proceso, representación legal y decisiones individuales sobre sus solicitudes de protección.',
+    'Datos de la Oficina de Reasentamiento indican que en octubre de 2024 había 6,212 menores no acompañados bajo custodia federal en Estados Unidos, cifra que para marzo de 2025 se redujo a 2,173. Abogados y defensores de derechos de la niñez señalaron que estos procedimientos recuerdan prácticas registradas en 2018 durante la política de separación familiar.',
+    'Sectores conservadores en la frontera han defendido las medidas de la actual administración, criticando a gobiernos anteriores por la falta de soluciones permanentes. Mientras tanto, el futuro de estos menores sigue en incertidumbre entre la posibilidad de permanecer en Estados Unidos o ser devueltos a Guatemala.'
+  ],
+  etiquetas: ['estados unidos','donald trump','migracion','derechos humanos','guatemala'],
+  fuente: { nombre: 'DW en Español', url: 'https://www.youtube.com/watch?v=_H0n3DXGQxc' },
+  video: 'https://www.youtube.com/embed/_H0n3DXGQxc',
+  credito_video: 'DW en Español',
+  consecutivo_unico: '20250919-48'
+},
+{
+  id: 'juez-bloquea-plan-trump-deportacion-menores-guatemaltecos-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Juez bloquea plan de Trump para deportar menores guatemaltecos',
+  pais: 'Estados Unidos',
+  resumen: 'Un juez federal en Washington suspendió las deportaciones de cientos de niños guatemaltecos que habían sido trasladados a Texas para su repatriación, al considerar que muchos de ellos aún tienen solicitudes de asilo pendientes.',
+  contenido: [
+    'El juez del distrito Timothy Kelly, en Washington, emitió este jueves una orden que mantiene el bloqueo a la deportación de menores guatemaltecos que llegaron acompañados de adultos a Estados Unidos. Algunos habían sido llevados a un aeropuerto de Texas a finales de agosto, pero la repatriación se detuvo antes del despegue.',
+    'De acuerdo con la resolución judicial, los casos permanecerán abiertos mientras existan solicitudes de asilo en curso. Desde agosto, iglesias y centros comunitarios en el sur de Texas han recibido a cientos de menores, la mayoría de origen guatemalteco, actualmente bajo custodia de la Oficina de Reasentamiento de Refugiados.',
+    'El operativo incluyó traslados nocturnos de niños hacia aeropuertos, con vuelos programados de repatriación. La medida judicial frenó uno de estos vuelos en el último momento. Organizaciones como el Young Center for Immigrant Children’s Rights advirtieron que los menores tienen derecho a debido proceso, representación legal y decisiones individuales sobre sus solicitudes de protección.',
+    'Datos de la Oficina de Reasentamiento indican que en octubre de 2024 había 6,212 menores no acompañados bajo custodia federal en Estados Unidos, cifra que para marzo de 2025 se redujo a 2,173. Abogados y defensores de derechos de la niñez señalaron que estos procedimientos recuerdan prácticas registradas en 2018 durante la política de separación familiar.',
+    'Sectores conservadores en la frontera han defendido las medidas de la actual administración, criticando a gobiernos anteriores por la falta de soluciones permanentes. Mientras tanto, el futuro de estos menores sigue en incertidumbre entre la posibilidad de permanecer en Estados Unidos o ser devueltos a Guatemala.',
+    'Fuentes citadas:',
+    'YouTube – DW en Español: https://www.youtube.com/watch?v=_H0n3DXGQxc'
+  ],
+  etiquetas: ['estados unidos','donald trump','migracion','derechos humanos','guatemala'],
+  fuente: { nombre: 'DW en Español', url: 'https://www.youtube.com/watch?v=_H0n3DXGQxc' },
+  consecutivo_unico: '20250919-48'
+},
+{
+  id: 'paolini-italia-final-billie-jean-king-cup-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Paolini lidera a Italia a la final de la Billie Jean King Cup 2025',
+  pais: 'Italia',
+  resumen: 'Italia avanzó a la final de la Billie Jean King Cup 2025 tras vencer a Ucrania, con Jasmine Paolini como figura clave tanto en individuales como en dobles.',
+  contenido: [
+    'Italia logró clasificar a la final de la Billie Jean King Cup 2025 al derrotar a Ucrania por 2-1 en las semifinales disputadas en Shenzhen, China.',
+    'Marta Kostyuk había dado ventaja a Ucrania al superar a Elisabetta Cocciaretto por 6-2, 6-3. Sin embargo, Jasmine Paolini remontó frente a Elina Svitolina y ganó 3-6, 6-4, 6-4, igualando la serie.',
+    'En el partido de dobles decisivo, Paolini se unió a Sara Errani y juntas superaron a Kostyuk y Lyudmyla Kichenok por 6-2, 6-3, sellando el pase a la final.',
+    'Paolini, quien ya conquistó títulos en Grand Slam y una medalla de oro olímpica en 2024, reafirma así su papel central en el tenis femenino italiano. Su liderazgo impulsa un momento histórico para Italia, que también ganó este torneo en 2024.',
+    'El tenis italiano atraviesa una etapa dorada: en la rama masculina, Jannik Sinner llevó a Italia a ganar la Copa Davis en 2023 y 2024, mientras que en la rama femenina el equipo nacional busca repetir el título conseguido el año pasado.',
+    'Fuentes citadas:',
+    'Reuters. *Paolini sparkles as Italy overcome Ukraine to reach Billie Jean King Cup final*. https://www.reuters.com/sports/tennis/italy-overcome-ukraine-reach-billie-jean-king-cup-final-2025-09-19/',
+    'X / Jasmine Paolini. https://x.com/JasminePaolini/status/1969114449307894219'
+  ],
+  etiquetas: ['tenis','billie jean king cup','italia','jasmine paolini'],
+  fuente: { nombre: 'Reuters', url: 'https://www.reuters.com/sports/tennis/italy-overcome-ukraine-reach-billie-jean-king-cup-final-2025-09-19/' },
+  imagen: '/noticias/paolini-italia-final-billie-jean-king-cup-2025-09-19.jpg',
+  credito_imagen: 'X / Jasmine Paolini'
+},
+{
+  id: 'peru-ley-31814-inteligencia-artificial-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Perú promueve el uso de la inteligencia artificial con la Ley N.° 31814',
+  pais: 'Perú',
+  resumen: 'El Congreso de la República aprobó la Ley N.° 31814, publicada el 5 de julio de 2023, que impulsa el uso y desarrollo de la inteligencia artificial en el país, estableciendo principios rectores y lineamientos para su implementación.',
+  contenido: [
+    'El Congreso de la República del Perú promulgó la Ley N.° 31814 el 5 de julio de 2023, con el propósito de fomentar el uso responsable de la inteligencia artificial en diversos sectores del país. La norma busca crear un marco normativo que oriente el desarrollo tecnológico hacia el beneficio social y económico.',
+    'Entre sus disposiciones principales, la ley establece principios de ética, transparencia y protección de datos personales como pilares para la adopción de soluciones basadas en inteligencia artificial. También promueve la formación de talento humano especializado y la investigación en este campo.',
+    'La norma encarga al Poder Ejecutivo la implementación de una Política Nacional de Inteligencia Artificial, en coordinación con las entidades competentes, para asegurar un despliegue inclusivo y sostenible de esta tecnología en sectores como educación, salud, justicia y seguridad.',
+    'Con esta ley, Perú se suma a la tendencia internacional de establecer marcos legales para la inteligencia artificial, con el fin de potenciar la innovación y, al mismo tiempo, prevenir riesgos asociados a su uso.',
+    'Fuente citada:',
+    'Gobierno Digital Perú. “Ley N.° 31814 que promueve el uso de la inteligencia artificial”. https://gobiernodigital.pe/noticias/peru-ley-n-31814-que-promueve-el-uso-de-la-inteligencia-artificial/'
+  ],
+  etiquetas: ['tecnología','inteligencia artificial','perú'],
+  fuente: { nombre: 'Gobierno Digital Perú', url: 'https://gobiernodigital.pe' },
+  url_fuente: 'https://gobiernodigital.pe/noticias/peru-ley-n-31814-que-promueve-el-uso-de-la-inteligencia-artificial/',
+  consecutivo_unico: '20250919-03'
+},
+{
   id: 'referendo-constituyente-ecuador-noboa-2025-09-19',
   fecha: '2025-09-19',
   titulo: 'Noboa convoca referendo para Constituyente en Ecuador',
@@ -95,21 +173,26 @@ const noticiasRaw: NoticiaRaw[] = [
   consecutivo_unico: '20250919-03'
 },
 {
-  id: 'israel-idolatria-declaraciones-2025-09-19',
+  id: 'embajador-huckabee-discurso-jerusalen-2025-09-19',
   fecha: '2025-09-19',
-  titulo: 'Declaraciones atribuidas al rabino Yosef Mizrachi sobre idolatría generan controversia',
+  titulo: 'Embajador de Estados Unidos en Israel reafirma en Jerusalén la visión religiosa del “pueblo elegido”',
   pais: 'Internacional',
-  resumen: 'Se atribuyen al rabino Yosef Mizrachi declaraciones donde supuestamente afirma que cristianos, budistas y otros “idolátricos” merecen la pena de muerte, pero no se ha encontrado prueba fiable de una cita exacta en fuentes reconocidas.',
+  resumen: 'En un discurso en la Ciudad de David, el embajador estadounidense Mike Huckabee afirmó que hace 4.000 años Dios eligió al pueblo judío, la tierra de Israel y un propósito: ser luz para el mundo. Concluyó proclamando que Israel es el hogar eterno del pueblo judío.',
   contenido: [
-    'El rabino israelí Yosef Mizrachi ha sido objeto de publicaciones virales que le atribuyen declaraciones muy fuertes: que los cristianos, budistas y otros considerados idolátricos “no tienen derecho a vivir” y “merecen todos la pena de muerte”.',
-    'Una de las fuentes que circulan es una página llamada EmaanLibrary, que tiene un post titulado “Rabbi Yusef Mizrachi – Idol Worshippers do not have a Right to Live”. Esa publicación sugiere que personas que adoran imágenes u objetos son vistos como idolátricos por Mizrachi.',
-    'También hay reels y videos en redes sociales que muestran fragmentos atribuidos a Mizrachi hablando del “idolatría” de cristianos, budistas u otros grupos religiosos, acusándolos de adorar imágenes. Pero esos contenidos no siempre muestran fechas, contexto completo ni fuente textual original verificable.',
-    'Hasta ahora no se ha encontrado, en fuentes periodísticas reconocidas o documentos halájicos oficiales, una declaración con los datos exactos que el tuit menciona (los 6.500 millones, todos los idolátricos, pena de muerte explícita para todos ellos, cristianos, budistas, etc.) de modo claro, confirmado, en contexto que permita asegurar que así lo dijo.',
-    'Este tipo de atribuciones sin verificación plena pueden exacerbar tensiones religiosas, generar desinformación o promover estereotipos. Es particularmente sensible cuando se mezclan discurso religioso fuerte con acusaciones de violencia contra grupos por motivos creencias.',
-    'Dado el potencial daño e implicaciones, sería responsable que medios o personas que compartan esas afirmaciones aporten las fuentes originales: video completo o transcripción literal, fecha, traducción fiable si aplica, y validación de que no hay edición o manipulación del fragmento.'
+    'El embajador de Estados Unidos en Israel, Mike Huckabee, pronunció un discurso en la Ciudad de David, Jerusalén, durante una ceremonia oficial. En su intervención, el diplomático vinculó elementos religiosos con la legitimidad histórica y política de Israel como Estado judío.',
+    
+    '“Fue hace 4.000 años aquí en el Monte Moriah donde Dios eligió a su pueblo. No solo eligió un pueblo, eligió un lugar y un propósito. El pueblo fueron los judíos, el lugar fue Israel y el propósito fue ser una luz para el mundo”, declaró Huckabee ante autoridades israelíes y representantes internacionales.',
+    
+    'El embajador destacó que, pese a la destrucción de Jerusalén y la diáspora del pueblo judío, la conexión con la ciudad se mantuvo viva. Recordó las palabras del salmo 137: “Si te olvidare, oh Jerusalén, que mi diestra se olvide de mí”, como símbolo de la persistencia histórica de esa relación.',
+    
+    'En la parte final de su discurso, Huckabee afirmó: “Este es en verdad el hogar eterno del pueblo judío, del Estado judío y del pueblo que legítimamente pertenece aquí. Y esta noche el resto del mundo viene a decir: bienvenidos a casa, que nadie jamás intente quitarles su hogar. Es suyo”.',
+    
+    'Asimismo, dirigió un mensaje a quienes no son judíos: “Les agradecemos por darnos a todos una base de moralidad, decencia y civilización sobre la cual nuestra propia fe está construida. Sin la suya, no tenemos una”. Concluyó asegurando que su fe cristiana no puede entenderse sin la herencia judía y sentenció: “Dios nunca ha terminado con Israel y nunca lo hará. Este es el hogar eterno que él ha escogido”.'
   ],
-  etiquetas: ['religión', 'israel', 'discurso religioso', 'controversia'],
-  fuente: { nombre: 'EmaanLibrary y redes sociales', url: 'https://www.emaanlibrary.com/rabbi-yusef-mizrachi-idol-worshippers-do-not-have-a-right-to-live/' },
+  etiquetas: ['estados unidos', 'israel', 'política', 'religión'],
+  fuente: { nombre: 'Embajada de Estados Unidos en Israel', url: 'https://www.youtube.com/watch?v=8-NxWF4I2pk' },
+  video: 'https://www.youtube.com/embed/8-NxWF4I2pk',
+  credito_video: 'Embajada de Estados Unidos en Israel',
   consecutivo_unico: '20250919-02'
 },
 {
