@@ -57,6 +57,245 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'advantage-austria-inversion-y-neutralidad-2025-09-21',
+  fecha: '2025-09-21',
+  titulo: 'ADVANTAGE AUSTRIA: inversión, migración y el papel de la neutralidad austriaca',
+  pais: 'Austria',
+  resumen: 'La red internacional ADVANTAGE AUSTRIA apoya la inversión extranjera en más de 70 países. Además de promover negocios, Austria ofrece vías legales de migración para emprendedores y mantiene una posición única de neutralidad internacional junto a pocos países en el mundo.',
+  contenido: [
+    'ADVANTAGE AUSTRIA es la red internacional de la Cámara Económica Federal de Austria (WKO). Cuenta con cerca de 100 oficinas en más de 70 países y tiene como objetivo conectar a empresas austriacas con socios globales. Su labor incluye acompañar a inversionistas extranjeros en el proceso de establecerse en el país, facilitando información sobre sectores estratégicos, ferias y contactos empresariales.',
+    'Austria, a través de la Austrian Business Agency (ABA), complementa este trabajo con asesoría gratuita para inversionistas y profesionales. ABA ofrece información sobre requisitos de residencia, programas de inversión y empleo, y opciones de ubicación para nuevas empresas. Esto convierte al país en una puerta de entrada atractiva para quienes buscan emprender en Europa Central.',
+    'En materia migratoria, Austria ofrece la Tarjeta Rojo-Blanco-Rojo (RWR), que permite a empresarios y profesionales de terceros países residir y trabajar en el país. Existen categorías para autónomos clave, donde se requiere demostrar inversión o impacto macroeconómico, y para fundadores de startups, que exigen un plan innovador y un capital mínimo. Tras cinco años de residencia legal, es posible solicitar residencia de larga duración, y la ciudadanía puede obtenerse en diez años o seis en casos de integración especial.',
+    'Un aspecto que diferencia a Austria es su condición de país neutral. Junto con Suiza, Irlanda, Suecia y Costa Rica, forma parte de un grupo reducido de Estados que mantienen una política de neutralidad reconocida. En este contexto, ser neutral significa no integrarse a alianzas militares como la OTAN y comprometerse a no participar en conflictos armados, salvo en defensa propia o bajo mandato de Naciones Unidas. Esta política, establecida en 1955, le permite a Austria desempeñar un papel de mediador y mantener relaciones abiertas con distintos bloques internacionales.',
+    'La neutralidad, sumada a un sistema social sólido, educación de calidad y estabilidad política, hace de Austria un destino atractivo no solo para los negocios, sino también para quienes buscan establecerse en un país con un perfil equilibrado y con proyección internacional.'
+  ],
+  etiquetas: ['economía','investigación','austria','migración','neutralidad'],
+  fuente: 'LedeLab',
+  url_fuente: 'https://www.advantageaustria.org/',
+  consecutivo_unico: '20250921-02'
+},
+{
+  id: 'clara-lopez-unitarios-pacto-historico-2025-09-21',
+  fecha: '2025-09-21',
+  titulo: 'Clara López afirma que el movimiento En Unitarios no busca unirse al Pacto Histórico',
+  pais: 'colombia',
+  resumen: 'La senadora y precandidata presidencial Clara López aseguró que el movimiento En Unitarios no pretende fusionarse con el Pacto Histórico, aunque reconoce coincidencias programáticas en algunos temas.',
+  contenido: [
+    'La senadora Clara López, precandidata presidencial por el movimiento En Unitarios, manifestó que su colectividad no busca fundirse con el Pacto Histórico. Las declaraciones fueron recogidas en una entrevista publicada por El Tiempo el 21 de septiembre de 2025.',
+    'López explicó que su movimiento comparte con el Pacto Histórico la preocupación por asuntos sociales, pero remarcó que su propuesta busca diferenciarse en la manera de abordar la economía y la institucionalidad democrática.',
+    'La dirigente destacó que En Unitarios pretende consolidar una opción política propia de cara a las elecciones de 2026, en la que confluyan diferentes sectores progresistas sin que ello implique diluir su identidad organizativa.',
+    'La entrevista se dio en el marco de la etapa previa a la definición de alianzas y consultas interpartidistas para los comicios presidenciales de 2026 en Colombia.'
+  ],
+  etiquetas: ['politica','colombia','clara lopez','pacto historico','elecciones 2026'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/politica/elecciones-colombia-2026/en-unitarios-no-queremos-fundirnos-con-el-pacto-historico-precandidata-y-senadora-clara-lopez-3492557?s=09' },
+  url_fuente: 'https://www.eltiempo.com/politica/elecciones-colombia-2026/en-unitarios-no-queremos-fundirnos-con-el-pacto-historico-precandidata-y-senadora-clara-lopez-3492557?s=09'
+},
+{
+  id: 'documental-petro-senal-colombia-2025-09-21',
+  fecha: '2025-09-21',
+  titulo: 'Señal Colombia transmite hoy el documental "PETRO"',
+  pais: 'colombia',
+  resumen: 'Este 21 de septiembre a las 9:00 p.m., Señal Colombia emitirá el documental "PETRO", que recorre la vida y trayectoria política del presidente Gustavo Petro, desde su juventud hasta su llegada a la Presidencia.',
+  contenido: [
+    'Señal Colombia anunció que este domingo 21 de septiembre a las 9:00 p.m. se transmitirá el documental "PETRO". La producción presenta un recorrido histórico por la vida y trayectoria política del actual presidente de Colombia, Gustavo Petro.',
+    'El documental abarca desde sus luchas sociales en la juventud, pasando por su actividad política y campañas, hasta el momento en que alcanzó la presidencia del país. La producción busca ofrecer un panorama completo de su recorrido personal y público.',
+    'La emisión se realizará a través de la pantalla de Señal Colombia, canal público de televisión nacional, y hace parte de su programación especial con contenidos documentales.',
+    'RTVC Noticias informó que la producción resalta momentos clave de la historia política reciente del país y la forma en que Gustavo Petro construyó su camino hasta la presidencia.'
+  ],
+  video: 'https://www.youtube.com/embed/1Pl5YFrLFu8',
+  etiquetas: ['colombia','gustavo petro','documental','medios','politica'],
+  fuente: { nombre: 'RTVC Noticias', url: 'https://x.com/RTVCnoticias/status/1837477092591499590' },
+  url_fuente: 'https://x.com/RTVCnoticias/status/1837477092591499590',
+  credito_video: 'RTVC Noticias',
+  consecutivo_unico: '20250921-03'
+},
+{
+  id: 'asi-se-robaron-la-nueva-eps-cambio-2025-09-21',
+  fecha: '2025-09-21',
+  titulo: 'Revista Cambio revela pruebas de la Fiscalía sobre el desfalco en la Nueva EPS',
+  pais: 'Colombia',
+  resumen: 'La Revista Cambio publicó un artículo con documentos de la Fiscalía que exponen cómo se habría dado el desfalco en la Nueva EPS, con implicaciones en el sistema de salud colombiano.',
+  contenido: [
+    'La Revista Cambio reveló un informe detallado en el que se presentan pruebas de la Fiscalía General de la Nación sobre el desfalco ocurrido en la Nueva EPS. Según la publicación, las investigaciones han permitido identificar una red de operaciones irregulares que comprometieron recursos destinados a la atención en salud de millones de afiliados.',
+    'El artículo describe cómo se realizaron contratos inflados, pagos por servicios no prestados y movimientos financieros que afectaron de manera directa el patrimonio de la entidad. Estos hallazgos han sido sustentados con documentos oficiales de la Fiscalía, lo que refuerza el alcance judicial de las denuncias.',
+    'De acuerdo con la investigación, el desfalco no solo comprometió a exdirectivos de la Nueva EPS, sino también a intermediarios y contratistas que habrían participado en el entramado de corrupción. El caso se encuentra en etapa de judicialización, con procesos en curso para determinar responsabilidades penales y administrativas.',
+    'El artículo también identifica a los integrantes de la junta directiva que deberán responder por los hechos revelados: Enrique Vargas Lleras, Néstor Ricardo Rodríguez, Noemí Sanín Posada, Fernando Jiménez Rodríguez y Beatriz Muñoz.',
+    'El impacto de estas revelaciones es significativo, ya que la Nueva EPS es una de las entidades más grandes del país en el régimen contributivo y subsidiado, con más de diez millones de usuarios. El manejo irregular de los recursos compromete la sostenibilidad del sistema de salud colombiano y ha encendido el debate público sobre la vigilancia y control de las entidades prestadoras de servicios de salud.',
+    'La invitación es a leer el artículo completo en la Revista Cambio, que detalla con mayor amplitud los documentos, testimonios y pruebas que sustentan esta investigación periodística.'
+  ],
+  etiquetas: ['colombia','salud','corrupcion','nueva eps','fiscalia','revista cambio'],
+  fuente: { nombre: 'Revista Cambio', url: 'https://cambiocolombia.com/poder/articulo/2025/9/asi-se-robaron-la-nueva-eps-cambio-revela-las-pruebas-de-la-fiscalia/?s=09' },
+  url_fuente: 'https://cambiocolombia.com/poder/articulo/2025/9/asi-se-robaron-la-nueva-eps-cambio-revela-las-pruebas-de-la-fiscalia/?s=09',
+  consecutivo_unico: '20250921-01',
+  imagen: '/noticias/asi-se-robaron-la-nueva-eps-cambio-2025-09-21.jpg',
+  credito_imagen: 'Revista Cambio'
+},
+{
+  id: 'obesidad-y-grasa-en-la-lengua-relacion-con-ronquido-2025-09-21',
+  fecha: '2025-09-21',
+  titulo: 'Obesidad y grasa en la lengua: estudios confirman su relación con ronquido y apnea del sueño',
+  pais: 'Internacional',
+  resumen: 'Investigaciones médicas recientes muestran que la obesidad aumenta la acumulación de grasa en la lengua, lo que contribuye al ronquido y a la apnea obstructiva del sueño. Perder peso puede reducir este riesgo.',
+  contenido: [
+    'El ronquido es un sonido producido por la vibración de las estructuras de la vía aérea superior durante el sueño. Aunque suele considerarse un problema menor, puede ser la señal de condiciones más serias como la apnea obstructiva del sueño (AOS).',
+    'Estudios con resonancia magnética han demostrado que las personas con obesidad acumulan grasa en la lengua, especialmente en la base, lo que aumenta su volumen y favorece la obstrucción de la vía aérea. Investigaciones en revistas médicas han confirmado esta asociación.',
+    'Una investigación de la Universidad de Pensilvania observó que pacientes obesos con AOS tenían una lengua más grande y con mayor contenido de grasa en comparación con obesos sin apnea. Al perder alrededor de un 10% de su peso corporal, se redujo de manera significativa la grasa lingual y mejoraron los índices de apnea.',
+    'Los especialistas recomiendan medidas iniciales como la pérdida de peso, la reducción del consumo de alcohol y tabaco y la higiene del sueño. En casos graves, se utilizan dispositivos como el CPAP, que evita las pausas respiratorias durante la noche.',
+    'La conclusión de los expertos es que el ronquido persistente no debe ignorarse. Identificar factores como la obesidad y el aumento de grasa en la lengua permite diseñar tratamientos más efectivos y prevenir complicaciones como hipertensión pulmonar y falla cardíaca.',
+    '---',
+    'Video recomendado: El ronquido explicado por el Dr. Baiter',
+    'El médico colombiano Dr. Baiter publicó un video en el que explica de forma clara qué es el ronquido, cuáles son sus causas más comunes y cuándo puede convertirse en un problema de salud como la apnea del sueño.',
+    'En su explicación, detalla que la obstrucción de la vía aérea superior puede deberse a desviación del tabique nasal, amígdalas o lengua aumentada, y que en casos de apnea obstructiva del sueño el uso de CPAP resulta fundamental. También resalta que la pérdida de peso, dejar el alcohol, tabaco y sedantes son medidas básicas para mejorar la calidad del sueño.',
+    'Credito video: Canal del Dr. Baiter en YouTube.',
+    '---',
+    'Fuentes citadas:',
+    '1) Penn Medicine. Losing Tongue Fat Improves Sleep Apnea. https://www.pennmedicine.org/news/losing-tongue-fat-improves-sleep-apnea',
+    '2) Kim AM et al. Tongue Fat and its Relationship to Obstructive Sleep Apnea. https://pmc.ncbi.nlm.nih.gov/articles/PMC4173920/',
+    '3) Meta-análisis 2025 sobre volumen de lengua y apnea. https://pmc.ncbi.nlm.nih.gov/articles/PMC12023004/',
+    '4) American Academy of Sleep Medicine. Study shows that tongue size and fat may predict sleep apnea risk. https://aasm.org/study-shows-that-tongue-size-and-fat-may-predict-sleep-apnea-risk-in-obese-adults/',
+    '5) Dr. Baiter. Video: Qué es el ronquido y cómo tratarlo. https://www.youtube.com/watch?v=tTivi4Ujsps'
+  ],
+  video: 'https://www.youtube.com/embed/tTivi4Ujsps',
+  etiquetas: ['salud', 'sueño', 'obesidad', 'apnea del sueño', 'ronquido','estilo de vida','internacional'],
+  fuente: 'LedeLab',
+  url_fuente: 'https://www.youtube.com/watch?v=tTivi4Ujsps',
+  consecutivo_unico: '20250921-02'
+},
+{
+  id: 'debate-hijos-colombia-2025-09-21',
+  fecha: '2025-09-21',
+  titulo: 'El debate sobre tener o no hijos en la actualidad en Colombia',
+  pais: 'Colombia',
+  resumen: 'En Colombia se mantiene un debate creciente sobre la decisión de tener hijos, en medio de cambios culturales, sociales y económicos que influyen en la planificación familiar y en la percepción de la maternidad y la paternidad.',
+  contenido: [
+    'En los últimos años, la discusión sobre si tener o no hijos ha tomado fuerza en Colombia. Factores como la situación económica, las oportunidades de educación y empleo, así como los cambios culturales en torno a la familia, han llevado a que más personas cuestionen la decisión de la maternidad y la paternidad tradicionales.',
+    
+    'De acuerdo con datos del Fondo de Población de las Naciones Unidas (UNFPA), cerca del 50% de los embarazos en el país no son planeados, lo que refleja las dificultades en el acceso a métodos anticonceptivos, así como la falta de información suficiente en torno a la planificación familiar. Estos indicadores han alimentado la discusión sobre la autonomía reproductiva y la importancia de políticas públicas que garanticen derechos en salud sexual y reproductiva.',
+    
+    'Expertos señalan que las generaciones más jóvenes tienden a retrasar la decisión de tener hijos o incluso a renunciar a ella, priorizando la estabilidad financiera y el desarrollo personal. A esto se suman las preocupaciones ambientales y el impacto que tendría traer hijos en un contexto de cambio climático y crisis de recursos, argumentos que son cada vez más frecuentes en este debate.',
+    
+    'Frente a estas tendencias, instituciones académicas y organizaciones sociales insisten en la necesidad de ampliar el acceso a educación sexual integral, garantizar la cobertura de anticonceptivos y fomentar un diálogo abierto sobre las diferentes formas de vivir la vida familiar. El debate no se centra únicamente en tener hijos o no, sino en el derecho de cada persona a decidir de manera informada y libre sobre su propio proyecto de vida.'
+  ],
+  etiquetas: ['colombia','sociedad','salud','demografía','familia'],
+  fuente: { nombre: 'UNFPA Colombia', url: 'https://colombia.unfpa.org' },
+  consecutivo_unico: '20250920-01'
+},
+{
+  id: 'venezuela-rusia-alianza-estados-unidos-2025-09-20',
+  fecha: '2025-09-20',
+  titulo: 'Venezuela y Rusia sellan alianza ante tensiones con Estados Unidos',
+  pais: 'Internacional',
+  resumen: 'Los gobiernos de Venezuela y Rusia anunciaron este 20 de septiembre una nueva alianza estratégica en medio de crecientes tensiones diplomáticas con Estados Unidos.',
+  contenido: [
+    'El gobierno de Venezuela y la Federación de Rusia firmaron este 20 de septiembre una alianza estratégica que busca fortalecer su cooperación política, militar y económica. El anuncio se produjo en Caracas durante una visita oficial de representantes rusos.',
+    'El acuerdo incluye compromisos en materia de defensa, energía e infraestructura, y fue presentado por las autoridades de ambos países como una respuesta a lo que califican como presiones y sanciones impuestas por Estados Unidos.',
+    'La cancillería venezolana destacó que esta cooperación bilateral reafirma la soberanía del país y su disposición a mantener relaciones con naciones que respalden un orden multipolar. Por su parte, Rusia subrayó su interés en consolidar su presencia en América Latina a través de proyectos conjuntos con Venezuela.',
+    'Estados Unidos no se ha pronunciado oficialmente sobre el anuncio, aunque en el pasado ha manifestado su preocupación por los vínculos entre Caracas y Moscú. La alianza se presenta en un contexto de tensiones geopolíticas globales y de medidas restrictivas impuestas tanto contra Rusia como contra Venezuela.'
+  ],
+  etiquetas: ['venezuela', 'rusia', 'estados unidos', 'politica', 'diplomacia'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/mundo/venezuela/venezuela-y-rusia-sellan-alianza-ante-tension-con-estados-unidos-3492295' },
+  url_fuente: 'https://www.eltiempo.com/mundo/venezuela/venezuela-y-rusia-sellan-alianza-ante-tension-con-estados-unidos-3492295',
+  consecutivo_unico: '20250920-01'
+},
+{
+  id: 'sardine-fasting-tim-ferriss-2025-09-20',
+  fecha: '2025-09-20',
+  titulo: 'Experto explica el "sardine fasting" en conversación con Tim Ferriss',
+  pais: 'Internacional',
+  resumen: 'En una entrevista en el canal de YouTube de Tim Ferriss se explicó el concepto de "sardine fasting" y su aplicación en pacientes, destacando un caso clínico con cáncer de próstata metastásico.',
+  contenido: [
+    'En el canal de YouTube de Tim Ferriss, un experto relató cómo utiliza el ayuno de forma situacional a través de distintas modalidades, incluyendo restricción calórica, dietas cetogénicas y alimentación con tiempo limitado.',
+    'Durante la conversación presentó la práctica que denominó "sardine fasting", basada en el consumo de una o dos latas de sardinas al día durante una semana. Esta estrategia se aplicó inicialmente con un paciente con cáncer de próstata metastásico.',
+    'El entrevistado explicó que, según los reportes médicos, este paciente vivió muchos años más de lo pronosticado, alcanzando incluso periodos sin evidencia de enfermedad. Aclaró que además del "sardine fasting" el paciente adoptó dieta baja en carbohidratos y mejoró otros hábitos de vida.',
+    'El experto comparó esta práctica con la dieta de ayuno simulado desarrollada por Valter Longo y señaló que, en el caso narrado, se aplicaba de manera mensual o bimensual. Concluyó que estas experiencias lo motivaron a profundizar en la investigación sobre el potencial de las dietas cetogénicas y de restricción energética en distintas enfermedades.'
+  ],
+  etiquetas: ['salud', 'dieta', 'ayuno', 'cetogénica', 'Tim Ferriss'],
+  fuente: { nombre: 'Canal de YouTube Tim Ferriss', url: 'https://www.youtube.com/watch?v=Vhy29BTS25Q' },
+  url_fuente: 'https://www.youtube.com/watch?v=Vhy29BTS25Q',
+  video: 'https://www.youtube.com/embed/Vhy29BTS25Q',
+  credito_video: 'Canal de YouTube Tim Ferriss',
+  consecutivo_unico: '20250920-01'
+},
+{
+  id: 'verdad-sobre-tratamientos-de-conducto-2025-09-20',
+  fecha: '2025-09-20',
+  titulo: 'Tratamientos de conducto: qué son, cuándo se indican y alternativas',
+  pais: 'Internacional',
+  resumen: 'La odontóloga Dr. Ellie explica qué ocurre cuando muere la pulpa dental, cómo se realiza un tratamiento de conducto, qué riesgos hay al no tratar un diente necrótico y cómo se compara esta opción con la extracción y el implante.',
+  contenido: [
+    '¿Qué es y por qué? Un tratamiento de conducto (root canal) se indica cuando el tejido vivo del interior del diente —pulpa con vasos y nervios— muere o se infecta. Puede ocurrir por caries profundas o por traumatismos que interrumpen el riego sanguíneo. Sin tratamiento, ese espacio se coloniza con bacterias y puede formarse un absceso doloroso en el ápice radicular.',
+    '¿Cómo se hace? Según la explicación del video, el especialista en endodoncia abre el diente, limpia y desinfecta los conductos, y rellena y sella el sistema radicular. La autora señala que, aunque en los años 80 se popularizaron materiales y técnicas que dieron malos resultados en algunos casos, hoy existen avances en instrumentación, magnificación y selladores que mejoran el pronóstico.',
+    '¿Qué alternativas hay? La principal alternativa es la extracción con reemplazo mediante implante. La autora sostiene que conservar la pieza con un tratamiento de conducto preserva el ligamento periodontal —fibras que conectan el diente al hueso—, lo que aporta retroalimentación mecano-sensorial ausente en los implantes. También advierte que los implantes pueden desarrollar periimplantitis si no hay higiene rigurosa.',
+    '¿Qué recomiendan? El video sugiere valorar conservar el diente tratable mediante endodoncia realizada por un especialista y acompañar con higiene oral metódica. Para quienes opten por implantes, enfatiza el control de placa y el cuidado periodontal para reducir complicaciones. Ante dolor persistente, cambio de coloración dental o indicios de infección, el llamado es a consultar oportunamente.'
+  ],
+  etiquetas: ['salud','odontología','endodoncia','tratamiento de conducto'],
+  fuente: { nombre: 'YouTube - Dr. Ellie' },
+  url_fuente: 'https://www.youtube.com/watch?v=7tqpz1mK9MA',
+  video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/7tqpz1mK9MA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  credito_video: 'Canal: Dr. Ellie (YouTube)',
+  consecutivo_unico: '20250920-01'
+},
+{
+  id: 'ivan-cepeda-pedro-viveros-foto-alterada-2025-09-19',
+  fecha: '2025-09-19',
+  titulo: 'Iván Cepeda denuncia publicación de foto alterada en la que aparece como guerrillero',
+  pais: 'Colombia',
+  resumen: 'El senador Iván Cepeda anunció acciones legales contra el analista Pedro Viveros por la difusión de una imagen manipulada que lo muestra vestido como miembro de las FARC.',
+  contenido: [
+    'El senador y precandidato presidencial Iván Cepeda denunció la difusión de una fotografía alterada en la que aparece con uniforme de camuflaje, como si perteneciera a las FARC. La publicación fue atribuida al analista político Pedro Viveros, quien compartió la imagen como parte de una campaña que llama a reflexionar sobre los extremos políticos.',
+    'Cepeda calificó la publicación como un atentado contra su honra y advirtió que denunciará penalmente a Viveros por calumnia si no presenta las pruebas que respalden la autenticidad de la imagen. La controversia se amplificó en redes sociales y en una valla publicitaria donde se mostraba la foto junto a la de otro aspirante, Abelardo de la Espriella.',
+    'Viveros respondió que no fue autor de la manipulación y que su intención era generar un debate sobre las opciones políticas en Colombia. Señaló que no busca afectar la reputación de Cepeda y que la crítica se centra en evitar lo que considera “la trampa de los extremos”.',
+    'El episodio ocurre en plena precampaña electoral y pone de relieve el impacto de las imágenes alteradas en el debate político. Cepeda, reconocido por su defensa de los derechos humanos, insistió en que este tipo de acciones pueden desinformar y afectar de manera grave la discusión democrática.',
+    'Fuentes citadas:',
+    '1) Infobae. *Iván Cepeda estalló por publicación de foto alterada en la que aparece con traje de guerrillero: “Denunciaré penalmente”*. https://www.infobae.com/colombia/2025/09/20/ivan-cepeda-estallo-por-publicacion-de-foto-alterada-en-la-que-aparece-con-traje-de-guerrillero-denunciare-penalmente/',
+    '2) Publimetro. *Iván Cepeda se quejó por foto suya alterada que le publicaron vestido de guerrillero*. https://www.publimetro.co/bogota/2025/09/20/ivan-cepeda-se-quejo-por-foto-suya-alterada-que-le-publicaron-vestido-de-guerrillero/',
+    '3) X (antes Twitter). Declaraciones de Iván Cepeda. https://x.com/IvanCepedaCast/status/1969180759190872503'
+  ],
+  etiquetas: ['colombia', 'politica', 'ivan cepeda', 'pedro viveros'],
+  fuente: 'LedeLab',
+  url_fuente: 'https://www.infobae.com/colombia/2025/09/20/ivan-cepeda-estallo-por-publicacion-de-foto-alterada-en-la-que-aparece-con-traje-de-guerrillero-denunciare-penalmente/',
+  consecutivo_unico: '20250919-02'
+},
+{
+  id: 'limpiar-arterias-dr-jaramillo-2025-09-20',
+  fecha: '2025-09-20',
+  titulo: 'Dr. Carlos Jaramillo explica cómo reducir el riesgo cardiovascular más allá del colesterol',
+  pais: 'Colombia',
+  resumen: 'El médico Carlos Jaramillo advierte que el colesterol no es el único marcador de riesgo cardiovascular y resalta la importancia del ApoB, la inflamación, la glucosa y los hábitos de vida. Además, presenta seis factores que deterioran las arterias y una lista de 12 alimentos y prácticas recomendadas.',
+  contenido: [
+    'En un video publicado en su canal de YouTube, el Dr. Carlos Jaramillo explicó que hablar de “limpiar las arterias” no se refiere a un procedimiento mágico, sino a estabilizar la placa ateromatosa, reducir la inflamación, mejorar la función del endotelio y controlar los niveles de glucosa e insulina.',
+    'El especialista recalcó que el colesterol es solo uno de los marcadores de riesgo, y que el ApoB permite identificar cuántas partículas LDL circulan en la sangre. Señaló que cerca del 50% de las personas que sufren un infarto tienen colesterol normal, lo que evidencia la importancia de considerar este marcador adicional.',
+    'Jaramillo detalló seis factores principales que afectan las arterias: niveles elevados de ApoB, resistencia a la insulina, inflamación crónica (medida por PCR ultrasensible), hipertensión sostenida, tabaquismo o vapeo con estrés oxidativo y consumo de alimentos ultraprocesados con azúcares, harinas y aceites refinados.',
+    'Para contrarrestar estos riesgos, recomendó 12 alimentos que favorecen la salud arterial, entre ellos hojas verdes, remolacha, aceite de oliva extravirgen, pescados azules, nueces, leguminosas, avena, semillas de lino, ajo, cacao puro, granada y té verde. Asimismo, propuso hábitos simples como tres caminatas de 10 minutos al día después de comer, tres colores de vegetales por comida y una adecuada hidratación.',
+    'Finalmente, presentó un checklist de exámenes útiles para evaluar la salud cardiovascular: ApoB, perfil lipídico, glucosa e insulina, PCR ultrasensible y presión arterial. Insistió en que el enfoque debe ser integral y no limitarse a un solo indicador como el colesterol total.'
+  ],
+  etiquetas: ['salud', 'nutrición', 'colesterol', 'inflamación', 'endotelio'],
+  fuente: { nombre: 'Canal de YouTube Dr. Carlos Jaramillo', url: 'https://www.youtube.com/watch?v=-u3VVx7RJpU' },
+  video: 'https://www.youtube.com/embed/-u3VVx7RJpU',
+  credito_video: 'Dr. Carlos Jaramillo',
+  consecutivo_unico: '20250920-01'
+},
+{
+  id: 'laver-cup-2025-resultados-parciales-2025-09-20',
+  fecha: '2025-09-20',
+  titulo: 'Laver Cup 2025: resultados parciales en San Francisco',
+  pais: 'Estados Unidos',
+  resumen: 'La Laver Cup 2025 se disputa en San Francisco y enfrenta a Team Europe contra Team World. Hasta el cierre parcial del sábado, el marcador favorece a Team World 5-3 tras la remontada en la segunda jornada.',
+  contenido: [
+    'La Laver Cup 2025 se está llevando a cabo en el Chase Center de San Francisco, Estados Unidos, entre el 19 y el 21 de septiembre. El torneo enfrenta a Team Europe, capitaneado por Yannick Noah, y a Team World, dirigido por Andre Agassi. Cada partido otorga puntos crecientes: uno el viernes, dos el sábado y tres el domingo.',
+    'En la primera jornada, Team Europe tomó ventaja 3-1 gracias a las victorias de Casper Ruud, Jakub Mensik y el dobles formado por Carlos Alcaraz y Mensik. El único triunfo de Team World llegó con el brasileño João Fonseca sobre Flavio Cobolli.',
+    'La segunda jornada comenzó con la remontada del equipo mundial. El australiano Alex de Minaur venció con autoridad a Alexander Zverev, y luego el argentino Francisco Cerúndolo superó a Holger Rune. Con estos resultados, Team World pasó al frente 5-3.',
+    'La definición queda abierta para el domingo 21 de septiembre, cuando los encuentros otorgarán tres puntos cada uno. El primer equipo en alcanzar 13 puntos será el campeón de esta edición de la Laver Cup.',
+    'Fuentes citadas:',
+    '1) Laver Cup. *Scores & Results 2025*. https://lavercup.com/scores-results-2025',
+    '2) ATP Tour. *Fonseca y Alcaraz brillan en el inicio de la Laver Cup 2025*. https://www.atptour.com/en/news/fonseca-cobolli-alcaraz-mensik-laver-cup-2025-friday'
+  ],
+  etiquetas: ['tenis','laver cup','san francisco','resultados'],
+  fuente: { nombre: 'Laver Cup', url: 'https://lavercup.com/schedule' },
+  url_fuente: 'https://lavercup.com/scores-results-2025',
+  consecutivo_unico: '20250920-03'
+},
+{
   id: 'juez-bloquea-plan-trump-deportacion-menores-guatemaltecos-2025-09-19',
   fecha: '2025-09-19',
   titulo: 'Juez bloquea plan de Trump para deportar menores guatemaltecos',
