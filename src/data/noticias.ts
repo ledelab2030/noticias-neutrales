@@ -57,6 +57,26 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'ejercicio-excesivo-y-longevidad-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Ejercicio excesivo y longevidad: recomendaciones sobre la vía mTOR',
+  pais: 'Internacional',
+  resumen: 'El Dr. Bayter explicó en su canal de YouTube cómo la activación de la vía mTOR favorece el crecimiento muscular, pero su exceso puede reducir la longevidad. Presentó recomendaciones sobre frecuencia, duración y forma de entrenar para mantener un equilibrio saludable.',
+  video: 'https://www.youtube.com/embed/2pOrOfBdhNw',
+  credito_video: 'Canal de YouTube Dr. Bayter',
+  contenido: [
+    'El especialista señaló que el músculo cumple funciones esenciales no solo de fuerza y movilidad, sino también en la generación de mitocondrias. Estas estructuras producen tanto radicales libres como antioxidantes, lo que hace del tejido muscular un regulador clave del metabolismo y la salud.',
+    'Explicó que la síntesis de nuevo músculo se activa a través de la vía mTOR, especialmente estimulada por la leucina presente en las proteínas animales y por hormonas como la hormona del crecimiento y el IGF1. Sin embargo, advirtió que la activación excesiva de esta vía está asociada con un mayor riesgo de cáncer y con menor esperanza de vida.',
+    'Según el Dr. Bayter, el problema no radica en la vía mTOR en sí, sino en los métodos utilizados para estimularla. El consumo elevado de carbohidratos y el uso de hormonas externas, como en el caso de los fisicoculturistas, son factores que reducen la longevidad y pueden aumentar riesgos de salud.',
+    'Recomendó un entrenamiento de fuerza moderado, de una hora a hora y media, entre tres y cuatro veces por semana, preferiblemente en ayunas y acompañado de una dieta basada en proteínas de calidad, buen descanso y exposición al sol. Estas prácticas permiten aprovechar los beneficios de la vía mTOR sin comprometer la longevidad.',
+    'El especialista concluyó que la clave para una vida larga y saludable está en mantener músculo en niveles óptimos, evitando tanto el sedentarismo como el exceso de ejercicio, y regulando los ritmos circadianos con sueño adecuado y manejo del estrés.'
+  ],
+  etiquetas: ['salud', 'ejercicio', 'longevidad', 'nutrición'],
+  fuente: 'LedeLab',
+  url_fuente: 'https://www.youtube.com/watch?v=2pOrOfBdhNw',
+  consecutivo_unico: '20250922-01'
+},
+{
   id: 'azucar-en-naranjas-y-jugo-2025-09-22',
   fecha: '2025-09-22',
   titulo: 'Azúcar en tres naranjas frente a un vaso de jugo: diferencias clave para la salud',
