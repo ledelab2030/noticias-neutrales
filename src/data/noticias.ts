@@ -33,20 +33,22 @@ export type NoticiaRaw = {
 
 export type Noticia = NoticiaRaw
 
-// Normalizador de etiquetas (case-insensitive, dedup, solo catálogo de tags.ts)
-function sanitizeTags(tags: string[] = []): string[] {
-  const canon = new Map<string, string>(TAGS.map((t) => [t.toLowerCase(), t]))
-  const out: string[] = []
+// Normalizador de etiquetas (case-insensitive, dedup, acepta cualquiera)
+export function sanitizeTags(tags: string[] = []): string[] {
   const seen = new Set<string>()
+  const out: string[] = []
+
   for (const raw of tags) {
-    const key = (raw ?? "").trim().toLowerCase()
+    const key = (raw ?? "").trim()
     if (!key) continue
-    const hit = canon.get(key)
-    if (hit && !seen.has(hit)) {
-      seen.add(hit)
-      out.push(hit)
+
+    const lower = key.toLowerCase()
+    if (!seen.has(lower)) {
+      seen.add(lower)
+      out.push(key) // conserva la forma original (con mayúsculas si venía)
     }
   }
+
   return out
 }
 
@@ -57,11 +59,110 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'importaciones-colombia-julio-2025-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Importaciones de Colombia crecieron 16,2 % en julio, impulsadas por las manufacturas',
+  pais: 'colombia',
+  resumen: 'El DANE reportó que las importaciones del país ascendieron a US$6.484 millones en julio de 2025, con un aumento de 16,2 % frente al mismo mes de 2024, explicado principalmente por el crecimiento del 12,9 % en el grupo de manufacturas.',
+  contenido: [
+    'El Departamento Administrativo Nacional de Estadística (DANE) informó que en julio de 2025 las importaciones de Colombia alcanzaron los US$6.484 millones CIF. Esta cifra representó un incremento de 16,2 % en comparación con el mismo mes del año anterior.',
+    'El comportamiento obedeció principalmente al grupo de manufacturas, que registró un crecimiento anual de 12,9 % y concentró el 76,7 % del valor total importado en el mes analizado.',
+    'Dentro de las manufacturas, se destacaron las mayores compras de productos químicos y conexos, así como de artículos manufacturados clasificados principalmente según el material. Estos subgrupos explicaron gran parte del dinamismo reportado.',
+    'Según el DANE, las demás categorías de importación (agropecuarios, combustibles y productos diversos) mantuvieron participaciones menores frente al peso de las manufacturas en la estructura total de importaciones.'
+  ],
+  etiquetas: ['economía', 'colombia','DANE'],
+  fuente: { nombre: 'DANE', url: 'https://www.dane.gov.co/index.php/estadisticas-por-tema/comercio-internacional/importaciones' },
+  url_fuente: 'https://x.com/UltimaHoraCR/status/1970144920469209248?t=9BSoLXzgNQOriKHz2DJT9w&s=09',
+  consecutivo_unico: '20250922-01'
+},
+{
+  id: 'salud-y-sostenibilidad-conversacion-peter-alvarez-leonardo-de-la-hoz-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Salud y sostenibilidad: conversación de Peter Álvarez y Leonardo De la Hoz sobre hábitos, alimentación y huella ambiental',
+  pais: 'Colombia',
+  resumen: 'Diálogo sobre mitos de la alimentación, personalización de la dieta, ayuno, sueño y la relación directa entre estilo de vida saludable y reducción del impacto ambiental.',
+  video: 'https://www.youtube.com/embed/VFpIUd5gUnA',
+  credito_video: 'Canal de YouTube Leonardo De la Hoz Borrego',
+  contenido: [
+    'En esta conversación de diciembre de 2023, Peter Álvarez Mora y Leonardo De la Hoz abordan la conexión entre salud personal y sostenibilidad ambiental. El punto de partida es desmontar mitos habituales —como eliminar por completo un macronutriente o basar la dieta en el conteo de calorías— y proponer un enfoque centrado en la calidad del alimento y en cómo “la comida es información” para el organismo.',
+    'Se explica de forma sencilla el concepto de metabolismo basal como la energía que el cuerpo necesita para existir de manera continua. A partir de allí, se recomienda priorizar un plato balanceado en macro y micronutrientes frente a estrategias restrictivas de corto plazo. También se advierte sobre la baja densidad nutricional de muchos ultraprocesados y su potencial efecto adictivo.',
+    'Los autores defienden la personalización: la frecuencia y el horario de las comidas deben adaptarse al contexto y a los ciclos circadianos. Plantean que, para muchas personas, dos comidas completas dentro de una ventana de alimentación razonable resultan suficientes, y recuerdan que el ayuno intermitente —mínimo 14 horas— es una práctica histórica que puede favorecer la salud cuando se aplica con criterio.',
+    'El diálogo vincula estos hábitos con la sostenibilidad: cocinar más en casa con alimentos frescos y locales, reducir el número de comidas y evitar procesados disminuye consumo energético, empaques y desperdicios. Además, organizar la jornada para dormir mejor y moverse más a pie o en bicicleta contribuye tanto al bienestar individual como a una menor huella de carbono.',
+    'Por último, se subraya que los cambios pueden percibirse en pocas semanas si se es constante, en especial por la rápida renovación celular del intestino. La invitación es a adoptar un estilo de vida equilibrado —alimentación, descanso y movimiento— que sea sostenible en el tiempo y compatible con las responsabilidades personales y laborales.',
+    'Durante la charla, Peter Álvarez enfatizó que “no tiene sentido que cuando vaya a comer consuma solo un nutriente, siempre hay que darle al cuerpo carbohidratos, proteínas, grasas y micronutrientes”. También advirtió que “el gran problema es que la gente come mucha comida de baja densidad nutricional y el cuerpo sigue pidiendo más porque no recibe lo que necesita”.',
+    'Por su parte, Leonardo De la Hoz compartió ejemplos personales: “En la costa atlántica comemos muy mal en general, con demasiado consumo de arroz y poca proporción de otros alimentos”. Recordó además que “cuando dejé el deporte en la universidad y cambié el ejercicio por trasnochos y comida rápida, apareció mi psoriasis, lo que me mostró cómo los hábitos alteran la salud a largo plazo”.',
+    'Álvarez insistió también en que el conteo de calorías no es un método fiable: “La alimentación y el estilo de vida son tan personalizados que decir que alguien debe consumir cierta cantidad matemática de calorías es irresponsable. No es lo mismo comerse una papa cocida que unas papas fritas procesadas, aunque numéricamente den lo mismo”.',
+    'En la misma línea, De la Hoz resaltó la relación entre salud y medio ambiente: “Si yo procuro comer la comida recién hecha y evito recalentarla, no solo cuido mi cuerpo sino que ahorro tiempo y energía. La sostenibilidad no es solo ambiental, también es aprovechar mejor los recursos personales”.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'seguridad alimentaria', 'colombia','sostenibilidad','leonardo de la hoz borrego','peter álvarez'],
+  fuente: 'Leonardo De la Hoz Borrego'
+},
+{
+  id: 'emprendimiento-bienestar-peter-alvarez-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Emprendimiento y bienestar: Leonardo De la Hoz Borrego entrevista con Péter Álvarez sobre prevención en salud y cambio de hábitos',
+  pais: 'Colombia',
+  resumen: 'El ingeniero y asesor en nutrición Péter Álvarez relata su transición profesional, su enfoque de medicina del estilo de vida y su plan para llevar bienestar 360 a empleados mediante soluciones digitales.',
+  video: 'https://www.youtube.com/embed/ijhCR_bAX4k',
+  credito_video: 'Canal de YouTube del proyecto (entrevista con Péter Álvarez)',
+  contenido: [
+    'En esta conversación, Péter Álvarez —ingeniero de profesión y asesor en nutrición por vocación— explica cómo pasó de una carrera tradicional a emprender en el ámbito del bienestar. Su propósito, afirma, es ayudar a las personas a estar más saludables desde la prevención, al margen de un modelo que describe como centrado en la gestión de enfermedades. La entrevista aborda la construcción de su propuesta y la manera en que convirtió esa motivación en un proyecto de vida con alcance personal y empresarial.',
+    'Álvarez cuenta que el primer punto de inflexión fue comprender los efectos del estrés en su propio cuerpo, experiencia que lo llevó a retomar la actividad física y a estudiar sobre descanso, alimentación y salud mental. Tras certificarse en nutrición en España y publicar un libro, en 2017 tomó la decisión de dedicarse de lleno al bienestar, atendiendo a personas de forma personalizada y acumulando experiencia clínica en problemas frecuentemente asociados al sobrepeso, así como en síntomas digestivos, migraña e insomnio, entre otros.',
+    'El enfoque que propone es integral: alimentación adecuada, sueño reparador, ejercicio y manejo del estrés como pilares para equilibrar hormonas, microbiota y ritmos circadianos. Subraya que prácticas como la meditación o el entrenamiento de alta intensidad a intervalos cortos pueden ayudar a «acallar» la mente y vivir el presente, reduciendo la carga de estrés que impacta negativamente en la salud. Su trabajo busca, además, generar conciencia: muchas decisiones cotidianas, especialmente en la alimentación, se toman por desconocimiento.',
+    'A nivel de modelo de negocio, distingue dos nichos. Por un lado, la asesoría uno a uno, que suele atraer a directivos o cargos medios-altos con posibilidad de pagar un proceso personalizado. Por otro, un proyecto empresarial orientado a compañías interesadas en mejorar el bienestar de toda su plantilla a un costo accesible, apalancado en tecnología (aplicaciones y mensajería), con contenidos educativos y seguimiento remoto. El objetivo es aumentar el alcance y el impacto preventivo en salud dentro de los entornos laborales.',
+    'Respecto al papel del sistema sanitario, sostiene que su propuesta se enfoca en prevenir y revertir condiciones desde el estilo de vida, mientras que la práctica clínica suele concentrarse en el manejo farmacológico de síntomas. Sin embargo, enfatiza que no se trata de culpar a los profesionales, sino de construir rutas complementarias de educación y hábitos sostenibles. Para él, la clave está en que cada persona asuma el control de su salud cotidiana con información clara y herramientas prácticas.',
+    'La entrevista cierra con una invitación a iniciar procesos guiados que fortalezcan el conocimiento y la conciencia sobre alimentación, descanso y movimiento. Álvarez insiste en que nadie busca dañarse a sí mismo ni a su familia: cuando hay información útil y comprensible, las personas encuentran tiempo y motivación para priorizar su bienestar y sostener cambios que, con el acompañamiento adecuado, se traducen en mejoras palpables en su vida diaria.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'nutrición', 'colombia','peter álvarez','leonardo de la hoz borrego','entrevistas','saludarte'],
+  fuente: 'LedeLab'
+},
+{
+  id: 'jason-fung-dietdoctor-ayuno-desintoxicacion-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Dr. Jason Fung y Diet Doctor: el ayuno como estrategia para la desintoxicación y regeneración',
+  pais: 'Internacional',
+  resumen: 'El Dr. Jason Fung, nefrólogo canadiense y pionero en el uso terapéutico del ayuno, es uno de los principales referentes en el portal Diet Doctor. Su enfoque destaca el ayuno como herramienta clave para la regeneración celular y la desintoxicación, especialmente relevante en tiempos de déficit de sueño y hábitos modernos.',
+  contenido: [
+    'El portal Diet Doctor se ha convertido en una de las plataformas más reconocidas para la educación nutricional, con énfasis en dietas bajas en carbohidratos, cetogénicas y estrategias de ayuno. Entre sus principales autores se encuentra el Dr. Jason Fung, nefrólogo canadiense, cuya investigación y práctica clínica han ayudado a popularizar el ayuno intermitente como herramienta terapéutica.',
+    'El Dr. Fung sostiene que el ayuno activa procesos de regeneración celular como la autofagia, un mecanismo natural mediante el cual el cuerpo elimina componentes dañados o envejecidos. Este proceso no solo favorece la desintoxicación interna, sino que también contribuye a la prevención de enfermedades metabólicas relacionadas con la obesidad y la resistencia a la insulina.',
+    'En la actualidad, la falta de sueño y la reducción en la calidad del descanso han generado un escenario en el que los mecanismos naturales de reparación del organismo se ven comprometidos. El ayuno, al dar un respiro al metabolismo digestivo, permite al cuerpo redirigir energía hacia procesos de reparación y limpieza celular, funcionando como un complemento al sueño en la restauración fisiológica.',
+    'La propuesta del Dr. Fung en Diet Doctor busca ofrecer un marco basado en evidencia científica y en la experiencia clínica con miles de pacientes. Su mensaje central es que el ayuno no debe entenderse como una privación extrema, sino como una práctica natural que puede adaptarse de forma segura bajo supervisión, y que resulta especialmente valiosa en el contexto actual de estilos de vida acelerados.',
+    'Fuentes citadas:',
+    '1) Diet Doctor. Perfil del Dr. Jason Fung. https://www.dietdoctor.com/es/authors/dr-jason-fung'
+  ],
+  etiquetas: ['salud', 'alimentación', 'nutrición', 'dieta', 'jason fung', 'diet doctor', 'ayuno'],
+  fuente: { nombre: 'Diet Doctor', url: 'https://www.dietdoctor.com/es/authors/dr-jason-fung' },
+  url_fuente: 'https://www.dietdoctor.com/es/authors/dr-jason-fung',
+  consecutivo_unico: '20250922-01'
+},
+{
+  id: 'calorie-deficit-mito-insulina-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'El mito del déficit calórico: por qué la insulina es clave en la pérdida de peso',
+  pais: 'Internacional',
+  resumen: 'Un análisis en YouTube explica, mediante ejemplos matemáticos y metabólicos, por qué el llamado déficit calórico no puede existir sin la liberación de energía almacenada y cómo la insulina determina el éxito en la pérdida de grasa.',
+  video: 'https://www.youtube.com/embed/6rqIG5cDCXw',
+  credito_video: 'Canal de YouTube Dr. Jason Fung',
+  contenido: [
+    'En una exposición titulada “A Calorie Deficit cannot EVER exist – here’s why!”, se argumenta que la ecuación de balance energético —calorías consumidas menos calorías gastadas— no refleja la complejidad del metabolismo humano. El video subraya que no se puede hablar de déficit calórico si el organismo no logra acceder a las reservas de grasa corporal.',
+    'Mediante analogías con el manejo del dinero, se explica que así como no se puede gastar lo que no se puede retirar de un lugar de almacenamiento, el cuerpo tampoco puede recurrir a la grasa acumulada si las señales hormonales no lo permiten. En este proceso, la hormona insulina cumple un papel central.',
+    'Cuando los niveles de insulina son altos, el organismo recibe la señal de almacenar energía y bloquea la liberación de grasa. En cambio, si la insulina se mantiene baja —por medio de dietas bajas en carbohidratos o ayuno intermitente—, el cuerpo accede a la grasa almacenada y la utiliza como fuente de energía, equilibrando la ecuación energética.',
+    'El video enfatiza que dos personas pueden consumir la misma cantidad de calorías, pero obtener resultados radicalmente distintos según la calidad de los alimentos y su impacto en la insulina. Así, alimentos como galletas y dulces elevan rápidamente la insulina y favorecen la acumulación de grasa, mientras que proteínas magras y vegetales permiten su quema eficiente.',
+    'La conclusión es que la pérdida de peso sostenible no depende únicamente del conteo de calorías, sino del control hormonal. Comprender cómo la insulina regula el acceso a la grasa corporal resulta esencial para estrategias efectivas de reducción de peso.',
+    'Fuentes citadas:',
+    '1) Video en YouTube: “A Calorie Deficit cannot EVER exist – here’s why!” https://www.youtube.com/watch?v=6rqIG5cDCXw'
+  ],
+  etiquetas: ['salud', 'alimentación', 'nutrición', 'dieta', 'ayuno', 'jason fung', 'insulina'],
+  fuente: { nombre: 'YouTube', url: 'https://www.youtube.com/watch?v=6rqIG5cDCXw' },
+  url_fuente: 'https://www.youtube.com/watch?v=6rqIG5cDCXw',
+  consecutivo_unico: '20250922-02'
+},
+{
   id: 'colon-irritable-testimonio-transformacion-2025-09-22',
   fecha: '2025-09-22',
-  titulo: 'Testimonio: cómo una participante superó el colon irritable y las migrañas a través de cambios en hábitos de vida',
+  titulo: 'Testimonio: cómo una mujer superó el colon irritable y las migrañas a través de cambios en hábitos de vida',
   pais: 'Internacional',
-  resumen: 'Una mujer relató en el programa “Transformando Divas” cómo logró dejar de depender de medicamentos para migrañas, colon irritable y acidez, tras adoptar nuevos hábitos de alimentación y cuidado integral.',
+  resumen: 'Daniela Anillo relató en el programa “Transformando Divas” cómo logró dejar de depender de medicamentos para migrañas, colon irritable y acidez, tras adoptar nuevos hábitos de alimentación y cuidado integral.',
   video: 'https://www.youtube.com/embed/GcRU0teAa9I',
   credito_video: 'Canal de YouTube Peter Álvarez | Reversión Biológica',
   contenido: [
@@ -73,7 +174,7 @@ const noticiasRaw: NoticiaRaw[] = [
     '<b>Sobre el creador del programa:<b>', 
     'Peter Álvarez es nutricionista y experto en rejuvenecimiento, con más de 20 años de experiencia en el campo de la salud y el bienestar. Con su método de los tres pilares “Equilibrio Cuerpo, Mente y Emociones”, ha acompañado a numerosas personas en procesos de adelgazamiento y bienestar integral. Es autor de “El Poder del Ayuno Intermitente” y del libro *Cuerpo Detox*, así como creador del concepto “Plato Saludable Balanceado por Nutrientes”, una guía práctica para lograr una alimentación equilibrada y sostenible.'
   ],
-  etiquetas: ['salud', 'alimentación', 'colon irritable','estilo de vida'],
+  etiquetas: ['salud', 'alimentación', 'colon irritable','estilo de vida','peter álvarez'],
   fuente: { nombre: 'Peter Álvarez | Reversión Biológica', url: 'https://peter-alvarez-mora.hotmart.host/pagina-de-ventas-155b3923-313f-4837-8bbd-95bd202c6504' },
   url_fuente: 'https://peter-alvarez-mora.hotmart.host/pagina-de-ventas-155b3923-313f-4837-8bbd-95bd202c6504',
   consecutivo_unico: '20250922-01'
@@ -111,7 +212,7 @@ const noticiasRaw: NoticiaRaw[] = [
     '1) American Heart Association. Understanding Insulin Resistance. https://www.heart.org/en/health-topics/diabetes/understanding-insulin-resistance',
     '2) National Institutes of Health. Visceral Fat and Metabolic Risk. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6019055/'
   ],
-  etiquetas: ['salud', 'alimentación', 'dieta', 'nutrición'],
+  etiquetas: ['salud', 'alimentación', 'dieta', 'nutrición','ayuno'],
   fuente: { nombre: 'The Diary of a CEO', url: 'https://www.youtube.com/watch?v=gryta3KZKU4' },
   url_fuente: 'https://www.youtube.com/watch?v=gryta3KZKU4',
   consecutivo_unico: '20250922-01'
