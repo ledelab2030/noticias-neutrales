@@ -59,6 +59,47 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'crisis-financiera-salud-colombia-vicente-calvo-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Vicente Calvo explica cómo se gestó la crisis financiera del sistema de salud en Colombia',
+  pais: 'Colombia',
+  resumen: 'El investigador Vicente Calvo expone con detalle los factores que llevaron a la implosión del sistema de salud en 2024, señalando el incumplimiento de reservas técnicas, la permisividad institucional y el maquillaje de indicadores financieros por parte de las EPS.',
+  contenido: [
+    'Vicente Calvo, quien ha dedicado los últimos años a investigar y denunciar con cifras el desfalco de las EPS al sistema de salud, publicó un análisis sobre cómo se gestó la crisis financiera que estalló en 2024. Según Calvo, el colapso pudo haberse evitado si se hubiesen cumplido las normas expedidas desde 2007.',
+    'En 2007, el Decreto 574 obligaba a las EPS a contar con reservas técnicas como mecanismo de protección financiera para responder por los servicios de salud. Sin embargo, año tras año esta exigencia fue prorrogada mediante diferentes resoluciones, lo que permitió a las entidades operar sin el respaldo real requerido.',
+    'A partir de 2014, nuevas normas otorgaron prerrogativas adicionales a las EPS, flexibilizando sus obligaciones. En lugar de fortalecerse los controles, se crearon rutas de recuperación y reorganización que les permitieron continuar operando pese a sus problemas financieros. Esta permisividad, afirma Calvo, terminó institucionalizando el incumplimiento.',
+    'El investigador también recordó que el Acuerdo de Punto Final de 2019 no resolvió los problemas estructurales, pues aunque cubrió parcialmente las deudas históricas, las EPS siguieron sin reservas suficientes y el flujo de recursos hacia las IPS permaneció débil y poco transparente.',
+    'Finalmente, resoluciones expedidas en 2021 y 2022 permitieron maquillar indicadores de solvencia al flexibilizar los criterios de cálculo de reservas. Esto, según Calvo, fue una bomba de tiempo que estalló en 2024, afectando directamente a millones de usuarios y trabajadores de la salud.',
+    'Para Calvo, la lección central es que el sistema requiere reglas claras que se cumplan efectivamente, evitando que las excepciones temporales se conviertan en normas permanentes y que el maquillaje financiero prime sobre la salud de los colombianos.'
+  ],
+  etiquetas: ['colombia', 'salud', 'investigación'],
+  fuente: { nombre: 'Vicente Calvo', url: 'https://x.com/vcalvot/status/1970200529654386829' },
+  url_fuente: 'https://x.com/vcalvot/status/1970200529654386829',
+  consecutivo_unico: '20250922-01'
+},
+{
+  id: 'roger-federer-canchas-lentas-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Roger Federer critica la uniformidad de la velocidad en las canchas del circuito',
+  pais: 'Internacional',
+  resumen: 'En el pódcast SERVED, conducido por Andy Roddick, Roger Federer cuestionó la tendencia a homogenizar la velocidad de las canchas en el tenis profesional, señalando que limita la variedad de estilos de juego.',
+  video: 'https://www.youtube.com/embed/v7RsLVkwbDA?start=4078',
+  credito_video: 'Canal de YouTube Andy Roddick',
+  contenido: [
+    'Roger Federer, invitado al pódcast SERVED de Andy Roddick, expresó su inconformidad con la tendencia a ralentizar las canchas de tenis en el circuito profesional. Según el ex número uno del mundo, la uniformidad actual reduce la diversidad en el juego y perjudica la riqueza competitiva.',
+    '“Necesitamos no solo canchas rápidas, sino también ver a jugadores como Alcaraz o Sinner resolver partidos en superficies extremadamente veloces y luego enfrentarse en canchas mucho más lentas. Eso mostraría contrastes interesantes”, afirmó Federer durante la conversación.',
+    'El suizo sostuvo que los directores de torneos han permitido que la velocidad de las pelotas y las canchas se mantenga prácticamente igual en todo el calendario, lo que, a su juicio, facilita que un mismo estilo de juego funcione tanto en Roland Garros, como en Wimbledon o el US Open.',
+    'La declaración generó reacciones en redes sociales, incluyendo un registro del momento publicado en X por la cuenta Tennis Masterr: https://x.com/tennismasterr/status/1970093111180214570',
+    'Fuentes citadas:',
+    '1) Canal de YouTube Andy Roddick. SERVED podcast. https://www.youtube.com/watch?v=v7RsLVkwbDA&t=4078s',
+    '2) Publicación en X de Tennis Masterr. https://x.com/tennismasterr/status/1970093111180214570'
+  ],
+  etiquetas: ['tenis', 'roger federer', 'andy roddick'],
+  fuente: { nombre: 'Andy Roddick', url: 'https://www.youtube.com/@AndyRoddick' },
+  url_fuente: 'https://www.youtube.com/watch?v=v7RsLVkwbDA&t=4078s',
+  consecutivo_unico: '20250922-03'
+},
+{
   id: 'jep-sentencias-farc-falsos-positivos-2025-09-22',
   fecha: '2025-09-22',
   titulo: 'La Silla Vacía analiza las sentencias de la JEP a exFarc y militares por falsos positivos',
