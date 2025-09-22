@@ -204,22 +204,37 @@ export default async function Noticia({ params }: Props) {
         </p>
       ) : null}
 
-      {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && (
-        <>
-          <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
-          <div className="flex flex-wrap gap-2">
-            {n.etiquetas.map((tag) => (
-              <Link
-                key={tag}
-                href={`/tag/${encodeURIComponent(slugify(tag))}`}
-                className="rounded-full border px-3 py-1 text-xs text-muted-foreground hover:bg-gray-50 dark:hover:bg-gray-800"
-              >
-                {tag}
-              </Link>
-            ))}
-          </div>
-        </>
-      )}
+      {/* 🏷️ Etiquetas: aceptar cualquiera, limpiar y deduplicar */}
+      {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && (() => {
+        const etiquetasLimpias = Array.from(
+          new Set(
+            (n.etiquetas ?? [])
+              .map((t) => (typeof t === "string" ? t.trim() : ""))
+              .filter(Boolean)
+          )
+        )
+        if (etiquetasLimpias.length === 0) return null
+        return (
+          <>
+            <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
+            <div className="flex flex-wrap gap-2">
+              {etiquetasLimpias.map((tag) => (
+                <Link
+                  key={tag}
+                  href={`/tag/${encodeURIComponent(slugify(tag))}`}
+                  className="rounded-full border px-3 py-1 text-xs text-muted-foreground hover:bg-gray-50 dark:hover:bg-gray-800"
+                  title={`Ver notas con la etiqueta: ${tag}`}
+                >
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          </>
+        )
+      })()}
+
+      {/* 🔗 Bloque de noticias relacionadas */}
+      <Relacionadas idActual={n.id} etiquetas={n.etiquetas ?? []} />
     </main>
   )
 }
@@ -228,5 +243,45 @@ function resaltarLinks(texto: string) {
   return texto.replace(
     /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
     '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+  )
+}
+
+// --- NUEVO COMPONENTE: Notas relacionadas ---
+function Relacionadas({ idActual, etiquetas }: { idActual: string; etiquetas: string[] }) {
+  const etiquetasLimpias = Array.from(
+    new Set((etiquetas ?? []).map((t) => (typeof t === "string" ? t.trim() : "")).filter(Boolean))
+  )
+
+  const relacionadas = noticias
+    .filter(
+      (nn) =>
+        nn.id !== idActual &&
+        nn.etiquetas?.some((tag) => etiquetasLimpias.includes(tag?.trim?.() ?? ""))
+    )
+    .slice(0, 3) // máx. 3 notas
+
+  if (relacionadas.length === 0) return null
+
+  return (
+    <section className="mt-10">
+      <h2 className="text-xl font-bold mb-4">Notas relacionadas</h2>
+      <ul className="space-y-3">
+        {relacionadas.map((r) => (
+          <li key={r.id} className="border-b pb-2">
+            <Link
+              href={`/noticias/${r.id}`}
+              className="text-blue-600 hover:underline font-medium"
+            >
+              {r.titulo}
+            </Link>
+            {r.resumen && (
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                {r.resumen}
+              </p>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }
