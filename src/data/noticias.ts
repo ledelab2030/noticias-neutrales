@@ -57,6 +57,65 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'azucar-en-naranjas-y-jugo-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Azúcar en tres naranjas frente a un vaso de jugo: diferencias clave para la salud',
+  pais: 'Internacional',
+  resumen: 'Unas tres naranjas medianas contienen alrededor de 36 gramos de azúcar natural. La diferencia está en que al consumirlas enteras se incorpora fibra, mientras que en el jugo se concentra el azúcar y se elimina casi toda la fibra, lo cual tiene implicaciones metabólicas importantes.',
+  contenido: [
+    'Cada naranja mediana de unos 130 gramos aporta en promedio 12 gramos de azúcar natural, lo que significa que tres naranjas contienen cerca de 36 gramos de azúcar, equivalentes a unas nueve cucharaditas.',
+    'Cuando la fruta se consume entera, el azúcar se acompaña de fibra y agua, lo que ralentiza la absorción y genera mayor saciedad. En cambio, al preparar jugo de naranja se concentra el azúcar y se elimina gran parte de la fibra, lo que eleva más rápido la glucosa en sangre.',
+    'Un vaso de jugo de naranja de 250 ml puede requerir entre tres y cuatro naranjas para su preparación, por lo que en una sola porción líquida se ingieren 36 a 48 gramos de azúcar, prácticamente el consumo máximo recomendado por la Organización Mundial de la Salud para todo un día.',
+    'El aspecto relevante es que quienes acostumbran beber jugo de naranja suelen hacerlo a diario, lo que implica una ingesta frecuente y elevada de azúcar libre. Esta práctica puede aumentar el riesgo de sobrepeso, resistencia a la insulina y acumulación de grasa en el hígado.',
+    'Como recomendación práctica, se sugiere preferir la fruta entera y reservar el jugo de naranja para ocasiones esporádicas, ya que el consumo diario puede contribuir a niveles elevados de glucosa y ácido úrico en la sangre.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'consumo'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250922-04'
+},
+{
+  id: 'acido-urico-causas-frank-suarez-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Frank Suárez explicó las causas del ácido úrico y su relación con el hígado',
+  pais: 'Internacional',
+  resumen: 'En un episodio de MetabolismoTV, Frank Suárez, fallecido en 2021, explicó que el verdadero problema del ácido úrico no está en la carne sino en la capacidad del hígado de desintoxicar y eliminarlo.',
+  contenido: [
+    'Frank Suárez señalaba que la gota, caracterizada por acumulación de cristales de ácido úrico en articulaciones como el dedo gordo del pie o los codos, era un problema muy doloroso y frecuente. Aunque se suele culpar a la carne como principal causa, él consideraba que no era el factor determinante.',
+    'En su explicación, afirmaba que el ácido úrico proviene del DNA celular, pero que la diferencia entre quienes desarrollan gota y quienes no, aun consumiendo carne, está en la función hepática. Un hígado sano puede procesar y eliminarlo, mientras que un hígado sobrecargado o con hígado graso pierde esta capacidad.',
+    'Suárez destacaba el papel del sistema nervioso excitado, que afecta la desintoxicación. Personas con este perfil presentaban además problemas de sueño, digestión y eliminación, lo que agrava la acumulación de ácido úrico.',
+    'Entre los factores que sobrecargaban el hígado mencionaba el alcohol (acetato), las grasas en exceso y los azúcares, en especial la fructosa, que inducen hígado graso. Como medidas prácticas proponía reducir azúcar, alcohol y grasas para dar descanso al hígado y permitir que el cuerpo elimine el ácido úrico.',
+    'Finalmente, resaltaba la relación entre infecciones por hongo cándida y la gota: la fermentación interna de glucosa producía alcohol, que a su vez generaba acetato y sobrecargaba el hígado, aumentando así el riesgo de ácido úrico elevado.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'dieta'],
+  video: 'https://www.youtube.com/embed/DgqxJc1bikk',
+  credito_video: 'MetabolismoTV – Frank Suárez (YouTube)',
+  fuente: 'LedeLab',
+  url_fuente: 'https://www.youtube.com/watch?v=DgqxJc1bikk',
+  consecutivo_unico: '20250922-03'
+},
+{
+  id: 'acido-urico-causas-rango-estrategias-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'Ácido úrico: causas reales, rango ideal y estrategias radicales y moderadas para controlarlo',
+  pais: 'Internacional',
+  resumen: 'Explicación sobre qué eleva realmente el ácido úrico, cuál es el rango recomendado y cómo bajarlo con dos enfoques prácticos: uno radical y otro moderado. Incluye las estrategias presentadas por el Dr. Carlos Jaramillo y Frank Suárez.',
+  contenido: [
+    'El ácido úrico es un subproducto del metabolismo de las purinas, provenientes del recambio celular y de ciertos alimentos. En exceso puede generar gota y está asociado con mayor riesgo cardiometabólico y renal. El hígado produce ácido úrico y los riñones lo eliminan; cuando se acumula, aumenta en sangre.',
+    'El rango de referencia suele estar entre 3,5 y 7,2 mg/dL en adultos. Sin embargo, las guías clínicas recomiendan como meta en personas con gota mantenerlo por debajo de 6 mg/dL, y en casos más graves por debajo de 5 mg/dL.',
+    'Las causas principales de elevación sostenida incluyen: consumo excesivo de azúcares, especialmente fructosa (jugos, bebidas azucaradas, jarabes), consumo regular de alcohol (sobre todo cerveza), ingesta elevada de alimentos con purinas como vísceras y mariscos, uso de ciertos medicamentos (diuréticos), enfermedad renal crónica y predisposición genética. La hidratación insuficiente también contribuye.',
+    'La estrategia radical consiste en eliminar por completo bebidas azucaradas, jugos de fruta y alcohol, así como vísceras y carnes procesadas. Se recomienda además aumentar la ingesta de agua, favorecer lácteos bajos en grasa, verduras y frutos rojos, y ajustar medicamentos que favorezcan la hiperuricemia con supervisión médica.',
+    'La estrategia moderada, en cambio, busca reducir sin eliminar del todo: limitar alcohol y carnes rojas, reemplazar bebidas azucaradas por agua, consumir proteínas magras en porciones moderadas y mantener un patrón tipo mediterráneo o DASH, con énfasis en verduras, legumbres, integrales y lácteos bajos en grasa.',
+    'Entre los alimentos protectores destacan los lácteos bajos en grasa y las cerezas, por su efecto antioxidante. La pérdida de peso gradual y la actividad física regular también ayudan a estabilizar los niveles. En todos los casos, se recomienda un seguimiento médico con controles de ácido úrico y marcadores metabólicos.',
+    'En el canal de YouTube del Dr. Carlos Jaramillo se expone un enfoque clínico y moderado, enfatizando la relación con la fructosa y el alcohol, y en MetabolismoTV, Frank Suárez explica de manera didáctica la importancia de la hidratación, los jugos de vegetales y la dieta como herramientas prácticas.'
+  ],
+  etiquetas: ['salud', 'alimentación', 'dieta'],
+  video: 'https://www.youtube.com/embed/VksiqJIJfMc',
+  credito_video: 'Dr. Carlos Jaramillo (YouTube)',
+  fuente: 'LedeLab',
+  url_fuente: 'https://www.youtube.com/watch?v=VksiqJIJfMc',
+  consecutivo_unico: '20250922-01'
+},
+{
   id: 'advantage-austria-inversion-y-neutralidad-2025-09-21',
   fecha: '2025-09-21',
   titulo: 'ADVANTAGE AUSTRIA: inversión, migración y el papel de la neutralidad austriaca',
