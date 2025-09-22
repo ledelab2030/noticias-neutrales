@@ -59,6 +59,47 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'jep-sentencias-farc-falsos-positivos-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'La Silla Vacía analiza las sentencias de la JEP a exFarc y militares por falsos positivos',
+  pais: 'Colombia',
+  resumen: 'En el programa “La Siguiente Movida” de La Silla Vacía, Juanita León y Héctor Riveros discutieron el alcance histórico y las críticas a las sentencias de la JEP contra exintegrantes del Secretariado de las Farc por secuestros y contra militares del batallón La Popa por ejecuciones extrajudiciales.',
+  video: 'https://www.youtube.com/embed/14NvqwHlf7c',
+  credito_video: 'Canal de YouTube La Silla Vacía (programa “La Siguiente Movida”)',
+  contenido: [
+    'La Jurisdicción Especial para la Paz (JEP) emitió sentencias contra siete exintegrantes del Secretariado de las Farc y doce militares del batallón La Popa. Los primeros fueron condenados por crímenes de lesa humanidad vinculados al secuestro, mientras que los segundos lo fueron por ejecuciones extrajudiciales conocidas como “falsos positivos”.',
+    'En el análisis de La Silla Vacía, los conductores destacaron la relevancia histórica de que ambos grupos fueran juzgados por un tribunal nacional. Sin embargo, señalaron que persiste una percepción de sanciones débiles o ambiguas, en especial en el caso de las Farc, donde no se concretaron de inmediato las obligaciones reparadoras.',
+    'Las sanciones a los exFarc incluyen labores como apoyo a la búsqueda de desaparecidos, actividades de memoria y reforestación. En contraste, las de los militares contemplan presencia territorial y trabajos específicos en beneficio de comunidades indígenas victimizadas, lo que fue considerado más claro y reparador.',
+    'Víctimas como César Lazo, secuestrado durante 13 años, expresaron frustración por la falta de justicia proporcional al daño sufrido. Los analistas subrayaron que la efectividad de las sentencias dependerá de la implementación de los TOAR (trabajos, obras y actividades con contenido restaurador y reparador) y de la real participación de las víctimas en su definición.',
+    'En el plano político, recordaron que el acuerdo de paz fue cuestionado por sectores que advirtieron impunidad y privilegios para los exguerrilleros. A su vez, el expresidente Juan Manuel Santos defendió que las sanciones fueron un compromiso necesario para lograr la dejación de armas, mientras críticos como Álvaro Uribe insistieron en que se trató de concesiones excesivas.',
+    '<b>Nota del editor:<b>',
+    'Las reflexiones de Juanita León y Héctor Riveros muestran la tensión entre lo alcanzado y lo que aún falta en la justicia transicional. Coincido en que lo verdaderamente histórico no es solo el fallo de la JEP, sino la posibilidad que nos da como sociedad de mirarnos en un espejo sin negar responsabilidades. Sin embargo, la división política que ha acompañado este proceso ha debilitado su potencial reparador. Ninguna condena puede devolver lo perdido a las víctimas, pero sí podemos decidir si la verdad, la reparación y la memoria se convierten en cimientos de un país distinto o en una oportunidad desperdiciada. La vida, la dignidad y el reconocimiento del otro deberían ser el centro de nuestra acción colectiva, más allá de banderas políticas o ideológicas.'
+  ],
+  etiquetas: ['colombia', 'JEP', 'FARC', 'falsos positivos', 'justicia transicional', 'víctimas', 'proceso de paz'],
+  fuente: { nombre: 'La Silla Vacía', url: 'https://www.youtube.com/watch?v=14NvqwHlf7c' }
+},
+{
+  id: 'tejiendo-redes-digital-sostenible-thaly-gutierrez-2023-12-22',
+  fecha: '2023-12-22',
+  titulo: 'Tejiendo redes digitales sostenibles con Thaly Gutiérrez',
+  pais: 'Internacional',
+  resumen: 'Leonardo de la Hoz y Thaly Gutiérrez dialogaron sobre la residencia electrónica de Estonia, el papel de LinkedIn en la creación de comunidades profesionales y el uso de la inteligencia artificial para el emprendimiento y la educación.',
+  video: 'https://www.youtube.com/embed/8gIKAIxu_ac',
+  credito_video: 'Canal de YouTube Leonardo de la Hoz Borrego',
+  contenido: [
+    'La conversación publicada el 22 de diciembre de 2023 aborda cómo LinkedIn puede servir como puente para encuentros profesionales y colaboraciones. Thaly Gutiérrez relató su experiencia participando en una investigación de usuario del programa de residencia electrónica de Estonia y destacó la importancia de las comunidades digitales.',
+    'El diálogo detalla las características del programa de e-Residency de Estonia, que permite crear empresas y operar de forma remota con identificación digital. Ambos señalaron que la residencia electrónica no implica nacionalidad ni pasaporte, sino una herramienta para emprendedores y freelancers que buscan integrarse a la economía digital europea.',
+    'La charla también exploró el rol de la alfabetización digital y el diseño de prompts para inteligencia artificial, subrayando la necesidad de aprender a interactuar con estos modelos en distintos idiomas para mejorar la calidad de los resultados. Se mencionaron avances recientes en modelos abiertos y la importancia de su aplicación en contextos educativos.',
+    'Finalmente, los participantes reflexionaron sobre el estilo de vida nómada digital, las oportunidades de emprendimiento en distintas regiones y la relevancia de la educación financiera y tecnológica para aprovechar las ventajas del trabajo remoto internacional.',
+    'Fuentes citadas:',
+    'https://www.youtube.com/watch?v=8gIKAIxu_ac'
+  ],
+  etiquetas: ['tecnología', 'emprendimiento', 'educación','entrevistas','leonardo de la hoz borrego','thaly gutiérrez','estonia'],
+  fuente: 'LedeLab',
+  url_fuente: 'https://www.youtube.com/watch?v=8gIKAIxu_ac',
+  consecutivo_unico: '20231222-01'
+},
+{
   id: 'importaciones-colombia-julio-2025-2025-09-22',
   fecha: '2025-09-22',
   titulo: 'Importaciones de Colombia crecieron 16,2 % en julio, impulsadas por las manufacturas',
@@ -571,25 +612,6 @@ const noticiasRaw: NoticiaRaw[] = [
   fuente: { nombre: 'DW en Español', url: 'https://www.youtube.com/watch?v=_H0n3DXGQxc' },
   video: 'https://www.youtube.com/embed/_H0n3DXGQxc',
   credito_video: 'DW en Español',
-  consecutivo_unico: '20250919-48'
-},
-{
-  id: 'juez-bloquea-plan-trump-deportacion-menores-guatemaltecos-2025-09-19',
-  fecha: '2025-09-19',
-  titulo: 'Juez bloquea plan de Trump para deportar menores guatemaltecos',
-  pais: 'Estados Unidos',
-  resumen: 'Un juez federal en Washington suspendió las deportaciones de cientos de niños guatemaltecos que habían sido trasladados a Texas para su repatriación, al considerar que muchos de ellos aún tienen solicitudes de asilo pendientes.',
-  contenido: [
-    'El juez del distrito Timothy Kelly, en Washington, emitió este jueves una orden que mantiene el bloqueo a la deportación de menores guatemaltecos que llegaron acompañados de adultos a Estados Unidos. Algunos habían sido llevados a un aeropuerto de Texas a finales de agosto, pero la repatriación se detuvo antes del despegue.',
-    'De acuerdo con la resolución judicial, los casos permanecerán abiertos mientras existan solicitudes de asilo en curso. Desde agosto, iglesias y centros comunitarios en el sur de Texas han recibido a cientos de menores, la mayoría de origen guatemalteco, actualmente bajo custodia de la Oficina de Reasentamiento de Refugiados.',
-    'El operativo incluyó traslados nocturnos de niños hacia aeropuertos, con vuelos programados de repatriación. La medida judicial frenó uno de estos vuelos en el último momento. Organizaciones como el Young Center for Immigrant Children’s Rights advirtieron que los menores tienen derecho a debido proceso, representación legal y decisiones individuales sobre sus solicitudes de protección.',
-    'Datos de la Oficina de Reasentamiento indican que en octubre de 2024 había 6,212 menores no acompañados bajo custodia federal en Estados Unidos, cifra que para marzo de 2025 se redujo a 2,173. Abogados y defensores de derechos de la niñez señalaron que estos procedimientos recuerdan prácticas registradas en 2018 durante la política de separación familiar.',
-    'Sectores conservadores en la frontera han defendido las medidas de la actual administración, criticando a gobiernos anteriores por la falta de soluciones permanentes. Mientras tanto, el futuro de estos menores sigue en incertidumbre entre la posibilidad de permanecer en Estados Unidos o ser devueltos a Guatemala.',
-    'Fuentes citadas:',
-    'YouTube – DW en Español: https://www.youtube.com/watch?v=_H0n3DXGQxc'
-  ],
-  etiquetas: ['estados unidos','donald trump','migracion','derechos humanos','guatemala'],
-  fuente: { nombre: 'DW en Español', url: 'https://www.youtube.com/watch?v=_H0n3DXGQxc' },
   consecutivo_unico: '20250919-48'
 },
 {
