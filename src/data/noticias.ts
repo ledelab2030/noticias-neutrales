@@ -59,8 +59,57 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
-  id: 'crisis-financiera-salud-colombia-vicente-calvo-2025-09-22',
+  id: 'laver-cup-2025-final-2025-09-22',
   fecha: '2025-09-22',
+  titulo: 'Team World se corona campeón del Laver Cup 2025 tras imponerse 15-9 a Europa',
+  pais: 'Internacional',
+  resumen: 'El Team World, bajo la capitanía de Andre Agassi, conquistó el Laver Cup 2025 en San Francisco con marcador de 15-9 sobre Europa, destacando el triunfo decisivo de Taylor Fritz ante Alexander Zverev.',
+  contenido: [
+    'El Team World se proclamó campeón del Laver Cup 2025 tras imponerse 15-9 al Team Europe en el Chase Center de San Francisco, Estados Unidos. El torneo se disputó entre el 19 y el 21 de septiembre sobre pista dura bajo techo.',
+    'La formación del Resto del Mundo estuvo liderada por Andre Agassi en su debut como capitán, mientras que Europa fue dirigida por Yannick Noah. Entre los jugadores más destacados de los campeones se encuentran Taylor Fritz, Alex de Minaur, Francisco Cerúndolo y Reilly Opelka. Por Europa participaron Carlos Alcaraz, Alexander Zverev, Casper Ruud y Holger Rune.',
+    'La diferencia clave se produjo el sábado, cuando el Team World ganó todos los partidos de la jornada, sumando seis puntos y tomando ventaja de 9-3. El domingo, con partidos que otorgaban tres puntos cada uno, los europeos lograron reducir la brecha con un triunfo en dobles, pero el estadounidense Taylor Fritz aseguró el título al vencer a Alexander Zverev por 6-3 y 7-6(4).',
+    'Con esta victoria, el Team World consiguió su tercer título en las últimas cuatro ediciones, consolidando un ciclo de dominio en la competencia. El rendimiento de Fritz fue determinante, tras superar tanto a Carlos Alcaraz como a Zverev en duelos individuales claves. La edición también marcó el estreno de nuevos capitanes, que aportaron una dinámica renovada al torneo.',
+    'Fuentes citadas:',
+    '1) Laver Cup. Resultados oficiales. https://lavercup.com/scores-results-2025',
+    '2) ATP Tour. Crónica final del torneo. https://www.atptour.com/en/news/laver-cup-2025-sunday',
+    '3) Reuters. Fritz fires on final day as Team World land third Laver Cup title. https://www.reuters.com/sports/tennis/fritz-fires-final-day-team-world-land-third-laver-cup-title-2025-09-22/'
+  ],
+  etiquetas: ['resultados', 'tenis', 'laver cup', 'carlos alcaraz', 'taylor fritz'],
+  fuente: { nombre: 'Laver Cup', url: 'https://lavercup.com' },
+  url_fuente: 'https://lavercup.com',
+  consecutivo_unico: '20250922-01'
+},
+{
+  id: 'maurice-armitage-desigualdad-negocio-colombia-2025-09-23',
+  fecha: '2025-09-23',
+  titulo: 'Maurice Armitage expone por qué reducir la desigualdad es buen negocio en Colombia',
+  pais: 'Colombia',
+  resumen: 'El empresario y exalcalde de Cali, Maurice Armitage, sostiene que valorar el trabajo, mejorar salarios y compartir utilidades fortalece la productividad y la estabilidad, alineando intereses de empresas y trabajadores.',
+  video: 'https://www.youtube.com/embed/b2xBjkrGS1s',
+  credito_video: 'Canal A Fondo',
+  contenido: [
+    'En entrevista con el canal A Fondo, el empresario y exalcalde de Cali, Maurice Armitage, argumenta que reducir la desigualdad es consistente con la rentabilidad empresarial. Según su experiencia, “valorar al ser humano” y “distribuir utilidades” crea equipos más comprometidos y competitivos, lo que se traduce en mejores resultados para las compañías.',
+    
+    'Armitage describe prácticas aplicadas en sus compañías —como la Siderúrgica de Occidente (SIDOC) y Cementos San Marcos— orientadas a compartir parte de las utilidades con los trabajadores y a elevar salarios por encima del mínimo legal cuando la productividad lo permite. Afirma que esta estrategia permitió competir con firmas más grandes no “con plata ni con tecnología”, sino con capital humano motivado y estable.',
+    
+    'El caso colombiano que plantea el empresario vincula directamente menos desigualdad con más mercado interno y menor conflictividad. Sostiene que cuando aumenta el poder adquisitivo de quienes trabajan, crece la demanda de bienes durables y servicios formales (comercio, vivienda, financieros), y disminuyen costos asociados a la inestabilidad. En su visión, “los que tenemos dinero” también se benefician de ciudades más seguras y previsibles, porque “si no cambiamos de actitud, este país no va a ser viable”.',
+    
+    'Armitage conecta su propuesta con una idea que resume como coexistencia de “capitalismo productivo con socialismo distributivo”: producir más y mejor, pero compartiendo parte del progreso con quienes lo hacen posible. Presenta esta postura como una estrategia práctica para empresas colombianas que buscan rentabilidad sostenida en contextos de alta desigualdad.',
+    
+    'Contexto y verificación: fuentes públicas confirman su trayectoria como fundador de SIDOC, socio de Cementos San Marcos y exalcalde de Cali (2016–2019). También registran su participación como víctima en los diálogos de paz y su defensa de esquemas de reparto de utilidades como mecanismo de cohesión y productividad.',
+    
+    'Fuentes citadas:',
+    'Entrevista completa en A Fondo. https://www.youtube.com/watch?v=b2xBjkrGS1s',
+    'Perfil de Maurice Armitage (biografía y cargos). https://es.wikipedia.org/wiki/Maurice_Armitage',
+    'Sitio oficial de Cementos San Marcos. https://cementosanmarcos.com/',
+    'Notas y perfil público sobre reparto de utilidades y trayectoria empresarial. https://thedialogue.org/expert/maurice-armitage/'
+  ],
+  etiquetas: ['economía', 'Colombia', 'editorial'],
+  fuente: { nombre: 'A Fondo', url: 'https://www.youtube.com/watch?v=b2xBjkrGS1s' }
+},
+{
+  id: 'crisis-financiera-salud-colombia-vicente-calvo-2025-09-23',
+  fecha: '2025-09-23',
   titulo: 'Vicente Calvo explica cómo se gestó la crisis financiera del sistema de salud en Colombia',
   pais: 'Colombia',
   resumen: 'El investigador Vicente Calvo expone con detalle los factores que llevaron a la implosión del sistema de salud en 2024, señalando el incumplimiento de reservas técnicas, la permisividad institucional y el maquillaje de indicadores financieros por parte de las EPS.',
@@ -72,10 +121,32 @@ const noticiasRaw: NoticiaRaw[] = [
     'Finalmente, resoluciones expedidas en 2021 y 2022 permitieron maquillar indicadores de solvencia al flexibilizar los criterios de cálculo de reservas. Esto, según Calvo, fue una bomba de tiempo que estalló en 2024, afectando directamente a millones de usuarios y trabajadores de la salud.',
     'Para Calvo, la lección central es que el sistema requiere reglas claras que se cumplan efectivamente, evitando que las excepciones temporales se conviertan en normas permanentes y que el maquillaje financiero prime sobre la salud de los colombianos.'
   ],
-  etiquetas: ['colombia', 'salud', 'investigación'],
+  etiquetas: ['Colombia', 'salud', 'investigación'],
   fuente: { nombre: 'Vicente Calvo', url: 'https://x.com/vcalvot/status/1970200529654386829' },
   url_fuente: 'https://x.com/vcalvot/status/1970200529654386829',
   consecutivo_unico: '20250922-01'
+},
+{
+  id: 'gluten-caseina-autismo-trump-2025-09-23',
+  fecha: '2025-09-23',
+  titulo: 'Gluten, caseína y autismo: debate científico tras advertencia de Trump sobre paracetamol',
+  pais: 'Internacional',
+  resumen: 'El presidente Donald Trump pidió limitar el paracetamol en el embarazo por un supuesto vínculo con el autismo, mientras persiste la discusión científica sobre el papel del gluten y la caseína en algunos pacientes con trastorno del espectro autista.',
+  contenido: [
+    'El presidente de Estados Unidos, Donald Trump, solicitó restricciones al uso de paracetamol durante el embarazo por un posible riesgo de autismo. Sus declaraciones reactivaron el debate público sobre las causas de este trastorno del neurodesarrollo y las intervenciones dietéticas en pacientes diagnosticados.',
+    'Diversos estudios han analizado la relación entre el consumo de gluten y caseína —proteína presente en la leche— y los síntomas del autismo. Si bien no existe evidencia de que estos alimentos causen la condición, revisiones científicas han documentado mejoras en un subgrupo de niños con trastorno del espectro autista que siguen dietas libres de gluten y caseína.',
+    'La revisión Cochrane de 2017 concluyó que la calidad de los estudios disponibles es baja y con muestras reducidas, pero reconoció que algunas investigaciones muestran mejoras en comunicación, conducta y síntomas gastrointestinales al retirar gluten y lácteos. Esto ha llevado a médicos y familias a considerar estas dietas como una opción supervisada, especialmente en niños con problemas digestivos.',
+    'Organismos internacionales como la Organización Mundial de la Salud y la Organización Panamericana de la Salud sostienen que no hay pruebas suficientes para recomendar estas dietas de manera generalizada. Sin embargo, expertos en nutrición señalan que su implementación bajo control médico y nutricional puede ser beneficiosa para ciertos pacientes.',
+    'Fuentes citadas:',
+    '1) SWI swissinfo.ch. *Trump pide limitar uso de paracetamol en embarazo por posible riesgo de autismo*. https://share.google/8hv5fRfBrSDuhnadS',
+    '2) Millward C, Ferriter M, Calver S, Connell-Jones G. *Gluten- and casein-free diets for autistic spectrum disorder*. Cochrane Database Syst Rev. 2017. https://doi.org/10.1002/14651858.CD003498.pub4',
+    '3) Organización Mundial de la Salud. *Autism spectrum disorders*. https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders',
+    '4) Pan American Health Organization. *Autism in the Americas*. https://www.paho.org/en/news/2-4-2023-autism-americas'
+  ],
+  etiquetas: ['salud', 'donald trump', 'investigación','Estados Unidos'],
+  fuente: { nombre: 'SWI swissinfo.ch', url: 'https://www.swissinfo.ch' },
+  url_fuente: 'https://share.google/8hv5fRfBrSDuhnadS',
+  consecutivo_unico: '20250923-02'
 },
 {
   id: 'roger-federer-canchas-lentas-2025-09-22',
@@ -116,7 +187,7 @@ const noticiasRaw: NoticiaRaw[] = [
     '<b>Nota del editor:<b>',
     'Las reflexiones de Juanita León y Héctor Riveros muestran la tensión entre lo alcanzado y lo que aún falta en la justicia transicional. Coincido en que lo verdaderamente histórico no es solo el fallo de la JEP, sino la posibilidad que nos da como sociedad de mirarnos en un espejo sin negar responsabilidades. Sin embargo, la división política que ha acompañado este proceso ha debilitado su potencial reparador. Ninguna condena puede devolver lo perdido a las víctimas, pero sí podemos decidir si la verdad, la reparación y la memoria se convierten en cimientos de un país distinto o en una oportunidad desperdiciada. La vida, la dignidad y el reconocimiento del otro deberían ser el centro de nuestra acción colectiva, más allá de banderas políticas o ideológicas.'
   ],
-  etiquetas: ['colombia', 'JEP', 'FARC', 'falsos positivos', 'justicia transicional', 'víctimas', 'proceso de paz'],
+  etiquetas: ['Colombia', 'JEP', 'FARC', 'falsos positivos', 'justicia transicional', 'víctimas', 'proceso de paz'],
   fuente: { nombre: 'La Silla Vacía', url: 'https://www.youtube.com/watch?v=14NvqwHlf7c' }
 },
 {
@@ -152,7 +223,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Dentro de las manufacturas, se destacaron las mayores compras de productos químicos y conexos, así como de artículos manufacturados clasificados principalmente según el material. Estos subgrupos explicaron gran parte del dinamismo reportado.',
     'Según el DANE, las demás categorías de importación (agropecuarios, combustibles y productos diversos) mantuvieron participaciones menores frente al peso de las manufacturas en la estructura total de importaciones.'
   ],
-  etiquetas: ['economía', 'colombia','DANE'],
+  etiquetas: ['economía', 'Colombia','DANE'],
   fuente: { nombre: 'DANE', url: 'https://www.dane.gov.co/index.php/estadisticas-por-tema/comercio-internacional/importaciones' },
   url_fuente: 'https://x.com/UltimaHoraCR/status/1970144920469209248?t=9BSoLXzgNQOriKHz2DJT9w&s=09',
   consecutivo_unico: '20250922-01'
@@ -176,7 +247,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Álvarez insistió también en que el conteo de calorías no es un método fiable: “La alimentación y el estilo de vida son tan personalizados que decir que alguien debe consumir cierta cantidad matemática de calorías es irresponsable. No es lo mismo comerse una papa cocida que unas papas fritas procesadas, aunque numéricamente den lo mismo”.',
     'En la misma línea, De la Hoz resaltó la relación entre salud y medio ambiente: “Si yo procuro comer la comida recién hecha y evito recalentarla, no solo cuido mi cuerpo sino que ahorro tiempo y energía. La sostenibilidad no es solo ambiental, también es aprovechar mejor los recursos personales”.'
   ],
-  etiquetas: ['salud', 'alimentación', 'seguridad alimentaria', 'colombia','sostenibilidad','leonardo de la hoz borrego','peter álvarez'],
+  etiquetas: ['salud', 'alimentación', 'seguridad alimentaria', 'Colombia','sostenibilidad','leonardo de la hoz borrego','peter álvarez'],
   fuente: 'Leonardo De la Hoz Borrego'
 },
 {
