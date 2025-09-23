@@ -104,7 +104,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Sitio oficial de Cementos San Marcos. https://cementosanmarcos.com/',
     'Notas y perfil público sobre reparto de utilidades y trayectoria empresarial. https://thedialogue.org/expert/maurice-armitage/'
   ],
-  etiquetas: ['economía', 'Colombia', 'editorial'],
+  etiquetas: ['economía', 'colombia', 'editorial'],
   fuente: { nombre: 'A Fondo', url: 'https://www.youtube.com/watch?v=b2xBjkrGS1s' }
 },
 {
@@ -121,7 +121,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Finalmente, resoluciones expedidas en 2021 y 2022 permitieron maquillar indicadores de solvencia al flexibilizar los criterios de cálculo de reservas. Esto, según Calvo, fue una bomba de tiempo que estalló en 2024, afectando directamente a millones de usuarios y trabajadores de la salud.',
     'Para Calvo, la lección central es que el sistema requiere reglas claras que se cumplan efectivamente, evitando que las excepciones temporales se conviertan en normas permanentes y que el maquillaje financiero prime sobre la salud de los colombianos.'
   ],
-  etiquetas: ['Colombia', 'salud', 'investigación'],
+  etiquetas: ['colombia', 'salud', 'investigación'],
   fuente: { nombre: 'Vicente Calvo', url: 'https://x.com/vcalvot/status/1970200529654386829' },
   url_fuente: 'https://x.com/vcalvot/status/1970200529654386829',
   consecutivo_unico: '20250922-01'
@@ -223,7 +223,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Dentro de las manufacturas, se destacaron las mayores compras de productos químicos y conexos, así como de artículos manufacturados clasificados principalmente según el material. Estos subgrupos explicaron gran parte del dinamismo reportado.',
     'Según el DANE, las demás categorías de importación (agropecuarios, combustibles y productos diversos) mantuvieron participaciones menores frente al peso de las manufacturas en la estructura total de importaciones.'
   ],
-  etiquetas: ['economía', 'Colombia','DANE'],
+  etiquetas: ['economía', 'colombia','DANE'],
   fuente: { nombre: 'DANE', url: 'https://www.dane.gov.co/index.php/estadisticas-por-tema/comercio-internacional/importaciones' },
   url_fuente: 'https://x.com/UltimaHoraCR/status/1970144920469209248?t=9BSoLXzgNQOriKHz2DJT9w&s=09',
   consecutivo_unico: '20250922-01'
@@ -247,7 +247,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Álvarez insistió también en que el conteo de calorías no es un método fiable: “La alimentación y el estilo de vida son tan personalizados que decir que alguien debe consumir cierta cantidad matemática de calorías es irresponsable. No es lo mismo comerse una papa cocida que unas papas fritas procesadas, aunque numéricamente den lo mismo”.',
     'En la misma línea, De la Hoz resaltó la relación entre salud y medio ambiente: “Si yo procuro comer la comida recién hecha y evito recalentarla, no solo cuido mi cuerpo sino que ahorro tiempo y energía. La sostenibilidad no es solo ambiental, también es aprovechar mejor los recursos personales”.'
   ],
-  etiquetas: ['salud', 'alimentación', 'seguridad alimentaria', 'Colombia','sostenibilidad','leonardo de la hoz borrego','peter álvarez'],
+  etiquetas: ['salud', 'alimentación', 'seguridad alimentaria', 'colombia','sostenibilidad','leonardo de la hoz borrego','peter álvarez'],
   fuente: 'Leonardo De la Hoz Borrego'
 },
 {

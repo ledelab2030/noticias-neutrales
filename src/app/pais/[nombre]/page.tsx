@@ -1,7 +1,7 @@
 // src/app/pais/[nombre]/page.tsx
-import Link from "next/link"
-import type { Metadata } from "next"
 import { noticias } from "@/data/noticias"
+import type { Metadata } from "next"
+import Link from "next/link"
 
 const PAGE_SIZE = 12
 
@@ -20,8 +20,9 @@ function fmt(iso: string) {
   }
 }
 
-function normalize(s: string) {
-  return s
+// Igual que en el índice: clave normalizada para comparar
+function normalizeKey(p: string): string {
+  return (p || "")
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -29,12 +30,10 @@ function normalize(s: string) {
     .trim()
 }
 
-function matchPais(nPais?: string, etiquetas?: string[], target?: string) {
+// match por país (normalizado). Si quieres permitir alias por etiqueta, añade esa lógica aquí.
+function matchPais(nPais?: string, target?: string) {
   if (!target) return false
-  const t = normalize(target)
-  if (nPais && normalize(nPais) === t) return true
-  if (Array.isArray(etiquetas)) return etiquetas.some((e) => normalize(String(e)) === t)
-  return false
+  return normalizeKey(String(nPais ?? "")) === normalizeKey(target)
 }
 
 function esHoy(iso: string) {
@@ -46,16 +45,6 @@ function esHoy(iso: string) {
   return y === y2 && m === m2 && d === d2
 }
 
-function countEtiquetas(items: typeof noticias) {
-  const freq = new Map<string, number>()
-  for (const n of items) for (const tag of n.etiquetas ?? []) {
-    const k = String(tag)
-    freq.set(k, (freq.get(k) ?? 0) + 1)
-  }
-  return [...freq.entries()].sort((a, b) => b[1] - a[1])
-}
-
-// Normaliza fuente (string | { nombre, url? }) a texto
 function fuenteNombre(f: unknown): string {
   if (!f) return ""
   if (typeof f === "string") return f
@@ -95,14 +84,20 @@ export default async function PaisPage({
   const tag = sp.tag ? decodeURIComponent(sp.tag) : undefined
 
   const base = noticias
-    .filter((n) => matchPais(n.pais, n.etiquetas, nombreDecod))
+    .filter((n) => matchPais(n.pais, nombreDecod))
     .sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
 
+  // Si quieres filtrar por etiqueta dentro del país:
   const items = tag
-    ? base.filter((n) => (n.etiquetas ?? []).some((t) => normalize(String(t)) === normalize(tag)))
+    ? base.filter((n) => (n.etiquetas ?? []).some((t) => normalizeKey(String(t)) === normalizeKey(tag)))
     : base
 
-  const temas = countEtiquetas(base).slice(0, 12)
+  // Temas más frecuentes dentro del país (para chips)
+  const temasMap = new Map<string, number>()
+  for (const n of base) for (const t of n.etiquetas ?? []) {
+    temasMap.set(t, (temasMap.get(t) ?? 0) + 1)
+  }
+  const temas = [...temasMap.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12)
 
   const hoy = items.filter((n) => esHoy(n.fecha))
   const [hero, ...restHoy] = hoy
@@ -116,7 +111,9 @@ export default async function PaisPage({
     `/pais/${encodeURIComponent(nombreDecod)}?${[
       tag ? `tag=${encodeURIComponent(tag)}` : "",
       `page=${p}`,
-    ].filter(Boolean).join("&")}`
+    ]
+      .filter(Boolean)
+      .join("&")}`
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">
@@ -155,9 +152,7 @@ export default async function PaisPage({
               Destacado de hoy
             </span>
             <time>{fmt(hero.fecha)}</time>
-            {fuenteNombre(hero.fuente) && (
-              <span className="truncate">{fuenteNombre(hero.fuente)}</span>
-            )}
+            {fuenteNombre(hero.fuente) && <span className="truncate">{fuenteNombre(hero.fuente)}</span>}
           </div>
           <h2 className="mt-2 text-2xl font-semibold leading-snug">
             <Link href={`/noticias/${hero.id}`} className="hover:text-blue-700">
@@ -176,9 +171,7 @@ export default async function PaisPage({
               <article key={n.id} className="rounded-xl border p-5 shadow-sm">
                 <div className="flex items-center justify-between text-xs text-gray-500">
                   <time>{fmt(n.fecha)}</time>
-                  {fuenteNombre(n.fuente) && (
-                    <span className="truncate">{fuenteNombre(n.fuente)}</span>
-                  )}
+                  {fuenteNombre(n.fuente) && <span className="truncate">{fuenteNombre(n.fuente)}</span>}
                 </div>
                 <h4 className="mt-2 text-lg font-semibold">
                   <Link href={`/noticias/${n.id}`} className="hover:text-blue-700">
@@ -208,9 +201,7 @@ export default async function PaisPage({
               <li key={n.id} className="rounded-xl border p-5 shadow-sm">
                 <div className="flex items-center justify-between text-xs text-gray-500">
                   <time>{fmt(n.fecha)}</time>
-                  {fuenteNombre(n.fuente) && (
-                    <span className="truncate">{fuenteNombre(n.fuente)}</span>
-                  )}
+                  {fuenteNombre(n.fuente) && <span className="truncate">{fuenteNombre(n.fuente)}</span>}
                 </div>
                 <h4 className="mt-2 font-semibold">
                   <Link href={`/noticias/${n.id}`} className="hover:text-blue-700">
