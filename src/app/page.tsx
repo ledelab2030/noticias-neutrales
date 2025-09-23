@@ -49,14 +49,14 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="mx-auto max-w-5xl py-8"> {/* quitamos px-4 */}
+    <div className="mx-auto max-w-5xl py-8">{/* sin px-4 para alinear con layout */}
       {/* Título principal */}
       <SectionHeader
         title="Claves del día"
         description="Cobertura neutral y verificada de los hechos más relevantes a nivel nacional e internacional."
       />
 
-      {/* Carrusel de países en móvil */}
+      {/* Países en móvil: mismo ancho de la franja blanca (sin scroll) */}
       <section className="mt-6 lg:hidden" aria-label="Países">
         <div className="mb-2 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-gray-600 dark:text-gray-400">Países</h2>
@@ -64,19 +64,17 @@ export default function HomePage() {
             Todos
           </Link>
         </div>
-        <div className="w-full overflow-x-auto no-scrollbar">
-          <div className="flex w-max gap-2">
-            {paisesDestacados.map((pais) => (
-              <Link
-                key={pais}
-                href={`/pais/${encodeURIComponent(pais)}`}
-                className="shrink-0 rounded-full border px-3 py-1 text-xs hover:bg-gray-50 dark:hover:bg-gray-800"
-                aria-label={`Filtrar por ${pais}`}
-              >
-                {pais}
-              </Link>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-2">
+          {paisesDestacados.map((pais) => (
+            <Link
+              key={pais}
+              href={`/pais/${encodeURIComponent(pais)}`}
+              className="rounded-full border px-3 py-1 text-xs hover:bg-gray-50 dark:hover:bg-gray-800"
+              aria-label={`Filtrar por ${pais}`}
+            >
+              {pais}
+            </Link>
+          ))}
         </div>
       </section>
 
