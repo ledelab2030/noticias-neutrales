@@ -1,5 +1,5 @@
 // src/app/page.tsx
-import { noticias } from "@/data/noticias"
+import { noticias, NoticiaRaw } from "@/data/noticias"
 import Link from "next/link"
 import Image from "next/image"
 import SectionHeader from "@/components/SectionHeader"
@@ -263,7 +263,7 @@ export default function HomePage() {
 }
 
 /* --- Sub-componente para tarjetas compactas --- */
-function NotaCard({ n }: { n: any }) {
+function NotaCard({ n }: { n: NoticiaRaw }) {
   const fuente = fuenteNombre(n.fuente)
   return (
     <article className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900 flex flex-col">
