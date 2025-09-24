@@ -43,7 +43,7 @@ function fuenteNombre(f: Fuente) {
   return ""
 }
 
-// ✅ Metadatos dinámicos (Open Graph / Twitter)
+/** 🔷 Metadatos dinámicos (Open Graph / Twitter) */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
   const n = noticias.find((x) => x.id === id) as Noticia | undefined
@@ -85,13 +85,15 @@ export default async function Noticia({ params }: Props) {
   const dialogo: DialogoItem[] | undefined = n.dialogo
   const participantes: string[] | undefined = n.participantes
 
+  /** ALT más descriptivo para accesibilidad */
+  const altHero =
+    'Cartel político británico “Chinese Labour” (ca. 1905) — paralelo con Vietnam Veterans Memorial'
+
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
       {/* migas */}
       <div className="mb-6 text-sm text-muted-foreground">
-        <Link href="/" className="underline-offset-4 hover:underline">
-          inicio
-        </Link>
+        <Link href="/" className="underline-offset-4 hover:underline">inicio</Link>
         <span className="px-2">/</span>
         <span>actualidad</span>
       </div>
@@ -100,12 +102,12 @@ export default async function Noticia({ params }: Props) {
         {n.titulo}
       </h1>
 
-      {/* Imagen con crédito */}
+      {/* Imagen hero con crédito en 2 líneas */}
       {n.imagen && (
         <figure className="mt-6 mb-6">
           <Image
             src={n.imagen}
-            alt={n.titulo}
+            alt={altHero}
             width={1600}
             height={900}
             priority
@@ -113,14 +115,16 @@ export default async function Noticia({ params }: Props) {
             className="w-full h-auto rounded-xl shadow-sm object-contain"
           />
           {n.credito_imagen && (
-            <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-              Crédito de imagen: {n.credito_imagen}
+            <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-snug">
+              {n.credito_imagen.split(" | ").map((chunk, i) => (
+                <span key={i} className="block">{chunk}</span>
+              ))}
             </figcaption>
           )}
         </figure>
       )}
 
-      {/* Video embebido con crédito */}
+      {/* Video embebido (si aplica) */}
       {n.video && (
         <div className="mt-6 mb-6">
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-sm">
@@ -143,18 +147,8 @@ export default async function Noticia({ params }: Props) {
 
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400">
         <span>{n.fecha}</span>
-        {n.pais && (
-          <>
-            <span className="opacity-60">·</span>
-            <span>{n.pais}</span>
-          </>
-        )}
-        {n.fuente && (
-          <>
-            <span className="opacity-60">·</span>
-            <span>{fuenteNombre(n.fuente)}</span>
-          </>
-        )}
+        {n.pais && (<><span className="opacity-60">·</span><span>{n.pais}</span></>)}
+        {n.fuente && (<><span className="opacity-60">·</span><span>{fuenteNombre(n.fuente)}</span></>)}
         {n.url_fuente && (
           <>
             <span className="opacity-60">·</span>
@@ -178,26 +172,32 @@ export default async function Noticia({ params }: Props) {
         </div>
       )}
 
-      {/* Contenido / Diálogo / Resumen */}
+      {/* Contenido con soporte de imagen embebida usando <!--img--> */}
       {Array.isArray(n.contenido) && n.contenido.length > 0 ? (
-        <div className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100">
-          {n.contenido.map((p, i) => (
-            <p
-              key={i}
-              className="whitespace-pre-line"
-              dangerouslySetInnerHTML={{ __html: resaltarLinks(p) }}
-            />
-          ))}
-        </div>
-      ) : Array.isArray(dialogo) && dialogo.length > 0 ? (
-        <div className="mt-6 space-y-4 text-[17px] leading-7 text-zinc-900 dark:text-zinc-100">
-          {dialogo.map((d, i) => (
-            <p key={i} className="whitespace-pre-line">
-              <span className="font-semibold mr-2">{d.autor}:</span>
-              {d.texto}
-            </p>
-          ))}
-        </div>
+        <article className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100 prose prose-neutral max-w-none">
+          {n.contenido.map((p, i) => {
+            // Bloque de imagen embebida (según inciso 5)
+            if (typeof p === "string" && p.trim().startsWith("<!--img-->")) {
+              const html = p.replace("<!--img-->", "")
+              return (
+                <div
+                  key={i}
+                  className="my-6"
+                  // Si algún día el contenido es user-generated, sanitiza antes
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              )
+            }
+            // Párrafos normales con enlaces resaltados
+            return (
+              <p
+                key={i}
+                className="whitespace-pre-line"
+                dangerouslySetInnerHTML={{ __html: resaltarLinks(p) }}
+              />
+            )
+          })}
+        </article>
       ) : n.resumen ? (
         <p className="mt-6 leading-7 text-[17px] whitespace-pre-line text-zinc-900 dark:text-zinc-100">
           {n.resumen}
@@ -233,7 +233,7 @@ export default async function Noticia({ params }: Props) {
         )
       })()}
 
-      {/* 🔗 Bloque de noticias relacionadas */}
+      {/* 🔗 Noticias relacionadas por etiqueta */}
       <Relacionadas idActual={n.id} etiquetas={n.etiquetas ?? []} />
     </main>
   )
@@ -247,7 +247,7 @@ function resaltarLinks(texto: string) {
   )
 }
 
-// --- COMPONENTE: Notas relacionadas ---
+/** --- COMPONENTE: Notas relacionadas --- */
 function Relacionadas({ idActual, etiquetas }: { idActual: string; etiquetas: string[] }) {
   const etiquetasLimpias = Array.from(
     new Set((etiquetas ?? []).map((t) => (typeof t === "string" ? t.trim() : "")).filter(Boolean))

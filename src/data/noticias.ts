@@ -59,9 +59,45 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'sismo-mene-grande-venezuela-2025-09-24',
+  fecha: '2025-09-24',
+  titulo: 'Sismo de magnitud 6,1 en Mene Grande, Venezuela, se sintió en el Caribe colombiano',
+  pais: 'Internacional',
+  resumen: 'Un sismo superficial de magnitud 6,1 se registró el 24 de septiembre de 2025 en Mene Grande, estado Zulia, Venezuela. El movimiento telúrico alcanzó intensidad instrumental VIII y fue percibido en varias ciudades del Caribe, incluyendo Puerto Colombia.',
+  contenido: [
+    'El Servicio Geológico Colombiano reportó que un sismo de magnitud 6,1 se presentó el 24 de septiembre de 2025 a las 17:21 hora local, con epicentro en Mene Grande, estado Zulia, Venezuela. El evento fue clasificado como superficial y registrado con una intensidad instrumental de VIII en la escala Macrosísmica Europea (EMS-98).',
+    'El movimiento telúrico se sintió en municipios cercanos como Bachaquero, San Timoteo y Tía Juana, en el estado Zulia, y alcanzó también zonas del Caribe colombiano. En Puerto Colombia, Atlántico, residentes reportaron haber percibido el temblor con fuerza, especialmente en edificios de varios pisos.',
+    'La intensidad instrumental VIII corresponde a un nivel severo, en el cual pueden producirse daños considerables en construcciones de calidad normal y colapsos parciales en edificaciones vulnerables. Según el Servicio Geológico Colombiano, este valor es estimado a partir de registros sísmicos y modelos de propagación de ondas.',
+    'Hasta el momento no se han reportado víctimas ni daños significativos en Colombia, aunque las autoridades locales y los organismos de gestión del riesgo mantienen seguimiento a la situación para evaluar posibles afectaciones en la región fronteriza y en el Caribe.',
+    'Fuentes citadas:',
+    'Servicio Geológico Colombiano – https://www.sgc.gov.co'
+  ],
+  etiquetas: ['colombia', 'venezuela', 'sismo', 'servicio geologico colombiano','destacados'],
+  fuente: { nombre: 'Servicio Geológico Colombiano', url: 'https://www.sgc.gov.co' },
+  imagen: '/noticias/sismo-mene-grande-venezuela-2025-09-24.jpg',
+  credito_imagen: 'Noticias Neutrales',
+  consecutivo_unico: '20250924-01'
+},
+{
+  id: 'petro-onu-discurso-dignidad-2025-09-24',
+  fecha: '2025-09-24',
+  titulo: 'En modo campaña? No, en modo #DIGNIDAD!',
+  pais: 'Internacional',
+  resumen: 'Gustavo Petro cerró su ciclo de discursos ante la ONU con un mensaje directo contra Donald Trump, cuestionando la política de Estados Unidos y denunciando la ofensiva en Gaza. Su intervención generó debate en medios y respaldo ciudadano en redes bajo la etiqueta #Dignidad.',
+  contenido: [
+    'El presidente de Colombia, Gustavo Petro, pronunció su último discurso como mandatario en la Asamblea General de Naciones Unidas el 24 de septiembre de 2025. En esta intervención criticó al expresidente estadounidense Donald Trump y se refirió a la descertificación de su gobierno por parte de Washington, así como a la presencia militar de Estados Unidos en el Caribe y la ofensiva israelí en Gaza.',
+    'El medio colombiano *Cambio* presentó la alocución como un discurso “en modo campaña”, destacando su tono retador y confrontacional. La publicación generó reacciones inmediatas de usuarios en redes sociales, quienes cuestionaron la narrativa mediática y defendieron el carácter de denuncia del pronunciamiento.',
+    'En plataformas como X, múltiples ciudadanos replicaron que el discurso de Petro no fue una campaña electoral sino un acto de dignidad. Comentarios destacaron que el presidente expresó lo que muchos no se atreven a decir sobre la situación en Gaza, la relación con Estados Unidos y la lucha contra el narcotráfico.',
+    'La controversia refleja la polarización entre medios y audiencias frente a la política exterior del mandatario saliente. Mientras unos enmarcan sus palabras en clave electoral, otros lo ven como una voz necesaria para llamar la atención internacional sobre conflictos y violaciones de derechos humanos en curso.'
+  ],
+  etiquetas: ['internacional', 'gustavo petro', 'estados unidos', 'donald trump', 'medios', 'politica','destacados'],
+  fuente: { nombre: 'Cambio', url: 'https://cambiocolombia.com/poder/articulo' },
+  url_fuente: 'https://x.com/estoescambio/status/197080895160933329'
+},
+{
   id: 'eltiempo-hechos-verificables-petro-onu-2025-09-24',
   fecha: '2025-09-24',
-  titulo: 'El diario El Tiempo sorprende con una nota con hechos verificables sobre discurso de Petro en la ONU y la reacción de congresistas de EE. UU.',
+  titulo: 'El diario El Tiempo sorprende con una nota con hechos verificables sobre discurso de Petro en la ONU',
   pais: 'Internacional',
   resumen: 'En su última intervención ante la Asamblea General de la ONU, Gustavo Petro criticó a Donald Trump y varios congresistas estadounidenses abandonaron la sala. Noticias Neutrales destaca que El Tiempo reportó estos hechos de manera verificable, sin recurrir a opiniones.',
   contenido: [
@@ -169,23 +205,6 @@ const noticiasRaw: NoticiaRaw[] = [
   consecutivo_unico: '20250923-01'
 },
 {
-  id: 'trabajo-extremo-vs-guerra-sacrificio-enriquecimiento-2025-09-23',
-  fecha: '2025-09-23',
-  titulo: 'Trabajo extremo en China y servicio militar en EE. UU.: paralelos en sacrificio y enriquecimiento',
-  pais: 'Internacional',
-  resumen: 'Un análisis compara las condiciones laborales extremas en sectores industriales chinos, como el modelo 996 y casos documentados en Foxconn, con las cargas que enfrentan soldados estadounidenses en guerras recientes. Ambos escenarios muestran una lógica en la que los costos recaen en individuos mientras los beneficios se concentran en élites económicas y políticas.',
-  contenido: [
-    'En China, la práctica conocida como “996” (trabajar de 9 de la mañana a 9 de la noche, seis días a la semana) simboliza las jornadas prolongadas en sectores como la manufactura y la tecnología. Aunque la Corte Suprema Popular declaró ilegal el 996 en 2021 y reiteró límites de 8 horas diarias y 44 semanales, persisten presiones laborales que conducen a sobrecarga y problemas de salud. Auditorías en fábricas como Foxconn han documentado largas horas extra, incumplimientos de seguridad y consecuencias graves para los trabajadores.',
-    'En Estados Unidos, los soldados enfrentan riesgos de otra magnitud durante despliegues en conflictos recientes como Irak y Afganistán. Estudios del RAND Corporation estiman que uno de cada cinco veteranos padece trastornos de estrés postraumático o depresión severa, además de miles de casos de traumatismos cerebrales. Informes del Departamento de Defensa señalan que el número de suicidios en las fuerzas armadas sigue siendo elevado, con más de 500 casos reportados en 2023.',
-    'En paralelo, el complejo militar-industrial estadounidense concentró alrededor de 2,4 billones de dólares en contratos entre 2020 y 2024, beneficiando principalmente a cinco corporaciones. De forma similar, las cadenas globales de suministro que dependen de la mano de obra china se benefician de bajos costos laborales a expensas de condiciones extremas para los trabajadores.',
-    'El paralelismo muestra una lógica común: en ambos casos, los individuos sacrifican tiempo, salud o incluso la vida, mientras que los mayores beneficios se acumulan en élites políticas, corporativas y económicas. La diferencia clave radica en la naturaleza del riesgo: explotación laboral prolongada en un caso, y riesgo vital inmediato en el otro. Sin embargo, ambos escenarios evidencian cómo el sacrificio humano puede convertirse en un recurso al servicio del enriquecimiento.'
-  ],
-  etiquetas: ['economía', 'estados unidos', 'China', 'seguridad','destacado'],
-  fuente: { nombre: 'Noticias Neutrales', url: 'https://www.ledelab.co/sobre-nosotros' },
-  url_fuente: 'https://www.rand.org/pubs/research_briefs/RB9336.html',
-  consecutivo_unico: '20250923-01'
-},
-{
   id: 'irg-wp-57-beijing-2026-leonardo-de-la-hoz-borrego-2025-09-22',
   fecha: '2025-09-22',
   titulo: 'El IRG/WP realizará su 57º encuentro anual en Beijing en 2026',
@@ -223,6 +242,8 @@ const noticiasRaw: NoticiaRaw[] = [
   etiquetas: ['gustavo petro', 'politica', 'estados unidos', 'colombia', 'petróleo', 'economía', 'clima','destacado'],
   fuente: 'Naciones Unidas',
   url_fuente: 'https://www.youtube.com/watch?v=Lq8n2pLv_pQ',
+  imagen: '/noticias/dialogo-financiacion-climatica-onu-petro-2025-09-22.jpg',
+
   consecutivo_unico: '20250922-01'
 },
 {

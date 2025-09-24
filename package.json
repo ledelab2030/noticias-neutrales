@@ -11,6 +11,7 @@
     "nl:semanal": "NL_FREQ=semanal tsx ./scripts/genera-newsletter.ts"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@vercel/analytics": "^1.5.0",
     "@vercel/og": "^0.8.5",
     "clsx": "^2.1.1",
