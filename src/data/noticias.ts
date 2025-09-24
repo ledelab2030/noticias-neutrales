@@ -59,6 +59,60 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'como-ayunaar-bien-dr-carlos-jaramillo-2025-09-24',
+  fecha: '2025-09-24',
+  titulo: 'Cómo ayunar bien? - por el Dr. Carlos Jaramillo',
+  resumen: 'El Dr. Carlos Jaramillo explica cuáles bebidas pueden consumirse durante el ayuno sin afectar sus beneficios, y cuáles deben evitarse.',
+  video: 'https://www.youtube.com/embed/0hcaYRg9pL8',
+  credito_video: 'Canal de YouTube Dr. Carlos Jaramillo',
+  contenido: [
+    'Este es uno de los videos que contiene más coincidencias entre lo expuesto por el Dr. Carlos Jaramillo y las ideas que otros expertos han compartido sobre el ayuno. Por ello, se invita a ver el episodio completo, que incluye recomendaciones prácticas sobre qué beber y qué evitar durante esta práctica.',
+    
+    'El ayuno, según explica el Dr. Jaramillo en este episodio, es un proceso en el que el cuerpo utiliza reservas energéticas y activa mecanismos como la autofagia. Los beneficios comienzan a evidenciarse después de 12 a 14 horas sin ingesta de alimentos, y se potencian en lapsos mayores.',
+    
+    'Durante este periodo, no se debe consumir nada que aporte calorías, como azúcares, proteínas o grasas. Tampoco se recomienda caldo de hueso, jugos de frutas o vegetales, ni bebidas con aceites o leche vegetal. La excepción mencionada es añadir el jugo de medio limón diluido en un litro de agua, ya que su aporte de azúcares libres no supera los 2 gramos y no interrumpe el estado de ayuno.',
+    
+    'El doctor también advierte sobre la controversia en torno a los endulzantes artificiales. Estudios muestran que polioles como sorbitol o maltitol estimulan insulina o ácido úrico, mientras que el eritritol genera debate. Por ello, recomienda evitarlos para no arriesgar la eficacia del ayuno. En contraste, bebidas seguras incluyen agua, agua con limón, agua con vinagre de manzana, café filtrado, té, mate e infusiones de hierbas.',
+    
+    'La hidratación es un pilar fundamental, por lo que se sugiere incluir electrolitos como sodio, potasio y magnesio para prevenir síntomas de deshidratación. Finalmente, al romper el ayuno, se aconseja hacerlo con alimentos ricos en fibra, proteínas y grasas saludables —como vegetales, aguacate o caldo de hueso— para minimizar picos de glucosa e insulina.'
+  ],
+  etiquetas: ['salud', 'nutrición', 'alimentación', 'ayuno','destacados'],
+  fuente: { nombre: 'Dr. Carlos Jaramillo', url: 'https://www.youtube.com/watch?v=0hcaYRg9pL8' },
+  consecutivo_unico: '20250924-01'
+},
+{
+  id: 'beneficios-matcha-organico-2025-09-24',
+  fecha: '2025-09-24',
+  titulo: 'Beneficios del matcha orgánico en agua',
+  resumen: 'El consumo de matcha orgánico en agua ofrece una alta concentración de antioxidantes, posibles mejoras metabólicas, apoyo a la salud cardiovascular y beneficios cognitivos, de acuerdo con la evidencia científica disponible.',
+  contenido: [
+    'El matcha es un polvo fino elaborado a partir de hojas jóvenes de té verde (*Camellia sinensis*) cultivadas bajo sombra, lo que incrementa su contenido de clorofila y aminoácidos. A diferencia del té verde infusionado, en el que se desechan las hojas, el matcha permite ingerir la hoja entera, concentrando así catequinas, L-teanina y otros compuestos bioactivos de interés para la salud.',
+    
+    'Cuando se habla de matcha “orgánico” se hace referencia a un producto cultivado bajo certificaciones que prohíben pesticidas sintéticos y fertilizantes químicos, reduciendo la exposición a residuos agrícolas. Aunque esta característica no modifica de manera sustancial la composición de antioxidantes o cafeína, sí asegura un estándar de producción más limpio y confiable para el consumidor.',
+    
+    'Uno de los principales beneficios del matcha es su alto contenido de antioxidantes, especialmente epigalocatequina galato (EGCG). Esta catequina ha sido ampliamente estudiada por su capacidad de neutralizar radicales libres y disminuir el daño oxidativo, lo que contribuye a reducir procesos inflamatorios crónicos. Un análisis publicado en *Food Chemistry* reporta que el matcha presenta niveles de EGCG superiores al té verde convencional.',
+    
+    'En relación con el metabolismo, investigaciones en modelos animales y estudios preliminares en humanos han mostrado que el matcha puede mejorar la regulación de la glucosa en sangre e inhibir parcialmente la digestión del almidón, ralentizando los picos de glucemia postprandial. En ratas alimentadas con dietas altas en grasa, el consumo de matcha se asoció con menor ganancia de peso, reducción de grasa visceral y mejor perfil lipídico (colesterol y triglicéridos). Si bien los resultados en humanos aún son limitados, apuntan a un potencial efecto coadyuvante en la prevención de trastornos metabólicos.',
+    
+    'Otro aporte relevante está en el área cognitiva. El matcha combina cafeína con L-teanina, un aminoácido que promueve un estado de alerta relajado. Estudios clínicos han mostrado que esta sinergia mejora la atención, la memoria y los tiempos de reacción en comparación con placebo. Además, se ha sugerido que el consumo habitual de matcha podría ayudar a reducir la respuesta fisiológica al estrés y mejorar la calidad del rendimiento mental en situaciones de alta exigencia.',
+    
+    'En cuanto a la salud cardiovascular, un metaanálisis revisado por Harvard Health Publishing señala que las catequinas del té verde pueden disminuir la presión arterial y los niveles de colesterol LDL. Estas observaciones se aplican al matcha, ya que concentra mayores cantidades de estas moléculas. Además, evidencia reciente de la Escuela de Salud Pública de Harvard indica que el consumo de matcha podría beneficiar no solo al corazón, sino también al cerebro y al microbioma intestinal, aunque aún se requieren estudios clínicos más extensos.',
+    
+    'Beber matcha en agua, sin añadidos calóricos, permite aprovechar de manera directa estos compuestos bioactivos. Al no incorporar azúcares ni endulzantes, se evitan picos glucémicos y se preservan los efectos antioxidantes y metabólicos del té. No obstante, es importante subrayar que el matcha contiene cafeína, por lo que puede producir insomnio, palpitaciones o molestias gastrointestinales en personas sensibles, y que dosis muy elevadas de extractos de té verde han sido asociadas a hepatotoxicidad en casos aislados.',
+    
+    'Fuentes citadas:',
+    '1) Harvard Health Publishing. *Matcha: a look at possible health benefits*. https://www.health.harvard.edu/staying-healthy/matcha-a-look-at-possible-health-benefits',
+    '2) Harvard T.H. Chan School of Public Health. *Matcha, brain, heart and gut health*. https://hsph.harvard.edu/news/matcha-brain-heart-gut-health/',
+    '3) Food Chemistry. *Protective effects of matcha on oxidative stress and inflammation*. https://www.sciencedirect.com/science/article/abs/pii/S0963996923005525',
+    '4) National Library of Medicine. *Effects of matcha on glucose metabolism in animal models*. https://pmc.ncbi.nlm.nih.gov/articles/PMC9792400/',
+    '5) National Library of Medicine. *Green tea catechins and human health*. https://pmc.ncbi.nlm.nih.gov/articles/PMC7796401/'
+  ],
+  etiquetas: ['salud', 'alimentación', 'nutrición', 'consumo'],
+  fuente: { nombre: 'Harvard Health Publishing', url: 'https://www.health.harvard.edu/staying-healthy/matcha-a-look-at-possible-health-benefits' },
+  url_fuente: 'https://www.health.harvard.edu/staying-healthy/matcha-a-look-at-possible-health-benefits',
+  consecutivo_unico: '20250924-01'
+},
+{
   id: 'ayuno-36-horas-fases-y-beneficios-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Fases del ayuno de 36 horas y los procesos clave que motivan a practicarlo',
@@ -472,7 +526,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En cuanto a la comparación con suplementos, un puñado de almendras (30 g) aporta unos 80 mg de magnesio, de los cuales el cuerpo absorbe entre 24 y 40 mg debido a la biodisponibilidad del 30–50%. En contraste, una cápsula de magnesio bisglicinato de 200 mg puede aportar entre 140 y 180 mg realmente absorbidos, gracias a su biodisponibilidad más alta (70–90%). Esto muestra que el suplemento es más eficiente en cantidad absorbida, aunque los alimentos ofrecen beneficios adicionales que ningún suplemento reemplaza.'
   ],
   etiquetas: ['salud', 'nutrición', 'alimentación', 'magnesio', 'estilo de vida','destacado'],
-  fuente: 'Organización Mundial de la Salud',
+  fuente: 'OMS',
   url_fuente: 'https://www.who.int/news-room/fact-sheets/detail/micronutrient-deficiencies',
   consecutivo_unico: '20250922-02'
 },
