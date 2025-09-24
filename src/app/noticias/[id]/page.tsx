@@ -162,7 +162,7 @@ export default async function Noticia({ params }: Props) {
               href={n.url_fuente}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:opacity-80"
+              className="text-blue-600 hover:text-blue-800 underline underline-offset-2"
             >
               ver fuente original
             </Link>
@@ -170,7 +170,7 @@ export default async function Noticia({ params }: Props) {
         )}
       </div>
 
-      {/* Participantes (codconver) */}
+      {/* Participantes */}
       {!!participantes?.length && (
         <div className="mt-4 text-sm text-gray-600 dark:text-gray-300">
           <span className="font-medium">Participantes: </span>
@@ -204,7 +204,7 @@ export default async function Noticia({ params }: Props) {
         </p>
       ) : null}
 
-      {/* 🏷️ Etiquetas: aceptar cualquiera, limpiar y deduplicar */}
+      {/* 🏷️ Etiquetas */}
       {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && (() => {
         const etiquetasLimpias = Array.from(
           new Set(
@@ -222,7 +222,7 @@ export default async function Noticia({ params }: Props) {
                 <Link
                   key={tag}
                   href={`/tag/${encodeURIComponent(slugify(tag))}`}
-                  className="rounded-full border px-3 py-1 text-xs text-muted-foreground hover:bg-gray-50 dark:hover:bg-gray-800"
+                  className="rounded-full border px-3 py-1 text-xs text-blue-600 hover:text-blue-800 underline underline-offset-2"
                   title={`Ver notas con la etiqueta: ${tag}`}
                 >
                   {tag}
@@ -239,14 +239,15 @@ export default async function Noticia({ params }: Props) {
   )
 }
 
+/* 🔵 Resaltar links en azul con hover dentro del contenido */
 function resaltarLinks(texto: string) {
   return texto.replace(
     /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
-    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">$1</a>'
   )
 }
 
-// --- NUEVO COMPONENTE: Notas relacionadas ---
+// --- COMPONENTE: Notas relacionadas ---
 function Relacionadas({ idActual, etiquetas }: { idActual: string; etiquetas: string[] }) {
   const etiquetasLimpias = Array.from(
     new Set((etiquetas ?? []).map((t) => (typeof t === "string" ? t.trim() : "")).filter(Boolean))
@@ -258,7 +259,7 @@ function Relacionadas({ idActual, etiquetas }: { idActual: string; etiquetas: st
         nn.id !== idActual &&
         nn.etiquetas?.some((tag) => etiquetasLimpias.includes(tag?.trim?.() ?? ""))
     )
-    .slice(0, 3) // máx. 3 notas
+    .slice(0, 3)
 
   if (relacionadas.length === 0) return null
 
@@ -270,7 +271,7 @@ function Relacionadas({ idActual, etiquetas }: { idActual: string; etiquetas: st
           <li key={r.id} className="border-b pb-2">
             <Link
               href={`/noticias/${r.id}`}
-              className="text-blue-600 hover:underline font-medium"
+              className="text-blue-600 hover:text-blue-800 underline underline-offset-2 font-medium"
             >
               {r.titulo}
             </Link>

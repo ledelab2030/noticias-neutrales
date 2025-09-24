@@ -59,6 +59,32 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'eltiempo-hechos-verificables-petro-onu-2025-09-24',
+  fecha: '2025-09-24',
+  titulo: 'El diario El Tiempo sorprende con una nota con hechos verificables sobre discurso de Petro en la ONU y la reacción de congresistas de EE. UU.',
+  pais: 'Internacional',
+  resumen: 'En su última intervención ante la Asamblea General de la ONU, Gustavo Petro criticó a Donald Trump y varios congresistas estadounidenses abandonaron la sala. Noticias Neutrales destaca que El Tiempo reportó estos hechos de manera verificable, sin recurrir a opiniones.',
+  contenido: [
+    'El presidente de Colombia, Gustavo Petro, pronunció el 24 de septiembre de 2025 su última intervención ante la Asamblea General de la Organización de las Naciones Unidas (ONU). En su discurso, cuestionó directamente al expresidente estadounidense Donald Trump, al tiempo que denunció la “descertificación” de su gobierno por parte de Washington.',
+    
+    'Las críticas de Petro se centraron en la figura de Trump y en la influencia de su política. El mandatario colombiano afirmó que Estados Unidos, bajo ese liderazgo, contribuyó a la polarización y al desequilibrio internacional. También señaló que Colombia había sido objeto de decisiones externas que condicionaron su soberanía y limitaban sus posibilidades de avanzar en un modelo más justo de desarrollo.',
+    
+    'Entre las frases más destacadas de Petro se encuentran:',
+    '- “Mi gobierno fue descertificado por Estados Unidos”.',
+    '- “Trump representa una visión que divide y genera polarización en el mundo”.',
+    '- “Las potencias han mantenido relaciones desiguales con América Latina que deben replantearse”.',
+    '- “Es urgente un cambio en el orden internacional hacia la equidad y la cooperación”.',
+    
+    'Durante la intervención, varios congresistas de Estados Unidos que asistían en el recinto se levantaron y abandonaron la sala. El gesto fue percibido como una respuesta directa a las críticas de Petro contra Trump, subrayando la tensión en el ambiente.',
+    
+    '<b>Nota editorial:<b>',
+    'El diario El Tiempo, que con frecuencia publica artículos de opinión, sorprendió al presentar un cubrimiento basado en hechos verificables. Invitamos a los lectores a consultar la nota completa de El Tiempo para revisar en detalle las afirmaciones y el contexto de la intervención: https://www.eltiempo.com/politica/gobierno/las-frases-mas-fuertes-del-presidente-gustavo-petro-contra-donald-trump-en-el-discurso-ante-la-asamblea-general-de-la-onu-3493523'
+  ],
+  etiquetas: ['ONU','El Tiempo','internacional', 'gustavo petro', 'donald trump', 'estados unidos', 'politica', 'medios'],
+  fuente: 'Noticias Neutrales',
+  consecutivo_unico: '20250924-03'
+},
+{
   id: 'como-ayunaar-bien-dr-carlos-jaramillo-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Cómo ayunar bien? - por el Dr. Carlos Jaramillo',
@@ -154,8 +180,8 @@ const noticiasRaw: NoticiaRaw[] = [
     'En paralelo, el complejo militar-industrial estadounidense concentró alrededor de 2,4 billones de dólares en contratos entre 2020 y 2024, beneficiando principalmente a cinco corporaciones. De forma similar, las cadenas globales de suministro que dependen de la mano de obra china se benefician de bajos costos laborales a expensas de condiciones extremas para los trabajadores.',
     'El paralelismo muestra una lógica común: en ambos casos, los individuos sacrifican tiempo, salud o incluso la vida, mientras que los mayores beneficios se acumulan en élites políticas, corporativas y económicas. La diferencia clave radica en la naturaleza del riesgo: explotación laboral prolongada en un caso, y riesgo vital inmediato en el otro. Sin embargo, ambos escenarios evidencian cómo el sacrificio humano puede convertirse en un recurso al servicio del enriquecimiento.'
   ],
-  etiquetas: ['economía', 'estados unidos', 'china', 'seguridad','destacado'],
-  fuente: { nombre: 'Noticias Neutrales', url: 'https://www.rand.org/pubs/research_briefs/RB9336.html' },
+  etiquetas: ['economía', 'estados unidos', 'China', 'seguridad','destacado'],
+  fuente: { nombre: 'Noticias Neutrales', url: 'https://www.ledelab.co/sobre-nosotros' },
   url_fuente: 'https://www.rand.org/pubs/research_briefs/RB9336.html',
   consecutivo_unico: '20250923-01'
 },

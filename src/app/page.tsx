@@ -30,7 +30,14 @@ function getFuenteNombre(fuente: unknown): string | null {
 }
 
 export default function HomePage() {
-  const itemsAll = [...noticias].sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+  // Ordenar: primero por fecha desc, y si empatan, por posición original en noticias.ts
+  const itemsAll = noticias
+    .map((n, i) => ({ n, i }))
+    .sort((a, b) => {
+      if (a.n.fecha === b.n.fecha) return a.i - b.i
+      return a.n.fecha < b.n.fecha ? 1 : -1
+    })
+    .map(({ n }) => n)
 
   // DESTACADOS por etiqueta
   const destacados = itemsAll.filter((n) => n.etiquetas?.includes("destacado"))
