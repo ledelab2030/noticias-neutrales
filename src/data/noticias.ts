@@ -59,6 +59,93 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'ayuno-36-horas-fases-y-beneficios-2025-09-24',
+  fecha: '2025-09-24',
+  titulo: 'Fases del ayuno de 36 horas y los procesos clave que motivan a practicarlo',
+  resumen: 'Un repaso detallado de las cinco fases del ayuno de 36 horas, destacando los cambios metabólicos, hormonales y celulares que favorecen la quema de grasa, la autodepuración y la claridad mental.',
+  video: 'https://www.youtube.com/embed/iIc7wYm6kYs',
+  credito_video: 'Canal de YouTube Dr. Michael Diamonds',
+  contenido: [
+    'El ayuno prolongado de 36 horas se divide en cinco fases que reflejan transformaciones profundas en el metabolismo humano. En la primera fase, entre 0 y 12 horas, predomina el uso del glucógeno almacenado en hígado y músculos. El organismo reduce gradualmente la insulina y aumenta la hormona de crecimiento, preparando el terreno para cambios posteriores.',
+    'La segunda fase, de 12 a 18 horas, corresponde al llamado “cambio metabólico”. El cuerpo empieza a agotar sus reservas de glucógeno y activa enzimas que facilitan la oxidación de grasas. En este punto se inician la producción de cuerpos cetónicos y la disminución progresiva de la sensación de hambre.',
+    'Entre las 18 y 24 horas se da la tercera fase: cetosis profunda y activación de la autofagia. El cerebro comienza a nutrirse principalmente de cetonas, lo que se traduce en mayor claridad mental. Al mismo tiempo, la autofagia aumenta hasta cuatro veces, eliminando proteínas dañadas y residuos celulares, mientras la hormona de crecimiento se eleva para proteger la masa muscular.',
+    'La cuarta fase, de 24 a 30 horas, marca el máximo de la transformación metabólica. El organismo alcanza su mayor eficiencia en la quema de grasa y en la regeneración celular. La autofagia neuronal se intensifica, reduciendo acumulaciones que se asocian con enfermedades neurodegenerativas. Además, se incrementa el factor neurotrófico BDNF, que estimula nuevas conexiones cerebrales.',
+    'Finalmente, en la fase de 30 a 36 horas, se consolida la flexibilidad metabólica y la biogénesis mitocondrial. El cuerpo se prepara para reanudar la ingesta de alimentos con una sensibilidad a la insulina altamente optimizada, lo que asegura un uso eficiente de los nutrientes. Se recomienda romper el ayuno con una comida ligera y rica en nutrientes, como caldos o vegetales al vapor, para mantener los beneficios obtenidos.',
+    'Este proceso no solo promueve la pérdida de grasa y la preservación muscular, sino que también fortalece la salud metabólica, optimiza la función cerebral y reduce marcadores de inflamación. Los beneficios pueden extenderse hasta 72 horas después de haber concluido el ayuno, consolidando un “reinicio metabólico” con impacto integral en el organismo.',
+    'Fuentes citadas:',
+    '1) Ho KY, Evans WS, Blizzard RM, et al. Fasting enhances growth hormone secretion and amplifies the complex rhythms of growth hormone secretion in man. J Clin Invest. 1988;81(4):968-975. https://pubmed.ncbi.nlm.nih.gov/3127426/',
+    '2) Cornford AS, Barkan AL, Horowitz JF. Rapid suppression of growth hormone after caloric restriction in humans: a potential mechanism for loss of lipid mobilization. J Clin Endocrinol Metab. 2011;94(3):965–972. https://academic.oup.com/jcem/article/94/3/965/2596752',
+    '3) Ganesan S, Ito S, Nagaoka Y, et al. Autophagy and fasting: the connection between cellular health and longevity. FEBS Lett. 2023;597(21):3347–3363. https://pmc.ncbi.nlm.nih.gov/articles/PMC10509423/',
+    '4) Madeo F, Zimmermann A, Maiuri MC, Kroemer G. Essential role for autophagy in life span extension. Curr Opin Cell Biol. 2015;31:96–102. https://www.sciencedirect.com/science/article/abs/pii/S1568163718301478',
+    '5) Patterson RE, Sears DD. Metabolic Effects of Intermittent Fasting. Annu Rev Nutr. 2017;37:371–393. https://pmc.ncbi.nlm.nih.gov/articles/PMC4516560/',
+    '6) Hu C, Yan X, Chen Y, et al. Intermittent fasting improves glycemic control in patients with type 2 diabetes: a systematic review and meta-analysis. J Health Popul Nutr. 2025;44(1):5. https://jhpn.biomedcentral.com/articles/10.1186/s41043-025-01039-2',
+    '7) Nature Metabolism Editorial. Water-only fasting elevates growth hormone independently of weight loss. Nat Metab. 2024;6:103–105. https://www.nature.com/articles/s44324-024-00025-2'
+
+
+  ],
+  etiquetas: ['salud', 'nutrición', 'alimentación','ayuno'],
+  fuente: { nombre: 'Dr. Michael Diamonds', url: 'https://www.youtube.com/watch?v=iIc7wYm6kYs' },
+  url_fuente: 'https://www.youtube.com/watch?v=iIc7wYm6kYs',
+  consecutivo_unico: '20250923-01'
+},
+{
+  id: 'trabajo-extremo-vs-guerra-sacrificio-enriquecimiento-2025-09-23',
+  fecha: '2025-09-23',
+  titulo: 'Trabajo extremo en China y servicio militar en EE. UU.: paralelos en sacrificio y enriquecimiento',
+  pais: 'Internacional',
+  resumen: 'Un análisis compara las condiciones laborales extremas en sectores industriales chinos, como el modelo 996 y casos documentados en Foxconn, con las cargas que enfrentan soldados estadounidenses en guerras recientes. Ambos escenarios muestran una lógica en la que los costos recaen en individuos mientras los beneficios se concentran en élites económicas y políticas.',
+  contenido: [
+    'En China, la práctica conocida como “996” (trabajar de 9 de la mañana a 9 de la noche, seis días a la semana) simboliza las jornadas prolongadas en sectores como la manufactura y la tecnología. Aunque la Corte Suprema Popular declaró ilegal el 996 en 2021 y reiteró límites de 8 horas diarias y 44 semanales, persisten presiones laborales que conducen a sobrecarga y problemas de salud. Auditorías en fábricas como Foxconn han documentado largas horas extra, incumplimientos de seguridad y consecuencias graves para los trabajadores.',
+    'En Estados Unidos, los soldados enfrentan riesgos de otra magnitud durante despliegues en conflictos recientes como Irak y Afganistán. Estudios del RAND Corporation estiman que uno de cada cinco veteranos padece trastornos de estrés postraumático o depresión severa, además de miles de casos de traumatismos cerebrales. Informes del Departamento de Defensa señalan que el número de suicidios en las fuerzas armadas sigue siendo elevado, con más de 500 casos reportados en 2023.',
+    'En paralelo, el complejo militar-industrial estadounidense concentró alrededor de 2,4 billones de dólares en contratos entre 2020 y 2024, beneficiando principalmente a cinco corporaciones. De forma similar, las cadenas globales de suministro que dependen de la mano de obra china se benefician de bajos costos laborales a expensas de condiciones extremas para los trabajadores.',
+    'El paralelismo muestra una lógica común: en ambos casos, los individuos sacrifican tiempo, salud o incluso la vida, mientras que los mayores beneficios se acumulan en élites políticas, corporativas y económicas. La diferencia clave radica en la naturaleza del riesgo: explotación laboral prolongada en un caso, y riesgo vital inmediato en el otro. Sin embargo, ambos escenarios evidencian cómo el sacrificio humano puede convertirse en un recurso al servicio del enriquecimiento.'
+  ],
+  etiquetas: ['economía', 'estados unidos', 'china', 'seguridad'],
+  fuente: { nombre: 'Noticias Neutrales', url: 'https://www.rand.org/pubs/research_briefs/RB9336.html' },
+  url_fuente: 'https://www.rand.org/pubs/research_briefs/RB9336.html',
+  consecutivo_unico: '20250923-01'
+},
+{
+  id: 'irg-wp-57-beijing-2026-leonardo-de-la-hoz-borrego-2025-09-22',
+  fecha: '2025-09-22',
+  titulo: 'El IRG/WP realizará su 57º encuentro anual en Beijing en 2026',
+  pais: 'Suecia',
+  resumen: 'El International Research Group on Wood Protection (IRG/WP) anunció que su reunión número 57 se llevará a cabo del 24 al 28 de mayo de 2026 en el Nirvana Resort Beijing, China. El investigador colombiano Leonardo De la Hoz Borrego, miembro del grupo desde 2006, participará en el encuentro.',
+  contenido: [
+    'El International Research Group on Wood Protection (IRG/WP) con base en Estocolmo, confirmó que su 57ª reunión anual se celebrará entre el 24 y el 28 de mayo de 2026 en el Nirvana Resort Beijing, en China.',
+    'El lugar fue seleccionado por ofrecer instalaciones modernas y adecuadas para el tamaño del encuentro, además de contar con múltiples opciones de alojamiento y su proximidad a la Gran Muralla China. El evento promete un entorno ideal para el intercambio académico y técnico sobre preservación de la madera.',
+    'El IRG/WP reúne a expertos internacionales en biología de la madera, tratamientos químicos y térmicos, tecnologías de protección y sostenibilidad. Desde 1969 organiza conferencias anuales para compartir avances científicos y fomentar la cooperación entre instituciones, empresas y académicos.',
+    'Leonardo De la Hoz Borrego, investigador colombiano y miembro del IRG/WP desde 2006, hace parte de esta red internacional y ha participado en diversas discusiones técnicas sobre innovación y preservación de la madera en la región latinoamericana.',
+    'Fuentes citadas:',
+    'International Research Group on Wood Protection (IRG/WP). https://www.irg-wp.com/IRG57/index.html'
+  ],
+  etiquetas: ['tecnología', 'investigación', 'industria de la madera','China','Suecia'],
+  fuente: { nombre: 'International Research Group on Wood Protection (IRG/WP)', url: 'https://www.irg-wp.com/IRG57/index.html' },
+  url_fuente: 'https://www.irg-wp.com/IRG57/index.html',
+  consecutivo_unico: '20250922-02'
+},
+{
+  id: 'dialogo-financiacion-climatica-onu-petro-2025-09-22',
+  fecha: '2025-09-23',
+  titulo: 'Petro en la ONU: crítica a la guerra contra las drogas y llamado urgente frente a la crisis climática',
+  pais: 'Internacional',
+  resumen: 'En su última intervención en Naciones Unidas, el presidente Gustavo Petro denunció la política internacional de drogas, vinculó la codicia con la violencia global y advirtió que la humanidad tiene apenas diez años para frenar el colapso climático.',
+  video: 'https://www.youtube.com/embed/Lq8n2pLv_pQ',
+  credito_video: 'Canal de YouTube Naciones Unidas',
+  contenido: [
+    'El presidente de Colombia, Gustavo Petro, participó en un diálogo de alto nivel sobre soluciones para la financiación climática en Naciones Unidas. Durante su intervención afirmó que su gobierno fue “descertificado” por Estados Unidos debido a su oposición a la aspersión con glifosato y a la política internacional de drogas.',
+    'Petro denunció que la llamada guerra contra las drogas ha recaído sobre los jóvenes pobres del Caribe y de América Latina, mientras que los verdaderos narcotraficantes viven en ciudades como Miami, Dubái, París o Madrid. Señaló que la ONU mantiene un enfoque equivocado al responsabilizar a las sustancias y no a los actores de poder detrás del negocio.',
+    'El mandatario relacionó la política de drogas con otras crisis globales, como el genocidio en Gaza y la migración forzada, afirmando que “la guerra en el mundo es de la codicia contra la vida”. Añadió que los recursos naturales como la coca, el carbón y el petróleo son usados como fetiches para ocultar las relaciones de poder que generan desigualdad y violencia.',
+    'Sobre la crisis climática, Petro advirtió que la humanidad enfrenta un punto de no retorno, ilustrado por la muerte de delfines rosados en el Amazonas debido al aumento de la temperatura del agua. “Si la selva amazónica no se salva, no se salva la humanidad”, dijo, al tiempo que criticó la fe en un “capitalismo verde” para resolver la crisis.',
+    'El presidente insistió en que no existe un mercado capaz de frenar por sí solo la expansión de los combustibles fósiles y llamó a la regulación global del capital. Señaló que Naciones Unidas se equivoca al creer que los bancos y la competencia financiera resolverán el problema, cuando en realidad “el capital siempre invertirá en lo fósil si da más ganancia”.',
+    'Finalmente, hizo un llamado a la comunidad internacional para detener tanto el genocidio en Gaza como la crisis climática. Según Petro, la COP 30 será la última oportunidad para decidir colectivamente un cambio profundo en el modelo económico y social: “Nos quedan diez años para cambiar el mundo”.'
+  ],
+  etiquetas: ['gustavo petro', 'politica', 'estados unidos', 'colombia', 'petróleo', 'economía', 'clima'],
+  fuente: 'Naciones Unidas',
+  url_fuente: 'https://www.youtube.com/watch?v=Lq8n2pLv_pQ',
+  consecutivo_unico: '20250922-01'
+},
+{
   id: 'laver-cup-2025-final-2025-09-22',
   fecha: '2025-09-22',
   titulo: 'Team World se corona campeón del Laver Cup 2025 tras imponerse 15-9 a Europa',
