@@ -100,7 +100,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En paralelo, el complejo militar-industrial estadounidense concentró alrededor de 2,4 billones de dólares en contratos entre 2020 y 2024, beneficiando principalmente a cinco corporaciones. De forma similar, las cadenas globales de suministro que dependen de la mano de obra china se benefician de bajos costos laborales a expensas de condiciones extremas para los trabajadores.',
     'El paralelismo muestra una lógica común: en ambos casos, los individuos sacrifican tiempo, salud o incluso la vida, mientras que los mayores beneficios se acumulan en élites políticas, corporativas y económicas. La diferencia clave radica en la naturaleza del riesgo: explotación laboral prolongada en un caso, y riesgo vital inmediato en el otro. Sin embargo, ambos escenarios evidencian cómo el sacrificio humano puede convertirse en un recurso al servicio del enriquecimiento.'
   ],
-  etiquetas: ['economía', 'estados unidos', 'china', 'seguridad'],
+  etiquetas: ['economía', 'estados unidos', 'china', 'seguridad','destacado'],
   fuente: { nombre: 'Noticias Neutrales', url: 'https://www.rand.org/pubs/research_briefs/RB9336.html' },
   url_fuente: 'https://www.rand.org/pubs/research_briefs/RB9336.html',
   consecutivo_unico: '20250923-01'
@@ -140,7 +140,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'El presidente insistió en que no existe un mercado capaz de frenar por sí solo la expansión de los combustibles fósiles y llamó a la regulación global del capital. Señaló que Naciones Unidas se equivoca al creer que los bancos y la competencia financiera resolverán el problema, cuando en realidad “el capital siempre invertirá en lo fósil si da más ganancia”.',
     'Finalmente, hizo un llamado a la comunidad internacional para detener tanto el genocidio en Gaza como la crisis climática. Según Petro, la COP 30 será la última oportunidad para decidir colectivamente un cambio profundo en el modelo económico y social: “Nos quedan diez años para cambiar el mundo”.'
   ],
-  etiquetas: ['gustavo petro', 'politica', 'estados unidos', 'colombia', 'petróleo', 'economía', 'clima'],
+  etiquetas: ['gustavo petro', 'politica', 'estados unidos', 'colombia', 'petróleo', 'economía', 'clima','destacado'],
   fuente: 'Naciones Unidas',
   url_fuente: 'https://www.youtube.com/watch?v=Lq8n2pLv_pQ',
   consecutivo_unico: '20250922-01'
@@ -191,7 +191,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Sitio oficial de Cementos San Marcos. https://cementosanmarcos.com/',
     'Notas y perfil público sobre reparto de utilidades y trayectoria empresarial. https://thedialogue.org/expert/maurice-armitage/'
   ],
-  etiquetas: ['economía', 'colombia', 'editorial'],
+  etiquetas: ['economía', 'colombia', 'editorial','destacado'],
   fuente: { nombre: 'A Fondo', url: 'https://www.youtube.com/watch?v=b2xBjkrGS1s' }
 },
 {
@@ -471,7 +471,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En resumen, combinar una alimentación rica en semillas, frutos secos, verduras verdes y legumbres es una manera práctica de mantener un nivel adecuado de magnesio. Esta estrategia, junto con hábitos saludables, favorece la energía, el descanso y la salud cardiovascular.',
     'En cuanto a la comparación con suplementos, un puñado de almendras (30 g) aporta unos 80 mg de magnesio, de los cuales el cuerpo absorbe entre 24 y 40 mg debido a la biodisponibilidad del 30–50%. En contraste, una cápsula de magnesio bisglicinato de 200 mg puede aportar entre 140 y 180 mg realmente absorbidos, gracias a su biodisponibilidad más alta (70–90%). Esto muestra que el suplemento es más eficiente en cantidad absorbida, aunque los alimentos ofrecen beneficios adicionales que ningún suplemento reemplaza.'
   ],
-  etiquetas: ['salud', 'nutrición', 'alimentación', 'magnesio', 'estilo de vida'],
+  etiquetas: ['salud', 'nutrición', 'alimentación', 'magnesio', 'estilo de vida','destacado'],
   fuente: 'Organización Mundial de la Salud',
   url_fuente: 'https://www.who.int/news-room/fact-sheets/detail/micronutrient-deficiencies',
   consecutivo_unico: '20250922-02'

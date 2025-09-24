@@ -32,14 +32,17 @@ function getFuenteNombre(fuente: unknown): string | null {
 export default function HomePage() {
   const itemsAll = [...noticias].sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
 
-  // HOY
-  const hoy = itemsAll.filter((n) => esHoy(n.fecha))
-  const [hero, ...rest] = hoy
-  const idsDeHoy = new Set(hoy.map((n) => n.id))
+  // DESTACADOS por etiqueta
+  const destacados = itemsAll.filter((n) => n.etiquetas?.includes("destacado"))
+  const idsDestacados = new Set(destacados.map((n) => n.id))
 
-  // NO-HOY, sin repetir
+  // HOY (evitar duplicar si alguno también es destacado)
+  const hoy = itemsAll.filter((n) => esHoy(n.fecha) && !idsDestacados.has(n.id))
+
+  // NO-HOY, sin repetir con destacados ni hoy
+  const idsDeHoy = new Set(hoy.map((n) => n.id))
   const recientes = itemsAll
-    .filter((n) => !esHoy(n.fecha) && !idsDeHoy.has(n.id))
+    .filter((n) => !esHoy(n.fecha) && !idsDestacados.has(n.id) && !idsDeHoy.has(n.id))
     .slice(0, 8)
 
   const paisesDestacados = [
@@ -49,14 +52,13 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="mx-auto max-w-5xl py-8">{/* sin px-4 para alinear con layout */}
-      {/* Título principal */}
+    <div className="mx-auto max-w-5xl py-8">
       <SectionHeader
         title="Claves del día"
         description="Cobertura neutral y verificada de los hechos más relevantes a nivel nacional e internacional."
       />
 
-      {/* Países en móvil: mismo ancho de la franja blanca (sin scroll) */}
+      {/* Países en móvil */}
       <section className="mt-6 lg:hidden" aria-label="Países">
         <div className="mb-2 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-gray-600 dark:text-gray-400">Países</h2>
@@ -81,58 +83,74 @@ export default function HomePage() {
       {/* Grid principal: contenido + sidebar (desktop) */}
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_300px]">
         {/* Columna de contenido */}
-        <section aria-labelledby="ultimas">
-          {hero && (
-            <article className="mb-8 rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-              <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
-                <span className="inline-flex items-center rounded-full border px-2 py-0.5 dark:border-gray-700">
-                  Destacado
-                </span>
-                <time>{fmt(hero.fecha)}</time>
-                {getFuenteNombre(hero.fuente) && (
-                  <span className="truncate">{getFuenteNombre(hero.fuente)}</span>
-                )}
+        <section aria-labelledby="contenido">
+
+          {/* Sección DESTACADOS (por etiqueta) */}
+          {destacados.length > 0 && (
+            <section aria-label="Destacados" className="mb-8">
+              <h2 className="mb-4 text-xl font-semibold">Destacados</h2>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {destacados.map((n) => {
+                  const fuenteNombre = getFuenteNombre(n.fuente)
+                  return (
+                    <article
+                      key={n.id}
+                      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900"
+                    >
+                      <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                        <time>{fmt(n.fecha)}</time>
+                        {fuenteNombre && <span className="truncate">{fuenteNombre}</span>}
+                      </div>
+                      <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">
+                        <Link
+                          href={`/noticias/${n.id}`}
+                          className="hover:text-blue-700 dark:hover:text-blue-300"
+                        >
+                          {n.titulo}
+                        </Link>
+                      </h3>
+                      <p className="mt-2 text-gray-700 dark:text-gray-300">{n.resumen}</p>
+                    </article>
+                  )
+                })}
               </div>
-              <h2 className="mt-2 text-2xl font-semibold leading-snug text-gray-900 dark:text-white">
-                <Link
-                  href={`/noticias/${hero.id}`}
-                  className="hover:text-blue-700 dark:hover:text-blue-300"
-                >
-                  {hero.titulo}
-                </Link>
-              </h2>
-              <p className="mt-2 text-gray-700 dark:text-gray-300">{hero.resumen}</p>
-            </article>
+            </section>
           )}
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {rest.map((n) => {
-              const fuenteNombre = getFuenteNombre(n.fuente)
-              return (
-                <article
-                  key={n.id}
-                  className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900"
-                >
-                  <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-                    <time>{fmt(n.fecha)}</time>
-                    {fuenteNombre && <span className="truncate">{fuenteNombre}</span>}
-                  </div>
-                  <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">
-                    <Link
-                      href={`/noticias/${n.id}`}
-                      className="hover:text-blue-700 dark:hover:text-blue-300"
+          {/* Publicaciones de HOY (si hay no-destacadas) */}
+          {hoy.length > 0 && (
+            <section aria-label="Hoy" className="mb-8">
+              <h2 className="mb-4 text-xl font-semibold">Publicaciones de hoy</h2>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {hoy.map((n) => {
+                  const fuenteNombre = getFuenteNombre(n.fuente)
+                  return (
+                    <article
+                      key={n.id}
+                      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900"
                     >
-                      {n.titulo}
-                    </Link>
-                  </h3>
-                  <p className="mt-2 text-gray-700 dark:text-gray-300">{n.resumen}</p>
-                </article>
-              )
-            })}
-          </div>
+                      <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                        <time>{fmt(n.fecha)}</time>
+                        {fuenteNombre && <span className="truncate">{fuenteNombre}</span>}
+                      </div>
+                      <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">
+                        <Link
+                          href={`/noticias/${n.id}`}
+                          className="hover:text-blue-700 dark:hover:text-blue-300"
+                        >
+                          {n.titulo}
+                        </Link>
+                      </h3>
+                      <p className="mt-2 text-gray-700 dark:text-gray-300">{n.resumen}</p>
+                    </article>
+                  )
+                })}
+              </div>
+            </section>
+          )}
 
           {/* Listado de otras publicaciones */}
-          <section id="ultimas" className="mt-12">
+          <section id="ultimas" className="mt-4">
             <h2 className="mb-4 text-xl font-semibold">Otras Publicaciones</h2>
             <ul className="space-y-2">
               {recientes.map((n) => (
