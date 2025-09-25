@@ -76,7 +76,6 @@ export default function HomePage() {
             {/* Hero grande */}
             <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
               <Link href={`/noticias/${hero.id}`} className="group block">
-                {/* Si hay imagen, mostramos 16:9; si no, no reservamos espacio */}
                 {hero.imagen ? (
                   <div className="relative aspect-[16/9] w-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
                     <Image
@@ -132,7 +131,7 @@ export default function HomePage() {
                     </Link>
                   </h3>
                   {n.resumen && (
-                    <p className="mt-1 text-sm text-gray-700 dark:text-gray-300 line-clamp-3">
+                    <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
                       {n.resumen}
                     </p>
                   )}
@@ -277,7 +276,7 @@ function NotaCard({ n }: { n: NoticiaRaw }) {
         </Link>
       </h3>
       {n.resumen && (
-        <p className="mt-2 text-gray-700 dark:text-gray-300 line-clamp-3">
+        <p className="mt-2 text-gray-700 dark:text-gray-300">
           {n.resumen}
         </p>
       )}

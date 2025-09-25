@@ -59,6 +59,27 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'acido-urico-inflamacion-nudillos-dolor-lumbar-ayuno-36h-2025-09-24',
+  fecha: '2025-09-24',
+  titulo: 'Ácido úrico, inflamación en nudillos y dolor lumbar: posibles vínculos y el papel del ayuno de 36 horas',
+  pais: 'Internacional',
+  resumen: 'La inflamación en los nudillos y el dolor lumbar pueden estar relacionados con niveles elevados de ácido úrico y procesos inflamatorios. El ayuno prolongado de 36 horas podría aportar beneficios metabólicos, aunque con precauciones.',
+  contenido: [
+    'El ácido úrico elevado en sangre, conocido como hiperuricemia, puede originar la formación de cristales de urato en las articulaciones. Esto provoca inflamación y dolor, especialmente en articulaciones pequeñas como los nudillos de los dedos de las manos o los pies.',
+    'Además de las articulaciones periféricas, algunas personas presentan molestias en la espalda baja. En ciertos casos, la inflamación asociada a ácido úrico puede afectar la columna o coexistir con otras enfermedades inflamatorias como la espondiloartritis.',
+    'La relación entre inflamación articular y dolor lumbar se entiende como parte de un proceso sistémico. La gota y otras artritis inflamatorias se vinculan al síndrome metabólico, la obesidad y dietas ricas en purinas, lo que contribuye a elevar el ácido úrico en sangre.',
+    'El ayuno de 36 horas, practicado de manera controlada, ha mostrado en estudios preliminares una reducción de marcadores inflamatorios y una mejor regulación metabólica. Sin embargo, a corto plazo puede aumentar transitoriamente los niveles de ácido úrico debido a la competencia con los cuerpos cetónicos en la excreción renal.',
+    'Por ello, aunque el ayuno prolongado puede ofrecer beneficios en la reducción de inflamación y en la salud metabólica, su práctica debe realizarse con precaución y, de ser posible, bajo supervisión médica en personas con antecedentes de gota o hiperuricemia.',
+    'Fuentes citadas:',
+    '1) Mayo Clinic. *Gout: Symptoms and causes*. https://www.mayoclinic.org/diseases-conditions/gout/symptoms-causes/syc-20372897',
+    '2) National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK). *Hyperuricemia and Gout*. https://www.niddk.nih.gov/health-information/kidney-disease/hyperuricemia-gout',
+    '3) Longo VD, Mattson MP. *Fasting: Molecular Mechanisms and Clinical Applications*. Cell Metab. 2014. https://doi.org/10.1016/j.cmet.2013.12.008'
+  ],
+  etiquetas: ['salud', 'alimentación', 'dieta'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250924-03'
+},
+{
   id: 'sismo-mene-grande-venezuela-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Sismo de magnitud 6,1 en Mene Grande, Venezuela, se sintió en el Caribe colombiano',
