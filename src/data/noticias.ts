@@ -63,6 +63,8 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Por qué Margarita Rosa de Francisco no nos debe ninguna explicación (y nosotros le debemos mucho)',
   pais: 'colombia',
   resumen: 'Margarita Rosa de Francisco ha aclarado públicamente que su matrícula de honor en la UNAD fue por mérito y no por fama. Esta nota editorial sostiene que ella no necesita justificarse: es la universidad y el país los que se han beneficiado con su ejemplo.',
+  imagen: '/noticias/margarita-rosa-no-debe-explicacion-2025-09-25.jpg',
+  credito_imagen: 'Crédito imagen: www.diezminutos.es',
   contenido: [
     'Hay veces en que personas como Margarita Rosa de Francisco se encuentran dando explicaciones que en realidad no tendrían que dar. Recientemente, ella ha aclarado por segunda vez que su matrícula de honor en la Universidad Nacional Abierta y a Distancia de Colombia no tuvo nada que ver con su fama, sino con su desempeño. Ella, como siempre, ha sido transparente hasta el exceso, queriendo dejar las cosas claras. Pero en realidad, Margarita no necesita justificar nada.',
     
