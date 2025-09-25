@@ -58,6 +58,27 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'margarita-rosa-no-debe-explicacion-2025-09-25',
+  fecha: '2025-09-25',
+  titulo: 'Por qué Margarita Rosa de Francisco no nos debe ninguna explicación (y nosotros le debemos mucho)',
+  pais: 'colombia',
+  resumen: 'Margarita Rosa de Francisco ha aclarado públicamente que su matrícula de honor en la UNAD fue por mérito y no por fama. Esta nota editorial sostiene que ella no necesita justificarse: es la universidad y el país los que se han beneficiado con su ejemplo.',
+  contenido: [
+    'Hay veces en que personas como Margarita Rosa de Francisco se encuentran dando explicaciones que en realidad no tendrían que dar. Recientemente, ella ha aclarado por segunda vez que su matrícula de honor en la Universidad Nacional Abierta y a Distancia de Colombia no tuvo nada que ver con su fama, sino con su desempeño. Ella, como siempre, ha sido transparente hasta el exceso, queriendo dejar las cosas claras. Pero en realidad, Margarita no necesita justificar nada.',
+    
+    'La verdad es que la universidad probablemente ha ganado mucho más al contar con ella entre sus estudiantes que lo que Margarita haya podido “ganar” con una reducción de matrícula. Porque ella le da prestigio a esa casa de estudios, le da visibilidad y, con su ejemplo, inspira a otros.',
+    
+    'Yo mismo, por ejemplo, me sentí atraído a explorar la oferta académica de la UNAD gracias a que supe que Margarita estudiaba allí. Me interesaba un programa de filosofía, pero en ese proceso terminé encontrando algo que era aún más apropiado para mí: un programa de doctorado en educación, tecnología y pedagogía avanzada que la UNAD ofrece desde mediados de este año. Es totalmente en línea y encaja perfectamente con mi trayectoria, ya que actualmente estoy escribiendo mi tesis de grado en la Maestría en Tecnología Educativa de la Universidad de Tartu, en Estonia.',
+    
+    'Entonces, lo que quiero decirte, Margarita, es que no tienes por qué preocuparte ni dar más explicaciones. Al contrario, somos nosotros los que te debemos gratitud. No solo por tu transparencia y tu compromiso con mejorar como persona, sino también por todo lo que nos has dado a través de tu carrera, de tu arte y de tu voz en temas que importan.',
+    
+    'Si algún día decides incursionar en la política, tendrás mi voto. Y si no, también te entenderé, porque sabemos que personas como tú sacrifican mucho de su tranquilidad personal por el bienestar de todos.'
+  ],
+  etiquetas: ['colombia', 'editorial', 'margarita rosa de francisco', 'educación'],
+  fuente: 'LedeLab',
+  consecutivo_unico: '20250925-01'
+},
+{
   id: 'acido-urico-inflamacion-nudillos-dolor-lumbar-ayuno-36h-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Ácido úrico, inflamación en nudillos y dolor lumbar: posibles vínculos y el papel del ayuno de 36 horas',
