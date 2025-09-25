@@ -82,7 +82,6 @@ export default async function Noticia({ params }: Props) {
   const n = noticias.find((x) => x.id === id) as Noticia | undefined
   if (!n) notFound()
 
-  const dialogo: DialogoItem[] | undefined = n.dialogo
   const participantes: string[] | undefined = n.participantes
 
   /** ALT más descriptivo para accesibilidad */
@@ -183,7 +182,6 @@ export default async function Noticia({ params }: Props) {
                 <div
                   key={i}
                   className="my-6"
-                  // Si algún día el contenido es user-generated, sanitiza antes
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               )

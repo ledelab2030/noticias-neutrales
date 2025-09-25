@@ -1,5 +1,4 @@
 // src/data/noticias.ts
-import { TAGS } from "./tags"
 
 // Tipos base (codnnv1) + extensión para imagen OG/Twitter
 export type Fuente =
@@ -93,9 +92,8 @@ const noticiasRaw: NoticiaRaw[] = [
     'Fuentes citadas:',
     'Servicio Geológico Colombiano – https://www.sgc.gov.co'
   ],
-  etiquetas: ['colombia', 'venezuela', 'sismo', 'servicio geologico colombiano','destacados'],
+  etiquetas: ['colombia', 'venezuela', 'sismo', 'servicio geologico colombiano'],
   fuente: { nombre: 'Servicio Geológico Colombiano', url: 'https://www.sgc.gov.co' },
-  imagen: '/noticias/sismo-mene-grande-venezuela-2025-09-24.jpg',
   credito_imagen: 'Noticias Neutrales',
   consecutivo_unico: '20250924-01'
 },
