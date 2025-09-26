@@ -76,7 +76,7 @@ export default function HomePage() {
   return (
     <div className="mx-auto max-w-7xl py-8 px-4 lg:px-0">
       <SectionHeader
-        title="Claves del día"
+        title="Portada"
         description="Cobertura neutral y verificada de los hechos más relevantes a nivel nacional e internacional."
       />
 
