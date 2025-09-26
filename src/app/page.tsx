@@ -31,7 +31,7 @@ function fuenteNombre(fuente: unknown): string | null {
 }
 
 export default function HomePage() {
-  // Orden: fecha desc; si la fecha empata, respetar el orden del archivo
+  // Orden: fecha desc; si empata, respetar el orden del archivo
   const itemsAll = noticias
     .map((n, i) => ({ n, i }))
     .sort((a, b) => {
@@ -40,20 +40,31 @@ export default function HomePage() {
     })
     .map(({ n }) => n)
 
-  // DESTACADOS (para hero + rejilla secundaria)
+  // ====== DESTACADOS (para hero + rejilla secundaria) ======
   const destacados = itemsAll.filter((n) => n.etiquetas?.includes("destacado"))
-  const [hero, ...destacadosSec] = destacados
-  const idsUsados = new Set(destacados.map((d) => d.id))
 
-  // HOY (sin repetir con destacados)
+  // Elegir hero priorizando etiqueta 'portada'
+  const heroForzado = itemsAll.find((n) => n.etiquetas?.includes("portada"))
+  const hero = heroForzado ?? destacados[0]
+
+  // Destacados secundarios: todos los 'destacado' excepto el hero
+  const destacadosSec = destacados.filter((n) => n.id !== hero?.id)
+
+  // IDs ya usados (hero + secundarios) para evitar duplicados en el resto
+  const idsUsados = new Set<string>([
+    ...(hero ? [hero.id] : []),
+    ...destacadosSec.map((d) => d.id),
+  ])
+
+  // ====== HOY (sin repetir con destacados) ======
   const hoy = itemsAll.filter((n) => esHoy(n.fecha) && !idsUsados.has(n.id))
   hoy.forEach((h) => idsUsados.add(h.id))
 
-  // Noticias generales para rejilla (sin repetir con destacados/HOY)
+  // ====== Rejilla de noticias (sin repetir con anteriores) ======
   const noticiasGrid = itemsAll.filter((n) => !idsUsados.has(n.id)).slice(0, 6)
   noticiasGrid.forEach((g) => idsUsados.add(g.id))
 
-  // Otras publicaciones (lista)
+  // ====== Otras publicaciones (lista) ======
   const recientes = itemsAll.filter((n) => !idsUsados.has(n.id)).slice(0, 8)
 
   const paisesDestacados = [
@@ -109,9 +120,9 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Rejilla de destacados secundarios */}
+            {/* Rejilla de destacados secundarios (2 tarjetas) */}
             <div className="grid grid-cols-1 gap-4">
-              {destacadosSec.slice(0, 3).map((n) => (
+              {destacadosSec.slice(0, 2).map((n) => (
                 <article
                   key={n.id}
                   className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900 flex flex-col"
@@ -154,7 +165,7 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ====== REJILLA DE NOTICIAS (tipo DW) ====== */}
+      {/* ====== REJILLA DE NOTICIAS ====== */}
       <section aria-label="Noticias" className="mt-10">
         <h2 className="mb-2 text-2xl font-bold">Noticias</h2>
         <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
@@ -200,7 +211,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====== OTRAS PUBLICACIONES (lista) ====== */}
+      {/* ====== OTRAS PUBLICACIONES ====== */}
       <section id="ultimas" className="mt-12">
         <h2 className="mb-4 text-xl font-semibold">Otras Publicaciones</h2>
         <ul className="space-y-2">

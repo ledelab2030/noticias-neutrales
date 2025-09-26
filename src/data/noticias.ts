@@ -58,6 +58,74 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'pacto-historico-consulta-octubre-2025-09-26',
+  fecha: '2025-09-26',
+  titulo: 'El Pacto Histórico no realizará consulta en octubre para elegir candidato presidencial, solo para Congreso',
+  pais: 'Colombia',
+  resumen: 'La coalición Pacto Histórico decidió que en octubre no se hará una consulta para escoger candidato presidencial, sino únicamente para definir las listas al Congreso en 2026.',
+  contenido: [
+    'El movimiento político Pacto Histórico, liderado por el presidente Gustavo Petro, confirmó que no llevará a cabo en octubre la consulta interna para elegir a su candidato presidencial. La jornada se limitará a la definición de listas para el Congreso en las elecciones de 2026.',
+    'La decisión fue anunciada tras varias reuniones de los integrantes de la coalición. De acuerdo con El Espectador, el mecanismo de consulta que inicialmente se había planteado para escoger la fórmula presidencial no se realizará en esta ocasión.',
+    'La colectividad señaló que el objetivo de la consulta será organizar y fortalecer las listas al Senado y la Cámara de Representantes, buscando consolidar su presencia legislativa de cara al próximo periodo electoral.',
+    'Esta determinación aplaza la definición de una candidatura presidencial única, que deberá resolverse más adelante mediante otros mecanismos internos o acuerdos políticos entre los partidos y movimientos que conforman el Pacto Histórico.'
+  ],
+  imagen: '/noticias/pacto-historico-consulta-octubre-2025-09-26.jpg',
+  etiquetas: ['colombia', 'politica', 'gustavo petro', 'pacto historico','portada'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/politica/pacto-historico-de-gustavo-petro-no-hara-consulta-de-octubre-para-elegir-candidato-presidencial-solo-para-congreso/' },
+  url_fuente: 'https://www.elespectador.com/politica/pacto-historico-de-gustavo-petro-no-hara-consulta-de-octubre-para-elegir-candidato-presidencial-solo-para-congreso/',
+  consecutivo_unico: '20250925-01'
+},
+{
+  id: 'unad-primer-doctorado-aprobacion-2025-09-25',
+  fecha: '2025-09-25',
+  titulo: 'UNAD resalta aprobación de su primer doctorado en encuentro con el Ministerio de Educación',
+  pais: 'colombia',
+  resumen: 'La Universidad Nacional Abierta y a Distancia (UNAD) recordó, durante un encuentro con el Ministerio de Educación, la aprobación en junio de su primer programa de doctorado, resaltando el avance en cobertura y calidad académica.',
+  contenido: [
+    'El rector de la Universidad Nacional Abierta y a Distancia (UNAD), Jaime Leal, se reunió con el ministro de Educación, Daniel Rojas, para dialogar sobre cobertura educativa y acreditación institucional. En el encuentro se destacó el reciente avance académico de la institución.',
+    'En particular, se recordó que en el mes de junio de 2025 fue aprobado el primer programa de doctorado de la UNAD, un hito en la historia de la universidad y en la educación a distancia en Colombia. Este logro marca un paso significativo en la consolidación de su oferta académica de alta calidad.',
+    'La UNAD ha señalado que su compromiso es ampliar la cobertura nacional sin sacrificar estándares de excelencia académica, fortaleciendo su capacidad para enfrentar los retos actuales de la educación superior en el país.',
+    'La institución reafirmó su disposición de trabajar junto al Ministerio de Educación para garantizar que más colombianos puedan acceder a programas de calidad, incluyendo el nuevo doctorado, que representa un avance hacia una educación inclusiva y pertinente.'
+  ],
+  etiquetas: ['colombia', 'educación', 'unad'],
+  fuente: { nombre: 'Universidad UNAD', url: 'https://twitter.com/UniversidadUNAD/status/183904527' }
+},
+{
+  id: 'tutela-garantiza-consulta-octubre-pacto-historico-2025-09-25',
+  fecha: '2025-09-25',
+  titulo: 'Tutela garantiza inscripción de precandidaturas del Pacto Histórico para la consulta de octubre',
+  pais: 'colombia',
+  resumen: 'El Tribunal Superior de Bogotá ordenó habilitar la inscripción de precandidatos del Pacto Histórico para la consulta interna del 26 de octubre de 2025, tras la tutela presentada por Gustavo Bolívar y Carolina Corcho.',
+  contenido: [
+    'El 25 de septiembre de 2025, el Tribunal Superior de Bogotá, Sala Laboral, falló a favor de una tutela presentada por Gustavo Bolívar y Carolina Corcho, en representación de las bases del Pacto Histórico. La acción buscaba garantizar la participación democrática dentro del movimiento.',
+    'La decisión suspende los efectos de la Resolución 09673 del 17 de septiembre de 2025 del Consejo Nacional Electoral y ordena a la Registraduría habilitar de inmediato la inscripción de precandidatos para la consulta interna convocada para el 26 de octubre de 2025.',
+    'El fallo establece la medida como cautelar para evitar un perjuicio irremediable y asegurar el derecho a la igualdad en la contienda política. Con esto, las bases del Pacto Histórico podrán presentar candidatos en igualdad de condiciones.',
+    'El Comité Político Nacional del Pacto Histórico señaló que en octubre se realizará la consulta para definir el orden de las listas al Congreso, mientras que la precandidatura presidencial se resolverá en marzo de 2026 dentro de una consulta interpartidista del Frente Amplio.',
+    'El resultado de la tutela representa un avance para la participación de las bases en los procesos internos y marca un precedente en la defensa del derecho político al interior del movimiento.'
+  ],
+  etiquetas: ['colombia', 'politica', 'gustavo bolivar', 'carolina corcho', 'pacto historico', 'resultados'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/politica/elecciones-colombia-2026/pacto-historico-anuncia-que-hara-consulta-para-definir-sus-listas-al-congreso-en-octubre-y-pospone-eleccion-de-candidato-a-presidencia-a-marzo-3494205' }
+},
+{
+  id: 'el-caminante-acera-calle-84-42d-barranquilla-2025-09-25',
+  fecha: '2025-09-25',
+  titulo: 'El Caminante: diversidad de pisos en la acera de la calle 84 con carrera 42D en Barranquilla',
+  pais: 'colombia',
+  resumen: 'Recorrido por la acera de la calle 84 con carrera 42D en Barranquilla, donde se evidencian diferentes tipos de pisos, algunos poco adecuados para andenes por no ser antideslizantes.',
+  video: 'https://www.youtube.com/embed/hBdx8tXYYAo',
+  credito_video: 'Proyecto El Caminante',
+  contenido: [
+    'Como parte del proyecto El Caminante, se realizó un recorrido por una de las aceras de la calle 84 con carrera 42D de Barranquilla. En este trayecto se observa la diversidad de pisos instalados, que van desde el acabado corriente sin decoración hasta plaquetas y baldosas más vistosas.',
+    'El piso corriente resulta ser el más funcional, mientras que otros materiales, aunque más decorativos, no están diseñados para uso en andenes, pues carecen de propiedades antideslizantes.',
+    'En muchos casos, los propietarios sustituyen los pisos buscando mejorar la presentación de sus fachadas o reparar daños, probablemente con buena intención, pero generando riesgos para los peatones. Estas superficies pueden volverse resbaladizas con facilidad.',
+    'La situación representa un peligro para quienes transitan la zona, especialmente en días de lluvia o cuando se riega el jardín, como quedó registrado en el video al final del recorrido.'
+  ],
+  etiquetas: ['colombia', 'el caminante', 'barranquilla', 'seguridad'],
+  fuente: 'LedeLab',
+  url_fuente: 'https://youtube.com/shorts/hBdx8tXYYAo?si=249P-PNoSw5K-LzN',
+  consecutivo_unico: '20250925-01'
+},
+{
   id: 'margarita-rosa-no-debe-explicacion-2025-09-25',
   fecha: '2025-09-25',
   titulo: 'Por qué Margarita Rosa de Francisco no nos debe ninguna explicación (y nosotros le debemos mucho)',
@@ -76,7 +144,7 @@ const noticiasRaw: NoticiaRaw[] = [
     
     'Si algún día decides incursionar en la política, tendrás mi voto. Y si no, también te entenderé, porque sabemos que personas como tú sacrifican mucho de su tranquilidad personal por el bienestar de todos.'
   ],
-  etiquetas: ['colombia', 'editorial', 'margarita rosa de francisco', 'educación'],
+  etiquetas: ['colombia', 'editorial', 'margarita rosa de francisco', 'educación','portada'],
   fuente: 'LedeLab',
   consecutivo_unico: '20250925-01'
 },
@@ -166,6 +234,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: 'como-ayunaar-bien-dr-carlos-jaramillo-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Cómo ayunar bien? - por el Dr. Carlos Jaramillo',
+  pais: 'Colombia',
   resumen: 'El Dr. Carlos Jaramillo explica cuáles bebidas pueden consumirse durante el ayuno sin afectar sus beneficios, y cuáles deben evitarse.',
   video: 'https://www.youtube.com/embed/0hcaYRg9pL8',
   credito_video: 'Canal de YouTube Dr. Carlos Jaramillo',
@@ -188,6 +257,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: 'beneficios-matcha-organico-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Beneficios del matcha orgánico en agua',
+  pais: 'Estados Unidos',
   resumen: 'El consumo de matcha orgánico en agua ofrece una alta concentración de antioxidantes, posibles mejoras metabólicas, apoyo a la salud cardiovascular y beneficios cognitivos, de acuerdo con la evidencia científica disponible.',
   contenido: [
     'El matcha es un polvo fino elaborado a partir de hojas jóvenes de té verde (*Camellia sinensis*) cultivadas bajo sombra, lo que incrementa su contenido de clorofila y aminoácidos. A diferencia del té verde infusionado, en el que se desechan las hojas, el matcha permite ingerir la hoja entera, concentrando así catequinas, L-teanina y otros compuestos bioactivos de interés para la salud.',
@@ -220,6 +290,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: 'ayuno-36-horas-fases-y-beneficios-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Fases del ayuno de 36 horas y los procesos clave que motivan a practicarlo',
+  pais: 'Rusia',
   resumen: 'Un repaso detallado de las cinco fases del ayuno de 36 horas, destacando los cambios metabólicos, hormonales y celulares que favorecen la quema de grasa, la autodepuración y la claridad mental.',
   video: 'https://www.youtube.com/embed/iIc7wYm6kYs',
   credito_video: 'Canal de YouTube Dr. Michael Diamonds',
