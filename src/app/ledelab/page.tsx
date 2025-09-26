@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function LedeLabPage() {
   return (
-    <main className="mx-auto p-6 prose prose-lg space-y-6">
+    <main className="mx-auto p-6 prose prose-lg space-y-6 max-w-3xl">
       <h1 className="text-3xl font-bold">LedeLab</h1>
 
       <Image
@@ -36,7 +36,15 @@ export default function LedeLabPage() {
         Indianápolis del <strong>2 al 5 de junio</strong>. Asistió en calidad de
         delegado, invitado por la organización, dentro de la categoría{' '}
         <em>Ecosystem Builder</em> (Constructor de Ecosistemas de
-        Emprendimiento).
+        Emprendimiento). Más información en{' '}
+        <a
+          href="https://www.genglobal.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          Global Entrepreneurship Network
+        </a>.
       </p>
 
       <p>
@@ -53,3 +61,4 @@ export default function LedeLabPage() {
     </main>
   )
 }
+

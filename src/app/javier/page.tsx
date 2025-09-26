@@ -1,4 +1,4 @@
-// /src/app/javier/page.tsx
+// src/app/javier/page.tsx
 import Image from 'next/image'
 
 export const metadata = {
@@ -9,18 +9,18 @@ export const metadata = {
 
 export default function JavierPage() {
   return (
-    <main className="prose mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">jAvIer</h1>
+    <main className="mx-auto p-6 prose prose-lg space-y-6 max-w-3xl">
+      <h1 className="text-3xl font-bold">jAvIer</h1>
+
       <Image
         src="/noticias/javier.jpg"
-        alt="jAvIer GPT personalizado"
+        alt="jAvIer, GPT personalizado"
         width={800}
-        height={400}
+        height={500}
         className="rounded-2xl shadow"
+        priority
       />
-      <p className="text-sm text-gray-500 mb-6">
-        Crédito imagen: Noticias Neutrales
-      </p>
+      <p className="text-sm text-gray-500">Crédito imagen: Noticias Neutrales</p>
 
       <p>
         <strong>jAvIer</strong> es un GPT personalizado, concebido como el alter
@@ -32,7 +32,7 @@ export default function JavierPage() {
       <p>
         Funciona como un asistente de inteligencia artificial que apoya en la
         redacción de artículos, la codificación de noticias en el formato{' '}
-        <code>noticias.ts</code>, y la estructuración de proyectos y aprendizajes
+        <code>noticias.ts</code> y la estructuración de proyectos y aprendizajes
         de forma clara y organizada.
       </p>
 
@@ -44,12 +44,12 @@ export default function JavierPage() {
 
       <p>
         Puedes interactuar con jAvIer directamente en su espacio oficial en
-        ChatGPT a través del siguiente enlace:{' '}
+        ChatGPT:{' '}
         <a
           href="https://chatgpt.com/g/g-684d9ed898b88191b8ebbb8d1b8a4210-javier?model=gpt-4o"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 underline"
+          className="text-blue-600 hover:underline"
         >
           Abrir jAvIer en ChatGPT
         </a>.
