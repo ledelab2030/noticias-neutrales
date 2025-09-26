@@ -60,7 +60,7 @@ const noticiasRaw: NoticiaRaw[] = [
 {
   id: 'pacto-historico-consulta-octubre-2025-09-26',
   fecha: '2025-09-26',
-  titulo: 'El Pacto Histórico no realizará consulta en octubre para elegir candidato presidencial, solo para Congreso',
+  titulo: 'El Pacto Histórico no realizará consulta en octubre para elegir candidato presidencial, sólo para Congreso',
   pais: 'Colombia',
   resumen: 'La coalición Pacto Histórico decidió que en octubre no se hará una consulta para escoger candidato presidencial, sino únicamente para definir las listas al Congreso en 2026.',
   contenido: [
