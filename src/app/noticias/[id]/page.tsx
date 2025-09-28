@@ -1,65 +1,78 @@
 // src/app/noticias/[id]/page.tsx
 import { noticias } from "@/data/noticias"
-import { notFound } from "next/navigation"
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import { notFound } from "next/navigation"
 import { slugify } from "@/utils/slugify"
-import type { Metadata } from "next"
+import { cookies } from "next/headers"
+import { translateNoticia, type Noticia as NoticiaT } from "@/lib/translate"
+import { normalizeToSupported, type Lang } from "@/lib/locale"
 
-interface Props {
+// En tu proyecto, PageProps usa Promises
+type PageProps = {
   params: Promise<{ id: string }>
+  searchParams?: Promise<{ auto?: string }>
 }
 
-type DialogoItem = { autor: string; texto: string }
-type FuenteObj = { nombre?: string; url?: string }
-type Fuente = string | FuenteObj | undefined
+type Noticia = NoticiaT
+const LANGS: Lang[] = ["es", "en", "de"]
+const ALL_LANGS: Lang[] = ["es", "en", "de"]
+const baseUrl = "https://www.ledelab.co"
 
-type Noticia = {
-  id: string
-  fecha: string
-  titulo: string
-  pais?: string
-  resumen?: string
-  contenido?: string[]
-  participantes?: string[]
-  dialogo?: DialogoItem[]
-  etiquetas?: string[]
-  fuente?: Fuente
-  url_fuente?: string
-  consecutivo_unico?: string
-  imagen?: string
-  credito_imagen?: string
-  video?: string
-  credito_video?: string
+function detectarLangDesdeId(id: string): Lang | null {
+  const m = id.match(/-(es|en|de)$/i)
+  return (m?.[1]?.toLowerCase() as Lang) ?? null
 }
-
-function isFuenteObj(val: unknown): val is FuenteObj {
-  return typeof val === "object" && val !== null && "nombre" in (val as Record<string, unknown>)
+function baseIdSinLang(id: string): string {
+  const m = id.match(/^(.*?)-(es|en|de)$/i)
+  return m ? m[1] : id
 }
-function fuenteNombre(f: Fuente) {
+function idConLang(id: string, lang: Lang): string {
+  return `${baseIdSinLang(id)}-${lang}`
+}
+function nombreLang(lang: Lang) {
+  switch (lang) {
+    case "es": return "Español"
+    case "en": return "English"
+    case "de": return "Deutsch"
+    default: return lang
+  }
+}
+function fuenteNombre(f: Noticia["fuente"]) {
   if (!f) return ""
   if (typeof f === "string") return f
-  if (isFuenteObj(f) && typeof f.nombre === "string") return f.nombre
-  return ""
+  return f.nombre ?? ""
 }
 
-/** 🔷 Metadatos dinámicos (Open Graph / Twitter) */
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// ---- SEO ----
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { id } = await params
-  const n = noticias.find((x) => x.id === id) as Noticia | undefined
+  const sp = searchParams ? await searchParams : undefined
+  const auto = ((sp?.auto ?? "").toLowerCase() as Lang) || undefined
+
+  const n = (noticias as Noticia[]).find((x) => x.id === id)
   if (!n) return {}
 
-  const base = "https://www.ledelab.co"
-  const url = `${base}/noticias/${id}`
-
+  const url = `${baseUrl}/noticias/${n.id}`
   const ogImageRelOrAbs = n.imagen ?? "/og-default.jpg"
-  const ogImage = ogImageRelOrAbs.startsWith("http")
-    ? ogImageRelOrAbs
-    : `${base}${ogImageRelOrAbs}`
+  const ogImage = ogImageRelOrAbs.startsWith("http") ? ogImageRelOrAbs : `${baseUrl}${ogImageRelOrAbs}`
+
+  // hreflang solo para hermanas reales
+  const base = n.id.replace(/-(es|en|de)$/i, "")
+  const languages: Record<string, string> = {}
+  for (const l of ALL_LANGS) {
+    const idL = `${base}-${l}`
+    if ((noticias as Noticia[]).some((x) => x.id === idL)) {
+      languages[l] = `/noticias/${idL}`
+    }
+  }
+
+  const isInstant = Boolean(auto)
 
   return {
     title: n.titulo,
-    description: n.resumen || (Array.isArray(n.contenido) ? n.contenido[0] : ""),
+    description: n.resumen || (Array.isArray(n.contenido) ? n.contenido[0] : undefined),
     openGraph: {
       title: n.titulo,
       description: n.resumen || "",
@@ -74,19 +87,58 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: n.resumen || "",
       images: [ogImage],
     },
+    alternates: {
+      canonical: url,
+      languages,
+    },
+    robots: isInstant ? { index: false, follow: true } : undefined,
   }
 }
 
-export default async function Noticia({ params }: Props) {
+// ---- Page ----
+export default async function Page({ params, searchParams }: PageProps) {
   const { id } = await params
-  const n = noticias.find((x) => x.id === id) as Noticia | undefined
+  const sp = searchParams ? await searchParams : undefined
+  const auto = (sp?.auto ?? "").toLowerCase() as Lang
+  const isValidLang = (l: string): l is Lang => (["es", "en", "de"] as const).includes(l as Lang)
+
+  let n = (noticias as Noticia[]).find((x) => x.id === id)
   if (!n) notFound()
 
-  const participantes: string[] | undefined = n.participantes
+  // Idioma de la nota + preferencia del visitante
+  const langDetectado = detectarLangDesdeId(n.id) ?? (n.idioma_original as Lang) ?? "es"
+  let langActual: Lang = langDetectado
 
-  /** ALT más descriptivo para accesibilidad */
-  const altHero =
-    'Cartel político británico “Chinese Labour” (ca. 1905) — paralelo con Vietnam Veterans Memorial'
+  // 🔧 cookies() es Promise en tu proyecto
+  const cookieStore = await cookies()
+  const cookieLang = normalizeToSupported(cookieStore.get("nn_lang")?.value ?? "es")
+
+  // Helpers dataset
+  const base = baseIdSinLang(n.id)
+  const existe = (l: Lang) => (noticias as Noticia[]).some((x) => x.id === idConLang(base, l))
+
+  // 1) ?auto= distinto al actual → traducir on-the-fly
+  if (isValidLang(auto) && auto !== langActual) {
+    n = await translateNoticia(n, auto)
+    langActual = auto
+  }
+  // 2) Sin ?auto=, preferencia distinta y NO hay hermana → traducir automático
+  else if (!isValidLang(auto) && cookieLang !== langActual && !existe(cookieLang)) {
+    n = await translateNoticia(n, cookieLang)
+    langActual = cookieLang
+  }
+
+  // Recalcular disponibles / instantáneas
+  const baseNow = baseIdSinLang(n.id)
+  const existeNow = (l: Lang) => (noticias as Noticia[]).some((x) => x.id === idConLang(baseNow, l))
+  const disponibles = LANGS.filter((l) => l !== langActual && existeNow(l))
+  const noGuardadas = LANGS.filter((l) => l !== langActual && !existeNow(l))
+
+  // Para "instantánea" usamos la ruta actual y solo agregamos ?auto=xx
+  const pathForInstant = (currentId: string, to: Lang) => `/noticias/${currentId}?auto=${to}`
+  const isInstant = isValidLang(auto) || !existeNow(langActual)
+
+  const altHero = n.titulo
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
@@ -97,11 +149,45 @@ export default async function Noticia({ params }: Props) {
         <span>actualidad</span>
       </div>
 
+      {/* 🔤 Idiomas antes del título */}
+      <div className="mb-4 rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex flex-wrap items-center gap-2">
+        <span className="opacity-70">Original en:</span>
+        <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium">
+          {nombreLang(n.idioma_original ?? langDetectado)}
+        </span>
+
+        <span className="mx-2 opacity-50">·</span>
+
+        <span className="opacity-70">Disponible en:</span>
+        {/* Hermanas reales */}
+        {disponibles.map((l) => (
+          <Link
+            key={l}
+            href={`/noticias/${idConLang(baseNow, l)}`}
+            className="text-blue-600 hover:text-blue-800 underline underline-offset-2"
+          >
+            {nombreLang(l)}
+          </Link>
+        ))}
+        {/* Instantáneas (misma ruta + ?auto=) */}
+        {noGuardadas.map((l) => (
+          <Link
+            key={`auto-${l}`}
+            href={pathForInstant(n.id, l)}
+            className="text-blue-600 hover:text-blue-800 underline underline-offset-2"
+            title="Generar versión instantánea (traducción automática)"
+          >
+            {nombreLang(l)} (instantánea)
+          </Link>
+        ))}
+        {isInstant && <span className="ml-2 text-xs opacity-70">(viendo versión instantánea)</span>}
+      </div>
+
       <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
         {n.titulo}
       </h1>
 
-      {/* Imagen hero con crédito en 2 líneas */}
+      {/* Imagen principal */}
       {n.imagen && (
         <figure className="mt-6 mb-6">
           <Image
@@ -123,7 +209,7 @@ export default async function Noticia({ params }: Props) {
         </figure>
       )}
 
-      {/* Video embebido (si aplica) */}
+      {/* Video embebido */}
       {n.video && (
         <div className="mt-6 mb-6">
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-sm">
@@ -131,7 +217,6 @@ export default async function Noticia({ params }: Props) {
               src={n.video}
               title={n.titulo}
               className="absolute top-0 left-0 w-full h-full rounded-xl"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
@@ -144,6 +229,7 @@ export default async function Noticia({ params }: Props) {
         </div>
       )}
 
+      {/* Meta línea */}
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400">
         <span>{n.fecha}</span>
         {n.pais && (<><span className="opacity-60">·</span><span>{n.pais}</span></>)}
@@ -163,30 +249,14 @@ export default async function Noticia({ params }: Props) {
         )}
       </div>
 
-      {/* Participantes */}
-      {!!participantes?.length && (
-        <div className="mt-4 text-sm text-gray-600 dark:text-gray-300">
-          <span className="font-medium">Participantes: </span>
-          <span>{participantes.join(" · ")}</span>
-        </div>
-      )}
-
-      {/* Contenido con soporte de imagen embebida usando <!--img--> */}
+      {/* Contenido */}
       {Array.isArray(n.contenido) && n.contenido.length > 0 ? (
         <article className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100 prose prose-neutral max-w-none">
           {n.contenido.map((p, i) => {
-            // Bloque de imagen embebida (según inciso 5)
             if (typeof p === "string" && p.trim().startsWith("<!--img-->")) {
               const html = p.replace("<!--img-->", "")
-              return (
-                <div
-                  key={i}
-                  className="my-6"
-                  dangerouslySetInnerHTML={{ __html: html }}
-                />
-              )
+              return <div key={i} className="my-6" dangerouslySetInnerHTML={{ __html: html }} />
             }
-            // Párrafos normales con enlaces resaltados
             return (
               <p
                 key={i}
@@ -202,60 +272,54 @@ export default async function Noticia({ params }: Props) {
         </p>
       ) : null}
 
-      {/* 🏷️ Etiquetas */}
-      {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && (() => {
-        const etiquetasLimpias = Array.from(
-          new Set(
-            (n.etiquetas ?? [])
-              .map((t) => (typeof t === "string" ? t.trim() : ""))
-              .filter(Boolean)
-          )
-        )
-        if (etiquetasLimpias.length === 0) return null
-        return (
-          <>
-            <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
-            <div className="flex flex-wrap gap-2">
-              {etiquetasLimpias.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${encodeURIComponent(slugify(tag))}`}
-                  className="rounded-full border px-3 py-1 text-xs text-blue-600 hover:text-blue-800 underline underline-offset-2"
-                  title={`Ver notas con la etiqueta: ${tag}`}
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </>
-        )
-      })()}
+      {/* Etiquetas */}
+      {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && <Etiquetas etiquetas={n.etiquetas} />}
 
-      {/* 🔗 Noticias relacionadas por etiqueta */}
+      {/* Relacionadas */}
       <Relacionadas idActual={n.id} etiquetas={n.etiquetas ?? []} />
     </main>
   )
 }
 
-/* 🔵 Resaltar links en azul con hover dentro del contenido */
 function resaltarLinks(texto: string) {
-  return texto.replace(
+  return (texto ?? "").replace(
     /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">$1</a>'
   )
 }
 
-/** --- COMPONENTE: Notas relacionadas --- */
+function Etiquetas({ etiquetas }: { etiquetas: string[] }) {
+  const uniq = Array.from(new Set((etiquetas ?? []).map((t) => (t ?? "").trim()).filter(Boolean)))
+  if (uniq.length === 0) return null
+  return (
+    <>
+      <hr className="mt-8 mb-6 border-t border-zinc-200 dark:border-zinc-800" />
+      <div className="flex flex-wrap gap-2">
+        {uniq.map((tag) => (
+          <Link
+            key={tag}
+            href={`/tag/${encodeURIComponent(slugify(tag))}`}
+            className="rounded-full border px-3 py-1 text-xs text-blue-600 hover:text-blue-800 underline underline-offset-2"
+            title={`Ver notas con la etiqueta: ${tag}`}
+          >
+            {tag}
+          </Link>
+        ))}
+      </div>
+    </>
+  )
+}
+
 function Relacionadas({ idActual, etiquetas }: { idActual: string; etiquetas: string[] }) {
   const etiquetasLimpias = Array.from(
-    new Set((etiquetas ?? []).map((t) => (typeof t === "string" ? t.trim() : "")).filter(Boolean))
+    new Set((etiquetas ?? []).map((t) => (t ?? "").trim()).filter(Boolean))
   )
 
-  const relacionadas = noticias
+  const relacionadas = (noticias as Noticia[])
     .filter(
       (nn) =>
         nn.id !== idActual &&
-        nn.etiquetas?.some((tag) => etiquetasLimpias.includes(tag?.trim?.() ?? ""))
+        nn.etiquetas?.some((tag) => etiquetasLimpias.includes((tag ?? "").trim()))
     )
     .slice(0, 3)
 
@@ -274,9 +338,7 @@ function Relacionadas({ idActual, etiquetas }: { idActual: string; etiquetas: st
               {r.titulo}
             </Link>
             {r.resumen && (
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                {r.resumen}
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{r.resumen}</p>
             )}
           </li>
         ))}

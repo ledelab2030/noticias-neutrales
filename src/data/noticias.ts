@@ -1,5 +1,4 @@
 // src/data/noticias.ts
-
 // Tipos base (codnnv1) + extensión para imagen OG/Twitter
 export type Fuente =
   | string
@@ -21,13 +20,20 @@ export type NoticiaRaw = {
   fuente?: Fuente
   url_fuente?: string
   consecutivo_unico?: string
-  video?: string   // URL de YouTube/Vimeo/etc. para embed
-  credito_video?: string // Texto del crédito (ej: "YouTube / Canal oficial de ATP")
+  video?: string          // URL de YouTube/Vimeo/etc. para embed
+  credito_video?: string  // Texto del crédito (ej: "YouTube / Canal oficial de ATP")
   credito_imagen?: string
-
 
   // opcional: portada para previews (ruta absoluta o relativa a /public)
   imagen?: string
+
+  // 🔤 Multi-idioma
+  idioma_original?: 'es' | 'en' | 'de'
+  traducciones?: {
+    es?: string
+    en?: string
+    de?: string
+  }
 }
 
 export type Noticia = NoticiaRaw
@@ -38,7 +44,7 @@ export function sanitizeTags(tags: string[] = []): string[] {
   const out: string[] = []
 
   for (const raw of tags) {
-    const key = (raw ?? "").trim()
+    const key = (raw ?? '').trim()
     if (!key) continue
 
     const lower = key.toLowerCase()
@@ -57,6 +63,37 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
+{
+  id: 'comparativo-azucar-drogas-costos-salud-2025-09-28-es',
+  fecha: '2025-09-28',
+  titulo: 'La carga de salud y costos por dietas con exceso de azúcares supera la atribuible al uso de drogas',
+  pais: 'Global',
+  resumen: 'La evidencia de organismos internacionales muestra que las enfermedades no transmisibles asociadas a dietas poco saludables —donde el exceso de azúcares libres y carbohidratos refinados es un factor clave— representan una carga de mortalidad y costos sanitarios muy superior a la atribuible directamente al uso de drogas; no obstante, se trata de daños de naturaleza distinta que demandan políticas diferenciadas.',
+  etiquetas: ['salud', 'oms', 'unodc', 'idf', 'world obesity federation', 'diabetes', 'obesidad', 'azucar', 'coca', 'politicas publicas', 'economia'],
+  fuente: { nombre: 'Organización Mundial de la Salud (OMS)', url: 'https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases' },
+  url_fuente: 'https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases',
+  consecutivo_unico: '20250928-01',
+  idioma_original: 'es',
+  imagen: '/noticias/comparativo_azucar_drogas.png',
+  credito_imagen: 'Elaboración propia con datos de OMS, UNODC, IDF y World Obesity Federation',
+  contenido: [
+    'Los datos de la Organización Mundial de la Salud (OMS), la Oficina de las Naciones Unidas contra la Droga y el Delito (UNODC), la Federación Internacional de Diabetes (IDF) y la World Obesity Federation (WOF) permiten comparar dos cadenas con impactos globales muy distintos: la de las dietas con exceso de azúcares y carbohidratos refinados, y la del uso de drogas ilícitas como la cocaína.',
+    
+    'Las enfermedades no transmisibles (ENT) concentran la mayor parte de la mortalidad evitable en el mundo. En 2021 murieron más de 43 millones de personas por estas causas. Dentro de sus determinantes, los patrones dietarios poco saludables —incluido el consumo excesivo de azúcares libres— incrementan de manera significativa el riesgo de obesidad, resistencia a la insulina y diabetes tipo 2. Estas condiciones generan altos niveles de gasto sanitario y pérdida de productividad.',
+    
+    'El impacto económico de estas enfermedades es evidente. La IDF calculó que la diabetes demandó alrededor de 1,015 billones de dólares en gasto sanitario mundial en 2024, cerca del 12% del gasto sanitario global. La World Obesity Federation proyecta que el costo económico del sobrepeso y la obesidad superará los 4,32 billones de dólares anuales para 2035, equivalentes al 3% del PIB mundial. Estas cifras muestran que el problema asociado al consumo excesivo de azúcar es de magnitud sistémica.',
+    
+    'En comparación, el uso de drogas psicoactivas está vinculado a alrededor de 0,6 millones de muertes anuales según la OMS, con la mayor carga atribuida a opioides. La fracción correspondiente a la cocaína es menor y varía según la región. La UNODC estima que en 2023 alrededor de 25 millones de personas fueron consumidores problemáticos de cocaína, en un mercado que alcanza niveles históricos. Aunque el daño social y de seguridad es alto, la escala sanitaria es menor que la de las ENT vinculadas a la dieta.',
+    
+    'La imagen incluida resume la comparación de impactos en salud, costos y políticas públicas.',
+    
+    'En términos de políticas públicas, las estrategias efectivas frente al azúcar incluyen impuestos a bebidas azucaradas, advertencias visibles en empaques y restricciones a la publicidad dirigida a niños. Estas medidas han demostrado reducir el consumo y generar recursos fiscales para prevención y atención. Para las drogas, los organismos internacionales recomiendan dar prioridad a la salud pública, la reducción de daños y el desarrollo alternativo en regiones productoras, complementados con acciones de seguridad focalizadas.',
+    
+    'La conclusión es clara: en términos de salud y costos sanitarios, la carga derivada de dietas con exceso de azúcares y carbohidratos refinados es de órdenes de magnitud mayor que la atribuible directamente al uso de drogas ilícitas. Sin embargo, la cadena de la coca y la cocaína genera daños específicos en seguridad y gobernanza que la hacen un problema distinto. Ambos fenómenos exigen políticas diferenciadas, basadas en evidencia y con enfoque integral.',
+    
+    'Fuentes citadas:\n- OMS – Hoja informativa ENT: https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases\n- OMS – Recomendaciones sobre azúcares: https://www.who.int/publications/i/item/9789241549028\n- OPS/OMS – ENT (síntesis regional): https://www.paho.org/en/topics/noncommunicable-diseases\n- IDF – Diabetes Atlas (gasto sanitario 2024): https://diabetesatlas.org/\n- World Obesity Federation – World Obesity Atlas: https://data.worldobesity.org/publications/WOF-Obesity-Atlas-V5.pdf\n- OMS – Nota 2024 alcohol y drogas: https://www.who.int/news/item/25-06-2024-over-3-million-annual-deaths-due-to-alcohol-and-drug-use-majority-among-men\n- UNODC – World Drug Report 2024: https://www.unodc.org/unodc/data-and-analysis/world-drug-report-2024.html'
+  ]
+},
 {
   id: 'pacto-historico-consulta-octubre-2025-09-26',
   fecha: '2025-09-26',
