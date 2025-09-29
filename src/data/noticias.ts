@@ -22,10 +22,14 @@ export type NoticiaRaw = {
   consecutivo_unico?: string
   video?: string          // URL de YouTube/Vimeo/etc. para embed
   credito_video?: string  // Texto del crédito (ej: "YouTube / Canal oficial de ATP")
-  credito_imagen?: string
-
+  
   // opcional: portada para previews (ruta absoluta o relativa a /public)
   imagen?: string
+  credito_imagen?: string
+
+  // NUEVO: miniatura para home/listados
+  imagen_portada?: string    
+  credito_imagen_portada?: string
 
   // 🔤 Multi-idioma
   idioma_original?: 'es' | 'en' | 'de'
@@ -66,27 +70,29 @@ const noticiasRaw: NoticiaRaw[] = [
 {
   id: 'comparativo-azucar-drogas-costos-salud-2025-09-28-es',
   fecha: '2025-09-28',
-  titulo: 'La carga de salud y costos por dietas con exceso de azúcares supera la atribuible al uso de drogas',
+  titulo: 'La guerra contra las drogas ilícitas y el paralelo con los alimentos no saludables',
   pais: 'Global',
-  resumen: 'La evidencia de organismos internacionales muestra que las enfermedades no transmisibles asociadas a dietas poco saludables —donde el exceso de azúcares libres y carbohidratos refinados es un factor clave— representan una carga de mortalidad y costos sanitarios muy superior a la atribuible directamente al uso de drogas; no obstante, se trata de daños de naturaleza distinta que demandan políticas diferenciadas.',
-  etiquetas: ['salud', 'oms', 'unodc', 'idf', 'world obesity federation', 'diabetes', 'obesidad', 'azucar', 'coca', 'politicas publicas', 'economia'],
+  resumen: 'La evidencia de organismos internacionales muestra que las enfermedades no transmisibles asociadas a dietas poco saludables —donde el exceso de azúcares libres y carbohidratos refinados es un factor clave— representan una carga de mortalidad y costos sanitarios muy superior a la atribuible directamente al uso de drogas. Deberían restringirse?',
+  etiquetas: ['salud', 'oms', 'unodc', 'idf', 'world obesity federation', 'diabetes', 'obesidad', 'azucar', 'coca', 'politicas publicas', 'economia','portada'],
   fuente: { nombre: 'Organización Mundial de la Salud (OMS)', url: 'https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases' },
   url_fuente: 'https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases',
   consecutivo_unico: '20250928-01',
   idioma_original: 'es',
-  imagen: '/noticias/comparativo_azucar_drogas.png',
-  credito_imagen: 'Elaboración propia con datos de OMS, UNODC, IDF y World Obesity Federation',
+  imagen: '/noticias/danny-trujillo-qxWlkTcZTfE-unsplash.jpg',
+  credito_imagen: 'Danny Trujillo / Unsplash — Imagen ilustrativa',
   contenido: [
     'Los datos de la Organización Mundial de la Salud (OMS), la Oficina de las Naciones Unidas contra la Droga y el Delito (UNODC), la Federación Internacional de Diabetes (IDF) y la World Obesity Federation (WOF) permiten comparar dos cadenas con impactos globales muy distintos: la de las dietas con exceso de azúcares y carbohidratos refinados, y la del uso de drogas ilícitas como la cocaína.',
-    
+        
     'Las enfermedades no transmisibles (ENT) concentran la mayor parte de la mortalidad evitable en el mundo. En 2021 murieron más de 43 millones de personas por estas causas. Dentro de sus determinantes, los patrones dietarios poco saludables —incluido el consumo excesivo de azúcares libres— incrementan de manera significativa el riesgo de obesidad, resistencia a la insulina y diabetes tipo 2. Estas condiciones generan altos niveles de gasto sanitario y pérdida de productividad.',
     
+    '<!--img--><img src="/noticias/azucar-cocaina-tabla.jpg" alt="Descripción de la imagen" class="rounded-xl shadow-sm"/>',
+
     'El impacto económico de estas enfermedades es evidente. La IDF calculó que la diabetes demandó alrededor de 1,015 billones de dólares en gasto sanitario mundial en 2024, cerca del 12% del gasto sanitario global. La World Obesity Federation proyecta que el costo económico del sobrepeso y la obesidad superará los 4,32 billones de dólares anuales para 2035, equivalentes al 3% del PIB mundial. Estas cifras muestran que el problema asociado al consumo excesivo de azúcar es de magnitud sistémica.',
     
+    '<!--img--><img src="/noticias/hamburguesa-sobrepeso.jpg" alt="Descripción de la imagen" class="rounded-xl shadow-sm"/>',
+    
     'En comparación, el uso de drogas psicoactivas está vinculado a alrededor de 0,6 millones de muertes anuales según la OMS, con la mayor carga atribuida a opioides. La fracción correspondiente a la cocaína es menor y varía según la región. La UNODC estima que en 2023 alrededor de 25 millones de personas fueron consumidores problemáticos de cocaína, en un mercado que alcanza niveles históricos. Aunque el daño social y de seguridad es alto, la escala sanitaria es menor que la de las ENT vinculadas a la dieta.',
-    
-    'La imagen incluida resume la comparación de impactos en salud, costos y políticas públicas.',
-    
+        
     'En términos de políticas públicas, las estrategias efectivas frente al azúcar incluyen impuestos a bebidas azucaradas, advertencias visibles en empaques y restricciones a la publicidad dirigida a niños. Estas medidas han demostrado reducir el consumo y generar recursos fiscales para prevención y atención. Para las drogas, los organismos internacionales recomiendan dar prioridad a la salud pública, la reducción de daños y el desarrollo alternativo en regiones productoras, complementados con acciones de seguridad focalizadas.',
     
     'La conclusión es clara: en términos de salud y costos sanitarios, la carga derivada de dietas con exceso de azúcares y carbohidratos refinados es de órdenes de magnitud mayor que la atribuible directamente al uso de drogas ilícitas. Sin embargo, la cadena de la coca y la cocaína genera daños específicos en seguridad y gobernanza que la hacen un problema distinto. Ambos fenómenos exigen políticas diferenciadas, basadas en evidencia y con enfoque integral.',
@@ -95,43 +101,34 @@ const noticiasRaw: NoticiaRaw[] = [
   ]
 },
 {
-  id: 'pacto-historico-consulta-octubre-2025-09-26',
-  fecha: '2025-09-26',
-  titulo: 'El Pacto Histórico no realizará consulta en octubre para elegir candidato presidencial, sólo para Congreso',
-  pais: 'Colombia',
-  resumen: 'La coalición Pacto Histórico decidió que en octubre no se hará una consulta para escoger candidato presidencial, sino únicamente para definir las listas al Congreso en 2026.',
-  contenido: [
-    'El movimiento político Pacto Histórico, liderado por el presidente Gustavo Petro, confirmó que no llevará a cabo en octubre la consulta interna para elegir a su candidato presidencial. La jornada se limitará a la definición de listas para el Congreso en las elecciones de 2026.',
-    'La decisión fue anunciada tras varias reuniones de los integrantes de la coalición. De acuerdo con El Espectador, el mecanismo de consulta que inicialmente se había planteado para escoger la fórmula presidencial no se realizará en esta ocasión.',
-    'La colectividad señaló que el objetivo de la consulta será organizar y fortalecer las listas al Senado y la Cámara de Representantes, buscando consolidar su presencia legislativa de cara al próximo periodo electoral.',
-    'Esta determinación aplaza la definición de una candidatura presidencial única, que deberá resolverse más adelante mediante otros mecanismos internos o acuerdos políticos entre los partidos y movimientos que conforman el Pacto Histórico.'
-  ],
-  imagen: '/noticias/pacto-historico-consulta-octubre-2025-09-26.jpg',
-  etiquetas: ['colombia', 'politica', 'gustavo petro', 'pacto historico','portada'],
-  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/politica/pacto-historico-de-gustavo-petro-no-hara-consulta-de-octubre-para-elegir-candidato-presidencial-solo-para-congreso/' },
-  url_fuente: 'https://www.elespectador.com/politica/pacto-historico-de-gustavo-petro-no-hara-consulta-de-octubre-para-elegir-candidato-presidencial-solo-para-congreso/',
-  consecutivo_unico: '20250925-01'
-},
-{
   id: 'unad-primer-doctorado-aprobacion-2025-09-25',
   fecha: '2025-09-25',
   titulo: 'UNAD resalta aprobación de su primer doctorado en encuentro con el Ministerio de Educación',
   pais: 'colombia',
+  imagen_portada: '/noticias/Logo-de-la-UNAD.jpg',    
+  credito_imagen_portada: 'Por Universidad Nacional Abierta y a Distancia - https://sig.unad.edu.co/documentos/sgc/documentos_referencia/manual_identidad/Manual_Identidad_Institucional.pdf, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=103664161',
   resumen: 'La Universidad Nacional Abierta y a Distancia (UNAD) recordó, durante un encuentro con el Ministerio de Educación, la aprobación en junio de su primer programa de doctorado, resaltando el avance en cobertura y calidad académica.',
   contenido: [
     'El rector de la Universidad Nacional Abierta y a Distancia (UNAD), Jaime Leal, se reunió con el ministro de Educación, Daniel Rojas, para dialogar sobre cobertura educativa y acreditación institucional. En el encuentro se destacó el reciente avance académico de la institución.',
     'En particular, se recordó que en el mes de junio de 2025 fue aprobado el primer programa de doctorado de la UNAD, un hito en la historia de la universidad y en la educación a distancia en Colombia. Este logro marca un paso significativo en la consolidación de su oferta académica de alta calidad.',
+    '<!--img--><img src="/noticias/doctorado-educacion-unad.jpg" alt="Descripción de la imagen" class="rounded-xl shadow-sm"/>',
     'La UNAD ha señalado que su compromiso es ampliar la cobertura nacional sin sacrificar estándares de excelencia académica, fortaleciendo su capacidad para enfrentar los retos actuales de la educación superior en el país.',
-    'La institución reafirmó su disposición de trabajar junto al Ministerio de Educación para garantizar que más colombianos puedan acceder a programas de calidad, incluyendo el nuevo doctorado, que representa un avance hacia una educación inclusiva y pertinente.'
+    'La institución reafirmó su disposición de trabajar junto al Ministerio de Educación para garantizar que más colombianos puedan acceder a programas de calidad, incluyendo el nuevo doctorado, que representa un avance hacia una educación inclusiva y pertinente.',
+    'Durante la presentación oficial del programa, se destacó que el doctorado en Educación, Tecnología y Pedagogías Emergentes fue aprobado mediante la resolución 11120 del 4 de junio de 2025. La universidad explicó que este programa busca fortalecer la investigación de alto nivel con impacto territorial, apoyado en metodologías innovadoras y en enfoques como la neuropedagogía y la eutagogía, que forman parte de su modelo académico.',
+    'En el lanzamiento, la UNAD señaló que el nuevo doctorado apunta a diseñar ecosistemas de aprendizaje que contribuyan al cierre de brechas educativas en todo el territorio nacional, con énfasis en docentes que no han tenido acceso a este nivel de formación. También resaltó que el programa incorpora principios de inclusión social, sostenibilidad y transformación digital, aportando al desarrollo de comunidades académicas especializadas y a la construcción de paradigmas educativos innovadores tanto a nivel local como global.'
   ],
-  etiquetas: ['colombia', 'educación', 'unad'],
-  fuente: { nombre: 'Universidad UNAD', url: 'https://twitter.com/UniversidadUNAD/status/183904527' }
+  etiquetas: ['colombia', 'educación', 'unad', 'doctorado'],
+  fuente: { nombre: 'Universidad UNAD', url: 'https://twitter.com/UniversidadUNAD/status/183904527' },
+  video: 'https://www.youtube.com/embed/tzg6L04H-HQ',
+  credito_video: 'YouTube / Universidad UNAD'
 },
 {
   id: 'tutela-garantiza-consulta-octubre-pacto-historico-2025-09-25',
   fecha: '2025-09-25',
   titulo: 'Tutela garantiza inscripción de precandidaturas del Pacto Histórico para la consulta de octubre',
   pais: 'colombia',
+  imagen_portada: '/noticias/tutela-corcho-bolivar-portada.jpg',
+  imagen: '/noticias/tutela-corcho-bolivar.jpg',
   resumen: 'El Tribunal Superior de Bogotá ordenó habilitar la inscripción de precandidatos del Pacto Histórico para la consulta interna del 26 de octubre de 2025, tras la tutela presentada por Gustavo Bolívar y Carolina Corcho.',
   contenido: [
     'El 25 de septiembre de 2025, el Tribunal Superior de Bogotá, Sala Laboral, falló a favor de una tutela presentada por Gustavo Bolívar y Carolina Corcho, en representación de las bases del Pacto Histórico. La acción buscaba garantizar la participación democrática dentro del movimiento.',
@@ -149,6 +146,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'El Caminante: diversidad de pisos en la acera de la calle 84 con carrera 42D en Barranquilla',
   pais: 'colombia',
   resumen: 'Recorrido por la acera de la calle 84 con carrera 42D en Barranquilla, donde se evidencian diferentes tipos de pisos, algunos poco adecuados para andenes por no ser antideslizantes.',
+  imagen_portada: '/noticias/andenes-cl84-42d-portada.jpg',
   video: 'https://www.youtube.com/embed/hBdx8tXYYAo',
   credito_video: 'Proyecto El Caminante',
   contenido: [
@@ -168,6 +166,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Por qué Margarita Rosa de Francisco no nos debe ninguna explicación (y nosotros le debemos mucho)',
   pais: 'colombia',
   resumen: 'Margarita Rosa de Francisco ha aclarado públicamente que su matrícula de honor en la UNAD fue por mérito y no por fama. Esta nota editorial sostiene que ella no necesita justificarse: es la universidad y el país los que se han beneficiado con su ejemplo.',
+  imagen_portada: '/noticias/margarita-rosa-no-debe-explicacion-2025-09-25.jpg',
   imagen: '/noticias/margarita-rosa-no-debe-explicacion-2025-09-25.jpg',
   credito_imagen: 'Crédito imagen: www.diezminutos.es',
   contenido: [
@@ -181,7 +180,7 @@ const noticiasRaw: NoticiaRaw[] = [
     
     'Si algún día decides incursionar en la política, tendrás mi voto. Y si no, también te entenderé, porque sabemos que personas como tú sacrifican mucho de su tranquilidad personal por el bienestar de todos.'
   ],
-  etiquetas: ['colombia', 'editorial', 'margarita rosa de francisco', 'educación','portada'],
+  etiquetas: ['colombia', 'editorial', 'margarita rosa de francisco', 'educación'],
   fuente: 'LedeLab',
   consecutivo_unico: '20250925-01'
 },
@@ -190,6 +189,9 @@ const noticiasRaw: NoticiaRaw[] = [
   fecha: '2025-09-24',
   titulo: 'Ácido úrico, inflamación en nudillos y dolor lumbar: posibles vínculos y el papel del ayuno de 36 horas',
   pais: 'Internacional',
+  imagen_portada: '/noticias/acido-urico-mano.jpg',
+  imagen: '/noticias/acido-urico-mano.jpg',
+  credito_imagen: 'Foto: Leonardo De la Hoz Borrego',
   resumen: 'La inflamación en los nudillos y el dolor lumbar pueden estar relacionados con niveles elevados de ácido úrico y procesos inflamatorios. El ayuno prolongado de 36 horas podría aportar beneficios metabólicos, aunque con precauciones.',
   contenido: [
     'El ácido úrico elevado en sangre, conocido como hiperuricemia, puede originar la formación de cristales de urato en las articulaciones. Esto provoca inflamación y dolor, especialmente en articulaciones pequeñas como los nudillos de los dedos de las manos o los pies.',
@@ -212,6 +214,9 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Sismo de magnitud 6,1 en Mene Grande, Venezuela, se sintió en el Caribe colombiano',
   pais: 'Internacional',
   resumen: 'Un sismo superficial de magnitud 6,1 se registró el 24 de septiembre de 2025 en Mene Grande, estado Zulia, Venezuela. El movimiento telúrico alcanzó intensidad instrumental VIII y fue percibido en varias ciudades del Caribe, incluyendo Puerto Colombia.',
+  imagen_portada: '/noticias/sismo-mene-grande-venezuela-2025-09-24.jpg',
+  imagen: '/noticias/sismo-mene-grande-venezuela-2025-09-24.jpg',
+  credito_imagen: 'Tomado del sitio web del Servicio Geológico Colombiano',
   contenido: [
     'El Servicio Geológico Colombiano reportó que un sismo de magnitud 6,1 se presentó el 24 de septiembre de 2025 a las 17:21 hora local, con epicentro en Mene Grande, estado Zulia, Venezuela. El evento fue clasificado como superficial y registrado con una intensidad instrumental de VIII en la escala Macrosísmica Europea (EMS-98).',
     'El movimiento telúrico se sintió en municipios cercanos como Bachaquero, San Timoteo y Tía Juana, en el estado Zulia, y alcanzó también zonas del Caribe colombiano. En Puerto Colombia, Atlántico, residentes reportaron haber percibido el temblor con fuerza, especialmente en edificios de varios pisos.',
@@ -222,7 +227,6 @@ const noticiasRaw: NoticiaRaw[] = [
   ],
   etiquetas: ['colombia', 'venezuela', 'sismo', 'servicio geologico colombiano'],
   fuente: { nombre: 'Servicio Geológico Colombiano', url: 'https://www.sgc.gov.co' },
-  credito_imagen: 'Noticias Neutrales',
   consecutivo_unico: '20250924-01'
 },
 {
@@ -237,7 +241,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En plataformas como X, múltiples ciudadanos replicaron que el discurso de Petro no fue una campaña electoral sino un acto de dignidad. Comentarios destacaron que el presidente expresó lo que muchos no se atreven a decir sobre la situación en Gaza, la relación con Estados Unidos y la lucha contra el narcotráfico.',
     'La controversia refleja la polarización entre medios y audiencias frente a la política exterior del mandatario saliente. Mientras unos enmarcan sus palabras en clave electoral, otros lo ven como una voz necesaria para llamar la atención internacional sobre conflictos y violaciones de derechos humanos en curso.'
   ],
-  etiquetas: ['internacional', 'gustavo petro', 'estados unidos', 'donald trump', 'medios', 'politica','destacados'],
+  etiquetas: ['internacional', 'gustavo petro', 'estados unidos', 'donald trump', 'medios', 'politica'],
   fuente: { nombre: 'Cambio', url: 'https://cambiocolombia.com/poder/articulo' },
   url_fuente: 'https://x.com/estoescambio/status/197080895160933329'
 },
@@ -268,7 +272,7 @@ const noticiasRaw: NoticiaRaw[] = [
   consecutivo_unico: '20250924-03'
 },
 {
-  id: 'como-ayunaar-bien-dr-carlos-jaramillo-2025-09-24',
+  id: 'como-ayunar-bien-dr-carlos-jaramillo-2025-09-24',
   fecha: '2025-09-24',
   titulo: 'Cómo ayunar bien? - por el Dr. Carlos Jaramillo',
   pais: 'Colombia',
@@ -286,7 +290,7 @@ const noticiasRaw: NoticiaRaw[] = [
     
     'La hidratación es un pilar fundamental, por lo que se sugiere incluir electrolitos como sodio, potasio y magnesio para prevenir síntomas de deshidratación. Finalmente, al romper el ayuno, se aconseja hacerlo con alimentos ricos en fibra, proteínas y grasas saludables —como vegetales, aguacate o caldo de hueso— para minimizar picos de glucosa e insulina.'
   ],
-  etiquetas: ['salud', 'nutrición', 'alimentación', 'ayuno','destacados'],
+  etiquetas: ['salud', 'nutrición', 'alimentación', 'ayuno'],
   fuente: { nombre: 'Dr. Carlos Jaramillo', url: 'https://www.youtube.com/watch?v=0hcaYRg9pL8' },
   consecutivo_unico: '20250924-01'
 },
@@ -389,10 +393,10 @@ const noticiasRaw: NoticiaRaw[] = [
     'El presidente insistió en que no existe un mercado capaz de frenar por sí solo la expansión de los combustibles fósiles y llamó a la regulación global del capital. Señaló que Naciones Unidas se equivoca al creer que los bancos y la competencia financiera resolverán el problema, cuando en realidad “el capital siempre invertirá en lo fósil si da más ganancia”.',
     'Finalmente, hizo un llamado a la comunidad internacional para detener tanto el genocidio en Gaza como la crisis climática. Según Petro, la COP 30 será la última oportunidad para decidir colectivamente un cambio profundo en el modelo económico y social: “Nos quedan diez años para cambiar el mundo”.'
   ],
-  etiquetas: ['gustavo petro', 'politica', 'estados unidos', 'colombia', 'petróleo', 'economía', 'clima','destacado'],
+  etiquetas: ['gustavo petro', 'politica', 'estados unidos', 'colombia', 'petróleo', 'economía', 'clima','destacados','portada'],
   fuente: 'Naciones Unidas',
   url_fuente: 'https://www.youtube.com/watch?v=Lq8n2pLv_pQ',
-  imagen: '/noticias/dialogo-financiacion-climatica-onu-petro-2025-09-22.jpg',
+  imagen_portada: '/noticias/dialogo-financiacion-climatica-onu-petro-2025-09-22.jpg',
 
   consecutivo_unico: '20250922-01'
 },

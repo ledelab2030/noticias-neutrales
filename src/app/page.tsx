@@ -87,10 +87,10 @@ export default function HomePage() {
             {/* Hero grande */}
             <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
               <Link href={`/noticias/${hero.id}`} className="group block">
-                {hero.imagen ? (
+                {(hero.imagen_portada ?? hero.imagen) ? (
                   <div className="relative aspect-[16/9] w-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
                     <Image
-                      src={hero.imagen}
+                      src={(hero.imagen_portada ?? hero.imagen)!}
                       alt={hero.titulo}
                       fill
                       priority
@@ -100,7 +100,7 @@ export default function HomePage() {
                   </div>
                 ) : null}
 
-                <div className={hero.imagen ? "p-5" : "p-6"}>
+                <div className={(hero.imagen_portada ?? hero.imagen) ? "p-5" : "p-6"}>
                   <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
                     <span className="inline-flex items-center rounded-full border px-2 py-0.5 dark:border-gray-700">
                       Destacado
@@ -174,14 +174,14 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {noticiasGrid.map((n) => (
             <article key={n.id} className="flex flex-col">
-              {n.imagen && (
+              {(n.imagen_portada ?? n.imagen) && (
                 <Link
                   href={`/noticias/${n.id}`}
                   className="group block rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800"
                 >
-                  <div className="relative aspect-[16/9] w-full">
+                  <div className="relative aspect-[16/9] w-full bg-gray-100 dark:bg-gray-800">
                     <Image
-                      src={n.imagen}
+                      src={(n.imagen_portada ?? n.imagen)!}
                       alt={n.titulo}
                       fill
                       className="object-cover transition-transform group-hover:scale-[1.01]"
