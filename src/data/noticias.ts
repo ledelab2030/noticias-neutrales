@@ -68,6 +68,39 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'milagro-barranquillero-desigualdad-2025-09-29-es',
+  fecha: '2025-09-29',
+  titulo: 'El “milagro barranquillero” dejó por fuera a los pobres, según análisis de Laura Ardila en El Espectador',
+  pais: 'Colombia',
+  resumen: 'Un análisis de la periodista Laura Ardila Arrieta en El Espectador plantea que el modelo de desarrollo de Barranquilla, conocido como “milagro barranquillero”, ha priorizado la modernización urbana y el embellecimiento de la ciudad, pero ha excluido a las comunidades más pobres y profundizado la desigualdad.',
+  etiquetas: ['colombia', 'barranquilla', 'desarrollo urbano', 'desigualdad', 'laura ardila', 'el espectador'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/opinion/columnistas/laura-ardila-arrieta/el-milagro-barranquillero-dejo-por-fuera-a-los-pobres/' },
+  url_fuente: 'https://www.elespectador.com/opinion/columnistas/laura-ardila-arrieta/el-milagro-barranquillero-dejo-por-fuera-a-los-pobres/',
+  credito_imagen: 'El Espectador',
+  imagen: '/noticias/milagro-barranquillero-2025-09-29.jpg',
+  consecutivo_unico: '20250929-01',
+  idioma_original: 'es',
+  contenido: [
+   'Uno de los ejes centrales de su análisis es la brecha social que se mantiene. Según Ardila, “la ciudad bonita y atractiva para la inversión internacional se construyó dejando por fuera a los pobres, que siguen padeciendo precariedades en barrios periféricos sin soluciones estructurales”. La autora sostiene que los logros visibles contrastan con realidades invisibilizadas en los indicadores de pobreza.',
+  ` <figure class="my-4">
+  <img 
+    src="/noticias/Calle21-barrio-rebolo-Foto-Valentina-Bolano.jpg" 
+    alt="Calle 21 en el barrio Rebolo, Barranquilla" 
+    class="rounded-xl shadow-sm mx-auto"
+  />
+  <figcaption class="text-sm text-gray-500 text-center mt-1">
+    Barrio Rebolo. Foto: Valentina Bolaño. Tomado de Semanario Voz "Barranquilla, entre la opulencia y la pobreza"
+  </figcaption>
+    </figure>
+ `,
+    'En otro apartado, la columnista advierte que las prioridades del modelo han favorecido proyectos de alto impacto mediático sobre las necesidades básicas de la población. En sus palabras: “el milagro barranquillero privilegió la estética urbana antes que garantizar derechos como vivienda, empleo y servicios públicos de calidad para todos sus habitantes”.',
+    'El artículo también enfatiza en la falta de participación comunitaria en la definición de las obras ejecutadas. Ardila señala: “las decisiones sobre el rumbo de la ciudad se han tomado desde arriba, sin incorporar la voz de las comunidades que más sufren las consecuencias de la desigualdad”. Con ello, pone en cuestión la sostenibilidad social del modelo adoptado.',
+    'Si bien la narrativa oficial proyecta a Barranquilla como ejemplo de transformación, los datos de pobreza multidimensional, informalidad laboral y déficit habitacional muestran que los beneficios no alcanzan a toda la población. La columnista recuerda que, a pesar de los reconocimientos nacionales e internacionales, el éxito urbano no necesariamente se traduce en justicia social.',
+    'El texto concluye que el verdadero reto de la ciudad consiste en replantear sus políticas públicas para que la inversión en obras no sea incompatible con la inclusión. Según Ardila, Barranquilla necesita avanzar hacia un modelo que combine modernización con equidad, “porque de nada sirve tener una ciudad reluciente si buena parte de su gente sigue excluida del bienestar”.',
+    'De esta forma, el análisis aporta un llamado a revisar críticamente la idea de “milagro barranquillero”, recordando que un desarrollo urbano integral debe medir su éxito no solo en el cemento y los parques, sino en la capacidad de mejorar las condiciones de vida de quienes históricamente han estado al margen.'
+  ]
+},
+{
   id: 'comparativo-azucar-drogas-costos-salud-2025-09-28-es',
   fecha: '2025-09-28',
   titulo: 'La guerra contra las drogas ilícitas y el paralelo con los alimentos no saludables',
