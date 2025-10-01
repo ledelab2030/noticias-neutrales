@@ -68,6 +68,29 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'us-government-shutdown-trump-democrats-meeting-2025-09-29-en',
+  fecha: '2025-09-29',
+  titulo: 'Donald Trump Meets with Democratic Leaders as Federal Government Shutdown Looms',
+  pais: 'United States',
+  resumen: 'President Donald Trump met with Democratic leaders in Washington as the deadline to approve funding and avoid a federal government shutdown approaches. The meeting aimed to narrow differences, though key disputes over spending remain unresolved.',
+  etiquetas: ['united states', 'politics', 'donald trump', 'congress', 'federal government', 'budget'],
+  fuente: { nombre: 'The Wall Street Journal', url: 'https://www.wsj.com/politics/policy/government-shutdown-2025-democrats-trump-meeting-ec8e5d54' },
+  url_fuente: 'https://www.wsj.com/politics/policy/government-shutdown-2025-democrats-trump-meeting-ec8e5d54',
+  imagen: '/noticias/colin-lloyd-ml10EikO52E-unsplash.jpg',
+  credito_imagen: 'Foto de <a href="https://unsplash.com/@onthesearchforpineapples">Colin Lloyd</a> en <a href="https://unsplash.com/photos/ml10EikO52E">Unsplash</a>',
+  consecutivo_unico: '20250929-01',
+  idioma_original: 'en',
+  traducciones: {
+    es: 'eeuu-gobierno-cierre-reunion-trump-democratas-2025-09-29-es'
+  },
+  contenido: [
+    'U.S. President Donald Trump met on Monday in Washington with Democratic congressional leaders to discuss budget negotiations as the risk of a federal government shutdown grows.',
+    'The meeting took place just days before current funding expires, which would suspend many administrative operations and leave hundreds of thousands of federal employees without pay. According to The Wall Street Journal, the session sought to identify potential compromises to pass new spending measures.',
+    'Despite the talks, differences between the White House and Democratic lawmakers remain over key issues such as defense spending levels, social programs, and infrastructure priorities. Representatives from both sides acknowledged the discussion remains ongoing but reported no concrete breakthroughs.',
+    'The prospect of a shutdown has raised concerns across federal agencies and economic sectors. Analysts warn that a prolonged suspension would disrupt basic services and undermine market confidence. Congress faces limited time to reach a deal that prevents broader harm to the U.S. economy.'
+  ]
+},
+{
   id: 'milagro-barranquillero-desigualdad-2025-09-29-es',
   fecha: '2025-09-29',
   titulo: 'El “milagro barranquillero” dejó por fuera a los pobres, según análisis de Laura Ardila en El Espectador',
@@ -76,7 +99,7 @@ const noticiasRaw: NoticiaRaw[] = [
   etiquetas: ['colombia', 'barranquilla', 'desarrollo urbano', 'desigualdad', 'laura ardila', 'el espectador'],
   fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/opinion/columnistas/laura-ardila-arrieta/el-milagro-barranquillero-dejo-por-fuera-a-los-pobres/' },
   url_fuente: 'https://www.elespectador.com/opinion/columnistas/laura-ardila-arrieta/el-milagro-barranquillero-dejo-por-fuera-a-los-pobres/',
-  credito_imagen: 'El Espectador',
+  credito_imagen: 'Ecoparque Ciénaga de Mallorquín - Foto tomada por Leonardo De la Hoz Borrego',
   imagen: '/noticias/milagro-barranquillero-2025-09-29.jpg',
   consecutivo_unico: '20250929-01',
   idioma_original: 'es',
