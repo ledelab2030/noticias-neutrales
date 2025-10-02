@@ -79,7 +79,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Dr. Rosero cuestiona nueva Ruta Integral de Obesidad en Cali',
   pais: 'Colombia',
   resumen: 'La Alcaldía de Cali anunció el lanzamiento de la primera Ruta Integral e Integrada de Atención de Obesidad en el país. El endocrinólogo Rosero advirtió que, aunque parece un avance, puede derivar en mayor medicalización y gasto público sin atacar las causas reales del problema.',
-  etiquetas: ['colombia', 'salud', 'cali', 'obesidad', 'politica-publica'],
+  etiquetas: ['colombia', 'salud', 'cali', 'obesidad', 'politica-publica','portada'],
   fuente: { nombre: 'Cuenta del Dr. Rosero en X', url: 'https://x.com/endocrinorosero/status/1973722735919476770' },
   url_fuente: 'https://www.cali.gov.co/boletines/publicaciones/188939/cali-se-convierte-en-el-primer-distrito-en-tener-una-ruta-integral-e-integrada-de-atencion-de-obesidad/',
   consecutivo_unico: '20251002-01',
