@@ -15,7 +15,13 @@ type PageProps = {
   searchParams?: Promise<{ auto?: string }>
 }
 
-type Noticia = NoticiaT
+// ⬇️ Extiendo el tipo para que compile n.ubicacion / imagen_portada / destacada
+type Noticia = NoticiaT & {
+  ubicacion?: { nombre: string; coordenadas?: string }
+  imagen_portada?: string
+  destacada?: boolean
+}
+
 const LANGS: Lang[] = ["es", "en", "de"]
 const ALL_LANGS: Lang[] = ["es", "en", "de"]
 const baseUrl = "https://www.ledelab.co"
@@ -131,10 +137,9 @@ export default async function Page({ params, searchParams }: PageProps) {
   // Recalcular disponibles / instantáneas
   const baseNow = baseIdSinLang(n.id)
   const existeNow = (l: Lang) => (noticias as Noticia[]).some((x) => x.id === idConLang(baseNow, l))
-  const disponibles = LANGS.filter((l) => l !== langActual && existeNow(l))
-  const noGuardadas = LANGS.filter((l) => l !== langActual && !existeNow(l))
+  const disponibles = ["es", "en", "de"].filter((l) => l !== langActual && existeNow(l as Lang)) as Lang[]
+  const noGuardadas = ["es", "en", "de"].filter((l) => l !== langActual && !existeNow(l as Lang)) as Lang[]
 
-  // Para "instantánea" usamos la ruta actual y solo agregamos ?auto=xx
   const pathForInstant = (currentId: string, to: Lang) => `/noticias/${currentId}?auto=${to}`
   const isInstant = isValidLang(auto) || !existeNow(langActual)
 
@@ -149,7 +154,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         <span>actualidad</span>
       </div>
 
-      {/* 🔤 Idiomas antes del título */}
+      {/* 🔤 Idiomas */}
       <div className="mb-4 rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex flex-wrap items-center gap-2">
         <span className="opacity-70">Original en:</span>
         <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium">
@@ -157,9 +162,8 @@ export default async function Page({ params, searchParams }: PageProps) {
         </span>
 
         <span className="mx-2 opacity-50">·</span>
-
         <span className="opacity-70">Disponible en:</span>
-        {/* Hermanas reales */}
+
         {disponibles.map((l) => (
           <Link
             key={l}
@@ -169,13 +173,12 @@ export default async function Page({ params, searchParams }: PageProps) {
             {nombreLang(l)}
           </Link>
         ))}
-        {/* Instantáneas (misma ruta + ?auto=) */}
+
         {noGuardadas.map((l) => (
           <Link
             key={`auto-${l}`}
             href={pathForInstant(n.id, l)}
             className="text-blue-600 hover:text-blue-800 underline underline-offset-2"
-            title="Generar versión instantánea (traducción automática)"
           >
             {nombreLang(l)} (instantánea)
           </Link>
@@ -209,7 +212,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         </figure>
       )}
 
-      {/* Video embebido */}
+      {/* Video */}
       {n.video && (
         <div className="mt-6 mb-6">
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-sm">
@@ -232,8 +235,38 @@ export default async function Page({ params, searchParams }: PageProps) {
       {/* Meta línea */}
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400">
         <span>{n.fecha}</span>
-        {n.pais && (<><span className="opacity-60">·</span><span>{n.pais}</span></>)}
-        {n.fuente && (<><span className="opacity-60">·</span><span>{fuenteNombre(n.fuente)}</span></>)}
+        {n.pais && (
+          <>
+            <span className="opacity-60">·</span>
+            <span>{n.pais}</span>
+          </>
+        )}
+
+        {/* 📍 Ubicación */}
+        {n.ubicacion && (
+          <>
+            <span className="opacity-60">·</span>
+            {n.ubicacion.coordenadas ? (
+              <a
+                href={`https://www.google.com/maps?q=${encodeURIComponent(n.ubicacion.coordenadas)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                📍 {n.ubicacion.nombre}
+              </a>
+            ) : (
+              <span>📍 {n.ubicacion.nombre}</span>
+            )}
+          </>
+        )}
+
+        {n.fuente && (
+          <>
+            <span className="opacity-60">·</span>
+            <span>{fuenteNombre(n.fuente)}</span>
+          </>
+        )}
         {n.url_fuente && (
           <>
             <span className="opacity-60">·</span>

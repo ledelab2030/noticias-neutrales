@@ -30,7 +30,13 @@ export type NoticiaRaw = {
   // NUEVO: miniatura para home/listados
   imagen_portada?: string    
   credito_imagen_portada?: string
-
+  
+  // NUEVO: ubicación (nombre + coordenadas)
+  ubicacion?: {
+    nombre: string
+    coordenadas?: string
+  }
+  
   // 🔤 Multi-idioma
   idioma_original?: 'es' | 'en' | 'de'
   traducciones?: {
@@ -68,6 +74,100 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'ruta-integral-obesidad-cali-reacciones-rosero-2025-10-02-es',
+  fecha: '2025-10-02',
+  titulo: 'Dr. Rosero cuestiona nueva Ruta Integral de Obesidad en Cali',
+  pais: 'Colombia',
+  resumen: 'La Alcaldía de Cali anunció el lanzamiento de la primera Ruta Integral e Integrada de Atención de Obesidad en el país. El endocrinólogo Rosero advirtió que, aunque parece un avance, puede derivar en mayor medicalización y gasto público sin atacar las causas reales del problema.',
+  etiquetas: ['colombia', 'salud', 'cali', 'obesidad', 'politica-publica'],
+  fuente: { nombre: 'Cuenta del Dr. Rosero en X', url: 'https://x.com/endocrinorosero/status/1973722735919476770' },
+  url_fuente: 'https://www.cali.gov.co/boletines/publicaciones/188939/cali-se-convierte-en-el-primer-distrito-en-tener-una-ruta-integral-e-integrada-de-atencion-de-obesidad/',
+  consecutivo_unico: '20251002-01',
+  idioma_original: 'es',
+  imagen: '/noticias/foto-endocrino-rosero.jpg',
+  credito_imagen: 'Dr. Rosero / https://www.endocrinorosero.com/',
+  contenido: [
+    'La Alcaldía de Santiago de Cali presentó oficialmente la primera Ruta Integral e Integrada de Atención de Obesidad del país. Según el boletín oficial, la iniciativa busca ofrecer acompañamiento médico, psicológico y nutricional a la población, en coordinación con entidades de salud pública.',
+    
+    'El anuncio se realizó en alianza con el laboratorio Novo Nordisk, productor de algunos de los medicamentos más costosos para el tratamiento de la obesidad. El programa fue presentado con el respaldo de la Secretaría de Salud del distrito, como parte de los esfuerzos para enfrentar una de las principales enfermedades crónicas que afecta a la población.',
+    
+    'El endocrinólogo Rosero reaccionó a este lanzamiento señalando que la obesidad no debe entenderse solo como una enfermedad sino como el síntoma de un sistema alimentario dominado por ultraprocesados y marketing agresivo. “Si no cerramos la fábrica de obesidad, cualquier estrategia se limitará a medicar”, afirmó en su cuenta oficial de X.',
+    
+    'El especialista advirtió además sobre los riesgos de que laboratorios privados, con intereses directos en la venta de fármacos, influyan en la definición de la política pública en obesidad. Según explicó, este enfoque puede traducirse en más diagnósticos, mayor indicación de medicamentos y un aumento del gasto público sin atacar las causas estructurales del problema.',
+    
+    'Rosero concluyó que la ciencia y la política deben servir a la salud de la población y no a los intereses de la industria. De lo contrario, advirtió, se corre el riesgo de tener sistemas de salud en crisis, una población medicalizada y una obesidad que persiste intacta. Más información sobre su trabajo en https://www.endocrinorosero.com/ y en sus redes sociales: @endocrinorosero.'
+  ]
+},
+{
+  id: 'anden-bloqueado-air-e-villa-santos-2025-09-27-es',
+  fecha: '2025-09-27',
+  titulo: 'Lo que aprendí al hablar con los podadores de Air-e en Villa Santos',
+  pais: 'Colombia',
+  resumen: 'Mientras caminaba por el barrio Villa Santos en Barranquilla encontré bloqueado el andén por ramas dejadas por una cuadrilla de Air-e. La situación me obligó a entrar a la vía y aprovechar para conversar con los trabajadores sobre la importancia de pensar en el peatón y la sostenibilidad.',
+  etiquetas: ['barranquilla', 'espacio publico', 'seguridad vial', 'arborizacion', 'el caminante'],
+  imagen: '/noticias/anden-bloqueado-air-e-villa-santos-2025-09-27.jpg',
+  credito_imagen: 'Foto tomada durante el recorrido de El Caminante',
+  ubicacion: {
+    nombre: 'Barrio Villa Santos, Barranquilla',
+    coordenadas: '11.012968512396997,-74.83655938141438'
+  },
+  contenido: [
+    'El sábado 27 de septiembre, mientras recorría a pie el barrio Villa Santos en Barranquilla, me encontré con una situación que ilustra los retos de nuestra ciudad en materia de espacio público: una cuadrilla de la empresa Air-e realizaba labores de poda y había dejado grandes ramas sobre el andén, bloqueando completamente el paso.',
+    'Ante el obstáculo tuve que desviarme hacia la calzada vehicular, exponiéndome al riesgo de que un automóvil me golpeara. Decidí detenerme y hablar con los trabajadores, explicándoles que, aunque la cuadrilla de recolección de ramas estuviera cerca, bastaba con unos segundos de exposición para que ocurriera un accidente.',
+    'Les señalé que mover las ramas a un lado del andén habría sido suficiente para mantener la seguridad de quienes caminamos, sin afectar su labor. Fue una oportunidad para recordar la importancia de ponerse en el lugar del otro, en este caso del peatón, y de comprender que pequeños gestos de consideración pueden prevenir tragedias.',
+    'Este episodio no solo refleja las dificultades de gestión del arbolado urbano y el cableado eléctrico, sino que también nos invita a pensar en la educación ciudadana y en la sostenibilidad. Caminar por la ciudad debería ser seguro y agradable, y para lograrlo se necesita tanto infraestructura adecuada como conciencia de cada actor en el espacio público.'
+  ],
+  idioma_original: 'es'
+},
+{
+  id: 'global-sumud-flotilla-interceptada-israel-2025-10-01-es',
+  fecha: '2025-10-01',
+  titulo: 'Israel intercepta la Global Sumud Flotilla con 497 activistas de 46 países rumbo a Gaza',
+  pais: 'Internacional',
+  resumen: 'La Global Sumud Flotilla, integrada por 497 activistas de 46 países que transportaban ayuda humanitaria hacia Gaza, fue interceptada por Israel en el Mediterráneo. Políticos como Camilo Romero denunciaron el hecho como un ataque contra una delegación internacional civil.',
+  etiquetas: ['gaza', 'israel', 'palestina', 'flotilla', 'derechos humanos', 'bloqueo'],
+  fuente: { nombre: 'AP News', url: 'https://apnews.com/article/5c9c5e9baa4fc893a0f6e6eef69b280c' },
+  url_fuente: 'https://apnews.com/article/5c9c5e9baa4fc893a0f6e6eef69b280c',
+  imagen: '/noticias/global-sumud-flotilla-2025-10-01.jpg',
+  credito_imagen: 'Global Sumud Flotilla. Crédito: The Associated Press',
+  consecutivo_unico: '20251001-01',
+  idioma_original: 'es',
+  contenido: [
+    'La Global Sumud Flotilla, una misión civil internacional compuesta por 497 personas de 46 países, fue interceptada por fuerzas israelíes en aguas del Mediterráneo cuando se dirigía hacia Gaza. El convoy buscaba entregar ayuda humanitaria y visibilizar el bloqueo impuesto a la Franja.',
+    
+    'La iniciativa, integrada por médicos, periodistas, activistas y representantes políticos, había zarpado desde diferentes puertos europeos y del norte de África con más de 40 embarcaciones cargadas con alimentos y medicinas. El nombre "Sumud", que en árabe significa perseverancia, simboliza la resistencia de la población palestina ante las restricciones.',
+    
+    'Israel argumenta que mantiene el bloqueo marítimo como medida de seguridad. Sin embargo, organizaciones internacionales y gobiernos como el de España han señalado que la flotilla no representaba una amenaza y que impedir su paso podría constituir una violación del derecho internacional humanitario.',
+    
+    'El político colombiano Camilo Romero denunció públicamente la acción, señalando que Netanyahu "no sólo ataca al pueblo palestino sino a representantes de 46 países". El mensaje fue acompañado de un mapa con la procedencia de los delegados, al que calificó como una "delegación ética de la humanidad".',
+    
+    'Este episodio revive la controversia sobre los límites del bloqueo a Gaza, que ha sido criticado por Naciones Unidas y organizaciones de derechos humanos, al tiempo que abre un nuevo frente de presión diplomática hacia Israel por el trato a una misión civil internacional.',
+    
+    'Fuentes citadas: https://apnews.com/article/5c9c5e9baa4fc893a0f6e6eef69b280c , https://www.theguardian.com/world/2025/oct/01/pro-palestine-flotilla-heading-towards-gaza-harassed-by-israeli-naval-boats , https://globalsumudflotilla.org'
+  ]
+},
+{
+  id: 'barcelona-psg-champions-league-2025-10-01-es',
+  fecha: '2025-10-01',
+  titulo: 'Barcelona y PSG se enfrentan en la Champions League',
+  pais: 'España',
+  resumen: 'El FC Barcelona y el Paris Saint-Germain disputan en el Estadio Olímpico Lluís Companys un partido clave de la fase de grupos de la Liga de Campeones de la UEFA.',
+  etiquetas: ['futbol', 'champions league', 'barcelona', 'psg', 'uefa'],
+  fuente: { nombre: 'El País', url: 'https://elpais.com/deportes/futbol/2025-10-01/barcelona-psg-en-directo-el-partido-de-la-champions-league-en-vivo.html' },
+  url_fuente: 'https://elpais.com/deportes/futbol/2025-10-01/barcelona-psg-en-directo-el-partido-de-la-champions-league-en-vivo.html',
+  imagen: '/noticias/barcelona-psg-champions-2025-10-01.jpg',
+  credito_imagen: 'Crédito imagen: Fabrizio Romano',
+  consecutivo_unico: '20251001-01',
+  idioma_original: 'es',
+  contenido: [
+    'El FC Barcelona y el Paris Saint-Germain se enfrentan este miércoles 1 de octubre en el Estadio Olímpico Lluís Companys, en Barcelona, en un partido correspondiente a la fase de grupos de la Liga de Campeones de la UEFA.',
+    'El encuentro reúne a dos de los equipos más poderosos de Europa, con figuras como Robert Lewandowski en el conjunto azulgrana y Kylian Mbappé en el equipo parisino, en lo que se anticipa como uno de los duelos más atractivos de la jornada.',
+    'Barcelona llega al compromiso después de un inicio sólido en el torneo, mientras que el PSG busca afianzarse en el grupo y confirmar su favoritismo con una victoria como visitante.',
+    'La Champions League 2025-2026 mantiene su formato tradicional de fase de grupos, en el que los dos primeros de cada llave avanzan a octavos de final. Este partido es determinante para la clasificación de ambos equipos hacia la siguiente fase.',
+    'Fuentes citadas: https://www.uefa.com/uefachampionsleague/'
+  ]
+},
+{
   id: 'us-government-shutdown-trump-democrats-meeting-2025-09-29-en',
   fecha: '2025-09-29',
   titulo: 'Donald Trump Meets with Democratic Leaders as Federal Government Shutdown Looms',
@@ -77,7 +177,7 @@ const noticiasRaw: NoticiaRaw[] = [
   fuente: { nombre: 'The Wall Street Journal', url: 'https://www.wsj.com/politics/policy/government-shutdown-2025-democrats-trump-meeting-ec8e5d54' },
   url_fuente: 'https://www.wsj.com/politics/policy/government-shutdown-2025-democrats-trump-meeting-ec8e5d54',
   imagen: '/noticias/colin-lloyd-ml10EikO52E-unsplash.jpg',
-  credito_imagen: 'Foto de <a href="https://unsplash.com/@onthesearchforpineapples">Colin Lloyd</a> en <a href="https://unsplash.com/photos/ml10EikO52E">Unsplash</a>',
+  credito_imagen: 'Foto de Colin Lloyd en https://unsplash.com/photos/ml10EikO52E',
   consecutivo_unico: '20250929-01',
   idioma_original: 'en',
   traducciones: {
@@ -87,8 +187,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'U.S. President Donald Trump met on Monday in Washington with Democratic congressional leaders to discuss budget negotiations as the risk of a federal government shutdown grows.',
     'The meeting took place just days before current funding expires, which would suspend many administrative operations and leave hundreds of thousands of federal employees without pay. According to The Wall Street Journal, the session sought to identify potential compromises to pass new spending measures.',
     'Despite the talks, differences between the White House and Democratic lawmakers remain over key issues such as defense spending levels, social programs, and infrastructure priorities. Representatives from both sides acknowledged the discussion remains ongoing but reported no concrete breakthroughs.',
-    'The prospect of a shutdown has raised concerns across federal agencies and economic sectors. Analysts warn that a prolonged suspension would disrupt basic services and undermine market confidence. Congress faces limited time to reach a deal that prevents broader harm to the U.S. economy.'
-  ]
+    'The prospect of a shutdown has raised concerns across federal agencies and economic sectors. Analysts warn that a prolonged suspension would disrupt basic services and undermine market confidence. Congress faces limited time to reach a deal that prevents broader harm to the U.S. economy.' ]
 },
 {
   id: 'milagro-barranquillero-desigualdad-2025-09-29-es',
@@ -199,14 +298,14 @@ const noticiasRaw: NoticiaRaw[] = [
 {
   id: 'el-caminante-acera-calle-84-42d-barranquilla-2025-09-25',
   fecha: '2025-09-25',
-  titulo: 'El Caminante: diversidad de pisos en la acera de la calle 84 con carrera 42D en Barranquilla',
+  titulo: 'Lo que observé al caminar por la acera de una de las calles del Barrio Nuevo Horizonte de Barranquilla',
   pais: 'colombia',
   resumen: 'Recorrido por la acera de la calle 84 con carrera 42D en Barranquilla, donde se evidencian diferentes tipos de pisos, algunos poco adecuados para andenes por no ser antideslizantes.',
   imagen_portada: '/noticias/andenes-cl84-42d-portada.jpg',
   video: 'https://www.youtube.com/embed/hBdx8tXYYAo',
   credito_video: 'Proyecto El Caminante',
   contenido: [
-    'Como parte del proyecto El Caminante, se realizó un recorrido por una de las aceras de la calle 84 con carrera 42D de Barranquilla. En este trayecto se observa la diversidad de pisos instalados, que van desde el acabado corriente sin decoración hasta plaquetas y baldosas más vistosas.',
+    'Como parte del proyecto El Caminante, realicé un recorrido por una de las aceras de la calle 84 con carrera 42D de Barranquilla. En este trayecto observé la diversidad de pisos instalados, que van desde el acabado corriente sin decoración hasta plaquetas y baldosas más vistosas.',
     'El piso corriente resulta ser el más funcional, mientras que otros materiales, aunque más decorativos, no están diseñados para uso en andenes, pues carecen de propiedades antideslizantes.',
     'En muchos casos, los propietarios sustituyen los pisos buscando mejorar la presentación de sus fachadas o reparar daños, probablemente con buena intención, pero generando riesgos para los peatones. Estas superficies pueden volverse resbaladizas con facilidad.',
     'La situación representa un peligro para quienes transitan la zona, especialmente en días de lluvia o cuando se riega el jardín, como quedó registrado en el video al final del recorrido.'
@@ -214,7 +313,11 @@ const noticiasRaw: NoticiaRaw[] = [
   etiquetas: ['colombia', 'el caminante', 'barranquilla', 'seguridad'],
   fuente: 'LedeLab',
   url_fuente: 'https://youtube.com/shorts/hBdx8tXYYAo?si=249P-PNoSw5K-LzN',
-  consecutivo_unico: '20250925-01'
+  consecutivo_unico: '20250925-01',
+  ubicacion: {
+    nombre: 'Barrio Nuevo Horizonte, Barranquilla',
+    coordenadas: '10.994852853309174,-74.82344863394042'
+  }
 },
 {
   id: 'margarita-rosa-no-debe-explicacion-2025-09-25',
@@ -1448,34 +1551,27 @@ const noticiasRaw: NoticiaRaw[] = [
 {
   id: 'educacion-vial-colegio-aleman-barranquilla-2025-09-17',
   fecha: '2025-09-17',
-  titulo: 'Un estudiante disfrazado de cebra enseña a respetar al peatón en el Colegio Alemán',
+  titulo: 'Lo que viví al ver una “cebra” en el Colegio Alemán de Barranquilla',
   pais: 'colombia',
-  resumen: 'Un alumno del Colegio Alemán de Barranquilla participa como “cebra” en una iniciativa educativa para fomentar el respeto por los cruces peatonales y promover la autonomía infantil en la movilidad urbana.',
+  resumen: 'Un alumno del Colegio Alemán de Barranquilla participó como “cebra” en una iniciativa educativa para fomentar el respeto por los cruces peatonales y promover la autonomía infantil en la movilidad urbana.',
   imagen: '/noticias/cebra-colegio-aleman.jpg',
   contenido: [
-    'La mañana del 17 de septiembre, un padre de familia que dejaba a su hijo en el Colegio Alemán de Barranquilla presenció una escena inusual: un estudiante vestido de cebra, acompañado por otro con señal de “PARE”, organizaba el cruce peatonal frente a la institución. Esta intervención forma parte de una iniciativa escolar que busca enseñar a los estudiantes y a la comunidad a respetar las cebras y promover la movilidad segura.',
-    
+    'La mañana del 17 de septiembre, al llegar al Colegio Alemán de Barranquilla, presencié una escena inusual: un estudiante vestido de cebra, acompañado por otro con señal de “PARE”, organizaba el cruce peatonal frente a la institución. Esta intervención forma parte de una iniciativa escolar que busca enseñar a los estudiantes y a la comunidad a respetar las cebras y promover la movilidad segura.',
     'El proyecto pedagógico incluye señalización horizontal en diversos puntos del campus para que los niños se acostumbren desde pequeños a caminar con autonomía y usar correctamente los cruces. También promueve que los propios padres y docentes den ejemplo utilizando las cebras para desplazarse, en lugar de cruzar por cualquier parte.',
-
     'A pesar de los esfuerzos, persisten debilidades en la implementación. Algunas demarcaciones están deterioradas y varios conductores —incluidos algunos padres— no respetan los cruces, se detienen encima de ellos o no ceden el paso, lo que pone en riesgo a los peatones. La labor del estudiante disfrazado de cebra recuerda a programas exitosos en ciudades como La Paz (Bolivia) y Quito (Ecuador), donde estas figuras han humanizado el tránsito y fomentado una cultura de respeto.',
-
-    'La experiencia del Colegio Alemán se inspira en el modelo educativo de Alemania, país donde los niños reciben formación vial desde la infancia. A partir de los 6 años se les enseña a ir caminando al colegio de forma independiente, con rutas seguras identificadas por las familias y reforzadas por programas escolares. Es común que se organicen “entrenamientos peatonales” con agentes de policía para que los menores reconozcan señales, aprendan a cruzar calles y entiendan su rol como peatones activos en la ciudad.',
-
-    'Además, a partir de los 9 o 10 años, muchos niños alemanes se preparan para obtener una “Fahrradführerschein” o licencia de conducción de bicicleta. Este certificado se emite tras exámenes teóricos y prácticos que imparten las escuelas en colaboración con la policía local. Los menores aprenden sobre normas de tránsito, prioridades viales, manejo defensivo y comportamiento seguro en el espacio público.',
-
-    'Replicar estas prácticas en ciudades como Barranquilla requeriría más que acciones puntuales en instituciones educativas. Sería necesario un compromiso público sostenido para mejorar la infraestructura peatonal (andén continuo, cebras visibles, pasos seguros), formar a agentes de tránsito con enfoque pedagógico, implementar campañas de educación ciudadana y, sobre todo, transformar la mentalidad colectiva sobre el rol del peatón en el ecosistema urbano.',
-
-    'Algunos dirán que es impensable que esto se dé en Colombia, pero en el peor de los casos se trata de diseñar un plan para que los niños muy pequeños hoy sean la generación que crezca con nuevas costumbres. Dentro de unos 20 años o más podríamos ver los frutos en la cultura ciudadana y en otros aspectos del estilo de vida, con beneficios reales para ellos y para toda la sociedad. Quizá entonces, en lugar de soñar con tener carro, valoren más la felicidad de poder andar a pie en cualquier sitio y a cualquier hora, sin temor.',
-
-    'Fuentes citadas:',
-      '   https://www.fahrschule-123.de/en/categories-of-driving-licence/motorcycles/',
-      '   https://www.kindergesundheit-info.de/themen/sicher-aufwachsen/sicherheit-im-alltag/verkehrssicherheit/'
-
+    'La experiencia del Colegio Alemán se inspira en el modelo educativo de Alemania, país donde los niños reciben formación vial desde la infancia. A partir de los 6 años se les enseña a ir caminando al colegio de forma independiente, con rutas seguras identificadas por las familias y reforzadas por programas escolares.',
+    'Además, a partir de los 9 o 10 años, muchos niños alemanes se preparan para obtener una “Fahrradführerschein” o licencia de conducción de bicicleta, tras exámenes teóricos y prácticos impartidos en colaboración con la policía local.',
+    'Replicar estas prácticas en ciudades como Barranquilla requeriría un compromiso público sostenido para mejorar la infraestructura peatonal, formar agentes de tránsito con enfoque pedagógico, implementar campañas de educación ciudadana y, sobre todo, transformar la mentalidad colectiva sobre el rol del peatón en el ecosistema urbano.',
+    'Algunos dirán que es impensable que esto se dé en Colombia, pero al menos se trata de diseñar un plan para que los niños muy pequeños hoy sean la generación que crezca con nuevas costumbres. Dentro de unos 20 años podríamos ver los frutos en la cultura ciudadana y en otros aspectos del estilo de vida, con beneficios reales para toda la sociedad.'
   ],
   etiquetas: ['colombia', 'movilidad', 'educación', 'el caminante', 'peatones', 'alemania','buenas noticias'],
   fuente: 'Noticias Neutrales',
   url_fuente: '/el-caminante',
-  consecutivo_unico: '20250917-01'
+  consecutivo_unico: '20250917-01',
+  ubicacion: {
+    nombre: 'Colegio Alemán de Barranquilla',
+    coordenadas: '11.015616356929003,-74.86107156994868'
+  }
 },
 {
   id: 'sentencia-exjefes-farc-secuestros-colombia-2025-09-16',
@@ -1904,25 +2000,25 @@ fuente: 'Noticias Neutrales'
 {
   id: 'el-caminante-presentacion-proyecto-2025-09-13',
   fecha: '2025-09-13',
-  titulo: 'El Caminante: una nueva sección para redescubrir el espacio urbano desde los pies',
+  titulo: 'El Caminante: redescubriendo la ciudad a través de mis recorridos a pie',
   pais: 'colombia',
-  resumen: 'El proyecto El Caminante busca visibilizar los retos cotidianos que enfrentan los peatones en ciudades como Barranquilla, y promover una reflexión sobre movilidad, salud y convivencia urbana.',
+  resumen: 'El Caminante surge de mis caminatas por Barranquilla, con la intención de visibilizar los retos cotidianos que enfrentamos al andar y abrir una reflexión sobre movilidad, salud y convivencia urbana.',
   contenido: [
-    'El Caminante es una nueva sección editorial impulsada por Noticias Neutrales para explorar, documentar y reflexionar sobre la experiencia de caminar en entornos urbanos. Su origen nace de recorridos reales por las calles de Barranquilla, donde se evidencian obstáculos, contradicciones e incluso peligros que enfrenta quien decide desplazarse a pie.',
+    'El Caminante es una nueva sección editorial impulsada por Noticias Neutrales que nace de mis recorridos reales por las calles de Barranquilla. En estas caminatas he encontrado obstáculos, contradicciones e incluso peligros que enfrentamos quienes decidimos desplazarnos a pie. A partir de estas experiencias personales quiero explorar, documentar y reflexionar sobre la ciudad vista desde el andén.',
     
-    'Esta iniciativa busca responder preguntas como: ¿Cómo se transforma la ciudad cuando la recorremos a pie? ¿Qué tipo de aceras, sombras o señalización hacen que caminar sea una opción segura y digna? ¿Qué decisiones individuales y colectivas están detrás del abandono del espacio peatonal en favor del vehículo particular?', 
+    'Las preguntas que me acompañan en cada trayecto son simples pero reveladoras: ¿Cómo se transforma la ciudad cuando la recorremos a pie? ¿Qué tipo de aceras, sombras o señalización hacen que caminar sea una opción segura y digna? ¿Qué decisiones individuales y colectivas están detrás del abandono del espacio peatonal en favor del vehículo particular?', 
 
-    'Uno de los casos que inspira esta sección es la transformación de una cuadra barranquillera tras obras de renovación vial. El nuevo piso, aunque visualmente uniforme, resulta riesgoso al volverse resbaladizo con la lluvia. La intervención, pensada tal vez desde la estética o la accesibilidad vehicular, generó nuevas dificultades para los caminantes. Situaciones como estas se repiten con frecuencia en zonas residenciales y comerciales de muchas ciudades colombianas.',
+    'Una de las primeras reflexiones que inspiró esta sección fue observar cómo una obra de renovación vial, pensada quizás desde la estética o la accesibilidad vehicular, terminó generando un piso resbaladizo con la lluvia. Ese detalle, aparentemente menor, se convirtió en un riesgo real para el caminante. Situaciones similares se repiten en zonas residenciales y comerciales de muchas ciudades colombianas.',
 
-    'Más allá de las quejas, El Caminante se propone como una herramienta para el análisis constructivo y pedagógico. A través de notas breves, registros audiovisuales y entrevistas espontáneas, se buscará crear un archivo vivo del espacio urbano desde la perspectiva del peatón. También se abordarán temas culturales, como la relación entre vestimenta formal y resistencia a caminar, o la dependencia del automóvil incluso para trayectos cortos.',
+    'Más allá de las quejas, mi propósito con El Caminante es generar un espacio de análisis constructivo y pedagógico. A través de notas breves, registros audiovisuales y conversaciones espontáneas, espero ir construyendo un archivo vivo del espacio urbano desde la perspectiva del peatón. También quiero abrir debates culturales: por ejemplo, la relación entre vestimenta formal y resistencia a caminar, o la dependencia del automóvil incluso para trayectos cortos.',
 
-    'Esta sección se integrará progresivamente a nuestra categoría de Estilo de Vida, proponiendo caminar no solo como necesidad, sino como posibilidad transformadora: saludable, económica, ecológica y profundamente humana.',
-    
-    'El proyecto se desarrollará inicialmente en Barranquilla, pero aspira a extenderse a otras ciudades de Colombia y América Latina. Se aceptarán colaboraciones de caminantes que deseen documentar su entorno, así como propuestas desde arquitectura, urbanismo, salud pública y cultura ciudadana.',
+    'Caminar no debería ser solo una necesidad, sino también una posibilidad transformadora: saludable, económica, ecológica y profundamente humana. Esa es la invitación que quiero hacer con cada recorrido narrado en esta sección.',
 
+    'El proyecto se desarrolla inicialmente en Barranquilla, pero mi aspiración es que pueda extenderse a otras ciudades de Colombia y América Latina. También está abierto a la colaboración: cualquier caminante que desee documentar su entorno, así como aportes desde arquitectura, urbanismo, salud pública o cultura ciudadana, tendrá un espacio en este ejercicio colectivo de mirar la ciudad desde los pies.'
   ],
-  etiquetas: ['colombia', 'estilo de vida', 'movilidad', 'urbanismo','el caminante'],
+  etiquetas: ['colombia', 'estilo de vida', 'movilidad', 'urbanismo', 'el caminante'],
   fuente: 'Noticias Neutrales',
+  idioma_original: 'es'
 },
 {
   id: 'estonia-exportaciones-importaciones-julio-2025-09-11',

@@ -27,18 +27,37 @@ export default function ImageLightbox({
   const [scale, setScale] = React.useState(1)
   const [pos, setPos] = React.useState({ x: 0, y: 0 })
   const imgRef = React.useRef<HTMLImageElement | null>(null)
-  const dragState = React.useRef<{ dragging: boolean; startX: number; startY: number; origX: number; origY: number }>({
-    dragging: false, startX: 0, startY: 0, origX: 0, origY: 0
+  const dragState = React.useRef<{
+    dragging: boolean
+    startX: number
+    startY: number
+    origX: number
+    origY: number
+  }>({
+    dragging: false,
+    startX: 0,
+    startY: 0,
+    origX: 0,
+    origY: 0,
   })
 
-  const close = () => { setOpen(false); setScale(1); setPos({ x: 0, y: 0 }) }
+  const close = () => {
+    setOpen(false)
+    setScale(1)
+    setPos({ x: 0, y: 0 })
+  }
   const zoomIn = () => setScale((s) => Math.min(s + 0.25, 5))
   const zoomOut = () => setScale((s) => Math.max(s - 0.25, 1))
-  const resetZoom = () => { setScale(1); setPos({ x: 0, y: 0 }) }
+  const resetZoom = () => {
+    setScale(1)
+    setPos({ x: 0, y: 0 })
+  }
 
   // ESC para cerrar
   React.useEffect(() => {
-    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') close() }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') close()
+    }
     if (open) window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
@@ -60,7 +79,7 @@ export default function ImageLightbox({
       startX: e.clientX,
       startY: e.clientY,
       origX: pos.x,
-      origY: pos.y
+      origY: pos.y,
     }
   }
   const onMouseMove: React.MouseEventHandler<HTMLImageElement> = (e) => {
@@ -69,7 +88,9 @@ export default function ImageLightbox({
     const dy = e.clientY - dragState.current.startY
     setPos({ x: dragState.current.origX + dx, y: dragState.current.origY + dy })
   }
-  const endDrag = () => { dragState.current.dragging = false }
+  const endDrag = () => {
+    dragState.current.dragging = false
+  }
 
   return (
     <>
@@ -96,7 +117,9 @@ export default function ImageLightbox({
         </button>
         {(caption || credit) && (
           <figcaption className="mt-2 text-sm text-muted-foreground">
-            {caption}{caption && credit ? ' · ' : ''}{credit ? <em>{credit}</em> : null}
+            {caption}
+            {caption && credit ? ' · ' : ''}
+            {credit ? <em>{credit}</em> : null}
           </figcaption>
         )}
       </figure>
@@ -116,17 +139,42 @@ export default function ImageLightbox({
           >
             {/* Controles */}
             <div className="absolute -top-12 left-0 right-0 mx-auto flex items-center justify-center gap-2">
-              <button onClick={zoomOut} className="px-3 py-1 rounded bg-white/90 hover:bg-white text-black text-sm">−</button>
-              <button onClick={resetZoom} className="px-3 py-1 rounded bg-white/90 hover:bg-white text-black text-sm">100%</button>
-              <button onClick={zoomIn} className="px-3 py-1 rounded bg-white/90 hover:bg-white text-black text-sm">+</button>
-              <button onClick={close} aria-label="Cerrar" className="ml-3 px-3 py-1 rounded bg-white/30 hover:bg-white/40 text-white text-sm">✕</button>
+              <button
+                onClick={zoomOut}
+                className="px-3 py-1 rounded bg-white/90 hover:bg-white text-black text-sm"
+              >
+                −
+              </button>
+              <button
+                onClick={resetZoom}
+                className="px-3 py-1 rounded bg-white/90 hover:bg-white text-black text-sm"
+              >
+                100%
+              </button>
+              <button
+                onClick={zoomIn}
+                className="px-3 py-1 rounded bg-white/90 hover:bg-white text-black text-sm"
+              >
+                +
+              </button>
+              <button
+                onClick={close}
+                aria-label="Cerrar"
+                className="ml-3 px-3 py-1 rounded bg-white/30 hover:bg-white/40 text-white text-sm"
+              >
+                ✕
+              </button>
             </div>
 
             <div className="overflow-hidden rounded-lg">
-              <img
+              {/* Usamos next/image también en el overlay */}
+              <Image
                 ref={imgRef}
                 src={src}
                 alt={alt}
+                width={width}
+                height={height}
+                draggable={false}
                 onMouseDown={onMouseDown}
                 onMouseMove={onMouseMove}
                 onMouseUp={endDrag}
@@ -136,13 +184,18 @@ export default function ImageLightbox({
                   transform: `translate(${pos.x}px, ${pos.y}px) scale(${scale})`,
                   transformOrigin: 'center center',
                 }}
-                draggable={false}
+                // El overlay no necesita optimización extra, pero mantenemos el pipeline
+                // sizes limita ancho en móviles para mejor LCP
+                sizes="95vw"
+                priority={false}
               />
             </div>
 
             {(caption || credit) && (
               <div className="mt-3 text-center text-sm text-white/90">
-                {caption}{caption && credit ? ' · ' : ''}{credit ? <em>{credit}</em> : null}
+                {caption}
+                {caption && credit ? ' · ' : ''}
+                {credit ? <em>{credit}</em> : null}
               </div>
             )}
           </div>
