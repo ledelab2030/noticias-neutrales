@@ -74,18 +74,82 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 {
+  id: 'el-colombiano-uso-desaliento-empleo-2025-10-03-es',
+  fecha: '2025-10-03',
+  titulo: 'El Colombiano usa el término “desaliento” en clave emocional al cubrir cifras de empleo del DANE',
+  pais: 'Colombia',
+  resumen: 'El DANE reportó 8,7 % de desempleo en agosto de 2025, pero El Colombiano destacó el “desaliento” en un sentido emocional, más allá del concepto técnico de la estadística laboral.',
+  etiquetas: ['colombia', 'empleo', 'desempleo', 'dane', 'medios', 'opinion'],
+  fuente: { nombre: 'El Colombiano', url: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940' },
+  url_fuente: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940',
+  consecutivo_unico: '20251003-05',
+  idioma_original: 'es',
+  traducciones: {
+    en: 'el-colombiano-use-discouragement-employment-2025-10-03-en'
+  },
+  contenido: [
+    'El Departamento Administrativo Nacional de Estadística (DANE) informó que en agosto de 2025 la tasa de desempleo en Colombia fue de 8,7 %, una reducción frente al 9,3 % del mismo mes de 2024. También registró un aumento de personas clasificadas como inactivas desalentadas, aquellas que quisieran trabajar pero no buscan empleo activamente.',
+    'El diario El Colombiano, en su cubrimiento de estas cifras, utilizó el titular “razones de desaliento detrás del desempleo y empleo en Colombia”. En este caso, el medio empleó la palabra “desaliento” en un sentido emocional, asociado a malestar social, y no en el sentido técnico definido por el DANE.',
+    'La diferencia es clave: el DANE mide el “desaliento laboral” como una categoría estadística concreta, dentro de la población en edad de trabajar que no busca empleo. En cambio, en el lenguaje periodístico, la expresión puede transmitir una idea subjetiva de desánimo o frustración colectiva.',
+    'El Colombiano, medio que mantiene una postura crítica frente al gobierno del presidente Gustavo Petro, enmarca así la noticia con un énfasis que refuerza la percepción de malestar social más que el hecho técnico de la reducción en la tasa de desempleo.',
+    'Este ejemplo muestra cómo los mismos datos oficiales pueden adquirir matices distintos dependiendo del enfoque editorial. Mientras el DANE comunica cifras técnicas sobre desempleo y participación, la prensa puede optar por un lenguaje que resalte percepciones y estados de ánimo de la población frente a la situación económica.',
+    '---',
+    '<div class="bg-gray-100 border border-gray-300 rounded-xl p-4 my-4 flex items-start">',
+    '  <span class="text-blue-600 text-xl mr-3">ℹ️</span>',
+    '  <div>',
+    '    <h3 class="font-semibold text-gray-800 mb-2">Glosario ciudadano</h3>',
+    '    <p class="mb-2"><b>Desaliento laboral (DANE):</b> categoría técnica que clasifica a personas que quisieran trabajar pero no buscan empleo, ya sea porque creen que no hay vacantes, no cumplen requisitos o han perdido la motivación. Se contabilizan como “inactivos desalentados”.</p>',
+    '    <p class="mb-2"><b>Desaliento (lenguaje común):</b> expresión usada en la vida cotidiana o en la prensa para referirse a un estado de ánimo de frustración o malestar social frente a la situación económica.</p>',
+    '    <p>La diferencia entre ambos usos explica por qué una misma palabra puede significar una cifra estadística en los informes del DANE y una percepción social en la forma en que algunos medios presentan la noticia.</p>',
+    '  </div>',
+    '</div>'
+  ]
+},
+{
+  id: 'el-colombiano-use-discouragement-employment-2025-10-03-en',
+  fecha: '2025-10-03',
+  titulo: 'El Colombiano uses the term “discouragement” emotionally when reporting DANE employment figures',
+  pais: 'Colombia',
+  resumen: 'While DANE reported 8.7 % unemployment in August 2025, El Colombiano highlighted “discouragement” in an emotional sense, beyond the technical concept of labor statistics.',
+  etiquetas: ['colombia', 'employment', 'unemployment', 'dane', 'media', 'opinion'],
+  fuente: { nombre: 'El Colombiano', url: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940' },
+  url_fuente: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940',
+  consecutivo_unico: '20251003-05-en',
+  idioma_original: 'en',
+  traducciones: {
+    es: 'el-colombiano-uso-desaliento-empleo-2025-10-03-es'
+  },
+  contenido: [
+    'The National Administrative Department of Statistics (DANE) reported that in August 2025 the unemployment rate in Colombia was 8.7 %, down from 9.3 % in the same month of 2024. It also recorded an increase in people classified as inactive discouraged, those who would like to work but are not actively looking for a job.',
+    'The newspaper El Colombiano, in its coverage of these figures, used the headline “reasons for discouragement behind unemployment and employment in Colombia”. In this case, the outlet used the word “discouragement” in an emotional sense, linked to social discontent, and not in the technical sense defined by DANE.',
+    'The difference is crucial: DANE measures “labor discouragement” as a specific statistical category within the working-age population that is not seeking employment. In journalistic language, however, the expression can convey a subjective idea of disillusion or frustration.',
+    'El Colombiano, a newspaper traditionally critical of President Gustavo Petro’s government, frames the news with an emphasis that reinforces the perception of social malaise more than the technical fact of the unemployment reduction.',
+    'This example shows how the same official data can acquire different nuances depending on editorial approach. While DANE communicates technical figures on unemployment and participation, the press may opt for language that highlights public perceptions and sentiments about the economic situation.',
+    '---',
+    '<div class="bg-gray-100 border border-gray-300 rounded-xl p-4 my-4 flex items-start">',
+    '  <span class="text-blue-600 text-xl mr-3">ℹ️</span>',
+    '  <div>',
+    '    <h3 class="font-semibold text-gray-800 mb-2">Citizen glossary</h3>',
+    '    <p class="mb-2"><b>Labor discouragement (DANE):</b> a technical category that classifies people who would like to work but are not looking for a job, either because they believe there are no vacancies, they do not meet requirements, or they have lost motivation. Counted as “inactive discouraged”.</p>',
+    '    <p class="mb-2"><b>Discouragement (common usage):</b> an expression used in everyday language or the press to refer to a state of disillusion, frustration or social malaise regarding the economic situation.</p>',
+    '    <p>The difference between both uses explains why the same word can mean a statistical figure in DANE reports and a perception in the way some media present the news.</p>',
+    '  </div>',
+    '</div>'
+  ]
+},
+{
   id: 'ruta-integral-obesidad-cali-reacciones-rosero-2025-10-02-es',
   fecha: '2025-10-02',
-  titulo: 'Dr. Rosero cuestiona nueva Ruta Integral de Obesidad en Cali',
+  titulo: 'Dr. Óscar Rosero cuestiona nueva Ruta Integral de Obesidad en Cali',
   pais: 'Colombia',
   resumen: 'La Alcaldía de Cali anunció el lanzamiento de la primera Ruta Integral e Integrada de Atención de Obesidad en el país. El endocrinólogo Rosero advirtió que, aunque parece un avance, puede derivar en mayor medicalización y gasto público sin atacar las causas reales del problema.',
   etiquetas: ['colombia', 'salud', 'cali', 'obesidad', 'politica-publica','portada'],
-  fuente: { nombre: 'Cuenta del Dr. Rosero en X', url: 'https://x.com/endocrinorosero/status/1973722735919476770' },
+  fuente: { nombre: 'Cuenta del Dr. Óscar Rosero en X', url: 'https://x.com/endocrinorosero/status/1973722735919476770' },
   url_fuente: 'https://www.cali.gov.co/boletines/publicaciones/188939/cali-se-convierte-en-el-primer-distrito-en-tener-una-ruta-integral-e-integrada-de-atencion-de-obesidad/',
   consecutivo_unico: '20251002-01',
   idioma_original: 'es',
   imagen: '/noticias/foto-endocrino-rosero.jpg',
-  credito_imagen: 'Dr. Rosero / https://www.endocrinorosero.com/',
+  credito_imagen: 'Tomada de https://www.endocrinorosero.com/',
   contenido: [
     'La Alcaldía de Santiago de Cali presentó oficialmente la primera Ruta Integral e Integrada de Atención de Obesidad del país. Según el boletín oficial, la iniciativa busca ofrecer acompañamiento médico, psicológico y nutricional a la población, en coordinación con entidades de salud pública.',
     
