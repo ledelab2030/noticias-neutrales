@@ -22,7 +22,6 @@ type Noticia = NoticiaT & {
   destacada?: boolean
 }
 
-const LANGS: Lang[] = ["es", "en", "de"]
 const ALL_LANGS: Lang[] = ["es", "en", "de"]
 const baseUrl = "https://www.ledelab.co"
 
@@ -115,7 +114,7 @@ export default async function Page({ params, searchParams }: PageProps) {
   const langDetectado = detectarLangDesdeId(n.id) ?? (n.idioma_original as Lang) ?? "es"
   let langActual: Lang = langDetectado
 
-  // 🔧 cookies() es Promise en tu proyecto
+  // cookies() puede ser sync/async según setup; con await es seguro en ambos casos
   const cookieStore = await cookies()
   const cookieLang = normalizeToSupported(cookieStore.get("nn_lang")?.value ?? "es")
 
@@ -286,15 +285,31 @@ export default async function Page({ params, searchParams }: PageProps) {
       {Array.isArray(n.contenido) && n.contenido.length > 0 ? (
         <article className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100 prose prose-neutral max-w-none">
           {n.contenido.map((p, i) => {
-            if (typeof p === "string" && p.trim().startsWith("<!--img-->")) {
-              const html = p.replace("<!--img-->", "")
+            const t = (typeof p === "string" ? p : "").trim()
+            if (!t) return null
+
+            // bloques HTML completos => render tal cual (evita <div> dentro de <p>)
+            if (/^<(div|section|article|figure|iframe|table|ul|ol|blockquote|h[1-6])\b/i.test(t)) {
+              return <div key={i} className="my-6" dangerouslySetInnerHTML={{ __html: t }} />
+            }
+
+            // separador simple
+            if (t === "---") {
+              return <hr key={i} className="my-6 border-t border-zinc-200 dark:border-zinc-800" />
+            }
+
+            // marcador ya soportado para HTML crudo
+            if (t.startsWith("<!--img-->")) {
+              const html = t.replace("<!--img-->", "")
               return <div key={i} className="my-6" dangerouslySetInnerHTML={{ __html: html }} />
             }
+
+            // párrafo normal
             return (
               <p
                 key={i}
                 className="whitespace-pre-line"
-                dangerouslySetInnerHTML={{ __html: resaltarLinks(p) }}
+                dangerouslySetInnerHTML={{ __html: resaltarLinks(t) }}
               />
             )
           })}

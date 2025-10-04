@@ -73,69 +73,52 @@ const noticiasRaw: NoticiaRaw[] = [
 
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
+
 {
-  id: 'el-colombiano-uso-desaliento-empleo-2025-10-03-es',
-  fecha: '2025-10-03',
-  titulo: 'El Colombiano usa el término “desaliento” en clave emocional al cubrir cifras de empleo del DANE',
+  id: 'the-economist-uribe-autocracia-reeleccion-colombia-2025-10-04-es',
+  fecha: '2025-10-04',
+  titulo: 'La advertencia de The Economist sobre Uribe en 2009 resuena en el debate actual sobre reelección en América Latina',
   pais: 'Colombia',
-  resumen: 'El DANE reportó 8,7 % de desempleo en agosto de 2025, pero El Colombiano destacó el “desaliento” en un sentido emocional, más allá del concepto técnico de la estadística laboral.',
-  etiquetas: ['colombia', 'empleo', 'desempleo', 'dane', 'medios', 'opinion'],
-  fuente: { nombre: 'El Colombiano', url: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940' },
-  url_fuente: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940',
-  consecutivo_unico: '20251003-05',
-  idioma_original: 'es',
-  traducciones: {
-    en: 'el-colombiano-use-discouragement-employment-2025-10-03-en'
-  },
+  resumen: 'En 2009, el medio británico The Economist alertó sobre los riesgos autoritarios del intento de reelección del entonces presidente Álvaro Uribe. Hoy, esa advertencia vuelve a tener eco en el debate regional sobre los límites del poder y la coherencia democrática.',
+  etiquetas: ['colombia', 'uribe', 'reeleccion', 'petro', 'democracia', 'the economist', 'politica', 'america latina','destacados'],
+  fuente: { nombre: 'The Economist', url: 'https://www.economist.com/the-americas/2009/05/14/uribe-edges-towards-autocracy' },
+  url_fuente: 'https://www.economist.com/the-americas/2009/05/14/uribe-edges-towards-autocracy',
+  idioma_original: 'en',
+  imagen: '/noticias/the-economist-uribe-autocracia-2009.jpg',
+  credito_imagen: 'The Economist',
   contenido: [
-    'El Departamento Administrativo Nacional de Estadística (DANE) informó que en agosto de 2025 la tasa de desempleo en Colombia fue de 8,7 %, una reducción frente al 9,3 % del mismo mes de 2024. También registró un aumento de personas clasificadas como inactivas desalentadas, aquellas que quisieran trabajar pero no buscan empleo activamente.',
-    'El diario El Colombiano, en su cubrimiento de estas cifras, utilizó el titular “razones de desaliento detrás del desempleo y empleo en Colombia”. En este caso, el medio empleó la palabra “desaliento” en un sentido emocional, asociado a malestar social, y no en el sentido técnico definido por el DANE.',
-    'La diferencia es clave: el DANE mide el “desaliento laboral” como una categoría estadística concreta, dentro de la población en edad de trabajar que no busca empleo. En cambio, en el lenguaje periodístico, la expresión puede transmitir una idea subjetiva de desánimo o frustración colectiva.',
-    'El Colombiano, medio que mantiene una postura crítica frente al gobierno del presidente Gustavo Petro, enmarca así la noticia con un énfasis que refuerza la percepción de malestar social más que el hecho técnico de la reducción en la tasa de desempleo.',
-    'Este ejemplo muestra cómo los mismos datos oficiales pueden adquirir matices distintos dependiendo del enfoque editorial. Mientras el DANE comunica cifras técnicas sobre desempleo y participación, la prensa puede optar por un lenguaje que resalte percepciones y estados de ánimo de la población frente a la situación económica.',
-    '---',
-    '<div class="bg-gray-100 border border-gray-300 rounded-xl p-4 my-4 flex items-start">',
-    '  <span class="text-blue-600 text-xl mr-3">ℹ️</span>',
-    '  <div>',
-    '    <h3 class="font-semibold text-gray-800 mb-2">Glosario ciudadano</h3>',
-    '    <p class="mb-2"><b>Desaliento laboral (DANE):</b> categoría técnica que clasifica a personas que quisieran trabajar pero no buscan empleo, ya sea porque creen que no hay vacantes, no cumplen requisitos o han perdido la motivación. Se contabilizan como “inactivos desalentados”.</p>',
-    '    <p class="mb-2"><b>Desaliento (lenguaje común):</b> expresión usada en la vida cotidiana o en la prensa para referirse a un estado de ánimo de frustración o malestar social frente a la situación económica.</p>',
-    '    <p>La diferencia entre ambos usos explica por qué una misma palabra puede significar una cifra estadística en los informes del DANE y una percepción social en la forma en que algunos medios presentan la noticia.</p>',
-    '  </div>',
-    '</div>'
+    'En mayo de 2009, el semanario británico The Economist publicó un artículo titulado “Uribe edges towards autocracy”, en el que advertía que el entonces presidente de Colombia, Álvaro Uribe Vélez, se acercaba a una deriva autoritaria al promover su reelección por tercera vez consecutiva.',
+    'El texto reconocía los avances del gobierno en materia de seguridad y reducción de la violencia, pero alertaba que la insistencia en modificar la Constitución para mantenerse en el poder amenazaba la independencia de las instituciones y el equilibrio entre los poderes públicos. La revista subrayaba que, aunque el respaldo popular era amplio, la concentración del poder personal podía debilitar la democracia.',
+    'Esa advertencia provenía de un medio identificado con posiciones de centro-derecha y de libre mercado, lo que reforzaba su valor histórico: el recordatorio de que los riesgos de la autocracia pueden provenir de cualquier espectro ideológico cuando los liderazgos se personalizan y los controles institucionales se relativizan.',
+    'Dieciséis años después, en plena temporada preelectoral, el debate sobre la reelección vuelve a ocupar espacio en Colombia y en varios países de la región. Desde sectores conservadores se acusa al presidente Gustavo Petro de tener “intenciones reeleccionistas”, pese a que él ha reiterado que no buscará reelegirse ni modificar la Constitución. Al mismo tiempo, varias figuras políticas que apoyaron reelecciones pasadas se presentan hoy como defensoras de la alternancia.',
+    'La comparación evidencia una constante en la política latinoamericana: los intentos de justificar la permanencia en el poder cuando conviene al propio grupo, sin importar la ideología. La advertencia de The Economist en 2009 sigue vigente como una llamada de atención sobre la importancia de la coherencia democrática y la defensa del principio de alternancia que sustenta la estabilidad institucional.'
   ]
 },
 {
-  id: 'el-colombiano-use-discouragement-employment-2025-10-03-en',
-  fecha: '2025-10-03',
-  titulo: 'El Colombiano uses the term “discouragement” emotionally when reporting DANE employment figures',
-  pais: 'Colombia',
-  resumen: 'While DANE reported 8.7 % unemployment in August 2025, El Colombiano highlighted “discouragement” in an emotional sense, beyond the technical concept of labor statistics.',
-  etiquetas: ['colombia', 'employment', 'unemployment', 'dane', 'media', 'opinion'],
-  fuente: { nombre: 'El Colombiano', url: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940' },
-  url_fuente: 'https://www.elcolombiano.com/negocios/razones-desaliento-detras-desemplo-y-empleo-colombia-2025-JJ29574940',
-  consecutivo_unico: '20251003-05-en',
-  idioma_original: 'en',
-  traducciones: {
-    es: 'el-colombiano-uso-desaliento-empleo-2025-10-03-es'
-  },
+  id: '2025-10-04-jaramillo-enjuague-bucal',
+  fecha: '2025-10-04',
+  titulo: 'Carlos Jaramillo advierte sobre los riesgos del enjuague bucal que “mata el 99.9% de las bacterias”',
+  etiquetas: ['estilo de vida', 'Carlos Jaramillo', 'salud', 'microbiota', 'salud oral','portada'],
+  resumen: 'El médico Carlos Jaramillo advierte que los enjuagues bucales que prometen eliminar el 99.9% de las bacterias pueden alterar la microbiota oral, afectar la salud cardiovascular y generar más problemas que beneficios.',
+
   contenido: [
-    'The National Administrative Department of Statistics (DANE) reported that in August 2025 the unemployment rate in Colombia was 8.7 %, down from 9.3 % in the same month of 2024. It also recorded an increase in people classified as inactive discouraged, those who would like to work but are not actively looking for a job.',
-    'The newspaper El Colombiano, in its coverage of these figures, used the headline “reasons for discouragement behind unemployment and employment in Colombia”. In this case, the outlet used the word “discouragement” in an emotional sense, linked to social discontent, and not in the technical sense defined by DANE.',
-    'The difference is crucial: DANE measures “labor discouragement” as a specific statistical category within the working-age population that is not seeking employment. In journalistic language, however, the expression can convey a subjective idea of disillusion or frustration.',
-    'El Colombiano, a newspaper traditionally critical of President Gustavo Petro’s government, frames the news with an emphasis that reinforces the perception of social malaise more than the technical fact of the unemployment reduction.',
-    'This example shows how the same official data can acquire different nuances depending on editorial approach. While DANE communicates technical figures on unemployment and participation, the press may opt for language that highlights public perceptions and sentiments about the economic situation.',
-    '---',
-    '<div class="bg-gray-100 border border-gray-300 rounded-xl p-4 my-4 flex items-start">',
-    '  <span class="text-blue-600 text-xl mr-3">ℹ️</span>',
-    '  <div>',
-    '    <h3 class="font-semibold text-gray-800 mb-2">Citizen glossary</h3>',
-    '    <p class="mb-2"><b>Labor discouragement (DANE):</b> a technical category that classifies people who would like to work but are not looking for a job, either because they believe there are no vacancies, they do not meet requirements, or they have lost motivation. Counted as “inactive discouraged”.</p>',
-    '    <p class="mb-2"><b>Discouragement (common usage):</b> an expression used in everyday language or the press to refer to a state of disillusion, frustration or social malaise regarding the economic situation.</p>',
-    '    <p>The difference between both uses explains why the same word can mean a statistical figure in DANE reports and a perception in the way some media present the news.</p>',
-    '  </div>',
-    '</div>'
-  ]
+    'El médico colombiano Carlos Jaramillo volvió a generar conversación con un video en el que cuestiona el uso indiscriminado de los enjuagues bucales que prometen “eliminar el 99.9% de las bacterias”. Según explica, esa idea de “boca limpia y estéril” no solo es falsa, sino que puede ser perjudicial para la salud general.',
+    '“Tu boca necesita bacterias para proteger el esmalte, producir óxido nítrico y cuidar tu corazón”, dice Jaramillo, señalando que la microbiota oral cumple funciones vitales que se alteran cuando se destruyen las comunidades microbianas que la habitan.',
+    'El especialista critica la tendencia a trasladar la lógica hospitalaria de los antisépticos al cuidado diario. “Nos creímos el cuento de que todo tiene que ser estéril, cuando en realidad la boca sana no es una boca sin bacterias, sino una en equilibrio”, afirma.',
+    '<b>Cíticas principales</b>',
+    'Jaramillo detalla que muchos de estos productos contienen clorhexidina, amonios cuaternarios (CPC), peróxido de hidrógeno, povidona yodo, flúor en exceso, alcoholes, SLS, colorantes y saborizantes artificiales, todos con potencial de irritar, manchar o alterar la microbiota. “El hecho de que algo arda no significa que funcione; significa que está irritando”, advierte.',
+    'El médico agrega que el uso crónico puede tener efectos indirectos sobre la salud cardiovascular, al reducir la producción de óxido nítrico, molécula esencial para la vasodilatación y la regulación de la presión arterial. “Una boca estéril puede conducir, paradójicamente, a un corazón enfermo”, resume.',
+    '<b>Cuándo sí y cuándo no</b>',
+    'El uso de enjuague bucal, dice Jaramillo, solo estaría justificado bajo indicación odontológica o médica, por tiempo limitado, y con un objetivo claro: después de cirugías, abscesos o infecciones severas. Para el resto de los casos, su recomendación es tajante: “si lo usas solo por el comercial o por el aliento mentolado, mejor no”.',
+    '<b>Alternativas más saludables</b>',
+    'El médico propone un enfoque más natural y consciente: cepillado suave dos veces al día y uso de hilo o cepillos interdentales; buena hidratación (“la saliva es medicina”); gomas con xilitol de base natural, no plástica; pasta dental sin SLS ni químicos agresivos; enjuagues simples con agua o con un poco de xilitol unas veces por semana; y enjuagues con té verde como alternativa ocasional. También recomienda evitar el uso de bicarbonato o aceites esenciales, que pueden alterar la flora oral.',
+    '“Menos del 2% de los microorganismos del planeta son patógenos”, recuerda Jaramillo. “El resto son aliados que necesitamos cuidar, también en la boca.”',
+    'El mensaje final es claro: no se trata de eliminar bacterias, sino de convivir en equilibrio con ellas. Una reflexión que, más allá de la higiene bucal, nos recuerda que la salud no se logra con productos que prometen esterilidad, sino con hábitos sostenibles y conocimiento del propio cuerpo.'
+  ],
+  credito_video: 'Carlos Jaramillo / YouTube',
+  video: 'https://www.youtube.com/embed/zZKAXsWXayM',
+  credito_imagen: 'Imagen generada con IA para Noticias Neutrales',
+  imagen_portada: '/noticias/A_news_article_digital_graphic_features_Carlos_Jar.png'
 },
 {
   id: 'ruta-integral-obesidad-cali-reacciones-rosero-2025-10-02-es',
@@ -204,7 +187,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Israel argumenta que mantiene el bloqueo marítimo como medida de seguridad. Sin embargo, organizaciones internacionales y gobiernos como el de España han señalado que la flotilla no representaba una amenaza y que impedir su paso podría constituir una violación del derecho internacional humanitario.',
     
     'El político colombiano Camilo Romero denunció públicamente la acción, señalando que Netanyahu "no sólo ataca al pueblo palestino sino a representantes de 46 países". El mensaje fue acompañado de un mapa con la procedencia de los delegados, al que calificó como una "delegación ética de la humanidad".',
-    
+
     'Este episodio revive la controversia sobre los límites del bloqueo a Gaza, que ha sido criticado por Naciones Unidas y organizaciones de derechos humanos, al tiempo que abre un nuevo frente de presión diplomática hacia Israel por el trato a una misión civil internacional.',
     
     'Fuentes citadas: https://apnews.com/article/5c9c5e9baa4fc893a0f6e6eef69b280c , https://www.theguardian.com/world/2025/oct/01/pro-palestine-flotilla-heading-towards-gaza-harassed-by-israeli-naval-boats , https://globalsumudflotilla.org'
@@ -259,7 +242,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'El “milagro barranquillero” dejó por fuera a los pobres, según análisis de Laura Ardila en El Espectador',
   pais: 'Colombia',
   resumen: 'Un análisis de la periodista Laura Ardila Arrieta en El Espectador plantea que el modelo de desarrollo de Barranquilla, conocido como “milagro barranquillero”, ha priorizado la modernización urbana y el embellecimiento de la ciudad, pero ha excluido a las comunidades más pobres y profundizado la desigualdad.',
-  etiquetas: ['colombia', 'barranquilla', 'desarrollo urbano', 'desigualdad', 'laura ardila', 'el espectador'],
+  etiquetas: ['colombia', 'barranquilla', 'desarrollo urbano', 'desigualdad', 'laura ardila', 'el espectador','destacados'],
   fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/opinion/columnistas/laura-ardila-arrieta/el-milagro-barranquillero-dejo-por-fuera-a-los-pobres/' },
   url_fuente: 'https://www.elespectador.com/opinion/columnistas/laura-ardila-arrieta/el-milagro-barranquillero-dejo-por-fuera-a-los-pobres/',
   credito_imagen: 'Ecoparque Ciénaga de Mallorquín - Foto tomada por Leonardo De la Hoz Borrego',
@@ -949,7 +932,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En resumen, combinar una alimentación rica en semillas, frutos secos, verduras verdes y legumbres es una manera práctica de mantener un nivel adecuado de magnesio. Esta estrategia, junto con hábitos saludables, favorece la energía, el descanso y la salud cardiovascular.',
     'En cuanto a la comparación con suplementos, un puñado de almendras (30 g) aporta unos 80 mg de magnesio, de los cuales el cuerpo absorbe entre 24 y 40 mg debido a la biodisponibilidad del 30–50%. En contraste, una cápsula de magnesio bisglicinato de 200 mg puede aportar entre 140 y 180 mg realmente absorbidos, gracias a su biodisponibilidad más alta (70–90%). Esto muestra que el suplemento es más eficiente en cantidad absorbida, aunque los alimentos ofrecen beneficios adicionales que ningún suplemento reemplaza.'
   ],
-  etiquetas: ['salud', 'nutrición', 'alimentación', 'magnesio', 'estilo de vida','destacado'],
+  etiquetas: ['salud', 'nutrición', 'alimentación', 'magnesio', 'estilo de vida'],
   fuente: 'OMS',
   url_fuente: 'https://www.who.int/news-room/fact-sheets/detail/micronutrient-deficiencies',
   consecutivo_unico: '20250922-02'
