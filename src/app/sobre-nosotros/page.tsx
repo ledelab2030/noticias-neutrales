@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function SobreNosotrosPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
-      {/* migas en minúsculas */}
+      {/* migas */}
       <div className="mb-6 text-sm text-muted-foreground">
         <Link href="/" className="underline-offset-4 hover:underline">
           inicio
@@ -59,16 +59,16 @@ export default function SobreNosotrosPage() {
 
       {/* Nuestro editor */}
       <section className="mt-12 clear-both">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-6">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">
           Nuestro editor
         </h2>
 
-        <div className="leading-7 text-[17px] text-zinc-900 dark:text-zinc-100">
+        <div className="mt-6 space-y-4 leading-7 text-[17px] text-zinc-900 dark:text-zinc-100">
           <Image
             src="/noticias/editor-leonardo.jpg"
             alt="Leonardo de la Hoz Borrego"
-            width={200}
-            height={200}
+            width={220}
+            height={220}
             className="rounded-xl shadow-md mb-4 mx-auto block md:float-left md:mr-6 md:mb-4"
           />
 
