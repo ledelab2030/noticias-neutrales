@@ -75,6 +75,32 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'beneficios-sol-endocrinorocero-vitamina-d-2025-10-08-es',
+  fecha: '2025-10-08',
+  titulo: 'El Dr. Rosero destaca los beneficios comprobados de la exposición solar moderada',
+  pais: 'Colombia',
+  resumen: 'El endocrinólogo colombiano Dr. Rosero compartió en X una síntesis de los principales beneficios fisiológicos de la exposición solar controlada, respaldados por investigaciones médicas sobre vitamina D, ritmos circadianos, presión arterial y salud mental.',
+  etiquetas: ['salud', 'vitamina d', 'sol', 'endocrinología', 'estilo de vida', 'colombia'],
+  fuente: { nombre: 'Cuenta oficial del Dr. Andrés Rosero (@endocrinorocero)', url: 'https://x.com/endocrinorocero' },
+  imagen: '/noticias/beneficios-sol-endocrinorocero-vitamina-d-2025-10-08.jpg',
+  credito_imagen: 'Foto de https://unsplash.com/es/@therandomspoon',
+  consecutivo_unico: '20251008-01',
+  idioma_original: 'es',
+  contenido: [
+    'El endocrinólogo Andrés Rosero, reconocido por su divulgación científica en temas hormonales y metabólicos, publicó en su cuenta de X una lista de beneficios asociados a la exposición solar responsable. Entre ellos, mencionó la síntesis cutánea de vitamina D, la regulación de los ritmos circadianos, la mejora de la presión arterial y la salud mental vinculada con la actividad física al aire libre.',
+
+    'La evidencia científica respalda estos puntos. Según la *Harvard Medical School* y los *National Institutes of Health (NIH)*, la radiación ultravioleta B (UVB) permite que la piel produzca vitamina D, esencial para la salud ósea y la función inmunológica. Estudios revisados en *The Journal of Clinical Endocrinology & Metabolism* han demostrado que niveles adecuados de esta vitamina reducen el riesgo de osteoporosis y modulan procesos inflamatorios.',
+
+    'Respecto a los ritmos circadianos, investigaciones del *Sleep Research Society* indican que la exposición a la luz natural en la mañana ayuda a sincronizar el reloj biológico, mejorando el estado de ánimo y la regulación metabólica. Además, trabajos del *British Journal of Dermatology* señalan que la luz UVA puede inducir una leve vasodilatación por la liberación de óxido nítrico, contribuyendo a una mejor presión arterial.',
+
+    'El Dr. Rosero también recordó que el melanoma, el tipo más grave de cáncer de piel, suele presentarse con mayor frecuencia en áreas no expuestas al sol, según datos de la *American Cancer Society*. Sin embargo, enfatizó la importancia de una exposición moderada y con precauciones adecuadas, como evitar las horas de máxima radiación y usar protección solar cuando sea necesario.',
+
+    'En su publicación, el especialista concluyó que el equilibrio es clave: no se trata de evitar completamente el sol, sino de comprender sus beneficios fisiológicos y aprovecharlos de manera segura. Recomendó siempre consultar al médico antes de cambiar rutinas de exposición solar, especialmente en personas con antecedentes de enfermedades dermatológicas o metabólicas.',
+
+    'Fuentes citadas: https://www.health.harvard.edu/staying-healthy/the-truth-about-vitamin-d https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/ https://academic.oup.com/jcem https://academic.oup.com/sleep https://www.cancer.org/cancer/melanoma-skin-cancer.html'
+  ]
+},
+{
   id: 'the-economist-uribe-autocracia-reeleccion-colombia-2025-10-04-es',
   fecha: '2025-10-04',
   titulo: 'La advertencia de The Economist sobre Uribe en 2009 resuena en el debate actual sobre reelección en América Latina',
