@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G3D.co — Renderización y Modelado 3D | Guillermo De la Hoz</title>
+  <meta name="description" content="Renderización arquitectónica, modelado 3D desde planos, recorridos virtuales y asesorías. Barranquilla, Colombia." />
+  <meta property="og:title" content="G3D.co — Renderización y Modelado 3D" />
+  <meta property="og:description" content="Imaginación y detalle en tres dimensiones. Visualizo tus ideas para que se conviertan en espacios reales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ledelab.co/g3d" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <style>
+    :root{
+      --bg:#0b0b0b;--bg-soft:#111;--text:#f5f5f5;--muted:#bdbdbd;--brand:#00d1b2;--brand-2:#58a6ff;--card:#151515;--stroke:#222;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid var(--stroke);background:linear-gradient(180deg,#1a1a1a,#111);color:#fff;font-weight:600;transition:transform .15s ease,box-shadow .15s ease,border-color .2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,.35);border-color:#333}
+    .btn.brand{background:linear-gradient(180deg,var(--brand),#0fb)}
+    .btn.ghost{background:transparent}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--stroke)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+    .logo-mark{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 200deg at 50% 50%, var(--brand), var(--brand-2));box-shadow:0 0 0 2px #0d0d0d}
+    .nav a{color:var(--muted)}
+    .nav .links{display:flex;gap:18px}
+    .hero{padding:64px 0 32px;border-bottom:1px solid var(--stroke);background:radial-gradient(1200px 400px at 50% -10%, rgba(0,209,178,.12), transparent 60%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid #1f1f1f;background:#121212;color:var(--muted);font-size:12px}
+    .title{font-size:clamp(32px,6vw,56px);line-height:1.05;margin:12px 0}
+    .subtitle{color:var(--muted);font-size:clamp(16px,2.2vw,18px)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .glass{border:1px solid var(--stroke);background:linear-gradient(180deg,#131313,#0e0e0e);border-radius:20px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.02)}
+    .card{padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--stroke)}
+    .section{padding:64px 0}
+    .section h2{font-size:28px;margin:0 0 6px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px dashed #2a2a2a;border-radius:999px;color:var(--muted);font-size:13px}
+    .service h3{margin:8px 0 6px;font-size:18px}
+    .service p{margin:0;color:var(--muted);font-size:15px}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--stroke);min-height:160px;background:#0e0e0e}
+    .tile:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.06),transparent 30%)}
+    .tile .caption{position:absolute;left:10px;bottom:10px;font-size:12px;color:#cfcfcf;background:rgba(0,0,0,.35);padding:6px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+    .tile.span-6{grid-column:span 6}
+    .tile.span-4{grid-column:span 4}
+    .tile.span-8{grid-column:span 8}
+    .about{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:center}
+    .portrait{border-radius:16px;border:1px solid var(--stroke);background:linear-gradient(180deg,#121212,#0f0f0f);min-height:260px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#ddd}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap}
+    .kpi{padding:14px 16px;border-radius:14px;background:#101010;border:1px solid var(--stroke)}
+    footer{border-top:1px solid var(--stroke);padding:28px 0;color:#b9b9b9}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+    }
+
+    /* Micro-animaciones */
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="G3D Home">
+        <span class="logo-mark"></span>
+        <span>G3D<span style="opacity:.8">.co</span></span>
+      </a>
+      <nav class="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Renderización &nbsp;•&nbsp; Modelado 3D &nbsp;•&nbsp; Arquitectura</span>
+          <h1 class="title">Imaginación y detalle en <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">tres dimensiones</span></h1>
+          <p class="subtitle">Visualizo tus ideas para que se conviertan en espacios reales. Renders interiores y exteriores, modelado desde planos, y recorridos virtuales para presentar proyectos con claridad y emoción.</p>
+          <div class="cta">
+            <a class="btn brand" href="#contacto">Solicitar cotización</a>
+            <a class="btn ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <span class="pill">SketchUp</span>
+            <span class="pill">Lumion</span>
+            <span class="pill">V‑Ray</span>
+            <span class="pill">PBR Materials</span>
+            <span class="pill">Arquitectura</span>
+          </div>
+        </div>
+        <div class="glass card float">
+          <div style="aspect-ratio:16/10;border-radius:12px;border:1px solid var(--stroke);background:linear-gradient(135deg,#0f0f0f 0%,#141414 60%,#0d0d0d 100%);display:grid;place-items:center;text-align:center;padding:14px">
+            <div>
+              <div style="font-weight:800;font-size:22px;letter-spacing:.2px">Vista previa de render</div>
+              <div class="muted" style="margin-top:6px">(Espacio reservado para tu primera galería)</div>
+              <div style="margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+                <span class="pill">Iluminación natural</span>
+                <span class="pill">Materiales realistas</span>
+                <span class="pill">Escalas correctas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <p class="muted" style="margin-bottom:18px">Soluciones para visualizar antes de construir.</p>
+        <div class="grid cols-3">
+          <div class="card service">
+            <h3>Visualización arquitectónica</h3>
+            <p>Renders interiores y exteriores con iluminación y materiales realistas, listos para presentación comercial o técnica.</p>
+          </div>
+          <div class="card service">
+            <h3>Modelado 3D desde planos</h3>
+            <p>Transformación de planos 2D o bocetos en modelos 3D precisos para comunicación de diseño.</p>
+          </div>
+          <div class="card service">
+            <h3>Animaciones / Recorridos</h3>
+            <p>Clips y secuencias con movimiento de cámara para mostrar el espacio con narrativa y ritmo.</p>
+          </div>
+          <div class="card service">
+            <h3>Postproducción</h3>
+            <p>Corrección de color, inserción de cielo, personas, vegetación y efectos sutiles para mayor realismo.</p>
+          </div>
+          <div class="card service">
+            <h3>Asesoría 1:1</h3>
+            <p>Acompañamiento para arquitectos y decoradores que deseen elevar la calidad de sus propios renders.</p>
+          </div>
+          <div class="card service">
+            <h3>Paquetes por proyecto</h3>
+            <p>Opciones claras: básico (1–2 vistas), estándar (3–5 vistas) y premium (6+ vistas y clip).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENFOQUE / PROCESO -->
+    <section class="section" style="padding-top:0">
+      <div class="container grid cols-3">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Brief & referencias</h3>
+          <p class="muted" style="margin:0">Entiendo el objetivo, estilo, materiales y condiciones de iluminación. Si no tienes todo listo, te acompaño a definirlo.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">Modelado & lookdev</h3>
+          <p class="muted" style="margin:0">Construyo el modelo, ajusto materiales PBR, cámara y luz. Te comparto avances para comentarios.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">Render & entrega</h3>
+          <p class="muted" style="margin:0">Render final y postproducción. Entrego en resoluciones listas para web/impresión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA PLACEHOLDER -->
+    <section id="galeria" class="section" style="padding-top:0">
+      <div class="container">
+        <h2>Galería</h2>
+        <p class="muted" style="margin-bottom:14px">Mosaico de primeros ejercicios y colaboraciones (actualiza estas miniaturas con tus imágenes cuando estén listas).</p>
+        <div class="gallery">
+          <div class="tile span-6"><span class="caption">Interiores — Sala</span></div>
+          <div class="tile span-6"><span class="caption">Exteriores — Fachada</span></div>
+          <div class="tile span-4"><span class="caption">Cocina</span></div>
+          <div class="tile span-4"><span class="caption">Dormitorio</span></div>
+          <div class="tile span-4"><span class="caption">Lobby / Comercial</span></div>
+          <div class="tile span-8"><span class="caption">Recorrido — Frame</span></div>
+          <div class="tile span-4"><span class="caption">Detalle material</span></div>
+          <div class="tile span-4"><span class="caption">Baño</span></div>
+          <div class="tile span-4"><span class="caption">Paisajismo</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="section">
+      <div class="container about">
+        <div class="portrait">
+          Retrato / logotipo G3D
+        </div>
+        <div>
+          <h2>Sobre mí</h2>
+          <p class="muted">Soy <strong>Guillermo De la Hoz</strong>, arquitecto (prom. 1977). Tras décadas entre docencia y obra, redescubrí en la visualización 3D una forma de unir experiencia y creatividad digital. Desde Barranquilla, me enfoco en ayudar a profesionales y empresas a <em>visualizar antes de construir</em>.</p>
+          <div class="kpis" style="margin-top:10px">
+            <div class="kpi">SketchUp • Lumion • V‑Ray</div>
+            <div class="kpi">Renders fotorrealistas</div>
+            <div class="kpi">Acompañamiento cercano</div>
+          </div>
+          <p class="muted" style="margin-top:10px">Colaboración con <strong>LedeLab Group OÜ</strong> para integrar visualización 3D en proyectos educativos, de arquitectura y sostenibilidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section" style="padding-top:0">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h2 style="margin:0 0 8px">¿Hablamos de tu proyecto?</h2>
+          <p class="muted" style="margin:0 0 12px">Cuéntame el tipo de espacio, número de vistas y plazo ideal. Te propongo el paquete que mejor se ajuste.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn brand" href="mailto:contacto@g3d.co?subject=Solicitud%20de%20cotizaci%C3%B3n%20—%20G3D&body=Hola%20Guillermo,%20quisiera%20cotizar%20un%20proyecto%20con:%20%5Binterior/exterior%5D,%20%5Bn%C2%BA%20de%20vistas%5D,%20%5Bplazo%5D.">Escríbeme por correo</a>
+            <a class="btn ghost" href="https://wa.me/573000000000" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">Ubicación</h3>
+          <p class="muted" style="margin:0 0 8px">Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.</p>
+          <div class="glass" style="height:180px;border-radius:14px;display:grid;place-items:center;color:#cfcfcf;border:1px dashed #2a2a2a">Mapa / referencia (opcional)</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between">
+      <div>© <span id="year"></span> G3D.co — Guillermo De la Hoz</div>
+      <div class="muted">Sitio de prueba bajo ledeLab.co • Diseño & desarrollo: LedeLab + G3D</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
