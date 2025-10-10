@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>G3D.co — Renderización y Modelado 3D | Guillermo De la Hoz</title>
   <meta name="description" content="Renderización arquitectónica, modelado 3D desde planos, recorridos virtuales y asesorías. Barranquilla, Colombia." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="logo-personal.png" />
   <meta property="og:title" content="G3D.co — Renderización y Modelado 3D" />
   <meta property="og:description" content="Imaginación y detalle en tres dimensiones. Visualizo tus ideas para que se conviertan en espacios reales." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ledelab.co/g3d" />
+  <meta property="og:image" content="fachada-principal.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0a0a0a" />
   <style>
     :root{
@@ -17,7 +21,7 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
+    img,video{max-width:100%;display:block}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
     .btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid var(--stroke);background:linear-gradient(180deg,#1a1a1a,#111);color:#fff;font-weight:600;transition:transform .15s ease,box-shadow .15s ease,border-color .2s ease}
     .btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,.35);border-color:#333}
@@ -49,17 +53,15 @@
     .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
     .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--stroke);min-height:160px;background:#0e0e0e}
     .tile:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.06),transparent 30%)}
-    .tile .caption{position:absolute;left:10px;bottom:10px;font-size:12px;color:#cfcfcf;background:rgba(0,0,0,.35);padding:6px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+    .tile .caption{position:absolute;left:10px;bottom:10px;font-size:12px;color:#cfcfcf;background:rgba(0,0,0,.35);padding:6px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.08);z-index:5}
     .tile.span-6{grid-column:span 6}
     .tile.span-4{grid-column:span 4}
     .tile.span-8{grid-column:span 8}
     .about{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:center}
-    .portrait{border-radius:16px;border:1px solid var(--stroke);background:linear-gradient(180deg,#121212,#0f0f0f);min-height:260px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#ddd}
+    .portrait img{border-radius:16px;max-width:100%;border:1px solid var(--stroke)}
     .kpis{display:flex;gap:10px;flex-wrap:wrap}
     .kpi{padding:14px 16px;border-radius:14px;background:#101010;border:1px solid var(--stroke)}
     footer{border-top:1px solid var(--stroke);padding:28px 0;color:#b9b9b9}
-
-    /* Responsive */
     @media (max-width:980px){
       .hero-grid{grid-template-columns:1fr}
       .grid.cols-3{grid-template-columns:1fr 1fr}
@@ -67,9 +69,13 @@
       .about{grid-template-columns:1fr}
     }
 
-    /* Micro-animaciones */
-    .float{animation:float 6s ease-in-out infinite}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    /* 👇 Mejora de encuadre para imágenes y video en mosaico */
+    .tile img, .tile video{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      border-radius:14px;
+    }
   </style>
 </head>
 <body>
@@ -93,33 +99,19 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Renderización &nbsp;•&nbsp; Modelado 3D &nbsp;•&nbsp; Arquitectura</span>
+          <span class="eyebrow">Renderización • Modelado 3D • Arquitectura</span>
           <h1 class="title">Imaginación y detalle en <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">tres dimensiones</span></h1>
           <p class="subtitle">Visualizo tus ideas para que se conviertan en espacios reales. Renders interiores y exteriores, modelado desde planos, y recorridos virtuales para presentar proyectos con claridad y emoción.</p>
           <div class="cta">
             <a class="btn brand" href="#contacto">Solicitar cotización</a>
             <a class="btn ghost" href="#servicios">Ver servicios</a>
           </div>
-          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-            <span class="pill">SketchUp</span>
-            <span class="pill">Lumion</span>
-            <span class="pill">V‑Ray</span>
-            <span class="pill">PBR Materials</span>
-            <span class="pill">Arquitectura</span>
-          </div>
         </div>
-        <div class="glass card float">
-          <div style="aspect-ratio:16/10;border-radius:12px;border:1px solid var(--stroke);background:linear-gradient(135deg,#0f0f0f 0%,#141414 60%,#0d0d0d 100%);display:grid;place-items:center;text-align:center;padding:14px">
-            <div>
-              <div style="font-weight:800;font-size:22px;letter-spacing:.2px">Vista previa de render</div>
-              <div class="muted" style="margin-top:6px">(Espacio reservado para tu primera galería)</div>
-              <div style="margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-                <span class="pill">Iluminación natural</span>
-                <span class="pill">Materiales realistas</span>
-                <span class="pill">Escalas correctas</span>
-              </div>
-            </div>
-          </div>
+        <div class="glass card">
+          <img src="fachada-principal.jpg"
+               alt="Render exterior: fachada principal de vivienda"
+               width="1280" height="720"
+               fetchpriority="high" decoding="async" />
         </div>
       </div>
     </section>
@@ -130,67 +122,45 @@
         <h2>Servicios</h2>
         <p class="muted" style="margin-bottom:18px">Soluciones para visualizar antes de construir.</p>
         <div class="grid cols-3">
-          <div class="card service">
-            <h3>Visualización arquitectónica</h3>
-            <p>Renders interiores y exteriores con iluminación y materiales realistas, listos para presentación comercial o técnica.</p>
-          </div>
-          <div class="card service">
-            <h3>Modelado 3D desde planos</h3>
-            <p>Transformación de planos 2D o bocetos en modelos 3D precisos para comunicación de diseño.</p>
-          </div>
-          <div class="card service">
-            <h3>Animaciones / Recorridos</h3>
-            <p>Clips y secuencias con movimiento de cámara para mostrar el espacio con narrativa y ritmo.</p>
-          </div>
-          <div class="card service">
-            <h3>Postproducción</h3>
-            <p>Corrección de color, inserción de cielo, personas, vegetación y efectos sutiles para mayor realismo.</p>
-          </div>
-          <div class="card service">
-            <h3>Asesoría 1:1</h3>
-            <p>Acompañamiento para arquitectos y decoradores que deseen elevar la calidad de sus propios renders.</p>
-          </div>
-          <div class="card service">
-            <h3>Paquetes por proyecto</h3>
-            <p>Opciones claras: básico (1–2 vistas), estándar (3–5 vistas) y premium (6+ vistas y clip).</p>
-          </div>
+          <div class="card service"><h3>Visualización arquitectónica</h3><p>Renders interiores y exteriores con iluminación y materiales realistas.</p></div>
+          <div class="card service"><h3>Modelado 3D desde planos</h3><p>Transformación de planos 2D o bocetos en modelos 3D precisos.</p></div>
+          <div class="card service"><h3>Animaciones / Recorridos</h3><p>Clips con movimiento de cámara para mostrar el espacio con narrativa.</p></div>
+          <div class="card service"><h3>Postproducción</h3><p>Corrección de color, vegetación y efectos para mayor realismo.</p></div>
+          <div class="card service"><h3>Asesoría 1:1</h3><p>Acompañamiento para arquitectos y decoradores que deseen mejorar sus renders.</p></div>
+          <div class="card service"><h3>Paquetes por proyecto</h3><p>Básico (1–2 vistas), estándar (3–5 vistas) y premium (6+ vistas y clip).</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ENFOQUE / PROCESO -->
-    <section class="section" style="padding-top:0">
-      <div class="container grid cols-3">
-        <div class="card">
-          <h3 style="margin:0 0 8px">Brief & referencias</h3>
-          <p class="muted" style="margin:0">Entiendo el objetivo, estilo, materiales y condiciones de iluminación. Si no tienes todo listo, te acompaño a definirlo.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin:0 0 8px">Modelado & lookdev</h3>
-          <p class="muted" style="margin:0">Construyo el modelo, ajusto materiales PBR, cámara y luz. Te comparto avances para comentarios.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin:0 0 8px">Render & entrega</h3>
-          <p class="muted" style="margin:0">Render final y postproducción. Entrego en resoluciones listas para web/impresión.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALERÍA PLACEHOLDER -->
+    <!-- GALERÍA -->
     <section id="galeria" class="section" style="padding-top:0">
       <div class="container">
         <h2>Galería</h2>
-        <p class="muted" style="margin-bottom:14px">Mosaico de primeros ejercicios y colaboraciones (actualiza estas miniaturas con tus imágenes cuando estén listas).</p>
         <div class="gallery">
-          <div class="tile span-6"><span class="caption">Interiores — Sala</span></div>
-          <div class="tile span-6"><span class="caption">Exteriores — Fachada</span></div>
-          <div class="tile span-4"><span class="caption">Cocina</span></div>
-          <div class="tile span-4"><span class="caption">Dormitorio</span></div>
-          <div class="tile span-4"><span class="caption">Lobby / Comercial</span></div>
-          <div class="tile span-8"><span class="caption">Recorrido — Frame</span></div>
-          <div class="tile span-4"><span class="caption">Detalle material</span></div>
-          <div class="tile span-4"><span class="caption">Baño</span></div>
-          <div class="tile span-4"><span class="caption">Paisajismo</span></div>
+          <div class="tile span-6">
+            <img src="sala.png" alt="Render interior: sala" width="1200" height="800" loading="lazy" decoding="async" />
+            <span class="caption">Interiores — Sala</span>
+          </div>
+          <div class="tile span-6">
+            <img src="fachada-principal.jpg" alt="Render exterior: fachada principal" width="1280" height="720" loading="lazy" decoding="async" />
+            <span class="caption">Exteriores — Fachada</span>
+          </div>
+          <div class="tile span-4">
+            <img src="cocina.jpg" alt="Render interior: cocina" width="1200" height="800" loading="lazy" decoding="async" />
+            <span class="caption">Cocina</span>
+          </div>
+          <div class="tile span-4">
+            <img src="dormitorio-principal.jpg" alt="Render interior: dormitorio principal" width="1200" height="800" loading="lazy" decoding="async" />
+            <span class="caption">Dormitorio</span>
+          </div>
+          <div class="tile span-4">
+            <img src="paisajismo.png" alt="Render exterior: paisajismo" width="1200" height="800" loading="lazy" decoding="async" />
+            <span class="caption">Paisajismo</span>
+          </div>
+          <div class="tile span-8">
+            <video src="video-ecopanel-3c.mp4" controls muted loop preload="metadata"></video>
+            <span class="caption">Recorrido — EcoPanel 3C</span>
+          </div>
         </div>
       </div>
     </section>
@@ -199,16 +169,12 @@
     <section id="sobre-mi" class="section">
       <div class="container about">
         <div class="portrait">
-          Retrato / logotipo G3D
+          <img src="foto-guillermo.png" alt="Retrato de Guillermo De la Hoz" width="640" height="640" loading="lazy" decoding="async" />
         </div>
         <div>
           <h2>Sobre mí</h2>
           <p class="muted">Soy <strong>Guillermo De la Hoz</strong>, arquitecto (prom. 1977). Tras décadas entre docencia y obra, redescubrí en la visualización 3D una forma de unir experiencia y creatividad digital. Desde Barranquilla, me enfoco en ayudar a profesionales y empresas a <em>visualizar antes de construir</em>.</p>
-          <div class="kpis" style="margin-top:10px">
-            <div class="kpi">SketchUp • Lumion • V‑Ray</div>
-            <div class="kpi">Renders fotorrealistas</div>
-            <div class="kpi">Acompañamiento cercano</div>
-          </div>
+          <div class="kpis"><div class="kpi">SketchUp • Lumion • V-Ray</div><div class="kpi">Renders fotorrealistas</div><div class="kpi">Acompañamiento cercano</div></div>
           <p class="muted" style="margin-top:10px">Colaboración con <strong>LedeLab Group OÜ</strong> para integrar visualización 3D en proyectos educativos, de arquitectura y sostenibilidad.</p>
         </div>
       </div>
@@ -218,16 +184,16 @@
     <section id="contacto" class="section" style="padding-top:0">
       <div class="container grid cols-2">
         <div class="card">
-          <h2 style="margin:0 0 8px">¿Hablamos de tu proyecto?</h2>
-          <p class="muted" style="margin:0 0 12px">Cuéntame el tipo de espacio, número de vistas y plazo ideal. Te propongo el paquete que mejor se ajuste.</p>
+          <h2>¿Hablamos de tu proyecto?</h2>
+          <p class="muted">Cuéntame el tipo de espacio, número de vistas y plazo ideal. Te propongo el paquete que mejor se ajuste.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn brand" href="mailto:contacto@g3d.co?subject=Solicitud%20de%20cotizaci%C3%B3n%20—%20G3D&body=Hola%20Guillermo,%20quisiera%20cotizar%20un%20proyecto%20con:%20%5Binterior/exterior%5D,%20%5Bn%C2%BA%20de%20vistas%5D,%20%5Bplazo%5D.">Escríbeme por correo</a>
-            <a class="btn ghost" href="https://wa.me/573000000000" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn brand" href="mailto:contacto@g3d.co">Escríbeme por correo</a>
+            <a class="btn ghost" href="https://wa.me/573028496859" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
         <div class="card">
-          <h3 style="margin:0 0 8px">Ubicación</h3>
-          <p class="muted" style="margin:0 0 8px">Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.</p>
+          <h3>Ubicación</h3>
+          <p class="muted">Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.</p>
           <div class="glass" style="height:180px;border-radius:14px;display:grid;place-items:center;color:#cfcfcf;border:1px dashed #2a2a2a">Mapa / referencia (opcional)</div>
         </div>
       </div>

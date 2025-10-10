@@ -75,6 +75,30 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'ranking-qs-latam-2025-javeriana-primer-lugar-colombia-2025-10-10-es',
+  fecha: '2025-10-10',
+  titulo: 'La Universidad Javeriana lidera el ranking QS Latinoamérica 2025 en Colombia',
+  pais: 'Colombia',
+  resumen: 'La Universidad Javeriana fue reconocida como la mejor institución del país en el ranking QS Latin America 2025, superando a la Universidad de los Andes y a la Universidad Nacional de Colombia.',
+  contenido: [
+    'El más reciente QS Latin America & The Caribbean University Rankings 2025 ubicó a la Pontificia Universidad Javeriana como la mejor institución colombiana en educación superior. El listado fue publicado por Quacquarelli Symonds (QS), una de las principales firmas internacionales dedicadas a la medición del desempeño académico y reputacional de universidades en el mundo.',
+    'En la clasificación regional, la Javeriana se situó en el puesto 22 entre más de 430 universidades evaluadas en América Latina y el Caribe. Superó a la Universidad de los Andes y a la Universidad Nacional de Colombia, que tradicionalmente han encabezado los resultados nacionales en años anteriores.',
+    'El estudio de QS considera indicadores como reputación académica, empleabilidad de los egresados, proporción de profesores con doctorado, impacto de la investigación y número de citaciones por artículo. En esta edición, también se destacó la mejora en los resultados de internacionalización y sostenibilidad universitaria.',
+    'En el contexto latinoamericano, el primer lugar fue ocupado por la Pontificia Universidad Católica de Chile, seguida por la Universidad de São Paulo y el Tecnológico de Monterrey. El ranking 2025 consolida a Colombia entre los cinco países con mayor número de universidades incluidas en la lista regional.',
+    'Fuentes citadas: https://www.topuniversities.com/latin-america-university-rankings, https://www.eltiempo.com/vida/educacion/el-prestigioso-ranking-de-universidades-en-el-que-ni-los-andes-ni-la-nacional-fueron-las-mejores-del-pais-cual-ocupo-el-primer-lugar-3498488'
+  ],
+  etiquetas: ['colombia', 'educacion', 'universidades', 'ranking', 'qs', 'javeriana', 'los andes', 'universidad nacional', 'portada'],
+  fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/' },
+  url_fuente: 'https://www.eltiempo.com/vida/educacion/el-prestigioso-ranking-de-universidades-en-el-que-ni-los-andes-ni-la-nacional-fueron-las-mejores-del-pais-cual-ocupo-el-primer-lugar-3498488',
+  imagen: '/noticias/clement-proust-OhLJg_KpS0U-unsplash.jpg',
+  credito_imagen: 'Foto: Clement Proust / Unsplash',
+  idioma_original: 'es',
+  traducciones: {
+    en: 'ranking-qs-latam-2025-javeriana-primer-lugar-colombia-2025-10-10-en',
+    de: 'ranking-qs-latam-2025-javeriana-primer-lugar-colombia-2025-10-10-de'
+  }
+},
+{
   id: 'beneficios-sol-endocrinorocero-vitamina-d-2025-10-08-es',
   fecha: '2025-10-08',
   titulo: 'El Dr. Rosero destaca los beneficios comprobados de la exposición solar moderada',
