@@ -113,7 +113,7 @@ export default function Page() {
           <h2 className="text-3xl font-semibold mb-4">Galería</h2>
           <div className="grid grid-cols-12 gap-3">
             {[
-              ["span-6", "/g3d/sala.png", 1200, 800, "Interiores — Sala"],
+              ["span-6", "/g3d/sala.jpg", 1200, 800, "Interiores — Sala"],
               ["span-6", "/g3d/fachada-principal.jpg", 1280, 720, "Exteriores — Fachada"],
               ["span-4", "/g3d/cocina.jpg", 1200, 800, "Cocina"],
               ["span-4", "/g3d/dormitorio-principal.jpg", 1200, 800, "Dormitorio"],
