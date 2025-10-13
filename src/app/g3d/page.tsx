@@ -1,5 +1,6 @@
 // app/g3d/page.tsx
-import type { Metadata } from "next"
+import Image from "next/image"
+import type { Metadata, Viewport } from "next"
 
 export const metadata: Metadata = {
   title: "G3D.co — Renderización y Modelado 3D | Guillermo De la Hoz",
@@ -17,6 +18,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/g3d/fachada-principal.jpg"],
   },
+}
+// Mover themeColor a viewport (Next 15)
+export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 }
 
@@ -68,12 +72,13 @@ export default function Page() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border border-gray-800 shadow-inner">
-            <img
+            <Image
               src="/g3d/fachada-principal.jpg"
               alt="Render exterior: fachada principal"
               width={1280}
               height={720}
-              className="object-cover w-full h-full"
+              priority
+              className="object-cover w-full h-auto"
             />
           </div>
         </div>
@@ -108,16 +113,22 @@ export default function Page() {
           <h2 className="text-3xl font-semibold mb-4">Galería</h2>
           <div className="grid grid-cols-12 gap-3">
             {[
-              ["span-6", "sala.png", "Interiores — Sala"],
-              ["span-6", "fachada-principal.jpg", "Exteriores — Fachada"],
-              ["span-4", "cocina.jpg", "Cocina"],
-              ["span-4", "dormitorio-principal.jpg", "Dormitorio"],
-              ["span-4", "paisajismo.png", "Paisajismo"],
-            ].map(([span, src, caption]) => (
-              <div key={caption} className={`tile ${span} relative rounded-xl overflow-hidden border border-gray-800`}>
-                <img src={`/g3d/${src}`} alt={caption as string} className="w-full h-full object-cover" />
+              ["span-6", "/g3d/sala.png", 1200, 800, "Interiores — Sala"],
+              ["span-6", "/g3d/fachada-principal.jpg", 1280, 720, "Exteriores — Fachada"],
+              ["span-4", "/g3d/cocina.jpg", 1200, 800, "Cocina"],
+              ["span-4", "/g3d/dormitorio-principal.jpg", 1200, 800, "Dormitorio"],
+              ["span-4", "/g3d/paisajismo.png", 1200, 800, "Paisajismo"],
+            ].map(([span, src, w, h, caption]) => (
+              <div key={caption as string} className={`tile ${span} relative rounded-xl overflow-hidden border border-gray-800`}>
+                <Image
+                  src={src as string}
+                  alt={caption as string}
+                  width={w as number}
+                  height={h as number}
+                  className="w-full h-auto object-cover"
+                />
                 <span className="absolute bottom-2 left-2 text-xs bg-black/60 text-gray-200 px-2 py-1 rounded-md border border-white/10">
-                  {caption}
+                  {caption as string}
                 </span>
               </div>
             ))}
@@ -142,13 +153,13 @@ export default function Page() {
       <section id="sobre-mi" className="py-16">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <img
+            <Image
               src="/g3d/foto-guillermo.png"
               alt="Retrato de Guillermo De la Hoz"
-              className="rounded-xl border border-gray-800"
               width={640}
               height={640}
               loading="lazy"
+              className="rounded-xl border border-gray-800 w-full h-auto"
             />
           </div>
           <div>
@@ -210,7 +221,7 @@ export default function Page() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-gray-800 py-6 text-center text-gray-500 text-sm">
+      <footer className="border-top border-gray-800 py-6 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()} G3D.co — Guillermo De la Hoz • Diseño & desarrollo: LedeLab + G3D
       </footer>
     </div>

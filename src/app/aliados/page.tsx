@@ -1,139 +1,124 @@
 // /app/red/aliados/page.tsx
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { aliados, type Aliado } from '@/data/aliados'
+import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: 'Aliados | LedeLab',
+export const metadata = {
+  title: "Aliados | LedeLab Group OÜ",
   description:
-    'Aliados de LedeLab: instituciones académicas, oficinas de transferencia, cámaras y asociaciones con las que colaboramos.',
+    "Red de aliados estratégicos de LedeLab Group OÜ: innovación, sostenibilidad, educación, diseño y visualización 3D.",
 }
 
-type Grouped = Record<string, Aliado[]>
-
-const CATEGORIA_ORDEN = [
-  'Instituciones académicas y de investigación',
-  'Transferencia de tecnología',
-  'Cámaras y asociaciones empresariales',
-  'Aliados internacionales',
-] as const
-
-function groupBy(arr: Aliado[], key: keyof Aliado): Grouped {
-  return arr.reduce((acc, item) => {
-    const k = String(item[key] ?? '')
-    if (!acc[k]) acc[k] = []
-    acc[k].push(item)
-    return acc
-  }, {} as Grouped)
-}
-
-export default function AliadosPage() {
-  if (!aliados.length) {
-    return (
-      <main className="mx-auto max-w-6xl px-4 py-8">
-        <h1 className="text-3xl font-bold">Aliados de LedeLab</h1>
-        <p className="mt-4 text-muted-foreground">
-          Aún no hay aliados publicados.
-        </p>
-      </main>
-    )
-  }
-
-  const grouped = groupBy(aliados, 'categoria')
-
-// Mapa de orden para evitar "any"
-const orderMap = new Map(
-  (CATEGORIA_ORDEN as readonly string[]).map((c, i) => [c, i])
-)
-
-const categorias = Object.keys(grouped).sort((a, b) => {
-  const ia = orderMap.get(a) ?? 999
-  const ib = orderMap.get(b) ?? 999
-  return ia - ib
-})
-
+export default function Page() {
+  const aliados = [
+    {
+      nombre: "LedeLab Group OÜ",
+      href: "https://www.ledelab.co/ledelab",
+      descripcion:
+        "Ecosistema emprendedor con sede en Estonia que integra innovación, sostenibilidad y educación aplicada. Promueve proyectos globales en desarrollo tecnológico, materiales sostenibles y educación digital.",
+      color: "from-teal-400 to-blue-500",
+    },
+    {
+      nombre: "I+DE S.A.S.",
+      href: "https://imasde.co",
+      descripcion:
+        "Investigación, desarrollo y educación aplicada a la innovación sostenible.",
+      color: "from-sky-400 to-blue-500",
+    },
+    {
+      nombre: "Protemad Colombia S.A.S.",
+      href: "https://www.grupoprotemad.com",
+      descripcion:
+        "Fabricante colombiano de preservantes para protección de la madera, soluciones químicas sostenibles y transferencia tecnológica.",
+      color: "from-emerald-400 to-teal-500",
+    },
+    {
+      nombre: "Noticias Neutrales",
+      href: "https://ledelab.co/noticias-neutrales",
+      descripcion:
+        "Portal informativo con enfoque educativo, ambiental y social, sin sesgos ideológicos.",
+      color: "from-yellow-400 to-orange-500",
+    },
+    {
+      nombre: "Flex 84",
+      href: "https://ledelab.co/flex84",
+      descripcion:
+        "Espacio de experimentación y prototipado para diseño, arte y materiales sostenibles.",
+      color: "from-pink-500 to-rose-400",
+    },
+    {
+      nombre: "Instituto Javier",
+      href: "https://ledelab.co/javier",
+      descripcion:
+        "Iniciativa educativa enfocada en el aprendizaje autodirigido y tecnologías educativas.",
+      color: "from-indigo-400 to-violet-500",
+    },
+  ]
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-8">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight">Aliados de LedeLab</h1>
-        <p className="mt-2 text-muted-foreground">
-          Colaboraciones que impulsan proyectos sostenibles, innovadores y de
-          impacto social. Esta lista se actualiza conforme se consolidan nuevas
-          alianzas en Colombia y otros países.
-        </p>
-      </header>
+    <section className="py-16 md:py-20 bg-white text-gray-900 dark:bg-[#0a0a0a] dark:text-gray-100">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* HEADER */}
+        <header className="mb-10 md:mb-12">
+          <h1 className="text-4xl font-extrabold tracking-tight mb-3">
+            Aliados estratégicos
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
+            Nuestra red de aliados impulsa proyectos de innovación, sostenibilidad,
+            educación y diseño. Cada colaboración fortalece el ecosistema LedeLab.
+          </p>
+        </header>
 
-      <div className="space-y-10">
-        {categorias.map((categoria) => {
-          const items = grouped[categoria] ?? []
-          return (
-            <section key={categoria}>
-              <h2 className="text-xl font-semibold mb-4">{categoria}</h2>
+        {/* ⭐ Colaboración destacada G3D.co */}
+        <section aria-labelledby="g3d-heading" className="mb-10">
+          <h2 id="g3d-heading" className="sr-only">Colaboración destacada</h2>
 
-              {items.length === 0 ? (
-                <p className="text-sm text-muted-foreground">
-                  Aún no hay aliados en esta categoría.
-                </p>
-              ) : (
-                <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {items.map((a) => (
-                    <li
-                      key={a.id}
-                      className="group rounded-2xl border bg-white/50 p-5 shadow-sm transition hover:shadow-md dark:bg-neutral-900/50"
-                    >
-                      <div className="flex items-start justify-between gap-4">
-                        <h3 className="text-lg font-medium leading-snug">
-                          {a.nombre}
-                        </h3>
-                        {a.pais && (
-                          <span className="rounded-full border px-2 py-0.5 text-xs text-muted-foreground">
-                            {a.pais}
-                          </span>
-                        )}
-                      </div>
+          <Link
+            href="/g3d"
+            className="group block rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#111] p-6 transition-colors hover:border-teal-400"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-9 h-9 rounded-md bg-gradient-to-br from-teal-400 to-blue-500" />
+              <h3 className="text-lg font-semibold group-hover:text-teal-400 transition-colors">
+                G3D.co — Renderización y Modelado 3D
+              </h3>
+            </div>
 
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                        {a.descripcion}
-                      </p>
+            <p className="text-gray-700 dark:text-gray-400 text-sm leading-snug">
+              Portafolio de visualización arquitectónica liderado por <strong>Guillermo De la Hoz</strong>.
+              Renders de interiores y exteriores, modelado desde planos y recorridos virtuales.
+            </p>
 
-                      <div className="mt-4 flex flex-wrap items-center gap-2">
-                        {a.url ? (
-                          <Link
-                            href={a.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm underline underline-offset-4 hover:opacity-90"
-                          >
-                            Sitio oficial
-                          </Link>
-                        ) : null}
-                        {a.etiquetas?.length ? (
-                          <div className="ml-auto flex flex-wrap gap-2">
-                            {a.etiquetas.map((tag) => (
-                              <span
-                                key={tag}
-                                className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        ) : null}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          )
-        })}
+            <span className="inline-block mt-3 text-xs text-teal-500 group-hover:underline">
+              Ver portafolio →
+            </span>
+          </Link>
+        </section>
+
+        {/* 🔸 Grid general de aliados */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {aliados.map((a) => (
+            <a
+              key={a.nombre}
+              href={a.href}
+              target={a.href.startsWith("http") ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              className="group block border border-gray-200 dark:border-gray-800 rounded-xl p-6 bg-gray-50 dark:bg-[#111] hover:border-teal-400 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className={`w-9 h-9 rounded-md bg-gradient-to-br ${a.color}`} />
+                <h3 className="text-lg font-semibold group-hover:text-teal-400 transition-colors">
+                  {a.nombre}
+                </h3>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-snug">
+                {a.descripcion}
+              </p>
+              <span className="inline-block mt-3 text-xs text-teal-500 group-hover:underline">
+                {a.href.startsWith("http") ? "Visitar sitio →" : "Ver detalles →"}
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
-
-      <footer className="mt-12 border-t pt-6 text-sm text-muted-foreground">
-        Nota: Los aliados listados aquí tienen sede en Colombia, salvo los
-        que se indiquen en la categoría “Aliados internacionales”.
-      </footer>
-    </main>
+    </section>
   )
 }
