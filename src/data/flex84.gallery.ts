@@ -121,7 +121,7 @@ export const flex84Gallery: F84Foto[] = [
   },
   {
     id: "f84-11",
-    file: "/flex84-img/11moho-callejon-img_20220922_100228.jpg",
+    file: "/flex84-img/11-moho-callejon-img_20220922_100228.jpg",
     categoria: "acondicionamiento",
     titulo: "Condición de muro exterior",
     alt: "Textura de muro con presencia de humedad en el callejón",
