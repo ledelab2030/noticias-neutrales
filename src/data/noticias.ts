@@ -75,6 +75,26 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'indemnizacion-estado-iglesia-abusos-sexuales-2025-10-14',
+  fecha: '2025-10-14',
+  titulo: 'Fallo judicial abre la puerta a indemnizaciones del Estado y la Iglesia por abusos sexuales',
+  pais: 'Colombia',
+  resumen: 'El Consejo de Estado reconoció por primera vez la responsabilidad conjunta del Estado y la Iglesia Católica en casos de abuso sexual cometidos por sacerdotes, marcando un precedente histórico para las víctimas.',
+  etiquetas: ['colombia', 'justicia', 'abusos sexuales', 'iglesia catolica', 'derechos humanos','portada'],
+  fuente: { nombre: 'El Espectador', url: 'https://www.elespectador.com/judicial/el-caso-que-abrio-la-puerta-a-indemnizaciones-del-estado-y-la-iglesia-por-abusos-sexuales/' },
+  url_fuente: 'https://www.elespectador.com/judicial/el-caso-que-abrio-la-puerta-a-indemnizaciones-del-estado-y-la-iglesia-por-abusos-sexuales/',
+  imagen_portada: '/noticias/indemnizacion-estado-iglesia-abusos-sexuales-2025-10-14.jpg',
+  imagen: '/noticias/indemnizacion-estado-iglesia-abusos-sexuales-2025-10-14.jpg',
+  credito_imagen: 'Ilustración NN / IA generativa',
+  idioma_original: 'es',
+  contenido: [
+    'El Consejo de Estado de Colombia emitió una sentencia que reconoce la responsabilidad del Estado y de la Iglesia Católica en un caso de abuso sexual cometido por un sacerdote. La decisión abre la posibilidad de que las víctimas de abusos cometidos por miembros del clero sean indemnizadas no solo por la Iglesia, sino también por el Estado, en casos donde se demuestre omisión o falta de control institucional.',
+    'El caso que dio origen a la decisión fue el de una joven víctima de abuso sexual por parte de un sacerdote de la Diócesis de Santa Marta. El tribunal consideró que la Iglesia actuó de manera negligente al no prevenir ni atender las denuncias previas contra el religioso, y que el Estado falló al no ejercer la vigilancia que le corresponde sobre las instituciones religiosas que prestan servicios educativos.',
+    'El fallo, de carácter histórico, establece que cuando una institución religiosa cumple funciones públicas, como la educación o la atención social, debe responder solidariamente por los daños ocasionados en el ejercicio de esas actividades. En consecuencia, la Iglesia y el Estado deberán asumir la reparación económica de la víctima.',
+    'Con esta sentencia, el Consejo de Estado sienta un precedente en materia de responsabilidad compartida entre entidades públicas y privadas frente a violaciones de derechos humanos, especialmente en contextos donde existe delegación de funciones estatales. Organizaciones defensoras de derechos de víctimas celebraron el fallo como un avance hacia la reparación integral y la garantía de no repetición.'
+  ]
+},
+{
   id: 'ranking-qs-latam-2025-javeriana-primer-lugar-colombia-2025-10-10-es',
   fecha: '2025-10-10',
   titulo: 'La Universidad Javeriana lidera el ranking QS Latinoamérica 2025 en Colombia',
@@ -87,7 +107,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'En el contexto latinoamericano, el primer lugar fue ocupado por la Pontificia Universidad Católica de Chile, seguida por la Universidad de São Paulo y el Tecnológico de Monterrey. El ranking 2025 consolida a Colombia entre los cinco países con mayor número de universidades incluidas en la lista regional.',
     'Fuentes citadas: https://www.topuniversities.com/latin-america-university-rankings, https://www.eltiempo.com/vida/educacion/el-prestigioso-ranking-de-universidades-en-el-que-ni-los-andes-ni-la-nacional-fueron-las-mejores-del-pais-cual-ocupo-el-primer-lugar-3498488'
   ],
-  etiquetas: ['colombia', 'educacion', 'universidades', 'ranking', 'qs', 'javeriana', 'los andes', 'universidad nacional', 'portada'],
+  etiquetas: ['colombia', 'educacion', 'universidades', 'ranking', 'qs', 'javeriana', 'los andes', 'universidad nacional'],
   fuente: { nombre: 'El Tiempo', url: 'https://www.eltiempo.com/' },
   url_fuente: 'https://www.eltiempo.com/vida/educacion/el-prestigioso-ranking-de-universidades-en-el-que-ni-los-andes-ni-la-nacional-fueron-las-mejores-del-pais-cual-ocupo-el-primer-lugar-3498488',
   imagen: '/noticias/clement-proust-OhLJg_KpS0U-unsplash.jpg',
@@ -148,7 +168,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: '2025-10-04-jaramillo-enjuague-bucal',
   fecha: '2025-10-04',
   titulo: 'Carlos Jaramillo advierte sobre los riesgos del enjuague bucal que “mata el 99.9% de las bacterias”',
-  etiquetas: ['estilo de vida', 'Carlos Jaramillo', 'salud', 'microbiota', 'salud oral','portada'],
+  etiquetas: ['estilo de vida', 'Carlos Jaramillo', 'salud', 'microbiota', 'salud oral'],
   resumen: 'El médico Carlos Jaramillo advierte que los enjuagues bucales que prometen eliminar el 99.9% de las bacterias pueden alterar la microbiota oral, afectar la salud cardiovascular y generar más problemas que beneficios.',
 
   contenido: [
@@ -683,6 +703,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Maurice Armitage expone por qué reducir la desigualdad es buen negocio en Colombia',
   pais: 'Colombia',
   resumen: 'El empresario y exalcalde de Cali, Maurice Armitage, sostiene que valorar el trabajo, mejorar salarios y compartir utilidades fortalece la productividad y la estabilidad, alineando intereses de empresas y trabajadores.',
+  imagen_portada: 'noticias/maurice-armitage.png',
   video: 'https://www.youtube.com/embed/b2xBjkrGS1s',
   credito_video: 'Canal A Fondo',
   contenido: [
@@ -702,7 +723,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'Sitio oficial de Cementos San Marcos. https://cementosanmarcos.com/',
     'Notas y perfil público sobre reparto de utilidades y trayectoria empresarial. https://thedialogue.org/expert/maurice-armitage/'
   ],
-  etiquetas: ['economía', 'colombia', 'editorial','destacado'],
+  etiquetas: ['economía', 'colombia', 'editorial','destacado','portada'],
   fuente: { nombre: 'A Fondo', url: 'https://www.youtube.com/watch?v=b2xBjkrGS1s' }
 },
 {
