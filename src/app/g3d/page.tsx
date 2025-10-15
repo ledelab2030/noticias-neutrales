@@ -117,7 +117,7 @@ export default function Page() {
               ["span-6", "/g3d/fachada-principal.jpg", 1280, 720, "Exteriores — Fachada"],
               ["span-4", "/g3d/cocina.jpg", 1200, 800, "Cocina"],
               ["span-4", "/g3d/dormitorio-principal.jpg", 1200, 800, "Dormitorio"],
-              ["span-4", "/g3d/paisajismo.png", 1200, 800, "Paisajismo"],
+              ["span-4", "/g3d/paisajismo.jpg", 1200, 800, "Paisajismo"],
             ].map(([span, src, w, h, caption]) => (
               <div key={caption as string} className={`tile ${span} relative rounded-xl overflow-hidden border border-gray-800`}>
                 <Image

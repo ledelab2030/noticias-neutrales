@@ -75,6 +75,42 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'metabolismo-hormonas-y-habitos-en-la-salud-capilar-2025-10-14',
+  fecha: '2025-10-14',
+  titulo: 'Metabolismo, hormonas y hábitos: lo que explican Frank Suárez y Carlos Jaramillo sobre la salud capilar',
+  pais: 'Latinoamérica',
+  resumen: 'Dos enfoques coinciden en que la caída del cabello puede ser una señal del cuerpo ante desequilibrios internos. Frank Suárez la relaciona con hipotiroidismo y metabolismo lento, mientras que Carlos Jaramillo y John Harvey Gaviria amplían la mirada hacia causas genéticas, hormonales, inflamatorias y de estilo de vida.',
+  etiquetas: [
+    'salud',
+    'metabolismo',
+    'tiroides',
+    'estrés',
+    'caida del cabello',
+    'calvicie',
+    'nutricion',
+    'inflamacion',
+    'vida saludable'
+  ],
+  fuente: { nombre: 'Metabolismo TV / Dr. Carlos Jaramillo', url: 'https://www.youtube.com/' },
+  imagen: '/noticias/metabolismo-hormonas-y-habitos-en-la-salud-capilar-2025-10-14.jpg',
+  credito_imagen: 'Metabolismo TV y YouTube / Dr. Carlos Jaramillo',
+  idioma_original: 'es',
+  contenido: [
+    'La caída del cabello es un fenómeno frecuente que, según distintos especialistas, puede reflejar desequilibrios metabólicos, hormonales o inflamatorios. Aunque la predisposición genética influye, tanto el divulgador puertorriqueño Frank Suárez como el médico colombiano Carlos Jaramillo coinciden en que los hábitos de vida tienen un papel decisivo en la salud capilar.',
+    
+    'En el episodio #218 de “Súper Ayuda”, Suárez explica que la pérdida de cabello suele estar asociada al hipotiroidismo, incluso en su forma subclínica, cuando las pruebas de laboratorio resultan normales. Según su planteamiento, un metabolismo lento reduce la producción de energía celular (ATP) y oxígeno en la raíz del cabello, debilitando el folículo. Recomienda evaluar la temperatura corporal como indicador del metabolismo, evitar alimentos que inhiben la función tiroidea y, bajo supervisión médica, tratar la deficiencia hormonal cuando corresponda.',
+    
+    'Por su parte, en el video “5 secretos para luchar contra la calvicie en 92 días”, el Dr. Carlos Jaramillo conversa con el dermatólogo John Harvey Gaviria, quien describe cinco causas frecuentes de la caída capilar: predisposición genética, alteraciones hormonales, condiciones médicas (como hipotiroidismo, disbiosis intestinal o alopecia autoinmune), estrés psicológico e inflamación crónica de bajo grado. Ambos señalan que, más allá de la herencia, el entorno biológico y los hábitos determinan la evolución del folículo.',
+    
+    'El equipo de Jaramillo propone cinco herramientas de prevención y tratamiento: una alimentación rica en proteínas, suplementación con antioxidantes y vitaminas, control del estrés, cuidado capilar con productos antioxidantes y uso de medicamentos de prescripción cuando es necesario. Enfatizan que el cuidado integral del organismo —nutrición, descanso, microbiota y manejo emocional— es tan importante como los tratamientos tópicos o farmacológicos.',
+    
+    'Tanto Suárez como Jaramillo coinciden en que la caída del cabello puede ser una señal temprana de desequilibrio metabólico o inflamatorio. Sus enfoques convergen en la idea de que mejorar el metabolismo, reducir el estrés y mantener una dieta adecuada son estrategias que fortalecen el folículo piloso desde dentro, y que la salud capilar depende, en gran medida, del equilibrio general del cuerpo.'
+  ],
+  video: 'https://www.youtube.com/embed/7-SrclScQVQ',
+  credito_video: 'YouTube / Metabolismo TV – Frank Suárez y Dr. Carlos Jaramillo',
+  consecutivo_unico: '20251014-01'
+},
+{
   id: 'indemnizacion-estado-iglesia-abusos-sexuales-2025-10-14',
   fecha: '2025-10-14',
   titulo: 'Fallo judicial abre la puerta a indemnizaciones del Estado y la Iglesia por abusos sexuales',
