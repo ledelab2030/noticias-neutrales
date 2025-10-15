@@ -115,7 +115,7 @@ export default function Page() {
             {[
               ["span-6", "/g3d/sala.jpg", 1200, 800, "Interiores — Sala"],
               ["span-6", "/g3d/fachada-principal.jpg", 1280, 720, "Exteriores — Fachada"],
-              ["span-4", "/g3d/cocina.jpg", 1200, 800, "Cocina"],
+              ["span-4", "/g3d/cocina_minusculas.jpg", 1200, 800, "Cocina"],
               ["span-4", "/g3d/dormitorio-principal.jpg", 1200, 800, "Dormitorio"],
               ["span-4", "/g3d/paisajismo.jpg", 1200, 800, "Paisajismo"],
             ].map(([span, src, w, h, caption]) => (
