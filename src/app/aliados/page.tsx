@@ -32,7 +32,7 @@ export default function Page() {
     },
     {
       nombre: "Noticias Neutrales",
-      href: "https://ledelab.co/noticias-neutrales",
+      href: "https://ledelab.co/noticias",
       descripcion:
         "Portal informativo con enfoque educativo, ambiental y social, sin sesgos ideológicos.",
       color: "from-yellow-400 to-orange-500",

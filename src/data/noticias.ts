@@ -92,7 +92,7 @@ const noticiasRaw: NoticiaRaw[] = [
     'vida saludable'
   ],
   fuente: { nombre: 'Metabolismo TV / Dr. Carlos Jaramillo', url: 'https://www.youtube.com/' },
-  imagen: '/noticias/metabolismo-hormonas-y-habitos-en-la-salud-capilar-2025-10-14.jpg',
+  imagen_portada: '/noticias/metabolismo-hormonas-y-habitos-en-la-salud-capilar-2025-10-14.jpg',
   credito_imagen: 'Metabolismo TV y YouTube / Dr. Carlos Jaramillo',
   idioma_original: 'es',
   contenido: [
