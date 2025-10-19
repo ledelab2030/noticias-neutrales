@@ -3,13 +3,13 @@ import Image from "next/image";
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: "G3D.co — Renderización y Modelado 3D | Guillermo De la hoz",
+  title: "G3D — Renderización y Modelado 3D | Guillermo De la hoz",
   description:
     "Renderización arquitectónica, modelado 3D desde planos, recorridos virtuales y asesorías. Barranquilla, Colombia.",
   openGraph: {
     type: "website",
     url: "https://ledelab.co/g3d",
-    title: "G3D.co — Renderización y Modelado 3D",
+    title: "G3D — Renderización y Modelado 3D",
     description:
       "Imaginación y detalle en tres dimensiones. Visualizo tus ideas para que se conviertan en espacios reales.",
     images: ["/g3d/fachada-principal.jpg"],
@@ -244,7 +244,7 @@ export default function Page() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="mailto:contacto@g3d.co"
+                href="mailto:gdelahozd@gmail.com"
                 className="px-5 py-3 bg-teal-400 text-black rounded-xl font-semibold hover:bg-teal-500"
               >
                 Escríbeme por correo
@@ -294,7 +294,7 @@ export default function Page() {
         id="g3d-footer"
         className="border-t border-gray-800 py-6 text-center text-gray-500 text-sm"
       >
-        © {new Date().getFullYear()} G3D.co — Guillermo De la hoz • Diseño & desarrollo: LedeLab + G3D
+        © {new Date().getFullYear()} G3D — Guillermo De la hoz • Diseño & desarrollo: LedeLab + G3D
       </footer>
     </div>
   );
