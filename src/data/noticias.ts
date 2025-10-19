@@ -75,6 +75,123 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'esmeralda-hernandez-conversaciones-pendientes-2025-10-19-es',
+  fecha: '2025-10-19',
+  titulo: 'Esmeralda Hernández expone su agenda ambiental y balance de la ley antitaurina en “Conversaciones Pendientes”',
+  pais: 'Colombia',
+  resumen: 'En una conversación con Juan David Correa, la senadora Esmeralda Hernández repasó su trayectoria en lo público, explicó el enfoque cultural de la ley antitaurina sancionada el 22 de julio de 2024, y delineó prioridades legislativas en ambiente, bienestar animal, antifracking y control a la corrupción.',
+  etiquetas: [
+    'colombia',
+    'politica',
+    'congreso',
+    'medio ambiente',
+    'bienestar animal',
+    'ley antitaurina',
+    'pacto historico',
+    'esmeralda hernandez',
+    'juan david correa',
+    'entrevista'
+  ],
+  fuente: { nombre: 'YouTube / Conversaciones Pendientes (Juan David Correa)', url: 'https://www.youtube.com/@ConversacionesPendientes' },
+  url_fuente: 'https://www.youtube.com/watch?v=lSaCdjMBCrk',
+  imagen_portada: '/noticias/esmeralda-hernandez-conversaciones-pendientes-2025-10-19.jpg',
+  credito_imagen: 'Captura de video / Conversaciones Pendientes',
+  consecutivo_unico: '20251019-01',
+
+  // 🔤 Idioma y enlaces entre versiones (puedes completar en el futuro si traduces)
+  idioma_original: 'es',
+  traducciones: {
+    // en: 'esmeralda-hernandez-conversaciones-pendientes-2025-10-19-en',
+    // de: 'esmeralda-hernandez-conversaciones-pendientes-2025-10-19-de'
+  },
+
+  // 🎬 Video embebido
+  video: 'https://www.youtube.com/embed/lSaCdjMBCrk',
+  credito_video: 'YouTube / Conversaciones Pendientes (Juan David Correa)',
+
+  contenido: [
+    '¿Qué pasó? En el programa “Conversaciones Pendientes”, Juan David Correa entrevistó a la senadora Esmeralda Hernández. La conversación abordó su origen comunitario en Bosa, su paso por la administración pública y su trabajo legislativo reciente. El intercambio se centró en prácticas políticas, condiciones laborales en el Estado y la necesidad de fortalecer el mérito y la estabilidad en la función pública.',
+    '¿Quiénes? Participaron el periodista y escritor Juan David Correa, anfitrión del espacio, y Esmeralda Hernández, senadora vinculada al sector progresista. Hernández describió la incidencia de las juntas de acción comunal, su formación en administración pública y su tránsito por cargos distritales y locales antes de llegar al Congreso.',
+    '¿Cuándo y dónde? La entrevista fue publicada en YouTube y se emitió como parte de la serie habitual del canal. La nota se registra el 19 de octubre de 2025. El diálogo se desarrolló en formato de estudio y se enfocó en hechos y procesos ocurridos en Colombia.',
+    '¿Cómo se dio el enfoque de la ley antitaurina? Hernández explicó que el proyecto cambió el eje de discusión desde lo “animal” hacia lo “cultural”, al considerar la tauromaquia como práctica cultural. Con ese enfoque, la iniciativa se debatió en la Comisión de Cultura, lo que facilitó un trámite que en intentos previos había fracasado.',
+    '¿Qué se aprobó? Según Hernández, el 22 de julio de 2024 el Presidente sancionó la ley que prohíbe las corridas de toros en Colombia, con un periodo de transición de tres años. Durante ese lapso, solo ciertos municipios que cumplan requisitos específicos podrían realizar eventos, y a partir del 22 de julio de 2027 quedarán prohibidos.',
+    '¿Por qué ese enfoque? La senadora sostuvo que la transformación cultural contribuye a escenarios de paz y que el debate público, la evidencia científica sobre sufrimiento animal y la movilización ciudadana fueron determinantes para la decisión legislativa. También destacó la concurrencia de congresistas de varios partidos en las votaciones clave.',
+    '¿Qué otras agendas se discutieron? Hernández señaló prioridades en antifracking (con intentos de prohibición archivados en Cámara), regulación del glifosato, una “ley de ríos” de alcance nacional y el reconocimiento de animales y ecosistemas como víctimas del conflicto, iniciativa que ha tenido múltiples aplazamientos en el Congreso.',
+    '¿Qué propone para la función pública? La senadora defendió la ampliación de planta y el mérito en nombramientos, así como la reducción gradual de nóminas paralelas para separar la gestión estatal de ciclos electorales. También insistió en fortalecer los órganos de control mediante procesos de mérito para evitar su captura política.',
+    'Finalmente, las partes abordaron el uso de inteligencia artificial en campañas y comunicación política. Hernández consideró útil la tecnología bajo límites éticos claros y con transparencia para evitar la manipulación del debate público.',
+    'Fuentes citadas: https://www.youtube.com/watch?v=lSaCdjMBCrk'
+  ]
+},
+{
+  id: 'bernie-sanders-no-kings-rally-washington-2025-10-18-es',
+  fecha: '2025-10-18',
+  titulo: 'Bernie Sanders denuncia el autoritarismo y la concentración de riqueza en el mitin “No Kings” de Washington',
+  pais: 'Estados Unidos',
+  resumen: 'El senador Bernie Sanders encabezó el mitin nacional “No Kings” en Washington D. C., donde advirtió sobre los riesgos de un gobierno autoritario y la creciente desigualdad económica bajo la administración de Donald Trump.',
+  etiquetas: ['estados unidos', 'bernie sanders', 'donald trump', 'no kings', 'politica', 'protestas'],
+  fuente: { nombre: 'YouTube / Bernie Sanders', url: 'https://www.youtube.com/watch?v=jcxJPdWYBfo' },
+  url_fuente: 'https://www.youtube.com/watch?v=jcxJPdWYBfo',
+  video: 'https://www.youtube.com/watch?v=jcxJPdWYBfo',
+  credito_video: 'YouTube / Bernie Sanders',
+  imagen: '/noticias/saad-ahmad-u15HL2HFna0-unsplash.jpg',
+  credito_imagen: 'Foto de Saad Ahmad en Unsplash',
+  idioma_original: 'en',
+  traducciones: {
+    en: 'bernie-sanders-no-kings-rally-washington-2025-10-18-en'
+  },
+  contenido: [
+    'Miles de personas se reunieron el 18 de octubre de 2025 en Washington D. C. para participar en la concentración nacional “No Kings”, una jornada de protestas simultáneas en todo Estados Unidos convocadas por organizaciones civiles contra las políticas del presidente Donald Trump. Entre los oradores principales estuvo el senador independiente por Vermont, Bernie Sanders, quien dirigió un discurso centrado en la defensa de la democracia estadounidense.',
+    'En su intervención, Sanders recordó los orígenes republicanos de Estados Unidos y afirmó que el pueblo estadounidense “no quiere reyes ni dictadores”, aludiendo directamente al lema del evento. “No, presidente Trump. No queremos que usted ni ningún otro rey nos gobierne. Mantendremos nuestra forma democrática de sociedad”, declaró ante los asistentes.',
+    'El senador denunció lo que calificó como un peligro sin precedentes para la democracia, mencionando acciones del gobierno federal como el uso de fuerzas del orden para reprimir manifestaciones en ciudades como Portland y Chicago, el despido masivo de empleados públicos y el debilitamiento de las instituciones judiciales y legislativas. También criticó la concentración de poder económico en manos de una élite empresarial, mencionando por nombre a Elon Musk, Jeff Bezos y Mark Zuckerberg.',
+    'Sanders advirtió que la combinación de autoritarismo político y desigualdad económica representa una amenaza directa para la sociedad estadounidense. “Rechazamos el derecho divino de los reyes en el siglo XVIII. No aceptaremos el derecho divino de los oligarcas en el siglo XXI”, afirmó. En su discurso también propuso medidas como garantizar la atención médica universal, ampliar la seguridad social, invertir en energías limpias y educación pública gratuita.',
+    'El evento se desarrolló en el contexto de un cierre parcial del gobierno federal, iniciado por desacuerdos presupuestarios relacionados con recortes a Medicaid y al sistema de salud. Sanders responsabilizó a la administración Trump de priorizar exenciones fiscales para los sectores más ricos, a costa de millones de estadounidenses de bajos ingresos. “No votaré por un presupuesto que deje sin atención médica a 15 millones de personas”, enfatizó.',
+    'Al cierre de su intervención, el senador llamó a la unidad social frente a las divisiones políticas y raciales: “Cuando no permitimos que Trump o nadie más nos divida, podemos crear una nación dedicada a la libertad, la justicia y la democracia”. El mitin en la capital fue parte de una jornada de manifestaciones simultáneas en varias ciudades del país bajo el lema “No Kings”.'
+  ]
+},
+{
+  id: 'dependencia-economica-eeuu-reflexion-2025-10-19',
+  fecha: '2025-10-19',
+  titulo: 'Reducir la dependencia del poder económico de Estados Unidos',
+  pais: 'Colombia',
+  resumen: 'La concentración del poder económico y político en una sola nación representa un riesgo global. La diversificación comercial y la independencia económica son pasos esenciales para equilibrar las relaciones internacionales.',
+  etiquetas: ['editorial', 'economia', 'comercio internacional', 'colombia', 'estados unidos', 'diversificacion','portada'],
+  idioma_original: 'es',
+  imagen: '/noticias/steve-johnson-9xojIuTqumg-unsplash.jpg',
+  credito_imagen: 'Foto de Steve Johnson en Unsplash',
+  contenido: [
+    'El principal problema no surge cuando un país elige a un líder con posturas controversiales o políticas internas divisorias. El problema real aparece cuando ese país concentra un poder desproporcionado sobre el resto del mundo. Estados Unidos no es cualquier nación: su peso económico, militar y cultural afecta directamente a las economías y decisiones de numerosos países, incluidos aquellos con los que mantiene relaciones de dependencia comercial.',
+    'Por ello, la elección de un presidente como Donald Trump no solo tiene consecuencias para los ciudadanos estadounidenses, sino también para países que dependen en exceso de ese mercado. Las políticas proteccionistas, los cambios en tratados comerciales o las decisiones unilaterales sobre aranceles y sanciones pueden alterar las economías latinoamericanas de un día para otro.',
+    'Colombia, como muchas otras naciones, mantiene una fuerte dependencia de las exportaciones hacia Estados Unidos y de las importaciones provenientes de ese país. Esta relación asimétrica limita la autonomía económica y reduce la capacidad de respuesta ante crisis externas. La diversificación de mercados y alianzas es, por tanto, una prioridad estratégica para reducir la vulnerabilidad.',
+    'No se trata de romper relaciones ni de cerrar puertas, sino de abrir otras. El comercio con Asia, Europa, África y el propio continente latinoamericano puede ofrecer alternativas sostenibles. Mientras tanto, Estados Unidos deberá decidir por sí mismo si su modelo de consumo y su visión de liderazgo global son sostenibles o no. Lo que corresponde al resto del mundo es aprender de la experiencia y no depender de un único centro de poder.'
+  ]
+},
+{
+  id: 'encuesta-mensual-comercio-dane-agosto-2025-10-19-es',
+  fecha: '2025-10-19',
+  titulo: 'Ventas del comercio minorista crecieron 12,4 % en agosto, según la Encuesta Mensual de Comercio del DANE',
+  pais: 'Colombia',
+  resumen: 'El DANE reportó que en agosto de 2025 las ventas reales del comercio minorista y de vehículos en Colombia aumentaron 12,4 % frente al mismo mes del año anterior. El personal ocupado presentó una leve disminución de 0,2 %, según la Encuesta Mensual de Comercio (EMC).',
+  etiquetas: ['colombia', 'economia', 'dane', 'comercio', 'estadisticas oficiales'],
+  fuente: { nombre: 'DANE', url: 'https://www.dane.gov.co/index.php/estadisticas-por-tema/comercio-interno/encuesta-mensual-de-comercio-emc' },
+  url_fuente: 'https://www.dane.gov.co/index.php/estadisticas-por-tema/comercio-interno/encuesta-mensual-de-comercio-emc',
+  imagen: '/noticias/DANE-encuesta-mensual-comercio-agosto-2025.jpg',
+  credito_imagen: 'DANE',
+  consecutivo_unico: '20251019-01',
+  idioma_original: 'es',
+
+  contenido: [
+    'El Departamento Administrativo Nacional de Estadística (DANE) informó que las ventas reales del comercio minorista y de vehículos en Colombia aumentaron 12,4 % en agosto de 2025 frente al mismo mes del año anterior. El resultado se desprende de la Encuesta Mensual de Comercio (EMC), que evalúa la dinámica de ventas, personal ocupado y salarios del sector.',
+    
+    'Según el informe, el crecimiento acumulado en el año corrido (enero a agosto de 2025) fue del 12,0 %, mientras que en los últimos doce meses (septiembre 2024 – agosto 2025) el aumento fue del 10,1 %. Estas cifras confirman una tendencia sostenida de expansión en la actividad comercial del país.',
+    
+    'El grupo de mercancías con mayor crecimiento fue el de equipos de informática y telecomunicaciones para uso personal o doméstico, que registró un incremento del 51 %. Otros sectores destacados fueron alimentos, bebidas y productos de uso doméstico, que también mostraron desempeños positivos en comparación con 2024.',
+    
+    'En contraste, el personal ocupado en el comercio minorista presentó una leve variación negativa de 0,2 % frente al mismo mes del año anterior. Esta reducción es marginal y puede asociarse a procesos de modernización o automatización en el sector, sin que ello afecte el comportamiento general del empleo formal.',
+    
+    'La Encuesta Mensual de Comercio (EMC) del DANE constituye la fuente estadística oficial sobre el comportamiento del comercio minorista y mayorista en Colombia. Su información es utilizada por el Gobierno, analistas y empresas para evaluar la evolución del consumo interno y orientar decisiones de política económica.'
+  ]
+},
+{
   id: 'metabolismo-hormonas-y-habitos-en-la-salud-capilar-2025-10-14',
   fecha: '2025-10-14',
   titulo: 'Metabolismo, hormonas y hábitos: lo que explican Frank Suárez y Carlos Jaramillo sobre la salud capilar',
