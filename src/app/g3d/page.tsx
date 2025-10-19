@@ -28,28 +28,23 @@ export default function Page() {
   return (
     <div className="bg-[#0b0b0b] text-gray-100 font-sans">
       {/* HEADER PROPIO DE G3D (solo se añade el id) */}
-      <header
-        id="g3d-header"
-        className="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-gray-800"
-      >
-        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <a
-            href="#top"
-            className="flex items-center gap-2 font-extrabold tracking-tight"
-          >
-            <span className="w-7 h-7 rounded-md bg-gradient-conic from-teal-400 to-blue-500" />
-            <span>
-              G3D<span className="opacity-80">.co</span>
-            </span>
-          </a>
-          <nav className="flex gap-5 text-gray-400 text-sm">
-            <a href="#servicios" className="hover:text-white">Servicios</a>
-            <a href="#galeria" className="hover:text-white">Galería</a>
-            <a href="#sobre-mi" className="hover:text-white">Sobre mí</a>
-            <a href="#contacto" className="hover:text-white">Contacto</a>
-          </nav>
-        </div>
-      </header>
+<header id="g3d-header" className="flex items-center justify-between mb-8">
+  <div className="flex items-center space-x-3">
+<img
+  src="/g3d/logo-g3d.png"
+  alt="Logo G3D"
+  className="h-[40px] w-auto max-w-[100px] object-contain"
+/>
+  </div>
+  <nav className="space-x-6 text-sm text-gray-300">
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+
 
       {/* HERO (sin cambios de contenido) */}
       <section
