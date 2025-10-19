@@ -208,15 +208,23 @@ export default function Page() {
               </a>
             </div>
           </div>
-          <div className="bg-[#151515] p-6 rounded-xl border border-gray-800 flex flex-col justify-center items-center text-gray-400">
-            <h3 className="text-lg font-semibold mb-2">Ubicación</h3>
-            <p className="text-center mb-3">
-              Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.
-            </p>
-            <div className="w-full h-44 border border-dashed border-gray-700 rounded-lg flex items-center justify-center text-sm">
-              Mapa / referencia (opcional)
-            </div>
-          </div>
+<div className="bg-[#151515] p-6 rounded-xl border border-gray-800 flex flex-col justify-center items-center text-gray-400">
+  <h3 className="text-lg font-semibold mb-2">Ubicación</h3>
+  <p className="text-center mb-3">
+    Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.
+  </p>
+  <div className="relative w-full h-44 overflow-hidden rounded-lg border border-gray-700">
+    <Image
+      src="/noticias/barranquilla-colombia.jpg"
+      alt="Barranquilla, Colombia"
+      fill
+      className="object-cover"
+      sizes="(max-width: 768px) 100vw, 50vw"
+      priority={false}
+    />
+  </div>
+</div>
+
         </div>
       </section>
 
