@@ -35,7 +35,7 @@ export default function Page() {
         <div className="flex justify-center md:justify-start mb-4 md:mb-0">
           {/* Ajusta el src si tu archivo tiene otro nombre (p.ej. /g3d/Logo%20personal.png) */}
           <Image
-            src="/g3d/logo-g3d.png"
+            src="/g3d/logo-g3d-cuadrado.png"
             alt="Logo G3D"
             width={120}
             height={120}
@@ -72,9 +72,10 @@ export default function Page() {
             </span>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mt-3">
               Imaginación y detalle en{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-400">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#22c55e] to-[#8c8c8c]">
                 tres dimensiones
               </span>
+
             </h1>
             <p className="text-gray-400 mt-4 text-base md:text-lg">
               Visualizo tus ideas para que se conviertan en espacios reales.
@@ -208,7 +209,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <Image
-              src="/g3d/foto-guillermo.png"
+              src="/g3d/foto-guillermo.jpg"
               alt="Retrato de Guillermo De la hoz"
               width={640}
               height={640}
