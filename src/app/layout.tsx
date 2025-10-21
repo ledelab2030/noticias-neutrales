@@ -1,9 +1,10 @@
 // /src/app/layout.tsx
+// /src/app/layout.tsx
 import "./globals.css"
 import Header from "@/components/Header"
 import type { Metadata, Viewport } from "next"
 import Analytics from "@/components/Analytics"
-import { Suspense } from "react" // 👈 añadido
+import { Suspense } from "react"
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -27,13 +28,19 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Noticias Neutrales",
     images: [
-      { url: "/preview.png", width: 1200, height: 628, alt: "Noticias Neutrales" },
+      {
+        url: "/og-default.jpg", // 👈 fallback global para páginas sin imagen específica
+        width: 1200,
+        height: 630,
+        alt: "Noticias Neutrales - LedeLab Group OÜ",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@ledelabgroup",
     creator: "@ledelabgroup",
+    images: ["/og-default.jpg"], // 👈 mismo fallback para Twitter/X
   },
   icons: { icon: "/ledelab/favicon.png" },
 }

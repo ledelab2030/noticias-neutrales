@@ -345,6 +345,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: '2025-10-04-jaramillo-enjuague-bucal',
   fecha: '2025-10-04',
   titulo: 'Carlos Jaramillo advierte sobre los riesgos del enjuague bucal que “mata el 99.9% de las bacterias”',
+  pais: 'Colombia',
   etiquetas: ['estilo de vida', 'Carlos Jaramillo', 'salud', 'microbiota', 'salud oral'],
   resumen: 'El médico Carlos Jaramillo advierte que los enjuagues bucales que prometen eliminar el 99.9% de las bacterias pueden alterar la microbiota oral, afectar la salud cardiovascular y generar más problemas que beneficios.',
 
