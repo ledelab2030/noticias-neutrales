@@ -75,6 +75,30 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'trump-miente-sobre-colombia-amenaza-invasion-2025-10-21-es',
+  fecha: '2025-10-21',
+  titulo: 'Trump miente sobre Colombia y amenaza con una invasión militar',
+  pais: 'Colombia',
+  resumen: 'En un análisis del canal La Pulla “Trump miente sobre Colombia”, Juan Carlos Rincón expone las afirmaciones falsas del expresidente estadounidense Donald Trump sobre el presidente Gustavo Petro, así como las implicaciones de su amenaza de “cerrar los campos” de coca en Colombia por la fuerza.',
+  etiquetas: ['estados unidos', 'colombia', 'donald trump', 'gustavo petro', 'politica', 'amenaza', 'narcotrafico','portada'],
+  fuente: { nombre: 'YouTube / Trump miente sobre Colombia', url: 'https://www.youtube.com/watch?v=kmWdVZO-aW8' },
+  url_fuente: 'https://www.youtube.com/watch?v=kmWdVZO-aW8',
+  video: 'https://www.youtube.com/embed/kmWdVZO-aW8',
+  credito_video: 'YouTube / @LaPulla: Trump miente sobre Colombia',
+  imagen_portada: '/noticias/trump-miente-sobre-colombia-amenaza-invasion-2025-10-21.jpg',
+  credito_imagen_portada: 'Juan Carlos Rincón, editor de Opinión del periódico El Espectador',
+
+  contenido: [
+    'El video de La Pulla “Trump miente sobre Colombia” denuncia una serie de afirmaciones falsas realizadas por Donald Trump sobre el presidente colombiano Gustavo Petro y sobre el país en general. En su intervención pública, el expresidente estadounidense acusó sin pruebas a Petro de ser un “líder del narcotráfico” y de incentivar la producción masiva de drogas en Colombia.',
+    
+    'Según el análisis del canal, estas declaraciones ignoran la trayectoria política de Petro, quien ha sido reconocido incluso por sus críticos como uno de los dirigentes que más ha denunciado los vínculos del narcotráfico con estructuras del poder en Colombia. El video señala que la afirmación de Trump demuestra un desconocimiento profundo de la realidad del país o un uso deliberado de la mentira con fines políticos.',
+    
+    'El material también refuta la acusación de inacción frente al narcotráfico, al recordar que durante los primeros tres años del actual gobierno las incautaciones aumentaron un 65 % en comparación con el periodo del expresidente Iván Duque. Pese a las dificultades estructurales del fenómeno, la fuerza pública ha continuado realizando operativos contra los grupos criminales en distintas regiones del país.',
+    
+    'Sin embargo, la parte más grave de las declaraciones de Trump fue su advertencia a Petro de que, si no “cerraba los campos de coca”, Estados Unidos lo haría “de manera no amable”. El video interpreta esta frase como una amenaza directa a la soberanía colombiana, recordando que una flotilla del ejército estadounidense opera actualmente en el mar Caribe con capacidad ofensiva. Según el análisis, ese lenguaje constituye una violación del derecho internacional y un intento de intimidación política con posibles implicaciones militares.'
+  ]
+},
+{
   id: 'trump-contra-petro-soberania-y-mentiras-2025-10-20-es',
   fecha: '2025-10-20',
   titulo: 'Trump contra Petro: cuando el poder de la mentira amenaza la soberanía',
