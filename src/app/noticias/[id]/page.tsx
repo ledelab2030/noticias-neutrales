@@ -19,6 +19,7 @@ type PageProps = {
 type Noticia = NoticiaT & {
   ubicacion?: { nombre: string; coordenadas?: string }
   imagen_portada?: string
+  credito_imagen_portada?: string
   destacada?: boolean
 }
 
@@ -60,8 +61,14 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   if (!n) return {}
 
   const url = `${baseUrl}/noticias/${n.id}`
-  const ogImageRelOrAbs = n.imagen ?? "/og-default.jpg"
-  const ogImage = ogImageRelOrAbs.startsWith("http") ? ogImageRelOrAbs : `${baseUrl}${ogImageRelOrAbs}`
+
+  // Imagen OG: usa imagen, o imagen_portada, o fallback
+  const ogRel = n.imagen ?? n.imagen_portada ?? "/og-default.jpg"
+  const ogAbs = ogRel.startsWith("http") ? ogRel : `${baseUrl}${ogRel}`
+
+  // Cache-buster para evitar previas viejas en FB/WA
+  const v = encodeURIComponent(`${n.fecha ?? ""}-${(n.contenido?.join("") ?? "").length}`)
+  const ogImage = `${ogAbs}?v=${v}`
 
   // hreflang solo para hermanas reales
   const base = n.id.replace(/-(es|en|de)$/i, "")
@@ -142,6 +149,9 @@ export default async function Page({ params, searchParams }: PageProps) {
   const pathForInstant = (currentId: string, to: Lang) => `/noticias/${currentId}?auto=${to}`
   const isInstant = isValidLang(auto) || !existeNow(langActual)
 
+  // Imagen hero y crédito (acepta imagen o imagen_portada)
+  const heroSrc = n.imagen ?? n.imagen_portada
+  const heroCredit = n.credito_imagen ?? n.credito_imagen_portada
   const altHero = n.titulo
 
   return (
@@ -190,10 +200,10 @@ export default async function Page({ params, searchParams }: PageProps) {
       </h1>
 
       {/* Imagen principal */}
-      {n.imagen && (
+      {heroSrc && (
         <figure className="mt-6 mb-6">
           <Image
-            src={n.imagen}
+            src={heroSrc}
             alt={altHero}
             width={1600}
             height={900}
@@ -201,9 +211,9 @@ export default async function Page({ params, searchParams }: PageProps) {
             sizes="(max-width: 768px) 100vw, 768px"
             className="w-full h-auto rounded-xl shadow-sm object-contain"
           />
-          {n.credito_imagen && (
+          {heroCredit && (
             <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-snug">
-              {n.credito_imagen.split(" | ").map((chunk, i) => (
+              {String(heroCredit).split(" | ").map((chunk, i) => (
                 <span key={i} className="block">{chunk}</span>
               ))}
             </figcaption>
