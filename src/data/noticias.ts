@@ -75,6 +75,25 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'estonios-no-tienen-sexo-ni-futuro-2025-10-21',
+  fecha: '2025-10-21',
+  titulo: 'Los estonios no tienen sexo ni futuro',
+  pais: 'Estonia',
+  resumen: 'El idioma estonio carece de género y de tiempo futuro, una peculiaridad que revela una forma distinta de entender el tiempo y la identidad. En un país que ha hecho del presente su fortaleza digital, la lengua refleja una cultura sin urgencias, donde el futuro se construye, no se predice.',
+  contenido: [
+    'Mientras muchos países miran hacia el futuro con incertidumbre, Estonia parece haberlo resuelto hace siglos… simplemente eliminándolo de su idioma. En estonio no existe el tiempo futuro, y tampoco hay género gramatical. Para decir “iremos a la sauna mañana”, basta con usar el presente: “me lähme homme sauna” —literalmente, “vamos a la sauna mañana”.',
+    'No hay “él” ni “ella”, solo “tema”. Un pronombre único que borra las distinciones de género y revela una manera distinta de entender la realidad. Tal vez por eso —como bromean los propios estonios— “no tienen sexo ni futuro”.',
+    'Esta peculiaridad no es solo lingüística: es también una metáfora del país que ha hecho del presente su fortaleza. Desde el surgimiento de Skype hasta su sistema de gobierno digital y el programa de e-Residency, Estonia vive en un tiempo continuo donde el presente se expande en innovación.',
+    'El idioma estonio pertenece a la familia fino-úgrica, emparentado con el finés y, más lejanamente, con el húngaro. Tiene 14 casos gramaticales, largas palabras compuestas —como el famoso “kuulilennuteetunneliluuk”— y letras imposibles para muchos extranjeros: õ, ä, ö, ü.',
+    'Pero, sobre todo, el estonio es un idioma que refleja una visión del mundo en la que el futuro no se predice, se construye. Tal vez por eso, como recuerda el artículo de Grete Rahnel para el blog de e-Residency, los estonios pueden permitirse bromear: “pusimos toda nuestra energía en construir el futuro… y se nos olvidó ponerle un tiempo verbal”.',
+    'Recordando que nuestro editor Leonardo de la Hoz Borrego es e-resident de Estonia y que nuestra compañía LedeLab Group OÜ fue fundada en 2018 a través de ese programa, dedicamos esta nota a celebrar la originalidad lingüística y cultural de un país que no necesita tiempos futuros para imaginar uno.'
+  ],
+  etiquetas: ['Estonia', 'lengua', 'cultura', 'e-Residency', 'Leonardo de la Hoz Borrego', 'LedeLab Group OÜ','portada'],
+  fuente: { nombre: 'e-Residency Blog / Grete Rahnel', url: 'https://www.e-resident.gov.ee/blog/posts/10-fascinating-facts-about-the-estonian-language/' },
+  imagen_portada: '/noticias/vaike-kuuba-mojito-baar.jpg',
+  credito_imagen: 'Foto: IG de Väike Kuuba mojito bar | Tartu, Võsu, Estonia'
+},
+{
   id: 'trump-miente-sobre-colombia-amenaza-invasion-2025-10-21-es',
   fecha: '2025-10-21',
   titulo: 'Trump miente sobre Colombia y amenaza con una invasión militar',
