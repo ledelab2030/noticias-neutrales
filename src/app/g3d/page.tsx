@@ -27,26 +27,40 @@ export const viewport: Viewport = {
 export default function Page() {
   return (
     <div className="bg-[#0b0b0b] text-gray-100 font-sans">
-      {/* HEADER PROPIO DE G3D (solo se añade el id) */}
-<header id="g3d-header" className="flex items-center justify-between mb-8">
-  <div className="flex items-center space-x-3">
-<img
-  src="/g3d/logo-g3d.png"
-  alt="Logo G3D"
-  className="h-[40px] w-auto max-w-[100px] object-contain"
-/>
-  </div>
-  <nav className="space-x-6 text-sm text-gray-300">
-    <a href="#servicios">Servicios</a>
-    <a href="#galeria">Galería</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+      {/* HEADER PROPIO DE G3D */}
+      <header
+        id="g3d-header"
+        className="flex flex-col md:flex-row md:items-center md:justify-between mb-8"
+      >
+        <div className="flex justify-center md:justify-start mb-4 md:mb-0">
+          {/* Ajusta el src si tu archivo tiene otro nombre (p.ej. /g3d/Logo%20personal.png) */}
+          <Image
+            src="/g3d/logo-g3d.png"
+            alt="Logo G3D"
+            width={120}
+            height={120}
+            priority
+            className="h-[60px] md:h-[40px] w-auto object-contain"
+          />
+        </div>
 
+        <nav className="flex justify-center md:justify-end space-x-4 text-sm text-gray-300">
+          <a href="#servicios" className="hover:text-white transition">
+            Servicios
+          </a>
+          <a href="#galeria" className="hover:text-white transition">
+            Galería
+          </a>
+          <a href="#sobre-mi" className="hover:text-white transition">
+            Sobre mí
+          </a>
+          <a href="#contacto" className="hover:text-white transition">
+            Contacto
+          </a>
+        </nav>
+      </header>
 
-
-      {/* HERO (sin cambios de contenido) */}
+      {/* HERO */}
       <section
         id="top"
         className="py-16 border-b border-gray-800 bg-gradient-to-b from-black via-[#0b0b0b] to-black"
@@ -96,7 +110,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SERVICIOS (sin cambios) */}
+      {/* SERVICIOS */}
       <section id="servicios" className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-semibold mb-2">Servicios</h2>
@@ -142,7 +156,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* GALERÍA (sin cambios de rutas/extensiones) */}
+      {/* GALERÍA */}
       <section id="galeria" className="py-16 border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-semibold mb-4">Galería</h2>
@@ -156,7 +170,7 @@ export default function Page() {
             ].map(([span, src, w, h, caption]) => (
               <div
                 key={caption as string}
-                className={`tile ${span} relative rounded-xl overflow-hidden border border-gray-800`}
+                className={`tile ${span} relative rounded-xl overflow-hidden border border-gray-800 col-span-12 md:col-span-6 lg:col-span-4`}
               >
                 <Image
                   src={src as string}
@@ -170,7 +184,9 @@ export default function Page() {
                 </span>
               </div>
             ))}
-            <div className="tile span-8 col-span-12 md:col-span-8 relative rounded-xl overflow-hidden border border-gray-800">
+
+            {/* Video ancho */}
+            <div className="tile span-8 col-span-12 md:col-span-12 lg:col-span-8 relative rounded-xl overflow-hidden border border-gray-800">
               <video
                 src="/g3d/video-ecopanel-3c.mp4"
                 controls
@@ -187,7 +203,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SOBRE MÍ (sin cambios de rutas/extensiones) */}
+      {/* SOBRE MÍ */}
       <section id="sobre-mi" className="py-16">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -229,7 +245,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CONTACTO (tal cual lo traías) */}
+      {/* CONTACTO */}
       <section id="contacto" className="py-16 border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
           <div className="bg-[#151515] p-6 rounded-xl border border-gray-800">
@@ -254,37 +270,27 @@ export default function Page() {
               </a>
             </div>
           </div>
-<div className="bg-[#151515] p-6 rounded-xl border border-gray-800 flex flex-col justify-center items-center text-gray-400">
-  <h3 className="text-lg font-semibold mb-2">Ubicación</h3>
-  <p className="text-center mb-3">
-    Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.
-  </p>
 
-  <div className="w-full h-44 rounded-lg overflow-hidden border border-gray-700">
-    <iframe
-      title="Mapa de Barranquilla, Colombia"
-      src="https://www.google.com/maps?q=Barranquilla%2C%20Colombia&z=12&output=embed"
-      className="w-full h-full"
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-  </div>
-</div>
-
-          {/* Mantén tu bloque de Ubicación como lo dejaste */}
-          {/* Si usas imagen, algo como:
+          {/* Ubicación con mapa embebido */}
           <div className="bg-[#151515] p-6 rounded-xl border border-gray-800 flex flex-col justify-center items-center text-gray-400">
             <h3 className="text-lg font-semibold mb-2">Ubicación</h3>
-            <p className="text-center mb-3">Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.</p>
-            <div className="relative w-full h-44 overflow-hidden rounded-lg border border-gray-700">
-              <Image src="/g3d/barranquilla-colombia.jpg" alt="Barranquilla" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+            <p className="text-center mb-3">
+              Barranquilla, Colombia — atención a todo el Caribe y proyectos remotos.
+            </p>
+            <div className="w-full h-44 rounded-lg overflow-hidden border border-gray-700">
+              <iframe
+                title="Mapa de Barranquilla, Colombia"
+                src="https://www.google.com/maps?q=Barranquilla%2C%20Colombia&z=12&output=embed"
+                className="w-full h-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
-          */}
         </div>
       </section>
 
-      {/* FOOTER PROPIO DE G3D (solo se añade el id) */}
+      {/* FOOTER PROPIO DE G3D */}
       <footer
         id="g3d-footer"
         className="border-t border-gray-800 py-6 text-center text-gray-500 text-sm"

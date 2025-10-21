@@ -75,6 +75,31 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'trump-contra-petro-soberania-y-mentiras-2025-10-20-es',
+  fecha: '2025-10-20',
+  titulo: 'Trump contra Petro: cuando el poder de la mentira amenaza la soberanía',
+  pais: 'Colombia',
+  resumen: 'El enfrentamiento entre Donald Trump y Gustavo Petro evidencia el uso del poder económico y militar de Estados Unidos como arma política. Mientras Trump lanza acusaciones sin pruebas y amenaza con sanciones, Petro responde desde los principios éticos y la defensa de la soberanía nacional.',
+  etiquetas: ['colombia', 'gustavo petro', 'donald trump', 'estados unidos', 'editorial', 'geopolitica', 'medios', 'soberania'],
+  fuente: { nombre: 'Noticias Neutrales – Editorial', url: 'https://noticiasneutrales.com' },
+  url_fuente: 'https://www.univision.com/',
+  imagen: '/noticias/steve-johnson-9xojIuTqumg-unsplash.jpg',
+  credito_imagen: 'Foto de Steve Johnson en Unsplash',
+  idioma_original: 'es',
+  traducciones: {
+    en: 'trump-vs-petro-sovereignty-and-lies-2025-10-20-en'
+  },
+  contenido: [
+    'El problema no es que Donald Trump mienta; el problema es que su poder permite que esas mentiras generen consecuencias reales. Cuando acusa a Gustavo Petro de “liderar el narcotráfico” y amenaza con “entrar a Colombia”, no habla como un político común, sino como el jefe de una potencia que usa la desinformación como arma de presión.',
+    'En su entrevista con Univision, Petro respondió: “Desobedezcan la orden de Trump; obedezcan la orden de la humanidad”. No fue una provocación gratuita, sino un llamado a la conciencia universal. El mensaje apunta a no cumplir órdenes que impliquen crímenes contra la humanidad. Puede discutirse el tono, pero no el contraste ético.',
+    'Desde septiembre, Estados Unidos ha ejecutado bombardeos contra embarcaciones en el Caribe bajo el argumento de combatir el narcotráfico. El saldo: decenas de muertos, entre ellos un colombiano. Petro sostiene que algunos impactos ocurrieron en aguas nacionales, pero Washington evita publicar coordenadas. Sin transparencia, la soberanía queda en entredicho.',
+    'Trump también amenaza con imponer aranceles y recortar la cooperación económica. Colombia depende de Estados Unidos para casi una cuarta parte de sus exportaciones, lo que convierte cada amenaza comercial en una forma de chantaje. Por eso Petro insiste en diversificar mercados y reducir esa dependencia estructural.',
+    'Los principales medios reprodujeron los insultos de Trump, pero omitieron la amenaza más grave: la posibilidad de intervención. Esa omisión favorece al poder y debilita el periodismo. Cuando la prensa evita citar la amenaza literal de un presidente extranjero, deja de informar y empieza a encubrir.',
+    'Esta crisis deja tres lecciones: 1) El discurso de derechos humanos de Estados Unidos es selectivo. 2) La dependencia económica y mediática sigue siendo el mayor riesgo para América Latina. 3) La mentira, cuando se repite desde el poder, se convierte en política exterior.',
+    'Trump encarna el abuso; Petro —con todos sus defectos— representa la resistencia a ese abuso. La historia casi siempre termina del lado de quienes defendieron la verdad frente a la intimidación. La soberanía no se mide por el miedo, sino por la capacidad de decir no.'
+  ]
+},
+{
   id: 'esmeralda-hernandez-conversaciones-pendientes-2025-10-19-es',
   fecha: '2025-10-19',
   titulo: 'Esmeralda Hernández expone su agenda ambiental y balance de la ley antitaurina en “Conversaciones Pendientes”',
