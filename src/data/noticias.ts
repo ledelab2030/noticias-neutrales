@@ -920,7 +920,6 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: 'Maurice Armitage expone por qué reducir la desigualdad es buen negocio en Colombia',
   pais: 'Colombia',
   resumen: 'El empresario y exalcalde de Cali, Maurice Armitage, sostiene que valorar el trabajo, mejorar salarios y compartir utilidades fortalece la productividad y la estabilidad, alineando intereses de empresas y trabajadores.',
-  imagen_portada: 'noticias/maurice-armitage.png',
   video: 'https://www.youtube.com/embed/b2xBjkrGS1s',
   credito_video: 'Canal A Fondo',
   contenido: [
