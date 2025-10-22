@@ -75,6 +75,26 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'powerchina-guayepo-iii-conexion-plena-2025-10-21-es',
+  fecha: '2025-10-21',
+  titulo: 'PowerChina anuncia la conexión plena a red de la planta solar colombiana Guayepo III de 200 MW',
+  pais: 'Colombia',
+  resumen: 'La compañía PowerChina completó la conexión a la red eléctrica de la planta solar Guayepo III, de 200 megavatios, ubicada en el departamento del Atlántico. El proyecto forma parte del complejo solar más grande del país y refuerza la transición energética de Colombia.',
+  etiquetas: ['colombia', 'energia solar', 'powerchina', 'guayepo iii', 'atlantico', 'transicion energetica'],
+  fuente: { nombre: 'PV Magazine Latam', url: 'https://www.pv-magazine-latam.com/2025/10/21/powerchina-anuncia-la-conexion-plena-a-red-de-la-planta-solar-colombiana-guayepo-iii-de-200-mw/' },
+  url_fuente: 'https://www.pv-magazine-latam.com/2025/10/21/powerchina-anuncia-la-conexion-plena-a-red-de-la-planta-solar-colombiana-guayepo-iii-de-200-mw/',
+  imagen: '/noticias/powerchina-guayepo-iii-conexion-plena-2025-10-21.jpg',
+  credito_imagen: 'Orlando Amador / El Heraldo',
+  idioma_original: 'es',
+  contenido: [
+    'La empresa PowerChina anunció la conexión plena a la red eléctrica de la planta solar Guayepo III, ubicada en el departamento del Atlántico, Colombia. Con una capacidad instalada de 200 megavatios (MW), el proyecto se integra al complejo Guayepo Solar, considerado el mayor parque fotovoltaico del país y uno de los más grandes de América Latina.',
+    'Según la compañía, la planta entró en operación comercial tras superar exitosamente las pruebas de sincronización y control de energía con el Sistema Interconectado Nacional. El desarrollo contó con tecnología de última generación en inversores y módulos fotovoltaicos de alta eficiencia.',
+    'El complejo Guayepo, compuesto por las plantas Guayepo I, II y III, alcanza una capacidad total cercana a los 500 MW, suficiente para suministrar electricidad limpia a más de 500 000 hogares colombianos y evitar la emisión de alrededor de 400 000 toneladas de dióxido de carbono al año.',
+    'La obra, construida por PowerChina en colaboración con socios locales, hace parte de la estrategia nacional para diversificar la matriz energética y fortalecer la generación renovable en la región Caribe. La compañía destacó que el proyecto también generó empleo local durante su fase de construcción y contribuirá al desarrollo económico del Atlántico.',
+    'Fuentes citadas: https://www.pv-magazine-latam.com/2025/10/21/powerchina-anuncia-la-conexion-plena-a-red-de-la-planta-solar-colombiana-guayepo-iii-de-200-mw/'
+  ]
+},
+{
   id: 'estonios-no-tienen-sexo-ni-futuro-2025-10-21',
   fecha: '2025-10-21',
   titulo: 'Los estonios no tienen sexo ni futuro',
