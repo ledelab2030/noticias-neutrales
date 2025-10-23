@@ -74,6 +74,7 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 
+
 {
   id: 'powerchina-guayepo-iii-conexion-plena-2025-10-21-es',
   fecha: '2025-10-21',
@@ -194,10 +195,8 @@ const noticiasRaw: NoticiaRaw[] = [
   etiquetas: ['estados unidos', 'bernie sanders', 'donald trump', 'no kings', 'politica', 'protestas'],
   fuente: { nombre: 'YouTube / Bernie Sanders', url: 'https://www.youtube.com/watch?v=jcxJPdWYBfo' },
   url_fuente: 'https://www.youtube.com/watch?v=jcxJPdWYBfo',
-  video: 'https://www.youtube.com/watch?v=jcxJPdWYBfo',
+  video: 'https://www.youtube.com/embed/jcxJPdWYBfo',
   credito_video: 'YouTube / Bernie Sanders',
-  imagen: '/noticias/saad-ahmad-u15HL2HFna0-unsplash.jpg',
-  credito_imagen: 'Foto de Saad Ahmad en Unsplash',
   idioma_original: 'en',
   traducciones: {
     en: 'bernie-sanders-no-kings-rally-washington-2025-10-18-en'
@@ -258,7 +257,7 @@ const noticiasRaw: NoticiaRaw[] = [
   id: 'metabolismo-hormonas-y-habitos-en-la-salud-capilar-2025-10-14',
   fecha: '2025-10-14',
   titulo: 'Metabolismo, hormonas y hábitos: lo que explican Frank Suárez y Carlos Jaramillo sobre la salud capilar',
-  pais: 'Latinoamérica',
+  pais: 'Puerto Rico',
   resumen: 'Dos enfoques coinciden en que la caída del cabello puede ser una señal del cuerpo ante desequilibrios internos. Frank Suárez la relaciona con hipotiroidismo y metabolismo lento, mientras que Carlos Jaramillo y John Harvey Gaviria amplían la mirada hacia causas genéticas, hormonales, inflamatorias y de estilo de vida.',
   etiquetas: [
     'salud',
