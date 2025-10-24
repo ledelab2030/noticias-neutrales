@@ -121,26 +121,20 @@ export default async function Page({ params, searchParams }: PageProps) {
   const langDetectado = detectarLangDesdeId(n.id) ?? (n.idioma_original as Lang) ?? "es"
   let langActual: Lang = langDetectado
 
-  // cookies() puede ser sync/async según setup; con await es seguro en ambos casos
   const cookieStore = await cookies()
   const cookieLang = normalizeToSupported(cookieStore.get("nn_lang")?.value ?? "es")
 
-  // Helpers dataset
   const base = baseIdSinLang(n.id)
   const existe = (l: Lang) => (noticias as Noticia[]).some((x) => x.id === idConLang(base, l))
 
-  // 1) ?auto= distinto al actual → traducir on-the-fly
   if (isValidLang(auto) && auto !== langActual) {
     n = await translateNoticia(n, auto)
     langActual = auto
-  }
-  // 2) Sin ?auto=, preferencia distinta y NO hay hermana → traducir automático
-  else if (!isValidLang(auto) && cookieLang !== langActual && !existe(cookieLang)) {
+  } else if (!isValidLang(auto) && cookieLang !== langActual && !existe(cookieLang)) {
     n = await translateNoticia(n, cookieLang)
     langActual = cookieLang
   }
 
-  // Recalcular disponibles / instantáneas
   const baseNow = baseIdSinLang(n.id)
   const existeNow = (l: Lang) => (noticias as Noticia[]).some((x) => x.id === idConLang(baseNow, l))
   const disponibles = ["es", "en", "de"].filter((l) => l !== langActual && existeNow(l as Lang)) as Lang[]
@@ -149,7 +143,6 @@ export default async function Page({ params, searchParams }: PageProps) {
   const pathForInstant = (currentId: string, to: Lang) => `/noticias/${currentId}?auto=${to}`
   const isInstant = isValidLang(auto) || !existeNow(langActual)
 
-  // Imagen hero y crédito (acepta imagen o imagen_portada)
   const heroSrc = n.imagen ?? n.imagen_portada
   const heroCredit = n.credito_imagen ?? n.credito_imagen_portada
   const altHero = n.titulo
@@ -199,8 +192,28 @@ export default async function Page({ params, searchParams }: PageProps) {
         {n.titulo}
       </h1>
 
-      {/* Imagen principal */}
-      {heroSrc && (
+      {/* 🎥 Video arriba */}
+      {n.video && (
+        <div className="mt-6 mb-6">
+          <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-sm">
+            <iframe
+              src={n.video}
+              title={n.titulo}
+              className="absolute top-0 left-0 w-full h-full rounded-xl"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          {n.credito_video && (
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              Crédito de video: {n.credito_video}
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* Imagen portada solo si no hay video */}
+      {heroSrc && !n.video && (
         <figure className="mt-6 mb-6">
           <Image
             src={heroSrc}
@@ -221,26 +234,6 @@ export default async function Page({ params, searchParams }: PageProps) {
         </figure>
       )}
 
-      {/* Video */}
-      {n.video && (
-        <div className="mt-6 mb-6">
-          <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-sm">
-            <iframe
-              src={n.video}
-              title={n.titulo}
-              className="absolute top-0 left-0 w-full h-full rounded-xl"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          {n.credito_video && (
-            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-              Crédito de video: {n.credito_video}
-            </p>
-          )}
-        </div>
-      )}
-
       {/* Meta línea */}
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400">
         <span>{n.fecha}</span>
@@ -251,7 +244,6 @@ export default async function Page({ params, searchParams }: PageProps) {
           </>
         )}
 
-        {/* 📍 Ubicación */}
         {n.ubicacion && (
           <>
             <span className="opacity-60">·</span>
@@ -298,7 +290,7 @@ export default async function Page({ params, searchParams }: PageProps) {
             const t = (typeof p === "string" ? p : "").trim()
             if (!t) return null
 
-            // bloques HTML completos => render tal cual (evita <div> dentro de <p>)
+            // bloques HTML completos
             if (/^<(div|section|article|figure|iframe|table|ul|ol|blockquote|h[1-6])\b/i.test(t)) {
               return <div key={i} className="my-6" dangerouslySetInnerHTML={{ __html: t }} />
             }
@@ -308,10 +300,39 @@ export default async function Page({ params, searchParams }: PageProps) {
               return <hr key={i} className="my-6 border-t border-zinc-200 dark:border-zinc-800" />
             }
 
-            // marcador ya soportado para HTML crudo
+            // marcador <!--img-->
             if (t.startsWith("<!--img-->")) {
               const html = t.replace("<!--img-->", "")
               return <div key={i} className="my-6" dangerouslySetInnerHTML={{ __html: html }} />
+            }
+
+            // 🖼️ insertar imagen_portada después del primer párrafo si hay video
+            if (i === 0 && n.video && heroSrc) {
+              // ⬇️ DEVOLVEMOS UN ARRAY CON KEYS ÚNICAS (sin fragmentos)
+              return [
+                <p
+                  key={`p-${i}`}
+                  className="whitespace-pre-line"
+                  dangerouslySetInnerHTML={{ __html: resaltarLinks(t) }}
+                />,
+                <figure key={`hero-${i}`} className="mt-6 mb-6">
+                  <Image
+                    src={heroSrc}
+                    alt={altHero}
+                    width={1600}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="w-full h-auto rounded-xl shadow-sm object-contain"
+                  />
+                  {heroCredit && (
+                    <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-snug">
+                      {String(heroCredit).split(" | ").map((chunk, j) => (
+                        <span key={j} className="block">{chunk}</span>
+                      ))}
+                    </figcaption>
+                  )}
+                </figure>,
+              ]
             }
 
             // párrafo normal
@@ -330,10 +351,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         </p>
       ) : null}
 
-      {/* Etiquetas */}
       {Array.isArray(n.etiquetas) && n.etiquetas.length > 0 && <Etiquetas etiquetas={n.etiquetas} />}
-
-      {/* Relacionadas */}
       <Relacionadas idActual={n.id} etiquetas={n.etiquetas ?? []} />
     </main>
   )

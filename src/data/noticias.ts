@@ -76,23 +76,39 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
-  id: 'powerchina-guayepo-iii-conexion-plena-2025-10-21-es',
-  fecha: '2025-10-21',
-  titulo: 'PowerChina anuncia la conexión plena a red de la planta solar colombiana Guayepo III de 200 MW',
+  id: 'reduce-grasa-abdominal-en-15-dias-dr-rosero-2025-10-23-es',
+  fecha: '2025-10-23',
+  titulo: 'Comienza a reducir tu grasa abdominal en 15 días: las 4 claves del Dr. Rosero para activar tu metabolismo',
   pais: 'Colombia',
-  resumen: 'La compañía PowerChina completó la conexión a la red eléctrica de la planta solar Guayepo III, de 200 megavatios, ubicada en el departamento del Atlántico. El proyecto forma parte del complejo solar más grande del país y refuerza la transición energética de Colombia.',
-  etiquetas: ['colombia', 'energia solar', 'powerchina', 'guayepo iii', 'atlantico', 'transicion energetica'],
-  fuente: { nombre: 'PV Magazine Latam', url: 'https://www.pv-magazine-latam.com/2025/10/21/powerchina-anuncia-la-conexion-plena-a-red-de-la-planta-solar-colombiana-guayepo-iii-de-200-mw/' },
-  url_fuente: 'https://www.pv-magazine-latam.com/2025/10/21/powerchina-anuncia-la-conexion-plena-a-red-de-la-planta-solar-colombiana-guayepo-iii-de-200-mw/',
-  imagen: '/noticias/powerchina-guayepo-iii-conexion-plena-2025-10-21.jpg',
-  credito_imagen: 'Orlando Amador / El Heraldo',
+  resumen: 'El endocrinólogo colombiano Carlos Rosero explica que es posible iniciar una reducción visible de la grasa abdominal en solo dos semanas si se aplican cuatro recomendaciones basadas en evidencia científica. Su enfoque busca reprogramar el metabolismo y mejorar la salud hormonal.',
+  etiquetas: ['salud', 'nutrición', 'metabolismo', 'endocrinología', 'bienestar','portada'],
+  fuente: { nombre: 'YouTube / Dr. Carlos Rosero', url: 'https://www.youtube.com/watch?v=oZAbzBW7Ehk' },
+  url_fuente: 'https://www.youtube.com/watch?v=oZAbzBW7Ehk',
+  imagen_portada: '/noticias/reduce-grasa-abdominal-en-15-dias-dr-rosero-2025-10-23-es.jpg',
+  credito_imagen_portada: 'Recorte del video del Dr. Rosero',
+  video: 'https://www.youtube.com/embed/oZAbzBW7Ehk',
+  credito_video: 'YouTube / Dr. Carlos Rosero',
   idioma_original: 'es',
   contenido: [
-    'La empresa PowerChina anunció la conexión plena a la red eléctrica de la planta solar Guayepo III, ubicada en el departamento del Atlántico, Colombia. Con una capacidad instalada de 200 megavatios (MW), el proyecto se integra al complejo Guayepo Solar, considerado el mayor parque fotovoltaico del país y uno de los más grandes de América Latina.',
-    'Según la compañía, la planta entró en operación comercial tras superar exitosamente las pruebas de sincronización y control de energía con el Sistema Interconectado Nacional. El desarrollo contó con tecnología de última generación en inversores y módulos fotovoltaicos de alta eficiencia.',
-    'El complejo Guayepo, compuesto por las plantas Guayepo I, II y III, alcanza una capacidad total cercana a los 500 MW, suficiente para suministrar electricidad limpia a más de 500 000 hogares colombianos y evitar la emisión de alrededor de 400 000 toneladas de dióxido de carbono al año.',
-    'La obra, construida por PowerChina en colaboración con socios locales, hace parte de la estrategia nacional para diversificar la matriz energética y fortalecer la generación renovable en la región Caribe. La compañía destacó que el proyecto también generó empleo local durante su fase de construcción y contribuirá al desarrollo económico del Atlántico.',
-    'Fuentes citadas: https://www.pv-magazine-latam.com/2025/10/21/powerchina-anuncia-la-conexion-plena-a-red-de-la-planta-solar-colombiana-guayepo-iii-de-200-mw/'
+    'El endocrinólogo colombiano Carlos Rosero explica que es posible iniciar una reducción visible de la grasa abdominal en solo dos semanas si se aplican cuatro recomendaciones basadas en evidencia científica. Su enfoque, desarrollado durante más de 15 años de práctica médica, busca reprogramar el metabolismo para favorecer la quema de grasa visceral y mejorar la salud hormonal.',
+
+    'En su video “Pierde grasa abdominal en 15 días (lo que mis pacientes hacen y funciona)”, el Dr. Rosero detalla que la grasa abdominal o visceral es la más peligrosa, pues se asocia a hipertensión, diabetes y enfermedades cardiovasculares. Sin embargo, asegura que el cuerpo puede comenzar a perderla de forma progresiva al corregir ciertos hábitos. Su plan se basa en cuatro pasos:',
+
+    '<b>🩸 Domina tu insulina</b><br>Evita los picos que impiden quemar grasa. Suprime azúcar, miel, productos de panadería, jugos licuados y leche, que elevan la insulina de manera desproporcionada.',
+
+    '<b>⏰ Ajusta tu cronobiología</b><br>Desayuna con proteína antes de las 9 a.m. y cena antes de las 7 p.m. para mantener el equilibrio hormonal y mejorar la calidad del sueño.',
+
+    '<b>💪 Activa tu músculo</b><br>Combina ejercicio cardiovascular y de resistencia para que el cuerpo utilice la glucosa como energía en lugar de almacenarla como grasa.',
+
+    '<b>🌙 Duerme bien</b><br>Respeta un ciclo de sueño de al menos siete horas (idealmente entre las 10 p.m. y las 5–6 a.m.) para regular el cortisol y estimular la hormona del crecimiento, que favorece la pérdida de grasa y el fortalecimiento muscular.',
+
+    'Rosero aclara que este plan no se trata de “bajar la barriga” de un día para otro, sino de activar el proceso que lleva a la reducción sostenida de grasa abdominal. Recomienda medirse el abdomen a la altura del ombligo antes de comenzar y repetir la medición 15 días después para comprobar los primeros cambios.',
+
+    '“El aumento en el perímetro abdominal es un indicador de gravedad metabólica”, advierte, y destaca que mejorar este parámetro tiene beneficios visibles y clínicos. Su método, dice, funciona porque combina regulación hormonal, ejercicio y descanso, tres factores clave del metabolismo humano.',
+
+    'El Dr. Rosero comparte información sobre metabolismo, nutrición y salud hormonal en su canal de YouTube y en su sitio web <a href="https://www.endocrinorosero.com" target="_blank">www.endocrinorosero.com</a>. También puede seguirse en X (antes Twitter) como <a href="https://x.com/endocrinorosero" target="_blank">@endocrinorosero</a>.',
+
+    '🎥 Video completo: <a href="https://www.youtube.com/embed/oZAbzBW7Ehk" target="_blank">“Pierde grasa abdominal en 15 días (lo que mis pacientes hacen y funciona)” – YouTube</a>'
   ]
 },
 {
