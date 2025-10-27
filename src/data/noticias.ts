@@ -76,6 +76,33 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'ivan-cepeda-gana-consulta-pacto-historico-2025-10-26-es',
+  fecha: '2025-10-26',
+  titulo: 'Iván Cepeda gana la consulta del Pacto Histórico con 1,53 millones de votos y será el candidato presidencial de la izquierda',
+  pais: 'Colombia',
+  resumen: 'Con 1.527.549 votos (65,14 %), Iván Cepeda ganó la consulta del Pacto Histórico y será el candidato presidencial de la izquierda. Boletín oficial de la Registraduría con avance del 54 %.',
+  etiquetas: ['colombia', 'politica', 'ivan cepeda', 'pacto historico', 'gustavo petro', 'elecciones 2026', 'portada'],
+  fuente: { nombre: 'El País', url: 'https://elpais.com/america-colombia/2025-10-26/ivan-cepeda-gana-la-consulta-popular-del-pacto-historico-y-es-el-candidato-presidencial-de-la-izquierda.html' },
+  url_fuente: 'https://elpais.com/america-colombia/2025-10-26/ivan-cepeda-gana-la-consulta-popular-del-pacto-historico-y-es-el-candidato-presidencial-de-la-izquierda.html',
+  imagen: '/noticias/ivan-cepeda-consulta-pacto-historico-2025-10-26.jpg',
+  credito_imagen: 'Registraduría Nacional del Estado Civil',
+  consecutivo_unico: '20251026-01',
+
+  idioma_original: 'es',
+  traducciones: {
+    en: 'ivan-cepeda-gana-consulta-pacto-historico-2025-10-26-en',
+    de: 'ivan-cepeda-gana-consulta-pacto-historico-2025-10-26-de'
+  },
+
+  contenido: [
+    'El senador Iván Cepeda, integrante del Polo Democrático y figura del Pacto Histórico, fue elegido este domingo 26 de octubre como candidato presidencial de la coalición de izquierda en Colombia, tras imponerse en la consulta popular convocada por el movimiento.',
+    'Según el boletín de la Registraduría Nacional del Estado Civil con avance del 54 %, Cepeda obtuvo 1.527.549 votos (65,14 %). Diana Carolina Corcho Mejía registró 673.343 votos (28,71 %) y Daniel Quintero Calle 144.010 votos (6,14 %). En total participaron 2.726.735 votantes, con 243.645 votos no marcados y 138.188 nulos.',
+    'El presidente Gustavo Petro felicitó públicamente a Cepeda. La jornada transcurrió con normalidad y mesas habilitadas en todo el territorio nacional, de acuerdo con la información oficial disponible.',
+    'Tras conocerse los resultados, Cepeda señaló que su campaña priorizará la defensa del proceso de paz, la reducción de la desigualdad y la protección del medioambiente. Con esta votación, la coalición definió a su aspirante presidencial para las elecciones de 2026.',
+    'Fuentes citadas: https://elpais.com/america-colombia/2025-10-26/ivan-cepeda-gana-la-consulta-popular-del-pacto-historico-y-es-el-candidato-presidencial-de-la-izquierda.html, Registraduría Nacional del Estado Civil (boletín oficial del 26 de octubre de 2025, avance 54 %)'
+  ]
+},
+{
   id: 'reduce-grasa-abdominal-en-15-dias-dr-rosero-2025-10-23-es',
   fecha: '2025-10-23',
   titulo: 'Comienza a reducir tu grasa abdominal en 15 días: las 4 claves del Dr. Rosero para activar tu metabolismo',
