@@ -51,6 +51,26 @@ function fuenteNombre(f: Noticia["fuente"]) {
   return f.nombre ?? ""
 }
 
+// 🧩 Normaliza rutas/URLs de imagen para que <Image> no reciba valores inválidos
+function normalizeImageSrc(src?: string): string | null {
+  if (!src) return null
+  const trimmed = src.trim()
+  if (!trimmed) return null
+
+  // Si ya parece absoluta (http/https), validamos con URL
+  if (trimmed.startsWith("http://") || trimmed.startsWith("https://")) {
+    try {
+      new URL(trimmed)
+      return trimmed
+    } catch {
+      return null
+    }
+  }
+
+  // Si es relativa, garantizamos slash inicial (/foo.jpg)
+  return trimmed.startsWith("/") ? trimmed : `/${trimmed}`
+}
+
 // ---- SEO ----
 export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { id } = await params
@@ -63,7 +83,8 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const url = `${baseUrl}/noticias/${n.id}`
 
   // Imagen OG: usa imagen, o imagen_portada, o fallback
-  const ogRel = n.imagen ?? n.imagen_portada ?? "/og-default.jpg"
+  const ogRelRaw = n.imagen ?? n.imagen_portada ?? "/og-default.jpg"
+  const ogRel = normalizeImageSrc(ogRelRaw) ?? "/og-default.jpg"
   const ogAbs = ogRel.startsWith("http") ? ogRel : `${baseUrl}${ogRel}`
 
   // Cache-buster para evitar previas viejas en FB/WA
@@ -143,7 +164,8 @@ export default async function Page({ params, searchParams }: PageProps) {
   const pathForInstant = (currentId: string, to: Lang) => `/noticias/${currentId}?auto=${to}`
   const isInstant = isValidLang(auto) || !existeNow(langActual)
 
-  const heroSrc = n.imagen ?? n.imagen_portada
+  // 🖼️ Imagen principal normalizada (acepta absoluta o relativa; descarta inválidas)
+  const heroSrc = normalizeImageSrc(n.imagen ?? n.imagen_portada)
   const heroCredit = n.credito_imagen ?? n.credito_imagen_portada
   const altHero = n.titulo
 
@@ -223,6 +245,7 @@ export default async function Page({ params, searchParams }: PageProps) {
             priority
             sizes="(max-width: 768px) 100vw, 768px"
             className="w-full h-auto rounded-xl shadow-sm object-contain"
+            unoptimized
           />
           {heroCredit && (
             <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-snug">
@@ -323,6 +346,7 @@ export default async function Page({ params, searchParams }: PageProps) {
                     height={900}
                     sizes="(max-width: 768px) 100vw, 768px"
                     className="w-full h-auto rounded-xl shadow-sm object-contain"
+                    unoptimized
                   />
                   {heroCredit && (
                     <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-snug">
