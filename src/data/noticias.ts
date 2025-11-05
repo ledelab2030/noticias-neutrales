@@ -76,6 +76,29 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'rtvc-medio-oficial-celac-ue-2025-11-05',
+  fecha: '2025-11-05',
+  titulo: 'RTVC será el medio oficial de la IV Cumbre CELAC–Unión Europea en Colombia',
+  pais: 'Colombia',
+  resumen: 'RTVC Sistema de Medios Públicos transmitirá la IV Cumbre CELAC–Unión Europea, que se realizará en Santa Marta los días 9 y 10 de noviembre de 2025.',
+  contenido: [
+    'RTVC Sistema de Medios Públicos será el medio oficial encargado de la transmisión de la IV Cumbre CELAC–Unión Europea, que se celebrará en Santa Marta los días 9 y 10 de noviembre de 2025. El evento reunirá delegaciones de los 33 países de América Latina y el Caribe junto con representantes de la Unión Europea.',
+    'Según un comunicado del Consejo Europeo publicado el 9 de abril de 2025, la Cumbre tiene como objetivo fortalecer la cooperación política y económica entre ambas regiones, con énfasis en transición energética, seguridad, innovación y desarrollo sostenible.',
+    'El Ministerio de Relaciones Exteriores informó que Colombia ejerce la Presidencia Pro Tempore de la CELAC y lidera la preparación de la declaración final conjunta. Como medio oficial, RTVC coordinará la señal institucional y la programación especial para radio y televisión pública durante los dos días del evento.',
+    'Fuentes citadas:',
+    'Consejo Europeo – Comunicado conjunto – 9 de abril de 2025',
+    'Ministerio de Relaciones Exteriores de Colombia – Comunicado oficial',
+    'RTVC Sistema de Medios Públicos – Artículo institucional'
+  ],
+  etiquetas: ['colombia', 'medios', 'celac', 'unión europea'],
+  fuente: {
+    nombre: 'RTVC Sistema de Medios Públicos',
+    url: 'https://www.rtvc.gov.co/noticias/celac-ue-rtvc-transmision-senal-colombia-radio-nacional'
+  },
+  imagen: '/noticias/celac_cumbre_rtvc.jpg',
+  credito_imagen: 'RTVC Sistema de Medios Públicos'
+},
+{
   id: 'los-gustavos-uribe-recorderis-2025-10-30-es',
   fecha: '2025-10-30',
   titulo: 'Hace cuatro años: Los Gustavos e Iván Cepeda debatían sobre Uribe, la justicia y el origen del Pacto Histórico',
@@ -84,7 +107,7 @@ const noticiasRaw: NoticiaRaw[] = [
   etiquetas: ['colombia', 'politica', 'archivo', 'gustavo petro', 'gustavo bolívar', 'iván cepeda', 'pacto histórico', 'álvaro uribe'],
   fuente: { nombre: 'YouTube', url: 'https://www.youtube.com/watch?v=rOgk5iLoH-w' },
   url_fuente: 'https://www.youtube.com/embed/rOgk5iLoH-w',
-  imagen_portada: 'noticias/los-gustavos-uribe-recorderis-2025-10-30-es.jpg',
+  imagen_portada: '/noticias/los-gustavos-uribe-recorderis-2025-10-30-es.jpg',
   video: 'https://www.youtube.com/embed/rOgk5iLoH-w',
   credito_video: 'YouTube / #LosGustavos',
   idioma_original: 'es',
