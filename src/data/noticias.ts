@@ -76,6 +76,26 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'dolar-colombiano-minimo-anual-2025-11-06-es',
+  fecha: '2025-11-06',
+  titulo: 'El dólar cae a 3.815 pesos y alcanza su nivel más bajo del año',
+  pais: 'Colombia',
+  resumen: 'La disminución del tipo de cambio se debe a “un debilitamiento global del dólar combinado con señales positivas de la economía colombiana”.',
+  etiquetas: ['colombia', 'economia', 'moneda', 'dolar', 'mercados', 'morningstar','portada'],
+  fuente: { nombre: 'Morningstar / Google Finance', url: 'https://www.morningstar.com/' },
+  url_fuente: 'https://www.google.com/search?q=usd+to+cop&oq=usd+to+cop&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMgcIARAAGIAEMg0IAhAAGIMBGLEDGIAEMgoIAxAAGLEDGIAEMg0IBBAAGIMBGLEDGIAEMgcIBRAAGIAEMg0IBhAAGIMBGLEDGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEIMTE1NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8',
+  imagen: '/noticias/dolar-colombiano-minimo-anual-2025-11-06.jpg',
+  credito_imagen: 'Morningstar',
+  idioma_original: 'es',
+  contenido: [
+    'El peso colombiano continúa fortaleciéndose frente al dólar, que cerró el 6 de noviembre de 2025 en 3.815,58 pesos, según datos de Morningstar. Se trata del valor más bajo registrado en lo que va del año, en medio de una tendencia descendente iniciada desde mediados de octubre.',
+    'La caída del tipo de cambio se enmarca en un contexto de debilitamiento global del dólar estadounidense, asociado a las señales de desaceleración económica en ese país y a la expectativa de una política monetaria más flexible por parte de la Reserva Federal.',
+    'De acuerdo con la información destacada por Google Finance y analistas citados por Morningstar, el fenómeno responde a la combinación de “un ablandamiento global del dólar y señales positivas provenientes de la economía colombiana”. Entre estas señales figuran la estabilidad en los precios del petróleo, la mejora en las cuentas fiscales y un entorno de mayor confianza en los mercados locales.',
+    'Durante agosto de 2025, la tasa promedio había sido de alrededor de 4.100 pesos por dólar, lo que implica una apreciación de entre 7 % y 8 % del peso colombiano en menos de tres meses. El fortalecimiento de la moneda nacional refleja la percepción de un entorno económico interno más estable y de menor riesgo frente a otros mercados emergentes.',
+    'Fuente: Morningstar / Google Finance (consulta del 6 de noviembre de 2025).'
+  ]
+},
+{
   id: 'rtvc-medio-oficial-celac-ue-2025-11-05',
   fecha: '2025-11-05',
   titulo: 'RTVC será el medio oficial de la IV Cumbre CELAC–Unión Europea en Colombia',
