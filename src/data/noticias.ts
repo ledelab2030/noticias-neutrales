@@ -76,6 +76,132 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'hidroituango-responsabilidad-fajardo-aseguradora-polimetrica-2025-11-12-es',
+  fecha: '2025-11-12',
+  titulo: 'Recordatorio del caso Hidroituango: Contraloría declaró responsable a Fajardo; el daño fue cubierto por aseguradora',
+  pais: 'Colombia',
+  resumen: 'A raíz del aumento de popularidad de Sergio Fajardo en la encuesta Polimétrica de noviembre de 2025, resurge el recordatorio del fallo fiscal por Hidroituango. La Contraloría lo declaró responsable junto a otros 25 implicados en 2021. El daño fue reparado por la aseguradora Mapfre, pero no hubo absolución.',
+  etiquetas: ['colombia', 'hidroituango', 'sergio fajardo', 'contraloría general', 'mapfre', 'responsabilidad fiscal', 'polimétrica', 'política'],
+  fuente: { nombre: 'La República', url: 'https://www.larepublica.co/economia/la-contraloria-declaro-la-reparacion-integral-en-hidroituango-por-pago-total-del-fallo-3293729' },
+  url_fuente: 'https://www.larepublica.co/economia/la-contraloria-declaro-la-reparacion-integral-en-hidroituango-por-pago-total-del-fallo-3293729',
+  imagen: '/noticias/hidroituango-responsabilidad-fajardo-aseguradora-polimetrica-2025-11-12.jpg',
+  credito_imagen: 'Contraloría General de la República / Archivo público',
+  consecutivo_unico: '20251112-02',
+  idioma_original: 'es',
+
+  contenido: [
+    'El repunte de Sergio Fajardo en la encuesta Polimétrica de noviembre de 2025, donde figura entre las figuras políticas con mayor favorabilidad, ha reactivado el interés público por el antecedente fiscal del caso Hidroituango.',
+    'En septiembre de 2021, la Contraloría General de la República declaró responsables fiscales a 26 personas naturales y jurídicas por el detrimento patrimonial ocasionado por irregularidades en el megaproyecto hidroeléctrico. Entre ellos se encontraban Fajardo, entonces exgobernador de Antioquia, y el exalcalde de Medellín Luis Alfredo Ramos.',
+    'El fallo de la Contraloría Delegada para Investigaciones Especiales contra la Corrupción estableció un daño fiscal superior a 4,3 billones de pesos, derivado de decisiones administrativas y contractuales tomadas durante las fases críticas de construcción y financiación del proyecto.',
+    'En enero de 2022, mediante el Auto 0104, la Contraloría declaró la “reparación integral del daño fiscal” luego de que la aseguradora Mapfre S.A. pagara la póliza Todo Riesgo Construcción asociada al proyecto. Este pago cubrió la totalidad del monto exigido, lo que permitió dar por cumplido el fallo fiscal.',
+    'No obstante, la decisión no implicó absolución ni exoneración de los declarados responsables. La responsabilidad fiscal se mantuvo, pero el daño económico a la Hacienda Pública se consideró resarcido por el pago del seguro, sin que ello modificara la condición jurídica de los implicados.',
+    'La reaparición del tema cobra relevancia ante el nuevo escenario político reflejado en los sondeos de opinión, que ubican a Fajardo entre las figuras con mejor imagen pública tras varios años de bajo respaldo.',
+    'Fuentes citadas: https://www.eltiempo.com/justicia/investigacion/fajardo-e-hidroituango-que-viene-tras-acuerdo-de-pago-de-aseguradora-638185'
+  ]
+},
+{
+  id: 'reino-unido-suspende-inteligencia-con-eeuu-caribe-2025-11-11-es',
+  fecha: '2025-11-11',
+  titulo: 'Reino Unido suspende parte del intercambio de inteligencia con Estados Unidos por ataques a embarcaciones en el Caribe',
+  pais: 'Reino Unido',
+  resumen: 'El Reino Unido detuvo temporalmente el intercambio de información con Estados Unidos sobre embarcaciones sospechosas de narcotráfico en el Caribe, al considerar que los ataques con misiles ordenados por Washington violan el derecho internacional.',
+  etiquetas: ['reino unido', 'estados unidos', 'caribe', 'inteligencia', 'narcotrafico', 'defensa', 'politica internacional'],
+  fuente: { nombre: 'CNN Politics', url: 'https://edition.cnn.com/2025/11/11/politics/uk-suspends-caribbean-intelligence-sharing-us?s=09' },
+  url_fuente: 'https://edition.cnn.com/2025/11/11/politics/uk-suspends-caribbean-intelligence-sharing-us?s=09',
+  imagen: '/noticias/reino-unido-suspende-inteligencia-con-eeuu-caribe-2025-11-11.jpg',
+  credito_imagen: 'CNN Politics / Captura del informe exclusivo',
+  consecutivo_unico: '20251111-01',
+  idioma_original: 'es',
+
+  contenido: [
+    'El Reino Unido suspendió parcialmente el intercambio de inteligencia con Estados Unidos relacionado con operaciones antinarcóticos en el mar Caribe. Según fuentes citadas por CNN, Londres considera que los ataques con misiles realizados por fuerzas estadounidenses contra embarcaciones sospechosas de tráfico de drogas podrían violar el derecho internacional y poner en riesgo a civiles en la región.',
+    'La decisión, descrita por la cadena estadounidense como una “ruptura significativa” entre aliados históricos, implica que el Reino Unido dejará de compartir información operativa sobre movimientos marítimos sospechosos mientras persistan los ataques unilaterales. Altos funcionarios británicos habrían expresado su preocupación de que dicha cooperación convierta al país en cómplice de acciones consideradas ilegales.',
+    'El anuncio coincidió con declaraciones del presidente colombiano Gustavo Petro, quien ordenó suspender las comunicaciones de inteligencia de la fuerza pública con agencias de seguridad de Estados Unidos mientras continúen los ataques en el Caribe. Petro sostuvo que “la lucha contra las drogas debe subordinarse a los derechos humanos del pueblo caribeño”.',
+    'La decisión británica refleja tensiones crecientes entre Washington y algunos de sus aliados sobre la estrategia militar estadounidense en la región. El Departamento de Estado no se ha pronunciado oficialmente sobre la suspensión, mientras que el Ministerio de Defensa británico confirmó que las medidas buscan “garantizar el cumplimiento de las obligaciones internacionales del Reino Unido y la protección de la vida humana en el mar”.',
+    'Fuentes citadas: https://edition.cnn.com/2025/11/11/politics/uk-suspends-caribbean-intelligence-sharing-us?s=09'
+  ]
+},
+{
+  id: 'espectros-ideologicos-globales-2025-11-07-es',
+  fecha: '2025-11-07',
+  titulo: '¿Qué es izquierda, centro y derecha? Guía global y comparativa por regiones',
+  pais: 'Internacional',
+  resumen: 'Explicación clara y neutral de los conceptos de izquierda, centro y derecha; su origen histórico, sus dimensiones actuales y ejemplos de Estados Unidos, Colombia, Europa, África y Oceanía. Incluye fuentes académicas y oficiales con enlaces directos.',
+  etiquetas: ['internacional', 'politica', 'ideologia', 'historia', 'democracia', 'comparativo'],
+  fuente: { nombre: 'Encyclopaedia Britannica', url: 'https://www.britannica.com/topic/left-right-politics' },
+  url_fuente: 'https://www.britannica.com/topic/left-right-politics',
+  imagen: '/noticias/espectros-ideologicos-globales-2025-11-07-es.jpg',
+  credito_imagen: 'Foto de Rob Wicks en Unsplash',
+  idioma_original: 'es',
+  traducciones: { },
+  contenido: [
+    'Resumen. Esta nota explica qué significan izquierda, centro y derecha en política, cómo surgieron históricamente, por qué sus contenidos cambian con el tiempo y cómo se expresan en distintas regiones (Estados Unidos, Colombia, Europa, África y Oceanía). Se incluyen fuentes académicas y oficiales con enlaces directos para verificación.',
+
+    '¿Qué significan izquierda, centro y derecha? En el uso contemporáneo, “izquierda” suele priorizar la igualdad, la justicia social y un papel más activo del Estado en la redistribución y la provisión de derechos; “derecha” pone el acento en el orden, la tradición, la libertad económica y un Estado más limitado; el “centro” combina elementos de ambos y busca soluciones graduales. Para una síntesis general y neutral, ver Encyclopaedia Britannica: https://www.britannica.com/topic/left-right-politics',
+
+    'Relatividad histórica y contextual. Estas etiquetas no son fijas: su contenido cambia según la época y las necesidades sociales. Lo que se consideró “izquierda liberal” en el siglo XIX (limitación del poder monárquico, libertades individuales y comercio) hoy podría verse como centro e incluso derecha en algunos temas económicos. Las alianzas sociales, los desafíos (industrialización, globalización, cambio climático) y los sistemas electorales redefinen continuamente lo que cada país entiende por izquierda, centro y derecha. Una discusión de contexto histórico general: https://www.britannica.com/event/French-Revolution',
+
+    'Origen de los términos. La clasificación “izquierda–derecha” se remonta a la Revolución Francesa (1789), cuando en la Asamblea Nacional los partidarios de conservar el poder del rey se sentaban a la derecha de la presidencia y quienes querían limitarlo, a la izquierda. Con el tiempo, “izquierda” se asoció a cambio e igualdad; “derecha”, a continuidad y jerarquía. Referencia histórica general: https://www.britannica.com/event/French-Revolution',
+
+    'Más de un eje. Además del eje económico o de igualdad–mercado, suele analizarse una segunda dimensión relacionada con libertades civiles y el grado de autoridad/orden (libertario–autoritario). Varios manuales y cursos de ciencia política describen modelos bidimensionales; por ejemplo, una introducción didáctica en la Universidad de Oxford (material docente): https://www.politics.ox.ac.uk (buscar “political ideology teaching resources”).',
+
+    'Estados Unidos (ejemplo). En términos amplios, el Partido Demócrata se ubica en el centro-izquierda estadounidense (políticas sociales expansivas, regulación en ciertas áreas, derechos civiles), mientras que el Partido Republicano se sitúa en el centro-derecha (baja tributación, desregulación selectiva, énfasis en tradición y seguridad). Para un panorama empírico de auto-ubicación ideológica y polarización, ver Pew Research Center: https://www.pewresearch.org/topic/politics-policy/ideological-groups y su ficha metodológica general: https://www.pewresearch.org/methods',
+
+    'Colombia (ejemplo). El espectro colombiano ha estado dominado por partidos tradicionales de centro y centro-derecha; desde 2022 hay un gobierno de izquierda (coalición Pacto Histórico). Cobertura de referencia internacional sobre el hito de 2022: Associated Press (AP): https://apnews.com/article/latin-america-colombia-gustavo-petro-election. Para datos oficiales y marcos institucionales, consultar la Registraduría Nacional del Estado Civil: https://www.registraduria.gov.co',
+
+    'Europa (ejemplo). El sistema multipartidista europeo permite observar con claridad izquierda (socialdemócratas, socialistas, a veces izquierda alternativa), centro (familias liberales y algunos verdes) y derecha (conservadores/demócrata-cristianos y, en ciertos países, derecha populista). Para entender las familias políticas en el Parlamento Europeo y su posicionamiento, ver la página oficial del Parlamento Europeo: https://www.europarl.europa.eu/about-parliament/es/organisation-and-rules/organisation/political-groups. Sobre actitudes ideológicas y opinión pública comparada, ver informes de Pew Research Center: https://www.pewresearch.org/global',
+
+    'África (ejemplo). La división izquierda–derecha existe, pero con matices: los procesos poscoloniales, el peso de coaliciones amplias, factores étnico-regionales y la prioridad del desarrollo hacen que la ideología partidista sea a menudo menos rígida que en Europa/EE. UU. Para marcos comparativos y series de datos institucionales, ver Afrobarometer: https://www.afrobarometer.org y los perfiles regionales del Programa de las Naciones Unidas para el Desarrollo (PNUD): https://www.undp.org/africa',
+
+    'Oceanía (ejemplo). En Australia y Nueva Zelanda, la alternancia entre centro-izquierda (Labor/Labour) y centro-derecha (Liberals/National) es la pauta. Descripción institucional neutral sobre partidos y funciones (Australia): Parliamentary Education Office (Gobierno australiano): https://peo.gov.au/understand-our-parliament. Para Nueva Zelanda, información oficial del Parlamento: https://www.parliament.nz/en',
+
+    'Cómo cambian las etiquetas según la época. La izquierda y la derecha ajustan prioridades en función de shocks (crisis financieras, pandemias), innovación tecnológica o cambios demográficos. Temas antes “de izquierda” (p. ej., protecciones laborales) pueden ser asumidos por centroderechas reformistas; causas antes “de derecha” (p. ej., equilibrio fiscal) pueden formar parte de agendas de centroizquierda. Esta plasticidad es una característica normal de las democracias.',
+
+    'Tabla comparativa (resumen textual):',
+    '• Estados Unidos',
+    '- Izquierda: Programas sociales, regulación sectorial, derechos civiles. Fuente: https://www.pewresearch.org',
+    '- Centro: Combinación de mercado con ciertas redes de seguridad',
+    '- Derecha: Menos impuestos/regulación, valores tradicionales, seguridad',
+    '',
+    '• Colombia',
+    '- Izquierda: Reforma social, inclusión, énfasis en desigualdad. Cobertura hito 2022 (AP): https://apnews.com',
+    '- Centro: Partidos tradicionales con economía mixta',
+    '- Derecha: Libre empresa, seguridad, conservadurismo social',
+    '',
+    '• Europa',
+    '- Izquierda: Estado de bienestar, sindicatos, integración social. Grupos en el Parlamento Europeo: https://www.europarl.europa.eu',
+    '- Centro: Liberales/centristas y verdes moderados',
+    '- Derecha: Conservadores/demócrata-cristianos; en algunos países derecha populista',
+    '',
+    '• África',
+    '- Izquierda: Enfoque desarrollista y social con coaliciones amplias. Datos: https://www.afrobarometer.org',
+    '- Centro: Pragmatismo de gobierno y amplias alianzas',
+    '- Derecha: Conservadurismos locales/orden; etiqueta “derecha” menos utilizada',
+    '',
+    '• Oceanía',
+    '- Izquierda: Labor/Labour socialdemócrata. Australia (PEO): https://peo.gov.au/understand-our-parliament',
+    '- Centro: Partidos menores moderados',
+    '- Derecha: Liberals/National: economía de mercado, valores tradicionales',
+
+    'Claves para evitar malentendidos. (1) Los términos son relativos: “centro” europeo puede parecer “izquierda” en EE. UU. (2) No todas las derechas son iguales (liberal-conservadoras vs. nacional-populistas), ni todas las izquierdas (socialdemócratas vs. socialistas/alternativas). (3) Las reglas electorales (mayoritarias vs. proporcionales) moldean el espectro visible.',
+
+    'Cómo leer las fuentes. Esta guía usa referencias generales y verificables: Britannica para definiciones y contexto histórico; Pew Research para datos de opinión pública comparada; sitios oficiales para estructuras de partidos y grupos parlamentarios; coberturas de agencia noticiosa internacional (AP) para hitos políticos; y programas de datos regionales (Afrobarometer, PNUD) para panoramas comparados.',
+
+    'Fuentes citadas (selección, acceso directo):',
+    '- Encyclopaedia Britannica – Left–Right Politics: https://www.britannica.com/topic/left-right-politics',
+    '- Encyclopaedia Britannica – French Revolution: https://www.britannica.com/event/French-Revolution',
+    '- Pew Research Center – Politics & Policy (grupos e ideología): https://www.pewresearch.org/topic/politics-policy/ideological-groups',
+    '- Pew Research Center – Global (comparativos internacionales): https://www.pewresearch.org/global',
+    '- Parlamento Europeo – Grupos políticos: https://www.europarl.europa.eu/about-parliament/es/organisation-and-rules/organisation/political-groups',
+    '- AP News – Cobertura elecciones Colombia 2022 (Gustavo Petro): https://apnews.com/article/latin-america-colombia-gustavo-petro-election',
+    '- Registraduría Nacional del Estado Civil (Colombia): https://www.registraduria.gov.co',
+    '- Parliamentary Education Office (Australia): https://peo.gov.au/understand-our-parliament',
+    '- Parlamento de Nueva Zelanda: https://www.parliament.nz/en',
+    '- Afrobarometer: https://www.afrobarometer.org',
+    '- PNUD – Informes regionales África: https://www.undp.org/africa'
+  ]
+},
+{
   id: 'dolar-colombiano-minimo-anual-2025-11-06-es',
   fecha: '2025-11-06',
   titulo: 'El dólar cae a 3.815 pesos y alcanza su nivel más bajo del año',
