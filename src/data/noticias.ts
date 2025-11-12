@@ -127,7 +127,7 @@ const noticiasRaw: NoticiaRaw[] = [
   titulo: '¿Qué es izquierda, centro y derecha? Guía global y comparativa por regiones',
   pais: 'Internacional',
   resumen: 'Explicación clara y neutral de los conceptos de izquierda, centro y derecha; su origen histórico, sus dimensiones actuales y ejemplos de Estados Unidos, Colombia, Europa, África y Oceanía. Incluye fuentes académicas y oficiales con enlaces directos.',
-  etiquetas: ['internacional', 'politica', 'ideologia', 'historia', 'democracia', 'comparativo'],
+  etiquetas: ['internacional', 'politica', 'ideologia', 'historia', 'democracia', 'comparativo','portada'],
   fuente: { nombre: 'Encyclopaedia Britannica', url: 'https://www.britannica.com/topic/left-right-politics' },
   url_fuente: 'https://www.britannica.com/topic/left-right-politics',
   imagen: '/noticias/espectros-ideologicos-globales-2025-11-07-es.jpg',
