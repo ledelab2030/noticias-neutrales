@@ -8,12 +8,10 @@ import { slugify } from "@/utils/slugify"
 import type { Noticia as NoticiaT } from "@/lib/translate"
 import type { Lang } from "@/lib/locale"
 
-// En tu proyecto, PageProps usa Promises
 type PageProps = {
   params: Promise<{ id: string }>
 }
 
-// ⬇️ Extiendo el tipo para que compile n.ubicacion / imagen_portada / destacada
 type Noticia = NoticiaT & {
   ubicacion?: { nombre: string; coordenadas?: string }
   imagen_portada?: string
@@ -49,13 +47,11 @@ function fuenteNombre(f: Noticia["fuente"]) {
   return f.nombre ?? ""
 }
 
-// 🧩 Normaliza rutas/URLs de imagen para que <Image> no reciba valores inválidos
 function normalizeImageSrc(src?: string): string | null {
   if (!src) return null
   const trimmed = src.trim()
   if (!trimmed) return null
 
-  // Si ya parece absoluta (http/https), validamos con URL
   if (trimmed.startsWith("http://") || trimmed.startsWith("https://")) {
     try {
       new URL(trimmed)
@@ -65,7 +61,6 @@ function normalizeImageSrc(src?: string): string | null {
     }
   }
 
-  // Si es relativa, garantizamos slash inicial (/foo.jpg)
   return trimmed.startsWith("/") ? trimmed : `/${trimmed}`
 }
 
@@ -78,16 +73,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const url = `${baseUrl}/noticias/${n.id}`
 
-  // Imagen OG: usa imagen, o imagen_portada, o fallback
   const ogRelRaw = n.imagen ?? n.imagen_portada ?? "/og-default.jpg"
   const ogRel = normalizeImageSrc(ogRelRaw) ?? "/og-default.jpg"
   const ogAbs = ogRel.startsWith("http") ? ogRel : `${baseUrl}${ogRel}`
 
-  // Cache-buster para evitar previas viejas en FB/WA
   const v = encodeURIComponent(`${n.fecha ?? ""}-${(n.contenido?.join("") ?? "").length}`)
   const ogImage = `${ogAbs}?v=${v}`
 
-  // hreflang solo para hermanas reales
   const base = n.id.replace(/-(es|en|de)$/i, "")
   const languages: Record<string, string> = {}
   for (const l of ALL_LANGS) {
@@ -128,7 +120,6 @@ export default async function Page({ params }: PageProps) {
   const n0 = (noticias as Noticia[]).find((x) => x.id === id)
   if (!n0) notFound()
 
-  // Idioma de la nota
   const langDetectado = detectarLangDesdeId(n0.id) ?? (n0.idioma_original as Lang) ?? "es"
   const langActual: Lang = langDetectado
 
@@ -136,14 +127,12 @@ export default async function Page({ params }: PageProps) {
   const existeNow = (l: Lang) =>
     (noticias as Noticia[]).some((x) => x.id === idConLang(baseNow, l))
 
-  // Solo idiomas con versión manual disponible
   const disponibles = ALL_LANGS.filter(
     (l) => l !== langActual && existeNow(l)
   ) as Lang[]
 
   const n = n0
 
-  // 🖼️ Imagen principal normalizada (acepta absoluta o relativa; descarta inválidas)
   const heroSrc = normalizeImageSrc(n.imagen ?? n.imagen_portada)
   const heroCredit = n.credito_imagen ?? n.credito_imagen_portada
   const altHero = n.titulo
@@ -157,26 +146,28 @@ export default async function Page({ params }: PageProps) {
         <span>actualidad</span>
       </div>
 
-      {/* 🔤 Idiomas */}
-      <div className="mb-4 rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex flex-wrap items-center gap-2">
-        <span className="opacity-70">Original en:</span>
-        <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium">
-          {nombreLang(n.idioma_original ?? langDetectado)}
-        </span>
+      {/* 🔤 Idiomas: solo se muestra si hay traducciones disponibles */}
+      {disponibles.length > 0 && (
+        <div className="mb-4 rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex flex-wrap items-center gap-2">
+          <span className="opacity-70">Original en:</span>
+          <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium">
+            {nombreLang(n.idioma_original ?? langDetectado)}
+          </span>
 
-        <span className="mx-2 opacity-50">·</span>
-        <span className="opacity-70">Disponible en:</span>
+          <span className="mx-2 opacity-50">·</span>
+          <span className="opacity-70">Disponible en:</span>
 
-        {disponibles.map((l) => (
-          <Link
-            key={l}
-            href={`/noticias/${idConLang(baseNow, l)}`}
-            className="text-blue-600 hover:text-blue-800 underline underline-offset-2"
-          >
-            {nombreLang(l)}
-          </Link>
-        ))}
-      </div>
+          {disponibles.map((l) => (
+            <Link
+              key={l}
+              href={`/noticias/${idConLang(baseNow, l)}`}
+              className="text-blue-600 hover:text-blue-800 underline underline-offset-2"
+            >
+              {nombreLang(l)}
+            </Link>
+          ))}
+        </div>
+      )}
 
       <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
         {n.titulo}
@@ -281,25 +272,20 @@ export default async function Page({ params }: PageProps) {
             const t = (typeof p === "string" ? p : "").trim()
             if (!t) return null
 
-            // bloques HTML completos
             if (/^<(div|section|article|figure|iframe|table|ul|ol|blockquote|h[1-6])\b/i.test(t)) {
               return <div key={i} className="my-6" dangerouslySetInnerHTML={{ __html: t }} />
             }
 
-            // separador simple
             if (t === "---") {
               return <hr key={i} className="my-6 border-t border-zinc-200 dark:border-zinc-800" />
             }
 
-            // marcador <!--img-->
             if (t.startsWith("<!--img-->")) {
               const html = t.replace("<!--img-->", "")
               return <div key={i} className="my-6" dangerouslySetInnerHTML={{ __html: html }} />
             }
 
-            // 🖼️ insertar imagen_portada después del primer párrafo si hay video
             if (i === 0 && n.video && heroSrc) {
-              // ⬇️ DEVOLVEMOS UN ARRAY CON KEYS ÚNICAS (sin fragmentos)
               return [
                 <p
                   key={`p-${i}`}
@@ -327,7 +313,6 @@ export default async function Page({ params }: PageProps) {
               ]
             }
 
-            // párrafo normal
             return (
               <p
                 key={i}
@@ -352,7 +337,7 @@ export default async function Page({ params }: PageProps) {
 function resaltarLinks(texto: string) {
   return (texto ?? "").replace(
     /(?<!href=["'])(https?:\/\/[^\s"’”)\]\}<>]+)(?=[\s"’”)\]\}.,;:]|$)/g,
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">$1</a>'
+    `<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">$1</a>`
   )
 }
 

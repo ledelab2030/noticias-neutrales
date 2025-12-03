@@ -74,29 +74,52 @@ const noticiasRaw: NoticiaRaw[] = [
 // 1) Nota ajustada para la ciudad (id fijo por ciudad)
 
 
-
 {
-  id: 'hidroituango-responsabilidad-fajardo-aseguradora-polimetrica-2025-11-12-es',
-  fecha: '2025-11-12',
-  titulo: 'Recordatorio del caso Hidroituango: Contraloría declaró responsable a Fajardo; el daño fue cubierto por aseguradora',
-  pais: 'Colombia',
-  resumen: 'A raíz del aumento de popularidad de Sergio Fajardo en la encuesta Polimétrica de noviembre de 2025, resurge el recordatorio del fallo fiscal por Hidroituango. La Contraloría lo declaró responsable junto a otros 25 implicados en 2021. El daño fue reparado por la aseguradora Mapfre, pero no hubo absolución.',
-  etiquetas: ['colombia', 'hidroituango', 'sergio fajardo', 'contraloría general', 'mapfre', 'responsabilidad fiscal', 'polimétrica', 'política'],
-  fuente: { nombre: 'La República', url: 'https://www.larepublica.co/economia/la-contraloria-declaro-la-reparacion-integral-en-hidroituango-por-pago-total-del-fallo-3293729' },
-  url_fuente: 'https://www.larepublica.co/economia/la-contraloria-declaro-la-reparacion-integral-en-hidroituango-por-pago-total-del-fallo-3293729',
-  imagen: '/noticias/hidroituango-responsabilidad-fajardo-aseguradora-polimetrica-2025-11-12.jpg',
-  credito_imagen: 'Contraloría General de la República / Archivo público',
-  consecutivo_unico: '20251112-02',
+  id: 'medicina-integrativa-mente-emociones-salud-2025-12-03-es',
+  fecha: '2025-12-03',
+  titulo: 'Médica española expone su visión integradora sobre mente, emociones y salud',
+  pais: 'España',
+  resumen: 'En una entrevista del programa «Tiene sentido», la doctora Beatriz Abadía, oftalmóloga y anestesista con más de 20 años de experiencia, expone su visión sobre la relación entre mente, emociones, espiritualidad y salud física. A partir de experiencias clínicas y personales, plantea que el miedo, el estrés y determinados patrones emocionales influyen en la evolución de la enfermedad, y propone un enfoque que combina medicina convencional, trabajo interior y hábitos saludables.',
+  etiquetas: [
+    'españa',
+    'salud',
+    'medicina integrativa',
+    'bienestar',
+    'placebo',
+    'emociones',
+    'podcast',
+    'tiene sentido',
+    'portada'
+  ],
+  fuente: {
+    nombre: 'YouTube',
+    url: 'https://www.youtube.com/watch?v=MY5MU28IdDA'
+  },
+  url_fuente: 'https://www.youtube.com/embed/MY5MU28IdDA',
+  imagen_portada: '/noticias/medicina-integrativa-mente-emociones-salud-2025-12-03-es.jpg',
+  video: 'https://www.youtube.com/embed/MY5MU28IdDA',
+  credito_video: 'YouTube / Tiene sentido',
   idioma_original: 'es',
-
   contenido: [
-    'El repunte de Sergio Fajardo en la encuesta Polimétrica de noviembre de 2025, donde figura entre las figuras políticas con mayor favorabilidad, ha reactivado el interés público por el antecedente fiscal del caso Hidroituango.',
-    'En septiembre de 2021, la Contraloría General de la República declaró responsables fiscales a 26 personas naturales y jurídicas por el detrimento patrimonial ocasionado por irregularidades en el megaproyecto hidroeléctrico. Entre ellos se encontraban Fajardo, entonces exgobernador de Antioquia, y el exalcalde de Medellín Luis Alfredo Ramos.',
-    'El fallo de la Contraloría Delegada para Investigaciones Especiales contra la Corrupción estableció un daño fiscal superior a 4,3 billones de pesos, derivado de decisiones administrativas y contractuales tomadas durante las fases críticas de construcción y financiación del proyecto.',
-    'En enero de 2022, mediante el Auto 0104, la Contraloría declaró la “reparación integral del daño fiscal” luego de que la aseguradora Mapfre S.A. pagara la póliza Todo Riesgo Construcción asociada al proyecto. Este pago cubrió la totalidad del monto exigido, lo que permitió dar por cumplido el fallo fiscal.',
-    'No obstante, la decisión no implicó absolución ni exoneración de los declarados responsables. La responsabilidad fiscal se mantuvo, pero el daño económico a la Hacienda Pública se consideró resarcido por el pago del seguro, sin que ello modificara la condición jurídica de los implicados.',
-    'La reaparición del tema cobra relevancia ante el nuevo escenario político reflejado en los sondeos de opinión, que ubican a Fajardo entre las figuras con mejor imagen pública tras varios años de bajo respaldo.',
-    'Fuentes citadas: https://www.eltiempo.com/justicia/investigacion/fajardo-e-hidroituango-que-viene-tras-acuerdo-de-pago-de-aseguradora-638185'
+    'En una entrevista publicada recientemente en el programa «Tiene sentido», la doctora Beatriz Abadía, médica especialista en Oftalmología y Anestesiología con más de dos décadas de experiencia clínica, presentó su enfoque sobre la relación entre la salud física, el estado emocional y los hábitos de vida. La conversación se desarrolló en España y estuvo centrada en cómo, según su experiencia, el estrés, el miedo sostenido y determinados patrones emocionales podrían influir en la percepción y evolución de diversas enfermedades.',
+
+    'Abadía afirmó que, a pesar de los avances diagnósticos y terapéuticos de la medicina actual, observa un incremento de casos en los que los pacientes manifiestan síntomas persistentes o problemas de salud relacionados con cargas personales y emocionales. Aunque reconoció que no existe evidencia científica concluyente que vincule órganos o patologías específicas con emociones concretas, señaló que en su práctica clínica identifica coincidencias temporales entre situaciones de presión laboral, duelos, conflictos familiares o tensión acumulada y la aparición de molestias físicas. Su planteamiento parte de entender al paciente como un sistema integral que incluye dimensiones físicas, emocionales, cognitivas y espirituales.',
+
+    'Durante la entrevista relató un caso personal: el diagnóstico de un tumor vesical infiltrante en su padre. Según explicó, el tratamiento indicado era una cistectomía radical, pero la familia optó por una intervención limitada debido al inicio de una enfermedad de Alzheimer. Abadía indicó que su padre no retenía memoria del diagnóstico y no manifestó temor ante su situación médica. De acuerdo con su testimonio, pasados varios años no se observaron recidivas del tumor. Este relato fue presentado como una experiencia personal y no como una alternativa terapéutica aplicable a otros pacientes, ni como sustituto de los protocolos médicos basados en evidencia.',
+
+    'La doctora dedicó un segmento de la conversación a explicar su interpretación del papel del miedo y del estrés en la salud. Señaló que diversas formas de tensión emocional —como incertidumbre, vergüenza, rabia, rencor o presión profesional— podrían influir en la activación de mecanismos de respuesta fisiológica. También mencionó el efecto placebo, entendido como mejoría asociada a expectativas positivas, y el efecto nocebo, relacionado con anticipaciones negativas que pueden intensificar síntomas. A partir de estas observaciones, presentó su propuesta denominada «placebo consciente», un enfoque personal orientado a que los pacientes adopten actitudes mentales favorables a su proceso de recuperación, sin sustituir los tratamientos médicos convencionales ni los criterios diagnósticos formales.',
+
+    'En materia de hábitos, Abadía destacó la importancia del sueño adecuado, la actividad física regular y una alimentación equilibrada. Afirmó que estos elementos son fundamentales para sostener la salud física y reducir la carga de estrés. También enfatizó la necesidad de moderar factores que describió como tóxicos, entre ellos el consumo de tabaco o alcohol, así como el uso excesivo de pantallas y otras distracciones que podrían interferir con el descanso y la introspección. La doctora añadió que prácticas como la meditación diaria y la contemplación pueden ayudar a mejorar la atención y a disminuir reacciones automáticas asociadas a tensión emocional, al facilitar que la persona observe lo que piensa y siente antes de reaccionar.',
+
+    'Otro eje de la conversación fue el análisis de lo que denominó «ego» y «programas mentales», es decir, creencias adquiridas a través de la cultura, la familia, la educación o el entorno profesional. Según explicó, estos condicionamientos influyen en cómo una persona interpreta situaciones difíciles, toma decisiones o reacciona ante la enfermedad. En su criterio, identificar estos patrones mediante autoobservación permitiría adoptar posturas más conscientes y reducir tensiones internas que podrían afectar el bienestar. Abadía planteó que, al reconocer cuándo se actúa por miedo, comparación o necesidad de reconocimiento, es posible introducir cambios progresivos en la forma de responder a los desafíos cotidianos.',
+
+    'La entrevista incluyó también reflexiones de carácter espiritual que la doctora presentó explícitamente como creencias personales. Entre ellas mencionó la idea de que las experiencias vitales podrían responder a un propósito más amplio y que ciertos procesos de enfermedad servirían como señales para la introspección y la transformación personal. Asimismo, aludió a trabajos que estudian experiencias cercanas a la muerte, sin entrar en detalle sobre estudios concretos, y sostuvo que, en su visión, la dimensión espiritual forma parte de la comprensión global de la persona, aunque no sea objeto directo de pruebas de laboratorio o pruebas diagnósticas estándar.',
+
+    'En su valoración del sistema sanitario, Abadía señaló que la falta de tiempo en consulta y la alta demanda asistencial dificultan que se integren de manera sistemática aspectos emocionales y contextuales en la atención habitual. Indicó que, en muchos casos, las consultas no alcanzan a abordar las circunstancias personales del paciente más allá del motivo inmediato de consulta. En este contexto, sostuvo que los profesionales sanitarios trabajan bajo una presión constante y que, al mismo tiempo, muchos pacientes tienden a delegar por completo la responsabilidad de su salud en el médico, asumiendo que el resultado depende exclusivamente de la intervención profesional.',
+
+    'Como propuesta de futuro, la doctora sugirió que puedan desarrollarse equipos multidisciplinares que incorporen medicina tradicional, psicología, nutrición y terapias complementarias, coordinados en beneficio del paciente. En su planteamiento, el diagnóstico médico basado en evidencia seguiría siendo esencial para establecer tratamientos seguros y eficaces, mientras que otros enfoques podrían aportar herramientas adicionales para el acompañamiento emocional y el trabajo con hábitos de vida. Subrayó que cualquier integración de nuevas prácticas debe hacerse con responsabilidad y dentro de un marco que garantice la seguridad del paciente.',
+
+    'La médica concluyó que un modelo que combine rigor científico, acompañamiento emocional y hábitos saludables podría favorecer una atención más completa, siempre dentro de los estándares de seguridad y responsabilidad profesional que rigen la práctica médica. Según su visión, la articulación entre medicina convencional, trabajo interior y cuidado del estilo de vida permitiría a más personas comprender su proceso de enfermedad no solo desde el punto de vista clínico, sino también desde su experiencia subjetiva y su contexto vital.'
   ]
 },
 {
