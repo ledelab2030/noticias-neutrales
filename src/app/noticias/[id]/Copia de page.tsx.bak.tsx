@@ -5,12 +5,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { slugify } from "@/utils/slugify"
-import type { Noticia as NoticiaT } from "@/lib/translate"
-import type { Lang } from "@/lib/locale"
+import { cookies } from "next/headers"
+import { translateNoticia, type Noticia as NoticiaT } from "@/lib/translate"
+import { normalizeToSupported, type Lang } from "@/lib/locale"
 
 // En tu proyecto, PageProps usa Promises
 type PageProps = {
   params: Promise<{ id: string }>
+  searchParams?: Promise<{ auto?: string }>
 }
 
 // ⬇️ Extiendo el tipo para que compile n.ubicacion / imagen_portada / destacada
@@ -70,8 +72,10 @@ function normalizeImageSrc(src?: string): string | null {
 }
 
 // ---- SEO ----
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { id } = await params
+  const sp = searchParams ? await searchParams : undefined
+  const auto = ((sp?.auto ?? "").toLowerCase() as Lang) || undefined
 
   const n = (noticias as Noticia[]).find((x) => x.id === id)
   if (!n) return {}
@@ -97,6 +101,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  const isInstant = Boolean(auto)
+
   return {
     title: n.titulo,
     description: n.resumen || (Array.isArray(n.contenido) ? n.contenido[0] : undefined),
@@ -118,30 +124,45 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: url,
       languages,
     },
+    robots: isInstant ? { index: false, follow: true } : undefined,
   }
 }
 
 // ---- Page ----
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params, searchParams }: PageProps) {
   const { id } = await params
+  const sp = searchParams ? await searchParams : undefined
+  const auto = (sp?.auto ?? "").toLowerCase() as Lang
+  const isValidLang = (l: string): l is Lang => (["es", "en", "de"] as const).includes(l as Lang)
 
-  const n0 = (noticias as Noticia[]).find((x) => x.id === id)
-  if (!n0) notFound()
+  let n = (noticias as Noticia[]).find((x) => x.id === id)
+  if (!n) notFound()
 
-  // Idioma de la nota
-  const langDetectado = detectarLangDesdeId(n0.id) ?? (n0.idioma_original as Lang) ?? "es"
-  const langActual: Lang = langDetectado
+  // Idioma de la nota + preferencia del visitante
+  const langDetectado = detectarLangDesdeId(n.id) ?? (n.idioma_original as Lang) ?? "es"
+  let langActual: Lang = langDetectado
 
-  const baseNow = baseIdSinLang(n0.id)
-  const existeNow = (l: Lang) =>
-    (noticias as Noticia[]).some((x) => x.id === idConLang(baseNow, l))
+  const cookieStore = await cookies()
+  const cookieLang = normalizeToSupported(cookieStore.get("nn_lang")?.value ?? "es")
 
-  // Solo idiomas con versión manual disponible
-  const disponibles = ALL_LANGS.filter(
-    (l) => l !== langActual && existeNow(l)
-  ) as Lang[]
+  const base = baseIdSinLang(n.id)
+  const existe = (l: Lang) => (noticias as Noticia[]).some((x) => x.id === idConLang(base, l))
 
-  const n = n0
+  if (isValidLang(auto) && auto !== langActual) {
+    n = await translateNoticia(n, auto)
+    langActual = auto
+  } else if (!isValidLang(auto) && cookieLang !== langActual && !existe(cookieLang)) {
+    n = await translateNoticia(n, cookieLang)
+    langActual = cookieLang
+  }
+
+  const baseNow = baseIdSinLang(n.id)
+  const existeNow = (l: Lang) => (noticias as Noticia[]).some((x) => x.id === idConLang(baseNow, l))
+  const disponibles = ["es", "en", "de"].filter((l) => l !== langActual && existeNow(l as Lang)) as Lang[]
+  const noGuardadas = ["es", "en", "de"].filter((l) => l !== langActual && !existeNow(l as Lang)) as Lang[]
+
+  const pathForInstant = (currentId: string, to: Lang) => `/noticias/${currentId}?auto=${to}`
+  const isInstant = isValidLang(auto) || !existeNow(langActual)
 
   // 🖼️ Imagen principal normalizada (acepta absoluta o relativa; descarta inválidas)
   const heroSrc = normalizeImageSrc(n.imagen ?? n.imagen_portada)
@@ -176,6 +197,17 @@ export default async function Page({ params }: PageProps) {
             {nombreLang(l)}
           </Link>
         ))}
+
+        {noGuardadas.map((l) => (
+          <Link
+            key={`auto-${l}`}
+            href={pathForInstant(n.id, l)}
+            className="text-blue-600 hover:text-blue-800 underline underline-offset-2"
+          >
+            {nombreLang(l)} (instantánea)
+          </Link>
+        ))}
+        {isInstant && <span className="ml-2 text-xs opacity-70">(viendo versión instantánea)</span>}
       </div>
 
       <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
