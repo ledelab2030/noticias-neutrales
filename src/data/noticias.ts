@@ -75,6 +75,64 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'galeon-san-jose-viaje-al-corazon-operacion-2025-12-04-es',
+  fecha: '2025-12-04',
+  titulo: 'Juan David Correa explica la operación “Viaje al corazón del galeón San José” y defiende la apuesta por el patrimonio sumergido',
+  pais: 'Colombia',
+  resumen: 'En su columna en video “El valor y el precio, tesoro”, Juan David Correa, exministro de las Culturas, las Artes y los Saberes, detalla los antecedentes jurídicos y políticos del galeón San José y defiende la operación científica “Viaje al corazón del galeón San José”, realizada entre el 20 de noviembre y el 2 de diciembre de 2025, como una inversión en capacidades científicas y en la protección del patrimonio cultural sumergido de Colombia.',
+  etiquetas: [
+    'colombia',
+    'cultura',
+    'patrimonio cultural',
+    'galeon san jose',
+    'cambio'
+  ],
+  fuente: {
+    nombre: 'Cambio / Columna en video de Juan David Correa',
+    url: 'https://www.youtube.com/watch?v=MkigifWA2vs'
+  },
+  url_fuente: 'https://www.youtube.com/watch?v=MkigifWA2vs',
+  consecutivo_unico: '20251204-01',
+
+  video: 'https://www.youtube.com/embed/MkigifWA2vs',
+  credito_video: 'YouTube / Cambio',
+
+  idioma_original: 'es',
+
+  contenido: [
+    'Juan David Correa, exministro de las Culturas, las Artes y los Saberes del gobierno de Gustavo Petro, dedicó su columna en video del 4 de diciembre de 2025, titulada “El valor y el precio, tesoro”, a reconstruir la historia reciente del galeón San José y a explicar la lógica de la operación científica “Viaje al corazón del galeón San José”. Señaló que solo se refería a hechos públicos debido a la existencia de acuerdos de confidencialidad.',
+
+    'Correa repasó los antecedentes históricos y jurídicos del caso. Recordó que el galeón San José, hundido en 1708 frente a Barú mientras transportaba oro, plata y piedras preciosas provenientes en parte de territorios hoy correspondientes a Bolivia y Perú, fue objeto de reclamos desde los años 80, cuando la empresa estadounidense Glocca Morra Company —luego Sea Search Armada (SSA)— informó haber localizado un pecio y entregó unas coordenadas al Estado colombiano. En 2007, la Corte Suprema de Justicia reconoció a SSA derechos limitados sobre lo que pudiera hallarse en ese punto. En 2011, la Corte del Distrito de Columbia determinó que el galeón era propiedad de Colombia. Estos antecedentes motivaron la expedición de la Ley 1675 de 2013 sobre patrimonio cultural sumergido.',
+
+    'Según relató Correa, un giro se produjo en 2015 cuando el presidente Juan Manuel Santos fue contactado en Nueva York por Roger Dully, quien aseguró haber identificado la ubicación del pecio en el Archivo General de Indias de Sevilla. Con apoyo de la ministra de Cultura Mariana Garcés, del director del ICANH, Ernesto Montenegro, de la Armada Nacional y del Woods Hole Oceanographic Institution, el gobierno verificó dicha hipótesis. Ese año se celebró un contrato con la empresa suiza Maritime Archaeology Consultants (MAC), que proponía financiar la excavación a cambio del 50 % de los bienes extraídos. Para hacer viable ese modelo se ajustó la normativa sobre patrimonio, permitiendo considerar la venta de piezas repetidas, decisión cuestionada por arqueólogos.',
+
+    'En la etapa final del gobierno Santos se estructuró una alianza público-privada (APP) como hoja de ruta para la futura extracción, pero no llegó a firmarse. En el gobierno de Iván Duque se declaró el pecio como Bien de Interés Cultural (BIC) en 2020. En 2022, mediante la Resolución 0113, el Ministerio de Cultura declaró desierto el proceso licitatorio MCAPP-001 de 2018, lo que dejó sin efecto la ruta contractual anterior y selló el cierre del modelo que contemplaba compensación con parte de la carga.',
+
+    'Correa añadió que esta fase marcó un punto de continuidad institucional entre gobiernos con orientaciones políticas distintas. Señaló que la decisión del gobierno de Iván Duque de declarar desierta la licitación en 2022 permitió que el Estado retomara el control directo del proyecto sin compromisos con actores privados, evitando modelos que contemplaban entregar hasta el 50 % del material recuperado. Según explicó, esta determinación permitió que la siguiente administración avanzara de inmediato bajo un esquema completamente público, reflejando que la protección del patrimonio cultural sumergido se estaba consolidando como una política de Estado.',
+
+    'Correa explicó que, al asumir como ministro, el presidente Petro definió el galeón San José como una prioridad estratégica. Entre 2022 y 2023, equipos del ICANH, la Armada Nacional, la Dimar, la Dirección de Patrimonio y la Agencia de Defensa Jurídica del Estado evaluaron distintos escenarios y coincidieron en que Colombia debía asumir directamente la misión con capacidades propias. Esta visión se materializó en una alianza entre los ministerios de Defensa y Culturas para desarrollar una operación científica y patrimonial bajo estándares de protección del patrimonio subacuático.',
+
+    'La operación “Viaje al corazón del galeón San José”, realizada entre el 20 de noviembre y el 2 de diciembre de 2025, fue descrita como una misión científica cuyo objetivo consistió en estudiar el yacimiento y su contexto arqueológico y biológico. Solo se extrajeron cuatro piezas para analizar el comportamiento de materiales sumergidos por más de tres siglos. La inversión aproximada de 2 millones de dólares buscó fortalecer capacidades técnicas y científicas de la Armada y del ICANH para futuras investigaciones en naufragios, fortificaciones y asentamientos prehispánicos.',
+
+    'Correa señaló que esta estrategia permitió consolidar avances verificables: la publicación de nueve artículos científicos en revistas especializadas, incluida Antiquity de la Universidad de Cambridge; la realización de 34 eventos académicos; y la declaratoria de la primera área arqueológica protegida submarina en aguas profundas de América Latina, acompañada de un plan de manejo presentado a expertos internacionales.',
+
+    'El exministro destacó el componente internacional del proyecto. Indicó que se promovieron conversaciones con España y con la nación Qhara Qhara de Bolivia, que reivindica el origen del oro y la plata embarcados en el galeón, así como con comunidades de Cartagena y Bocachica. Según explicó, el propósito era generar cooperación científica, fortalecer capacidades locales y crear oportunidades educativas para que niñas y niños participaran en proyectos de investigación sobre patrimonio marítimo y biocultural.',
+
+    'En la parte final de su columna, Correa señaló que parte del debate público ha reducido la operación a su costo y a las cuatro piezas recuperadas, sin considerar el valor cultural, científico y biológico del yacimiento. Afirmó que la intervención envió un mensaje internacional según el cual Colombia no solo es un país que posee un tesoro, sino un Estado con capacidades tecnológicas y científicas para estudiarlo y protegerlo.',
+
+    'Correa concluyó que la apuesta del gobierno fue por una intervención soberana, gradual y documentada del pecio, aun renunciando a modelos de financiación basados en la comercialización de bienes patrimoniales. En su balance, la diferencia esencial no está en el precio de lo que pudiera extraerse, sino en el valor del galeón San José como espacio de investigación, conocimiento y memoria.',
+
+    'Fuentes citadas:',
+    'Ley 1675 de 2013 – Patrimonio cultural sumergido: https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=54356',
+    'Resolución 0113 de 2022 – Ministerio de Cultura (licitación desierta).',
+    'SwissInfo – Declaratoria desierta de la licitación (2022): https://www.swissinfo.ch/spa/colombia-declara-desierta-licitación-para-rescatar-el-galeón-español-san-josé/47410952',
+    'Historial jurídico Sea Search Armada vs. Colombia: https://ciarglobal.com/nueva-demanda-contra-colombia-por-el-tesoro-del-galeon-san-jose',
+    'Woods Hole Oceanographic Institution (WHOI): https://www.whoi.edu',
+    'Información histórica general del galeón San José: Archivo General de Indias / reportes públicos 2015–2022'
+
+  ]
+},
+{
   id: 'medicina-integrativa-mente-emociones-salud-2025-12-03-es',
   fecha: '2025-12-03',
   titulo: 'Médica española expone su visión integradora sobre mente, emociones y salud',
