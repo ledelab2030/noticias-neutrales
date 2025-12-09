@@ -154,7 +154,7 @@ const noticiasRaw: NoticiaRaw[] = [
   },
   url_fuente: 'https://www.youtube.com/watch?v=MkigifWA2vs',
   consecutivo_unico: '20251204-01',
-  imagen_portada: '/noticias/medicina-integrativa-mente-emociones-salud-2025-12-03-es.jpg',
+  imagen_portada: '/noticias/galeon-san-jose-viaje-al-corazon-operacion-2025-12-04-es.jpg',
 
   video: 'https://www.youtube.com/embed/MkigifWA2vs',
   credito_video: 'YouTube / Cambio',
