@@ -97,6 +97,7 @@ const noticiasRaw: NoticiaRaw[] = [
 
   video: 'https://www.youtube.com/embed/VGD3yX5Rrcw',
   credito_video: 'YouTube / NotebookLM',
+    imagen_portada: '/noticias/colombia-polarizacion-electoral-analisis-historico-1970-2026-es.jpg',
 
   idioma_original: 'es',
 
