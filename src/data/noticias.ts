@@ -75,6 +75,67 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'colombia-polarizacion-electoral-analisis-historico-1970-2026-es',
+  fecha: '2025-12-08',
+  titulo: 'La polarización electoral en Colombia cayó a mínimos históricos: evidencia desde 1970 hasta las encuestas de 2025 para las elecciones de 2026',
+  pais: 'Colombia',
+  resumen:
+    'Un análisis histórico basado en datos electorales desde 1970 y en encuestas de 2025 muestra que la polarización electoral en Colombia ha disminuido de manera sostenida desde la Constitución de 1991. El Índice de Polarización Electoral (IPE-Col) evidencia el paso de sistemas bipartidistas a un escenario fragmentado con múltiples candidaturas competitivas.',
+  etiquetas: [
+    'colombia',
+    'politica',
+    'elecciones',
+    'historia electoral',
+    'constitucion 1991',
+    'fragmentacion',
+    'portada'
+  ],
+  fuente: {
+    nombre: 'Registraduría Nacional del Estado Civil, Atlas Electoral de Colombia, encuestas publicadas 2025'
+  },
+  url_fuente: 'https://es.wikipedia.org/wiki/Anexo:Sondeos_de_intenci%C3%B3n_de_voto_para_las_elecciones_presidenciales_de_Colombia_de_2026',
+
+  video: 'https://www.youtube.com/embed/VGD3yX5Rrcw',
+  credito_video: 'YouTube / NotebookLM',
+
+  idioma_original: 'es',
+
+  contenido: [
+    'Un examen de las elecciones presidenciales en Colombia desde 1970 hasta la actualidad muestra una transformación sostenida en la estructura del voto. Mientras que en las décadas de 1970 y 1980 predominó un sistema bipartidista con altos niveles de concentración electoral, los resultados posteriores a la Constitución de 1991 evidencian un patrón de fragmentación con múltiples candidaturas competitivas en primera vuelta.',
+    
+    'Para medir la evolución de la concentración del voto y compararla a lo largo del tiempo, se construyó el Índice de Polarización Electoral de Colombia (IPE-Col). Este índice, en una escala de 1 a 100, pondera tres factores: la suma de los dos primeros candidatos, la diferencia porcentual entre ellos y la fuerza de terceras vías. Valores altos corresponden a sistemas bipolares; valores bajos indican fragmentación.',
+    
+    'Entre 1970 y 1986, los puntajes del índice superan con frecuencia los 70 puntos, reflejando una estructura electoral dominada por dos fuerzas tradicionales. En ese periodo, la suma de los dos primeros candidatos representó cerca del 80 % o 90 % de los votos, característica propia de sistemas bipartidistas. En contraste, desde 1998 ningún par de candidaturas ha concentrado niveles similares de apoyo, y varias terceras vías han obtenido votaciones significativas.',
+    
+    'La Constitución de 1991 desempeñó un papel central en esta transformación. Sus disposiciones permitieron la entrada de nuevos movimientos políticos, redujeron las barreras para la competencia electoral y ampliaron la representación. Como resultado, el sistema político colombiano dejó atrás la hegemonía bipartidista e ingresó a un escenario plural en el que diferentes proyectos pueden competir con relativa estabilidad.',
+    
+    'El análisis también incluye las encuestas publicadas en 2025 para las elecciones presidenciales de 2026. Estas muestran un escenario de baja polarización estructural: aunque una candidatura lidera las mediciones, no existe un segundo polo claramente dominante, y varias alternativas mantienen apoyos distribuidos entre 8 % y 20 %. La suma de los dos primeros candidatos ronda el 58 %, porcentaje inferior al observado en los periodos de mayor concentración electoral del siglo XX.',
+    
+    'A continuación se presenta el Índice de Polarización Electoral de Colombia (IPE-Col), con datos desde 1970 y la estimación para 2026 basada en encuestas de 2025:',
+    
+
+    '1970 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■      80',
+    '1994 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        78',
+    '1978 |■■■■■■■■■■■■■■■■■■■■■■■■■■■            75',
+    '1986 |■■■■■■■■■■■■■■■■■■■■■■■■■              72',
+    '1982 |■■■■■■■■■■■■■■■■■■■■■■■■               70',
+    '1974 |■■■■■■■■■■■■■■■■■■■■■■■                68',
+    '1998 |■■■■■■■■■■■■■                          60',
+    '2002 |■■■■■■■■■■                             55',
+    '1990 |■■■■■■■■■                              52',
+    '2006 |■■■■■■■■                               50',
+    '2018 |■■■■■                                  42',
+    '2014 |■■■■                                   40',
+    '2022 |■■■                                    38',
+    '2010 |■■                                     36',
+    '2026*|■■                                     35', 
+    
+    'Como complemento a esta nota, se incluye un video de cinco minutos que explica de manera sencilla la lógica del IPE-Col y la tendencia histórica hacia la disminución de la polarización electoral en Colombia. Este material facilita la comprensión del índice y resume visualmente la evolución observada.',
+    
+    'En conjunto, los datos oficiales y las encuestas recientes indican que la polarización electoral en Colombia ha disminuido de forma sostenida durante más de tres décadas. La fragmentación política, la presencia de múltiples candidaturas competitivas y la ausencia de dos bloques claramente definidos caracterizan el sistema electoral contemporáneo. Estos elementos sugieren que el electorado colombiano es diverso y que su comportamiento no se alinea con dinámicas de polarización estructural.'
+  ]
+},
+{
   id: 'galeon-san-jose-viaje-al-corazon-operacion-2025-12-04-es',
   fecha: '2025-12-04',
   titulo: 'Juan David Correa explica la operación “Viaje al corazón del galeón San José” y defiende la apuesta por el patrimonio sumergido',
@@ -93,6 +154,7 @@ const noticiasRaw: NoticiaRaw[] = [
   },
   url_fuente: 'https://www.youtube.com/watch?v=MkigifWA2vs',
   consecutivo_unico: '20251204-01',
+  imagen_portada: '/noticias/medicina-integrativa-mente-emociones-salud-2025-12-03-es.jpg',
 
   video: 'https://www.youtube.com/embed/MkigifWA2vs',
   credito_video: 'YouTube / Cambio',
