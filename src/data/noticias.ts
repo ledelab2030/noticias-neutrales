@@ -75,6 +75,28 @@ const noticiasRaw: NoticiaRaw[] = [
 
 
 {
+  id: 'desempleo-colombia-7-0-noviembre-2025-12-30-es',
+  fecha: '2025-12-30',
+  titulo: 'La tasa de desempleo en Colombia bajó a 7,0 %, el nivel más bajo desde noviembre de 2015',
+  pais: 'Colombia',
+  resumen: 'El DANE informó que la tasa de desempleo en Colombia se ubicó en 7,0 %, un nivel que no se registraba desde noviembre de 2015, impulsado por el aumento de la ocupación y la reducción del número de personas desocupadas.',
+  contenido: [
+    'El Departamento Administrativo Nacional de Estadística (DANE) informó que la tasa de desempleo en Colombia se ubicó en 7,0 %, de acuerdo con los resultados más recientes del mercado laboral. Este nivel no se registraba desde noviembre de 2015.',
+    'Según la entidad, la reducción del desempleo estuvo asociada al incremento en el número de personas ocupadas, así como a una disminución en la cantidad de desocupados frente al mismo periodo del año anterior.',
+    'El informe señala que sectores como comercio, alojamiento y servicios de comida, así como actividades profesionales y técnicas, aportaron de manera significativa a la generación de empleo en el periodo analizado.',
+    'El DANE también indicó que el comportamiento del mercado laboral debe analizarse junto con otros indicadores, como la informalidad y la calidad del empleo, para tener una visión integral de la situación laboral del país.'
+  ],
+  imagen_portada: '/noticias/desempleo-colombia-7-0-noviembre-2025-12-30-es.png',
+  credito_imagen_portada: 'Elaborado por Leonardo De la Hoz Borrego para Noticias Neutrales con ChatGPT',
+  etiquetas: ['colombia', 'economia', 'empleo', 'desempleo', 'dane','portada'],
+  fuente: {
+    nombre: 'El Tiempo',
+    url: 'https://www.eltiempo.com/economia/sectores/dane-revelo-que-tasa-de-desempleo-en-colombia-bajo-a-7-0-no-se-registraba-desde-noviembre-de-3520745'
+  },
+  url_fuente: 'https://www.eltiempo.com/economia/sectores/dane-revelo-que-tasa-de-desempleo-en-colombia-bajo-a-7-0-no-se-registraba-desde-noviembre-de-3520745',
+  idioma_original: 'es'
+},
+{
   id: 'colombia-polarizacion-electoral-analisis-historico-1970-2026-es',
   fecha: '2025-12-08',
   titulo: 'La polarización electoral en Colombia cayó a mínimos históricos: evidencia desde 1970 hasta las encuestas de 2025 para las elecciones de 2026',
